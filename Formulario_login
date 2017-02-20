@@ -1,1 +1,125 @@
 
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pacto de Honor</title>
+<style type="text/css">
+body,td,th {
+	font-size: 18px;
+	color: #000;
+	font-family: "Comic Sans MS", cursive;
+	font-weight: bold;
+}
+body {
+	margin-left: 10%;
+	margin-right: 10%;
+	font-size: 24px;
+}
+.PanelDeAcceso {
+	font-family: Comic Sans MS, cursive;
+}
+.TituloPacto {
+	color: #00C;
+}
+</style>
+</head>
+
+<body>
+<h1 align="center"><img src="politecnico-grancolombiano-logo.jpg" width="625" height="199"></h1>
+<div align="center">
+  <table width="800" border="0" align="center">
+    <tr>
+      <td width="398"><h1 align="center">PACTO DE HONOR </h1>
+        <hgroup>
+          <h1 align="center">Politecnico Grancolombiano</h1>
+        </hgroup></td>
+    </tr>
+  </table>
+</div>
+<hgroup> </hgroup>
+<nav>
+  <div align="center" class="PanelDeAcceso">
+    <table width="802" border="1">
+      <tr>
+        <td><div align="center">Inicio</div></td>
+        <td><div align="center">Puntuaciones</div></td>
+        <td><div align="center">Quienes somos?</div></td>
+        <td><div align="center">Contactenos</div></td>
+      </tr>
+    </table>
+  </div>
+</nav>
+<section>
+  <article>
+    <article>
+      <p align="center">&nbsp;</p>
+      <table width="800" border="0" align="center">
+        <tr>
+          <td width="390"><div align="center">
+            <p>Login</p>
+          </div></td>
+          <td width="400"><div align="center">
+            <p><a href="file:///C|/Alex/Universidad/Practica/Dormularios iniicio/Dream/Formulario Registro.html">Registrarse</a></p>
+          </div></td>
+        </tr>
+      </table>
+      <div align="center">
+        <table width="812" border="3">
+          <tr>
+            <td width="806"><div>
+              <p align="center">Usuario</p>
+              <p align="center">
+                </label>
+                <input type='text' value=''>
+                </p>
+              </div>
+              <div>
+                <label>
+                <p align="center">Contraseña 
+                  </label>
+                </p>
+                <p align="center">
+                  <input type='text' value=''>
+                </p>
+                <p align="center">&nbsp;</p>
+                <div align="center">
+                  <table width="206" border="1">
+                    <tr>
+                      <td width="37" height="41"><div align="center"><img src="google1.png" alt="inicioSecionLoggin" width="35" height="35"></div></td>
+                      <td width="97"><div align="center">
+                        <input name="Restablecer" type='reset' value='Iniciar Sesion'>
+                      </div></td>
+                      <td width="50">&nbsp;</td>
+                    </tr>
+                  </table>
+                  
+                </div>
+                <p align="center"><a href="file:///C|/Alex/Universidad/Practica/Dormularios iniicio/Dream/Olvidar Contraseña.html">Olvide mi contraseña</a></p>
+              </div></td>
+          </tr>
+        </table>
+      </div>
+      <p align="center">&nbsp;</p>
+      <section>
+        <article>
+          <div></div>
+        </article>
+      </section>
+      <footer>      </footer>
+      <div align="center"></div>
+      <p align="center">&nbsp;</p>
+      <div align="center">Derechos Reservados &copy; 2010-2011 
+      </div>
+      <p align="center">&nbsp;</p>
+      <p align="center">&nbsp;</p>
+      <p align="center">&nbsp;</p>
+      <p align="center">&nbsp;</p>
+      <p align="center">&nbsp;</p>
+    </article>
+  </article>
+</section>
+<footer></footer>
+<div align="center"> </div>
+</body>
+</html>
