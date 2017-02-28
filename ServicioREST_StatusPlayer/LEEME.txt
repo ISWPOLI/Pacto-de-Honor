@@ -1,0 +1,8 @@
+Servicio REST que retorna el estado de un jugador.
+Los datos que devuelve el servicio son datos que se encuentran quemados en el código.
+Se usó un servidor de aplicaciones Apache Tomcat 8.
+Para hacer la petición al servicio, se debe realizar por POST y actualmente el servicio no tienen parámetros específicos para su respuesta.
+Se adjunta pantallazo ("EjemploConsumoREST.png") donde se da un ejemplo de consumo del servicio.
+
+URL DE CONSUMO:
+http://servidor:puerto/PactoHonorRest/services/PactoHonor/returnStatus
