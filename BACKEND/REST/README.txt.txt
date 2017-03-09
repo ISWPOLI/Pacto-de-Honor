@@ -1,1 +1,0 @@
-Estructura de directorios de la aplicacion
