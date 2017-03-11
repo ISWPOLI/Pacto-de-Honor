@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "http:localhost/htdocs/snippets_cades_login/Autentificacion_Pacto_Honor/Login.html">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset="utf-8">
+  <title>Registro Pacto de Honor</title>
+	  
+	  <!--Estilo boostrpbooton facebook y tipo de letra roboto-->
+	  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	  <script src="main.js"></script> <!--Controlador-->
+	  <link rel="stylesheet" href="main.css"><!--vista-->
+	  </style>
+</head>
+
+<body>
+	 <img src="C:/xampp/htdocs/snippets_cades_login/Autentificacion_Pacto_Honor/spint/logo.png" .circle:hover>
+	  
+	<fieldset> 
+	 <div class="form-group">
+	    <form action="validar.php method="POST" ">
+	    <input type="text" name="rnombres" placeholder="Nombre"/>
+	    <input type="text" name="rusuario" placeholder="Email"/>
+	    <input type="password" name="rcontraseña" placeholder="Password"/>
+	    <input type="password" name="rrcontraseña" placeholder="Confirmar Password"/>
+	 </div>
+		<div class="form-group">
+	    <br>
+	    <button href="#" id="Login" class="btn btn-primary" type="submit">Registrate</button>	
+	    </br>
+	    
+	      
+	</fieldset>
+	 	<div align="center">Derechos Reservados &copy; Copyright HackDemons 2010-2017 </div>
+	 	</form>
+	 	</div>
+
+</body>
+</html>
