@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "http:localhost/htdocs/snippets_cades_login/Autentificacion_Pacto_Honor/Login.html">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset="utf-8">
+  <title>OlvidoClave Pacto de Honor</title>
+	  
+	  <!--Estilo boostrpbooton facebook y tipo de letra roboto-->
+	  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">  
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	  <script src="main.js"></script> <!--Controlador-->
+	  <link rel="stylesheet" href="main.css"><!--vista-->
+	  </style>
+</head>
+
+<body>
+	 <img src="C:/xampp/htdocs/snippets_cades_login/Autentificacion_Pacto_Honor/spint/logo.png" .circle:hover>
+	  
+	  <p><a href="file:///C:/xampp/htdocs/snippets_cades_login/Autentificacion_Pacto_Honor/Registro.html">Recupera tu clave</a>  </p>
+	 <div class="campos">
+	      <form method="POST" action="validar.php">
+	      <input type="password" name="rusuario" placeholder="Email de Registro"/>
+	      </form>
+	      <br>
+	      <button href="#" id="Login" class="btn btn-primary" type="submit">Enviar</button>
+	      <button href="#" id="Login" class="btn btn-primary" type="submit">Cancelar</button>
+	      <div align="center">Derechos Reservados &copy; Copyright HackDemons 2010-2017 </div>
+	 </div>
+</body>
+</html>
