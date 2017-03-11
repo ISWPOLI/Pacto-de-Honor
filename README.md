@@ -1,5 +1,6 @@
 # Video Juego Pacto-de-Honor
 
+PENDIENTE DE EDITAR
 One Paragraph of project description goes here
 
 ## Getting Started
