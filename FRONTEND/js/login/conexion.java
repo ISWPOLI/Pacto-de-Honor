@@ -38,8 +38,9 @@ public class conexion {
             return con;
         }
         
-       /** public static void main(String [] args){
+        public static void main(String [] args){
             conexion con=new conexion();
-        }*/
+        }
     }
     
+

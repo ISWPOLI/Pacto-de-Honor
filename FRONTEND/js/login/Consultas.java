@@ -88,5 +88,8 @@ public class Consultas extends conexion{
         Consultas co=new Consultas();
         System.out.println(co.registrar("Ernesto", "jerrincon@hotmail.com", "Mariana"));
     }*/
-      
+    
+    
+    
+    
     }
