@@ -1,6 +1,16 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11/03/2017, 08:04:16 PM
+    Author     : JERR
+*/
+
 body {
 	margin: 90px auto;
-	text-align: right;
+	text-align: center;
 	width: 400px;
 	font-family: 'Roboto', sans-serif; /*Letra tipo roboto*/
 }
@@ -22,7 +32,7 @@ div{
 	border-radius:15px;
 }
 
-p{
+table{
 	margin-bottom: 8px;
 	font-family: 'Roboto', sans-serif;
 	text-align: center;
@@ -31,8 +41,27 @@ p{
 	border-radius:15px;
 }
 
+#facebook:hover{
+    background-color: #3b5999;
+    border-radius:15px;
+    border:2px; 
+    solid:#3b5999;
+    color:#fff;
+}
 
+#google:hover{
+    background-color: #dd4b39;
+    border-radius:15px;
+    border:2px; 
+    solid:#dd4b39;
+    color:#fff;
+}
 
-#facebook, .facebook:hover{background-color: #3b5999; border-radius:15px border:2px solid #3b5999;color:#fff;}
-#google, .google:hover{background-color:#dd4b39;border-radius:15px border:2px solid #dd4b39;color:#fff;}
-#Microsoft, .Microsoft:hover{ background-color: #0072b1; border-radius:15px  border: 2px solid #0072b1; color:#fff;}
+#Microsoft:hover{
+    background-color: #0072b1;
+    border-radius:15px;
+    border:2px; 
+    solid:#0072b1;
+    color:#fff;
+}
+
