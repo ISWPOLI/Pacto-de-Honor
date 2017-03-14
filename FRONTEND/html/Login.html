@@ -1,57 +1,58 @@
-<!DOCTYPE html PUBLIC "http:localhost/htdocs/snippets_cades_login/Autentificacion_Pacto_Honor/Login.html">
-<html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset="utf-8">
-  <title>Login Pacto de Honor</title>
-  
-  <!--Estilo boostrpbooton facebook y tipo de letra roboto-->
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-  <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.css">
-  <script src="main.js"></script> <!--Controlador-->
-  <link rel="stylesheet" href="main.css"><!--vista-->
-  </style>
-</head>
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
 
-<body>
-  <img src="C:/xampp/htdocs/snippets_cades_login/Autentificacion_Pacto_Honor/spritesLogin/logo.png" .circle:hover>
-  
-  <div class="campos">
-      <form action="validar.php" method="POST">
-      <br>
-      <input class="form-group" type="text" name="rusuario" placeholder="Email"/>
-      <input type="password" name="rcontraseña" placeholder="Password"/>
-      <p><a href="file:///C:/xampp/htdocs/snippets_cades_login/Autentificacion_Pacto_Honor/Forgot.html">Forgot Password</a></p>
-      <p><a href="file:///C:/xampp/htdocs/snippets_cades_login/Autentificacion_Pacto_Honor/Registro.html">Registrarse</a>  </p>
-      <input button href="#" id="Login" class="btn btn-primary" type="submit" value="Login"/>
-      </p>
-      </form>
-        
-      <br>
-      <!--boton con id login y classs de bootstrp-->
-      <div class="btn-group">
-      <button href="#" id="facebook" class=" fa fa-facebook" type="submit">Facebook</button>
-      <button href="#" id="google" class="fa fa-google-plus" type="submit">Google</button>
-      <button href="#" id="Microsoft" class="fa fa-microsoft" type="submit">Microsoft </button>
-      <!--btn btn-block btn-social btn-Microsoft-->
-      </div>
-      <div align="center">Derechos Reservados &copy; Copyright HackDemons 2010-2017 </div>
-  </div>
- <?php
-    if(isset($_POST['submit'])){
-      require("registro.php");
-    }
-  ?>
-<script>
-  // Load the SDK asynchronously
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
+Created on : 11/03/2017, 08:04:16 PM
+    Author     : JERR
 
-</body>
+-->
+<html>
+    <head>
+        <title>Login Pacto de Honor</title>
+        <meta charset="UTF-8">
+        <!--<meta http-equiv="Content-Type" content="text/html; charset="utf-8">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Estilo boostrpbooton facebook y tipo de letra roboto-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.css">
+        <link rel="stylesheet" href="main.css"><!--vista-->
+    </head>
+    <body>
+        <img src="logo.png">
+        <div class="form-group">
+            <form action="Iniciar" method="POST">
+                <table>
+                    <br>
+                    <tr><td><input type="Email" name="rusuario" placeholder="Email"/></td></tr>
+                    <tr><td><input type="password" name="rcontraseña" placeholder="Password"/></td></tr>
+                    <tr><td><a href="Forgot.html">Forgot Password</a></td></tr>
+                    <tr><td><a href="Registro.html">Registrarse</a></td></tr>
+                    <tr><td><input class="btn btn-primary" type="submit" value="Login"/></td></tr>
+                </table> 
+                <br><!--boton con id login y classs de bootstrp-->
+                <div class="btn-group">
+                    <input href=# id="facebook" class=" fa fa-facebook" type="submit" value="Facebook"/>
+                    <input href=# id="google" class="fa fa-google-plus" type="submit" value="Google"/>
+                    <input href=# id="Microsoft" class="fa fa-microsoft" type="submit" value="Microsoft"/>
+                    <!--btn btn-block btn-social btn-Microsoft-->
+                </div>
+            </form>
+            <br>
+            <div align="center">Derechos Reservados &copy; Copyright HackDemons 2010-2017 </div>
+        </div>
+
+        <!--/**<script>
+            // Load the SDK asynchronously
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>*/-->
+    </body>
 </html>
