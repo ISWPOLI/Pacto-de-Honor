@@ -5,4 +5,4 @@ var game = new Phaser.Game (800, 600, Phaser.AUTO, 'game');
     game.state.add("primer", primer);
     game.state.add("seleccionpersonaje", seleccionpersonaje);    
     game.state.add("seleccionavatar", seleccionavatar);    
-	game.state.start("seleccionavatar");
+	game.state.start("creditos");
