@@ -26,34 +26,33 @@ var descripcionesMalos = ["Ana y Sara Abejas\n\nSon realmente hermosas, les enca
                           "Luis Víbora\n\nEs una persona naturalmente solitaria, aprovecha su tiempo al máximo para realizar descargas frecuentes de Internet y romper los derechos de autor Copyright para su beneficio monetario.",
                           "Andrés Zorro\n\nEs una persona joven, compañerita y de muy buen ambiente. Sin embargo, se ha visto preocupado e inestable emocionalmente por la serie de evidencias que lo involucran en colarse en sistemas de transporte universitario. Su habilidad tiene como finalidad saltar turnos de batalla para su beneficio."];
 //Descripciones de los Tipos de Plagio
-var descripcionesPlagios = ["Clonación\tPresentar como creación propia el trabajo idéntico de alguien más.\t9.5\n",
-                            "Copiado y Pegado\t\tContiene una porción significante de texto sin alteración y procedente de una misma fuente.\t\tFrecuencia: 8.9\n\n",
-                            "Búsqueda y Reemplazo\t\tCambiar palabras y frases clave, pero conservando la esencial del trabajo original.\t\tFrecuencia: 3.9",
-                            "Resumir\t\tRealizar paráfrasis de diversos textos.\t\tFrecuencia: 5.6",
-                            "Reciclar\t\tApropiarse del trabajo de un autor, al no citar el texto.\t\tFrecuencia: 5.5",
-                            "Hibrido\t\tCombinar citas realizadas correctamente y texto copiado sin cita.\t\tFrecuencia: 0.5",
-                            "Mezclar\t\tCopiar material de diversas fuentes.\t\tFrecuencia: 9.1",
-                            "Error\t\tLas citas se realizan de manera inadecuada, al presenta información inexacta de las fuentes.\t\tFrecuencia: 0.6",
-                            "Agregar\t\tSe cita como propio el trabajo a pesar de contar con la mayoría de información no original.\t\tFrecuencia: 2.8",
-                            "Reutilización\t\tSe cita como propio el trabajo, pero la redacción se basa en otro texto.\t\tFrecuencia: 4.4"]
+var plagios = ["Clonación\n\nPresentar el trabajo de otra persona como propio, copiado palabra por palabra.\n\nFrecuencia: 9.5",
+               "Copiado y pegado\n\nIncluir amplios pasajes de texto de una única fuente sin modificarlos.\n\nFrecuencia: 8.9",
+               "Búsqueda y Reemplazo\n\nCambiar palabras y expresiones clave sin alterar el contenido esencial de las fuentes.\n\nFrecuencia: 3.9",
+               "Remix\n\nMezclar material parafraseado extraído de múltiples fuentes.\n\nFrecuencia: 5.6",
+               "Reciclado\n\nTomar prestados pasajes amplios de un trabajo propio anterior sin incluir citas.\n\nFrecuencia: 5.5",
+               "Híbrido\n\nCombinar fuentes perfectamente citadas con fragmentos copiados sin incluir citas.\n\nFrecuencia: 5.0",
+               "Mosaico\n\nMaterial copiado de múltiples fuentes que encajan bien.\n\nFrecuencia: 9.1",
+               "Error 404\n\nCitar fuentes inexistentes o incluir información imprecisa sobre fuentes.\n\nFrecuencia: 9.1",
+               "Fuente RSS\n\nCitar correctamente las fuentes pero casi sin incluir párrafos con creación propia.\n\nFrecuencia: 2.8",
+               "Reutilización\n\nCitar correctamente las fuentes haciendo demasiado uso de la estructura y/o los términos originales del texto.\n\nFrecuencia: 2.8"];
 //Variables de los textos y el logo
-var logoPacto, textoPacto, textoBuenos, textoMalos, textoTipos, textoPlagios;
-
+var logoPacto, textoPacto, textoBuenos, textoMalos, textoPlagios;
 
 var creditos = function(game){};
     creditos.prototype = {
         preload: function(){
             game.scale.pageAlignHorizontally = true;
             game.scale.pageAlignVertically = true;
-            //Carga de imagenes
+            //Carga de imagenes para el logo del pacto
             game.load.image('logoPacto', 'images/logoPacto.png');            
-            //Carga de botones principales
+            //Carga de imagenes para los botones principales
             game.load.spritesheet('botonPacto', 'assets/botonPacto.png', 192, 71);
             game.load.spritesheet('botonBuenos', 'assets/botonBuenos.png', 192, 71);
             game.load.spritesheet('botonMalos', 'assets/botonMalos.png', 192, 71);
             game.load.spritesheet('botonPlagios', 'assets/botonPlagios.png', 192, 71);
             game.load.spritesheet('botonVolver', 'assets/botonVolver.png', 62, 62);  
-            //Carga de botones de personajes buenos
+            //Carga de imagenes para los botones de personajes buenos
             game.load.spritesheet('anaPantera', 'images/botonPantera.png', 125, 125);
             game.load.spritesheet('andresGallo', 'images/botonGallo.png', 125, 125);
             game.load.spritesheet('cataCierva', 'images/botonCierva.png', 125, 125);
@@ -63,7 +62,7 @@ var creditos = function(game){};
             game.load.spritesheet('ivanRuisenor', 'images/botonRuisenor.png', 125, 125);
             game.load.spritesheet('pedroRaton', 'images/botonRaton.png', 125, 125);
             game.load.spritesheet('tatiHormiga', 'images/botonHormiga.png', 125, 125);
-            //Carga de botones de personajes malos
+            //Carga de imagenes para los botones de personajes malos
             game.load.spritesheet('anaSaraAbejas', 'images/botonAbejas.png', 75, 75);
             game.load.spritesheet('fabianBabuino', 'images/botonBabuino.png', 75, 75);
             game.load.spritesheet('carlosBuitre', 'images/botonBuitre.png', 75, 75);
@@ -76,14 +75,22 @@ var creditos = function(game){};
             game.load.spritesheet('juanRata', 'images/botonRata.png', 75, 75);
             game.load.spritesheet('luisVibora', 'images/botonVibora.png', 75, 75);
             game.load.spritesheet('andresZorro', 'images/botonZorro.png', 75, 75);
-            //Carga de botones de Tipos de Plagio
-
-           
+            //Carga de imagenes para los botones de Tipos de plagio
+            game.load.image('botonClonacion', 'images/botonClonacion.png');
+            game.load.image('botonCopiado', 'images/botonCopiado.png');
+            game.load.image('botonBusquedaReemplazo', 'images/botonBusquedaReemplazo.png');
+            game.load.image('botonRemix', 'images/botonRemix.png');
+            game.load.image('botonReciclado', 'images/botonReciclado.png');
+            game.load.image('botonHibrido', 'images/botonHibrido.png');
+            game.load.image('botonMosaico', 'images/botonMosaico.png');
+            game.load.image('botonError404', 'images/botonError404.png');
+            game.load.image('botonRSS', 'images/botonRSS.png');
+            game.load.image('botonReutilizacion', 'images/botonReutilizacion.png');
         },
         
         create: function(){
-            game.stage.backgroundColor = "#0060b2";
-            game.add.text(game.width / 2, 50, "Créditos", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5);
+            game.stage.backgroundColor = "#0060b2"; //Color de fondo
+            game.add.text(game.width / 2, 50, "Créditos", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5); //Título de Créditos
             
             //Se agregan los botones principales
             botonVolver = game.add.button(5, 5, 'botonVolver', this.volver, 1, 1, 0, 2);
@@ -117,6 +124,18 @@ var creditos = function(game){};
             botonVibora = game.add.button (120, 500, 'luisVibora', this.viboraClick, 1, 1, 0, 2);
             botonZorro = game.add.button (220, 500, 'andresZorro', this.zorroClick, 1, 1, 0, 2);
             
+            //Se crean los botones de los tipos de plagio
+            botonClonacion = game.add.button (10, 200, 'botonClonacion', this.clonacionClick, 1, 1, 0, 2);
+            botonCopiado = game.add.button (170, 200, 'botonCopiado', this.copiadoClick, 1, 1, 0, 2);
+            botonBusquedaReemplazo = game.add.button (10, 290, 'botonBusquedaReemplazo', this.busquedaReemplazoClick, 1, 1, 0, 2);
+            botonRemix = game.add.button (330, 200, 'botonRemix', this.remixClick, 1, 1, 0, 2);
+            botonReciclado = game.add.button (490, 200, 'botonReciclado', this.recicladoClick, 1, 1, 0, 2);
+            botonHibrido = game.add.button (650, 200, 'botonHibrido', this.hibridoClick, 1, 1, 0, 2);
+            botonMosaico = game.add.button (330, 290, 'botonMosaico', this.mosaicoClick, 1, 1, 0, 2);
+            botonError404 = game.add.button (650, 290, 'botonError404', this.error404Click, 1, 1, 0, 2);
+            botonRSS = game.add.button (490, 290, 'botonRSS', this.RSSClick, 1, 1, 0, 2);
+            botonReutilizacion = game.add.button (170, 290, 'botonReutilizacion', this.reutilizacionClick, 1, 1, 0, 2);
+            
             //Se ocultan los botones de los personajes buenos
             botonPantera.visible = false;
             botonGallo.visible = false;
@@ -142,90 +161,65 @@ var creditos = function(game){};
             botonVibora.visible = false;
             botonZorro.visible = false;
             
+            //Se ocultan los botones de los tipos de plagio
+            botonClonacion.visible = false;
+            botonCopiado.visible = false;
+            botonBusquedaReemplazo.visible = false;
+            botonRemix.visible = false;
+            botonReciclado.visible = false;
+            botonHibrido.visible = false;
+            botonMosaico.visible = false;
+            botonError404.visible = false;
+            botonRSS.visible = false;
+            botonReutilizacion.visible = false;
+            
             //Se crea el texto de la descripción del Pacto y se oculta    
             textoPacto = game.add.text(50, 190, descripcionPacto, {font: "12px Roboto", fill: "#ffffff", align: "left", boundsAlignH: "left", boundsAlignV: "top", wordWrap: true, wordWrapWidth: 350});                    
             textoPacto.visible = false;
             
-            //Se crean los textos de las descripciones de los tipos de plagio
-            textoTipos = game.add.text(20, 200, "TIPO\tDESCRIPCIÓN\tFRECUENCIA (1-10)", {font: "18px Roboto", fill: "#ffffff", fontWeight: 'bold', tabs: 300});
-            textoPlagios = game.add.text(10, 270, descripcionesPlagios, {font: "12px Roboto", fill: "#ffffff", tabs: 132, align: "left", boundsAlignH: "left", boundsAlignV: "top", wordWrap: true, wordWrapWidth: 800});    
-            textoTipos.visible = false;
-            textoPlagios.visible = false;
-            
-            //Se crean dos textos vacíos para las descripciones de los personajes buenos y malos
+            //Se crean tres textos vacíos para las descripciones de los personajes buenos y malos, y para el texto de los plagios
             textoBuenos = game.add.text(450, 230, "", {font: "18px Roboto", fill: "#ffffff", align: "left", boundsAlignH: "left", boundsAlignV:       "top", wordWrap: true, wordWrapWidth: 300});
-            textoMalos = game.add.text(450, 230, "", {font: "18px Roboto", fill: "#ffffff", align: "left", boundsAlignH: "left", boundsAlignV:       "top", wordWrap: true, wordWrapWidth: 300});
+            textoMalos = game.add.text(450, 230, "", {font: "18px Roboto", fill: "#ffffff", align: "left", boundsAlignH: "left", boundsAlignV:       "top", wordWrap: true, wordWrapWidth: 300});            
+            textoPlagios = game.add.text(200, 400, "", {font: "18px Roboto", fill: "#ffffff", align: "left", boundsAlignH: "left", boundsAlignV: "top", wordWrap: true, wordWrapWidth: 400});
             
             //Se crea el logo del Pacto y se oculta
             logoPacto = game.add.image(500, 300, 'logoPacto');
             logoPacto.visible = false;
-        },      
-        
+        },
+            
         /*Funciones que se llaman al oprimir el boton de cada personaje
-        Dentro de estas funciones se sobreescribe la variable de texto de las descripciones de los personajes segun corresponde*/
-        panteraClick: function(){
-            textoBuenos.setText(descripcionesBuenos[0]);
-        },        
-        galloClick: function(){
-            textoBuenos.setText(descripcionesBuenos[1]);           
-        },
-        ciervaClick: function(){
-            textoBuenos.setText(descripcionesBuenos[2]);           
-        },
-        jirafaClick: function(){
-            textoBuenos.setText(descripcionesBuenos[3]);           
-        },
-        leonClick: function(){
-            textoBuenos.setText(descripcionesBuenos[4]);           
-        },
-        canarioClick: function(){
-            textoBuenos.setText(descripcionesBuenos[5]);           
-        },
-        ruisenorClick: function(){
-            textoBuenos.setText(descripcionesBuenos[6]);           
-        },
-        ratonClick: function(){
-            textoBuenos.setText(descripcionesBuenos[7]);           
-        },
-        hormigaClick: function(){
-            textoBuenos.setText(descripcionesBuenos[8]);           
-        },
-        abejasClick: function(){
-            textoMalos.setText(descripcionesMalos[0]);           
-        },
-        babuinoClick: function(){
-            textoMalos.setText(descripcionesMalos[1]);           
-        },
-        buitreClick: function(){
-            textoMalos.setText(descripcionesMalos[2]);           
-        },
-        burroClick: function(){
-            textoMalos.setText(descripcionesMalos[3]);           
-        },
-        camaleonClick: function(){
-            textoMalos.setText(descripcionesMalos[4]);           
-        },
-        hienaClick: function(){
-            textoMalos.setText(descripcionesMalos[5]);           
-        },
-        lagartoClick: function(){
-            textoMalos.setText(descripcionesMalos[6]);           
-        },
-        osoClick: function(){
-            textoMalos.setText(descripcionesMalos[7]);           
-        },
-        perezosoClick: function(){
-            textoMalos.setText(descripcionesMalos[8]);           
-        },
-        rataClick: function(){
-            textoMalos.setText(descripcionesMalos[9]);           
-        },
-        viboraClick: function(){
-            textoMalos.setText(descripcionesMalos[10]);           
-        },
-        zorroClick: function(){
-            textoMalos.setText(descripcionesMalos[11]);           
-        },
+        Dentro de estas funciones se sobreescribe la variable de texto de las descripciones de los personajes o tipos de plagio segun corresponde*/
+        panteraClick: function(){textoBuenos.setText(descripcionesBuenos[0]);},        
+        galloClick: function(){textoBuenos.setText(descripcionesBuenos[1]);},
+        ciervaClick: function(){textoBuenos.setText(descripcionesBuenos[2]);},
+        jirafaClick: function(){textoBuenos.setText(descripcionesBuenos[3]);},
+        leonClick: function(){textoBuenos.setText(descripcionesBuenos[4]);},
+        canarioClick: function(){textoBuenos.setText(descripcionesBuenos[5]);},
+        ruisenorClick: function(){textoBuenos.setText(descripcionesBuenos[6]);},
+        ratonClick: function(){textoBuenos.setText(descripcionesBuenos[7]);},
+        hormigaClick: function(){textoBuenos.setText(descripcionesBuenos[8]);},
+        abejasClick: function(){textoMalos.setText(descripcionesMalos[0]);},
+        babuinoClick: function(){textoMalos.setText(descripcionesMalos[1]);},
+        buitreClick: function(){textoMalos.setText(descripcionesMalos[2]);},
+        burroClick: function(){textoMalos.setText(descripcionesMalos[3]);},
+        camaleonClick: function(){textoMalos.setText(descripcionesMalos[4]);},
+        hienaClick: function(){textoMalos.setText(descripcionesMalos[5]);},
+        lagartoClick: function(){textoMalos.setText(descripcionesMalos[6]);},
+        osoClick: function(){textoMalos.setText(descripcionesMalos[7]);},
+        perezosoClick: function(){textoMalos.setText(descripcionesMalos[8]);},
+        rataClick: function(){textoMalos.setText(descripcionesMalos[9]);},
+        viboraClick: function(){textoMalos.setText(descripcionesMalos[10]);},
+        zorroClick: function(){textoMalos.setText(descripcionesMalos[11]);},        
+        clonacionClick: function(){textoPlagios.setText(plagios[0]);},
+        copiadoClick: function(){textoPlagios.setText(plagios[1]);},
+        busquedaReemplazoClick: function(){textoPlagios.setText(plagios[2]);},
+        remixClick: function(){textoPlagios.setText(plagios[3]);},
+        recicladoClick: function(){textoPlagios.setText(plagios[4]);},
+        hibridoClick: function(){textoPlagios.setText(plagios[5]);},
+        mosaicoClick: function(){textoPlagios.setText(plagios[6]);},
+        error404Click: function(){textoPlagios.setText(plagios[7]);},
+        RSSClick: function(){textoPlagios.setText(plagios[8]);},
+        reutilizacionClick: function(){textoPlagios.setText(plagios[9]);},
         
         //Dentro de las siguientes funciones se ponen visibles o no visibles los elementos de la pantalla según corresponda
         
@@ -255,7 +249,16 @@ var creditos = function(game){};
             textoBuenos.visible = false;
             textoMalos.visible = false;
             textoPlagios.visible=false;
-            textoTipos.visible = false;
+            botonClonacion.visible = false;
+            botonCopiado.visible = false;
+            botonBusquedaReemplazo.visible = false;
+            botonRemix.visible = false;
+            botonReciclado.visible = false;
+            botonHibrido.visible = false;
+            botonMosaico.visible = false;
+            botonError404.visible = false;
+            botonRSS.visible = false;
+            botonReutilizacion.visible = false;            
             
             textoPacto.visible = true;
             logoPacto.visible = true;          
@@ -280,8 +283,17 @@ var creditos = function(game){};
             logoPacto.visible = false;
             textoMalos.visible = false;
             textoPlagios.visible=false;
-            textoTipos.visible = false;
-            
+            botonClonacion.visible = false;
+            botonCopiado.visible = false;
+            botonBusquedaReemplazo.visible = false;
+            botonRemix.visible = false;
+            botonReciclado.visible = false;
+            botonHibrido.visible = false;
+            botonMosaico.visible = false;
+            botonError404.visible = false;
+            botonRSS.visible = false;
+            botonReutilizacion.visible = false;
+                        
             botonPantera.visible = true;
             botonGallo.visible = true;
             botonCierva.visible = true;
@@ -310,8 +322,17 @@ var creditos = function(game){};
             logoPacto.visible = false;
             textoBuenos.visible = false;
             textoPlagios.visible=false;
-            textoTipos.visible = false;
-            
+            botonClonacion.visible = false;
+            botonCopiado.visible = false;
+            botonBusquedaReemplazo.visible = false;
+            botonRemix.visible = false;
+            botonReciclado.visible = false;
+            botonHibrido.visible = false;
+            botonMosaico.visible = false;
+            botonError404.visible = false;
+            botonRSS.visible = false;
+            botonReutilizacion.visible = false;
+                        
             textoMalos.visible = true;
             botonAbejas.visible = true;
             botonBabuino.visible = true;
@@ -329,6 +350,7 @@ var creditos = function(game){};
         
         //Funcion que se llama al oprimir el boton 'Tipos de plagio'
         verPlagios: function(){
+            textoPlagios.setText("");
             botonAbejas.visible = false;
             botonBabuino.visible = false;
             botonBuitre.visible = false;
@@ -356,7 +378,16 @@ var creditos = function(game){};
             textoMalos.visible = false;
             
             textoPlagios.visible = true;
-            textoTipos.visible = true;
+            botonClonacion.visible = true;
+            botonCopiado.visible = true;
+            botonBusquedaReemplazo.visible = true;
+            botonRemix.visible = true;
+            botonReciclado.visible = true;
+            botonHibrido.visible = true;
+            botonMosaico.visible = true;
+            botonError404.visible = true;
+            botonRSS.visible = true;
+            botonReutilizacion.visible = true;
         },
         
         //Funcion que se llama al oprimir el botón de regreso
@@ -364,6 +395,5 @@ var creditos = function(game){};
             game.state.start("navegacion");
         },        
         update:function(){
-            
-        }            
+        }
     }
