@@ -116,11 +116,7 @@ popup2 = game.add.sprite(game.world.centerX, game.world.centerY, 'medellin');
     popup2.addChild(closeButton2);
 
 //se crean los 5 botones que son los que sirven para elejir nivel
-var nivelButton = game.add.button (180, -250, 'nivel1', iniciarnivel1 ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 1 nivel 1
-    
-    function iniciarnivel1(){
-            game.state.start("primer");
-        }
+var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 1 nivel 1
 
     nivelButton.inputEnabled = true;
     nivelButton.input.priorityID = 1;
