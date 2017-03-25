@@ -37,6 +37,7 @@ game.load.image('bloquei', '../img/Componentes/navegacionMapa/bloqueICampus.png'
       game.load.spritesheet('nivel3', '../img/Componentes/navegacionMapa/nivel3.png', 192,71);
       game.load.spritesheet('nivel4', '../img/Componentes/navegacionMapa/nivel4.png', 192,71);
       game.load.spritesheet('nivel5', '../img/Componentes/navegacionMapa/nivel5.png', 192,71);
+      game.load.spritesheet('botonCreditos', '../img/Componentes/creditos/botonCreditos.png', 62, 62);
 
     game.load.spritesheet('pause12', '../img/Componentes/navegacionMapa/pause12.png', 50,50);
     game.load.spritesheet('pause13', '../img/Componentes/navegacionMapa/pause13.png', 50,50);
@@ -48,6 +49,7 @@ game.load.image('bloquei', '../img/Componentes/navegacionMapa/bloqueICampus.png'
 //se agrega el fondo y se crean los botones de los mundos en donde tenemos button(medida en x, medida en y, nombre de la imagen, la funcion, sprites)
  create:function() {
     game.add.sprite(0, 0, 'fondo');
+     botonCreditos = game.add.button(735, 5, 'botonCreditos', this.verCreditos, 1, 1, 0, 2);
 
     btMundo = game.add.button (80, 60, 'pause13', this.onMundo1, 0, 0, 0, 1);
     btMundo.scale.setTo(0.5, 0.5);
@@ -91,6 +93,9 @@ game.load.image('bloquei', '../img/Componentes/navegacionMapa/bloqueICampus.png'
    
 
 },
+    verCreditos: function(){
+            game.state.start("creditos");
+        },
 //se crea la funcion que ira adentro de cada boton de cada mundo, lo que hara sera abrir el popup con la imagen de el escenario y sus respectivos niveles.
 onMundo1 :function () {
 
@@ -111,7 +116,11 @@ popup2 = game.add.sprite(game.world.centerX, game.world.centerY, 'medellin');
     popup2.addChild(closeButton2);
 
 //se crean los 5 botones que son los que sirven para elejir nivel
-var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 1 nivel 1
+var nivelButton = game.add.button (180, -250, 'nivel1', iniciarnivel1 ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 1 nivel 1
+    
+    function iniciarnivel1(){
+            game.state.start("primer");
+        }
 
     nivelButton.inputEnabled = true;
     nivelButton.input.priorityID = 1;
