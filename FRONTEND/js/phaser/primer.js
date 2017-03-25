@@ -1,34 +1,48 @@
 
-var gallo1;
-var oso1
-var cursores;
+var gallo1;//guarda el sprite del gallo
+var oso1//guarda el sprite del oso
+var cursores;//crea cursores
 var text;
 var counter = 0;
 var ti = 0;
-var x = 180; // heroe
+var x = 200; // heroe
 var y = 200; // villano
-var oso1;
-var gallo1;
+var atqueH1=6;//ataque heroe
+var ataqueV1=6;//ataque villano
+var atqueH2=10;//ataque heroe especial 
+var ataqueV2=10;//ataque villano especia
+var ataqueV3=15;//ataque villano plagio
+
+var danoH=[6,2]; //daño del heroe
+var danoV=[6,10,15]; //daño del villano
+
+//arreglo para saber que accion esta ejecutando el villano
+//[ataqueNomal,ataquePersonalidad,ataquePlagio,Defensa]
+var movV=[false,false,false,false];
+//arreglo para saber que accion esta ejecutando el Heroe
+//[ataqueNomal,ataquePersonalidad,ataquePlagio,Defensa]
+var movH=[false,false,false,false];
+
+var ataquePlagio;
+var ataquePersonalidadV;
+var ataquePersonalidadB;
+
+
 var primer = {
-
 	preload : function() {
-
-		
 		game.load.image('fondo', '../img/escenarios/escenariosSecundarios/nivel1.png');
 		game.load.spritesheet('oso1', '../img/sprites/personajesMalos/oso.png',200,200);
 		game.load.spritesheet('gallo1', '../img/sprites/personajesBuenos/gallo.png', 200, 200);
 		game.load.image('caraoso', '../img/componentes/batalla/caraoso.png');
 		game.load.image('caragallo', '../img/componentes/batalla/caragallo.png');
 		game.load.image('pausa', '../img/componentes/batalla/pausa.png');
-		
-
+		game.load.spritesheet('ataquePlagio', '../img/sprites/poderes/poderesPlagioMalos/error404.png',500,500);
+		game.load.image('ataquePersonalidadV', '../img/sprites/poderes/PoderesPersonalidadMalos/camiloPERSONALIDAD.png');
+		game.load.image('ataquePersonalidadB', '../img/sprites/poderes/PoderesPersonalidadBuenos/AndresGallo.png');
 	},
 
 	create : function() {
 		game.physics.startSystem(Phaser.Physics.ARCADE);
-
-		
-
 
 		var fondogame = game.add.sprite(0, 0, 'fondo');
 		oso1 = game.add.sprite(650, 450, 'oso1');
@@ -98,20 +112,20 @@ var primer = {
 		// game.time.event.loop(Phaser.Timer.SECOND, updateCounter, this);
 		floor = new Phaser.Rectangle(144, 53, 201, 20);//primer borde negro
 		floor2 = new Phaser.Rectangle(143, 52, 202, 22);//primer barra blanca
-		floor3 = new Phaser.Rectangle(144, 53, 201, 20);//primer barra
+		floor3 = new Phaser.Rectangle(144, 53, 201, 20);//primer barra roja
 
 		floord = new Phaser.Rectangle(460, 79, 201, 20);
 		floor2d = new Phaser.Rectangle(459, 78, 202, 22);
-		floor3d = new Phaser.Rectangle(460, 79, x, 20);
+		floor3d = new Phaser.Rectangle(460, 79, 201, 20);
 
 
 		floorb = new Phaser.Rectangle(460, 53, 201, 20);
 		floor2b = new Phaser.Rectangle(459, 52, 202, 22);
-		floor3b = new Phaser.Rectangle(460, 53, x, 20);
+		floor3b = new Phaser.Rectangle(460, 53, 200, 20);//segunda barra roja
 
 		floorc = new Phaser.Rectangle(144, 79, 201, 20);
 		floor2c = new Phaser.Rectangle(143, 78, 202, 22);
-		floor3c = new Phaser.Rectangle(144, 79, y, 20);
+		floor3c = new Phaser.Rectangle(144, 79, 200, 20);
 		//var animacion = game.add.tween(oso1).to({
 		//	x : 400
 		//}, 1000, Phaser.Easing.Linear.None, true, 0, 70, true);
@@ -138,9 +152,49 @@ var primer = {
 		game.debug.geom(floor3d, 'rgb(0,255,0)');
 
 	},
- 	 colision : function(){
+	//se crea esta funcion para disminuir la barra de energia
+	actualizarBarra: function(barra,daño){
+		if(barra.width-daño>0)
+			barra.width=barra.width-daño;
+		else{
+			barra.width=0;
+			//game.state.start("fin"); 
+		}
+	}, 
+	activarEspecial: function(){
+		ataquePlagio = game.add.sprite(0,gallo1.body.y-200, 'ataquePlagio');
+ 			game.physics.arcade.enable(ataquePlagio);
+			ataquePlagio.collideWorldBounds = true; 
+        	ataquePlagio.animations.add('especiall', [1, 2, 3, 4, 5, 6, 7, 8], 15, false,true);
+        	ataquePlagio.animations.play('especiall');
+        	ataquePlagio.destroy();
+	},
+	destruirSprite:function(sprite){
+		sprite.destroy();
+	},	
+
+ 	colision : function(){
  	 	gallo1.position.x -=100;
+ 	 	gallo1.animations.play('correr');
  	 	oso1.position.x+=200;
+ 	 	//oso1.animations.play('correr',20,false,true);
+ 	 	if(movV[0]==true&&!movH[3]){
+ 	 		primer.actualizarBarra(floor3,danoV[0]);
+ 	 		movH[3]=false;
+ 	 		movV[0]=false;
+ 	 	}
+ 	 	if(movH[0]){
+ 	 		primer.actualizarBarra(floor3b,danoH[0]);
+ 	 		movH[0]=false;
+ 	 	}if(movV[2]==true){
+ 	 		if(!movH[3]){
+ 	 			primer.actualizarBarra(floor3,danoV[2]);
+ 	 			movH[3]=false;
+ 	 		}
+ 	 		//destruirSprite(ataquePlagio);
+
+ 	 	}
+
  	 },
  	
 	
@@ -153,25 +207,53 @@ var primer = {
 			gallo1.body.x-=2;
         	gallo1.animations.play('correr');
 		} else if (cursores.down.isDown) {
-			gallo1.animations.play('defensa');	
+			gallo1.animations.play('defensa');
+			movH[3]=true;
+
 		} else if (cursores.up.isDown) {
 			gallo1.animations.play('especial');
+			movH[1]=true;
 
 		} else if (esp.isDown){
 			gallo1.animations.play('punos');
 			gallo1.body.x+=2;
+			movH[0]=true;
 		}else{			
 			gallo1.animations.play('quieto')
+			movH[0]=false;
 		}
 
 
-		 if(oso1.position.x>gallo1.position.x+200){
+		 if(floor3b.width>100){
+		 	if(oso1.position.x-(gallo1.x+200)>60){
  	 		oso1.body.x -= 3;	
  	 		oso1.animations.play('correr');
+ 	 		}else{
+ 	 		 	oso1.animations.play('punos');
+ 				oso1.body.x-=2;
+ 				movV[0]=true
+ 	 		}
  		}else{
- 			//oso1.animations.play('quieto')
- 			oso1.animations.play('punos');
+ 			if(oso1.position.x<200){
+ 				oso1.body.x += 3;	
+ 	 			oso1.animations.play('correr');
+ 	 		}else{
+ 	 			if(movV[2]==false){
+ 	 				oso1.animations.play('especial');
+        			ataquePlagio = game.add.sprite(0,gallo1.body.y-200, 'ataquePlagio');
+ 					game.physics.arcade.enable(ataquePlagio);
+					ataquePlagio.collideWorldBounds = true; 
+        			ataquePlagio.animations.add('especiall', [1, 2, 3, 4, 5, 6, 7, 8], 15, false,true);
+        			ataquePlagio.animations.play('especiall');
+        		}else{
+        			oso1.animations.play('punos');
+ 					oso1.body.x-=2;
+ 					movV[0]=true
+ 				}
+        		
+ 	 		}
 
+ 			
  	 	}
 
 		counter++;
@@ -181,7 +263,7 @@ var primer = {
 		} else {
 			game.state.start('fin');
 		}
-
+		game.physics.arcade.overlap(gallo1,ataquePlagio,this.colision);
 		 game.physics.arcade.collide(gallo1, oso1, this.colision, null, this);
 		 game.physics.arcade.collide(gallo1, oso1);
 
