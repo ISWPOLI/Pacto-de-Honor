@@ -1,8 +1,8 @@
 # Video Juego Pacto-de-Honor
 
-### Objetivo
-Construir un videjuego con el fin de promover la concientización del plagio en el ambiente universitario.
-### Características
+#### Objetivo
+Construir un videjuego con el fin de promover la concientización del plagio y otras malas conductas en el ambiente universitario.
+#### Características
 - Poli Fighters es un videojuego divertido y entretenido. 
 - Promueve el aprendizaje sano en la universidad y vida profesional.  
 - Juego gratuito para toda la comunidad universitaria.
@@ -16,25 +16,13 @@ La prepración para el proyecto incluye:
 - Sistema operativo que soporte JDK 1.8 (http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 - Netbeans 8.2 que incluya Glassfish Server (Instalación Java EE https://netbeans.org/downloads/)
 - Servidor de bases de datos MySQL Community (en la página de descarga existe un paso que solicita login, allí dar click en ´No thanks, just start my download.´ https://dev.mysql.com/downloads/mysql/)
-- Cliente GitHub (No es obligatorio)
+- Cliente GitHub (No es obligatorio, https://desktop.github.com)
 
-### Installing
+### Instalación
 
-A step by step series of examples that tell you have to get a development env running
+- Se debe escoger una carpeta de instalación en el disco duro cuyo nombres de carpeta preferiblemente no tengan espacios. Allí se debe clonar el proyecto desde github. El proyecto clonado incluye una carpeta de documentación, una para los proyectos de backend y una para los proyectos de frontend.
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+- Se debe instalar la base de datos 
 
 ## Running the tests
 
