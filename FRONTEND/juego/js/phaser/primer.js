@@ -17,9 +17,10 @@ var primer = {
 		game.load.image('fondo', '../img/escenarios/escenariosSecundarios/nivel1.png');
 		game.load.spritesheet('oso1', '../img/sprites/personajesMalos/oso.png',200,200);
 		game.load.spritesheet('gallo1', '../img/sprites/personajesBuenos/gallo.png', 200, 200);
-		game.load.image('caraoso', '../img/componentes/batalla/caraoso.png');
+		game.load.image('caraoso', '../img/componentes/batalla/caraoso5.png');
 		game.load.image('caragallo', '../img/componentes/batalla/caragallo.png');
 		game.load.image('pausa', '../img/componentes/batalla/pausa.png');
+		game.load.image('menup', '../img/componentes/batalla/menup.png');
 		
 
 	},
@@ -61,21 +62,24 @@ var primer = {
 		
 		cursores = game.input.keyboard.createCursorKeys();
 		esp = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+		game.add.text(145,20,'Andres Gallo',{fill:'white'});
+		 game.add.text(460,20,'Felipe Oso',{fill:'white'});
 
 
 
 		var caraoso = game.add.sprite(665, 30, 'caraoso');
-		caraoso.scale.setTo(1.3, 1.3);
+		caraoso.scale.setTo(0.6);
 		var caragallo = game.add.sprite(10, 30, 'caragallo');
-		caragallo.scale.setTo(1.3, 1.3);
+		caragallo.scale.setTo(0.6);
 		var pausa = game.add.button(365, 20, 'pausa', this.pausar,this);
 		pausa.inputEnabled=true;
 		//funcion para pausar
 		pausa.events.onInputUp.add(function () {
 			game.paused=true;
 
-				 choiseLabel = game.add.text(300, 300, 'continuar', { font: '30px Arial', fill: '#fff' });
-
+				 //choiseLabel = game.add.text(300, 300, 'continuar', { font: '30px Arial', fill: '#fff' });
+				 	lal=game.add.image(270,170,'menup');
+				    lal.scale.setTo(1.5);
 		});
 
 		game.input.onDown.add(unpause, self);
@@ -83,10 +87,12 @@ var primer = {
 		 function unpause(event){
 		 	if(game.paused){
 
-                choiseLabel.destroy();
+                fondogame.destroy();
 
                 // Unpause the game
                 game.paused = false;
+                counter=0;
+                game.state.start('primer');
 		 	}
 		 };
 		
@@ -176,7 +182,10 @@ var primer = {
 
 		counter++;
 		ti = parseInt(counter / 60);
-		if (ti <= 70) {
+		if (ti == 2) {
+			game.add.text(200,200,'JUEGO TERMINADO', {font:'45px'});
+		}
+		if (ti <= 3) {
 			text.setText('time: ' + ti);
 		} else {
 			game.state.start('fin');
