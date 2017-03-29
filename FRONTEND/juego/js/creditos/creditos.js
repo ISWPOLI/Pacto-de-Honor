@@ -51,7 +51,7 @@ var creditos = function(game){};
             game.load.spritesheet('botonBuenos', '../img/Componentes/creditos/botonBuenos.png', 192, 71);
             game.load.spritesheet('botonMalos', '../img/Componentes/creditos/botonMalos.png', 192, 71);
             game.load.spritesheet('botonPlagios', '../img/Componentes/creditos/botonPlagios.png', 192, 71);
-            game.load.spritesheet('botonVolver', '../img/Componentes/creditos/botonVolver.png', 62, 62);  
+            game.load.spritesheet('botonVolver', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
             //Carga de imagenes para los botones de personajes buenos
             game.load.spritesheet('anaPantera', '../img/Componentes/creditos/botonPantera.png', 125, 125);
             game.load.spritesheet('andresGallo', '../img/Componentes/creditos/botonGallo.png', 125, 125);
