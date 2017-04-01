@@ -39,6 +39,7 @@ game.load.image('bloquei', '../img/Componentes/navegacionMapa/bloqueICampus.png'
       game.load.spritesheet('nivel5', '../img/Componentes/navegacionMapa/nivel5.png', 192,71);
       game.load.spritesheet('botonCreditos', '../img/Componentes/navegacionMapa/botonCreditos.png', 62, 62);
       game.load.spritesheet('botonAmigos', '../img/Componentes/navegacionMapa/botonAmigos.png', 62, 62);
+      game.load.spritesheet('botonPerfil', '../img/Componentes/navegacionMapa/botonPerfil.png', 62, 62);
 
     game.load.spritesheet('pause12', '../img/Componentes/navegacionMapa/pause12.png', 50,50);
     game.load.spritesheet('pause13', '../img/Componentes/navegacionMapa/pause13.png', 50,50);
@@ -52,6 +53,7 @@ game.load.image('bloquei', '../img/Componentes/navegacionMapa/bloqueICampus.png'
     game.add.sprite(0, 0, 'fondo');
      botonCreditos = game.add.button(735, 5, 'botonCreditos', this.verCreditos, 1, 1, 0, 2);
      botonAmigos = game.add.button(670, 5, 'botonAmigos', this.verInvitarAmigos, 1, 1, 0, 2);
+     botonPerfil = game.add.button(5, 5, 'botonPerfil', null, 1, 1, 0, 2); //El estado de perfil lo está creando Juan Carlos
 
     btMundo = game.add.button (80, 60, 'pause13', this.onMundo1, 0, 0, 0, 1);
     btMundo.scale.setTo(0.5, 0.5);
