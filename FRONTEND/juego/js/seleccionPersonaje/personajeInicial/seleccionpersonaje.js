@@ -13,16 +13,16 @@ seleccionpersonaje.prototype = {
           game.scale.pageAlignHorizontally = true;
           game.scale.pageAlignVertically = true;
 
-          game.load.spritesheet('pantera', 'images/AnaPanteraButton.png', 125, 125, 3);
-          game.load.spritesheet('gallo', 'images/AndresGalloButton.png', 125, 125, 3);
-          game.load.spritesheet('cierva', 'images/CataCiervaButton.png', 125, 125, 3);
-          game.load.spritesheet('girafa', 'images/DanielaGirafaButton.png', 125, 125, 3);
-          game.load.spritesheet('leon', 'images/DanielLeonButton.png', 125, 125, 3);
-          game.load.spritesheet('canario', 'images/FabianCanarioButton.png', 125, 125, 3);
-          game.load.spritesheet('ruisenor', 'images/IvanRuisenorButton.png', 125, 125, 3);
-          game.load.spritesheet('raton', 'images/PedroRatonButton.png', 125, 125, 3);
-          game.load.spritesheet('hormiga', 'images/TatiHormigaButton.png', 125, 125, 3);
-          game.load.spritesheet('button', 'images/SpriteButton.png', 150, 40);
+          game.load.spritesheet('pantera', '../img/Componentes/seleccion de personaje/AnaPanteraButton.png', 125, 125, 3);
+          game.load.spritesheet('gallo', '../img/Componentes/seleccion de personaje/AndresGalloButton.png', 125, 125, 3);
+          game.load.spritesheet('cierva', '../img/Componentes/seleccion de personaje/CataCiervaButton.png', 125, 125, 3);
+          game.load.spritesheet('girafa', '../img/Componentes/seleccion de personaje/DanielaGirafaButton.png', 125, 125, 3);
+          game.load.spritesheet('leon', '../img/Componentes/seleccion de personaje/DanielLeonButton.png', 125, 125, 3);
+          game.load.spritesheet('canario', '../img/Componentes/seleccion de personaje/FabianCanarioButton.png', 125, 125, 3);
+          game.load.spritesheet('ruisenor', '../img/Componentes/seleccion de personaje/IvanRuisenorButton.png', 125, 125, 3);
+          game.load.spritesheet('raton', '../img/Componentes/seleccion de personaje/PedroRatonButton.png', 125, 125, 3);
+          game.load.spritesheet('hormiga', '../img/Componentes/seleccion de personaje/TatiHormigaButton.png', 125, 125, 3);
+          game.load.spritesheet('button', '../img/Componentes/seleccion de personaje/SpriteButton.png', 150, 40);
      },
      create: function(){  
           game.stage.backgroundColor = "#2451A6"; 
