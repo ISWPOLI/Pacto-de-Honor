@@ -92,11 +92,10 @@ var primer = {
 		caragallo.scale.setTo(0.6);
 		var pausa = game.add.button(365, 20, 'pausa', this.pausar,this);
 		pausa.inputEnabled=true;
+        
 		//funcion para pausar
 		pausa.events.onInputUp.add(function () {
 			game.paused=true;
-
-				 //choiseLabel = game.add.text(300, 300, 'continuar', { font: '30px Arial', fill: '#fff' });
 				 	lal=game.add.image(270,170,'menup');
 				    lal.scale.setTo(1.5);
 		});
@@ -105,13 +104,8 @@ var primer = {
 		//funcion para reaunudar
 		 function unpause(event){
 		 	if(game.paused){
-
-                fondogame.destroy();
-
-                // Unpause the game
+                lal.destroy();
                 game.paused = false;
-                counter=0;
-                game.state.start('primer');
 		 	}
 		 };
 		
