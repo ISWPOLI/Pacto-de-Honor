@@ -58,8 +58,10 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
     @Path("create")
     @Consumes({"application/json"})
     public void create(Personaje entity) {
+        //Categoria es una entidad, problema al traer la entidad
         super.create(entity);
     }
+    
     
     /**
      * Edita un dato de acuerdo al id enviado
@@ -124,6 +126,25 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
     public String countREST() {
         return String.valueOf(super.count());
     }
+    
+    /**
+     * Retorna los datos nombre, imagen y nivel de dano
+     * Se prueba con el TestCase ""
+     * @return 
+     */
+    /*@GET
+    @Path("getData")
+    @Produces({"application/json"})
+    public String getData(@QueryParam("id") PathSegment id){
+        String resultado = "";
+        System.out.println("ID -> "+id);
+       // PersonajePK key = getPrimaryKey(id);
+        //System.out.println("Key -> " + key);
+       // Personaje personaje = super.find(key);
+        //resultado = personaje.getNombrePersonaje()+personaje.getNivelDano()+personaje.getImagen();
+        return resultado;
+    }*/
+            
 
     @Override
     protected EntityManager getEntityManager() {
