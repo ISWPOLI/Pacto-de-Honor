@@ -13,9 +13,7 @@ import javax.persistence.PersistenceContext;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 
@@ -36,7 +34,7 @@ public class CiudadFacadeREST extends AbstractFacade<Ciudad> {
     /**
      * Crea un dato Ciudad
      * Probado con el recurso "Crear"
-     * @param entity 
+     * @param entity Entidad Ciudad
      */
     @POST
     @Override
@@ -49,14 +47,14 @@ public class CiudadFacadeREST extends AbstractFacade<Ciudad> {
     /**
      * Edita un campo de acuerdo al id enviado
      * Probado con el recurso "Editar"
-     * @param entity 
+     * @param entity Entidad Ciudad
      */
     @POST
     @Path("edit")
     @Consumes({"application/json"})
+    @Override
     public void edit(Ciudad entity) {
         Ciudad ciudad = super.find(entity.getIdCiudad());
-        System.err.println("ID -> ");
         ciudad.setNombreCiudad(entity.getNombreCiudad());
         super.edit(ciudad);
     }
@@ -64,8 +62,8 @@ public class CiudadFacadeREST extends AbstractFacade<Ciudad> {
     /**
      * Busca un dato de acuerdo al id enviado
      * Probado con el recurso "Buscar"
-     * @param id
-     * @return 
+     * @param id de la ciudad a buscar
+     * @return entity Ciudad
      */
     @GET
     @Path("find")
@@ -77,7 +75,7 @@ public class CiudadFacadeREST extends AbstractFacade<Ciudad> {
     /**
      * Al consumir, arroja un json con todos los datos de la tabla
      * Probado con el recurso "Ciudad"
-     * @return List<Ciudad>
+     * @return List de todas las Ciudades
      */
     @GET
     @Override
@@ -89,9 +87,9 @@ public class CiudadFacadeREST extends AbstractFacade<Ciudad> {
     /**
      * Retorna de acuerdo alrango envidado, donde 0 es el primer dato
      * Probado con el recurso "BuscaPorRango"
-     * @param from
-     * @param to
-     * @return 
+     * @param from desde el id
+     * @param to hasta el id
+     * @return List con las ciudades
      */
     @GET
     @Path("findRange")
@@ -103,7 +101,7 @@ public class CiudadFacadeREST extends AbstractFacade<Ciudad> {
     /**
      * Retorna el número de datos contenido en la tabla
      * Probado con el recurso "NoDatos"
-     * @return 
+     * @return String con el número de datos
      */
     @GET
     @Path("count")
