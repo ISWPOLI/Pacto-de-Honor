@@ -53,8 +53,8 @@ navegacion.prototype = {
         game.add.sprite(80, 10, 'monedas');
         botonCreditos = game.add.button(735, 5, 'botonCreditos', this.verCreditos, 1, 1, 0, 2);
         botonAmigos = game.add.button(670, 5, 'botonAmigos', this.verInvitarAmigos, 1, 1, 0, 2);
-        botonPerfil = game.add.button(5, 5, 'botonPerfil', null, 1, 1, 0, 2); //El estado de perfil lo está creando Juan Carlos
-        botonPerfil = game.add.button(605, 5, 'botonRanking', null, 1, 1, 0, 2); //El estado de Rankings aun no esta creado
+        botonPerfil = game.add.button(5, 5, 'botonPerfil', this.verPerfil, 1, 1, 0, 2); //El estado de perfil lo está creando Juan Carlos
+        botonRanking = game.add.button(605, 5, 'botonRanking', null, 1, 1, 0, 2); //El estado de Rankings aun no esta creado
         game.add.text(160, 20, "999999", {font: "16px Roboto", fill: "#ffffff"}); //Label monedas
      
         btMundo = game.add.button (80, 60, 'pause13', this.onMundo1, 0, 0, 0, 1);
@@ -104,6 +104,10 @@ navegacion.prototype = {
     
     verInvitarAmigos: function(){
         game.state.start("invitarAmigos");
+    },
+    
+    verPerfil: function(){
+        game.state.start("perfilJugador");
     },
     
     //se crea la funcion que ira adentro de cada boton de cada mundo, lo que hara sera abrir el popup con la imagen de el escenario y sus respectivos niveles.
