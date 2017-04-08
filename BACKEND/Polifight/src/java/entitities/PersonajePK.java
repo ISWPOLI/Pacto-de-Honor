@@ -17,13 +17,16 @@ import javax.validation.constraints.NotNull;
  */
 @Embeddable
 public class PersonajePK implements Serializable {
+    
     @Basic(optional = false)
     @Column(name = "id_personaje")
     private int idPersonaje;
+    
     @Basic(optional = false)
     @NotNull
     @Column(name = "id_categoria")
     private int idCategoria;
+    
     @Basic(optional = false)
     @NotNull
     @Column(name = "id_imagen")

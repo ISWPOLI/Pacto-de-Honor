@@ -10,10 +10,12 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 
 import javax.ws.rs.core.PathSegment;
+import printEntities.PersonajePrint;
 
 /**
  * Servicio para la entidad Personaje
@@ -130,22 +132,22 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
     /**
      * Retorna los datos nombre, imagen y nivel de dano
      * Se prueba con el TestCase ""
+     * @param id
      * @return 
      */
-    /*@GET
+    @GET
     @Path("getData")
     @Produces({"application/json"})
-    public String getData(@QueryParam("id") PathSegment id){
-        String resultado = "";
-        System.out.println("ID -> "+id);
-       // PersonajePK key = getPrimaryKey(id);
-        //System.out.println("Key -> " + key);
-       // Personaje personaje = super.find(key);
-        //resultado = personaje.getNombrePersonaje()+personaje.getNivelDano()+personaje.getImagen();
+    public PersonajePrint getData(@QueryParam("id") Integer id){
+        PersonajePrint resultado = new PersonajePrint();
+        Personaje personaje =  super.find(id);
+        resultado.setId(personaje.getIdPersonaje());
+        resultado.setNombre(personaje.getNombrePersonaje());
+        resultado.setImagen(personaje.getImagen().getFoto());
+        resultado.setNivelDano(String.valueOf(personaje.getNivelDano()));       
         return resultado;
-    }*/
-            
-
+    }
+           
     @Override
     protected EntityManager getEntityManager() {
         return em;

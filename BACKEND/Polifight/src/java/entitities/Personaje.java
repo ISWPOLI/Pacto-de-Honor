@@ -10,6 +10,9 @@ import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
@@ -28,9 +31,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Personaje.findAll", query = "SELECT p FROM Personaje p"),
-    @NamedQuery(name = "Personaje.findByIdPersonaje", query = "SELECT p FROM Personaje p WHERE p.personajePK.idPersonaje = :idPersonaje"),
-    @NamedQuery(name = "Personaje.findByIdCategoria", query = "SELECT p FROM Personaje p WHERE p.personajePK.idCategoria = :idCategoria"),
-    @NamedQuery(name = "Personaje.findByIdImagen", query = "SELECT p FROM Personaje p WHERE p.personajePK.idImagen = :idImagen"),
+    @NamedQuery(name = "Personaje.findByIdPersonaje", query = "SELECT p FROM Personaje p WHERE p.idPersonaje = :idPersonaje"),
+    @NamedQuery(name = "Personaje.findByIdCategoria", query = "SELECT p FROM Personaje p WHERE p.categoria.idCategoria = :idCategoria"),
+    @NamedQuery(name = "Personaje.findByIdImagen", query = "SELECT p FROM Personaje p WHERE p.imagen.idImagen = :idImagen"),
     @NamedQuery(name = "Personaje.findByNombrePersonaje", query = "SELECT p FROM Personaje p WHERE p.nombrePersonaje = :nombrePersonaje"),
     @NamedQuery(name = "Personaje.findByDescripcionPersonaje", query = "SELECT p FROM Personaje p WHERE p.descripcionPersonaje = :descripcionPersonaje"),
     @NamedQuery(name = "Personaje.findByCosto", query = "SELECT p FROM Personaje p WHERE p.costo = :costo"),
@@ -39,8 +42,13 @@ public class Personaje implements Serializable {
     
     private static final long serialVersionUID = 1L;
     
-    @EmbeddedId
-    protected PersonajePK personajePK;
+   
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "id_personaje")
+    private Integer idPersonaje;
     
     @Basic(optional = false)
     @NotNull
@@ -75,29 +83,9 @@ public class Personaje implements Serializable {
     public Personaje() {
     }
 
-    public Personaje(PersonajePK personajePK) {
-        this.personajePK = personajePK;
-    }
+   
 
-    public Personaje(PersonajePK personajePK, String nombrePersonaje, String descripcionPersonaje, int costo, int nivelDano) {
-        this.personajePK = personajePK;
-        this.nombrePersonaje = nombrePersonaje;
-        this.descripcionPersonaje = descripcionPersonaje;
-        this.costo = costo;
-        this.nivelDano = nivelDano;
-    }
-
-    public Personaje(int idPersonaje, int idCategoria, int idImagen) {
-        this.personajePK = new PersonajePK(idPersonaje, idCategoria, idImagen);
-    }
-
-    public PersonajePK getPersonajePK() {
-        return personajePK;
-    }
-
-    public void setPersonajePK(PersonajePK personajePK) {
-        this.personajePK = personajePK;
-    }
+  
 
     public String getNombrePersonaje() {
         return nombrePersonaje;
@@ -147,29 +135,17 @@ public class Personaje implements Serializable {
         this.categoria = categoria;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (personajePK != null ? personajePK.hashCode() : 0);
-        return hash;
+   
+   
+
+    public Integer getIdPersonaje() {
+        return idPersonaje;
     }
 
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Personaje)) {
-            return false;
-        }
-        Personaje other = (Personaje) object;
-        if ((this.personajePK == null && other.personajePK != null) || (this.personajePK != null && !this.personajePK.equals(other.personajePK))) {
-            return false;
-        }
-        return true;
+    public void setIdPersonaje(Integer idPersonaje) {
+        this.idPersonaje = idPersonaje;
     }
-
-    @Override
-    public String toString() {
-        return "entitities.Personaje[ personajePK=" + personajePK + " ]";
-    }
+    
+   
     
 }
