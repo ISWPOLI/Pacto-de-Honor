@@ -3,14 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package rest;
+
+package com.poder.Restful.PH.service;
 
 import java.util.Set;
 import javax.ws.rs.core.Application;
 
 /**
  *
- * @author jrubiaob
+ * @author ahsierra
  */
 @javax.ws.rs.ApplicationPath("webresources")
 public class ApplicationConfig extends Application {
@@ -29,6 +30,8 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
+        resources.add(com.poder.Restful.PH.service.ImagenFacadeREST.class);
+        resources.add(com.poder.Restful.PH.service.PoderFacadeREST.class);
         resources.add(rest.CiudadFacadeREST.class);
     }
     
