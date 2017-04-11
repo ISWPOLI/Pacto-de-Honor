@@ -36,6 +36,7 @@ navegacion.prototype = {
         game.load.spritesheet('nivel3', '../img/Componentes/navegacionMapa/nivel3.png', 192,71);
         game.load.spritesheet('nivel4', '../img/Componentes/navegacionMapa/nivel4.png', 192,71);
         game.load.spritesheet('nivel5', '../img/Componentes/navegacionMapa/nivel5.png', 192,71);
+        game.load.spritesheet('nivel6', '../img/Componentes/navegacionMapa/nivel6.png', 192,71);
         game.load.spritesheet('botonCreditos', '../img/Componentes/navegacionMapa/botonCreditos.png', 62, 62);
         game.load.spritesheet('botonAmigos', '../img/Componentes/navegacionMapa/botonAmigos.png', 62, 62);
         game.load.spritesheet('botonPerfil', '../img/Componentes/navegacionMapa/botonPerfil.png', 62, 62);
@@ -139,7 +140,7 @@ navegacion.prototype = {
     btMundo12 = game.add.button (750, 480, 'pause14',this.onMundo12, 0, 0, 0, 1);
     btMundo12.scale.setTo(0.5, 0.5);
 
-     var text12 = game.add.text(6,1, "12", 
+     var text12 = game.add.text(5,1, "12", 
     	{ font: "35px Arial", fill: "#FFFF00"});
     btMundo12.addChild(text12);
 
@@ -522,6 +523,16 @@ var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En
     nivelButton4.input.useHandCursor = true;
 
  popup6.addChild(nivelButton4);
+
+    popup6.scale.set(0.8);
+
+    var nivelButton5 = game.add.button (180, 150, 'nivel6', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 6 nivel 5
+
+    nivelButton5.inputEnabled = true;
+    nivelButton5.input.priorityID = 1;
+    nivelButton5.input.useHandCursor = true;
+
+ popup6.addChild(nivelButton5);
 
     popup6.scale.set(0.8);
 
