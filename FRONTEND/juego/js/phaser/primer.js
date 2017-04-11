@@ -27,9 +27,7 @@ var ataquePersonalidadV;
 var ataquePersonalidadB;
 var primer = {
 
-	preload : function() {
-
-		
+	preload : function() {		
 		game.load.image('fondo', '../img/escenarios/escenariosSecundarios/nivel1.png');
 		game.load.spritesheet('oso1', '../img/sprites/personajesMalos/oso.png',200,200);
 		game.load.spritesheet('gallo1', '../img/sprites/personajesBuenos/gallo.png', 200, 200);
@@ -40,15 +38,10 @@ var primer = {
 		game.load.spritesheet('ataquePlagio', '../img/sprites/poderes/poderesPlagioMalos/error404.png',500,500);
 		game.load.image('ataquePersonalidadV', '../img/sprites/poderes/PoderesPersonalidadMalos/camiloPERSONALIDAD.png');
 		game.load.image('ataquePersonalidadB', '../img/sprites/poderes/PoderesPersonalidadBuenos/AndresGallo.png');
-		
-
 	},
 
 	create : function() {
 		game.physics.startSystem(Phaser.Physics.ARCADE);
-
-		
-
 
 		var fondogame = game.add.sprite(0, 0, 'fondo');
 		oso1 = game.add.sprite(650, 450, 'oso1');
@@ -75,16 +68,13 @@ var primer = {
     	oso1.animations.add('especial', [23, 24], 10, true);
     	oso1.animations.play('quieto');   
     	
-
-		 game.physics.arcade.enable(oso1);
-		 oso1.body.collideWorldBounds = true;
+        game.physics.arcade.enable(oso1);
+		oso1.body.collideWorldBounds = true;
 		
 		cursores = game.input.keyboard.createCursorKeys();
 		esp = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 		game.add.text(145,20,'Andres Gallo',{fill:'white'});
-		 game.add.text(460,20,'Felipe Oso',{fill:'white'});
-
-
+		game.add.text(460,20,'Felipe Oso',{fill:'white'});
 
 		var caraoso = game.add.sprite(665, 30, 'caraoso');
 		caraoso.scale.setTo(0.6);
@@ -96,19 +86,34 @@ var primer = {
 		//funcion para pausar
 		pausa.events.onInputUp.add(function () {
 			game.paused=true;
-				 	lal=game.add.image(270,170,'menup');
-				    lal.scale.setTo(1.5);
-		});
-
+			lal=game.add.image(270,170,'menup');
+			lal.scale.setTo(1.5);
+        });
+        
 		game.input.onDown.add(unpause, self);
 		//funcion para reaunudar
-		 function unpause(event){
-		 	if(game.paused){
-                lal.destroy();
-                game.paused = false;
-		 	}
-		 };
-		
+        function unpause(event){
+            // Only act if paused
+            if(game.paused){
+                //Condicional si se oprime en Continuar
+                if(event.x > 320 && event.x < 530 && event.y > 250 && event.y < 300){
+                    lal.destroy();
+                    game.paused = false;
+                }
+                //Condicional si se oprime en Reiniciar
+                else if(event.x > 320 && event.x < 530 && event.y > 320 && event.y < 370) {
+                    game.paused = false;
+                    game.state.start(game.state.current);
+                    counter = 0;
+                }
+                //Condicional si se oprime en Salir
+                else if (event.x > 320 && event.x < 530 && event.y > 380 && event.y < 420) {
+                    game.paused = false;
+                    game.state.start("navegacion");
+                }
+            }
+        }
+        
 		pausa.scale.setTo(0.4, 0.4);
 		text = game.add.text(365, 110, 'time: 99', {
 			fill : "white",
@@ -123,12 +128,9 @@ var primer = {
 		floor2c = new Phaser.Rectangle(143, 78, 200, 22);
 		floor3c = new Phaser.Rectangle(144, 79, 200, 20);
 
-
 		floorb = new Phaser.Rectangle(460, 53, 200, 20);
 		floor2b = new Phaser.Rectangle(459, 52, 200, 22);
-		floor3b = new Phaser.Rectangle(460, 53, 200, 20);//segunda barra roja
-
-		
+		floor3b = new Phaser.Rectangle(460, 53, 200, 20);//segunda barra roja		
 
 		floord = new Phaser.Rectangle(460, 79, 200, 20);
 		floor2d = new Phaser.Rectangle(459, 78, 200, 22);
@@ -136,10 +138,7 @@ var primer = {
 		//var animacion = game.add.tween(oso1).to({
 		//	x : 400
 		//}, 1000, Phaser.Easing.Linear.None, true, 0, 70, true);
-
-	},
-
-	
+	},	
 
 	render : function() {
 		game.debug.geom(floor2, '#000', false);
@@ -179,7 +178,7 @@ var primer = {
 	destruirSprite:function(sprite){
 		sprite.destroy();
 	},
- 	 colision : function(){
+ 	colision : function(){
  	 	gallo1.position.x -=100;
  	 	oso1.position.x+=200;
  	 },
@@ -203,12 +202,10 @@ var primer = {
  	 			movH[3]=false;
  	 		}
  	 		//destruirSprite(ataquePlagio);
-
  	 	}
-
  	 },
+    
 	update : function() {
-
 		if (cursores.right.isDown) {
 			gallo1.body.x+=2;
         	gallo1.animations.play('correr');
@@ -231,7 +228,6 @@ var primer = {
 			gallo1.animations.play('quieto')
 			movH[0]=false;
 		}
-
 
 		 if(floor3b.width>100){
 		 	if(oso1.position.x-(gallo1.x+200)>60){
@@ -258,11 +254,8 @@ var primer = {
         			oso1.animations.play('punos');
  					oso1.body.x-=2;
  					movV[0]=true
- 				}
-        		
- 	 		}
-
- 			
+ 				}        		
+ 	 		} 			
  	 	}
 
 		counter++;
@@ -277,10 +270,7 @@ var primer = {
 		}
 
 		game.physics.arcade.overlap(gallo1,ataquePlagio,this.colision);
-		 game.physics.arcade.collide(gallo1, oso1, this.colision, null, this);
-		 game.physics.arcade.collide(gallo1, oso1);
-
-	}
-
-	
+        game.physics.arcade.collide(gallo1, oso1, this.colision, null, this);
+        game.physics.arcade.collide(gallo1, oso1);
+	}	
 }
