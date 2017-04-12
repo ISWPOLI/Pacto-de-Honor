@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 /**
- *
+ * Entidad Imagen
  * @author jrubiaob
  */
 @Entity
@@ -35,19 +35,20 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Imagen.findByIdImagen", query = "SELECT i FROM Imagen i WHERE i.idImagen = :idImagen"),
     @NamedQuery(name = "Imagen.findByFoto", query = "SELECT i FROM Imagen i WHERE i.foto = :foto")})
 public class Imagen implements Serializable {
+    
     private static final long serialVersionUID = 1L;
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "id_imagen")
     private Integer idImagen;
+    
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 255)
     @Column(name = "foto")
     private String foto;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "imagen")
-    private Collection<Personaje> personajeCollection;
 
     public Imagen() {
     }
@@ -75,15 +76,6 @@ public class Imagen implements Serializable {
 
     public void setFoto(String foto) {
         this.foto = foto;
-    }
-
-    @XmlTransient
-    public Collection<Personaje> getPersonajeCollection() {
-        return personajeCollection;
-    }
-
-    public void setPersonajeCollection(Collection<Personaje> personajeCollection) {
-        this.personajeCollection = personajeCollection;
     }
 
     @Override

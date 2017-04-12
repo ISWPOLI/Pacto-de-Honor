@@ -14,7 +14,7 @@ public class PersonajePrint {
     private int categoria;
     private int id;
     private String nombre;
-    private String imagen;
+    private int imagen;
     private String nivelDano;
 
     public int getCategoria() {
@@ -41,11 +41,11 @@ public class PersonajePrint {
         this.nombre = nombre;
     }
 
-    public String getImagen() {
+    public int getImagen() {
         return imagen;
     }
 
-    public void setImagen(String imagen) {
+    public void setImagen(int imagen) {
         this.imagen = imagen;
     }
 

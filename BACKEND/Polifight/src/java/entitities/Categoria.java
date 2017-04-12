@@ -53,8 +53,7 @@ public class Categoria implements Serializable {
     @Column(name = "tipo")
     private int tipo;
     
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "categoria")
-    private Collection<Personaje> personajeCollection;
+  
 
     public Categoria() {
     }
@@ -91,16 +90,7 @@ public class Categoria implements Serializable {
 
     public void setTipo(int tipo) {
         this.tipo = tipo;
-    }
-
-    @XmlTransient
-    public Collection<Personaje> getPersonajeCollection() {
-        return personajeCollection;
-    }
-
-    public void setPersonajeCollection(Collection<Personaje> personajeCollection) {
-        this.personajeCollection = personajeCollection;
-    }
+    } 
 
     @Override
     public int hashCode() {

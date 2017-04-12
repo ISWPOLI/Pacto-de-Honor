@@ -1,11 +1,15 @@
 package rest;
 
+import com.sun.mail.iap.Response;
 import entitities.Personaje;
 import entitities.PersonajePK;
+import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Stateless;
+import javax.json.JsonObject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.GET;
@@ -13,14 +17,17 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.MediaType;
 
 import javax.ws.rs.core.PathSegment;
+import printEntities.PersonajeIdPrint;
 import printEntities.PersonajePrint;
 
 /**
  * Servicio para la entidad Personaje
  * @author jrubiaob
  */
+
 @Stateless
 @Path("personaje")
 public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
@@ -50,50 +57,103 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
         super(Personaje.class);
     }
     
+    /**
+     * Retorna los id de los datos en la tabla Personaje
+     * @return List con los datos
+     */
+    @GET
+    @Path("id")
+    @Consumes({"application/json"})
+    public List<PersonajeIdPrint> returnId(){
+        Query query = em.createQuery("SELECT p FROM Personaje p ORDER BY p.idPersonaje");
+        
+        List<Personaje> personajes = new ArrayList();
+        List<PersonajeIdPrint> resultado = new ArrayList();
+        
+        personajes = query.getResultList();
+        for (int i = 0; i < personajes.size(); i++) {
+            PersonajeIdPrint p = new PersonajeIdPrint(personajes.get(i).getIdPersonaje(),personajes.get(i).getNombrePersonaje());
+            resultado.add(p);
+        }
+        return resultado;
+    }
+    
      /**
      * Crea un dato
-     * Se prueba con el recurso ""
+     * Se prueba con el TestCase "Crear" del proyecto Personaje-soapui-project
      * @param entity entidad Personaje
      */
     @POST    
     @Override 
     @Path("create")
     @Consumes({"application/json"})
-    public void create(Personaje entity) {
-        //Categoria es una entidad, problema al traer la entidad
+    public void create(Personaje entity) {        
         super.create(entity);
     }
     
-    
     /**
      * Edita un dato de acuerdo al id enviado
-     * Se prueba con el TestCase ""
+     * Se prueba con el TestCase "Editar" del proyecto Personaje-soapui-project
      * @param entity entidad Personaje
+     * @return mensaje satisfactorio o insatisfactorio
      */
     @POST
-    @Override
     @Path("edit")
-    @Consumes({"application/json"})    
-    public void edit(Personaje entity) {
-        super.edit(entity);
-    }
-    
+    @Consumes({"application/json"})
+    @Produces({"application/json"})
+    public String editarPersonaje(Personaje entity){
+        try{
+            if(entity.getIdPersonaje() != 0 && entity.getIdPersonaje() != null){
+                Personaje personaje = super.find(entity.getIdPersonaje());
+                if(personaje == null){
+                   return "{'response':'KO','cause':'Personaje not found'}";
+                }else{
+                    if(entity.getCosto() != 0)  personaje.setCosto(entity.getCosto());
+                    if(entity.getDescripcionPersonaje() != null) personaje.setDescripcionPersonaje(entity.getDescripcionPersonaje());
+                    if(entity.getIdCategoria() != 0) personaje.setIdCategoria(entity.getIdCategoria());
+                    if(entity.getIdImagen() != 0) personaje.setIdImagen(entity.getIdImagen());
+                    if(entity.getNivelDano() != 0) personaje.setNivelDano(entity.getNivelDano());
+                    if(entity.getNombrePersonaje() != null) personaje.setNombrePersonaje(entity.getNombrePersonaje());
+
+                    em.merge(personaje);
+
+                    return "{'response':'OK'}";
+                }
+
+            }else{
+                return "{'response':'KO','cause':'Not send Id'}";
+            }
+            
+        }catch (Exception e){
+            return "{'response':'KO','cause':'Exception'}";
+        }
+       
+    }    
+        
     /**
      * Busca un personaje de acuerdo al id
-     * Se prueba con TestCase ""
+     * Se prueba con el TestCase "Buscar" del proyecto Personaje-soapui-project
      * @param id del Personaje a buscar
      * @return Personaje entidad del Personaje
      */
-   /* @GET
+    @GET
     @Path("find")
     @Produces({"application/json"})
-    public Personaje find(@QueryParam("id") PathSegment id) {
-        entitities.PersonajePK key = getPrimaryKey(id);
-        return super.find(key);
-    }*/
+    public String find(@QueryParam("id") Integer id) {
+        Personaje personaje = em.find(Personaje.class, id);
+        if(personaje == null){
+            return "{'response':'KO','cause':'Personaje not found'}";
+        }else{
+            return "{'idPersonaje':'"+personaje.getIdPersonaje()+"', 'idCategoria':'"+personaje.getIdCategoria()+"',"
+                    + "'idImagen':'"+personaje.getIdImagen()+"','nombrePersonaje':'"+personaje.getNombrePersonaje()+"',"
+                    + "'descripcionPersonaje':'"+personaje.getDescripcionPersonaje()+"','costo':'"+personaje.getCosto()+"',"
+                    + "'nivelDano':'"+personaje.getNivelDano()+"'}";
+        }        
+    }
     
     /**
      * Lista todos los personajes de la base de datos
+     * Se prueba con el TestCase "Listar" del proyecto Personaje-soapui-project
      * @return List con todos los Personajes registrados
      */
     @GET
@@ -105,7 +165,7 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
     
     /**
      * Retorna los datos de acuerdo a un rango
-     * Prueba con el TestCase ""
+     * Se prueba con el TestCase "BuscarPorRango" del proyecto Personaje-soapui-project
      * @param from desde qué id
      * @param to hasta qué id
      * @return List con los personajes de acuerdo al rango
@@ -114,12 +174,16 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
     @Path("findRange")
     @Produces({"application/json"})
     public List<Personaje> findRange(@QueryParam("from") Integer from, @QueryParam("to") Integer to) {
-        return super.findRange(new int[]{from, to});
+        //SELECT * FROM Personaje WHERE id_personaje BETWEEN 5 AND 7 ORDER BY id_personaje
+        Query query = em.createQuery("SELECT p FROM Personaje p WHERE p.idPersonaje BETWEEN :from AND :to"); 
+        query.setParameter("from", from);
+        query.setParameter("to", to);        
+        return query.getResultList();
     }
 
     /**
      * Retorna el número de datos que están en la base de datos
-     * Se prueba con el TestCase ""
+     * Se prueba con el TestCase "NoDatos" del proyecto Personaje-soapui-project
      * @return NoDatos
      */
     @GET
@@ -131,7 +195,7 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
     
     /**
      * Retorna los datos nombre, imagen y nivel de dano
-     * Se prueba con el TestCase ""
+     * Se prueba con el TestCase "Crear" del proyecto Personaje-soapui-project
      * @param id
      * @return 
      */
@@ -143,7 +207,7 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
         Personaje personaje =  super.find(id);
         resultado.setId(personaje.getIdPersonaje());
         resultado.setNombre(personaje.getNombrePersonaje());
-        resultado.setImagen(personaje.getImagen().getFoto());
+        resultado.setImagen(personaje.getIdImagen());
         resultado.setNivelDano(String.valueOf(personaje.getNivelDano()));       
         return resultado;
     }
