@@ -1,12 +1,12 @@
 package rest;
 
-import com.sun.mail.iap.Response;
 import entitities.Personaje;
 import entitities.PersonajePK;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Stateless;
-import javax.json.JsonObject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -14,10 +14,8 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.MediaType;
 
 import javax.ws.rs.core.PathSegment;
 import printEntities.PersonajeIdPrint;
@@ -82,13 +80,23 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
      * Crea un dato
      * Se prueba con el TestCase "Crear" del proyecto Personaje-soapui-project
      * @param entity entidad Personaje
+     * @return String con la respuesta OK o la excepción
      */
-    @POST    
-    @Override 
+    @POST
     @Path("create")
     @Consumes({"application/json"})
-    public void create(Personaje entity) {        
-        super.create(entity);
+    @Produces({"application/json"})
+    public String crearPersonaje(Personaje entity) {
+        String resultado;
+        try{
+            em.persist(entity);   
+            resultado = "{'response':'OK']";
+        }catch (Exception e){
+            StringWriter errors = new StringWriter();
+            e.printStackTrace(new PrintWriter(errors));            
+            resultado = "{'response':'KO', 'cause':'"+errors.toString()+"'}";
+        }
+        return resultado;
     }
     
     /**
