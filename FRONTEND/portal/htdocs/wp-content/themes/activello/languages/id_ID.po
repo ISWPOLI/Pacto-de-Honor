@@ -1,0 +1,1699 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Activello\n"
+"POT-Creation-Date: 2017-02-19 17:45+0100\n"
+"PO-Revision-Date: 2017-02-19 17:45+0100\n"
+"Last-Translator: Aigars Silkalns <a.silkalns@gmail.com>\n"
+"Language-Team: Rhiski Aprilianto <mail@rhiskiapril.com>\n"
+"Language: id_ID\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_html__;esc_html_e;esc_attr_x;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_attr_x;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;"
+"__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ups! Halaman itu tidak dapat ditemukan."
+
+#: 404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Sepertinya tidak ada yang ditemukan di lokasi ini. Mungkin mencoba salah "
+"satu link di bawah ini atau pencarian?"
+
+#: 404.php:25
+msgid "Recent Posts"
+msgstr "Tulisan Terbaru"
+
+#: 404.php:31
+msgid "Most Used Categories"
+msgstr "Kategori Terbanyak Digunakan"
+
+#: 404.php:52
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Coba cari di arsip bulanan. %1$s"
+
+#: 404.php:53 archive.php:66 sidebar.php:31
+msgid "Archives"
+msgstr "Arsip"
+
+#: 404.php:58
+msgid "Tags"
+msgstr "Tag"
+
+#: archive.php:27
+#, php-format
+msgid "Author: %s"
+msgstr "Penulis: %s"
+
+#: archive.php:30
+#, php-format
+msgid "Day: %s"
+msgstr "Hari: %s"
+
+#: archive.php:33
+#, php-format
+msgid "Month: %s"
+msgstr "Bulan: %s"
+
+#: archive.php:33
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: archive.php:36
+#, php-format
+msgid "Year: %s"
+msgstr "Tahun: %s"
+
+#: archive.php:36
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: archive.php:39
+msgid "Asides"
+msgstr "Aside"
+
+#: archive.php:42
+msgid "Galleries"
+msgstr "Galeri"
+
+#: archive.php:45
+msgid "Images"
+msgstr "Gambar"
+
+#: archive.php:48
+msgid "Videos"
+msgstr "Video"
+
+#: archive.php:51
+msgid "Quotes"
+msgstr "Kutipan"
+
+#: archive.php:54
+msgid "Links"
+msgstr "Link"
+
+#: archive.php:57
+msgid "Statuses"
+msgstr "Status"
+
+#: archive.php:60
+msgid "Audios"
+msgstr "Audio"
+
+#: archive.php:63
+msgid "Chats"
+msgstr "Chat"
+
+#: comments.php:28
+#, php-format
+msgctxt "comments title"
+msgid "1 Comment"
+msgid_plural "%1$s Comment"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:35 comments.php:54
+msgid "Comment navigation"
+msgstr "Navigasi komentar"
+
+#: comments.php:36 comments.php:55
+msgid "&larr; Older Comments"
+msgstr "&larr; Komentar Lama"
+
+#: comments.php:37 comments.php:56
+msgid "Newer Comments &rarr;"
+msgstr "Komentar baru &rarr;"
+
+#: comments.php:66
+msgid "Comments are closed."
+msgstr "Komentar ditutup."
+
+#: comments.php:77
+msgid "Name"
+msgstr ""
+
+#: comments.php:81
+msgid "Email"
+msgstr ""
+
+#: comments.php:85
+msgid "Website"
+msgstr ""
+
+#: comments.php:94
+msgid "Post Reply"
+msgstr ""
+
+#: comments.php:96
+msgctxt "comment form placeholder"
+msgid "Comment"
+msgstr ""
+
+#: content-grid.php:16 content-page.php:26 inc/extras.php:266
+msgid "Edit"
+msgstr "Edit"
+
+#: content-grid.php:28 content.php:41 content.php:67 inc/extras.php:151
+msgid "Read More"
+msgstr "Baca Selengkapnya"
+
+#: content-grid.php:37 content-page.php:21 content-single.php:43 content.php:56
+#: image.php:79
+msgid "Pages:"
+msgstr "Halaman:"
+
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr "Tidak Ditemukan"
+
+#: content-none.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Siap untuk mempublikasikan posting pertama Anda? <a href=\"%1$s\">Persiapan "
+"di sini</a> ."
+
+#: content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Maaf, tapi tidak ada yang cocok dengan istilah pencarian Anda. Silakan coba "
+"lagi dengan beberapa kata kunci yang berbeda."
+
+#: content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Tampaknya kita tidak dapat menemukan apa yang Anda cari. Mungkin pencarian "
+"bisa membantu."
+
+#: content-single.php:21 content.php:22
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: content-single.php:55 content.php:73
+msgid "No comments yet"
+msgstr ""
+
+#: content-single.php:55
+msgid "Comment (1)"
+msgstr ""
+
+#: content-single.php:55
+msgid "Comments (%)"
+msgstr ""
+
+#: content.php:73
+msgid "1 Comment"
+msgstr "1 komentar"
+
+#: content.php:73
+msgid "% Comments"
+msgstr "% Komentar"
+
+#: functions.php:71
+msgid "Primary Menu"
+msgstr "Menu Utama"
+
+#: functions.php:114
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: functions.php:233
+msgid "Left Sidebar"
+msgstr "Sidebar Kiri"
+
+#: functions.php:233
+msgid "Right Sidebar"
+msgstr "Sidebar Kanan"
+
+#: functions.php:233
+msgid "No Sidebar"
+msgstr ""
+
+#: functions.php:233
+msgid "Full Width"
+msgstr ""
+
+#: functions.php:235
+msgid "Logo Only"
+msgstr ""
+
+#: functions.php:236
+msgid "Logo + Tagline"
+msgstr ""
+
+#: functions.php:237
+msgid "Title Only"
+msgstr ""
+
+#: functions.php:238
+msgid "Title + Tagline"
+msgstr ""
+
+#: functions.php:275 searchform.php:14
+msgid "Search"
+msgstr ""
+
+#: functions.php:275 searchform.php:14
+msgctxt "submit button"
+msgid "Search"
+msgstr "Cari"
+
+#: header.php:40
+msgid "Toggle navigation"
+msgstr ""
+
+#: image.php:22
+msgid "<i class=\"fa fa-chevron-left\"></i> Previous"
+msgstr "<i class=\"fa fa-chevron-left\"></i>Sebelumnya"
+
+#: image.php:23
+msgid "Next <i class=\"fa fa-chevron-right\"></i>"
+msgstr "Selanjutnya <i class=\"fa fa-chevron-right\"></i>"
+
+#: inc/customizer.php:30
+msgid "Logo"
+msgstr ""
+
+#: inc/customizer.php:44
+msgid "Show"
+msgstr ""
+
+#: inc/customizer.php:53
+msgid "Activello Options"
+msgstr ""
+
+#: inc/customizer.php:54
+msgid "Panel to update activello theme options"
+msgstr ""
+
+#: inc/customizer.php:60
+msgid "Content Options"
+msgstr "Pengaturan Konten"
+
+#: inc/customizer.php:73
+msgid "Show post excerpts?"
+msgstr "Tampilkan kutipan posting?"
+
+#: inc/customizer.php:85
+msgid "Display Comments on Static Pages?"
+msgstr "Tampilan Komentar Halaman Statik?"
+
+#: inc/customizer.php:94
+msgid "Slider Options"
+msgstr ""
+
+#: inc/customizer.php:139
+msgid "Layout options"
+msgstr ""
+
+#: inc/customizer.php:150
+msgid "Website Layout Options"
+msgstr "Pilihan Layout Website"
+
+#: inc/customizer.php:153
+msgid "Choose between different layout options to be used as default"
+msgstr ""
+
+#: inc/customizer.php:162
+msgid "Accent Color"
+msgstr ""
+
+#: inc/customizer.php:163 inc/customizer.php:173 inc/customizer.php:183
+msgid "Default used if no color is selected"
+msgstr "Pengaturan standar digunakan jika tidak ada warna yang dipilih"
+
+#: inc/customizer.php:172
+msgid "Social icon color"
+msgstr "Warna ikon sosial"
+
+#: inc/customizer.php:182
+msgid "Social Icon:hover Color"
+msgstr ""
+
+#: inc/customizer.php:189
+msgid "Footer"
+msgstr "Footer"
+
+#: inc/customizer.php:207
+msgid "Other"
+msgstr "Lainnya"
+
+#: inc/customizer.php:225
+msgid "Support and Documentation"
+msgstr "Dukungan dan Dokumentasi"
+
+#: inc/customizer.php:368
+msgid "Activello Documentation"
+msgstr ""
+
+#: inc/customizer.php:369
+msgid ""
+"The best way to contact us with <b>support questions</b> and <b>bug reports</"
+"b> is via"
+msgstr ""
+"Cara terbaik untuk menghubungi kami dengan <b>pertanyaan dukungan</b> dan "
+"<b>laporan bug</b> melalui"
+
+#: inc/customizer.php:369
+msgid "Colorlib support forum"
+msgstr "Colorlib support forum"
+
+#: inc/customizer.php:370
+msgid "If you like this theme, I'd appreciate any of the following:"
+msgstr "Jika Anda menyukai tema ini, saya akan menghargai hal-hal berikut:"
+
+#: inc/customizer.php:372
+msgid "Rate this Theme"
+msgstr "Merating Tema ini"
+
+#: inc/customizer.php:373
+msgid "Like on Facebook"
+msgstr "Sukai kami di Facebook"
+
+#: inc/customizer.php:374
+msgid "Follow on Twitter"
+msgstr "Ikuti Kami di Twitter"
+
+#: inc/extras.php:54
+msgid "Untitled"
+msgstr ""
+
+#: inc/extras.php:71
+msgid ""
+"This post is password protected. To view it please enter your password below:"
+msgstr ""
+
+#: inc/extras.php:72
+msgid "Password:"
+msgstr "Kata sandi:"
+
+#: inc/extras.php:75
+msgid "Submit"
+msgstr "Kirim"
+
+#: inc/extras.php:172
+#, php-format
+msgid "Theme by %1$s Powered by %2$s"
+msgstr "Tema oleh %1$s diberdayakan oleh %2$s"
+
+#: inc/extras.php:260
+#, php-format
+msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">says:</span>"
+msgstr ""
+
+#: inc/extras.php:266
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: inc/extras.php:273
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/metaboxes.php:16
+msgid ""
+"Select layout for this specific Page only ( Note: This setting only reflects "
+"if page Template is set as Default Template and Blog Type Templates.)"
+msgstr ""
+
+#: inc/metaboxes.php:21
+msgid "Select layout for this specific Post only"
+msgstr ""
+
+#: inc/metaboxes.php:28
+msgid "Select layout for this specific Product only"
+msgstr ""
+
+#: inc/metaboxes.php:58
+msgid "Default"
+msgstr ""
+
+#: inc/navwalker.php:196
+msgid "Add a menu"
+msgstr ""
+
+#: inc/socialnav.php:13
+msgctxt "nav menu location"
+msgid "Social Menu"
+msgstr ""
+
+#: inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr "Navigasi tulisan"
+
+#: inc/template-tags.php:27
+msgid "Older posts"
+msgstr ""
+
+#: inc/template-tags.php:31
+msgid "Newer posts"
+msgstr ""
+
+#: inc/template-tags.php:56
+msgid "Post navigation"
+msgstr "Navigasi tulisan"
+
+#: inc/template-tags.php:59
+msgctxt "Previous post link"
+msgid "<i class=\"fa fa-chevron-left\"></i> %title"
+msgstr "<i class=\"fa fa-chevron-left\"></i> %title"
+
+#: inc/template-tags.php:60
+msgctxt "Next post link"
+msgid "%title <i class=\"fa fa-chevron-right\"></i>"
+msgstr "%title <i class=\"fa fa-chevron-right\"></i>"
+
+#: inc/template-tags.php:86
+msgid "Posted on"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:327
+#: inc/tgmpa/tgm-plugin-activation.php:79
+msgid "Install Required Plugins"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:328
+#: inc/tgmpa/tgm-plugin-activation.php:80
+msgid "Install Plugins"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:330
+#: inc/tgmpa/tgm-plugin-activation.php:81
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:332
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:333
+#: inc/tgmpa/tgm-plugin-activation.php:82
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:336
+#: inc/tgmpa/tgm-plugin-activation.php:83
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:342
+#: inc/tgmpa/tgm-plugin-activation.php:84
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:348
+#: inc/tgmpa/tgm-plugin-activation.php:89
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:354
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:360
+#: inc/tgmpa/tgm-plugin-activation.php:86
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:366
+#: inc/tgmpa/tgm-plugin-activation.php:87
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:371
+#: inc/tgmpa/tgm-plugin-activation.php:91
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:376
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:381
+#: inc/tgmpa/tgm-plugin-activation.php:92
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:385
+#: inc/tgmpa/tgm-plugin-activation.php:93
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:386
+#: inc/tgmpa/class-tgm-plugin-activation.php:827
+#: inc/tgmpa/class-tgm-plugin-activation.php:2533
+#: inc/tgmpa/class-tgm-plugin-activation.php:3580
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:387
+#: inc/tgmpa/class-tgm-plugin-activation.php:3159
+#: inc/tgmpa/tgm-plugin-activation.php:94
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:388
+#: inc/tgmpa/class-tgm-plugin-activation.php:2952
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:390
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:392
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:394
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:395
+msgid "Dismiss this notice"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:396
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:397
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:522
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:523
+msgid "Update Required"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:934
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:934
+#: inc/tgmpa/class-tgm-plugin-activation.php:937
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:937
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:1121
+#: inc/tgmpa/class-tgm-plugin-activation.php:2948
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:1982
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2273
+msgid "Required"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2276
+msgid "Recommended"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2292
+msgid "WordPress Repository"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2295
+msgid "External Source"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2298
+msgid "Pre-Packaged"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2315
+msgid "Not Installed"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2319
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2321
+msgid "Active"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2327
+msgid "Required Update not Available"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2330
+msgid "Requires Update"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2333
+msgid "Update recommended"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2342
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2388
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2392
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2396
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2400
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2482
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2490
+msgid "Installed version:"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2498
+msgid "Minimum required version:"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2510
+msgid "Available version:"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2533
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2547
+msgid "Plugin"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2548
+msgid "Source"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2549
+msgid "Type"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2553
+msgid "Version"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2554
+msgid "Status"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2603
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2608
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2614
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2684
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2717
+#: inc/welcome-screen/custom-recommend-action-section.php:108
+#: inc/welcome-screen/sections/actions-required.php:41
+#: inc/welcome-screen/sections/recommended-plugins.php:24
+msgid "Install"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2723
+msgid "Update"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2726
+#: inc/welcome-screen/custom-recommend-action-section.php:112
+#: inc/welcome-screen/sections/actions-required.php:45
+#: inc/welcome-screen/sections/recommended-plugins.php:28
+msgid "Activate"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2757
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2759
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2800
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2802
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2908
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:2934
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3158
+msgid "Plugin activation failed."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3498
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3501
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3503
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3507
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3509
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3509
+#: inc/tgmpa/class-tgm-plugin-activation.php:3517
+msgid "Show Details"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3509
+#: inc/tgmpa/class-tgm-plugin-activation.php:3517
+msgid "Hide Details"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3510
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3512
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3515
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3517
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3518
+msgid "All installations have been completed."
+msgstr ""
+
+#: inc/tgmpa/class-tgm-plugin-activation.php:3520
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/tgmpa/tgm-plugin-activation.php:85
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"installed."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to install the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins installed."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgmpa/tgm-plugin-activation.php:88
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugin. Contact the administrator of this site for help on getting the "
+"plugin activated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins activated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgmpa/tgm-plugin-activation.php:90
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"updated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %s plugins. "
+"Contact the administrator of this site for help on getting the plugins "
+"updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/tgmpa/tgm-plugin-activation.php:95
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: inc/welcome-screen/custom-recommend-action-section.php:116
+#: inc/welcome-screen/sections/actions-required.php:49
+#: inc/welcome-screen/sections/recommended-plugins.php:32
+msgid "Deactivate"
+msgstr ""
+
+#: inc/welcome-screen/notify-system-checks.php:154
+#: inc/welcome-screen/notify-system-checks.php:162
+msgid "Install: Widget Importer Exporter Plugin"
+msgstr ""
+
+#: inc/welcome-screen/notify-system-checks.php:159
+msgid "Activate: Widget Importer Exporter Plugin"
+msgstr ""
+
+#: inc/welcome-screen/notify-system-checks.php:168
+#: inc/welcome-screen/notify-system-checks.php:176
+msgid "Install: WordPress Importer"
+msgstr ""
+
+#: inc/welcome-screen/notify-system-checks.php:173
+msgid "Activate: WordPress Importer"
+msgstr ""
+
+#: inc/welcome-screen/notify-system-checks.php:185
+#: inc/welcome-screen/notify-system-checks.php:193
+msgid "Please install the WordPress Importer to create the demo content."
+msgstr ""
+
+#: inc/welcome-screen/notify-system-checks.php:190
+msgid "Please activate the WordPress Importer to create the demo content."
+msgstr ""
+
+#: inc/welcome-screen/notify-system-checks.php:199
+#: inc/welcome-screen/notify-system-checks.php:207
+msgid "Please install the WordPress widget importer to create the demo content"
+msgstr ""
+
+#: inc/welcome-screen/notify-system-checks.php:204
+msgid ""
+"Please activate the WordPress Widget Importer to create the demo content."
+msgstr ""
+
+#: inc/welcome-screen/sections/actions-required.php:80
+#: inc/welcome-screen/welcome-screen.php:149
+msgid "Hooray! There are no required actions for you right now."
+msgstr ""
+
+#: inc/welcome-screen/sections/getting-started.php:11
+msgid "Step 1 - Implement recommended actions"
+msgstr ""
+
+#: inc/welcome-screen/sections/getting-started.php:12
+msgid ""
+"We've compiled a list of steps for you, to take make sure the experience "
+"you'll have using one of our products is very easy to follow."
+msgstr ""
+
+#: inc/welcome-screen/sections/getting-started.php:15
+msgid "No recommended actions left to perform"
+msgstr ""
+
+#: inc/welcome-screen/sections/getting-started.php:18
+msgid "Check recommended actions"
+msgstr ""
+
+#: inc/welcome-screen/sections/getting-started.php:24
+msgid "Step 2 - Check our documentation"
+msgstr ""
+
+#: inc/welcome-screen/sections/getting-started.php:25
+msgid ""
+"Even if you're a long-time WordPress user, we still believe you should give "
+"our documentation a very quick Read."
+msgstr ""
+
+#: inc/welcome-screen/sections/getting-started.php:28
+msgid "Full documentation"
+msgstr ""
+
+#: inc/welcome-screen/sections/getting-started.php:33
+msgid "Step 3 - Customize everything"
+msgstr ""
+
+#: inc/welcome-screen/sections/getting-started.php:34
+msgid ""
+"Using the WordPress Customizer you can easily customize every aspect of the "
+"theme."
+msgstr ""
+
+#: inc/welcome-screen/sections/getting-started.php:36
+msgid "Go to Customizer"
+msgstr ""
+
+#: inc/welcome-screen/sections/recommended-plugins.php:39
+msgid "Version:"
+msgstr ""
+
+#: inc/welcome-screen/sections/support.php:5
+#: inc/welcome-screen/sections/support.php:10
+msgid "Contact Support"
+msgstr ""
+
+#: inc/welcome-screen/sections/support.php:7
+msgid ""
+"We offer excellent support through our advanced ticketing system. Make sure "
+"to register your purchase before contacting support!"
+msgstr ""
+
+#: inc/welcome-screen/sections/support.php:15
+msgid "Documentation"
+msgstr ""
+
+#: inc/welcome-screen/sections/support.php:17
+msgid ""
+"This is the place to go to reference different aspects of the theme. Our "
+"online documentation is an incredible resource for learning the ins and outs "
+"of using Activello."
+msgstr ""
+
+#: inc/welcome-screen/sections/support.php:20
+msgid "See our full documentation"
+msgstr ""
+
+#: inc/welcome-screen/sections/support.php:25
+#: inc/welcome-screen/welcome-screen.php:385
+msgid "Changelog"
+msgstr ""
+
+#: inc/welcome-screen/sections/support.php:27
+msgid ""
+"Want to get the gist on the latest theme changes? Just consult our changelog "
+"below to get a taste of the recent fixes and features implemented."
+msgstr ""
+
+#: inc/welcome-screen/sections/support.php:30
+msgid "See changelog"
+msgstr ""
+
+#: inc/welcome-screen/welcome-page-setup.php:16
+msgid "Recomended Actions"
+msgstr ""
+
+#: inc/welcome-screen/welcome-page-setup.php:17
+msgid "We're social"
+msgstr ""
+
+#: inc/welcome-screen/welcome-page-setup.php:75
+msgid "Download theme sample data"
+msgstr ""
+
+#: inc/welcome-screen/welcome-page-setup.php:76
+msgid "Head over to our website and download the sample content data."
+msgstr ""
+
+#: inc/welcome-screen/welcome-page-setup.php:77
+msgid "Posts"
+msgstr ""
+
+#: inc/welcome-screen/welcome-page-setup.php:78
+msgid "Widgets"
+msgstr ""
+
+#: inc/welcome-screen/welcome-page-setup.php:83
+msgid "Import Sample Data"
+msgstr ""
+
+#: inc/welcome-screen/welcome-page-setup.php:84
+msgid "Import Posts"
+msgstr ""
+
+#: inc/welcome-screen/welcome-page-setup.php:85
+msgid "Import Widgets"
+msgstr ""
+
+#: inc/welcome-screen/welcome-screen.php:128
+#, php-format
+msgid ""
+"Welcome! Thank you for choosing Activello! To fully take advantage of the "
+"best our theme can offer please make sure you visit our %swelcome page%s."
+msgstr ""
+
+#: inc/welcome-screen/welcome-screen.php:130
+msgid "Get started with Activello"
+msgstr ""
+
+#: inc/welcome-screen/welcome-screen.php:168
+msgid "View Theme Info"
+msgstr ""
+
+#: inc/welcome-screen/welcome-screen.php:366
+msgid "Welcome to Activello! - Version "
+msgstr ""
+
+#: inc/welcome-screen/welcome-screen.php:369
+msgid ""
+"Activello is now installed and ready to use! Get ready to build something "
+"beautiful. We hope you enjoy it! We want to make sure you have the best "
+"experience using Activello and that is why we gathered here all the "
+"necessary information for you. We hope you will enjoy using Activello, as "
+"much as we enjoy creating great products."
+msgstr ""
+
+#: inc/welcome-screen/welcome-screen.php:376
+msgid "Getting Started"
+msgstr ""
+
+#: inc/welcome-screen/welcome-screen.php:378
+msgid "Recommended Actions"
+msgstr ""
+
+#: inc/welcome-screen/welcome-screen.php:381
+msgid "Recommended Plugins"
+msgstr ""
+
+#: inc/welcome-screen/welcome-screen.php:383
+msgid "Support"
+msgstr ""
+
+#: inc/widgets/widget-categories.php:11
+msgid "Activello widget to display categories"
+msgstr ""
+
+#: inc/widgets/widget-categories.php:12
+msgid "Activello Categories"
+msgstr ""
+
+#: inc/widgets/widget-categories.php:17 inc/widgets/widget-categories.php:73
+msgid "Categories"
+msgstr "Kategori"
+
+#: inc/widgets/widget-categories.php:78 inc/widgets/widget-social.php:49
+msgid "Title "
+msgstr "Judul"
+
+#: inc/widgets/widget-categories.php:86
+msgid "Limit Categories "
+msgstr "Batasi Kategori"
+
+#: inc/widgets/widget-categories.php:99
+msgid "Enable Posts Count"
+msgstr "Mengaktifkan hitungan posting"
+
+#: inc/widgets/widget-recent-posts.php:11
+msgid "Activello recent posts widget with thumbnails"
+msgstr ""
+
+#: inc/widgets/widget-recent-posts.php:12
+msgid "Activello Recent Posts Widget"
+msgstr ""
+
+#: inc/widgets/widget-recent-posts.php:17
+#: inc/widgets/widget-recent-posts.php:91
+msgid "recent Posts"
+msgstr ""
+
+#: inc/widgets/widget-recent-posts.php:96
+msgid "Title"
+msgstr "Judul"
+
+#: inc/widgets/widget-recent-posts.php:104
+msgid "Limit Posts Number"
+msgstr "Batasi Jumlah Tulisan"
+
+#: inc/widgets/widget-social.php:11
+msgid "Activello theme widget to display social media icons"
+msgstr ""
+
+#: inc/widgets/widget-social.php:12
+msgid "Activello Social Widget"
+msgstr ""
+
+#: inc/widgets/widget-social.php:17 inc/widgets/widget-social.php:46
+msgid "Follow us"
+msgstr "Ikuti kami"
+
+#: search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Hasil Pencarian untuk: %s"
+
+#: searchform.php:11
+#, fuzzy
+msgid "Search for:"
+msgstr "Mencari:"
+
+#: searchform.php:12
+#, fuzzy
+msgctxt "placeholder"
+msgid "Search&hellip;"
+msgstr "Cari &hellip;"
+
+#: searchform.php:12
+msgctxt "label"
+msgid "Search for:"
+msgstr "Mencari:"
+
+#: sidebar.php:38
+msgid "Meta"
+msgstr "Meta"
+
+#~ msgid "Leave a comment"
+#~ msgstr "Tinggalkan komentar"
+
+#~ msgid "Custom CSS"
+#~ msgstr "Kustom CSS"
+
+#~ msgid "Additional CSS"
+#~ msgstr "CSS Tambahan"
+
+#~ msgid ""
+#~ "<p>This post is password protected. To view it please enter your password "
+#~ "below:</p>"
+#~ msgstr ""
+#~ "<p>Posting ini dilindungi sandi. Untuk melihat Mohon masukkan sandi Anda "
+#~ "di bawah ini:</p>"
+
+#~ msgid "Footer Links"
+#~ msgstr "Link footer"
+
+#~ msgctxt "comments title"
+#~ msgid "One thought on &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "Satu komentar pada &quot;%2$s&quot;"
+#~ msgstr[1] "%1$s komentar pada &quot;%2$s&quot;"
+
+#~ msgid ", "
+#~ msgstr ","
+
+#~ msgid " %1$s"
+#~ msgstr " %1$s"
+
+#~ msgid "Homepage Widget 1"
+#~ msgstr "Homepage Widget 1"
+
+#~ msgid "Displays on the Home Page"
+#~ msgstr "Tampilkan pada Home Page"
+
+#~ msgid "Homepage Widget 2"
+#~ msgstr "Homepage Widget 2"
+
+#~ msgid "Homepage Widget 3"
+#~ msgstr "Homepage Widget 3"
+
+#~ msgid "Footer Widget 1"
+#~ msgstr "Footer Widget 1"
+
+#~ msgid "Used for footer widget area"
+#~ msgstr "Digunakan untuk footer widget area"
+
+#~ msgid "Footer Widget 2"
+#~ msgstr "Footer Widget 2"
+
+#~ msgid "Footer Widget 3"
+#~ msgstr "Footer Widget 3"
+
+#~ msgid "Theme Options"
+#~ msgstr "Pengaturan Tema"
+
+#~ msgid "Save Options"
+#~ msgstr "Simpan Pilihan"
+
+#~ msgid "Restore Defaults"
+#~ msgstr "Kembalikan Default"
+
+#~ msgid "Click OK to reset. Any theme settings will be lost!"
+#~ msgstr "Klik OK untuk me-reset. Pengaturan tema akan hilang!"
+
+#~ msgid "Default options restored."
+#~ msgstr "Pilihan default dipulihkan."
+
+#~ msgid "Options saved."
+#~ msgstr "Pengaturan disimpan."
+
+#~ msgid "No file chosen"
+#~ msgstr "Tak ada file yang dipilih"
+
+#~ msgid "Upload"
+#~ msgstr "Unggah"
+
+#~ msgid "Remove"
+#~ msgstr "Hapus"
+
+#~ msgid "Upgrade your version of WordPress for full media support."
+#~ msgstr "Meng-upgrade versi WordPress untuk dukungan media penuh."
+
+#~ msgid "View File"
+#~ msgstr "Tampilkan File"
+
+#~ msgid "No Repeat"
+#~ msgstr "No Repeat"
+
+#~ msgid "Repeat Horizontally"
+#~ msgstr "Repeat Horizontally"
+
+#~ msgid "Repeat Vertically"
+#~ msgstr "Repeat Horizontally"
+
+#~ msgid "Repeat All"
+#~ msgstr "Repeat All"
+
+#~ msgid "Top Left"
+#~ msgstr "Kiri Atas"
+
+#~ msgid "Top Center"
+#~ msgstr "Tengah Atas"
+
+#~ msgid "Top Right"
+#~ msgstr "Kanan Atas"
+
+#~ msgid "Middle Left"
+#~ msgstr "Kiri Tengah"
+
+#~ msgid "Middle Center"
+#~ msgstr "Tengah Tengah"
+
+#~ msgid "Middle Right"
+#~ msgstr "Kanan Tengah"
+
+#~ msgid "Bottom Left"
+#~ msgstr "Kiri Bawah"
+
+#~ msgid "Bottom Center"
+#~ msgstr "Tengah Bawah"
+
+#~ msgid "Bottom Right"
+#~ msgstr "Kanan Bawah"
+
+#~ msgid "Scroll Normally"
+#~ msgstr "Gulir biasa"
+
+#~ msgid "Fixed in Place"
+#~ msgstr "Tetap di tempat"
+
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#~ msgid "Italic"
+#~ msgstr "Italic"
+
+#~ msgid "Bold"
+#~ msgstr "Bold"
+
+#~ msgid "Bold Italic"
+#~ msgstr "Bold Italic"
+
+#~ msgid "Page %s"
+#~ msgstr "Halaman %s"
+
+#~ msgid "Follow us on "
+#~ msgstr "Ikuti kami di"
+
+#~ msgid "Sparkling Documentation"
+#~ msgstr "Dokumentasi Sparkling"
+
+#~ msgid "<i class=\"fa fa-chevron-left\"></i> Older posts"
+#~ msgstr "<i class=\"fa fa-chevron-left\"></i>Entri Lama "
+
+#~ msgid "Newer posts <i class=\"fa fa-chevron-right\"></i>"
+#~ msgstr "Entri Baru <i class=\"fa fa-chevron-right\"></i>"
+
+#~ msgid "Sparkling Categories"
+#~ msgstr "Sparkling Kategori"
+
+#~ msgid "Sparkling Popular Posts Widget"
+#~ msgstr "Widget Sparkling Tulisan Populer"
+
+#~ msgid "Popular Posts"
+#~ msgstr "Tulisan Populer"
+
+#~ msgid "Sparkling Social Widget"
+#~ msgstr "Sparkling Social Widget"
+
+#~ msgid "One"
+#~ msgstr "Satu"
+
+#~ msgid "Two"
+#~ msgstr "Dua"
+
+#~ msgid "Three"
+#~ msgstr "Tiga"
+
+#~ msgid "Four"
+#~ msgstr "Empat"
+
+#~ msgid "Five"
+#~ msgstr "Lima"
+
+#~ msgid "French Toast"
+#~ msgstr "French Toast"
+
+#~ msgid "Pancake"
+#~ msgstr "Pancake"
+
+#~ msgid "Omelette"
+#~ msgstr "Omelette"
+
+#~ msgid "Crepe"
+#~ msgstr "Crepe"
+
+#~ msgid "Waffle"
+#~ msgstr "Waffle"
+
+#~ msgid "Main"
+#~ msgstr "Utama"
+
+#~ msgid "Do You want to display image slider on the Home Page?"
+#~ msgstr "Apakah Anda ingin menampilkan gambar slider pada Home Page?"
+
+#~ msgid "Check if you want to enable slider"
+#~ msgstr "Centang jika Anda ingin mengaktifkan slider"
+
+#~ msgid "Slider Category"
+#~ msgstr "Slider Kategori"
+
+#~ msgid "Select a category for the featured post slider"
+#~ msgstr "Pilih sebuah kategori untuk tampilan slider pos"
+
+#~ msgid "Number of slide items"
+#~ msgstr "Jumlah item slide"
+
+#~ msgid "Enter the number of slide items"
+#~ msgstr "Masukkan jumlah slide item"
+
+#~ msgid "Choose between Left and Right sidebar options to be used as default"
+#~ msgstr ""
+#~ "Pilih antara pilihan sidebar kiri dan kanan untuk digunakan sebagai "
+#~ "default"
+
+#~ msgid "Element color"
+#~ msgstr "Warna Elemen"
+
+#~ msgid "Element color on hover"
+#~ msgstr "Warna Elemen ketika disorot"
+
+#~ msgid "Custom Favicon"
+#~ msgstr "Kustom Favicon"
+
+#~ msgid ""
+#~ "Upload a 32px x 32px PNG/GIF image that will represent your websites "
+#~ "favicon"
+#~ msgstr ""
+#~ "Meng-upload gambar PNG GIF x 32px 32px yang akan mewakili favicon website "
+#~ "Anda"
+
+#~ msgid "Action Button"
+#~ msgstr "Action Button"
+
+#~ msgid "Call For Action Text"
+#~ msgstr "Teks Call For Action"
+
+#~ msgid "Enter the text for call for action section"
+#~ msgstr "Masukkan teks untuk bagian call for action"
+
+#~ msgid "Call For Action Button Title"
+#~ msgstr "Judul Tombol Call For Action"
+
+#~ msgid "Enter the title for Call For Action button"
+#~ msgstr "Masukkan judul untuk tombol Call For Action"
+
+#~ msgid "CFA button link"
+#~ msgstr "CFA tombol link"
+
+#~ msgid "Enter the link for Call For Action button"
+#~ msgstr "Masukkan link untuk tombol Call For Action"
+
+#~ msgid "Call For Action Text Color"
+#~ msgstr "Warna Teks Call For Action"
+
+#~ msgid "Call For Action Background Color"
+#~ msgstr "Warna Background Call For Action"
+
+#~ msgid "Call For Action Button Border Color"
+#~ msgstr "Warna Border Tombol Call For Action"
+
+#~ msgid "Call For Action Button Text Color"
+#~ msgstr "Warna Teks Tombol Call For Action"
+
+#~ msgid "Typography"
+#~ msgstr "Tipografi"
+
+#~ msgid "Main Body Text"
+#~ msgstr "Teks tubuh utama"
+
+#~ msgid "Used in P tags"
+#~ msgstr "Digunakan dalam tag P"
+
+#~ msgid "Heading Color"
+#~ msgstr "Warna Heading"
+
+#~ msgid "Color for all headings (h1-h6)"
+#~ msgstr "Warna untuk semua Heading (h1-h6)"
+
+#~ msgid "Link Color"
+#~ msgstr "Warna Link"
+
+#~ msgid "Link:hover Color"
+#~ msgstr "Warna Link:hover"
+
+#~ msgid "Header"
+#~ msgstr "Header"
+
+#~ msgid "Top nav background color"
+#~ msgstr "Warna Top nav background"
+
+#~ msgid "Top nav item color"
+#~ msgstr "Warna Top nav item"
+
+#~ msgid "Link color"
+#~ msgstr "Warna Link"
+
+#~ msgid "Top nav item hover color"
+#~ msgstr "Warna Top nav item hover"
+
+#~ msgid "Link:hover color"
+#~ msgstr "Warna Link:hover"
+
+#~ msgid "Top nav dropdown background color"
+#~ msgstr "Warna Top nav dropdown background"
+
+#~ msgid "Background of dropdown item hover color"
+#~ msgstr "Warna Background dari dropdown item hover"
+
+#~ msgid "Top nav dropdown item color"
+#~ msgstr "Warna Top nav dropdown item"
+
+#~ msgid "Dropdown item color"
+#~ msgstr "Warna Dropdown item"
+
+#~ msgid "Top nav dropdown item hover color"
+#~ msgstr "Warna Top nav dropdown item hover"
+
+#~ msgid "Dropdown item hover color"
+#~ msgstr "Warna Dropdown item hover"
+
+#~ msgid "Top nav dropdown item background hover color"
+#~ msgstr "Warna Top nav dropdown item background hover"
+
+#~ msgid "Footer widget area background color"
+#~ msgstr "Warna Background Footer widget area "
+
+#~ msgid "Footer background color"
+#~ msgstr "Warna background footer"
+
+#~ msgid "Footer text color"
+#~ msgstr "Warna teks footer"
+
+#~ msgid "Footer link color"
+#~ msgstr "Warna link footer"
+
+#~ msgid "Footer information"
+#~ msgstr "Informasi footer"
+
+#~ msgid "Copyright text in footer"
+#~ msgstr "Teks hak cipta di footer"
+
+#, fuzzy
+#~ msgid "Footer Social Icons"
+#~ msgstr "Warna footer  ikon sosial"
+
+#, fuzzy
+#~ msgid "Show/Hide social icons in footer"
+#~ msgstr "Warna footer  ikon sosial"
+
+#~ msgid "Social"
+#~ msgstr "Sosial"
+
+#~ msgid "Footer social icon color"
+#~ msgstr "Warna footer  ikon sosial"
+
+#~ msgid "Add full URL for your social network profiles"
+#~ msgstr "Tambahkan URL lengkap untuk profil jaringan sosial"
+
+#~ msgid "Facebook"
+#~ msgstr "Facebook"
+
+#~ msgid "Twitter"
+#~ msgstr "Twitter"
+
+#~ msgid "Google+"
+#~ msgstr "Google+"
+
+#~ msgid "Youtube"
+#~ msgstr "YouTube"
+
+#~ msgid "Vimeo"
+#~ msgstr "Vimeo"
+
+#~ msgid "LinkedIn"
+#~ msgstr "LinkedIn"
+
+#~ msgid "Pinterest"
+#~ msgstr "Pinterest"
+
+#~ msgid "RSS Feed"
+#~ msgstr "RSS feed"
+
+#~ msgid "Tumblr"
+#~ msgstr "Tumblr"
+
+#~ msgid "Flickr"
+#~ msgstr "Flickr"
+
+#~ msgid "Instagram"
+#~ msgstr "Instagram"
+
+#~ msgid "Dribbble"
+#~ msgstr "Dribbble"
+
+#~ msgid "Skype"
+#~ msgstr "Skype"
+
+#~ msgid "Foursquare"
+#~ msgstr "Foursquare"
+
+#~ msgid "SoundCloud"
+#~ msgstr "SoundCloud"
+
+#~ msgid "GitHub"
+#~ msgstr "GitHub"
+
+#~ msgctxt "placeholder"
+#~ msgid "Search..."
+#~ msgstr "Cari..."

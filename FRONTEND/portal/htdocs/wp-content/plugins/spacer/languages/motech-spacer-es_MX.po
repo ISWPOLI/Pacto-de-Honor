@@ -1,0 +1,215 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: motech-spacer\n"
+"POT-Creation-Date: 2016-01-28 16:33-0500\n"
+"PO-Revision-Date: 2016-02-01 12:04-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: index.php:75
+msgid "You can now"
+msgstr "Puedes ahora"
+
+#: index.php:75
+msgid "hide spacer on mobile screens"
+msgstr "esconder Spacer en pantallas móviles"
+
+#: index.php:75
+msgid "or set a custom spacer height for mobile screens."
+msgstr "o ajusta una altura de Spacer personalizada para pantallas móviles "
+
+#: index.php:77
+msgid "Set spacer height for mobile devices"
+msgstr "Ajustar la altura de spacer en dispositivos móviles"
+
+#: index.php:77
+msgid "Dismiss this notice"
+msgstr "Descartar este aviso"
+
+#: index.php:252
+msgid "Find me on LinkedIn"
+msgstr "Encontrarme en LinkedIn"
+
+#: index.php:253
+msgid "Follow me on Twitter"
+msgstr "Sígueme en Twitter"
+
+#: index.php:271
+msgid "NEW! Get Premium &raquo;"
+msgstr "¡NUEVO! Obtén el Premium &raquo;"
+
+#: index.php:272
+msgid "Spacer Premium is now available for as low as $20!"
+msgstr "Spacer Premium está ahora disponible por tan solo $20"
+
+#: index.php:280
+msgid "Get Premium"
+msgstr "Obtén el Premium"
+
+#: index.php:281
+msgid "Purchase will be processed via PayPal."
+msgstr "La compra será procesada por PayPal"
+
+#: index.php:282
+msgid ""
+"Every license is valid for the lifetime of the website where it's installed."
+msgstr "Cada licencia es válida de por vida para sitio donde sea instalada"
+
+#: index.php:289
+msgid "Buy 1 Use"
+msgstr "Compra un uso"
+
+#: index.php:292
+msgid "1 site license"
+msgstr "Licencia para 1 sitio"
+
+#: index.php:303
+msgid "Buy"
+msgstr "Comprar"
+
+#: index.php:303
+msgid "Unlimited"
+msgstr "Ilimitado"
+
+#: index.php:306
+msgid "Unlimited sites forever!"
+msgstr "¡Sitios ilimitados por siempre!"
+
+#: index.php:315
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: index.php:338
+msgid "Configuration"
+msgstr "Configuración"
+
+#: index.php:345
+msgid "Default Spacer Height"
+msgstr "Altura de Spacer predeterminada"
+
+#: index.php:356
+msgid ""
+"Speed up your workflow by setting a default height to apply to your spacers. "
+"Note that you can also enter negative spacing to shift the following content "
+"upwards."
+msgstr ""
+"¡Ahorra tiempo! Ajusta la altura predeterminada para tus Spacers. Tambien "
+"puedes ingresar espacios negativos para reducir el tamaño."
+
+#: index.php:357
+msgid "eg: 20"
+msgstr "Ej. 20"
+
+#: index.php:364
+msgid "Spacer Height Unit"
+msgstr "Unidad de Altura de Spacer"
+
+#: index.php:382
+msgid "Select a unit of measurement to use with your default spacer height."
+msgstr ""
+"Selecciona una unidad de medida para usar con tu altura predeterminada de "
+"Spacer"
+
+#: index.php:390
+msgid "Default Spacer Height On Mobile (Optional)"
+msgstr "Altura Predeterminada de Spacer En Móvil (Opcional)"
+
+#: index.php:401
+msgid ""
+"Set the default spacer height on mobile devices. If left empty, the spacer "
+"mobile height will be the same as the spacer desktop height. If set to 0, "
+"the spacer will be hidden on mobile."
+msgstr ""
+"Ajusta la altura predeterminada de Spacer en dispositivos Móviles. Si se "
+"deja vacío, la altura móvil de Spacer será la misma altura del escritorio. "
+"Si ingresas 0, el Spacer se esconderá en móvil. "
+
+#: index.php:402
+msgid "eg: 10"
+msgstr "Ej. 10"
+
+#: index.php:409
+msgid "Spacer Height Unit On Mobile"
+msgstr "Unidad de Altura de Spacer En Móvil"
+
+#: index.php:427
+msgid ""
+"Select a unit of measurement to use with your default spacer height on "
+"mobile devices. This only applies if you have a default spacer height set "
+"for mobile."
+msgstr ""
+"Selecciona una unidad de medida para usar con tu altura predeterminada de "
+"Spacer en dispositivos móviles. Esto solo aplica si tienes una altura "
+"predeterminada de spacer colocada para móvil."
+
+#: index.php:435
+msgid "Default Spacer Class (Optional)"
+msgstr "Clase Predeterminada de Spacer (Opcional)"
+
+#: index.php:446
+msgid ""
+"Enter a custom css class to apply to all of your spacer elements. Multiple "
+"classes can be added by putting a blank space between each class name"
+msgstr ""
+"Ingresa una clase de CSS personalizada para aplicar a todos lo elementos de "
+"spacer. Se pueden agregar múltiples clases colocando un espacio en blanco "
+"entre cada nombre."
+
+#: index.php:447
+msgid "eg: MyClass1 Class2"
+msgstr "Ej. MiClase1 Clase2"
+
+#: index.php:453
+msgid "Spacer Style (Optional)"
+msgstr "Estilo de Spacer (Opcional)"
+
+#: index.php:464
+msgid ""
+"Enter custom css to apply to all of your spacer elements. This is for "
+"advanced users. Just leave this empty if you're not sure what this means or "
+"if you don't have a use for it."
+msgstr ""
+"Ingresa una CSS personalizada para aplicar a todos los elementos de Spacer. "
+"Esto es para usuarios avanzados. Sólo deja esto vacío si no estás seguro de "
+"lo que significa o si no tienes un uso específico. "
+
+#: index.php:465
+msgid "(for example)"
+msgstr "(Por ejemplo)"
+
+#: index.php:493
+msgid "Upload Image"
+msgstr "Subir Imagen"
+
+#: index.php:499
+msgid "Enter a URL or upload an image."
+msgstr "Ingresar la URL o subir una imagen"
+
+#: index.php:505
+msgid "Preview"
+msgstr "Prevista"
+
+#: index.php:634
+msgid "Settings"
+msgstr "Ajustes"
+
+#: index.php:748 index.php:757 index.php:766
+msgid ""
+"A premium option was not saved. You must first enter your license key to "
+"unlock this premium feature."
+msgstr ""
+"Una Opción Premium no se guardó. Debe primero ingresar su llave de licencia "
+"para abrir esta característica premium"
+
+#: index.php:775
+msgid "Premium Only"
+msgstr "Sólo Premium"

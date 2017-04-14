@@ -1,0 +1,208 @@
+/*!==========================================================================
+   Common slider styling
+   ========================================================================== */
+
+.anythingSlider,
+.anythingBase {
+    overflow: visible;
+}
+
+.anythingSlider {
+    display: block;
+    position: relative;
+    
+    
+    .anythingWindow{
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    
+    .anythingBase{
+        background: transparent;
+        list-style: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+    }
+    
+
+    
+    .arrow{
+        span{
+            content: '';
+            display: none;
+            position: absolute;
+            margin-top: -20px;
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .back{
+        span{
+            &::before{
+                font-family: IcoMoon;
+                content: '\e918';
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                display: block;
+                line-height: 40px;
+                font-size: 20px;
+                background: #636363;
+                background: rgba(0, 0, 0, .7);
+                color: $full-white-colour;
+            }
+        }
+    }
+    .forward{
+        span{
+            &::before{
+                font-family: IcoMoon;
+                content: '\e919';
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                display: block;
+                line-height: 40px;
+                font-size: 20px;
+                background: #636363;
+                background: rgba(0, 0, 0, .7);
+                color: $full-white-colour;
+            }
+        }
+    }
+    .arrow.disabled{
+        display: none;
+    }
+
+    
+    .panel{
+        background: transparent;
+        display: block;
+        overflow: hidden;
+        float: left;
+        position: relative;
+        padding: 0;
+        margin: 0;
+    }
+
+    
+    .vertical{
+        .panel{
+            float: none;
+        }
+    }
+
+    
+    .fade{
+        .panel{
+            float: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1; 
+        }
+        .activePage{
+            z-index: 0;
+        }
+
+    }
+
+
+}
+
+
+.anythingSlider-default {
+    .arrow{
+        bottom: 0px;
+        position: absolute;
+        a{
+            text-align: center;
+            outline: 0;        
+        }
+    }
+    
+    .back{
+        left: 0px;
+        top: 50%;    
+    }
+    
+    .forward{
+        right: 40px;
+        top: 50%;
+    }
+    
+    .anythingControls{
+        .anythingNavWindow{
+            overflow: hidden;
+            float: left;
+        }
+        
+        .start-stop{
+            padding: 2px 5px;
+            width: 40px;
+            text-align: center;
+            text-decoration: none;
+            float: right;
+            z-index: 100;
+            outline: 0;
+        }
+    }
+}
+
+
+
+ul.thumbNav {
+    display: inline-block;
+    -moz-user-select: none;
+    bottom: -10px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    li{
+        display: inline-block;
+        position: relative;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.2);
+        margin: 3px;
+        cursor: pointer;
+        @include box-shadow(1px 1px 1px rgba(0, 0, 0, 0.1) inset, 1px 1px 1px rgba(255, 255, 255, 0.1));
+        a{
+            content: '';
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            border-radius: 100%;
+            display: block; 
+        }
+        .cur{
+            content: '';
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            @include border-radius(50%);
+            background: white;
+            background: -moz-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(47%, #f6f6f6), color-stop(100%, #ededed));
+            background: -webkit-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+            background: -o-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+            background: -ms-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+            background: linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
+        }
+        span{
+            display: none;
+        }
+    }
+}
