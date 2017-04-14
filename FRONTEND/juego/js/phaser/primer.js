@@ -25,17 +25,17 @@ var costoAtaqueJ=personajesBuenos[idPJ].energia*200;
 
 var primer = {
 	preload : function() {		
+        game.scale.pageAlignHorinzontally = true;
+        game.scale.pageAlignVertically = true;
 		funcionesBatalla.cargar(idPJ,idPC);
 	},
-	create : function() {	
-		
-		
+    
+	create : function() {
 		game.physics.startSystem(Phaser.Physics.ARCADE);
 		var fondogame = game.add.sprite(0, 0, 'fondo');
 
 		ataqueJ=game.add.group();
 		
-
 		personajeComputadora = game.add.sprite(650, 450, 'personajeComputadora');
 		personajeComputadora.anchor.setTo(0.5);
 		personajeJugador = game.add.sprite(150, 450, 'personajeJugador');
@@ -51,6 +51,8 @@ var primer = {
 		avatarPersonajeComputadora.scale.setTo(0.6);
 		var avatarPersonajeJugador = game.add.sprite(10, 30, 'avatarPersonajeJugador');
 		avatarPersonajeJugador.scale.setTo(0.6);
+        var botonPoderJugador = game.add.button (145, 105, 'botonPoderJugador', funcionesBatalla.clickBotonPoder, 1, 1, 0, 2);
+        
 		var pausa = game.add.button(365, 20, 'pausa', this.pausar,this);
 		pausa.inputEnabled=true;
 		//funcion para pausar
