@@ -41,6 +41,7 @@ navegacion.prototype = {
         game.load.spritesheet('botonAmigos', '../img/Componentes/navegacionMapa/botonAmigos.png', 62, 62);
         game.load.spritesheet('botonPerfil', '../img/Componentes/navegacionMapa/botonPerfil.png', 62, 62);
         game.load.spritesheet('botonRanking', '../img/Componentes/navegacionMapa/botonRanking.png', 62, 62);
+        game.load.spritesheet('botonCompraPersonajes', '../img/Componentes/navegacionMapa/botonCompraPersonajes.png', 62, 62);
 
         game.load.spritesheet('pause12', '../img/Componentes/navegacionMapa/pause12.png', 50,50);
         game.load.spritesheet('pause13', '../img/Componentes/navegacionMapa/pause13.png', 50,50);
@@ -52,10 +53,11 @@ navegacion.prototype = {
     create:function() {
         game.add.sprite(0, 0, 'fondo');
         game.add.sprite(80, 10, 'monedas');
-        botonCreditos = game.add.button(735, 5, 'botonCreditos', this.verCreditos, 1, 1, 0, 2);
-        botonAmigos = game.add.button(670, 5, 'botonAmigos', this.verInvitarAmigos, 1, 1, 0, 2);
         botonPerfil = game.add.button(5, 5, 'botonPerfil', this.verPerfil, 1, 1, 0, 2); //El estado de perfil lo está creando Juan Carlos
+        botonCreditos = game.add.button(735, 5, 'botonCreditos', this.verCreditos, 1, 1, 0, 2);
+        botonAmigos = game.add.button(670, 5, 'botonAmigos', this.verInvitarAmigos, 1, 1, 0, 2);        
         botonRanking = game.add.button(605, 5, 'botonRanking', null, 1, 1, 0, 2); //El estado de Rankings aun no esta creado
+        botonCompraPersonajes = game.add.button(540, 5, 'botonCompraPersonajes', this.verCompraPersonajes, 1, 1, 0, 2);
         game.add.text(160, 20, "999999", {font: "16px Roboto", fill: "#ffffff"}); //Label monedas
      
        
@@ -156,6 +158,11 @@ navegacion.prototype = {
     
     verPerfil: function(){
         game.state.start("perfilJugador");
+    },
+    
+    verCompraPersonajes: function(){
+        game.state.start("compraPersonajes");
+        
     },
     
     //se crea la funcion que ira adentro de cada boton de cada mundo, lo que hara sera abrir el popup con la imagen de el escenario y sus respectivos niveles.
