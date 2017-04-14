@@ -11,22 +11,15 @@ package printEntities;
  */
 public class PersonajeIdPrint {
     
-    private int idPersonaje;
+    private int id;
     private String nombrePersonaje;
 
-    public PersonajeIdPrint(int idPersonaje, String nombrePersonaje) {
-        this.idPersonaje = idPersonaje;
-        this.nombrePersonaje = nombrePersonaje;
-    }
-    
-    
-
-    public int getIdPersonaje() {
-        return idPersonaje;
+    public int getId() {
+        return id;
     }
 
-    public void setIdPersonaje(int idPersonaje) {
-        this.idPersonaje = idPersonaje;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombrePersonaje() {
@@ -36,6 +29,7 @@ public class PersonajeIdPrint {
     public void setNombrePersonaje(String nombrePersonaje) {
         this.nombrePersonaje = nombrePersonaje;
     }
+    
     
     
 }

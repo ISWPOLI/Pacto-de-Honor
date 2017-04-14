@@ -6,6 +6,8 @@
 package rest;
 
 import entitities.Ciudad;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -33,48 +35,80 @@ public class CiudadFacadeREST extends AbstractFacade<Ciudad> {
     
     /**
      * Crea un dato Ciudad
-     * Probado con el recurso "Crear"
+     * Se prueba con el TestCase "Crear" del proyecto Ciudad-soapui-project
      * @param entity Entidad Ciudad
      */
     @POST
-    @Override
     @Path("create")
     @Consumes({"application/json"})
-    public void create(Ciudad entity) {
-        super.create(entity);
+    @Produces({"application/json"})
+    public String crearImagen(Ciudad entity) {
+        String resultado;
+        try{
+            em.persist(entity);   
+            resultado = "{'response':'OK']";
+        }catch (Exception e){
+            StringWriter errors = new StringWriter();
+            e.printStackTrace(new PrintWriter(errors));            
+            resultado = "{'response':'KO', 'cause':'"+errors.toString()+"'}";
+        }
+        return resultado;
     }
 
     /**
      * Edita un campo de acuerdo al id enviado
-     * Probado con el recurso "Editar"
+     * Se prueba con el TestCase "Editar" del proyecto Ciudad-soapui-project
      * @param entity Entidad Ciudad
      */
     @POST
     @Path("edit")
     @Consumes({"application/json"})
-    @Override
-    public void edit(Ciudad entity) {
-        Ciudad ciudad = super.find(entity.getIdCiudad());
-        ciudad.setNombreCiudad(entity.getNombreCiudad());
-        super.edit(ciudad);
-    }
+    @Produces({"application/json"})
+    public String editarImagen(Ciudad entity){
+        try{
+            if(entity.getIdCiudad()!= 0 && entity.getIdCiudad()!= null){
+                Ciudad ciudad = super.find(entity.getIdCiudad());
+                if(ciudad == null){
+                   return "{'response':'KO','cause':'City not found'}";
+                }else{
+                    if(entity.getIdCiudad()!= null)  ciudad.setNombreCiudad(entity.getNombreCiudad());
+                    
+                    em.merge(ciudad);
+
+                    return "{'response':'OK'}";
+                }
+
+            }else{
+                return "{'response':'KO','cause':'Not send Id'}";
+            }
+            
+        }catch (Exception e){
+            return "{'response':'KO','cause':'Exception'}";
+        }
+       
+    }    
     
     /**
      * Busca un dato de acuerdo al id enviado
-     * Probado con el recurso "Buscar"
+     * Se prueba con el TestCase "Buscar" del proyecto Ciudad-soapui-project
      * @param id de la ciudad a buscar
      * @return entity Ciudad
      */
-    @GET
+   @GET
     @Path("find")
     @Produces({"application/json"})
-    public Ciudad find(@QueryParam("id") Integer id) {
-        return super.find(id);
+    public String find(@QueryParam("id") Integer id) {
+        Ciudad ciudad = em.find(Ciudad.class, id);
+        if(ciudad == null){
+            return "{'response':'KO','cause':'Ciudad not found'}";
+        }else{
+            return "{'idImagen':'"+ciudad.getIdCiudad()+"', 'foto':'"+ciudad.getNombreCiudad()+"'}";
+        }        
     }
 
     /**
      * Al consumir, arroja un json con todos los datos de la tabla
-     * Probado con el recurso "Ciudad"
+     * Se prueba con el TestCase "Ciudad" del proyecto Ciudad-soapui-project
      * @return List de todas las Ciudades
      */
     @GET
@@ -86,7 +120,7 @@ public class CiudadFacadeREST extends AbstractFacade<Ciudad> {
 
     /**
      * Retorna de acuerdo alrango envidado, donde 0 es el primer dato
-     * Probado con el recurso "BuscaPorRango"
+     * Se prueba con el TestCase "BuscarPorRango" del proyecto Ciudad-soapui-project
      * @param from desde el id
      * @param to hasta el id
      * @return List con las ciudades
@@ -95,12 +129,16 @@ public class CiudadFacadeREST extends AbstractFacade<Ciudad> {
     @Path("findRange")
     @Produces({"application/json"})
     public List<Ciudad> findRange(@QueryParam("from") Integer from, @QueryParam("to") Integer to) {
-        return super.findRange(new int[]{from, to});
+        if(from < super.count() && (to < from && to <= super.count())){
+            return super.findRange(new int[]{from, to});
+        }else{
+            
+        }
     }
     
     /**
      * Retorna el número de datos contenido en la tabla
-     * Probado con el recurso "NoDatos"
+     * Se prueba con el TestCase "NoDatos" del proyecto Ciudad-soapui-project
      * @return String con el número de datos
      */
     @GET

@@ -1,7 +1,6 @@
 package rest;
 
 import entitities.Personaje;
-import entitities.PersonajePK;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.ArrayList;
@@ -10,6 +9,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.GET;
@@ -33,24 +33,6 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
     @PersistenceContext(unitName = "PolifightPU")
     private EntityManager em;
 
-    private PersonajePK getPrimaryKey(PathSegment pathSegment) {
-        entitities.PersonajePK key = new entitities.PersonajePK();
-        javax.ws.rs.core.MultivaluedMap<String, String> map = pathSegment.getMatrixParameters();
-        java.util.List<String> idPersonaje = map.get("idPersonaje");
-        if (idPersonaje != null && !idPersonaje.isEmpty()) {
-            key.setIdPersonaje(new java.lang.Integer(idPersonaje.get(0)));
-        }
-        java.util.List<String> idCategoria = map.get("idCategoria");
-        if (idCategoria != null && !idCategoria.isEmpty()) {
-            key.setIdCategoria(new java.lang.Integer(idCategoria.get(0)));
-        }
-        java.util.List<String> idImagen = map.get("idImagen");
-        if (idImagen != null && !idImagen.isEmpty()) {
-            key.setIdImagen(new java.lang.Integer(idImagen.get(0)));
-        }
-        return key;
-    }
-
     public PersonajeFacadeREST() {
         super(Personaje.class);
     }
@@ -62,15 +44,15 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
     @GET
     @Path("id")
     @Consumes({"application/json"})
+    @Produces({"application/json"})
     public List<PersonajeIdPrint> returnId(){
-        Query query = em.createQuery("SELECT p FROM Personaje p ORDER BY p.idPersonaje");
-        
-        List<Personaje> personajes = new ArrayList();
-        List<PersonajeIdPrint> resultado = new ArrayList();
-        
-        personajes = query.getResultList();
-        for (int i = 0; i < personajes.size(); i++) {
-            PersonajeIdPrint p = new PersonajeIdPrint(personajes.get(i).getIdPersonaje(),personajes.get(i).getNombrePersonaje());
+        List<PersonajeIdPrint> resultado = new ArrayList<PersonajeIdPrint>();
+        TypedQuery<Personaje> consultP = em.createNamedQuery("Personaje.listById",Personaje.class);
+        List<Personaje> listP = consultP.getResultList();
+        for (int i = 0; i < listP.size(); i++) {
+            PersonajeIdPrint p = new PersonajeIdPrint();
+            p.setId(listP.get(i).getIdPersonaje());
+            p.setNombrePersonaje(listP.get(i).getNombrePersonaje());
             resultado.add(p);
         }
         return resultado;
