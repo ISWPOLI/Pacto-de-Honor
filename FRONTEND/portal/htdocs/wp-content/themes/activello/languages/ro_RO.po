@@ -1,0 +1,1530 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Activello Theme\n"
+"POT-Creation-Date: 2017-02-19 17:44+0100\n"
+"PO-Revision-Date: 2017-02-19 17:44+0100\n"
+"Last-Translator: Aigars Silkalns <a.silkalns@gmail.com>\n"
+"Language-Team: colorlib <info@colorlib.com>\n"
+"Language: ro_RO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _e;__;esc_attr__;esc_html__;esc_html_e;"
+"esc_attr_x:1,2c;_nx:4c,1,2;_n:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Pagină inexistentă."
+
+#: ../404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Nu a fost găsit nimic în locația speficată. Poate încerci una din legăturile "
+"de mai jos?"
+
+#: ../404.php:25
+msgid "Recent Posts"
+msgstr ""
+
+#: ../404.php:31
+msgid "Most Used Categories"
+msgstr "Cele mai accesate categorii"
+
+#: ../404.php:52
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Încearcă să cauți în arhivele lunare. %1$s"
+
+#: ../404.php:53 ../archive.php:66 ../sidebar.php:31
+msgid "Archives"
+msgstr "Arhive"
+
+#: ../404.php:58
+msgid "Tags"
+msgstr ""
+
+#: ../archive.php:27
+#, php-format
+msgid "Author: %s"
+msgstr "Autor: %s"
+
+#: ../archive.php:30
+#, php-format
+msgid "Day: %s"
+msgstr "Zi: %s"
+
+#: ../archive.php:33
+#, php-format
+msgid "Month: %s"
+msgstr "Lună: %s"
+
+#: ../archive.php:36
+#, php-format
+msgid "Year: %s"
+msgstr "An: %s"
+
+#: ../archive.php:39
+msgid "Asides"
+msgstr "Alături"
+
+#: ../archive.php:42
+msgid "Galleries"
+msgstr "Galerii"
+
+#: ../archive.php:45
+msgid "Images"
+msgstr "Imagini"
+
+#: ../archive.php:48
+msgid "Videos"
+msgstr "Videoclipuri"
+
+#: ../archive.php:51
+msgid "Quotes"
+msgstr "Citate"
+
+#: ../archive.php:54
+msgid "Links"
+msgstr "Legături"
+
+#: ../archive.php:57
+msgid "Statuses"
+msgstr "Stări"
+
+#: ../archive.php:60
+msgid "Audios"
+msgstr "Înregistrări audio"
+
+#: ../archive.php:63
+msgid "Chats"
+msgstr "Discuții"
+
+#: ../comments.php:28
+#, php-format
+msgctxt "comments title"
+msgid "1 Comment"
+msgid_plural "%1$s Comment"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../comments.php:35 ../comments.php:54
+msgid "Comment navigation"
+msgstr "Navigare comentarii"
+
+#: ../comments.php:36 ../comments.php:55
+msgid "&larr; Older Comments"
+msgstr "&larr; Comentarii mai vechi"
+
+#: ../comments.php:37 ../comments.php:56
+msgid "Newer Comments &rarr;"
+msgstr "Comentarii noi &rarr;"
+
+#: ../comments.php:66
+msgid "Comments are closed."
+msgstr "Nu se adaugă comentarii."
+
+#: ../comments.php:77
+msgid "Name"
+msgstr ""
+
+#: ../comments.php:81
+msgid "Email"
+msgstr ""
+
+#: ../comments.php:85
+msgid "Website"
+msgstr ""
+
+#: ../comments.php:94
+msgid "Post Reply"
+msgstr ""
+
+#: ../content-grid.php:16 ../content-page.php:26 ../inc/extras.php:266
+msgid "Edit"
+msgstr "Editare"
+
+#: ../content-grid.php:28 ../content.php:41 ../content.php:67
+#: ../inc/extras.php:151
+msgid "Read More"
+msgstr "Citește mai mult"
+
+#: ../content-grid.php:37 ../content-page.php:21 ../content-single.php:43
+#: ../content.php:56 ../image.php:79
+msgid "Pages:"
+msgstr "Pagini:"
+
+#: ../content-none.php:13
+msgid "Nothing Found"
+msgstr "Nu s-a găsit nimic."
+
+#: ../content-none.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Ești gata ăs publici primul articol? <a href=\"%1$s\">Începe aici</a>."
+
+#: ../content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Ne pare rău, dar nu am găsit nimic potrivit cu ce ai căutat. Încearcă să "
+"schi,bi cuvintele cheie și caută din nou."
+
+#: ../content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "Nu am găsit ceea ce cauți. Încearcă facilitatatea de căutare."
+
+#: ../content-single.php:21 ../content.php:22
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: ../content-single.php:55 ../content.php:73
+msgid "No comments yet"
+msgstr ""
+
+#: ../content-single.php:55
+msgid "Comment (1)"
+msgstr ""
+
+#: ../content-single.php:55
+msgid "Comments (%)"
+msgstr ""
+
+#: ../content.php:73
+msgid "1 Comment"
+msgstr "1 comentariu"
+
+#: ../content.php:73
+msgid "% Comments"
+msgstr "% Comentarii"
+
+#: ../functions.php:71
+msgid "Primary Menu"
+msgstr "Meniu Principal"
+
+#: ../functions.php:114
+msgid "Sidebar"
+msgstr "Bara laterală"
+
+#: ../functions.php:233
+msgid "Left Sidebar"
+msgstr "Bara Laterală Stânga"
+
+#: ../functions.php:233
+msgid "Right Sidebar"
+msgstr "Bara Laterală Dreapta"
+
+#: ../functions.php:233
+msgid "No Sidebar"
+msgstr ""
+
+#: ../functions.php:233
+msgid "Full Width"
+msgstr ""
+
+#: ../functions.php:235
+msgid "Logo Only"
+msgstr ""
+
+#: ../functions.php:236
+msgid "Logo + Tagline"
+msgstr ""
+
+#: ../functions.php:237
+msgid "Title Only"
+msgstr ""
+
+#: ../functions.php:238
+msgid "Title + Tagline"
+msgstr ""
+
+#: ../functions.php:275 ../searchform.php:14
+msgid "Search"
+msgstr ""
+
+#: ../functions.php:275 ../searchform.php:14
+#, fuzzy
+msgctxt "submit button"
+msgid "Search"
+msgstr "Caută..."
+
+#: ../header.php:40
+msgid "Toggle navigation"
+msgstr ""
+
+#: ../image.php:22
+msgid "<i class=\"fa fa-chevron-left\"></i> Previous"
+msgstr "<i class=\"fa fa-chevron-left\"></i> Anterior"
+
+#: ../image.php:23
+msgid "Next <i class=\"fa fa-chevron-right\"></i>"
+msgstr "Următor <i class=\"fa fa-chevron-right\"></i>"
+
+#: ../inc/customizer.php:30
+msgid "Logo"
+msgstr ""
+
+#: ../inc/customizer.php:44
+msgid "Show"
+msgstr ""
+
+#: ../inc/customizer.php:53
+msgid "Activello Options"
+msgstr ""
+
+#: ../inc/customizer.php:54
+msgid "Panel to update activello theme options"
+msgstr ""
+
+#: ../inc/customizer.php:60
+#, fuzzy
+msgid "Content Options"
+msgstr "Opțiuni temă"
+
+#: ../inc/customizer.php:73
+msgid "Show post excerpts?"
+msgstr ""
+
+#: ../inc/customizer.php:85
+#, fuzzy
+msgid "Display Comments on Static Pages?"
+msgstr "Afișare pe Prima Pagină"
+
+#: ../inc/customizer.php:94
+msgid "Slider Options"
+msgstr ""
+
+#: ../inc/customizer.php:139
+msgid "Layout options"
+msgstr ""
+
+#: ../inc/customizer.php:150
+msgid "Website Layout Options"
+msgstr "Opțiuni Structură Site"
+
+#: ../inc/customizer.php:153
+msgid "Choose between different layout options to be used as default"
+msgstr ""
+
+#: ../inc/customizer.php:162
+msgid "Accent Color"
+msgstr ""
+
+#: ../inc/customizer.php:163 ../inc/customizer.php:173
+#: ../inc/customizer.php:183
+msgid "Default used if no color is selected"
+msgstr "Folosit implicit dacă nici o culoare nu e selectată"
+
+#: ../inc/customizer.php:172
+msgid "Social icon color"
+msgstr "Culoare pictogramă rețea socializare"
+
+#: ../inc/customizer.php:182
+msgid "Social Icon:hover Color"
+msgstr ""
+
+#: ../inc/customizer.php:189
+msgid "Footer"
+msgstr "Subsol"
+
+#: ../inc/customizer.php:207
+msgid "Other"
+msgstr "Altele"
+
+#: ../inc/customizer.php:225
+msgid "Support and Documentation"
+msgstr "Suport și Documentație"
+
+#: ../inc/customizer.php:368
+msgid "Activello Documentation"
+msgstr ""
+
+#: ../inc/customizer.php:369
+msgid ""
+"The best way to contact us with <b>support questions</b> and <b>bug reports</"
+"b> is via"
+msgstr ""
+"Cea mai bună metode de contact pentru <b>întrebări</b> și <b>reportare "
+"probleme</b> este via"
+
+#: ../inc/customizer.php:369
+msgid "Colorlib support forum"
+msgstr "Forum-ul Colorlib"
+
+#: ../inc/customizer.php:370
+msgid "If you like this theme, I'd appreciate any of the following:"
+msgstr "Dacă îți place această temă, aș aprecia unul din următoarele lucruri:"
+
+#: ../inc/customizer.php:372
+msgid "Rate this Theme"
+msgstr "Dă notă temei"
+
+#: ../inc/customizer.php:373
+msgid "Like on Facebook"
+msgstr "\"Like\" pe Facebook"
+
+#: ../inc/customizer.php:374
+msgid "Follow on Twitter"
+msgstr "Urmărește-ne pe Twitter"
+
+#: ../inc/extras.php:54
+msgid "Untitled"
+msgstr ""
+
+#: ../inc/extras.php:71
+msgid ""
+"This post is password protected. To view it please enter your password below:"
+msgstr ""
+
+#: ../inc/extras.php:72
+msgid "Password:"
+msgstr "Parola:"
+
+#: ../inc/extras.php:75
+msgid "Submit"
+msgstr "Trimite"
+
+#: ../inc/extras.php:172
+#, php-format
+msgid "Theme by %1$s Powered by %2$s"
+msgstr "Temă de %1$s Susținut de %2$s"
+
+#: ../inc/extras.php:260
+#, php-format
+msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">says:</span>"
+msgstr ""
+
+#: ../inc/extras.php:266
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../inc/extras.php:273
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../inc/metaboxes.php:16
+msgid ""
+"Select layout for this specific Page only ( Note: This setting only reflects "
+"if page Template is set as Default Template and Blog Type Templates.)"
+msgstr ""
+
+#: ../inc/metaboxes.php:21
+msgid "Select layout for this specific Post only"
+msgstr ""
+
+#: ../inc/metaboxes.php:28
+msgid "Select layout for this specific Product only"
+msgstr ""
+
+#: ../inc/metaboxes.php:58
+msgid "Default"
+msgstr ""
+
+#: ../inc/navwalker.php:196
+msgid "Add a menu"
+msgstr ""
+
+#: ../inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr "Navigare articole"
+
+#: ../inc/template-tags.php:27
+msgid "Older posts"
+msgstr ""
+
+#: ../inc/template-tags.php:31
+msgid "Newer posts"
+msgstr ""
+
+#: ../inc/template-tags.php:56
+msgid "Post navigation"
+msgstr "Navigare articole"
+
+#: ../inc/template-tags.php:86
+msgid "Posted on"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:327
+#: ../inc/tgmpa/tgm-plugin-activation.php:79
+msgid "Install Required Plugins"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:328
+#: ../inc/tgmpa/tgm-plugin-activation.php:80
+msgid "Install Plugins"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:330
+#: ../inc/tgmpa/tgm-plugin-activation.php:81
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:332
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:333
+#: ../inc/tgmpa/tgm-plugin-activation.php:82
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:385
+#: ../inc/tgmpa/tgm-plugin-activation.php:93
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:386
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:827
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2533
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3580
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:387
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3159
+#: ../inc/tgmpa/tgm-plugin-activation.php:94
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:388
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2952
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:390
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:392
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:394
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:395
+msgid "Dismiss this notice"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:396
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:397
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:522
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:523
+msgid "Update Required"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:934
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:934
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:937
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:937
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:1982
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2273
+msgid "Required"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2276
+msgid "Recommended"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2292
+msgid "WordPress Repository"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2295
+msgid "External Source"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2298
+msgid "Pre-Packaged"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2315
+msgid "Not Installed"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2319
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2321
+msgid "Active"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2327
+msgid "Required Update not Available"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2330
+msgid "Requires Update"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2333
+msgid "Update recommended"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2388
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2392
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2396
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2400
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2490
+msgid "Installed version:"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2498
+msgid "Minimum required version:"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2510
+msgid "Available version:"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2533
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2547
+msgid "Plugin"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2548
+msgid "Source"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2549
+msgid "Type"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2553
+msgid "Version"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2554
+msgid "Status"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2603
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2608
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2614
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2684
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2717
+#: ../inc/welcome-screen/custom-recommend-action-section.php:108
+#: ../inc/welcome-screen/sections/actions-required.php:41
+#: ../inc/welcome-screen/sections/recommended-plugins.php:24
+msgid "Install"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2723
+msgid "Update"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2726
+#: ../inc/welcome-screen/custom-recommend-action-section.php:112
+#: ../inc/welcome-screen/sections/actions-required.php:45
+#: ../inc/welcome-screen/sections/recommended-plugins.php:28
+msgid "Activate"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2757
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2759
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2800
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2802
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2908
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2934
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3158
+msgid "Plugin activation failed."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3498
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3501
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3503
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3507
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3509
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3509
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3517
+msgid "Show Details"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3509
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3517
+msgid "Hide Details"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3510
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3512
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3515
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3517
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3518
+msgid "All installations have been completed."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3520
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../inc/tgmpa/tgm-plugin-activation.php:95
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: ../inc/welcome-screen/custom-recommend-action-section.php:116
+#: ../inc/welcome-screen/sections/actions-required.php:49
+#: ../inc/welcome-screen/sections/recommended-plugins.php:32
+msgid "Deactivate"
+msgstr ""
+
+#: ../inc/welcome-screen/notify-system-checks.php:154
+#: ../inc/welcome-screen/notify-system-checks.php:162
+msgid "Install: Widget Importer Exporter Plugin"
+msgstr ""
+
+#: ../inc/welcome-screen/notify-system-checks.php:159
+msgid "Activate: Widget Importer Exporter Plugin"
+msgstr ""
+
+#: ../inc/welcome-screen/notify-system-checks.php:168
+#: ../inc/welcome-screen/notify-system-checks.php:176
+msgid "Install: WordPress Importer"
+msgstr ""
+
+#: ../inc/welcome-screen/notify-system-checks.php:173
+msgid "Activate: WordPress Importer"
+msgstr ""
+
+#: ../inc/welcome-screen/notify-system-checks.php:185
+#: ../inc/welcome-screen/notify-system-checks.php:193
+msgid "Please install the WordPress Importer to create the demo content."
+msgstr ""
+
+#: ../inc/welcome-screen/notify-system-checks.php:190
+msgid "Please activate the WordPress Importer to create the demo content."
+msgstr ""
+
+#: ../inc/welcome-screen/notify-system-checks.php:199
+#: ../inc/welcome-screen/notify-system-checks.php:207
+msgid "Please install the WordPress widget importer to create the demo content"
+msgstr ""
+
+#: ../inc/welcome-screen/notify-system-checks.php:204
+msgid ""
+"Please activate the WordPress Widget Importer to create the demo content."
+msgstr ""
+
+#: ../inc/welcome-screen/sections/actions-required.php:80
+#: ../inc/welcome-screen/welcome-screen.php:149
+msgid "Hooray! There are no required actions for you right now."
+msgstr ""
+
+#: ../inc/welcome-screen/sections/getting-started.php:11
+msgid "Step 1 - Implement recommended actions"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/getting-started.php:12
+msgid ""
+"We've compiled a list of steps for you, to take make sure the experience "
+"you'll have using one of our products is very easy to follow."
+msgstr ""
+
+#: ../inc/welcome-screen/sections/getting-started.php:15
+msgid "No recommended actions left to perform"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/getting-started.php:18
+msgid "Check recommended actions"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/getting-started.php:24
+msgid "Step 2 - Check our documentation"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/getting-started.php:25
+msgid ""
+"Even if you're a long-time WordPress user, we still believe you should give "
+"our documentation a very quick Read."
+msgstr ""
+
+#: ../inc/welcome-screen/sections/getting-started.php:28
+msgid "Full documentation"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/getting-started.php:33
+msgid "Step 3 - Customize everything"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/getting-started.php:34
+msgid ""
+"Using the WordPress Customizer you can easily customize every aspect of the "
+"theme."
+msgstr ""
+
+#: ../inc/welcome-screen/sections/getting-started.php:36
+msgid "Go to Customizer"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/recommended-plugins.php:39
+msgid "Version:"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/support.php:5
+#: ../inc/welcome-screen/sections/support.php:10
+msgid "Contact Support"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/support.php:7
+msgid ""
+"We offer excellent support through our advanced ticketing system. Make sure "
+"to register your purchase before contacting support!"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/support.php:15
+msgid "Documentation"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/support.php:17
+msgid ""
+"This is the place to go to reference different aspects of the theme. Our "
+"online documentation is an incredible resource for learning the ins and outs "
+"of using Activello."
+msgstr ""
+
+#: ../inc/welcome-screen/sections/support.php:20
+msgid "See our full documentation"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/support.php:25
+#: ../inc/welcome-screen/welcome-screen.php:385
+msgid "Changelog"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/support.php:27
+msgid ""
+"Want to get the gist on the latest theme changes? Just consult our changelog "
+"below to get a taste of the recent fixes and features implemented."
+msgstr ""
+
+#: ../inc/welcome-screen/sections/support.php:30
+msgid "See changelog"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-page-setup.php:16
+msgid "Recomended Actions"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-page-setup.php:17
+msgid "We're social"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-page-setup.php:75
+msgid "Download theme sample data"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-page-setup.php:76
+msgid "Head over to our website and download the sample content data."
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-page-setup.php:77
+msgid "Posts"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-page-setup.php:78
+msgid "Widgets"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-page-setup.php:83
+msgid "Import Sample Data"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-page-setup.php:84
+msgid "Import Posts"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-page-setup.php:85
+msgid "Import Widgets"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-screen.php:128
+#, php-format
+msgid ""
+"Welcome! Thank you for choosing Activello! To fully take advantage of the "
+"best our theme can offer please make sure you visit our %swelcome page%s."
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-screen.php:130
+msgid "Get started with Activello"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-screen.php:168
+msgid "View Theme Info"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-screen.php:366
+msgid "Welcome to Activello! - Version "
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-screen.php:369
+msgid ""
+"Activello is now installed and ready to use! Get ready to build something "
+"beautiful. We hope you enjoy it! We want to make sure you have the best "
+"experience using Activello and that is why we gathered here all the "
+"necessary information for you. We hope you will enjoy using Activello, as "
+"much as we enjoy creating great products."
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-screen.php:376
+msgid "Getting Started"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-screen.php:378
+msgid "Recommended Actions"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-screen.php:381
+msgid "Recommended Plugins"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-screen.php:383
+msgid "Support"
+msgstr ""
+
+#: ../inc/widgets/widget-categories.php:11
+msgid "Activello widget to display categories"
+msgstr ""
+
+#: ../inc/widgets/widget-categories.php:12
+msgid "Activello Categories"
+msgstr ""
+
+#: ../inc/widgets/widget-categories.php:17
+#: ../inc/widgets/widget-categories.php:73
+msgid "Categories"
+msgstr "Categorii"
+
+#: ../inc/widgets/widget-categories.php:78 ../inc/widgets/widget-social.php:49
+msgid "Title "
+msgstr "Titlu"
+
+#: ../inc/widgets/widget-categories.php:86
+msgid "Limit Categories "
+msgstr "Limitare Categorii"
+
+#: ../inc/widgets/widget-categories.php:99
+msgid "Enable Posts Count"
+msgstr "Aprobă Numărarea Articolelor"
+
+#: ../inc/widgets/widget-recent-posts.php:11
+msgid "Activello recent posts widget with thumbnails"
+msgstr ""
+
+#: ../inc/widgets/widget-recent-posts.php:12
+msgid "Activello Recent Posts Widget"
+msgstr ""
+
+#: ../inc/widgets/widget-recent-posts.php:17
+#: ../inc/widgets/widget-recent-posts.php:91
+msgid "recent Posts"
+msgstr ""
+
+#: ../inc/widgets/widget-recent-posts.php:96
+msgid "Title"
+msgstr "Titlu"
+
+#: ../inc/widgets/widget-recent-posts.php:104
+msgid "Limit Posts Number"
+msgstr "Limitează Număr Articole"
+
+#: ../inc/widgets/widget-social.php:11
+msgid "Activello theme widget to display social media icons"
+msgstr ""
+
+#: ../inc/widgets/widget-social.php:12
+msgid "Activello Social Widget"
+msgstr ""
+
+#: ../inc/widgets/widget-social.php:17 ../inc/widgets/widget-social.php:46
+msgid "Follow us"
+msgstr "Urmărește-ne"
+
+#: ../search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Rezultate găsite pentru: %s"
+
+#: ../searchform.php:11
+#, fuzzy
+msgid "Search for:"
+msgstr "Caută..."
+
+#: ../searchform.php:12
+#, fuzzy
+msgctxt "placeholder"
+msgid "Search&hellip;"
+msgstr "Caută..."
+
+#: ../searchform.php:12
+#, fuzzy
+msgctxt "label"
+msgid "Search for:"
+msgstr "Caută..."
+
+#: ../sidebar.php:38
+msgid "Meta"
+msgstr "Meta"
+
+#~ msgid "Leave a comment"
+#~ msgstr "Lasă un comentariu"
+
+#~ msgid "Custom CSS"
+#~ msgstr "CSS specific"
+
+#~ msgid "Additional CSS"
+#~ msgstr "CSS Adițional"
+
+#~ msgid ""
+#~ "<p>This post is password protected. To view it please enter your password "
+#~ "below:</p>"
+#~ msgstr ""
+#~ "<p>Acest articol este privat. Pentru a-l vedea introdu parila mai jos:</p>"
+
+#~ msgid "Footer Links"
+#~ msgstr "Legături în subsol"
+
+#~ msgctxt "comments title"
+#~ msgid "One thought on &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "O părere despre &ldquo;%2$s&rdquo;"
+#~ msgstr[1] "%1$s păreri despre &ldquo;%2$s&rdquo;"
+
+#~ msgid ", "
+#~ msgstr ","
+
+#~ msgid " %1$s"
+#~ msgstr " %1$s"
+
+#~ msgid "Homepage Widget 1"
+#~ msgstr "Prima Pagină Componenta 1"
+
+#~ msgid "Displays on the Home Page"
+#~ msgstr "Afișare pe Prima Pagină"
+
+#~ msgid "Homepage Widget 2"
+#~ msgstr "Prima Pagină Componenta 2"
+
+#~ msgid "Homepage Widget 3"
+#~ msgstr "Prima Pagină Componenta 3"
+
+#~ msgid "Footer Widget 1"
+#~ msgstr "Subsol Componenta 1"
+
+#~ msgid "Used for footer widget area"
+#~ msgstr "Folosit pentru zona componente subsol"
+
+#~ msgid "Footer Widget 2"
+#~ msgstr "Subsol Componenta 2"
+
+#~ msgid "Footer Widget 3"
+#~ msgstr "Subsol Componenta 3"
+
+#~ msgid "Theme Options"
+#~ msgstr "Opțiuni temă"
+
+#~ msgid "Click OK to reset. Any theme settings will be lost!"
+#~ msgstr "Apasă OK pentru resetare. Setările temei vor fi pierdute!"
+
+#~ msgid "Default options restored."
+#~ msgstr "Am restaurat opțiunile implicite"
+
+#~ msgid "Options saved."
+#~ msgstr "Opțiuni salvate."
+
+#~ msgid "No file chosen"
+#~ msgstr "Nici un fisier selectat"
+
+#~ msgid "Upload"
+#~ msgstr "Încarcă"
+
+#~ msgid "Remove"
+#~ msgstr "Șterge"
+
+#~ msgid "Upgrade your version of WordPress for full media support."
+#~ msgstr "Actualizează versiunea Wordpress pentru suport media îmbunătățit."
+
+#~ msgid "View File"
+#~ msgstr "Vezi fișier"
+
+#~ msgid "No Repeat"
+#~ msgstr "Fără repetare"
+
+#~ msgid "Repeat Horizontally"
+#~ msgstr "Repetă pe orizontală"
+
+#~ msgid "Repeat Vertically"
+#~ msgstr "Repetă pe verticală"
+
+#~ msgid "Repeat All"
+#~ msgstr "Repetă peste tot"
+
+#~ msgid "Top Left"
+#~ msgstr "Stânga Sus"
+
+#~ msgid "Top Center"
+#~ msgstr "Centrat Sus"
+
+#~ msgid "Top Right"
+#~ msgstr "Dreapta Sus"
+
+#~ msgid "Middle Left"
+#~ msgstr "Stânga Mijloc"
+
+#~ msgid "Middle Center"
+#~ msgstr "Centru Mijloc"
+
+#~ msgid "Middle Right"
+#~ msgstr "Dreapta mijloc"
+
+#~ msgid "Bottom Left"
+#~ msgstr "Stânga Jos"
+
+#~ msgid "Bottom Center"
+#~ msgstr "Centru Jos"
+
+#~ msgid "Bottom Right"
+#~ msgstr "Drapta Jos"
+
+#~ msgid "Scroll Normally"
+#~ msgstr "Glisare Normală"
+
+#~ msgid "Fixed in Place"
+#~ msgstr "Loc Fix"
+
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#~ msgid "Italic"
+#~ msgstr "Cursiv"
+
+#~ msgid "Bold"
+#~ msgstr "Îngroșat"
+
+#~ msgid "Bold Italic"
+#~ msgstr "Cursin Îngroșat"
+
+#~ msgid "Page %s"
+#~ msgstr "Pagina %s"
+
+#~ msgid "Follow us on "
+#~ msgstr "Urmărește-ne pe"
+
+#~ msgid "Sparkling Documentation"
+#~ msgstr "Documentație penrtu Sparkling"
+
+#~ msgid "<i class=\"fa fa-chevron-left\"></i> Older posts"
+#~ msgstr "<i class=\"fa fa-chevron-left\"></i> Articole mai vechi"
+
+#~ msgid "Newer posts <i class=\"fa fa-chevron-right\"></i>"
+#~ msgstr "Articole mai noi <i class=\"fa fa-chevron-right\"></i>"
+
+#~ msgid "Sparkling Categories"
+#~ msgstr "Categorii \"Sparkling\""
+
+#~ msgid "Sparkling Popular Posts Widget"
+#~ msgstr "Componentă Sparkling \"Cele Mai Citite Articole\""
+
+#~ msgid "Popular Posts"
+#~ msgstr "Cele Mai Citite Articole"
+
+#~ msgid "Sparkling Social Widget"
+#~ msgstr "Componentă Sparkling \"Socializare\""
+
+#~ msgid "One"
+#~ msgstr "Unu"
+
+#~ msgid "Two"
+#~ msgstr "Doi"
+
+#~ msgid "Three"
+#~ msgstr "Trei"
+
+#~ msgid "Four"
+#~ msgstr "Patru"
+
+#~ msgid "Five"
+#~ msgstr "Cinci"
+
+#~ msgid "French Toast"
+#~ msgstr "Pâine Prăjită"
+
+#~ msgid "Pancake"
+#~ msgstr "Clătită"
+
+#~ msgid "Omelette"
+#~ msgstr "Omletă"
+
+#~ msgid "Crepe"
+#~ msgstr "Clătite"
+
+#~ msgid "Waffle"
+#~ msgstr "Vafă"
+
+#~ msgid "Main"
+#~ msgstr "Principal"
+
+#~ msgid "Do You want to display image slider on the Home Page?"
+#~ msgstr "Vrei să afișezi pe Prima Pagină imagini dinamice?"
+
+#~ msgid "Check if you want to enable slider"
+#~ msgstr "Bifează dacă vrei conținut dinamic"
+
+#~ msgid "Slider Category"
+#~ msgstr "Categorie Conținut Dinamic"
+
+#~ msgid "Select a category for the featured post slider"
+#~ msgstr ""
+#~ "Alege o categorie pentru afișarea dinamică a articolelor recomandate"
+
+#~ msgid "Number of slide items"
+#~ msgstr "Număr element conținut dinamic"
+
+#~ msgid "Enter the number of slide items"
+#~ msgstr "Introdu numărul de elemente dinamice"
+
+#~ msgid "Choose between Left and Right sidebar options to be used as default"
+#~ msgstr "Alege bara din Stânga sau din Dreapta ca implicită"
+
+#~ msgid "Element color"
+#~ msgstr "Culoare element"
+
+#~ msgid "Element color on hover"
+#~ msgstr "Culoare element (mouse deasupra)"
+
+#~ msgid "Custom Favicon"
+#~ msgstr "Pictograma mea"
+
+#~ msgid ""
+#~ "Upload a 32px x 32px PNG/GIF image that will represent your websites "
+#~ "favicon"
+#~ msgstr ""
+#~ "Încarcă o imagine de 32x32 pixeli, format PNG/GIF care să reprezinte "
+#~ "pictograma site-ului"
+
+#~ msgid "Action Button"
+#~ msgstr "Acțiunea Mea"
+
+#~ msgid "Call For Action Text"
+#~ msgstr "Text \"Acțiunea mea\""
+
+#~ msgid "Enter the text for call for action section"
+#~ msgstr "Introdu textul pentru secțiunea \"Acțiunea mea\""
+
+#~ msgid "Call For Action Button Title"
+#~ msgstr "Titlu buton \"Acțiunea mea\""
+
+#~ msgid "Enter the title for Call For Action button"
+#~ msgstr "Scrie titlul butonului \"Acțiunea mea\""
+
+#~ msgid "CFA button link"
+#~ msgstr "AM - legătură buton"
+
+#~ msgid "Enter the link for Call For Action button"
+#~ msgstr "Introdu o legătură pentru butonul \"Acțiunea mea\""
+
+#~ msgid "Call For Action Text Color"
+#~ msgstr "Culoare text \"Acțiunea mea\""
+
+#~ msgid "Call For Action Background Color"
+#~ msgstr "Culoare fundal \"Acțiunea mea\""
+
+#~ msgid "Call For Action Button Border Color"
+#~ msgstr "Culoare margine \"Acțiunea mea\""
+
+#~ msgid "Call For Action Button Text Color"
+#~ msgstr "Culoare text buton \"Acțiunea mea\""
+
+#~ msgid "Typography"
+#~ msgstr "Scriere"
+
+#~ msgid "Main Body Text"
+#~ msgstr "Text conținut principal"
+
+#~ msgid "Used in P tags"
+#~ msgstr "Folosit in paragrafe P"
+
+#~ msgid "Heading Color"
+#~ msgstr "Culoare antet"
+
+#~ msgid "Color for all headings (h1-h6)"
+#~ msgstr "Culoare pentru cap paragraf (h1-h6)"
+
+#~ msgid "Link Color"
+#~ msgstr "Culoare legătură"
+
+#~ msgid "Link:hover Color"
+#~ msgstr "Culoare legătură (mouse deasupra)"
+
+#~ msgid "Header"
+#~ msgstr "Antet"
+
+#~ msgid "Top nav background color"
+#~ msgstr "Culoare meniu sus"
+
+#~ msgid "Top nav item color"
+#~ msgstr "Culoare element meniu sus"
+
+#~ msgid "Link color"
+#~ msgstr "Culoare legătură"
+
+#~ msgid "Top nav item hover color"
+#~ msgstr "Culoare element meniu sus"
+
+#~ msgid "Link:hover color"
+#~ msgstr "Culoare legătură (mouse deasupra)"
+
+#~ msgid "Top nav dropdown background color"
+#~ msgstr "Culoare fundal submeniu sus"
+
+#~ msgid "Background of dropdown item hover color"
+#~ msgstr "Culoare fundal element submeniu sus"
+
+#~ msgid "Top nav dropdown item color"
+#~ msgstr "Culoare element submeniu sus"
+
+#~ msgid "Dropdown item color"
+#~ msgstr "Culoare element submeniu"
+
+#~ msgid "Top nav dropdown item hover color"
+#~ msgstr "Culoare element submeniu sus (mouse deasupra)"
+
+#~ msgid "Dropdown item hover color"
+#~ msgstr "Culoare element submeniu (mouse deasupra) "
+
+#~ msgid "Top nav dropdown item background hover color"
+#~ msgstr "Culoare fundal element submeniu sus (mouse deasupra)"
+
+#~ msgid "Footer widget area background color"
+#~ msgstr "Culoare fundal zonă componente în subsol"
+
+#~ msgid "Footer background color"
+#~ msgstr "Culoare fundal subsol"
+
+#~ msgid "Footer text color"
+#~ msgstr "Culoare text în subsol"
+
+#~ msgid "Footer link color"
+#~ msgstr "Culoare \"legături\" în subsol"
+
+#~ msgid "Footer information"
+#~ msgstr "Informații subsol"
+
+#~ msgid "Copyright text in footer"
+#~ msgstr "Text \"drepturi de autor\" în subsol"
+
+#, fuzzy
+#~ msgid "Footer Social Icons"
+#~ msgstr "Culoare pictogramă rețea socializare (subsol)"
+
+#, fuzzy
+#~ msgid "Show/Hide social icons in footer"
+#~ msgstr "Culoare pictogramă rețea socializare (subsol)"
+
+#~ msgid "Social"
+#~ msgstr "Rețele Socializare"
+
+#~ msgid "Footer social icon color"
+#~ msgstr "Culoare pictogramă rețea socializare (subsol)"
+
+#~ msgid "Add full URL for your social network profiles"
+#~ msgstr "Adaugă Legătură completă către profilele tale pe rețelele sociale"
+
+#~ msgid "Facebook"
+#~ msgstr "Facebook"
+
+#~ msgid "Twitter"
+#~ msgstr "Twitter"
+
+#~ msgid "Google+"
+#~ msgstr "Google+"
+
+#~ msgid "Youtube"
+#~ msgstr "Youtube"
+
+#~ msgid "Vimeo"
+#~ msgstr "Vimeo"
+
+#~ msgid "LinkedIn"
+#~ msgstr "LinkedIn"
+
+#~ msgid "Pinterest"
+#~ msgstr "Pinterest"
+
+#~ msgid "RSS Feed"
+#~ msgstr "Flux RSS"
+
+#~ msgid "Tumblr"
+#~ msgstr "Tumblr"
+
+#~ msgid "Flickr"
+#~ msgstr "Flickr"
+
+#~ msgid "Instagram"
+#~ msgstr "Instagram"
+
+#~ msgid "Dribbble"
+#~ msgstr "Dribbble"
+
+#~ msgid "Skype"
+#~ msgstr "Skype"
+
+#~ msgid "Foursquare"
+#~ msgstr "Foursquare"
+
+#~ msgid "SoundCloud"
+#~ msgstr "SoundCloud"
+
+#~ msgid "Search..."
+#~ msgstr "Caută..."

@@ -1,0 +1,877 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: HashOne 1.0.0\n"
+"Report-Msgid-Bugs-To: http://hashthemes.com\n"
+"POT-Creation-Date: 2016-11-01 19:14+0000\n"
+"POT-Revision-Date: Tue Aug 09 2016 22:16:59 GMT+0545 (Nepal Standard Time)\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Hash Themes <hashthemes@gmail.com>\n"
+"Language-Team: English <hashthemes@gmail.com>\n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: 404.php:12
+msgid "404 Error"
+msgstr ""
+
+#: 404.php:19
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: archive.php:42 search.php:37
+msgid "Prev"
+msgstr ""
+
+#: archive.php:43 search.php:38
+msgid "Next"
+msgstr ""
+
+#: comments.php:26
+#, php-format
+msgctxt "comments title"
+msgid "One Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:36
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:37
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:57
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:68
+msgid "Name"
+msgstr ""
+
+#: comments.php:72 inc/customizer.php:2003
+msgid "Email"
+msgstr ""
+
+#: comments.php:76 inc/customizer.php:2021
+msgid "Website"
+msgstr ""
+
+#: comments.php:82
+msgid "Comment"
+msgstr ""
+
+#: footer.php:57
+#, php-format
+msgid "&copy; Copyright %d %s"
+msgstr ""
+
+#: footer.php:62
+msgid "WordPress Theme"
+msgstr ""
+
+#: footer.php:64
+#, php-format
+msgid "%1$s by %2$s"
+msgstr ""
+
+#: functions.php:27
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:76
+msgid "Right Sidebar"
+msgstr ""
+
+#: functions.php:78 functions.php:88
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+
+#: functions.php:86
+msgid "Left Sidebar"
+msgstr ""
+
+#: functions.php:96
+msgid "Contact Form"
+msgstr ""
+
+#: functions.php:98
+msgid "Add widgets here to appear in the Contact Section of the Home Page."
+msgstr ""
+
+#: functions.php:106
+msgid "About Us"
+msgstr ""
+
+#: functions.php:108
+msgid "Add widgets here to appear in the About Section of the Home Page."
+msgstr ""
+
+#: functions.php:116
+msgid "Footer One"
+msgstr ""
+
+#: functions.php:118 functions.php:128 functions.php:138 functions.php:148
+msgid "Add widgets here to appear in your Footer."
+msgstr ""
+
+#: functions.php:126
+msgid "Footer Two"
+msgstr ""
+
+#: functions.php:136
+msgid "Footer Three"
+msgstr ""
+
+#: functions.php:146
+msgid "Footer Four"
+msgstr ""
+
+#. Translators: If there are characters in your language that are not supported
+#. by Open Sans, translate this to 'off'. Do not translate into your own language.
+#: functions.php:174
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr ""
+
+#. Translators: If there are characters in your language that are not supported
+#. by Inconsolata, translate this to 'off'. Do not translate into your own language.
+#: functions.php:182
+msgctxt "Roboto Condensed font: on or off"
+msgid "on"
+msgstr ""
+
+#. Translators: To add an additional character subset specific to your language,
+#. translate this to 'greek', 'cyrillic', 'devanagari' or 'vietnamese'. Do not translate into your own language.
+#: functions.php:190
+msgctxt "Add new subset (greek, cyrillic, devanagari, vietnamese)"
+msgid "no-subset"
+msgstr ""
+
+#: search.php:12
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: inc/breadcrumb.php:13
+msgid "Home"
+msgstr ""
+
+#: inc/breadcrumb.php:15
+#, php-format
+msgid "Search Results for \"%s\" Query"
+msgstr ""
+
+#: inc/breadcrumb.php:17
+#, php-format
+msgid "Articles Posted by %s"
+msgstr ""
+
+#: inc/breadcrumb.php:18
+msgid "Error 404"
+msgstr ""
+
+#: inc/breadcrumb.php:19
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: inc/breadcrumb.php:20
+#, php-format
+msgid "Comment Page %s"
+msgstr ""
+
+#: inc/customizer.php:20
+msgid "-- Don't Replace --"
+msgstr ""
+
+#: inc/customizer.php:52
+msgid "Black"
+msgstr ""
+
+#: inc/customizer.php:53
+msgid "White"
+msgstr ""
+
+#: inc/customizer.php:60
+msgid "General Settings"
+msgstr ""
+
+#: inc/customizer.php:67
+msgid "Static Front Page"
+msgstr ""
+
+#: inc/customizer.php:69
+msgid "Your theme supports a static front page."
+msgstr ""
+
+#: inc/customizer.php:74
+msgid "Site Title & Tagline"
+msgstr ""
+
+#: inc/customizer.php:80
+msgid "Header Logo"
+msgstr ""
+
+#: inc/customizer.php:88
+msgid "Header Background"
+msgstr ""
+
+#: inc/customizer.php:110
+msgid "Header Background Color"
+msgstr ""
+
+#: inc/customizer.php:120 inc/customizer.php:138
+msgid "Page Header Banner"
+msgstr ""
+
+#: inc/customizer.php:141
+msgid "Recommended Image Size: 1800X400px"
+msgstr ""
+
+#: inc/customizer.php:148
+msgid "Background Image"
+msgstr ""
+
+#: inc/customizer.php:154
+msgid "Colors"
+msgstr ""
+
+#: inc/customizer.php:162
+msgid "Home Page Sections"
+msgstr ""
+
+#: inc/customizer.php:170
+msgid "Slider Section"
+msgstr ""
+
+#: inc/customizer.php:192
+msgid "Slider "
+msgstr ""
+
+#: inc/customizer.php:210 inc/customizer.php:304 inc/customizer.php:556
+#: inc/customizer.php:883 inc/customizer.php:1035
+msgid "Select a Page"
+msgstr ""
+
+#: inc/customizer.php:230
+msgid "Note:"
+msgstr ""
+
+#: inc/customizer.php:231
+msgid ""
+"The Page featured image works as a slider banner and the title & content "
+"work as a slider caption. <br/> Recommended Image Size: 1900X600"
+msgstr ""
+
+#: inc/customizer.php:241
+msgid "About Us Section"
+msgstr ""
+
+#: inc/customizer.php:262
+msgid "Disable About Section "
+msgstr ""
+
+#: inc/customizer.php:264 inc/customizer.php:453 inc/customizer.php:610
+#: inc/customizer.php:743 inc/customizer.php:936 inc/customizer.php:1158
+#: inc/customizer.php:1371 inc/customizer.php:1504 inc/customizer.php:1638
+#: inc/customizer.php:1793
+msgid "Yes"
+msgstr ""
+
+#: inc/customizer.php:265 inc/customizer.php:454 inc/customizer.php:611
+#: inc/customizer.php:744 inc/customizer.php:937 inc/customizer.php:1159
+#: inc/customizer.php:1372 inc/customizer.php:1505 inc/customizer.php:1639
+#: inc/customizer.php:1794
+msgid "No"
+msgstr ""
+
+#: inc/customizer.php:285
+msgid "About Us Page"
+msgstr ""
+
+#: inc/customizer.php:322
+msgid "Progress Bars"
+msgstr ""
+
+#: inc/customizer.php:342
+msgid "Replace Progress Bar by widget"
+msgstr ""
+
+#: inc/customizer.php:362
+msgid "Progress Bar "
+msgstr ""
+
+#: inc/customizer.php:370 templates/home-template.php:85
+msgid "Progress Bar Title"
+msgstr ""
+
+#: inc/customizer.php:388
+msgid "Check to Disable"
+msgstr ""
+
+#: inc/customizer.php:399 inc/customizer.php:494 inc/customizer.php:651
+#: inc/customizer.php:784 inc/customizer.php:977 inc/customizer.php:1199
+#: inc/customizer.php:1299 inc/customizer.php:1412 inc/customizer.php:1545
+#: inc/customizer.php:1679 inc/customizer.php:1834
+msgid "Title"
+msgstr ""
+
+#: inc/customizer.php:418
+msgid "Percentage"
+msgstr ""
+
+#: inc/customizer.php:430
+msgid "Featured Section"
+msgstr ""
+
+#: inc/customizer.php:451
+msgid "Disable Featured Section "
+msgstr ""
+
+#: inc/customizer.php:474
+msgid "Featured Title / SubTitle "
+msgstr ""
+
+#: inc/customizer.php:482 templates/home-template.php:113
+msgid "Our Features"
+msgstr ""
+
+#: inc/customizer.php:501 templates/home-template.php:114
+msgid "Check out cool featured of the theme"
+msgstr ""
+
+#: inc/customizer.php:513 inc/customizer.php:670 inc/customizer.php:803
+#: inc/customizer.php:996 inc/customizer.php:1218 inc/customizer.php:1431
+#: inc/customizer.php:1564 inc/customizer.php:1698 inc/customizer.php:1853
+msgid "Sub Title"
+msgstr ""
+
+#: inc/customizer.php:537
+msgid "Featured Page "
+msgstr ""
+
+#: inc/customizer.php:576 inc/customizer.php:903
+msgid "FontAwesome Icon"
+msgstr ""
+
+#: inc/customizer.php:587
+msgid "Portfolio Section"
+msgstr ""
+
+#: inc/customizer.php:608
+msgid "Disable Portfolio Section "
+msgstr ""
+
+#: inc/customizer.php:631
+msgid "Portfolio Title/SubTitle"
+msgstr ""
+
+#: inc/customizer.php:639 templates/home-template.php:166
+msgid "What we do it love"
+msgstr ""
+
+#: inc/customizer.php:658 templates/home-template.php:167
+msgid "Check our beautiful works we do"
+msgstr ""
+
+#: inc/customizer.php:689
+msgid "Portfolio Category"
+msgstr ""
+
+#: inc/customizer.php:720
+msgid "Service Section"
+msgstr ""
+
+#: inc/customizer.php:741
+msgid "Disable Service Section "
+msgstr ""
+
+#: inc/customizer.php:764
+msgid "Serivce Title / SubTitle"
+msgstr ""
+
+#: inc/customizer.php:772 templates/home-template.php:254
+msgid "Why Choose Us"
+msgstr ""
+
+#: inc/customizer.php:791 templates/home-template.php:255
+msgid "Let us do all things for you"
+msgstr ""
+
+#: inc/customizer.php:822
+msgid "Service Left Banner Image"
+msgstr ""
+
+#: inc/customizer.php:843
+msgid "Image Size: 770X650px"
+msgstr ""
+
+#: inc/customizer.php:864
+msgid "Service Page "
+msgstr ""
+
+#: inc/customizer.php:913
+msgid "Team Section"
+msgstr ""
+
+#: inc/customizer.php:934
+msgid "Disable Team Section "
+msgstr ""
+
+#: inc/customizer.php:957
+msgid "Team Title / SubTitle "
+msgstr ""
+
+#: inc/customizer.php:965 templates/home-template.php:312
+msgid "Meet Our Team"
+msgstr ""
+
+#: inc/customizer.php:984 templates/home-template.php:313
+msgid "Experts who works for us"
+msgstr ""
+
+#: inc/customizer.php:1016
+msgid "Team "
+msgstr ""
+
+#: inc/customizer.php:1042 templates/home-template.php:335
+msgid "CEO"
+msgstr ""
+
+#: inc/customizer.php:1053
+msgid "Team Member Designation"
+msgstr ""
+
+#: inc/customizer.php:1071
+msgid "Facebook Url"
+msgstr ""
+
+#: inc/customizer.php:1089
+msgid "Twitter Url"
+msgstr ""
+
+#: inc/customizer.php:1107
+msgid "Google Plus Url"
+msgstr ""
+
+#: inc/customizer.php:1125
+msgid "Linkedin Url"
+msgstr ""
+
+#: inc/customizer.php:1135
+msgid "Counter Section"
+msgstr ""
+
+#: inc/customizer.php:1156
+msgid "Disable Counter Section "
+msgstr ""
+
+#: inc/customizer.php:1179
+msgid "Counter Title / SubTitle"
+msgstr ""
+
+#: inc/customizer.php:1187 templates/home-template.php:409
+msgid "OUR FACTS"
+msgstr ""
+
+#: inc/customizer.php:1206 templates/home-template.php:410
+msgid "Some Numbers that Speaks"
+msgstr ""
+
+#: inc/customizer.php:1236
+msgid "Counter Section Background"
+msgstr ""
+
+#: inc/customizer.php:1257
+msgid "Image Size: 1800X400px"
+msgstr ""
+
+#: inc/customizer.php:1278
+msgid "Counter "
+msgstr ""
+
+#: inc/customizer.php:1286 templates/home-template.php:424
+msgid "Cups of Coffee"
+msgstr ""
+
+#: inc/customizer.php:1318
+msgid "Counter Value"
+msgstr ""
+
+#: inc/customizer.php:1338
+msgid "Counter Icon"
+msgstr ""
+
+#: inc/customizer.php:1348
+msgid "Clients Logo Section"
+msgstr ""
+
+#: inc/customizer.php:1369
+msgid "Disable Logo Section "
+msgstr ""
+
+#: inc/customizer.php:1392
+msgid "Client Logo Title / SubTitle "
+msgstr ""
+
+#: inc/customizer.php:1400 templates/home-template.php:457
+msgid "We are Associated with"
+msgstr ""
+
+#: inc/customizer.php:1419 templates/home-template.php:458
+msgid "Meet our Awesome Clients"
+msgstr ""
+
+#: inc/customizer.php:1451
+msgid "Upload Clients Logos "
+msgstr ""
+
+#: inc/customizer.php:1471
+msgid "Upload Clients Logos"
+msgstr ""
+
+#: inc/customizer.php:1481
+msgid "Testimonial Section"
+msgstr ""
+
+#: inc/customizer.php:1502
+msgid "Disable Testimonial Section "
+msgstr ""
+
+#: inc/customizer.php:1525
+msgid "Testimonial Title / SubTitle "
+msgstr ""
+
+#: inc/customizer.php:1533 templates/home-template.php:493
+msgid "Testimonials"
+msgstr ""
+
+#: inc/customizer.php:1552 templates/home-template.php:494
+msgid "What our client says"
+msgstr ""
+
+#: inc/customizer.php:1583
+msgid "Testimonial Pages"
+msgstr ""
+
+#: inc/customizer.php:1604
+msgid "Select the Pages"
+msgstr ""
+
+#: inc/customizer.php:1605
+msgid "Select Some Pages"
+msgstr ""
+
+#: inc/customizer.php:1615
+msgid "Blog Section"
+msgstr ""
+
+#: inc/customizer.php:1636
+msgid "Disable Blog Section "
+msgstr ""
+
+#: inc/customizer.php:1659
+msgid "Blog Title / SubTitle "
+msgstr ""
+
+#: inc/customizer.php:1667 templates/home-template.php:557
+msgid "Latest blogs"
+msgstr ""
+
+#: inc/customizer.php:1686 templates/home-template.php:558
+msgid "Check out the latest post from our blog"
+msgstr ""
+
+#: inc/customizer.php:1718
+msgid "Blog Count/Category"
+msgstr ""
+
+#: inc/customizer.php:1738
+msgid "Number of Posts to show"
+msgstr ""
+
+#: inc/customizer.php:1770
+msgid "Contact Section"
+msgstr ""
+
+#: inc/customizer.php:1791
+msgid "Disable Contact Section "
+msgstr ""
+
+#: inc/customizer.php:1814
+msgid "Contact Title / SubTitle "
+msgstr ""
+
+#: inc/customizer.php:1822 templates/home-template.php:628
+msgid "Contact Us"
+msgstr ""
+
+#: inc/customizer.php:1841 templates/home-template.php:629
+msgid "We would love to hear from you"
+msgstr ""
+
+#: inc/customizer.php:1871
+msgid "Contact Section Background"
+msgstr ""
+
+#: inc/customizer.php:1892
+msgid "Recommended Image Size: 1800X800px"
+msgstr ""
+
+#: inc/customizer.php:1911
+msgid "Contact Details"
+msgstr ""
+
+#: inc/customizer.php:1930
+msgid "Contact Form ShortCode"
+msgstr ""
+
+#: inc/customizer.php:1931
+msgid ""
+"Add shortcode for Contact form or go to to widget page to add your own "
+"widget."
+msgstr ""
+
+#: inc/customizer.php:1938 templates/home-template.php:657
+msgid "Contact us on the detail given below"
+msgstr ""
+
+#: inc/customizer.php:1949
+msgid "Contact Detail"
+msgstr ""
+
+#: inc/customizer.php:1956 templates/home-template.php:658
+msgid "Address: 2400 South Avenue"
+msgstr ""
+
+#: inc/customizer.php:1967
+msgid "Contact Address"
+msgstr ""
+
+#: inc/customizer.php:1974 templates/home-template.php:659
+msgid "Phone: +928 336 2000"
+msgstr ""
+
+#: inc/customizer.php:1985
+msgid "Phone"
+msgstr ""
+
+#: inc/customizer.php:1992 templates/home-template.php:660
+msgid "Email: support@hashthemes.com"
+msgstr ""
+
+#: inc/customizer.php:2010 templates/home-template.php:661
+msgid "Website: http://hashthemes.com"
+msgstr ""
+
+#: inc/customizer.php:2040
+msgid "Social Icons"
+msgstr ""
+
+#: inc/customizer.php:2060
+msgid "Facebook"
+msgstr ""
+
+#: inc/customizer.php:2079
+msgid "Twitter"
+msgstr ""
+
+#: inc/customizer.php:2098
+msgid "Google Plus"
+msgstr ""
+
+#: inc/customizer.php:2117
+msgid "Pinterest"
+msgstr ""
+
+#: inc/customizer.php:2136
+msgid "Youtube"
+msgstr ""
+
+#: inc/customizer.php:2155
+msgid "Linkedin"
+msgstr ""
+
+#: inc/customizer.php:2163 inc/customizer.php:2182
+msgid "Copyright Text"
+msgstr ""
+
+#: inc/customizer.php:2170
+msgid "copyright 2015 Hasthemes"
+msgstr ""
+
+#: inc/customizer.php:2190
+msgid "Important Links"
+msgstr ""
+
+#: inc/customizer.php:2208
+msgid "Live Demo"
+msgstr ""
+
+#: inc/customizer.php:2208
+msgid "Support Forum"
+msgstr ""
+
+#: inc/customizer.php:2208
+msgid "Like Us in Facebook"
+msgstr ""
+
+#: inc/customizer.php:2227
+#, php-format
+msgid "Please do rate our theme if you liked it %s"
+msgstr ""
+
+#: inc/customizer.php:2359
+msgid "Add/Edit Gallery"
+msgstr ""
+
+#: inc/customizer.php:2360
+msgid "Clear"
+msgstr ""
+
+#: inc/hashone-functions.php:89
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/hashone-functions.php:91 inc/template-tags.php:71
+#: template-parts/content-page.php:23
+msgid "Edit"
+msgstr ""
+
+#. translators: 1: comment date, 2: comment time
+#: inc/hashone-functions.php:103
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: inc/hashone-metabox.php:16
+msgid "Sidebar Layout"
+msgstr ""
+
+#: inc/template-tags.php:24
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#: inc/template-tags.php:32
+msgid "No <span>Comments</span>"
+msgstr ""
+
+#: inc/template-tags.php:34
+msgid " <span>Comments</span>"
+msgstr ""
+
+#: inc/template-tags.php:36
+msgid "1 <span>Comment</span>"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:53 inc/template-tags.php:59 inc/template-tags.php:83
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:55
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#: inc/template-tags.php:61
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: inc/template-tags.php:67
+msgid "Leave a comment"
+msgstr ""
+
+#: inc/template-tags.php:67
+msgid "1 Comment"
+msgstr ""
+
+#: inc/template-tags.php:67
+msgid "% Comments"
+msgstr ""
+
+#: template-parts/content-none.php:12
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:18
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:22
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:27
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:16 template-parts/content-single.php:16
+#: template-parts/content.php:48
+msgid "Pages:"
+msgstr ""
+
+#. translators: %s: Name of current post
+#: template-parts/content.php:41
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#. Name of the template
+msgid "Home Page"
+msgstr ""
+
+#. Name of the theme
+msgid "HashOne"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"HashOne - a powerful multipurpose WordPress Theme by HashThemes is packed "
+"with lots of features for creating a full packaged website that can be used "
+"by a business, restaurant, freelancers, photographers, bloggers, education "
+"firms, non-profit organization and creative agencies. The theme is fully "
+"responsive and mobile friendly and has lots of customization possibilities "
+"with various home page sections to showcase varieties of content. The theme "
+"can be used to set up a single page website with animated content that adds "
+"charm to the website with additional parallax effect. The theme is SEO "
+"friendly, Translation ready, Woo Commerce compatible and integrates "
+"seamlessly with almost all popular WordPress Plugins. For Demo http://demo."
+"hashthemes.com/hashone"
+msgstr ""
+
+#. URI of the theme
+msgid "https://hashthemes.com/wordpress-theme/hashone/"
+msgstr ""
+
+#. Author of the theme
+msgid "HashThemes"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://hashthemes.com"
+msgstr ""
