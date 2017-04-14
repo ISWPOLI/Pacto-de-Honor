@@ -36,6 +36,7 @@ navegacion.prototype = {
         game.load.spritesheet('nivel3', '../img/Componentes/navegacionMapa/nivel3.png', 192,71);
         game.load.spritesheet('nivel4', '../img/Componentes/navegacionMapa/nivel4.png', 192,71);
         game.load.spritesheet('nivel5', '../img/Componentes/navegacionMapa/nivel5.png', 192,71);
+        game.load.spritesheet('nivel6', '../img/Componentes/navegacionMapa/nivel6.png', 192,71);
         game.load.spritesheet('botonCreditos', '../img/Componentes/navegacionMapa/botonCreditos.png', 62, 62);
         game.load.spritesheet('botonAmigos', '../img/Componentes/navegacionMapa/botonAmigos.png', 62, 62);
         game.load.spritesheet('botonPerfil', '../img/Componentes/navegacionMapa/botonPerfil.png', 62, 62);
@@ -57,44 +58,91 @@ navegacion.prototype = {
         botonRanking = game.add.button(605, 5, 'botonRanking', null, 1, 1, 0, 2); //El estado de Rankings aun no esta creado
         game.add.text(160, 20, "999999", {font: "16px Roboto", fill: "#ffffff"}); //Label monedas
      
-        btMundo = game.add.button (80, 60, 'pause13', this.onMundo1, 0, 0, 0, 1);
-        btMundo.scale.setTo(0.5, 0.5);
-        btMundo.input.useHandCursor = true;
-
-        btMundo2 = game.add.button (90, 500, 'pause13',this.onMundo2, 0, 0, 0, 1);
-        btMundo2.scale.setTo(0.5, 0.5);
-        btMundo.input.useHandCursor = true;
+       
+    btMundo = game.add.button (80, 60, 'pause13', this.onMundo1, 0, 0, 0, 1);
+    btMundo.scale.setTo(0.5, 0.5);
+    btMundo.input.useHandCursor = true;
+    var text = game.add.text(13,1, "1", 
+    	{ font: "40px Arial", fill: "#ff0044"});
+    btMundo.addChild(text);
     
-        btMundo3 = game.add.button (250, 450, 'pause13', this.onMundo3, 0, 0, 0, 1);
-        btMundo3.scale.setTo(0.5, 0.5);
 
-        btMundo4 = game.add.button (280, 220, 'pause13', this.onMundo4, 0, 0, 0, 1);
-        btMundo4.scale.setTo(0.5, 0.5);
-
-        btMundo5 = game.add.button (330, 80, 'pause13', this.onMundo5, 0, 0, 0, 1);
-        btMundo5.scale.setTo(0.5, 0.5);
-
-        btMundo6 = game.add.button (430, 500, 'pause13', this.onMundo6, 0, 0, 0, 1);
-        btMundo6.scale.setTo(0.5, 0.5);
-
-        btMundo7 = game.add.button (520, 220, 'pause13',this.onMundo7, 0, 0, 0, 1);
-        btMundo7.scale.setTo(0.5, 0.5);
+     btMundo2 = game.add.button (90, 500, 'pause13',this.onMundo2, 0, 0, 0, 1);
+    btMundo2.scale.setTo(0.5, 0.5);
+     btMundo.input.useHandCursor = true;
+      var text2 = game.add.text(13,1, "2", 
+    	{ font: "40px Arial", fill: "#ff0044"});
+    btMundo2.addChild(text2);
     
-        btMundo8 = game.add.button (580, 200, 'pause13', this.onMundo8, 0, 0, 0, 1);
-        btMundo8.scale.setTo(0.5, 0.5);
+    
+    btMundo3 = game.add.button (250, 450, 'pause13', this.onMundo3, 0, 0, 0, 1);
+    btMundo3.scale.setTo(0.5, 0.5);
+     var text3 = game.add.text(13,1, "3", 
+    	{ font: "40px Arial", fill: "#ff0044"});
+    btMundo3.addChild(text3);
+    
 
-        btMundo9 = game.add.button (550, 80, 'pause13', this.onMundo9, 0, 0, 0, 1);
-        btMundo9.scale.setTo(0.5, 0.5);
+    btMundo4 = game.add.button (280, 220, 'pause13', this.onMundo4, 0, 0, 0, 1);
+    btMundo4.scale.setTo(0.5, 0.5);
+ var text4 = game.add.text(13,1, "4", 
+    	{ font: "40px Arial", fill: "#ff0044"});
+    btMundo4.addChild(text4);
+    
+
+    btMundo5 = game.add.button (330, 80, 'pause13', this.onMundo5, 0, 0, 0, 1);
+    btMundo5.scale.setTo(0.5, 0.5);
+     var text5 = game.add.text(13,1, "5", 
+    	{ font: "40px Arial", fill: "#ff0044"});
+    btMundo5.addChild(text5);
+    
+
+    btMundo6 = game.add.button (430, 500, 'pause13', this.onMundo6, 0, 0, 0, 1);
+    btMundo6.scale.setTo(0.5, 0.5);
+     var text6 = game.add.text(13,1, "6", 
+    	{ font: "40px Arial", fill: "#ff0044"});
+    btMundo6.addChild(text6);
+    
+
+    btMundo7 = game.add.button (520, 220, 'pause13',this.onMundo7, 0, 0, 0, 1);
+    btMundo7.scale.setTo(0.5, 0.5);
+     var text7 = game.add.text(15,1, "7", 
+    	{ font: "40px Arial", fill: "#ff0044"});
+    btMundo7.addChild(text7);
+    
+    
+    btMundo8 = game.add.button (580, 200, 'pause13', this.onMundo8, 0, 0, 0, 1);
+    btMundo8.scale.setTo(0.5, 0.5);
+     var text8 = game.add.text(13,1, "8", 
+    	{ font: "40px Arial", fill: "#ff0044"});
+    btMundo8.addChild(text8);
+    
+
+    btMundo9 = game.add.button (550, 80, 'pause13', this.onMundo9, 0, 0, 0, 1);
+    btMundo9.scale.setTo(0.5, 0.5);
+    var text9 = game.add.text(13,1, "9", 
+    	{ font: "40px Arial", fill: "#ff0044"});
+    btMundo9.addChild(text9);
+    
+    btMundo10 = game.add.button (680, 140, 'pause13', this.onMundo10, 0, 0, 0, 1);
+    btMundo10.scale.setTo(0.5, 0.5);
+     var text10 = game.add.text(6,3, "10", 
+    	{ font: "35px Arial", fill: "#ff0044"});
+    btMundo10.addChild(text10);
+    
    
-        btMundo10 = game.add.button (680, 140, 'pause13', this.onMundo10, 0, 0, 0, 1);
-        btMundo10.scale.setTo(0.5, 0.5);
-   
-        btMundo11 = game.add.button (700, 240, 'pause13', this.onMundo11, 0, 0, 0, 1);
-        btMundo11.scale.setTo(0.5, 0.5);
-   
-        btMundo12 = game.add.button (750, 480, 'pause14',this.onMundo12, 0, 0, 0, 1);
-        btMundo12.scale.setTo(0.5, 0.5);    
-   
+    btMundo11 = game.add.button (700, 240, 'pause13', this.onMundo11, 0, 0, 0, 1);
+    btMundo11.scale.setTo(0.5, 0.5);
+    var text11 = game.add.text(9,3, "11", 
+    	{ font: "35px Arial", fill: "#ff0044"});
+    btMundo11.addChild(text11);
+    
+
+    btMundo12 = game.add.button (750, 480, 'pause14',this.onMundo12, 0, 0, 0, 1);
+    btMundo12.scale.setTo(0.5, 0.5);
+
+     var text12 = game.add.text(5,1, "12", 
+    	{ font: "35px Arial", fill: "#FFFF00"});
+    btMundo12.addChild(text12);
 
     },
     
@@ -475,6 +523,16 @@ var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En
     nivelButton4.input.useHandCursor = true;
 
  popup6.addChild(nivelButton4);
+
+    popup6.scale.set(0.8);
+
+    var nivelButton5 = game.add.button (180, 150, 'nivel6', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 6 nivel 5
+
+    nivelButton5.inputEnabled = true;
+    nivelButton5.input.priorityID = 1;
+    nivelButton5.input.useHandCursor = true;
+
+ popup6.addChild(nivelButton5);
 
     popup6.scale.set(0.8);
 
