@@ -8,59 +8,55 @@ var y = 200; // villano
 var danoH=[6,2]; //daño del heroe
 var danoV=[6,10,15]; //daño del villano
 
+//arreglo para saber que accion esta ejecutando el Heroe
+//[Defensa,ataqueNormal,ataquePersonalidad]
+var movH=[false,false,false];
+
 //arreglo para saber que accion esta ejecutando el villano
-//[ataqueNomal,ataquePersonalidad,ataquePlagio,Defensa]
+//[Defensa,ataqueNomal,ataquePersonalidad,ataquePlagio]
 var movV=[false,false,false,false];
 
-//arreglo para saber que accion esta ejecutando el Heroe
-//[ataqueNomal,ataquePersonalidad,ataquePlagio,Defensa]
-var movH=[false,false,false,false];
 var ataquePlagio;
 var ataquePersonalidadV;
-var ataquePersonalidadB;
 var idPJ="idPUno";
 var idPC="idPUno";
+//es  200 es temporal y varia dependiendo de la pantalla 
+var costoAtaqueJ=personajesBuenos[idPJ].energia*200;
+
 var primer = {
-
 	preload : function() {		
-
 		funcionesBatalla.cargar(idPJ,idPC);
 	},
-
-	create : function() {
+	create : function() {	
+		
 		
 		game.physics.startSystem(Phaser.Physics.ARCADE);
 		var fondogame = game.add.sprite(0, 0, 'fondo');
+
+		ataqueJ=game.add.group();
+		
 
 		personajeComputadora = game.add.sprite(650, 450, 'personajeComputadora');
 		personajeComputadora.anchor.setTo(0.5);
 		personajeJugador = game.add.sprite(150, 450, 'personajeJugador');
 		personajeJugador.anchor.setTo(0.5);
-
-		
 		funcionesBatalla.iniciarSprite(personajeJugador);
 		funcionesBatalla.iniciarSprite(personajeComputadora);
-	
 		cursores = game.input.keyboard.createCursorKeys();
 		esp = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
-
 		game.add.text(145,20,personajesBuenos[idPJ].nombre,{fill:'white'});
 		game.add.text(460,20,personajesMalos[idPC].nombre,{fill:'white'});
 
 		var avatarPersonajeComputadora = game.add.sprite(665, 30, 'avatarPersonajeComputadora');
 		avatarPersonajeComputadora.scale.setTo(0.6);
-
 		var avatarPersonajeJugador = game.add.sprite(10, 30, 'avatarPersonajeJugador');
 		avatarPersonajeJugador.scale.setTo(0.6);
-
 		var pausa = game.add.button(365, 20, 'pausa', this.pausar,this);
 		pausa.inputEnabled=true;
-        
 		//funcion para pausar
 		pausa.events.onInputUp.add(function () {
 			funcionesBatalla.pausar()
         });
-        
 		game.input.onDown.add(unpause, self);
 		//funcion para reaunudar
         function unpause(event){
@@ -88,9 +84,6 @@ var primer = {
 		energiaBlancaComputadora = new Phaser.Rectangle(460, 79, 200, 20);
 		energiaNegroComputadora = new Phaser.Rectangle(459, 78, 200, 22);
 		energiaVerdeComputadora = new Phaser.Rectangle(460, 79, 200, 20);
-		//var animacion = game.add.tween(personajeComputadora).to({
-		//	x : 400
-		//}, 1000, Phaser.Easing.Linear.None, true, 0, 70, true);
 	},	
 	render : function() {
 		game.debug.geom(vidaNegroJugador, '#000', false);
@@ -112,19 +105,19 @@ var primer = {
 	},
 	//se crea esta funcion para disminuir la barra de energia
 	
-	activarEspecial: function(){
-		ataquePlagio = game.add.sprite(0,personajeJugador.body.y-200, 'ataquePlagio');
+	activarPlagio: function(){
+			ataquePlagio = game.add.sprite(0,personajeJugador.body.y-200, 'ataquePlagio');
  			game.physics.arcade.enable(ataquePlagio);
 			ataquePlagio.collideWorldBounds = true; 
         	ataquePlagio.animations.add('especiall', [1, 2, 3, 4, 5, 6, 7, 8], 15, false,true);
         	ataquePlagio.animations.play('especiall');
         	ataquePlagio.destroy();
 	},
- 	
-    
 	update : function() {
-		funcionesBatalla.movimientoJugador();
-
+		funcionesBatalla.cargarEnergia(energiaVerdeJugador);
+		funcionesBatalla.cargarEnergia(energiaVerdeComputadora);
+		funcionesBatalla.movimientoJugador(energiaVerdeJugador);
+		console.log(movH[0]);
 		 if(vidaRojoComputadora.width>100){
 		 	if(personajeComputadora.position.x-(personajeJugador.x+200)>60){
  	 		personajeComputadora.body.x -= 3;	
@@ -132,7 +125,7 @@ var primer = {
  	 		}else{
  	 		 	personajeComputadora.animations.play('punos');
  				personajeComputadora.body.x-=2;
- 				movV[0]=true
+ 				movV[1]=true
  	 		}
  		}else{
  			if(personajeComputadora.position.x<200){
@@ -149,7 +142,7 @@ var primer = {
         		}else{
         			personajeComputadora.animations.play('punos');
  					personajeComputadora.body.x-=2;
- 					movV[0]=true
+ 					movV[1]=true
  				}        		
  	 		} 			
  	 	}
@@ -162,7 +155,8 @@ var primer = {
 			text.setText('time: ' + ti);
 		} 
 		game.physics.arcade.overlap(personajeJugador,ataquePlagio,this.colision);
+
         game.physics.arcade.collide(personajeJugador, personajeComputadora, funcionesBatalla.colision, null, this);
-        game.physics.arcade.collide(personajeJugador, personajeComputadora);
+       
 	}	
 }

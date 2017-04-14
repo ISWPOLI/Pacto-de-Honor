@@ -1,3 +1,6 @@
+/*Este archivo se crea para declarar los personajes como se va a hecer en la base de datos
+*Con esto nos aseguramos que vaya a funcionar cuando de consuman los servicios 
+*/
 var personajesBuenos={
 	"idPUno":{"nombre":"Andres Gallo","rutaSprite":"../img/sprites/personajesBuenos/gallo.png",
 			  "rutaAvatar":"../img/componentes/batalla/caragallo.png",
