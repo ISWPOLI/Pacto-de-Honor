@@ -1,6 +1,9 @@
 package rest;
 
 import entitities.Ciudad;
+import entitities.Pais;
+import entitities.RolUsuario;
+import entitities.Usuario;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.List;
@@ -11,34 +14,36 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 
 /**
- * Servicio REST para la entidad Ciudad
+ * Servicio REST para la entidad Usuario
  * @author jrubiaob
  */
+
 @Stateless
-@Path("ciudad")
-public class CiudadFacadeREST extends AbstractFacade<Ciudad> {
+@Path("entitities.usuario")
+public class UsuarioFacadeREST extends AbstractFacade<Usuario> {
     @PersistenceContext(unitName = "PolifightPU")
     private EntityManager em;
 
-    public CiudadFacadeREST() {
-        super(Ciudad.class);
+    public UsuarioFacadeREST() {
+        super(Usuario.class);
     }
-    
+
     /**
-     * Crea un dato Ciudad
-     * Se prueba con el TestCase "Crear" del proyecto Ciudad-soapui-project
-     * @param entity Entidad Ciudad
+     * Crea un dato Usuario
+     * Se prueba con el TestCase "Crear" del proyecto Usuario-soapui-project
+     * @param entity Entidad Usuario
      * @return JSON con la respuesta satisfactorio o insatisfactorio
      */
     @POST
     @Path("create")
     @Consumes({"application/json"})
     @Produces({"application/json"})
-    public String crearImagen(Ciudad entity) {
+    public String crearUsuario(Usuario entity) {
         String resultado;
         try{
             em.persist(entity);   
@@ -53,24 +58,24 @@ public class CiudadFacadeREST extends AbstractFacade<Ciudad> {
 
     /**
      * Edita un campo de acuerdo al id enviado
-     * Se prueba con el TestCase "Editar" del proyecto Ciudad-soapui-project
-     * @param entity Entidad Ciudad
+     * Se prueba con el TestCase "Editar" del proyecto Usuario-soapui-project
+     * @param entity Entidad Usuario
      * @return JSON con la respuesta satisfactorio o insatisfactorio
      */
     @POST
     @Path("edit")
     @Consumes({"application/json"})
     @Produces({"application/json"})
-    public String editarImagen(Ciudad entity){
+    public String editarUsuario(Usuario entity){
         try{
-            if(entity.getIdCiudad()!= 0 && entity.getIdCiudad()!= null){
-                Ciudad ciudad = super.find(entity.getIdCiudad());
-                if(ciudad == null){
-                   return "{'response':'KO','cause':'City not found'}";
+            if(entity.getIdUsuario() != 0){
+                Usuario usuario = super.find(entity.getIdCiudad());
+                if(usuario == null){
+                   return "{'response':'KO','cause':'User not found'}";
                 }else{
-                    if(entity.getNombreCiudad()!= null)  ciudad.setNombreCiudad(entity.getNombreCiudad());
+                    if(entity.getNombreUsuario()!= null)  usuario.setNombreUsuario(entity.getNombreUsuario());
                     
-                    em.merge(ciudad);
+                    em.merge(usuario);
 
                     return "{'response':'OK'}";
                 }
@@ -87,31 +92,36 @@ public class CiudadFacadeREST extends AbstractFacade<Ciudad> {
     
     /**
      * Busca un dato de acuerdo al id enviado
-     * Se prueba con el TestCase "Buscar" del proyecto Ciudad-soapui-project
-     * @param id de la ciudad a buscar
-     * @return String con la entity Ciudad
+     * Se prueba con el TestCase "Buscar" del proyecto Usuario-soapui-project
+     * @param id del Usuario a buscar
+     * @return String con la entity Usuario
      */
    @GET
     @Path("find")
     @Produces({"application/json"})
     public String find(@QueryParam("id") Integer id) {
-        Ciudad ciudad = em.find(Ciudad.class, id);
-        if(ciudad == null){
-            return "{'response':'KO','cause':'City not found'}";
+        Usuario usuario = em.find(Usuario.class, id);       
+        if(usuario == null){
+            return "{'response':'KO','cause':'User not found'}";
         }else{
-            return "{'idCiudad':'"+ciudad.getIdCiudad()+"', 'nombreCiudad':'"+ciudad.getNombreCiudad()+"'}";
+            RolUsuario rol = em.find(RolUsuario.class, usuario.getIdRolUsuario());
+            Pais pais = em.find(Pais.class, usuario.getIdPais());
+            Ciudad ciudad = em.find(Ciudad.class, usuario.getIdCiudad());
+            return "{'idUsuario':'"+usuario.getIdUsuario()+"', 'nombrePais':'"+pais.getNombrePais()+"', 'nombreCiudad':'"+ciudad.getNombreCiudad()+"',"
+                    + "'rolUsuario':'"+rol.getTipoUsuario()+"', 'apellido':'"+usuario.getApellidoUsuario()+"', 'email':'"+usuario.getEmailUsuario()+"',"
+                    + " 'fechaRegistro':'"+usuario.getFechaRegistro()+"'}";
         }        
     }
 
     /**
      * Al consumir, arroja un json con todos los datos de la tabla
-     * Se prueba con el TestCase "Ciudad" del proyecto Ciudad-soapui-project
-     * @return List de todas las Ciudades
+     * Se prueba con el TestCase "Usuario" del proyecto Usuario-soapui-project
+     * @return List de todos los Usuarios
      */
     @GET
     @Override
     @Produces({"application/json"})
-    public List<Ciudad> findAll() {
+    public List<Usuario> findAll() {
         return super.findAll();
     }
 
@@ -123,21 +133,15 @@ public class CiudadFacadeREST extends AbstractFacade<Ciudad> {
      * @return List con las ciudades
      */
     @GET
-    @Path("findRange")
-    @Produces({"application/json"})
-    public List<Ciudad> findRange(@QueryParam("from") Integer from, @QueryParam("to") Integer to) {
-        //if(from < super.count() && (to < from && to <= super.count())){
-            return super.findRange(new int[]{from, to});        
+    @Path("{from}/{to}")
+    @Produces({"application/xml", "application/json"})
+    public List<Usuario> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
+        return super.findRange(new int[]{from, to});
     }
-    
-    /**
-     * Retorna el número de datos contenido en la tabla
-     * Se prueba con el TestCase "NoDatos" del proyecto Ciudad-soapui-project
-     * @return String con el número de datos
-     */
+
     @GET
     @Path("count")
-    @Produces({"application/json"})
+    @Produces("text/plain")
     public String countREST() {
         return String.valueOf(super.count());
     }

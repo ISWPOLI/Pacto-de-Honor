@@ -32,7 +32,10 @@ public class ApplicationConfig extends Application {
         resources.add(rest.CategoriaFacadeREST.class);
         resources.add(rest.CiudadFacadeREST.class);
         resources.add(rest.ImagenFacadeREST.class);
+        resources.add(rest.PaisFacadeREST.class);
         resources.add(rest.PersonajeFacadeREST.class);
+        resources.add(rest.RolUsuarioFacadeREST.class);
+        resources.add(rest.UsuarioFacadeREST.class);
     }
     
 }
