@@ -122,7 +122,7 @@ var primer = {
 		funcionesBatalla.movimientoJugador(energiaVerdeJugador);
 		
 		funcionesBatalla.guiaComputadora(movimientoComputadora);
-		if(!secuencia){
+		if(!secuencia)
 			funcionesBatalla.llamarSecuencia(indice);	
 		counter++;
 		ti = parseInt(counter / 60);
@@ -136,6 +136,6 @@ var primer = {
 		game.physics.arcade.overlap(personajeJugador,ataquePersonalidadC.bullets,funcionesBatalla.impactoAtaqueComputadora,false,this);
 		game.physics.arcade.overlap(personajeComputadora,ataquePersonalidadJ,funcionesBatalla.impactoAtaqueJugador,false,this);
         game.physics.arcade.collide(personajeJugador, personajeComputadora, funcionesBatalla.colision, null, this);
-       
-	}	
+       }
+		
 }
