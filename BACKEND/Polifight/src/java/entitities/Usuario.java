@@ -2,7 +2,6 @@
 package entitities;
 
 import java.io.Serializable;
-import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,8 +13,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -83,8 +80,7 @@ public class Usuario implements Serializable {
     private String contrasenaUsuario;
     
     @Column(name = "fecha_registro")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date fechaRegistro;
+    private String fechaRegistro;
     
 
     public Usuario() {
@@ -123,11 +119,11 @@ public class Usuario implements Serializable {
         this.contrasenaUsuario = contrasenaUsuario;
     }
 
-    public Date getFechaRegistro() {
+    public String getFechaRegistro() {
         return fechaRegistro;
     }
 
-    public void setFechaRegistro(Date fechaRegistro) {
+    public void setFechaRegistro(String fechaRegistro) {
         this.fechaRegistro = fechaRegistro;
     }
 
