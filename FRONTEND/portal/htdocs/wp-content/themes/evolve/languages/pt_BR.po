@@ -1,0 +1,3811 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: evolve\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-04-14 14:12+0100\n"
+"PO-Revision-Date: 2016-06-18 13:14+0530\n"
+"Last-Translator: Mauricio Richieri <adm@hivet.com.br>\n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;__:1;"
+"_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;_x:1,2c;"
+"_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;esc_attr__:1;"
+"esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;esc_html_x:1,2c;"
+"comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Poedit-Basepath: .\n"
+"X-Loco-Target-Locale: pt_BR\n"
+"X-Poedit-SearchPath-0: D:/xampp/htdocs/wordpress/wp-content/themes/evolve\n"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:247
+msgid "Check the box to show the facebook sharing icon in blog posts."
+msgstr ""
+"Marque a caixa para mostrar o ícone de compartilhamento facebook nas postagens do "
+"blog."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:253
+msgid "Check the box to show the twitter sharing icon in blog posts."
+msgstr ""
+"Marque a caixa para mostrar o ícone de compartilhamento twitter nas postagens do "
+"blog."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:258
+msgid "Reddit"
+msgstr "Reddit"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:259
+msgid "Check the box to show the reddit sharing icon in blog posts."
+msgstr ""
+"Marque a caixa para mostrar o ícone de compartilhamento Reddit nas postagens do "
+"blog."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:265
+msgid "Check the box to show the linkedin sharing icon in blog posts."
+msgstr ""
+"Marque a caixa para mostrar o ícone de compartilhamento linkedin nas postagens do "
+"blog."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:271
+msgid "Check the box to show the g+ sharing icon in blog posts."
+msgstr ""
+"Marque a caixa para mostrar o ícone de compartilhamento g+ nas postagens do blog."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:277
+msgid "Check the box to show the tumblr sharing icon in blog posts."
+msgstr ""
+"Marque a caixa para mostrar o ícone de compartilhamento tumblr nas postagens do "
+"blog."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:283
+msgid "Check the box to show the pinterest sharing icon in blog posts."
+msgstr ""
+"Marque a caixa para mostrar o ícone de compartilhamento pinterest nas postagens do "
+"blog."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:289
+msgid "Check the box to show the email sharing icon in blog posts."
+msgstr ""
+"Marque a caixa para mostrar o ícone de compartilhamento e-mail nas postagens do "
+"blog."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:304
+msgid "Enable Subscribe/Social links in header"
+msgstr "Habilitar Assinar/Links sociais em cabeçalho"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:305
+msgid "Check this box if you want to display Subscribe/Social links in header"
+msgstr "Marque esta caixa se você deseja exibir Assinar/Links sociais no cabeçalho"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:310
+msgid "Subscribe/Social icons color"
+msgstr "Cor do Icone Assinar/ Social"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:311
+msgid "Choose the color scheme of subscribe/social icons"
+msgstr "Escolha a cor do esquema para icones Assinar/Social"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:317
+msgid "Subscribe/Social icons size"
+msgstr "Tamanho do icone Assinar/social"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:318
+msgid "Choose the size of subscribe/social icons"
+msgstr "Escolha o tamanho dos icones Assinar/social"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:323
+msgid "Normal &nbsp;&nbsp;&nbsp;(default)"
+msgstr "Normal &nbsp;&nbsp;&nbsp;(padrão)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:324
+msgid "Small"
+msgstr "Pequeno"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:325
+msgid "Large"
+msgstr "Grande"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:326
+msgid "X-Large"
+msgstr "Extra Grande"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:331
+msgid "Enable RSS Feed"
+msgstr "Habilitar Feed Rss"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:332
+msgid "Check this box to enable RSS Feed"
+msgstr "Marque esta caixa para habilitar Feed RSS"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:338
+msgid ""
+"Insert custom RSS Feed URL, e.g. <strong>http://feeds.feedburner.com/Example</"
+"strong>"
+msgstr ""
+"Inserir URL personalizada de Feed RSS, ex. <strong>http://feeds.feedburner.com/"
+"Example</strong>"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:347
+msgid ""
+"Insert custom newsletter URL, e.g. <strong>http://feedburner.google.com/fb/a/"
+"mailverify?uri=Example&amp;loc=en_US</strong>"
+msgstr ""
+"Inserir URl personalizada newsletter, ex. <strong>http://feedburner.google.com/fb/a/"
+"mailverify?uri=Example&amp;loc=en_US</strong>"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:355
+msgid "Insert your Facebook URL"
+msgstr "Insira sua URL do Facebook"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:363
+msgid "Insert your Twitter URL"
+msgstr "Insira sua URL do Twitter"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:372
+msgid "Insert your Instagram URL"
+msgstr "Insira sua URL do Instagram"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:380
+msgid "Insert your Skype ID"
+msgstr "Insira sua ID do Skype"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:388
+msgid "Insert your YouTube URL"
+msgstr "Insira sua URL do Youtube"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:396
+msgid "Insert your Flickr URL"
+msgstr "Insira sua URL do Flickr"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:404
+msgid "Insert your LinkedIn profile URL"
+msgstr "Insira sua URL de perfil  do Linkedin"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:412
+msgid "Insert your Google Plus profile URL"
+msgstr "Insira sua URL de perfil do Google Plus"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:420
+msgid "Insert your Pinterest profile URL"
+msgstr "Insira sua URL de perfil do Pinterest"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:428
+msgid "Insert your Tumblr profile URL"
+msgstr "Insira sua URL de perfil do Tumblr"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:443
+msgid "Custom logo"
+msgstr "Logo Personalizado"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:444
+msgid "Upload a logo for your theme, or specify an image URL directly."
+msgstr "Upload um logo para o seu tema, ou especifique uma URL de imagem diretamente."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:449
+msgid "Logo position"
+msgstr "Posição do Logo"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:450
+msgid "Choose the position of your custom logo"
+msgstr "Escolha a posição para o seu logo personalizado"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:455
+msgid "Left &nbsp;&nbsp;&nbsp;(default)"
+msgstr "Esquerda &nbsp;&nbsp;&nbsp;(padrão)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:456
+msgid "Center"
+msgstr "Centro"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:457
+msgid "Right"
+msgstr "Direita"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:461
+msgid "Disable Blog Title"
+msgstr "Desabilitar Título do Blog"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:462
+msgid "Check this box if you don't want to display title of your blog"
+msgstr "Marque esta opção se você não quer exibir um título em seu blog"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:467
+msgid "Blog Tagline position"
+msgstr "Posição da Tagline do Blog"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:468
+msgid "Choose the position of blog tagline"
+msgstr "Escolha a posição da Tagline do blog"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:473
+msgid "Next to blog title &nbsp;&nbsp;&nbsp;(default)"
+msgstr "Próximo ao título do Blog &nbsp;&nbsp;&nbsp;(padrão)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:474
+msgid "Above blog title"
+msgstr "Acima do título do Blog"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:475
+msgid "Under blog title"
+msgstr "Abaixo do Título do Blog"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:479
+msgid "Disable main menu"
+msgstr "Desabilitar menu principal"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:480
+msgid "Check this box if you don't want to display main menu"
+msgstr "Marque esta opção se você não quer exibir o menu principal"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:485
+msgid "Disable main menu Hover Effect"
+msgstr "Desabilitar efeito Hover do menu principal"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:486
+msgid "Check this box if you don't want to display main menu hover effect"
+msgstr "Marque esta opção se você não quer exibir o efeito de Hover no Menu principal"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:493
+msgid "Enable sticky header"
+msgstr "Habilitar encolhimento do cabeçalho (sticky header)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:494
+msgid "Check this box if you want to display sticky header"
+msgstr "Marque esta opção se você quer exibir um cabeçalho encolhido"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:499
+msgid "Enable searchbox in main menu"
+msgstr "Habilitar uma caixa de busca no menu principal"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:500
+msgid "Check this box if you want to display searchbox in main menu"
+msgstr "Marque esta opção se você quer exibir uma caixa de busca no menu principal"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:505
+msgid "Number of widget cols in header"
+msgstr "Numero de colunas de widgets no cabeçalho"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:506
+msgid "Select how many header widget areas you want to display."
+msgstr "Selecione quantas áreas de widgets no cabeçalho você gostaria de exibir."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:519
+msgid "Header widgets placement"
+msgstr "Colocação de widgets no cabeçalho"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:520
+msgid "Choose where to display header widgets"
+msgstr "Escolha onde exibir os widgets de cabeçalho"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:525
+msgid "Home page &nbsp;&nbsp;&nbsp;(default)"
+msgstr "Home Page &nbsp;&nbsp;&nbsp;(padrão)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:526
+msgid "Single Post"
+msgstr "Post Único"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:529
+msgid "Select Per Post/Page"
+msgstr "Selecionar por Paginas/Post"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:542
+msgid "Number of widget cols in footer"
+msgstr "Numero de Colunas de widgets no rodapé"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:543
+msgid "Select how many footer widget areas you want to display."
+msgstr "Selecione quantas áreas de widgets de rodapé você quer exibir."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:555
+msgid "Custom footer"
+msgstr "Rodapé personalizado"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:556
+msgid ""
+"Available <strong>HTML</strong> tags and attributes:<br /><br /> <code> &lt;b&gt; "
+"&lt;i&gt; &lt;a href=\"\" title=\"\"&gt; &lt;blockquote&gt; &lt;del datetime="
+"\"\"&gt; <br /> &lt;ins datetime=\"\"&gt; &lt;img src=\"\" alt=\"\" /&gt; &lt;"
+"ul&gt; &lt;ol&gt; &lt;li&gt; <br /> &lt;code&gt; &lt;em&gt; &lt;strong&gt; &lt;"
+"div&gt; &lt;span&gt; &lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;h4&gt; &lt;h5&gt; &lt;"
+"h6&gt; <br /> &lt;table&gt; &lt;tbody&gt; &lt;tr&gt; &lt;td&gt; &lt;br /&gt; &lt;"
+"hr /&gt;</code>"
+msgstr ""
+"Disponível <strong>HTML</strong> tags e attributes:<br /><br /> <code> &lt;b&gt; "
+"&lt;i&gt; &lt;a href=\"\" title=\"\"&gt; &lt;blockquote&gt; &lt;del datetime="
+"\"\"&gt; <br /> &lt;ins datetime=\"\"&gt; &lt;img src=\"\" alt=\"\" /&gt; &lt;"
+"ul&gt; &lt;ol&gt; &lt;li&gt; <br /> &lt;code&gt; &lt;em&gt; &lt;strong&gt; &lt;"
+"div&gt; &lt;span&gt; &lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;h4&gt; &lt;h5&gt; &lt;"
+"h6&gt; <br /> &lt;table&gt; &lt;tbody&gt; &lt;tr&gt; &lt;td&gt; &lt;br /&gt; &lt;"
+"hr /&gt;</code>"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:571
+msgid "Blog Title font"
+msgstr "Fonte do Título do Blog"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:572
+msgid "Select the typography you want for your blog title. * non web-safe font."
+msgstr ""
+"Selecione a tipografia que voce quer para o seu título do Blog. * Fonte não segura "
+"para web."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:578
+msgid "Blog tagline font"
+msgstr "Fonte da tagline do Blog"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:579
+msgid "Select the typography you want for your blog tagline. * non web-safe font."
+msgstr ""
+"Selecione a tipografia que voce quer para o sua tagline do Blog. * Fonte não segura "
+"para web."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:585
+msgid "Main menu font"
+msgstr "Fonte do Menu principal"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:586
+msgid "Select the typography you want for your main menu. * non web-safe font."
+msgstr ""
+"Selecione a tipografia que voce quer para omenu principal do Blog. * Fonte não "
+"segura para web."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:592
+msgid "Post title font"
+msgstr "Fonte do título do Post"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:593
+msgid "Select the typography you want for your post titles. * non web-safe font."
+msgstr ""
+"Selecione a tipografia que voce quer para o título do Post. * Fonte não segura para "
+"web."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:599
+msgid "Content font"
+msgstr "Fonte do Conteúdo"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:600
+msgid "Select the typography you want for your blog content. * non web-safe font."
+msgstr ""
+"Selecione a tipografia que voce quer para o conteúdo do Blog. * Fonte não segura "
+"para web."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:606
+msgid "Headings font"
+msgstr "Fonte de Cabeçalhos"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:607
+msgid ""
+"Select the typography you want for your blog headings (H1, H2, H3, H4, H5, H6). * "
+"non web-safe font."
+msgstr ""
+"Selecione a tipografia que voce quer para os cabeçalhos do Blog (H1, H2, H3, H4, "
+"H5, H6). * Fonte não segura para web."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:622
+msgid "Testimonials Speed (evolve+)"
+msgstr "Velocidade dos Depoimentos (evolve+)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:623
+msgid "Select the slideshow speed, 1000 = 1 second."
+msgstr "Selecione a velocidade do slideshow, 1000 = 1 segundo."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:628
+msgid "Add rel=\"nofollow\" to social links (evolve+)"
+msgstr "Adicionar rel=\"não seguir\" para links sociais (evolve+)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:629
+msgid ""
+"Check the box to add rel=\"nofollow\" attribute to social sharing box shortcode."
+msgstr ""
+"Marque esta caixa para adicionar rel=\"não seguir\" atributo para shortcode de "
+"caixa de compartilhamento social"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:634
+msgid "Enable Breadcrumbs Navigation"
+msgstr "Habilita navegação Breadcrumbs"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:635
+msgid "Check this box if you want to enable breadcrumbs navigation"
+msgstr "Marque esta opção se você deseja habilitar navegação por Breadcrumbs"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:640
+msgid "Position of navigation links"
+msgstr "Posição dos Links de Navegação"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:641
+msgid "Choose the position of the <strong>Older/Newer Posts</strong> links"
+msgstr "Escolha a posição para os links <strong>Antigos/Novos Posts</strong>"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:651
+msgid "Position of 'Back to Top' button"
+msgstr "Posição do botão  'Voltar para o Topo'"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:658
+msgid "Left"
+msgstr "Esquerda"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:659
+msgid "Right &nbsp;&nbsp;&nbsp;(default)"
+msgstr "Direita &nbsp;&nbsp;&nbsp;(padrão)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:660
+msgid "Middle"
+msgstr "Meio"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:663
+msgid "Plugins"
+msgstr "Plugins"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:664
+msgid "Options For Plugins Integrated Within The Theme"
+msgstr "Opção para integração de Plugins com o Tema"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:669
+msgid "Enable FlexSlider support (evolve+)"
+msgstr "Habilitar suporte FlexSlider (evolve+)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:670
+msgid "Check this box if you want to enable FlexSlider support"
+msgstr "Marque esta caixa se você deseja habilitar o suporte para FlexSlider"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:675
+msgid "Enable Parallax Slider support"
+msgstr "Habilitar suporte Parallax Slider"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:676
+msgid "Check this box if you want to enable Parallax Slider support"
+msgstr "Marque esta caixa se você deseja habilitar o suporte para Parallax Slider"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:681
+msgid "Enable Carousel Slider support"
+msgstr "Habilitar suporte Carousel Slider"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:682
+msgid "Check this box if you want to enable Carousel Slider support"
+msgstr "Marque esta caixa se você deseja habilitar o suporte para Carousel Slider"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:687
+msgid "Enable Google Map Scripts"
+msgstr "habilitar Scripts Google Map"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:688
+msgid "Check this box if you want to enable Google Map Scripts"
+msgstr "Marque esta caixa se você deseja habilitar Scripts para Google Maps"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:693
+msgid "Enable Animate.css plugin support"
+msgstr "Habilitar suporte para plugin Animate.css"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:694
+msgid ""
+"Check this box if you want to enable Animate.css plugin support - (menu hover "
+"effect, featured image hover effect, button hover effect, etc.)"
+msgstr ""
+"Marque esta caixa se você deseja habilitar o suporte para plugin Animate.css - "
+"(efeito Hover do menu, efeito Hover das imagens em destaque, efeito Hover dos "
+"botões, etc.)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:699
+msgid "Disable Youtube API Scripts (evolve+)"
+msgstr "Desabilitar API Scripts do Youtube (evolve+)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:700
+msgid "Check the box to disable Youtube API scripts."
+msgstr "Marque esta caixa para desabilitar API Scripts do Youtube."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:705
+msgid "Disable Vimeo API Scripts (evolve+)"
+msgstr "Desabilitar API Scripts do Vimeo (evolve+)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:706
+msgid "Check the box to disable Vimeo API scripts."
+msgstr "Marque esta caixa para desabilitar a API Scripts do Vimeo."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:722
+msgid "Content color"
+msgstr "Cor do Conteúdo"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:723
+msgid "Background color of content"
+msgstr "Cor de Fundo do Conteúdo"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:728 php:738
+msgid "Light"
+msgstr "Claro"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:729 php:739
+msgid "Dark"
+msgstr "Escuro"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:732
+msgid "Menu color"
+msgstr "Cor do Menu"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:733
+msgid "Background color of main menu"
+msgstr "Cor do Fundo do menu principal"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:743
+msgid "Or custom menu color"
+msgstr "ou personalize a cor do menu"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:744
+msgid ""
+"Custom background color of main menu. <strong>Dark menu must be enabled.</strong>"
+msgstr ""
+"Cor personalidade do fundo do menu principal. <strong>Menu escuro precisa estar "
+"habilitado.</strong>"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:750
+msgid "Disable Menu Background"
+msgstr "Desabilitar Fundo do Menu"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:751
+msgid "Check this box if you want to disable menu background"
+msgstr "Marque esta caixa se você quer desabilitar o Fundo do menu"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:756
+msgid "Header and Footer color"
+msgstr "Cor do Cabeçalho e do Rodapé"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:757
+msgid "Custom background color of header and footer"
+msgstr "Cor personalizada do Fundo do cabeçalho e do rodapé"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:763
+msgid "Header and Footer pattern"
+msgstr "Modelos do cabeçalho e rodapé"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:764
+msgid "Choose the pattern for header and footer background"
+msgstr "Escolha o modelo para  o fundo do cabeçalho e do rodapé"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:781
+msgid "Color scheme of the slideshow and widgets area"
+msgstr "Cor do esquema de slideshow e areas de widgets"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:782
+msgid "Choose the color scheme for the area below header menu"
+msgstr "Escolha a cor do esquema para área abaixo do menu de cabeçalho"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:788
+msgid "Background Image of the slideshow and widgets area"
+msgstr "Imagem de fundo do slideshow e área de widgets"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:789
+msgid "Upload an image for the area below header menu"
+msgstr "Upload uma imagem para a abaixo do menu de cabeçalho\n"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:795
+msgid "100% Background Image"
+msgstr "Imagem de fundo 100%"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:796
+msgid ""
+"Have background image always at 100% in width and height and scale according to the "
+"browser size."
+msgstr ""
+"Ter image de Fundo sempre em 100% em largura, altura e escala de acordo com o "
+"tamanho do navegador."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:801
+msgid "Background Repeat"
+msgstr "Repetir Fundo"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:808
+msgid "repeat-x"
+msgstr "repetir-x"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:809
+msgid "repeat-y"
+msgstr "repetir-y"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:810
+msgid "no-repeat &nbsp;&nbsp;&nbsp;(default)"
+msgstr "não repetir &nbsp;&nbsp;&nbsp;(padrão)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:813
+msgid "General Link Color"
+msgstr "Cor geral do Link"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:814
+msgid "Custom color for links"
+msgstr "Cores personalidas para Links"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:820
+msgid "Buttons 1 Color"
+msgstr "Cor 1 Botão"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:821
+msgid "Custom color for buttons: Read more, Reply"
+msgstr "Cor personalizada para botões: ler mais, Responder"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:827
+msgid "Buttons 2 Color"
+msgstr "Cor 2 Botão"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:828
+msgid "Custom color for buttons: Post Comment, Submit"
+msgstr "Cor personalizada para botões: Comentar Post, Submeter"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:834
+msgid "Enable Widget Title Black Background"
+msgstr "Habilitar Fundo escuro para títulos de Widgets"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:835
+msgid "Check this box if you want to enable black background for widget titles"
+msgstr ""
+"Marque esta caixa se você quer habilitar um fundo escuro para títulos de widgets"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:840
+msgid "Disable Widget Background"
+msgstr "Desabilitar fundo de widgets"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:841
+msgid "Check this box if you want to disable widget background"
+msgstr "Marque esta caixa se você quer desabilitar fundo em widgets"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:856
+msgid "For advanced users only"
+msgstr "Somente para usuários avançados"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:856
+msgid "insert custom CSS, default"
+msgstr "inserir CSS personalizado, padrão"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:856
+msgid "file"
+msgstr "arquivo"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:871
+msgid "Parallax Slider placement"
+msgstr "Localizações Parallax Slider"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:872
+msgid ""
+"Display Parallax Slider on the homepage, all pages or select the slider in the post/"
+"page edit mode."
+msgstr ""
+"Exibir Parallax Slider na Homepage, todas as páginas ou selecionar no modo de "
+"edição do post/pagina."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:877 php:1088
+msgid "Homepage only"
+msgstr "Apenas Homepage"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:878 php:1089
+msgid "Manually select in a Post/Page edit mode &nbsp;&nbsp;&nbsp;(default)"
+msgstr ""
+"Selecionar manualmente no modo de edição de Post/Paginas &nbsp;&nbsp;&nbsp;(padrão)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:882
+msgid "Parallax Speed"
+msgstr "Velocidade Parallax"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:883
+msgid "Input the time between transitions (Default: 4000);"
+msgstr "Introduza o tempo entre as transições (Padrão: 4000);"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:888 php:1134 php:1453
+msgid "Slider Title font"
+msgstr "Fonte do Título Slider"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:889 php:1135 php:1454
+msgid "Select the typography you want for the slide title. * non web-safe font."
+msgstr ""
+"Selecione a tipografia que você quer para o título do slide. * Fonte de web não "
+"segura."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:895 php:1141 php:1460
+msgid "Slider Description font"
+msgstr "Fonte de Descrição do Slider"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:896 php:1142 php:1461
+msgid "Select the typography you want for the slide description. * non web-safe font."
+msgstr ""
+"Slecione a tipografia que você quer para a descrição do slide. * Fonte de web não "
+"segura."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:902 php:1467
+msgid "Enable Slide 1"
+msgstr "Habilitar slide 1"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:903 php:1468
+msgid "Check this box to enable Slide 1"
+msgstr "Marque esta caixa para habilitar Slide 1"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:908 php:1473
+msgid "Slide 1 Image"
+msgstr "Imagem Slide 1"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:909 php:1474
+msgid "Upload an image for the Slide 1, or specify an image URL directly."
+msgstr ""
+"Upload uma imagem para o Slide 1, ou especifique uma URL de imagem diretamente."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:915 php:1480
+msgid "Slide 1 Title"
+msgstr "Título Slide 1"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:920 php:1485
+msgid "Super Awesome WP Theme"
+msgstr "Super Incríves WP temas"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:922 php:1487
+msgid "Slide 1 Description"
+msgstr "Descrição Slide 1"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:927 php:1492
+msgid ""
+"Absolutely free of cost theme with amazing design and premium features which will "
+"impress your visitors"
+msgstr ""
+"Tema absolutamente livre de custos com surpreendente design e \n"
+"características \n"
+"premium que vão impressionar os seus visitantes"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:929 php:1494
+msgid "Slide 1 Button"
+msgstr "Botão Slide 1"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:934 php:968 php:1002 php:1036 php:1070 php:1499 php:1533 php:1567 php:1601
+#: php:1635
+msgid "Learn more"
+msgstr "Aprender Mais"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:936 php:1501
+msgid "Enable Slide 2"
+msgstr "Habilitar Slide 2"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:937 php:1502
+msgid "Check this box to enable Slide 2"
+msgstr "Marque esta caixa para habilitar Slide 2"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:942 php:1507
+msgid "Slide 2 Image"
+msgstr "Imagem Slide 2"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:943 php:1508
+msgid "Upload an image for the Slide 2, or specify an image URL directly."
+msgstr ""
+"Upload uma imagem para o Slide 2, ou especifique uma URL de imagem diretamente."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:949 php:1514
+msgid "Slide 2 Title"
+msgstr "Título Slide 2"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:954 php:1519
+msgid "Bootstrap and Font Awesome Ready"
+msgstr "Pronto para Boostrap e Fontes Awesome"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:956 php:1521
+msgid "Slide 2 Description"
+msgstr "Descrição Slide 2"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:961 php:1526
+msgid ""
+"Built-in Bootstrap Elements and Font Awesome let you do amazing things with your "
+"website"
+msgstr ""
+"Elementos Bootstrap e Fontes Awesome embutidos deixará fazer coisas incríveis com "
+"seu site"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:963 php:1528
+msgid "Slide 2 Button"
+msgstr "Botão Slide 2"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:970 php:1535
+msgid "Enable Slide 3"
+msgstr "Habilitar Slide 3"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:971 php:1536
+msgid "Check this box to enable Slide 3"
+msgstr "Marque esta caixa para habilitar Slide 3"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:976 php:1541
+msgid "Slide 3 Image"
+msgstr "Imagem Slide 3"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:977 php:1542
+msgid "Upload an image for the Slide 3, or specify an image URL directly."
+msgstr ""
+"Upload uma imagem para o Slide 3, ou especifique uma URL de imagem diretamente."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:983 php:1548
+msgid "Slide 3 Title"
+msgstr "Título Slide 3"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:988 php:1553
+msgid "Easy to use control panel"
+msgstr "Painel de Controle fácil de usar"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:990 php:1555
+msgid "Slide 3 Description"
+msgstr "Descrição Slide 3"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:995 php:1560
+msgid ""
+"Select of 500+ Google Fonts, choose layout as you need, set up your social links"
+msgstr ""
+"Seleciona mais de 500 fontes Google, escolha os layouts conforme sua necessidade, "
+"configure seus links sociais"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:997 php:1562
+msgid "Slide 3 Button"
+msgstr "Botão Slide 3"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1004 php:1569
+msgid "Enable Slide 4"
+msgstr "Habilitar Slide 4"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1005 php:1570
+msgid "Check this box to enable Slide 4"
+msgstr "Marque esta caixa para habilitar Slide 4"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1010 php:1575
+msgid "Slide 4 Image"
+msgstr "Imagem Slide 4"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1011 php:1576
+msgid "Upload an image for the Slide 4, or specify an image URL directly."
+msgstr ""
+"Upload uma imagem para o Slide 4, ou especifique uma URL de imagem diretamente."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1017 php:1582
+msgid "Slide 4 Title"
+msgstr "Título Slide 4"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1022 php:1587
+msgid "Fully responsive theme"
+msgstr "Tema totalmente responsivo"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1024 php:1589
+msgid "Slide 4 Description"
+msgstr "Descrição Slide 4"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1029 php:1594
+msgid "Adaptive to any screen depending on the device being used to view the site"
+msgstr ""
+"Adaptado para qualquer tela, dependendo do dispositivo que está sendo usado para "
+"visualizar o site"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1031 php:1596
+msgid "Slide 4 Button"
+msgstr "Botão Slide 4"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1038 php:1603
+msgid "Enable Slide 5"
+msgstr "Habilitar Slide 5"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1039 php:1604
+msgid "Check this box to enable Slide 5"
+msgstr "Marque esta caixa para habilitar Slide 5"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1044 php:1609
+msgid "Slide 5 Image"
+msgstr "Imagem Slide 5"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1045 php:1610
+msgid "Upload an image for the Slide 5, or specify an image URL directly."
+msgstr ""
+"Upload uma imagem para o Slide 5, ou especifique uma URL de imagem diretamente."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1051 php:1616
+msgid "Slide 5 Title"
+msgstr "Título Slide 5"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1056 php:1621
+msgid "Unlimited color schemes"
+msgstr "Esquema de cores ilimitados"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1058 php:1623
+msgid "Slide 5 Description"
+msgstr "Descrição Slide 5"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1063 php:1628
+msgid ""
+"Upload your own logo, change background color or images, select links color which "
+"you love - it's limitless"
+msgstr ""
+"Upload seu próprio logo, mude a cor do fundo ou imagem, selecione cores dos links "
+"que voce ama - é ilimitado"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1065 php:1630
+msgid "Slide 5 Button"
+msgstr "Botão Slide 5"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1082
+msgid "Posts Slider placement"
+msgstr "Localizações Posts Slider"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1083
+msgid ""
+"Display Posts Slider on the homepage, all pages or select the slider in the post/"
+"page edit mode."
+msgstr ""
+"Exibir Posts Slider na Homepage, todas as páginas ou selecione o slider no modo de "
+"edição do post/página."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1093
+msgid "Number of posts to display"
+msgstr "Numero de Posts para exibir"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1111
+msgid "Slideshow content"
+msgstr "Conteúdo do slideshow"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1112
+msgid "Choose to display latest posts or posts of a category."
+msgstr "Escolha para exibir últimos posts ou posts de uma categoria."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1117
+msgid "Recent posts &nbsp;&nbsp;&nbsp;(default)"
+msgstr "Posts recentes &nbsp;&nbsp;&nbsp;(padrão)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1121
+msgid "Category ID(s)"
+msgstr "ID(s) da Categoria"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1122
+msgid ""
+"Enter category ID(s) of posts separated by commas, e.g. 1,6,59,86. <strong>Posts in "
+"category</strong> option must be enabled"
+msgstr ""
+"Entre com a ID(s) da categoria de posts separados por virgulas, ex. 1,6,59,86. A "
+"opção <strong>Categoria de Posts</strong> precisa estar habilitada"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1128
+msgid "Slider Speed"
+msgstr "Velocidade Slider"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1129
+msgid "Input the time between transitions (Default: 3500);"
+msgstr "Introduza o tempo entre as transições (Padrão: 3500);"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1156
+msgid "Autoplay"
+msgstr "Reprodução Automática"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1157
+msgid "Check the box to autoplay the slideshow."
+msgstr "Marque esta caixa para o reprodução automatica do slideshow."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1162
+msgid "Slideshow speed"
+msgstr "Velocidade Slideshow"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1163
+msgid ""
+"Controls the speed of slideshows for the [slider] shortcode and sliders within "
+"posts. 1000 = 1 second."
+msgstr ""
+"Controla a velocidade de slideshows para o [slider] shortcode e sliders dentro de "
+"posts. 1000 = 1 segundo."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1168
+msgid "Number of FlexSlider Slides"
+msgstr "Numero de Slides FlexSlider"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1169
+msgid "Controls the number of slides per group for the flexslider plugin."
+msgstr "Controla o número de slides por grupo para o plugin flexslider."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1174
+msgid "Pagination circles below video slides"
+msgstr "Círculos de paginação abaixo dos slides de vídeo"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1175
+msgid ""
+"Check the box if you want to show pagination circles below a video slide for "
+"flexslider. Leave it unchecked to hide them on video slides."
+msgstr ""
+"Marque a caixa se você quer mostrar círculos de paginação abaixo um slide de vídeo "
+"para flexslider. Deixe-a desmarcada para escondê-los em lâminas de vídeo."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1188
+msgid "Number of Products per Page"
+msgstr "Numero de produtos por pagina"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1189
+msgid "Insert the number of posts to display per page."
+msgstr "introduza o numero de posts para exibir por paginas."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1194
+msgid "Disable Woocommerce Shop Page Ordering Boxes"
+msgstr "Desativar a pagina Ordering Boxes do Woocommerce Shop"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1195
+msgid "Check the box to disable the ordering boxes displayed on the shop page."
+msgstr ""
+"Marque esta caixa para desativar as ordering boxes exibidas na pagina de compras. "
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1200
+msgid "Use Woocommerce One Page Checkout"
+msgstr "Use uma pagina Woocommerce de Checkout"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1201
+msgid "Check the box to use evolve's one page checkout template."
+msgstr "Marque esta caixa para usar um modelo de uma pagina de Checkout evolve's "
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1206
+msgid "Show Woocommerce Order Notes on Checkout"
+msgstr "Mostrar Notas de Ordem Woocommerce no Checkout"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1207
+msgid "Check the box to show the order notes on the checkout page."
+msgstr "Marque esta caixa para mostrar um nota de ordem na pagina de Checkout."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1212
+msgid "Show Woocommerce My Account Link in Header"
+msgstr "Mostrar Woocommerce link  Minha Conta no cabeçalho"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1213
+msgid "Check the box to show My Account link, uncheck to disable."
+msgstr "Marque esta caixa para mostrar o link Minha Conta, desmarque para desativar."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1218
+msgid "Show Woocommerce Cart Link in Header"
+msgstr ""
+"Mostrar o link \n"
+"Carrinho \n"
+"Woocommerce no cabeçalho"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1219
+msgid "Check the box to show the Cart icon, uncheck to disable."
+msgstr "Marque esta caixa para mostrar o icone de carrinho, desmarque para desativar."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1224
+msgid "Show Woocommerce Social Icons"
+msgstr "Mostrar Icones Sociais Woocommerce"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1225
+msgid "Check the box to show the social icons on product pages, uncheck to disable."
+msgstr ""
+"Marque esta caixa para mostrar icones sociais em paginas de produtos, desmarque "
+"para desativar."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1230
+msgid "Account Area Message 1"
+msgstr "Mensagem 1 Minha conta área"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1231
+msgid ""
+"Insert your text and it will appear in the first message box on the account page."
+msgstr ""
+"Insira seu texto e ele aparecerá na primeira caixa de mensagem na página da conta."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1233
+msgid "Call us - <i class=\"fa fa-phone\"></i> 7438 882 764"
+msgstr "Ligue para nós - <i class=\"fa fa-phone\"></i> 7438 882 764"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1236
+msgid "Account Area Message 2"
+msgstr "Mensagem 2 Minha conta área"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1237
+msgid ""
+"Insert your text and it will appear in the second message box on the account page."
+msgstr ""
+"Insira seu texto e ele aparecerá na segunda caixa de mensagem na página da conta."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1239
+msgid "Email us - <i class=\"fa fa-envelope\"></i> contact@example.com"
+msgstr "Envie-nos um E-mail - <i class=\"fa fa-envelope\"></i> contact@example.com"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1250
+msgid "Backup Options"
+msgstr "Opç~es de Backup"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1262
+msgid "Animation Speed"
+msgstr "Velocidade de Animação"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1263
+msgid "Set the speed of the animation."
+msgstr "Defina a velocidade de animação."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1269
+msgid "Show gallery"
+msgstr "Mostrar galeria"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1270
+msgid "Check the box to show the gallery."
+msgstr "Marque esta caixa para mostrar uma galeria."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1275
+msgid "Autoplay the Lightbox Gallery"
+msgstr "Reproduzir automaticamente galeria Lightbox"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1276
+msgid "Check the box to autoplay the lightbox gallery."
+msgstr "Marque esta opção para Reproduzir Automaticamente a galeria Lightbox."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1281
+msgid "Slideshow Speed"
+msgstr "Velocidade Slideshow"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1282
+msgid "If autoplay is enabled, set the slideshow speed, 1000 = 1 second."
+msgstr ""
+"se a auto reprodução estiver habilitada, defina a velocidade do slideshow, 1000= 1 "
+"segundo."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1287
+msgid "Background Opacity"
+msgstr "Opacidade do Fundo "
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1288
+msgid "Set the opacity of background, <br />0.1 (lowest) to 1 (highest)."
+msgstr "Defina a opacidade do fundo, <br />0.1 (menor) to 1 (maior)."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1293
+msgid "Show Caption"
+msgstr "Mostrar Legenda"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1294
+msgid "Check the box to show the image caption."
+msgstr "Marque esta opção para mostrar uma legenda na Imagem."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1299
+msgid "Show Description"
+msgstr "Mostrar Descrição"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1300
+msgid ""
+"Check the box to show the image description. The Alternative text field is used for "
+"the description."
+msgstr ""
+"Marque esta opção para mostrar uma descrição da imagem. O campo de texto "
+"alternativo é usado como descrição."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1305
+msgid "Social Sharing"
+msgstr "Compartilhamento Social"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1306
+msgid "Check the box to show social sharing buttons on lightbox."
+msgstr "Marque esta caixa para mostrar botões no Lightbox de compartilhamento social."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1311
+msgid "Show Post Images in Lightbox"
+msgstr "Mostrar imagens de Post no Lightbox"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1312
+msgid ""
+"Check the box to show post images that are inside the post content area in the "
+"lightbox."
+msgstr ""
+"Marque esta opção para mostrar imagens de post que estão inseridas na área de "
+"conteúdos de post dentro de um Lightbox."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1325
+msgid "Google Map Type"
+msgstr "Modelo do Google Map"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1326
+msgid "Select the type of google map to show on the contact page."
+msgstr "Selecione modelo do google map para ser mostrado na pagina de contato."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1331
+msgid "roadmap"
+msgstr "mapa de ruas"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1332
+msgid "satellite"
+msgstr "satélite"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1333
+msgid "hybrid (default)"
+msgstr "hibrido (padrão)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1334
+msgid "terrain"
+msgstr "terreno"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1337
+msgid "Google Map Width"
+msgstr "Largura do Google Map"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1338
+#, php-format
+msgid "(in pixels or percentage, e.g.:100% or 100px)"
+msgstr "(em pixels ou porcentagem, ex. 100% ou 100px)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1343
+msgid "Google Map Height"
+msgstr "Altura do Google Map"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1344
+msgid "(in pixels, e.g.: 100px)"
+msgstr "(em pixels, ex. 100px)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1349
+msgid "Google Map Address"
+msgstr "Endereço no Google Map"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1350
+msgid ""
+"Example: 775 New York Ave, Brooklyn, Kings, New York 11203.<br /> For multiple "
+"markers, separate the addresses with the | symbol. ex: Address 1|Address 2|Address "
+"3."
+msgstr ""
+"Exemplo: 775 New York Ave, Brooklyn, Kings, New York 11203.<br /> Para vários "
+"marcadores , separe os endereços com o simbolo|. ex: Endereço 1|Endereço 2|Endereço "
+"3.\n"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1355
+msgid "Sent Email Header (From)"
+msgstr "Cabeçalho para envio de e-mails (de)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1356
+msgid "Insert name of header which will be in the header of sent email."
+msgstr "Inserir nome do cabeçalho que será enviado no cabeçalho do e-mail."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1361
+msgid "Email Address"
+msgstr "Endereço de E-mail"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1362
+msgid "Enter the email adress the form will be sent to."
+msgstr "Digite o endereço de e-mail para o formulário que será enviado para."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1367
+msgid "Map Zoom Level"
+msgstr "Nivel de Zoom do Mapa"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1368
+msgid "Higher number will be more zoomed in."
+msgstr "Número mais alto será mais ampliado.\n"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1373
+msgid "Hide Address Pin"
+msgstr "Esconder alfinete do Endereço"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1374
+msgid "Check the box to hide the address pin."
+msgstr "Marque esta caixa para esconder o alfinete do endereço."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1379
+msgid "Show Map Popup On Click"
+msgstr "Mostrar Mapa Popup quando clicado"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1380
+msgid ""
+"Check the box to keep the popup graphic with address info hidden when the google "
+"map loads. It will only show when the pin on the map is clicked."
+msgstr ""
+"Marque a caixa para manter o gráfico pop-up com informações de endereço ocultas "
+"enquanto o google mapa carrega. Ele só será mostrado quando o alfinete no mapa for "
+"clicado."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1385
+msgid "Disable Map Scrollwheel"
+msgstr "Desativar o Scrollwheel no Mapa"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1386
+msgid "Check the box to disable scrollwheel on google maps."
+msgstr "Marques esta caixa para desativar o scrollwheel no google maps."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1391
+msgid "Disable Map Scale"
+msgstr "Desativar escala do Mapa"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1392
+msgid "Check the box to disable scale on google maps."
+msgstr "Marque esta caixa para desativar escalas no google maps."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1397
+msgid "Disable Map Zoom & Pan Control Icons"
+msgstr "Desativar Icones de Zoom no Mapa & Controle Pan"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1398
+msgid ""
+"Check the box to disable zoom control icon and pan control icon on google maps."
+msgstr ""
+"Marque esta opção para desativar icone de controle de zoom e icone de controle de "
+"pan no google maps."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1403
+msgid "Google reCAPTCHA"
+msgstr "Google reCAPTCHA"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1404
+msgid "Get Google reCAPTCHA keys"
+msgstr "Obtenha chaves do Google reCAPTCHA"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1404
+msgid " to enable spam protection on the contact page."
+msgstr "Para ativar proteção spam na pagina de contato."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1409
+msgid "Google reCAPTCHA Site Key"
+msgstr "Chave de Site Google re CAPTCHA"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1410 php:1416
+msgid "Follow the steps in our docs to get your key"
+msgstr "Siga os passos em nossos documentos para obter sua chave"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1415
+msgid "Google reCAPTCHA Secret key"
+msgstr "Chave Secreta do Google reCAPTCHA "
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1430
+msgid "Bootstrap Slider placement"
+msgstr "Localização Slider Bootstrap"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1431
+msgid ""
+"Display Bootstrap Slider on the homepage, all pages or select the slider in the "
+"post/page edit mode."
+msgstr ""
+"Exibir Bootstrap Slider na homepage, todas as paginas ou selecione no modo de "
+"edição do psot/pagina."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:125
+msgid ""
+"Grid layout with <strong>3</strong> posts per row is recommended to use with "
+"disabled <strong>Sidebar(s)</strong>"
+msgstr ""
+"Layout em grade com  <strong>3</strong> posts por  linha é recomendado usar com "
+"<strong>Sidebar(s)</strong> desabilitadas"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:135
+msgid "Enable post excerpts"
+msgstr "Habilitar resumo de post"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:136
+msgid "Check this box if you want to display post excerpts on one column blog layout"
+msgstr ""
+"Marque esta caixa se você deseja exibir resumos de post no layout do blog de uma "
+"coluna"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:141
+msgid "Enable featured images"
+msgstr "Habilitar imagens em destaque"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:142
+msgid "Check this box if you want to display featured images"
+msgstr "Marque esta caixa se você deseja exibir imagens em destaque"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:147
+msgid "Enable featured image on Single Blog Posts"
+msgstr "Habilitar imagens em destaque em post individuais no Blog"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:148
+msgid "Check this box if you want to display featured image on Single Blog Posts"
+msgstr ""
+"Marque esta caixa se você quer mostrar a imagem em destaque em Post \n"
+"individuais no\n"
+" blog"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:153
+msgid "Hide default thumbnail images"
+msgstr "Esconder miniaturas padrão de imagens"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:154
+msgid "Check this box if you don't want to display default thumbnail images"
+msgstr "Marque esta caixa se você não quer exibir imagens em miniatura padrão"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:160
+msgid "Enable post author avatar"
+msgstr "Habilitar avatar do autor em post"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:161
+msgid "Check this box if you want to display post author avatar"
+msgstr "Marque esta caixa se você quer mostrar um avatar do autor em post"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:166
+msgid "Post Title Excerpt Length"
+msgstr "Comprimento do Resumo do Título do Post"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:167
+msgid ""
+"Enter number of characters for Post Title Excerpt. This works only if a grid layout "
+"is enabled."
+msgstr ""
+"Entre com o numero de caracteres para o Título do Resumo do Post. Isto somente "
+"funcionara se o layout em grade estiver habilitado."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:173
+msgid "Post meta header placement"
+msgstr "Localização post meta no cabeçalho"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:174
+msgid "Choose placement of the post meta header - Date, Author, Comments"
+msgstr "Escolha a localização no cabeçalho dos post metas - Data, Autor, Comentários"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:179
+msgid "Single posts + Archive pages &nbsp;&nbsp;&nbsp;(default)"
+msgstr "Posts Individuais _ paginas de arquivos  &nbsp;&nbsp;&nbsp;(padrão)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:180
+msgid "Single posts"
+msgstr "Posts individuais"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:181 php:191 php:203 php:458 php:476 php:657
+msgid "Disable"
+msgstr "Desabilitar"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:184
+msgid "Category Page Title"
+msgstr "Categoria Título da página"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:185
+msgid "Enable page title in category pages ?"
+msgstr "Ativar título de página em páginas da categoria?"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:190
+msgid "Enable"
+msgstr "Habilitar"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:194
+msgid "'Share This' buttons placement"
+msgstr "Localização do botão 'Compartilhar isso'"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:195
+msgid "Choose placement of the 'Share This' buttons"
+msgstr "Escolha a localização do botão 'compartilhar isso'"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:200
+msgid "Single posts &nbsp;&nbsp;&nbsp;(default)"
+msgstr "Posts Individuais &nbsp;&nbsp;&nbsp;(padrão)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:201
+msgid "Single posts + Archive pages"
+msgstr "Posts Individuais + paginas de arquivos"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:202 php:528 php:879 php:1090 php:1438
+msgid "All pages"
+msgstr "Todas as páginas"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:206
+msgid "Position of previous/next posts links"
+msgstr "Posição de links anterior / próximo nos posts"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:207
+msgid "Choose the position of the <strong>Previous/Next Post</strong> links"
+msgstr "Escolha a posição do link <strong>anterior/próximo post</strong>"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:212 php:646
+msgid "After posts &nbsp;&nbsp;&nbsp;(default)"
+msgstr "Após os posts &nbsp;&nbsp;&nbsp;(padrão)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:213 php:647
+msgid "Before posts"
+msgstr "Antes dos posts"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:214 php:648
+msgid "Both"
+msgstr "Ambos"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:217
+msgid "Display Similar posts"
+msgstr "Exibir posts similares"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:218
+msgid "Choose if you want to display <strong>Similar posts</strong> in articles"
+msgstr "Escolha se você quer exibir <strong>Posts Similares</strong> em artigos"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:223
+msgid "Disable &nbsp;&nbsp;&nbsp;(default)"
+msgstr "Desabilitado &nbsp;&nbsp;&nbsp;(padrão)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:224
+msgid "Match by categories"
+msgstr "Combinar por categorias"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:225
+msgid "Match by tags"
+msgstr "Combinar por tags"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:228
+msgid "Pagination Type"
+msgstr "Tipo de Paginação"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:229
+msgid "Select the pagination type for the assigned blog page in Settings > Reading."
+msgstr ""
+"Selecione o tipo de paginação para atribuir a pagina do blog em configurações > "
+"Leitura."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:234
+msgid "Pagination"
+msgstr "Paginação"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:235
+msgid "Infinite Scroll"
+msgstr "Rolagem Infinita"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:288
+msgid "Email"
+msgstr "E-mail"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: backup.php:145
+msgid ""
+"The backup manager allows you to backup or restore your \"Theme Options\" and other "
+"settings to or from a text file."
+msgstr ""
+"O gerenciador de backup permite fazer backup ou restaurar as \"Opções do tema\" e "
+"outras definições para ou a partir de, um arquivo de texto."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: backup.php:146
+msgid ""
+"To create a backup, simply select the setting type you'd like to backup (or \"All "
+"Settings\") and hit the \"Download Export File\" button."
+msgstr ""
+"Para criar um backup, basta selecionar o tipo de configuração que você gostaria de "
+"fazer backup (ou \"Todas as configurações\" ) e clicar no \n"
+"botão \n"
+"\"Baixar Arquivo de Expostação\"."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: backup.php:147
+msgid ""
+"To restore your settings from a backup, browse your computer for the file (under "
+"the \"Import Settings\" heading) and hit the \"Upload File and Import\" button. "
+"This will restore only the settings that have changed since the backup."
+msgstr ""
+"Para restaurar as configurações de um backup, procure em seu computador o arquivo "
+"(sob o título \"Configurações de importação\" título ) e aperte o botão \"Importar "
+"A\n"
+"rquivo e \n"
+"Enviar\". Isso irá restaurar somente as configurações que foram alterados desde o "
+"backup."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: backup.php:148
+msgid ""
+"Please note that only valid backup files generated through the evolve Backup "
+"Manager should be imported."
+msgstr ""
+"Por favor, note que \n"
+"somente \n"
+"os arquivos \n"
+"válido \n"
+"de backup gerados através do Gerenciador de Backup do Evolve devem ser importados."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: backup.php:167
+#, php-format
+msgid ""
+"Please note that this backup manager backs up only your settings and not your "
+"content. To backup your content, please use the %sWordPress Export Tool%s."
+msgstr ""
+"Por favor, note que este gerenciador de backup faz backup somente as configurações "
+"e não o seu conteúdo. Para fazer backup de seu conteúdo, por favor use o "
+"%sWordPress Ferramenta de exportação%s."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: backup.php:170
+msgid "There was a problem importing your settings. Please Try again."
+msgstr "Houve um problema ao importar as configurações. Por favor, tente novamente."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: backup.php:172
+msgid "There was a problem exporting your settings. Please Try again."
+msgstr "Houve um problema exportar suas configurações. Por favor, tente novamente."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: backup.php:174
+msgid "The import file you've provided is invalid. Please try again."
+msgstr ""
+"O arquivo de importação que você forneceu é inválido. Por favor, tente novamente."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: backup.php:176
+#, php-format
+msgid "Settings successfully imported. | Return to %sTheme Options%s"
+msgstr "Configurações importados com sucesso. | Retorne para %sOpções do Tema %s"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:10
+msgid "Hi there!  I'm just a little plugin, don't mind me."
+msgstr "Oi lá! Eu sou um plugin pequeno, não me importo."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:142 framework.php:443
+msgid "Theme Options"
+msgstr "Opções de Tema"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:243
+msgid "Theme Homepage"
+msgstr "Homepage Tema"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:244
+msgid "Documentation"
+msgstr "Documentação"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:245
+msgid "Support Forum"
+msgstr "Forum Suporte"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:246
+msgid "Like Us"
+msgstr "Like Us"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:248 framework.php:304
+msgid "Save All Changes"
+msgstr "Salvar todas as Configurações"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:253
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1824
+msgid "General"
+msgstr "Geral"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:254
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1834
+msgid "Header"
+msgstr "Cabeçalho"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:255
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1849
+msgid "Footer"
+msgstr "Roda pé"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:256
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1857
+msgid "Typography"
+msgstr "Tipografia"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:257
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1870
+msgid "Styling"
+msgstr "Estilizando"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:258
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1891
+msgid "Blog"
+msgstr "Blog"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:260
+msgid "Social Sharing Box Shortcode"
+msgstr "Shortcode de Caixa de Compartilhamento Social"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:262
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1909
+msgid "Social Media Links"
+msgstr "Links de Midia Social"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:263
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1931
+msgid "Front Page Content Boxes"
+msgstr "Caixas de Conteúdo da página da frente"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:264
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1958 D:\xampp\htdocs\wordpress\wp-
+#: content\themes\evolve/library/functions/page_options.php:19
+msgid "Bootstrap Slider"
+msgstr "Bootstrap Slider"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:265
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1994 D:\xampp\htdocs\wordpress\wp-
+#: content\themes\evolve/library/functions/page_options.php:17
+msgid "Parallax Slider"
+msgstr "Parallax Slider"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:266
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:2029 D:\xampp\htdocs\wordpress\wp-
+#: content\themes\evolve/library/functions/page_options.php:18
+msgid "Posts Slider"
+msgstr "Posts Slider"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:268
+msgid "Flexslider"
+msgstr "Flexslider"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:269
+msgid "Lightbox"
+msgstr "Lightbox"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:271
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:2042
+msgid "Contact"
+msgstr "Contato"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:272
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:2060
+msgid "Extra"
+msgstr "Extra"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:274
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:276
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:855 php:2073
+msgid "Custom CSS"
+msgstr "Custom CSS"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:277
+msgid "Backup"
+msgstr "Backup"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:305
+msgid "Click OK to reset all options. All settings will be lost!"
+msgstr ""
+"Clique em OK para redefinir todas as opções. Todas as configurações serão perdidas!"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:344
+msgid "Options Reset"
+msgstr "Redefinir Opções"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: framework.php:385
+msgid "Options Updated"
+msgstr "Atualizar Opções"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: medialibrary-uploader.php:52
+msgid "No file chosen"
+msgstr "Nenhum Arquivo Escolhido"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: medialibrary-uploader.php:55 medialibrary-uploader.php:94
+msgid "Upload"
+msgstr "Upload"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: medialibrary-uploader.php:57 medialibrary-uploader.php:95
+msgid "Remove"
+msgstr "Remove"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: medialibrary-uploader.php:60
+msgid "Upgrade your version of WordPress for full media support."
+msgstr "Atualizar sua versão do WordPress para suporte de mídia completo."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: medialibrary-uploader.php:78
+msgid "View File"
+msgstr "Ver Arquivo"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: sanitize.php:116
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:807
+msgid "repeat"
+msgstr "Repetir"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: sanitize.php:117
+msgid "top center"
+msgstr "Centro Superior"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: sanitize.php:118
+msgid "scroll"
+msgstr "Rolar"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: sanitize.php:229
+msgid "No Repeat"
+msgstr "Sem Repetição"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: sanitize.php:230
+msgid "Repeat Horizontally"
+msgstr "Repetir Horizontalmente"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: sanitize.php:231
+msgid "Repeat Vertically"
+msgstr "Repetir Verticalmente"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: sanitize.php:232
+msgid "Repeat All"
+msgstr "Repetir Tudo"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: sanitize.php:245
+msgid "Top Left"
+msgstr "Esquerda Superior"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: sanitize.php:246
+msgid "Top Center"
+msgstr "Centro Superior"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: sanitize.php:247
+msgid "Top Right"
+msgstr "Direita Superior"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: sanitize.php:248
+msgid "Middle Left"
+msgstr "Esquerda meio"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: sanitize.php:249
+msgid "Middle Center"
+msgstr "Centro Meio"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: sanitize.php:250
+msgid "Middle Right"
+msgstr "Direita Meio"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: sanitize.php:251
+msgid "Bottom Left"
+msgstr "Esquerda Inferior"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: sanitize.php:252
+msgid "Bottom Center"
+msgstr "Centro Inferior"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: sanitize.php:253
+msgid "Bottom Right"
+msgstr "Direita Inferior"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: sanitize.php:266
+msgid "Scroll Normally"
+msgstr "Rolar Normalmente"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: sanitize.php:267
+msgid "Fixed in Place"
+msgstr "Fixar no Lugar"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: sanitize.php:901
+msgid "Normal"
+msgstr "Normal"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: sanitize.php:902
+msgid "Italic"
+msgstr "Italico"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: sanitize.php:903
+msgid "Bold"
+msgstr "Negrito"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: sanitize.php:904
+msgid "Bold Italic"
+msgstr "Negrito Italico"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:62
+msgid "Custom Favicon"
+msgstr "Personalizar Favicon"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:63
+msgid "Upload custom favicon."
+msgstr "Upload Favicon personalizado."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:69
+msgid "Select a layout"
+msgstr "Selecionar um layout"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:70
+msgid "Select main content and sidebar alignment."
+msgstr "Selecione o conteúdo principal e alinhamento da barra lateral."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:85
+msgid "Layout Style"
+msgstr "Estilo do Layout"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:86
+msgid "<strong>Boxed version</strong> automatically enables custom background"
+msgstr ""
+"<strong>Versão em Caixa</strong> habilita automaticamente fundos personalizados"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:91
+msgid "Boxed &nbsp;&nbsp;&nbsp;(default)"
+msgstr "Caixa &nbsp;&nbsp;&nbsp;(default)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:92
+msgid "Wide"
+msgstr "Amplo"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:97
+msgid "Layout Width"
+msgstr "Largura do Layout"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:98
+msgid "Select the width for your website"
+msgstr "Selecione a largura para o seu website"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:105 php:1103
+msgid "(default)"
+msgstr "(padrão)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:124
+msgid "Blog layout"
+msgstr "Blog layout"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:556
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:789
+msgid "did not match any entries"
+msgstr "Não se encontraram entradas"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:561
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:794
+msgid "Suggestions:"
+msgstr "Sugestões:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:563
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:796
+msgid "Make sure all words are spelled correctly."
+msgstr "Certifique-se de que todas as palavras estão escritas corretamente."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:564
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:797
+msgid "Try different keywords."
+msgstr "Tente palavras-chave diferentes."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:565
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:798
+msgid "Try more general keywords."
+msgstr "Tente palavras-chave mais gerais."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/navigation.php:24
+msgid "Newer Entries"
+msgstr "Entradas mais recentes"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/navigation.php:25
+msgid "Older Entries"
+msgstr "Entradas mais antigas"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/social-buttons.php:20
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:337
+msgid "RSS Feed"
+msgstr "RSS Feed"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/social-buttons.php:25
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:346
+msgid "Newsletter"
+msgstr "Newsletter"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/social-buttons.php:29
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:246 php:354
+msgid "Facebook"
+msgstr "Facebook"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/social-buttons.php:33
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:252 php:362
+msgid "Twitter"
+msgstr "Twitter"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/social-buttons.php:37
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:270 php:411
+msgid "Google Plus"
+msgstr "Google Plus"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/social-buttons.php:41
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:371
+msgid "Instagram"
+msgstr "Instagram"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/social-buttons.php:45
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:379
+msgid "Skype"
+msgstr "Skype"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/social-buttons.php:49
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:387
+msgid "YouTube"
+msgstr "YouTube"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/social-buttons.php:53
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:395
+msgid "Flickr"
+msgstr "Flickr"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/social-buttons.php:57
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:264 php:403
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/social-buttons.php:61
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:282 php:419
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/social-buttons.php:65
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:276 php:427
+msgid "Tumblr"
+msgstr "Tumblr"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/content-search.php:14
+msgid "Need a new search?"
+msgstr "Precisa de uma nova busca?"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/content-search.php:15
+msgid "If you didn't find what you were looking for, try a new search!"
+msgstr "Se você não encontrou o que você estava procurando, tente uma nova pesquisa!"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/content-search.php:19
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-search.php:14
+msgid "Search for:"
+msgstr "Pesquisar por:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/content-search.php:21
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-search.php:16
+msgid "Search the Forum..."
+msgstr "Pesquisar no Forum..."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/content-single-
+#: topic-lead.php:18 topic-lead.php:90
+msgid "Creator"
+msgstr "Criador"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/content-single-
+#: topic-lead.php:22 topic-lead.php:94
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/loop-topics.php:19
+msgid "Topic"
+msgstr "Topico"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply-move.php: 22
+#, php-format
+msgid "Move reply \"%s\""
+msgstr ""
+"Mover Respostas \n"
+"\"%s\""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply-move.php: 27
+msgid ""
+"You can either make this reply a new topic with a new title, or merge it into an "
+"existing topic."
+msgstr ""
+"Você pode fazer desta resposta um novo tópico com um novo título, ou fundir-la em "
+"um tópico existente ."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply-move.php: 31
+msgid ""
+"If you choose an existing topic, replies will be ordered by the time and date they "
+"were created."
+msgstr ""
+"Se você escolher um tópico existente, as respostas serão ordenados por data e hora "
+"em que foram criados."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply-move.php: 35
+msgid "Move Method"
+msgstr "Mover Metódo"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply-move.php: 39
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-split. php:39
+#, php-format
+msgid "New topic in <strong>%s</strong> titled:"
+msgstr ""
+"Novo tópico em \n"
+"<strong>%s</strong> intitulado:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply-move.php: 40
+#, php-format
+msgid "Moved: %s"
+msgstr ""
+"Movido: \n"
+"%s"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply-move.php: 47
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-split. php:47
+msgid "Use an existing topic in this forum:"
+msgstr "Use um tópico existente neste fórum:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply-move.php: 56
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-split. php:56
+msgid "No other topics found!"
+msgstr "Nenhum outros tópicos encontrados!"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply-move.php: 67
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-merge. php:88
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-split. php:92
+msgid "<strong>WARNING:</strong> This process cannot be undone."
+msgstr "<strong>CUIDADO:</strong> Este processo não pode ser desfeito."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply-move.php: 71
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply.php:91
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-merge. php:92
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-split. php:96
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic.php:161
+msgid "Submit"
+msgstr "Submeter"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply-move.php: 84
+msgid "You do not have the permissions to edit this reply!"
+msgstr "Você não tem as permissões para editar esta resposta!"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply-move.php: 84
+msgid "You cannot edit this reply."
+msgstr "Você não pode editar esta resposta."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply.php:27
+#, php-format
+msgid "Reply To: %s"
+msgstr ""
+"Responder para: \n"
+"%s"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply.php:44
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic.php:70
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and "
+"attributes:"
+msgstr ""
+"Você pode usá-los \n"
+"<abbr title=\"HyperText Markup Language\">HTML</abbr>\n"
+"tags e atributos:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply.php:55
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic.php:81
+msgid "Tags:"
+msgstr "Tags:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply.php:70
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic.php:142
+msgid "Keep a log of this edit:"
+msgstr "Mantenha um registro (log) deste edição:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply.php:74
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic.php:146
+msgid "Optional reason for editing:"
+msgstr "Razão opcional para edição:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply.php:109
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic.php:178
+msgid "Notify the author of follow-up replies via email"
+msgstr "Notificar o autor de respostas de acompanhamento via e-mail"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply.php:113
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic.php:182
+msgid "Notify me of follow-up replies via email"
+msgstr "Notificar-me de respostas de acompanhamento via e-mail"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply.php:142
+#, php-format
+msgid "The topic &#8216;%s&#8217; is closed to new replies."
+msgstr ""
+"O Tópico \n"
+"&#8216;%s&#8217;esta fechado para novas respostas."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply.php:150
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic.php:208
+#, php-format
+msgid "The forum &#8216;%s&#8217; is closed to new topics and replies."
+msgstr ""
+"O Fórum \n"
+"&#8216;%s&#8217; esta fechado para novos tópicos e respostas"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply.php:158
+msgid "You cannot reply to this topic."
+msgstr "Você não pode responder a este tópico."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-reply.php:158
+msgid "You must be logged in to reply to this topic."
+msgstr "Você precisa estar logado para responder a este tópico."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-merge. php:22
+#, php-format
+msgid "Merge topic \"%s\""
+msgstr ""
+"Mesclar tópico \n"
+"\"%s\""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-merge. php:27
+msgid ""
+"Select the topic to merge this one into. The destination topic will remain the lead "
+"topic, and this one will change into a reply."
+msgstr ""
+"Selecione o tópico para mesclar dentro deste. O tópico de destino continuará a ser "
+"o tópico liderança, e este irá se transformar em uma resposta."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-merge. php:28
+msgid ""
+"To keep this topic as the lead, go to the other topic and use the merge tool from "
+"there instead."
+msgstr ""
+"Manter este tópico como o lider, vá para o outro tópico e use a ferramenta de "
+"mesclagem de lá em vez disso."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-merge. php:32
+msgid ""
+"All replies within both topics will be merged chronologically. The order of the "
+"merged replies is based on the time and date they were posted. If the destination "
+"topic was created after this one, it's post date will be updated to second earlier "
+"than this one."
+msgstr ""
+"Todas as respostas dentro de dois tópicos serão fundidas em ordem cronológica. A "
+"ordem das respostas mescladas é baseado no tempo e data em que foram postadas. Se o "
+"tópico destino foi criado após este, que é  data do post será atualizado para a "
+"segunda mais cedo do que este."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-merge. php:36
+msgid "Destination"
+msgstr "Destino"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-merge. php:40
+msgid "Merge with this topic:"
+msgstr "Mesclar com este tópico:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-merge. php:49
+msgid "No topics were found to which the topic could be merged to!"
+msgstr "Nenhum tópico encontrado para que o tópico pudesse ser mesclados para!"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-merge. php:55
+msgid "There are no other topics in this forum to merge with."
+msgstr "Não há outros tópicos neste fórum para mesclar com."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-merge. php:63
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-split. php:67
+msgid "Topic Extras"
+msgstr "Tópicos Extras"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-merge. php:70
+msgid "Merge topic subscribers"
+msgstr "Mesclar assinantes do tópico"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-merge. php:75
+msgid "Merge topic favoriters"
+msgstr "Mesclar Favoritos dos tópicos"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-merge. php:80
+msgid "Merge topic tags"
+msgstr "Mesclar tags dos tópicos"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-merge.
+#: php:105
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-split.
+#: php:109
+msgid "You do not have the permissions to edit this topic!"
+msgstr "você não tem permissão para editar este tópcio!"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-merge.
+#: php:105
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-split.
+#: php:109
+msgid "You cannot edit this topic."
+msgstr "Você não pode editar este tópcio."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-split. php:22
+#, php-format
+msgid "Split topic \"%s\""
+msgstr ""
+"Dividir Tópicos \n"
+"\"%s\""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-split. php:27
+msgid ""
+"When you split a topic, you are slicing it in half starting with the reply you just "
+"selected. Choose to use that reply as a new topic with a new title, or merge those "
+"replies into an existing topic."
+msgstr ""
+"Quando você divide um tópico, você está cortando-o ao meio começando com a resposta "
+"que você acabou de selecionar. Escolha usar essa resposta como um novo tópico com "
+"um novo título, ou fundir essas respostas em um tópico existente."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-split. php:31
+msgid ""
+"If you use the existing topic option, replies within both topics will be merged "
+"chronologically. The order of the merged replies is based on the time and date they "
+"were posted."
+msgstr ""
+"Se você usar a opção tópico existente, respostas dentro dos dois tópicos serão "
+"mescladas em ordem cronológica. A ordem das respostas mescladas é baseado no tempo "
+"e data em que foram postados."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-split. php:35
+msgid "Split Method"
+msgstr "Método de divisão"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-split. php:40
+#, php-format
+msgid "Split: %s"
+msgstr ""
+"Divididos: \n"
+"%s"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-split. php:74
+msgid "Copy subscribers to the new topic"
+msgstr "Copie ás inscrições para o novo tópico"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-split. php:79
+msgid "Copy favoriters to the new topic"
+msgstr "Copie os Favoritos para o novo tópico"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-split. php:84
+msgid "Copy topic tags to the new topic"
+msgstr "Copie as tags de tópicos para o novo tópcio"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-tag.php:18
+#, php-format
+msgid "Manage Tag: \"%s\""
+msgstr ""
+"Gerenciar Tag: \n"
+"\"%s\""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-tag.php:22
+msgid "Rename"
+msgstr "Renomear"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-tag.php:25
+msgid "Leave the slug empty to have one automatically generated."
+msgstr "Deixe o slug vazio para ter um gerado automaticamente."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-tag.php:29
+msgid ""
+"Changing the slug affects its permalink. Any links to the old slug will stop "
+"working."
+msgstr ""
+"Mudar o slug afeta os links permanentes. Qualquer link do slug antigo irão parar de "
+"funcionar."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-tag.php:40
+msgid "Slug:"
+msgstr "Slug:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-tag.php:59
+msgid "Merge"
+msgstr "Mesclar"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-tag.php:62
+msgid "Merging tags together cannot be undone."
+msgstr "Tags mescladas juntamente não podem ser desfeitas"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-tag.php:68
+msgid "Existing tag:"
+msgstr "tag existente:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-tag.php:73
+#, php-format
+msgid "Are you sure you want to merge the \"%s\" tag into the tag you specified?"
+msgstr ""
+"você tem certeza que quer mesclar a tag \n"
+"\"%s\" dentro da tag que especificou?"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-tag.php:88
+msgid "Delete"
+msgstr "Apagar"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-tag.php:91
+msgid "This does not delete your topics. Only the tag itself is deleted."
+msgstr "Isso não apagará seus tópicos. somente as tags serão apagadas."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-tag.php:94
+msgid "Deleting a tag cannot be undone."
+msgstr "Apagar as tag não poderá ser desfeita."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-tag.php:95
+msgid "Any links to this tag will no longer function."
+msgstr "Todos os links  para esta tag não irá mais funcionar."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-tag.php: 101
+#, php-format
+msgid ""
+"Are you sure you want to delete the \"%s\" tag? This is permanent and cannot be "
+"undone."
+msgstr ""
+"Você tem certeza que quer apagar a tag  \"\n"
+"%s\"? Isso é permanente e não pode ser desfeito.\n"
+"\n"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic.php:39
+#, php-format
+msgid "Now Editing &ldquo;%s&rdquo;"
+msgstr ""
+"Editando agora \n"
+"&ldquo;%s&rdquo;"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic.php:41
+#, php-format
+msgid "Create New Topic in &ldquo;%s&rdquo;"
+msgstr ""
+"Criar novo tópico em \n"
+"&ldquo;%s&rdquo;"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic.php:41
+msgid "Create New Topic"
+msgstr "Criar Novo Tópico"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic.php:55
+#, php-format
+msgid "Topic Title (Maximum Length: %d):"
+msgstr "Título do Tópico (Comprimento Máximo: %d):"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic.php:94
+msgid "Forum:"
+msgstr "Fórum:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic.php:97
+msgid "(No Forum)"
+msgstr "(Nenhum Fórum)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic.php:113
+msgid "Topic Type:"
+msgstr "Tipo de Tópico:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic.php:125
+msgid "Topic Status:"
+msgstr "Status do Tópico:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic.php:216
+msgid "You cannot create new topics."
+msgstr "Você não pode criar novos tópicos."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic.php:216
+msgid "You must be logged in to create new topics."
+msgstr "Você precisa estar logado para criar novos tópicos."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/loop-forums.php:19
+msgid "Forum"
+msgstr "Fórum"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/loop-forums.php:20
+msgid "Topics"
+msgstr "Tópicos"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/loop-forums.php:21
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/loop-replies.php:28
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/loop-topics.php:21
+msgid "Replies"
+msgstr "Respostas"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/loop-forums.php:21
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/loop-topics.php:21
+msgid "Posts"
+msgstr "Posts"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/loop-forums.php:22
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/loop-topics.php:22
+msgid "Freshness"
+msgstr "Frescura"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/loop-search-forum.
+#: php:26
+msgid "Forum: "
+msgstr "Fórum:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/loop-search-forum.
+#: php:30
+#, php-format
+msgid "Last updated %s"
+msgstr "Ultima Atualização: %s"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/loop-search-reply.
+#: php:22
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/loop-search-topic.
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/loop-single-reply.
+#, php-format
+msgid "Post count: %s"
+msgstr "Número de Post: %s"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/loop-search-reply.
+#: php:42
+msgid "In reply to: "
+msgstr "em resposta para:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/loop-search-topic.
+#: php:48
+msgid "Topic: "
+msgstr "Tópico:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/loop-search-topic.
+#: php:53
+msgid "in group forum "
+msgstr "no fórum do grupo"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/loop-search-topic.
+#: php:57
+msgid "in forum "
+msgstr "no fórum"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/loop-single-reply.
+#: php:48
+msgid "in reply to: "
+msgstr "na respota para:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/loop-single-topic.
+#: php:60
+#, php-format
+msgid "Started by: %1$s"
+msgstr ""
+"Iniciado por: \n"
+"%1$s"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/loop-single-topic.
+#: php:68
+#, php-format
+msgid "in: <a href=\"%1$s\">%2$s</a>"
+msgstr ""
+"no: \n"
+"<a href=\"%1$s\">%2$s</a>"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/loop-topics.php:20
+msgid "Voices"
+msgstr "Vozes"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/user-details.php:40
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/user-profile.php:15
+msgid "Profile"
+msgstr "Perfil"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/user-details.php:46
+msgid "Topics Started"
+msgstr "Tópicos Iniciados"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/user-details.php:52
+msgid "Replies Created"
+msgstr "Respostas Criadas"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/user-details.php:63
+msgid "Favorites"
+msgstr "Favoritos"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/user-details.php:73
+msgid "Subscriptions"
+msgstr "Inscrições"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/user-details.php:80
+msgid "Edit"
+msgstr "Editar"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/user-profile.php:24
+msgid "Forum Role:"
+msgstr "Regras do Fórum:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/user-profile.php:25
+msgid "Topics Started:"
+msgstr "Tópicos Iniciados:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/user-profile.php:26
+msgid "Replies Created:"
+msgstr "Respostas criadas:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-
+#: functions.php:40
+#, php-format
+msgid "Page %s"
+msgstr "Página %s"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-
+#: functions.php:87
+msgid "Primary Menu"
+msgstr "Menu Primário"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-
+#: functions.php:203
+msgid "Similar posts"
+msgstr "post similares"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-
+#: functions.php:213
+msgid "Untitled"
+msgstr "Sem Título"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-
+#: functions.php:495
+msgid "Share on Twitter"
+msgstr "Compartilhar no Twitter"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-
+#: functions.php:496
+msgid "Share on Facebook"
+msgstr "Compartilhar no Facebook"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-
+#: functions.php:497
+msgid "Share on Google Plus"
+msgstr "Compartilhar no Google Plus"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-
+#: functions.php:498
+msgid "Share on Pinterest"
+msgstr ""
+"Compartilhar no \n"
+"Pinterest"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-
+#: functions.php:499
+msgid "Share by Email"
+msgstr "Compartilhar por E-mail"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-
+#: functions.php:500
+msgid "More options"
+msgstr "Mais Opções"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-
+#: functions.php:1356
+msgid "Home"
+msgstr "Home"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-
+#: functions.php:1411
+msgid "404 - Page not Found"
+msgstr "404 - página não encontrada"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-
+#: functions.php:1412
+msgid "Search"
+msgstr "Pesquisar"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-
+#: functions.php:1482
+msgid "Read more"
+msgstr "Ler mais"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-
+#: functions.php:1490
+msgid ""
+"<h2 style=\"color:#fff;\">Oops, no posts to display! Please check your post slider "
+"Category (ID) settings</h2>"
+msgstr ""
+"<h2 style=\"color:#fff;\">Oops, nenhum post para mostrar!Por Favor, veja sua "
+"configuração da categoria (ID) do post slider</h2>"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/comments.
+#: php:33
+msgid "% Trackbacks"
+msgstr "% Trackbacks"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/comments.
+#: php:34
+msgid "No Pings Yet"
+msgstr "Nenhum Pings ainda"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/comments.
+#: php:35
+msgid "1 Trackback"
+msgstr "1 Trackback"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/comments.
+#: php:68
+msgid "Follow replies"
+msgstr "Seguindo respostas"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/comments.
+#: php:205
+msgid "Your comment is awaiting moderation"
+msgstr "Seu Comentário aguarda moderação"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: backup.php:70
+msgid "evolve Setting Import / Export"
+msgstr "Configuração envolve Importação / Exportação"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: backup.php:70 backup.php:99
+msgid "evolve Backup"
+msgstr "evolve Backup\n"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: backup.php:101
+msgid "Import Settings"
+msgstr "Importar Configurações"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: backup.php:102
+msgid ""
+"If you have settings in a backup file on your computer, the Import / Export system "
+"can import those into this site. To get started, upload your backup file to import "
+"from below."
+msgstr ""
+"Se você tem configurações em um arquivo de backup em seu computador, o sistema de "
+"importação / exportação pode importa-los para este site. Para começar, faça o "
+"upload de seu arquivo de backup para importar a partir de baixo."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: backup.php:107
+#, php-format
+msgid "Upload File: (Maximum Size: %s)"
+msgstr "Arquivo de Upload: (Tamanho máximo: %s)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: backup.php:110
+msgid "Upload File and Import"
+msgstr "Upload o arquivo e importe"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: backup.php:115
+msgid "Export Settings"
+msgstr "Exportar Configuração"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: backup.php:116
+msgid ""
+"When you click the button below, the Import / Export system will create a text file "
+"for you to save to your computer."
+msgstr ""
+"Quando você clica no botão abaixo, o sistema de importação / exportação irá criar "
+"um arquivo de texto para que você possa salvar em seu computador."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: backup.php:117
+#, php-format
+msgid ""
+"This text file can be used to restore your settings here on \"%s\", or to easily "
+"setup another website with the same settings\"."
+msgstr ""
+"Este arquivo de texto pode ser usado para restaurar as configurações aqui na \"%s"
+"\", ou para configurar facilmente um outro site com as mesmas configurações\"."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: backup.php:121
+msgid "Download Export File"
+msgstr "Download Arquivo de Exportação"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: backup.php:142
+msgid "Backup Manager"
+msgstr "Gerenciar Backups"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: backup.php:143
+msgid "Welcome to the evolve Backup Manager."
+msgstr "Bem vindo ao gerenciamento de backup do envolve"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-
+#: backup.php:144
+msgid "Here are a few notes on using this screen."
+msgstr "Aqui estão algumas notas sobre a utilização desta tela."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1436
+msgid "Homepage only &nbsp;&nbsp;&nbsp;(default)"
+msgstr ""
+"Somente Homepage \n"
+"&nbsp;&nbsp;&nbsp;(padrão)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1437
+msgid "Manually select in a Post/Page edit mode"
+msgstr "Selecione manualmente dentro do modo de edição do Post / Página "
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1441
+msgid "Disable Bootstrap Slides 100% Background"
+msgstr "Desabilitar Bootstrap Slides fundo 100%"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1442
+msgid "Check this box to disable Bootstrap Slides 100% Background"
+msgstr ""
+"Marque esta caixa para desabilitar fundo 100% do \n"
+"Bootstrap \n"
+"Slides"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1447
+msgid "Speed"
+msgstr "Velocidade"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1448
+msgid "Input the time between transitions (Default: 7000);"
+msgstr "Coloque o tempo entre as transições (padrão: 7000);"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1646
+msgid "Enable Front Page Content Boxes"
+msgstr "Ativar caixa de Conteúdo na página da frente"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1647
+msgid "Check this box to enable Front Page Content Boxes"
+msgstr "Marque este box para ativar caixas de conteúdo na página de frente"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1653
+msgid "Enable Content Box 1 ?"
+msgstr "Ativar o Conteúdo do Box 1?"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1659
+msgid "Content Box 1 Title"
+msgstr "Título do Conteúdo do Box 1"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1663
+msgid "Beautifully Simple"
+msgstr "Simples e Bonito"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1665
+msgid "Content Box 1 Icon (FontAwesome)"
+msgstr "Icone (FontAwesome) Conteúdo do Box 1"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1671
+msgid "Content Box 1 Icon Color"
+msgstr "Cor do Icone de Conteúdo do Box 1"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1677
+msgid "Content Box 1 Description"
+msgstr "Conteúdo de Descrição do Box 1"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1681
+msgid "Clean and modern theme with smooth and pixel perfect design focused on details"
+msgstr "Moderno e Limpo tema com perfeito pixel e designe suave focado nos detalhes "
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1683
+msgid "Content Box 1 Button"
+msgstr "Botão do Box de conteúdo 1"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1687 php:1724 php:1761 php:1798
+msgid "<a class=\"read-more btn\" href=\"#\">Learn more</a>"
+msgstr "<a class=\"read-more btn\" href=\"#\">Aprenda Mais</a>"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1690
+msgid "Enable Content Box 2 ?"
+msgstr "Ativar o Conteúdo do Box 2?"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1696
+msgid "Content Box 2 Title"
+msgstr "Título do Conteúdo do Box 2"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1700
+msgid "Easy Customizable"
+msgstr "Fácil Customização"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1702
+msgid "Content Box 2 Icon (FontAwesome)"
+msgstr "Icone (FontAwesome) Conteúdo do Box 2"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1708
+msgid "Content Box 2 Icon Color"
+msgstr "Cor do Icone de Conteúdo do Box 2"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1714
+msgid "Content Box 2 Description"
+msgstr "Conteúdo de Descrição do Box 42"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1718
+msgid "Over a hundred theme options ready to make your website unique"
+msgstr "Mais que 100 opções de temas pronto para fazer o seu website único"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1720
+msgid "Content Box 2 Button"
+msgstr "Botão do Box de conteúdo 2"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1727
+msgid "Enable Content Box 3 ?"
+msgstr "Ativar o Conteúdo do Box 3?"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1733
+msgid "Content Box 3 Title"
+msgstr "Título do Conteúdo do Box 3"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1737
+msgid "Contact Form Ready"
+msgstr "Pronto para Formulário de Contato"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1739
+msgid "Content Box 3 Icon (FontAwesome)"
+msgstr "Icone (FontAwesome) Conteúdo do Box 3"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1745
+msgid "Content Box 3 Icon Color"
+msgstr "Cor do Icone de Conteúdo do Box 3"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1751
+msgid "Content Box 3 Description"
+msgstr "Conteúdo de Descrição do Box 3"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1755
+msgid "Built-In Contact Page with Google Maps is a standard for this theme"
+msgstr "Páginas de contatos  construídas com Google Maps padrão para este tema."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1757
+msgid "Content Box 3 Button"
+msgstr "Botão do Box de conteúdo 3"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1764
+msgid "Enable Content Box 4 ?"
+msgstr "Ativar o Conteúdo do Box 4?"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1770
+msgid "Content Box 4 Title"
+msgstr "Título do Conteúdo do Box 4"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1774
+msgid "Responsive Blog"
+msgstr "Blog Responsivo"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1776
+msgid "Content Box 4 Icon (FontAwesome)"
+msgstr "Icone (FontAwesome) Conteúdo do Box 4"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1782
+msgid "Content Box 4 Icon Color"
+msgstr "Cor do Icone de Conteúdo do Box 4"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1788
+msgid "Content Box 4 Description"
+msgstr "Conteúdo de Descrição do Box 4"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1792
+msgid "Up to 3 Blog Layouts, Bootstrap 3 ready, responsive on all media devices"
+msgstr ""
+"Até 3 layout \n"
+"de \n"
+"Blogs, Bootstrap 3 pronto, que respondem em todos os dispositivos de mídia"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1794
+msgid "Content Box 4 Button"
+msgstr "Botão do Box de conteúdo 4"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:2524
+msgid "Media Library"
+msgstr "Biblioteca de Midia"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:2540
+msgid "Open Library"
+msgstr "Abrir Biblioteca"
+
+#: D:\xampp\htdocs\wordpress\wp-
+#: content\themes\evolve/library/functions/page_options.php:2
+msgid "Post options"
+msgstr "Opções de Post"
+
+#: D:\xampp\htdocs\wordpress\wp-
+#: content\themes\evolve/library/functions/page_options.php:6
+msgid "Full Width"
+msgstr "Largura total"
+
+#: D:\xampp\htdocs\wordpress\wp-
+#: content\themes\evolve/library/functions/page_options.php:7
+#: content\themes\evolve/library/functions/page_options.php:29
+msgid "No"
+msgstr "Não"
+
+#: D:\xampp\htdocs\wordpress\wp-
+#: content\themes\evolve/library/functions/page_options.php:7
+#: content\themes\evolve/library/functions/page_options.php:29
+msgid "Yes"
+msgstr "Sim"
+
+#: D:\xampp\htdocs\wordpress\wp-
+#: content\themes\evolve/library/functions/page_options.php:11
+msgid "Slider Options"
+msgstr "Opções do Slider"
+
+#: D:\xampp\htdocs\wordpress\wp-
+#: content\themes\evolve/library/functions/page_options.php:14
+msgid "Slider Type"
+msgstr "Tipo de Slider"
+
+#: D:\xampp\htdocs\wordpress\wp-
+#: content\themes\evolve/library/functions/page_options.php:16
+msgid "No Slider"
+msgstr "Sem Slider"
+
+#: D:\xampp\htdocs\wordpress\wp-
+#: content\themes\evolve/library/functions/page_options.php:24
+msgid "Widget Options"
+msgstr "opções do Widgets"
+
+#: D:\xampp\htdocs\wordpress\wp-
+#: content\themes\evolve/library/functions/page_options.php:28
+msgid "Enable Header Widgets"
+msgstr "Ativar Widgets de cabeçalho"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/pluggable.
+#: php:22
+msgid "comments"
+msgstr "comentários"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/pluggable.
+#: php:22
+msgid "comments closed"
+msgstr "Comentários fechados"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/pluggable.
+#: php:124
+msgid "Permalink to this comment"
+msgstr "Link permanente para este comentário"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/tabs-
+#: widget.php:13
+msgid "Popular posts, recent post and comments."
+msgstr "Post popular, Post recente e comentários."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/tabs-
+#: widget.php:45
+msgid "Popular"
+msgstr "Popular"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/tabs-
+#: widget.php:48
+msgid "Recent"
+msgstr "Recente"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/tabs-
+#: widget.php:51
+msgid "Comments"
+msgstr "Comentário"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/tabs-
+#: widget.php:129
+msgid "says"
+msgstr "diz"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/tabs-
+#: widget.php:167
+msgid "Popular Posts Order By"
+msgstr "Post populares ordenados por"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/tabs-
+#: widget.php:169
+msgid "Highest Comments"
+msgstr "Mais Comentados"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/tabs-
+#: widget.php:170
+msgid "Highest Views"
+msgstr "Mais Vistos"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/tabs-
+#: widget.php:174
+msgid "Number of popular posts"
+msgstr "Número de Posts Populares"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/tabs-
+#: widget.php:178
+msgid "Number of recent posts"
+msgstr "Numero de posts recentes"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/tabs-
+#: widget.php:182
+msgid "Number of comments"
+msgstr "Número de comentários"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/tabs-
+#: widget.php:187
+msgid "Show popular posts"
+msgstr "Mostrar post populares"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/tabs-
+#: widget.php:191
+msgid "Show recent posts"
+msgstr "Mostrar posts recententes"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/tabs-
+#: widget.php:195
+msgid "Show comments"
+msgstr "Mostrar Comentários"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/widgets.
+#: php:12
+msgid "Sidebar 1"
+msgstr "Barra lateral 1"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/widgets.
+#: php:21
+msgid "Sidebar Widgets Disabled"
+msgstr "Widgets de barra lateral desativado"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/widgets.
+#: php:27
+msgid ""
+"You are using one column layout. Please visit theme settings page and change layout "
+"to enable sidebar widgets. Widgets placed on this area won't be active."
+msgstr ""
+"Você está usando o layout de uma coluna. Por favor, visite a página de "
+"configurações do tema e mude o layout para habilitar widgets da barra lateral . "
+"Widgets colocados nesta área não estarão ativos."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/widgets.
+#: php:35
+msgid "Sidebar 2"
+msgstr "Barra lateral 2"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/widgets.
+#: php:48
+msgid "Header 1"
+msgstr "Cabeçalho 1"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/widgets.
+#: php:57
+msgid "Header 2"
+msgstr "Cabeçalho 2"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/widgets.
+#: php:66
+msgid "Header 3"
+msgstr "Cabeçalho 3"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/widgets.
+#: php:75
+msgid "Header 4"
+msgstr "Cabeçalho 4"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/widgets.
+#: php:87
+msgid "Footer 1"
+msgstr "Rodapé 1"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/widgets.
+#: php:96
+msgid "Footer 2"
+msgstr "Rodapé 2"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/widgets.
+#: php:105
+msgid "Footer 3"
+msgstr "Rodapé 3"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/widgets.
+#: php:114
+msgid "Footer 4"
+msgstr "Rodapé 4"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/widgets.
+#: php:231
+msgid "Insert your custom image slides"
+msgstr "Insira suas imagens personalizadas slides"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/widgets.
+#: php:233
+msgid "evolve: Carousel Slider"
+msgstr "evolve: Slider carrossel"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/widgets.
+#: php:317
+msgid "Title:"
+msgstr "Título:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:284
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:728
+msgid "<strong>Pages:</strong>"
+msgstr "<strong>Páginas:</strong>"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:348
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:580
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:813
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:884
+msgid "Sorry, but you are looking for something that isn't here."
+msgstr "Desculpe, mas vocês esta procurando por algo que não esta aqui."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:374
+msgid "Daily archives for"
+msgstr "Arquivos Diários para"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:376
+msgid "Monthly archives for"
+msgstr "Arquivos Mensais para"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:378
+msgid "Yearly archives for"
+msgstr "Arquivos Anuais para"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:382
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:1118
+msgid "Posts in category"
+msgstr "Posts na categoria"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:386
+msgid "Posts tagged"
+msgstr "Posts marcados"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:392
+msgid "Search results for"
+msgstr "Buscar resultados para"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:397
+msgid "Posts by"
+msgstr "Posts por"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:556
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:789
+msgid "Your search for"
+msgstr "Sua pesquisa por"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress.php:21
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/buddypress.php:22
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:309
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options.
+#: php:527
+msgid "Pages"
+msgstr "Páginas"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/comments.php:10
+msgid "This post is password protected. Enter the password to view comments."
+msgstr "Este post é protegido por senha. Entre com a senha para ver os comentários."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/comments.php:55
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/comments.
+#: php:28
+msgid "No Comments Yet"
+msgstr "Nenhum comentário ainda"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:87
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/bbpress/form-topic-tag.php:35
+msgid "Name:"
+msgstr "Nome:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:88
+msgid "Email:"
+msgstr "Email:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:89
+msgid "Subject:"
+msgstr "Assunto:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:90
+msgid "Comments:"
+msgstr "Comentários:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:124
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:96
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:251
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:126
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:265
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:470
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:662
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:846
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/pluggable.
+#: php:139
+msgid "EDIT"
+msgstr "EDITAR"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:134
+msgid ""
+"Please check if you've filled all the fields with valid information. Thank you."
+msgstr ""
+"Por favor, verifique se você preencheu todos os campos com informações válidas . "
+"Obrigado."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:139
+msgid "Thank you"
+msgstr "Obrigado"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:139
+msgid "for using my contact form! Your email was successfully sent!"
+msgstr "para usar o meu formulário de contato! Seu e-mail foi enviado com sucesso!"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:148
+msgid "Name (required)"
+msgstr "Nome (requerido)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:152
+msgid "Email (required)"
+msgstr "Email (requerido)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:156
+msgid "Subject"
+msgstr "Assunto"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:164
+msgid "Message"
+msgstr "Mensagem"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:177
+msgid "Send Message"
+msgstr "Enviar Mensagem"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:69
+msgid "Permanent Link to "
+msgstr "Link Permanente para"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:79
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:237
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:254
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:453
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:648
+msgid "Written by"
+msgstr "Escrito por"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:81
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:241
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:115
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:257
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:455
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:652
+msgid "edit"
+msgstr "editar"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:88
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:217
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:247
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-
+#: functions.php:209
+msgid "Permanent Link to"
+msgstr "Link permanente para"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:154
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:301
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:525
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:720
+msgid "READ MORE"
+msgstr "Leia Mais"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:158
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:224
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:101
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:240
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:529
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:635
+msgid "Leave a Comment"
+msgstr "Deixe seu comentário"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:158
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:224
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:101
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:240
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:529
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:635
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/comments.
+#: php:29
+msgid "1 Comment"
+msgstr "1 Comentário"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:158
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:224
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:101
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:240
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:529
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:635
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/comments.
+#: php:27
+msgid "% Comments"
+msgstr "% Comentários"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:307
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:283
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:726
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:855
+msgid "READ MORE &raquo;"
+msgstr ""
+"LEIA MAIS \n"
+"&raquo;"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/header.php:162
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/searchform.php:14
+msgid "Type your search"
+msgstr "Digite sua pesquisa"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:113
+msgid "By"
+msgstr "Por"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:194
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:342
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:576
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:809
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:880
+msgid "Not Found"
+msgstr "Não Encontrado"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:198
+msgid "Sorry, no attachments matched your criteria."
+msgstr "Desculpe, nenhum anexo combina com seus critérios."

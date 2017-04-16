@@ -1,0 +1,1129 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Eleganto\n"
+"POT-Creation-Date: 2017-02-21 11:50+0100\n"
+"PO-Revision-Date: 2015-12-08 14:37+0100\n"
+"Last-Translator: Themes4WP <info@themes4wp.com>\n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: lib/kirki\n"
+
+#: 404.php:22
+msgid "Oops!"
+msgstr ""
+
+#: 404.php:23
+msgid "404 Not Found"
+msgstr ""
+
+#: 404.php:25
+msgid "Sorry, an error has occured, Requested page not found!"
+msgstr ""
+
+#: 404.php:28
+msgid " Take Me Home"
+msgstr ""
+
+#: archive-portfolio.php:60 content.php:23
+#: templates/homepage-portfolio_section.php:76
+msgid "Read more"
+msgstr ""
+
+#: comments.php:6
+msgid "Leave a Comment"
+msgstr ""
+
+#: comments.php:6
+msgid "One Comment"
+msgstr ""
+
+#: comments.php:6
+msgid " Comments"
+msgstr ""
+
+#: content-none.php:2
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:5
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: content-none.php:9
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: content-none.php:14
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: content-single.php:30
+msgid "Previous:"
+msgstr ""
+
+#: content-single.php:31
+msgid "Next:"
+msgstr ""
+
+#: footer.php:14
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: footer.php:14
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: footer.php:16
+#, php-format
+msgid "Theme: %1$s by %2$s"
+msgstr ""
+
+#: footer.php:16
+msgid "Free Business WordPress Theme"
+msgstr ""
+
+#: functions.php:31
+msgid "Top Menu"
+msgstr ""
+
+#: functions.php:32
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:120 lib/theme-config.php:86
+msgid "Right Sidebar"
+msgstr ""
+
+#: functions.php:130 lib/theme-config.php:119
+msgid "Left Sidebar"
+msgstr ""
+
+#: functions.php:173
+msgid "Home"
+msgstr ""
+
+#: functions.php:190
+msgid "Blog"
+msgstr ""
+
+#: functions.php:263
+msgid "Error 404"
+msgstr ""
+
+#: functions.php:265
+msgid "Search results for"
+msgstr ""
+
+#: functions.php:267 functions.php:271 functions.php:274
+msgid "Y"
+msgstr ""
+
+#: functions.php:268 functions.php:272
+msgid "F"
+msgstr ""
+
+#: functions.php:269
+msgid "d"
+msgstr ""
+
+#: functions.php:280
+msgid "Page"
+msgstr ""
+
+#: functions.php:298 lib/theme-config.php:215
+msgid "Facebook"
+msgstr ""
+
+#: functions.php:299 lib/theme-config.php:216
+msgid "Twitter"
+msgstr ""
+
+#: functions.php:300 lib/theme-config.php:217
+msgid "Google-Plus"
+msgstr ""
+
+#: functions.php:301 lib/theme-config.php:218
+msgid "Instagram"
+msgstr ""
+
+#: functions.php:302 lib/theme-config.php:219
+msgid "Pinterest"
+msgstr ""
+
+#: functions.php:303 lib/theme-config.php:220
+msgid "YouTube"
+msgstr ""
+
+#: functions.php:304 lib/theme-config.php:221
+msgid "Reddit"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:327
+msgid "Install Required Plugins"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:328
+msgid "Install Plugins"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:330
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:332
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:333
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:336
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/class-tgm-plugin-activation.php:342
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/class-tgm-plugin-activation.php:348
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/class-tgm-plugin-activation.php:354
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/class-tgm-plugin-activation.php:360
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/class-tgm-plugin-activation.php:366
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/class-tgm-plugin-activation.php:371
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/class-tgm-plugin-activation.php:376
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/class-tgm-plugin-activation.php:381
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/class-tgm-plugin-activation.php:385
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:386
+#: lib/class-tgm-plugin-activation.php:827
+#: lib/class-tgm-plugin-activation.php:2533
+#: lib/class-tgm-plugin-activation.php:3580
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:387
+#: lib/class-tgm-plugin-activation.php:3159
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:388
+#: lib/class-tgm-plugin-activation.php:2952
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/class-tgm-plugin-activation.php:390
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:392
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:394
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:395
+msgid "Dismiss this notice"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:396
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:397
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:522
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:523
+msgid "Update Required"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:934
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:934
+#: lib/class-tgm-plugin-activation.php:937
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:937
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:1121
+#: lib/class-tgm-plugin-activation.php:2948
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:1982
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2273
+msgid "Required"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2276
+msgid "Recommended"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2292
+msgid "WordPress Repository"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2295
+msgid "External Source"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2298
+msgid "Pre-Packaged"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2315
+msgid "Not Installed"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2319
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2321
+msgid "Active"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2327
+msgid "Required Update not Available"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2330
+msgid "Requires Update"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2333
+msgid "Update recommended"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2342
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2388
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/class-tgm-plugin-activation.php:2392
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/class-tgm-plugin-activation.php:2396
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/class-tgm-plugin-activation.php:2400
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/class-tgm-plugin-activation.php:2482
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2490
+msgid "Installed version:"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2498
+msgid "Minimum required version:"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2510
+msgid "Available version:"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2533
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2547
+msgid "Plugin"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2548
+msgid "Source"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2549
+msgid "Type"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2553
+msgid "Version"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2554
+msgid "Status"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2603
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2608
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2614
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2684
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2717
+msgid "Install"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2723
+msgid "Update"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2726
+msgid "Activate"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2757
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2759
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2800
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2802
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2908
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:2934
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:3158
+msgid "Plugin activation failed."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:3498
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:3501
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:3503
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:3507
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:3509
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:3509
+#: lib/class-tgm-plugin-activation.php:3517
+msgid "Show Details"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:3509
+#: lib/class-tgm-plugin-activation.php:3517
+msgid "Hide Details"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:3510
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:3512
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:3515
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:3517
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:3518
+msgid "All installations have been completed."
+msgstr ""
+
+#: lib/class-tgm-plugin-activation.php:3520
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: lib/customize-pro/class-customize.php:76
+msgid "Need More Features?"
+msgstr ""
+
+#: lib/customize-pro/class-customize.php:77
+msgid "View PRO Version"
+msgstr ""
+
+#: lib/include-kirki.php:50
+msgid ""
+"A plugin is required to take advantage of this theme's features in the "
+"customizer."
+msgstr ""
+
+#: lib/include-kirki.php:52 lib/theme-config.php:64
+msgid "Install Now"
+msgstr ""
+
+#: lib/include-kirki.php:55
+msgid ""
+"You have installed Kirki. Activate it to take advantage of this theme's "
+"features in the customizer."
+msgstr ""
+
+#: lib/include-kirki.php:57
+msgid "Activate Now"
+msgstr ""
+
+#: lib/plugin-activation.php:62 lib/welcome/sections/getting-started.php:116
+msgid "Kirki Toolkit"
+msgstr ""
+
+#: lib/plugin-activation.php:70 lib/welcome/sections/getting-started.php:152
+msgid "Portfolio Post Type"
+msgstr ""
+
+#: lib/plugin-activation.php:78 lib/welcome/sections/getting-started.php:127
+msgid "Eleganto Advanced Sections"
+msgstr ""
+
+#: lib/plugin-activation.php:86 lib/welcome/sections/getting-started.php:141
+msgid "Contact Form 7"
+msgstr ""
+
+#: lib/theme-config.php:23
+msgid "Sidebars"
+msgstr ""
+
+#: lib/theme-config.php:25
+msgid "Sidebar layouts."
+msgstr ""
+
+#: lib/theme-config.php:29
+msgid "Main styling"
+msgstr ""
+
+#: lib/theme-config.php:31
+msgid "Define theme layout"
+msgstr ""
+
+#: lib/theme-config.php:35
+msgid "Social icons"
+msgstr ""
+
+#: lib/theme-config.php:40
+msgid "Post settings"
+msgstr ""
+
+#: lib/theme-config.php:42
+msgid "Single post settings"
+msgstr ""
+
+#: lib/theme-config.php:46
+msgid "Site Background"
+msgstr ""
+
+#: lib/theme-config.php:55
+msgid "Homepage Settings"
+msgstr ""
+
+#: lib/theme-config.php:61
+msgid "Eleganto Advanced Sections are Deactivated"
+msgstr ""
+
+#: lib/theme-config.php:62
+msgid ""
+"In order to use and setup the homepage sections, please install and activate "
+"the Eleganto Advanced Sections plugin."
+msgstr ""
+
+#: lib/theme-config.php:71
+msgid "Website Smooth Scroll"
+msgstr ""
+
+#: lib/theme-config.php:76
+msgid "Enabled"
+msgstr ""
+
+#: lib/theme-config.php:77
+msgid "Disabled"
+msgstr ""
+
+#: lib/theme-config.php:87
+msgid "Enable the Right Sidebar"
+msgstr ""
+
+#: lib/theme-config.php:96
+msgid "Right Sidebar Size"
+msgstr ""
+
+#: lib/theme-config.php:120
+msgid "Enable the Left Sidebar"
+msgstr ""
+
+#: lib/theme-config.php:129
+msgid "Left Sidebar Size"
+msgstr ""
+
+#: lib/theme-config.php:152 template-part-related.php:16
+msgid "Related posts"
+msgstr ""
+
+#: lib/theme-config.php:153
+msgid "Enable or disable related posts"
+msgstr ""
+
+#: lib/theme-config.php:161
+msgid "Author box"
+msgstr ""
+
+#: lib/theme-config.php:162
+msgid "Enable or disable author box"
+msgstr ""
+
+#: lib/theme-config.php:170
+msgid "Post navigation"
+msgstr ""
+
+#: lib/theme-config.php:171
+msgid "Enable or disable navigation below post content"
+msgstr ""
+
+#: lib/theme-config.php:179
+msgid "Breadcrumbs"
+msgstr ""
+
+#: lib/theme-config.php:180
+msgid "Enable or disable Breadcrumbs"
+msgstr ""
+
+#: lib/theme-config.php:188
+msgid "Breadcrumbs align"
+msgstr ""
+
+#: lib/theme-config.php:193
+msgid "Left"
+msgstr ""
+
+#: lib/theme-config.php:194
+msgid "Right"
+msgstr ""
+
+#: lib/theme-config.php:208
+msgid "Social Icons"
+msgstr ""
+
+#: lib/theme-config.php:209
+msgid "Enable or Disable the social icons"
+msgstr ""
+
+#: lib/theme-config.php:229
+#, php-format
+msgid "Insert your custom link to show the %s icon."
+msgstr ""
+
+#: lib/theme-config.php:230
+msgid "Leave blank to hide icon."
+msgstr ""
+
+#: lib/welcome/sections/actions-required.php:11
+#, php-format
+msgid "Keep up with %s's recommended actions"
+msgstr ""
+
+#: lib/welcome/sections/actions-required.php:16
+msgid "Kirki Toolkit is not installed"
+msgstr ""
+
+#: lib/welcome/sections/actions-required.php:17
+#: lib/welcome/sections/getting-started.php:32
+#: lib/welcome/sections/getting-started.php:117
+msgid ""
+"This theme uses Kirki toolkit plugin to customize theme. This plugin adds "
+"advanced features to the WordPress customizer. Install the plugin before you "
+"go to the customizer."
+msgstr ""
+
+#: lib/welcome/sections/actions-required.php:18
+#: lib/welcome/sections/getting-started.php:37
+#: lib/welcome/sections/getting-started.php:121
+msgid "Install Kirki Toolkit"
+msgstr ""
+
+#: lib/welcome/sections/actions-required.php:25
+msgid "Switch \"Front page displays\" to \"A static page\" "
+msgstr ""
+
+#: lib/welcome/sections/actions-required.php:26
+msgid ""
+"If you want to create unique homepage, create the new page first, set the "
+"template \"Homepage\" and save the page. Then please go to Settings -> "
+"Reading and switch \"Front page displays\" to \"A static page\" and select "
+"the page you created before."
+msgstr ""
+
+#: lib/welcome/sections/actions-required.php:27
+#: lib/welcome/sections/getting-started.php:39
+msgid "Go to Customizer"
+msgstr ""
+
+#: lib/welcome/sections/actions-required.php:39
+msgid "Hooray! There are no recommended actions for you right now."
+msgstr ""
+
+#: lib/welcome/sections/contribute.php:9
+msgid "How can I contribute?"
+msgstr ""
+
+#: lib/welcome/sections/contribute.php:15
+msgid "Found a bug? Want to contribute with a fix?"
+msgstr ""
+
+#: lib/welcome/sections/contribute.php:17
+msgid "Contact us!"
+msgstr ""
+
+#: lib/welcome/sections/contribute.php:20
+#, php-format
+msgid "%s contact page"
+msgstr ""
+
+#: lib/welcome/sections/contribute.php:28
+#, php-format
+msgid "Are you a polyglot? Want to translate %s into your own language?"
+msgstr ""
+
+#: lib/welcome/sections/contribute.php:30
+msgid "Get involved at WordPress.org."
+msgstr ""
+
+#: lib/welcome/sections/contribute.php:33
+#, php-format
+msgid "Translate %s"
+msgstr ""
+
+#: lib/welcome/sections/contribute.php:40
+#, php-format
+msgid "Are you enjoying %s?"
+msgstr ""
+
+#: lib/welcome/sections/contribute.php:42
+#, php-format
+msgid "Rate our theme on %s. We'd really appreciate it!"
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:13
+#, php-format
+msgid "Welcome to %s!"
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:16
+#, php-format
+msgid "A child theme of %s."
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:19
+msgid ""
+"Our elegant and professional Business theme, which turns your Wordpress to "
+"awesome corporate site."
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:20
+#, php-format
+msgid ""
+"We want to make sure you have the best experience using %1s and that is why "
+"we gathered here all the necessary informations for you. We hope you will "
+"enjoy using %2s, as much as we enjoy creating great products."
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:28
+#: lib/welcome/welcome-screen.php:79
+msgid "Getting started"
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:30
+msgid "Customize everything in a single place."
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:31
+msgid ""
+"Using the WordPress Customizer you can easily customize every aspect of the "
+"theme."
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:35
+msgid "Kirki is already activated"
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:48
+msgid "FAQ"
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:53
+msgid "Set a Static Home Page (Front Page)"
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:54
+msgid ""
+"By default the front page of your site will display blog posts. We "
+"recommended to set static home page as front page. Create the new page "
+"first, set the template \"Homepage\" and save the page. Then please go to "
+"Customize -> Static Front Page and switch \"Front page displays\" to \"A "
+"static page\" and select the page you created before."
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:55
+#: lib/welcome/sections/getting-started.php:70
+#: lib/welcome/sections/getting-started.php:76
+#: lib/welcome/sections/getting-started.php:84
+#: lib/welcome/sections/getting-started.php:91
+msgid "View how to do this"
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:68
+msgid "Install Eleganto Advanced Sections plugin"
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:69
+msgid ""
+"To setup the homepage you need to install and activate Eleganto Advanced "
+"Sections plugin. This plugin allows you completely setup the homepage layout."
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:74
+msgid "Homepage Setup"
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:75
+msgid ""
+"In the below documentation you will find an easy way to build an unique "
+"homepage design"
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:82
+msgid "Install Contact Form 7 plugin"
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:83
+#: lib/welcome/sections/getting-started.php:142
+msgid ""
+"This plugin allows you put the contact form inside homepage contact section"
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:89
+msgid "Create a child theme"
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:90
+msgid ""
+"If you want to make changes to the theme's files, those changes are likely "
+"to be overwritten when you next update the theme. In order to prevent that "
+"from happening, you need to create a child theme. For this, please follow "
+"the documentation below."
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:102
+msgid "View full documentation"
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:103
+#, php-format
+msgid ""
+"Need more details? Please check our full documentation for detailed "
+"information on how to use %s."
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:104
+msgid "Read full documentation"
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:111
+msgid "Recommended plugins"
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:119
+#: lib/welcome/sections/getting-started.php:130
+#: lib/welcome/sections/getting-started.php:144
+#: lib/welcome/sections/getting-started.php:155
+msgid "Already activated"
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:128
+msgid "Eleganto Advanced Sections allows you setup homepage layout.. "
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:132
+msgid "Install Eleganto Advanced Sections"
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:146
+msgid "Install Contact Form 7"
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:153
+msgid "This plugin enable a portfolio post type and taxonomies.."
+msgstr ""
+
+#: lib/welcome/sections/getting-started.php:157
+msgid "Install Portfolio Post Type"
+msgstr ""
+
+#: lib/welcome/sections/support.php:9
+msgid "Need more details?"
+msgstr ""
+
+#: lib/welcome/sections/support.php:11
+#, php-format
+msgid ""
+"Please check our full documentation for detailed information on how to use "
+"%s."
+msgstr ""
+
+#: lib/welcome/sections/support.php:14
+#, php-format
+msgid "%s documentation"
+msgstr ""
+
+#: lib/welcome/welcome-screen.php:59
+#, php-format
+msgid "About %s"
+msgstr ""
+
+#: lib/welcome/welcome-screen.php:80
+msgid "Actions recommended"
+msgstr ""
+
+#: lib/welcome/welcome-screen.php:81
+msgid "Contribute"
+msgstr ""
+
+#: lib/welcome/welcome-screen.php:82
+msgid "Support"
+msgstr ""
+
+#: lib/wp_bootstrap_navwalker.php:188
+msgid "Add a menu"
+msgstr ""
+
+#: search.php:22
+#, php-format
+msgid "%s Search Results for \"%s\""
+msgstr ""
+
+#: template-part-footernav.php:8 template-part-head.php:30
+#: template-part-topnav.php:7
+msgid "Toggle navigation"
+msgstr ""
+
+#: template-part-postauthor.php:3
+msgid "About The Author"
+msgstr ""
+
+#: template-part-postmeta.php:4
+msgid "0"
+msgstr ""
+
+#: template-part-postmeta.php:4
+msgid "1"
+msgstr ""
+
+#: template-part-postmeta.php:4
+msgid "%"
+msgstr ""
+
+#: template-part-postmeta.php:4
+msgid "Off"
+msgstr ""
+
+#: template-part-postmeta.php:6
+msgid "Edit"
+msgstr ""
+
+#: template-part-topnav.php:12
+msgid "Menu"
+msgstr ""
+
+#: templates/homepage-blog_section.php:36
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#: templates/homepage-carousel_section.php:54 templates/homepage-slider.php:30
+msgid "Read More"
+msgstr ""
+
+#: templates/homepage-contact_section.php:35
+msgid " About Us"
+msgstr ""
+
+#: templates/homepage-contact_section.php:41
+msgid " Our Address"
+msgstr ""
+
+#: templates/homepage-contact_section.php:50
+msgid " Phone"
+msgstr ""
+
+#: templates/homepage-contact_section.php:56
+msgid " Email Us"
+msgstr ""
+
+#: templates/homepage-portfolio_section.php:30
+msgid "All"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Select"
+#~ msgstr ""
+#~ "Vyberte stránku, která zobrazí podmínky používání pro registraci partnerů"

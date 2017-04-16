@@ -1,0 +1,874 @@
+/*Css for popup styles - Animations*/
+
+
+/*################################  FADE  ###################################*/
+
+@keyframes wpdevart_lb_fade {
+	0%{
+		opacity:0;
+	}
+	100%{
+		opacity:1;
+	}
+  
+
+}
+@-webkit-keyframes wpdevart_lb_fade {
+  	0%{
+		opacity:0;
+	}
+	100%{
+		opacity:1;
+	}
+}
+@keyframes wpdevart_lb_fade_remove {
+	0%{
+		opacity:1;
+	}
+	100%{
+		opacity:0;
+	}
+  
+
+}
+
+@-webkit-keyframes wpdevart_lb_fade_remove {
+  	0%{
+		opacity:1;
+	}
+	100%{
+		opacity:0;
+	}
+}
+
+.wpdevart_lb_fade {
+	
+  -webkit-animation-name: wpdevart_lb_fade;
+  animation-name: wpdevart_lb_fade;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+.wpdevart_lb_fade_remove {
+	
+  -webkit-animation-name: wpdevart_lb_fade_remove;
+  animation-name: wpdevart_lb_fade_remove;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+
+
+/*################################  ZOOM outic in  ###################################*/
+/*################################  ZOOM outic in  ###################################*/
+/*################################  ZOOM outic in  ###################################*/
+@keyframes wpdevart_lb_zoom_out {
+	0%{
+		transform:scale(1.5,1.5);
+		opacity:0;
+	}
+	100%{
+		transform:scale(1,1);
+		opacity:1;
+	}
+  
+
+}
+@-webkit-keyframes wpdevart_lb_zoom_out {
+  	0%{
+		transform:scale(1.5,1.5);
+		opacity:0;
+	}
+	100%{
+		transform:scale(1,1);
+		opacity:1;
+	}
+}
+@keyframes wpdevart_lb_zoom_out_remove {
+	0%{
+		transform:scale(1,1);
+		opacity:1;
+	}
+	100%{
+		transform:scale(1.5,1.5);
+		opacity:0;
+	}
+  
+
+}
+
+@-webkit-keyframes wpdevart_lb_zoom_out_remove {
+  	0%{
+		transform:scale(1,1);
+		opacity:1;
+	}
+	100%{
+		transform:scale(1.5,1.5);
+		opacity:0;
+	}
+}
+
+.wpdevart_lb_zoom_out {
+	
+  -webkit-animation-name: wpdevart_lb_zoom_out;
+  animation-name: wpdevart_lb_zoom_out;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+.wpdevart_lb_zoom_out_remove {
+	
+  -webkit-animation-name: wpdevart_lb_zoom_out_remove;
+  animation-name: wpdevart_lb_zoom_out_remove;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+/*################################  ZOOM in out  ###################################*/
+/*################################  ZOOM in out  ###################################*/
+/*################################  ZOOM in out  ###################################*/
+@keyframes wpdevart_lb_zoom_in {
+	0%{
+		transform:scale(0.2,0.2);
+		opacity:0;
+	}
+	100%{
+		transform:scale(1,1);
+		opacity:1;
+	}
+  
+
+}
+@-webkit-keyframes wpdevart_lb_zoom_in {
+  	0%{
+		transform:scale(0.2,0.2);
+		opacity:0;
+	}
+	100%{
+		transform:scale(1,1);
+		opacity:1;
+	}
+}
+@keyframes wpdevart_lb_zoom_in_remove {
+	0%{
+		transform:scale(1,1);
+		opacity:1;
+	}
+	100%{
+		transform:scale(0.1,0.1);
+		opacity:0;
+	}
+  
+
+}
+
+@-webkit-keyframes wpdevart_lb_zoom_in_remove {
+  	0%{
+		transform:scale(1,1);
+		opacity:1;
+	}
+	100%{
+		transform:scale(0.1,0.1);
+		opacity:0;
+	}
+}
+
+.wpdevart_lb_zoom_in {
+	
+  -webkit-animation-name: wpdevart_lb_zoom_in;
+  animation-name: wpdevart_lb_zoom_in;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+.wpdevart_lb_zoom_in_remove {
+	
+  -webkit-animation-name: wpdevart_lb_zoom_in_remove;
+  animation-name: wpdevart_lb_zoom_in_remove;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+
+/*################################  SLIDE IN FROM LEFT  ###################################*/
+/*################################  SLIDE IN FROM LEFT  ###################################*/
+/*################################  SLIDE IN FROM LEFT  ###################################*/
+@keyframes wpdevart_lb_slide_in_left {
+	0%{
+		opacity:0;
+		left:0px;
+	}
+	100%{
+		opacity:1;
+	}
+  
+
+}
+@-webkit-keyframes wpdevart_lb_slide_in_left {
+  	0%{
+		opacity:0;
+		left:0px;
+	}
+	100%{
+		opacity:1;
+	}
+}
+@keyframes wpdevart_lb_slide_in_left_remove {
+	0%{
+		opacity:1;
+	}
+	100%{
+		opacity:0;
+		left:0px;
+	}
+  
+
+}
+
+@-webkit-keyframes wpdevart_lb_slide_in_left_remove {
+  	0%{
+		opacity:1;
+	}
+	100%{
+		opacity:0;
+		left:0px;
+	}
+}
+
+.wpdevart_lb_slide_in_left {
+	
+  -webkit-animation-name: wpdevart_lb_slide_in_left;
+  animation-name: wpdevart_lb_slide_in_left;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+.wpdevart_lb_slide_in_left_remove {
+	
+  -webkit-animation-name: wpdevart_lb_slide_in_left_remove;
+  animation-name: wpdevart_lb_slide_in_left_remove;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+
+
+/*################################  SLIDE IN FROM RIGHT  ###################################*/
+/*################################  SLIDE IN FROM RIGHT  ###################################*/
+/*################################  SLIDE IN FROM RIGHT  ###################################*/
+@keyframes wpdevart_lb_slide_in_right {
+	0%{
+		opacity:0;
+		left:100%;
+	}
+	100%{
+		opacity:1;
+	}
+  
+
+}
+@-webkit-keyframes wpdevart_lb_slide_in_right {
+  	0%{
+		opacity:0;
+		left:100%;
+	}
+	100%{
+		opacity:1;
+	}
+}
+@keyframes wpdevart_lb_slide_in_right_remove {
+	0%{
+		opacity:1;
+	}
+	100%{
+		opacity:0;
+		left:100%;
+	}
+  
+
+}
+
+@-webkit-keyframes wpdevart_lb_slide_in_right_remove {
+  	0%{
+		opacity:1;
+	}
+	100%{
+		opacity:0;
+		left:100%;
+	}
+}
+
+.wpdevart_lb_slide_in_right {
+	
+  -webkit-animation-name: wpdevart_lb_slide_in_right;
+  animation-name: wpdevart_lb_slide_in_right;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+.wpdevart_lb_slide_in_right_remove {
+	
+  -webkit-animation-name: wpdevart_lb_slide_in_right_remove;
+  animation-name: wpdevart_lb_slide_in_right_remove;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+
+/*################################  SLIDE IN FROM RIGHT  ###################################*/
+/*################################  SLIDE IN FROM RIGHT  ###################################*/
+/*################################  SLIDE IN FROM RIGHT  ###################################*/
+@keyframes wpdevart_lb_slide_from_top {
+	0%{
+		opacity:0;
+		top:0px;
+	}
+	100%{
+		opacity:1;
+	}
+  
+
+}
+@-webkit-keyframes wpdevart_lb_slide_from_top {
+  	0%{
+		opacity:0;
+		top:0px;
+	}
+	100%{
+		opacity:1;
+	}
+}
+@keyframes wpdevart_lb_slide_from_top_remove {
+	0%{
+		opacity:1;
+	}
+	100%{
+		opacity:0;
+		top:0px;
+	}
+  
+
+}
+
+@-webkit-keyframes wpdevart_lb_slide_from_top_remove {
+  	0%{
+		opacity:1;
+	}
+	100%{
+		opacity:0;
+		top:0px;
+	}
+}
+
+.wpdevart_lb_slide_from_top {
+	
+  -webkit-animation-name: wpdevart_lb_slide_from_top;
+  animation-name: wpdevart_lb_slide_from_top;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+.wpdevart_lb_slide_from_top_remove {
+	
+  -webkit-animation-name: wpdevart_lb_slide_from_top_remove;
+  animation-name: wpdevart_lb_slide_from_top_remove;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+
+/*################################  SLIDE IN FROM bottom  ###################################*/
+/*################################  SLIDE IN FROM bottom  ###################################*/
+/*################################  SLIDE IN FROM bottom  ###################################*/
+@keyframes wpdevart_lb_slide_from_bottom {
+	0%{
+		opacity:0;
+		top:70%;
+	}
+	100%{
+		opacity:1;
+	}
+  
+
+}
+@-webkit-keyframes wpdevart_lb_slide_from_bottom {
+  	0%{
+		opacity:0;
+		top:70%;
+	}
+	100%{
+		opacity:1;
+	}
+}
+@keyframes wpdevart_lb_slide_from_bottom_remove {
+	0%{
+		opacity:1;
+	}
+	100%{
+		opacity:0;
+		top:70%;
+	}
+  
+
+}
+
+@-webkit-keyframes wpdevart_lb_slide_from_bottom_remove {
+  	0%{
+		opacity:1;
+	}
+	100%{
+		opacity:0;
+		top:70%;
+	}
+}
+
+.wpdevart_lb_slide_from_bottom {
+	
+  -webkit-animation-name: wpdevart_lb_slide_from_bottom;
+  animation-name: wpdevart_lb_slide_from_bottom;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+.wpdevart_lb_slide_from_bottom_remove {
+	
+  -webkit-animation-name: wpdevart_lb_slide_from_bottom_remove;
+  animation-name: wpdevart_lb_slide_from_bottom_remove;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+
+/*################################  Newspaper  ###################################*/
+/*################################  Newspaper  ###################################*/
+/*################################  Newspaper  ###################################*/
+@keyframes wpdevart_lb_newspaper {
+	0%{
+		opacity:0;
+		-ms-transform: rotate(720deg) scale(0.1,0.1); /* IE 9 */
+		-webkit-transform: rotate(720deg) scale(0.1,0.1);/* Safari browser */
+		transform: rotate(720deg) scale(0.1,0.1);/* Standard syntax */
+	}
+	100%{
+		opacity:1;
+		-ms-transform: rotate(0deg) scale(1,1); /* IE 9 */
+		-webkit-transform: rotate(0deg) scale(1,1); /* Safari browser */
+		transform: rotate(0deg) scale(1,1); /* Standard syntax */
+	}
+}
+@-webkit-keyframes wpdevart_lb_newspaper {
+	0%{
+		opacity:0;
+		-ms-transform: rotate(720deg) scale(0.1,0.1); /* IE 9 */
+		-webkit-transform: rotate(720deg) scale(0.1,0.1);/* Safari browser */
+		transform: rotate(720deg) scale(0.1,0.1);/* Standard syntax */
+	}
+	100%{
+		opacity:1;
+		-ms-transform: rotate(0deg) scale(1,1); /* IE 9 */
+		-webkit-transform: rotate(0deg) scale(1,1); /* Safari browser */
+		transform: rotate(0deg) scale(1,1); /* Standard syntax */
+	}
+}
+@keyframes wpdevart_lb_newspaper_remove {
+	0%{
+		opacity:1;
+		-ms-transform: rotate(0deg) scale(1,1); /* IE 9 */
+		-webkit-transform: rotate(0deg) scale(1,1); /* Safari */
+		transform: rotate(0deg) scale(1,1); /* Standard syntax */
+	
+	}
+	100%{
+		opacity:0;
+		-ms-transform: rotate(720deg) scale(0.1,0.1); /* IE 9 */
+		-webkit-transform: rotate(720deg) scale(0.1,0.1);/* Safari */
+		transform: rotate(720deg) scale(0.1,0.1);/* Standard syntax */		
+	}
+
+}
+
+@-webkit-keyframes wpdevart_lb_newspaper_remove {
+	0%{
+		opacity:1;
+		-ms-transform: rotate(0deg) scale(1,1); /* IE 9 */
+		-webkit-transform: rotate(0deg) scale(1,1); /* Safari */
+		transform: rotate(0deg) scale(1,1); /* Standard syntax */
+	
+	}
+	100%{
+		opacity:0;
+		-ms-transform: rotate(720deg) scale(0.1,0.1); /* IE 9 */
+		-webkit-transform: rotate(720deg) scale(0.1,0.1);/* Safari */
+		transform: rotate(720deg) scale(0.1,0.1);/* Standard syntax */		
+	}
+}
+
+.wpdevart_lb_newspaper {
+	
+  -webkit-animation-name: wpdevart_lb_newspaper;
+  animation-name: wpdevart_lb_newspaper;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+.wpdevart_lb_newspaper_remove {
+	
+  -webkit-animation-name: wpdevart_lb_newspaper_remove;
+  animation-name: wpdevart_lb_newspaper_remove;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+
+
+/*################################  Flip Horizontal Left  ###################################*/
+/*################################  Flip Horizontal Left  ###################################*/
+/*################################  Flip Horizontal Left  ###################################*/
+@keyframes wpdevart_lb_flip_hor_left {
+	0%{
+		opacity:0;
+		-ms-transform: rotateY(90deg); /* IE 9 */
+		-webkit-transform: rotateY(90deg);/* Safari */
+		transform: rotateY(90deg);/* Standard syntax */
+	}
+	100%{
+		opacity:1;
+		-ms-transform: rotateY(0deg); /* IE 9 */
+		-webkit-transform: rotateY(0deg);/* Safari */
+		transform: rotateY(0deg);/* Standard syntax */
+	}
+}
+@-webkit-keyframes wpdevart_lb_flip_hor_left {
+	0%{
+		opacity:0;
+		-ms-transform: rotateY(90deg); /* IE 9 */
+		-webkit-transform: rotateY(90deg);/* Safari */
+		transform: rotateY(90deg);/* Standard syntax */
+	}
+	100%{
+		opacity:1;
+		-ms-transform: rotateY(0deg); /* IE 9 */
+		-webkit-transform: rotateY(0deg);/* Safari */
+		transform: rotateY(0deg);/* Standard syntax */
+	}
+}
+@keyframes wpdevart_lb_flip_hor_left_remove {
+	0%{
+		opacity:1;
+		-ms-transform: rotateY(0deg); /* IE 9 */
+		-webkit-transform: rotateY(0deg);/* Safari */
+		transform: rotateY(0deg);/* Standard syntax */
+
+	}
+	100%{
+		opacity:0;
+		-ms-transform: rotateY(90deg); /* IE 9 */
+		-webkit-transform: rotateY(90deg);/* Safari */
+		transform: rotateY(90deg);/* Standard syntax */
+
+	}
+
+}
+
+@-webkit-keyframes wpdevart_lb_flip_hor_left_remove {
+	0%{
+		opacity:1;
+		-ms-transform: rotateY(0deg); /* IE 9 */
+		-webkit-transform: rotateY(0deg);/* Safari */
+		transform: rotateY(0deg);/* Standard syntax */
+
+	}
+	100%{
+		opacity:0;
+		-ms-transform: rotateY(90deg); /* IE 9 */
+		-webkit-transform: rotateY(90deg);/* Safari */
+		transform: rotateY(90deg);/* Standard syntax */
+
+	}
+}
+
+.wpdevart_lb_flip_hor_left {
+	
+  -webkit-animation-name: wpdevart_lb_flip_hor_left;
+  animation-name: wpdevart_lb_flip_hor_left;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+.wpdevart_lb_flip_hor_left_remove {
+	
+  -webkit-animation-name: wpdevart_lb_flip_hor_left_remove;
+  animation-name: wpdevart_lb_flip_hor_left_remove;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+
+/*################################  Flip Horizontal right  ###################################*/
+/*################################  Flip Horizontal right  ###################################*/
+/*################################  Flip Horizontal right  ###################################*/
+@keyframes wpdevart_lb_flip_hor_right {
+	0%{
+		opacity:0;
+		-ms-transform: rotateY(-90deg); /* IE 9 */
+		-webkit-transform: rotateY(-90deg);/* Safari */
+		transform: rotateY(-90deg);/* Standard syntax */
+	}
+	100%{
+		opacity:1;
+		-ms-transform: rotateY(0deg); /* IE 9 */
+		-webkit-transform: rotateY(0deg);/* Safari */
+		transform: rotateY(0deg);/* Standard syntax */
+	}
+}
+@-webkit-keyframes wpdevart_lb_flip_hor_right {
+	0%{
+		opacity:0;
+		-ms-transform: rotateY(-90deg); /* IE 9 */
+		-webkit-transform: rotateY(-90deg);/* Safari */
+		transform: rotateY(-90deg);/* Standard syntax */
+	}
+	100%{
+		opacity:1;
+		-ms-transform: rotateY(0deg); /* IE 9 */
+		-webkit-transform: rotateY(0deg);/* Safari */
+		transform: rotateY(0deg);/* Standard syntax */
+	}
+}
+@keyframes wpdevart_lb_flip_hor_right_remove {
+	0%{
+		opacity:1;
+		-ms-transform: rotateY(0deg); /* IE 9 */
+		-webkit-transform: rotateY(0deg);/* Safari */
+		transform: rotateY(0deg);/* Standard syntax */
+
+	}
+	100%{
+		opacity:0;
+		-ms-transform: rotateY(-90deg); /* IE 9 */
+		-webkit-transform: rotateY(-90deg);/* Safari */
+		transform: rotateY(-90deg);/* Standard syntax */
+
+	}
+
+}
+
+@-webkit-keyframes wpdevart_lb_flip_hor_right_remove {
+	0%{
+		opacity:1;
+		-ms-transform: rotateY(0deg); /* IE 9 */
+		-webkit-transform: rotateY(0deg);/* Safari */
+		transform: rotateY(0deg);/* Standard syntax */
+
+	}
+	100%{
+		opacity:0;
+		-ms-transform: rotateY(-90deg); /* IE 9 */
+		-webkit-transform: rotateY(-90deg);/* Safari */
+		transform: rotateY(-90deg);/* Standard syntax */
+
+	}
+}
+
+.wpdevart_lb_flip_hor_right {
+	
+  -webkit-animation-name: wpdevart_lb_flip_hor_right;
+  animation-name: wpdevart_lb_flip_hor_right;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+.wpdevart_lb_flip_hor_right_remove {
+	
+  -webkit-animation-name: wpdevart_lb_flip_hor_right_remove;
+  animation-name: wpdevart_lb_flip_hor_right_remove;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+
+
+/*################################  Flip vertical top  ###################################*/
+/*################################  Flip vertical top  ###################################*/
+/*################################  Flip vertical top  ###################################*/
+
+@keyframes wpdevart_lb_flip_ver_top {
+	0%{
+		opacity:0;
+		-ms-transform: rotateX(-90deg); /* IE 9 */
+		-webkit-transform: rotateX(-90deg);/* Safari */
+		transform: rotateX(-90deg);/* Standard syntax */
+	}
+	100%{
+		opacity:1;
+		-ms-transform: rotateX(0deg); /* IE 9 */
+		-webkit-transform: rotateX(0deg);/* Safari */
+		transform: rotateX(0deg);/* Standard syntax */
+	}
+}
+@-webkit-keyframes wpdevart_lb_flip_ver_top {
+	0%{
+		opacity:0;
+		-ms-transform: rotateX(-90deg); /* IE 9 */
+		-webkit-transform: rotateX(-90deg);/* Safari */
+		transform: rotateX(-90deg);/* Standard syntax */
+	}
+	100%{
+		opacity:1;
+		-ms-transform: rotateX(0deg); /* IE 9 */
+		-webkit-transform: rotateX(0deg);/* Safari */
+		transform: rotateX(0deg);/* Standard syntax */
+	}
+}
+@keyframes wpdevart_lb_flip_ver_top_remove {
+	0%{
+		opacity:1;
+		-ms-transform: rotateX(0deg); /* IE 9 */
+		-webkit-transform: rotateX(0deg);/* Safari */
+		transform: rotateX(0deg);/* Standard syntax */
+
+	}
+	100%{
+		opacity:0;
+		-ms-transform: rotateX(-90deg); /* IE 9 */
+		-webkit-transform: rotateX(-90deg);/* Safari */
+		transform: rotateX(-90deg);/* Standard syntax */
+
+	}
+
+}
+
+@-webkit-keyframes wpdevart_lb_flip_ver_top_remove {
+	0%{
+		opacity:1;
+		-ms-transform: rotateX(0deg); /* IE 9 */
+		-webkit-transform: rotateX(0deg);/* Safari */
+		transform: rotateX(0deg);/* Standard syntax */
+
+	}
+	100%{
+		opacity:0;
+		-ms-transform: rotateX(-90deg); /* IE 9 */
+		-webkit-transform: rotateX(-90deg);/* Safari */
+		transform: rotateX(-90deg);/* Standard syntax */
+
+	}
+}
+
+.wpdevart_lb_flip_ver_top {
+	
+  -webkit-animation-name: wpdevart_lb_flip_ver_top;
+  animation-name: wpdevart_lb_flip_ver_top;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+.wpdevart_lb_flip_ver_top_remove {
+	
+  -webkit-animation-name: wpdevart_lb_flip_ver_top_remove;
+  animation-name: wpdevart_lb_flip_ver_top_remove;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+/*################################  Flip vertical bottom  ###################################*/
+/*################################  Flip vertical bottom  ###################################*/
+/*################################  Flip vertical bottom  ###################################*/
+
+@keyframes wpdevart_lb_flip_ver_bottom {
+	0%{
+		opacity:0;
+		-ms-transform: rotateX(90deg); /* IE 9 */
+		-webkit-transform: rotateX(90deg);/* Safari */
+		transform: rotateX(90deg);/* Standard syntax */
+	}
+	100%{
+		opacity:1;
+		-ms-transform: rotateX(0deg); /* IE 9 */
+		-webkit-transform: rotateX(0deg);/* Safari */
+		transform: rotateX(0deg);/* Standard syntax */
+	}
+}
+@-webkit-keyframes wpdevart_lb_flip_ver_bottom {
+	0%{
+		opacity:0;
+		-ms-transform: rotateX(90deg); /* IE 9 */
+		-webkit-transform: rotateX(90deg);/* Safari */
+		transform: rotateX(90deg);/* Standard syntax */
+	}
+	100%{
+		opacity:1;
+		-ms-transform: rotateX(0deg); /* IE 9 */
+		-webkit-transform: rotateX(0deg);/* Safari */
+		transform: rotateX(0deg);/* Standard syntax */
+	}
+}
+@keyframes wpdevart_lb_flip_ver_bottom_remove {
+	0%{
+		opacity:1;
+		-ms-transform: rotateX(0deg); /* IE 9 */
+		-webkit-transform: rotateX(0deg);/* Safari */
+		transform: rotateX(0deg);/* Standard syntax */
+
+	}
+	100%{
+		opacity:0;
+		-ms-transform: rotateX(90deg); /* IE 9 */
+		-webkit-transform: rotateX(90deg);/* Safari */
+		transform: rotateX(90deg);/* Standard syntax */
+
+	}
+
+}
+
+@-webkit-keyframes wpdevart_lb_flip_ver_bottom_remove {
+	0%{
+		opacity:1;
+		-ms-transform: rotateX(0deg); /* IE 9 */
+		-webkit-transform: rotateX(0deg);/* Safari */
+		transform: rotateX(0deg);/* Standard syntax */
+
+	}
+	100%{
+		opacity:0;
+		-ms-transform: rotateX(90deg); /* IE 9 */
+		-webkit-transform: rotateX(90deg);/* Safari */
+		transform: rotateX(90deg);/* Standard syntax */
+
+	}
+}
+
+.wpdevart_lb_flip_ver_bottom {
+	
+  -webkit-animation-name: wpdevart_lb_flip_ver_bottom;
+  animation-name: wpdevart_lb_flip_ver_bottom;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+.wpdevart_lb_flip_ver_bottom_remove {
+	
+  -webkit-animation-name: wpdevart_lb_flip_ver_bottom_remove;
+  animation-name: wpdevart_lb_flip_ver_bottom_remove;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
