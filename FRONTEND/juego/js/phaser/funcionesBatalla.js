@@ -96,7 +96,7 @@ var funcionesBatalla={
         }
     },
 
-    /*clickBotonPoder: function(barra){
+    clickBotonPoder: function(barra){
         console.log("Click sobre boton de poder");
         if(!movH[2]&&barra.width>=costoAtaqueJ){
             console.log("Entra if del boton");
@@ -107,7 +107,7 @@ var funcionesBatalla={
                 },this);
             }
             movH[2]=true;            
-    },*/
+    },
     
     activarPersonalidadJ :function(){
         var ataquePersonalidadB=game.add.sprite(0,0,'ataquePersonalidadB')
