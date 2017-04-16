@@ -27,7 +27,7 @@ var perfilJugador = function(game){};
             game.add.button(0, 0,'botonVolver', this.verNavegacion, 1, 1, 0, 2);
             game.add.button(90, 290,'boton-personaje', null, 0, 0, 0, 0);
             game.add.button(450, 290,'boton-jefes', null, 0, 0, 0, 0);
-            game.add.button(90, 450,'boton-trofeo', this.verLogros, 0, 0, 0, 0);
+            game.add.button(90, 450,'boton-trofeo', null, 0, 0, 0, 0);
             game.add.button(450, 450,'boton-alfanumerico', null, 0, 0, 0, 0);
 
             game.add.text(400, 50, "Perfil del usuario", {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
@@ -40,9 +40,9 @@ var perfilJugador = function(game){};
             game.state.start("navegacion");
         },
         
-        verLogros: function(){
+        /*verLogros: function(){
             game.state.start("logros");
-        },
+        },*/
 
         update : function(){
 
