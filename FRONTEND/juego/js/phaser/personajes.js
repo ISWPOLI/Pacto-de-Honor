@@ -4,16 +4,17 @@
 var personajesBuenos={
 	"idPUno":{"nombre":"Andres Gallo","rutaSprite":"../img/sprites/personajesBuenos/gallo.png",
 			  "rutaAvatar":"../img/componentes/batalla/caraGallo.png",
+              "rutaBotonPoder":"../img/sprites/poderes/PoderesBotones/botonPoderGallo.png",
 			  "rutaAtaque":"../img/sprites/poderes/PoderesPersonalidadBuenos/AndresGallo.png",
 			  "rutaImpactoPersonalidad":"../img/sprites/poderes/PoderesImpactos/impactoGallo.png",
 			  "daño":[6,2],"energia":1,"defensa":10,"vida":200},
 
 	"idPDos":{"nombre":"Daniel Leon","rutaSprite":"../img/sprites/personajesBuenos/leon.png",
 			  "rutaAvatar":"../img/componentes/batalla/caraLeon.png",
+              "rutaBotonPoder":"../img/sprites/poderes/PoderesBotones/botonPoderLeon.png",
 			  "rutaAtaque":"../img/sprites/poderes/PoderesPersonalidadBuenos/DanielLeon.png",
 			  "rutaImpactoPersonalidad":"../img/sprites/poderes/PoderesImpactos/impactoLeon.png",
-			  "daño":[6,2],"energia":1,"defensa":10,"vida":200}		  
-
+			  "daño":[6,2],"energia":1,"defensa":10,"vida":200}
 }
 
 var personajesMalos={
@@ -26,7 +27,7 @@ var personajesMalos={
 			  "rutaImpactoPlagio":"../img/sprites/poderes/PoderesImpactos/impactoOso2.png",
 			  "daño":[6,2],"energia":[0.5,1],"defensa":10,"vida":200},
 
-	"idPDos":{"nombre":"Fabian  Babuino","rutaSprite":"../img/sprites/personajesMalos/babuino.png",
+	"idPDos":{"nombre":"Fabian Babuino","rutaSprite":"../img/sprites/personajesMalos/babuino.png",
 			  "rutaAvatar":"../img/componentes/batalla/caraBabuino.png",
 			  //se toma otro sprtite porque el del oso no esta 
 			  "rutaAtaque":"../img/sprites/poderes/PoderesPersonalidadMalos/FabianBabuino  PERSONALIDAD.png",
@@ -34,5 +35,4 @@ var personajesMalos={
 			  "rutaImpactoPersonalidad":"../img/sprites/poderes/PoderesImpactos/impactoOso1.png",
 			  "rutaImpactoPlagio":"../img/sprites/poderes/PoderesImpactos/impactoOso2.png",
 			  "daño":[6,2],"energia":[0.5,1],"defensa":10,"vida":200}
-
 }
