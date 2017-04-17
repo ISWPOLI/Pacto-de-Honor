@@ -11,7 +11,6 @@ var rank = [
     ['5', '[avatar5]', 'name5', 'lvl5']
     ];
 
-
 var rankings = function(game){};
     rankings.prototype = {
         preload: function(){

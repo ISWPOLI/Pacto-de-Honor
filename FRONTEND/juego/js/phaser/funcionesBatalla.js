@@ -4,18 +4,19 @@ var funcionesBatalla={
     game.load.image('fondo', "../img/escenarios/escenariosSecundarios/nivel1.png");
 		game.load.spritesheet('personajeJugador', personajesBuenos[idPJ].rutaSprite, 200, 200);
 		game.load.image('avatarPersonajeJugador', personajesBuenos[idPJ].rutaAvatar);
-		game.load.spritesheet('personajeComputadora', personajesMalos[idPC].rutaSprite,200,200);
+		game.load.spritesheet('personajeComputadora', personajesMalos[idPC].rutaSprite, 200, 200);
 		game.load.image('avatarPersonajeComputadora', personajesMalos[idPC].rutaAvatar);
 		game.load.image('pausa', '../img/componentes/batalla/pausa.png');
 		game.load.image('menup', '../img/componentes/batalla/menup.png');
 		game.load.image('ataquePersonalidadV', personajesMalos[idPC].rutaAtaque);
-		game.load.spritesheet('ataquePlagio', personajesMalos[idPC].rutaAtaquePlagio,500,500);
+		game.load.spritesheet('ataquePlagio', personajesMalos[idPC].rutaAtaquePlagio, 500, 500);
 		game.load.image('ataquePersonalidadB', personajesBuenos[idPJ].rutaAtaque);
-        game.load.spritesheet('impactoPersonalidadJugador', personajesBuenos[idPJ].rutaImpactoPersonalidad,201,160);
-        game.load.spritesheet('impactoPersonalidadComputadora', personajesMalos[idPC].rutaImpactoPersonalidad,161,145);
-        game.load.spritesheet('impactoPlagioComputadora', personajesMalos[idPC].rutaImpactoPlagio,277,277);
+		game.load.spritesheet('botonPoder', personajesBuenos[idPJ].rutaBotonPoder, 62, 62);
+        game.load.spritesheet('impactoPersonalidadJugador', personajesBuenos[idPJ].rutaImpactoPersonalidad, 201, 160);
+        game.load.spritesheet('impactoPersonalidadComputadora', personajesMalos[idPC].rutaImpactoPersonalidad, 161, 145);
+        game.load.spritesheet('impactoPlagioComputadora', personajesMalos[idPC].rutaImpactoPlagio, 277, 277);
 	},
-    //inicinializa todos los estados de los sprites de los personajes 
+    //inicializa todos los estados de los sprites de los personajes 
 	iniciarSprite:function(sprite){
 		sprite.animations.add('quieto', [1], 10, true);
     	sprite.animations.add('correr', [6, 7, 8, 9, 11, 12, 13, 14], 10, true);
@@ -96,10 +97,29 @@ var funcionesBatalla={
             personajeJugador.animations.play('punos');
             personajeJugador.body.x+=1;
             movH[1]=true;
-        }else{          
+        }else{
             personajeJugador.animations.play('quieto');
         }
     },
+    
+    //Esta función se activa al oprimir el botón del poder del personaje
+    clickBotonPoder: function(){
+        if(movH[2]){
+            if(ataquePersonalidadJ.body.onFloor()){
+                    ataquePersonalidadJ.kill();
+                    movH[2]=false;
+                }
+        }
+        if(!movH[2]&&energiaVerdeJugador.width>=costoAtaqueJ){
+                energiaVerdeJugador.width=energiaVerdeJugador.width-costoAtaqueJ;
+                personajeJugador.animations.play('especial');
+                game.time.events.add(100,function(){
+                    funcionesBatalla.activarPersonalidadJ();
+                    movH[2]=true;
+                 },this);
+            }
+    },
+    
     //esta funcion activa el poder de la computadora y lo inicializa como una bala
     activarPersonalidadC :function(){
          if(!movV[2]&&energiaVerdeComputadora.width>=costoAtaqueC){
@@ -137,11 +157,10 @@ var funcionesBatalla={
     },
     //esta funcion activa el poder del jugador
     activarPersonalidadJ :function(){
-        ataquePersonalidadJ=game.add.sprite(personajeComputadora.body.x,0,'ataquePersonalidadB')
+        ataquePersonalidadJ=game.add.sprite(personajeComputadora.body.x,0,'ataquePersonalidadB');
         game.physics.arcade.enable(ataquePersonalidadJ);
         ataquePersonalidadJ.body.collideWorldBounds = true; 
         ataquePersonalidadJ.body.gravity.y = 300;
-
     },
     /*Se llama cuando la energia no esta al 100%
     */

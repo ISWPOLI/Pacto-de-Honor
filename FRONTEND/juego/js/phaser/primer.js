@@ -18,7 +18,7 @@ var movV=[false,false,false,false];
 
 var ataquePlagio;
 var ataquePersonalidadV;
-var idPJ="idPDos";
+var idPJ="idPUno";
 var idPC="idPUno";
 //es  200 es temporal y varia dependiendo de la pantalla 
 var costoAtaqueJ=personajesBuenos[idPJ].energia*200;
@@ -54,14 +54,15 @@ var primer = {
 		var avatarPersonajeComputadora = game.add.sprite(665, 30, 'avatarPersonajeComputadora');
 		avatarPersonajeComputadora.scale.setTo(0.6);
 		var avatarPersonajeJugador = game.add.sprite(10, 30, 'avatarPersonajeJugador');
-		avatarPersonajeJugador.scale.setTo(0.6);
+		avatarPersonajeJugador.scale.setTo(0.6);        
+        
 		var pausa = game.add.button(365, 20, 'pausa', this.pausar,this);
 		pausa.inputEnabled=true;
 		//funcion para pausar
 		pausa.events.onInputUp.add(function () {
 			funcionesBatalla.pausar()
         });
-		game.input.onDown.add(unpause, self);
+        game.input.onDown.add(unpause, self);
 		//funcion para reaunudar
         function unpause(event){
         	funcionesBatalla.unpause(event);
@@ -87,8 +88,9 @@ var primer = {
 		energiaNegroComputadora = new Phaser.Rectangle(459, 78, 200, 22);
 		energiaVerdeComputadora = new Phaser.Rectangle(460, 79, 200, 20);
 		
-
-	},	
+        var botonPoder = game.add.button(145, 105, 'botonPoder', funcionesBatalla.clickBotonPoder, 1, 1, 0, 2);
+    },
+    
 	render : function() {
 		game.debug.geom(vidaNegroJugador, '#000', false);
 		game.debug.geom(vidaBlancoJugador, '#fff');
@@ -105,23 +107,21 @@ var primer = {
 		game.debug.geom(energiaNegroComputadora, '#000', false);
 		game.debug.geom(energiaBlancaComputadora, '#fff');
 		game.debug.geom(energiaVerdeComputadora, 'rgb(0,255,0)');
-
-
 	},
 	//se crea esta funcion para disminuir la barra de energia
 	
 	activarPlagio: function(){
-			
-        	ataquePlagio.destroy();
+		ataquePlagio.destroy();
 	},
+    
 	update : function() {
 		indice=funcionesBatalla.numeroAleatorio(1,4)
 		
 		funcionesBatalla.cargarEnergia(energiaVerdeJugador);
 		funcionesBatalla.cargarEnergia(energiaVerdeComputadora);
 		funcionesBatalla.movimientoJugador(energiaVerdeJugador);
-		
-		funcionesBatalla.guiaComputadora(movimientoComputadora);
+        
+        funcionesBatalla.guiaComputadora(movimientoComputadora);
 		if(!secuencia)
 			funcionesBatalla.llamarSecuencia(indice);	
 		counter++;
@@ -136,6 +136,5 @@ var primer = {
 		game.physics.arcade.overlap(personajeJugador,ataquePersonalidadC.bullets,funcionesBatalla.impactoAtaqueComputadora,false,this);
 		game.physics.arcade.overlap(personajeComputadora,ataquePersonalidadJ,funcionesBatalla.impactoAtaqueJugador,false,this);
         game.physics.arcade.collide(personajeJugador, personajeComputadora, funcionesBatalla.colision, null, this);
-       }
-		
+       }		
 }
