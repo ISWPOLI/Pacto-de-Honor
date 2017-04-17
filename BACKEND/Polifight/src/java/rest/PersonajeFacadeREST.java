@@ -17,7 +17,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 
-import javax.ws.rs.core.PathSegment;
 import printEntities.PersonajeIdPrint;
 import printEntities.PersonajePrint;
 
@@ -39,16 +38,17 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
     
     /**
      * Retorna los id de los datos en la tabla Personaje
+     * * Se prueba con el TestCase "ListarId" del proyecto Personaje-soapui-project
      * @return List con los datos
      */
     @GET
-    @Path("id")
+    @Path("getId")
     @Consumes({"application/json"})
     @Produces({"application/json"})
     public List<PersonajeIdPrint> returnId(){
-        List<PersonajeIdPrint> resultado = new ArrayList<PersonajeIdPrint>();
-        TypedQuery<Personaje> consultP = em.createNamedQuery("Personaje.listById",Personaje.class);
-        List<Personaje> listP = consultP.getResultList();
+        Query query = em.createQuery("SELECT p FROM Personaje p");
+        List<Personaje> listP = query.getResultList();        
+        List<PersonajeIdPrint> resultado = new ArrayList<PersonajeIdPrint>();        
         for (int i = 0; i < listP.size(); i++) {
             PersonajeIdPrint p = new PersonajeIdPrint();
             p.setId(listP.get(i).getIdPersonaje());

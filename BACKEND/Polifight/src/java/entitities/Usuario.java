@@ -82,6 +82,12 @@ public class Usuario implements Serializable {
     @Column(name = "fecha_registro")
     private String fechaRegistro;
     
+    @Column(name = "token")
+    private String token;
+    
+    @Column(name = "fecha_token")
+    private String fechaToken;
+    
 
     public Usuario() {
     }
@@ -158,6 +164,22 @@ public class Usuario implements Serializable {
 
     public void setIdRolUsuario(int idRolUsuario) {
         this.idRolUsuario = idRolUsuario;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public String getFechaToken() {
+        return fechaToken;
+    }
+
+    public void setFechaToken(String fechaToken) {
+        this.fechaToken = fechaToken;
     }
     
     

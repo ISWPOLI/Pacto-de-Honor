@@ -7,9 +7,11 @@ import entitities.Usuario;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.List;
+import java.util.UUID;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -48,9 +50,9 @@ public class UsuarioFacadeREST extends AbstractFacade<Usuario> {
     public String crearUsuario(Usuario entity) {
         String resultado;
         try{
-            entity.setFechaRegistro(FechaActual.timestamp());
+            entity.setFechaRegistro(FechaActual.timestamp());            
             em.persist(entity);   
-            resultado = "{'response':'OK']";
+            resultado = "{'response':'OK'}";
         }catch (Exception e){
             e.printStackTrace();
             StringWriter errors = new StringWriter();
@@ -106,7 +108,7 @@ public class UsuarioFacadeREST extends AbstractFacade<Usuario> {
      * @param id del Usuario a buscar
      * @return String con la entity Usuario
      */
-   @GET
+    @GET
     @Path("find")
     @Produces({"application/json"})
     public String find(@QueryParam("id") Integer id) {
@@ -134,7 +136,25 @@ public class UsuarioFacadeREST extends AbstractFacade<Usuario> {
     public List<Usuario> findAll() {
         return super.findAll();
     }
-
+    
+    @POST
+    @Produces({"application/json"})
+    @Consumes({"application/json"})
+    public String login(@QueryParam("user") String usuario, @QueryParam("pass") String contrasena){
+        String resultado;
+        Query query = em.createQuery("SELECT u FROM Usuario u WHERE u.nombreUsuario=:x AND u.contrasenaUsuario=:password");
+        query.setParameter("user", usuario);
+        query.setParameter("password", contrasena);
+        Usuario user = (Usuario) query.getSingleResult();
+        if(user != null){
+            resultado = "{'response':'OK'}";
+            user.setToken(generateToken());
+            user.setFechaToken(FechaActual.timestamp());
+        }else{
+            resultado = "{'response':'OK','cause':'User not found'}";
+        }
+        return resultado;
+    }
     /**
      * Retorna de acuerdo alrango envidado, donde 0 es el primer dato
      * Se prueba con el TestCase "BuscarPorRango" del proyecto Ciudad-soapui-project
@@ -165,6 +185,10 @@ public class UsuarioFacadeREST extends AbstractFacade<Usuario> {
     @Override
     protected EntityManager getEntityManager() {
         return em;
+    }
+    
+    private String generateToken(){
+        return UUID.randomUUID().toString().toUpperCase().replaceAll("-", "").concat(FechaActual.timeToken());
     }
     
 }
