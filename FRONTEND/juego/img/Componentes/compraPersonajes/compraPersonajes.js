@@ -1,0 +1,214 @@
+var speedMult = 0.2;
+var friction = 0.99;
+var characters = ["pantera","gallo","cierva","jirafa","leon","canario","ruisenor","raton","hormiga"];
+// Nombres personajes Pacto de honor
+var namesCharacters = ["Ana Pantera", 
+                       "Andrés Gallo",
+                       "Cata Cierva", 
+                       "Daniela Jirafa", 
+                       "Daniel León", 
+                       "Fabián Canario", 
+                       "Iván Ruiseñor", 
+                       "Pedro Ratón", 
+                       "Tati Hormiga"];
+var description;
+var comprado = [false,true,false,false,false,false,false,false,true];
+var character;
+var monedas = 4000;
+var xp = 8000;
+var apodo;
+var startButton, botonVolver;
+var compradoL;
+var pos;
+// Especificaciones de compra de los personajes
+var descriptions = ["Necesitas: 2.000 monedas \n \n Recompensas: \n 1.000 monedas \n 50 puntos de experiencia",
+                    "Necesitas: 1.300 monedas \n \n Recompensas: \n 500 monedas \n 10 puntos de experiencia",
+                    "Necesitas: 1.350 monedas \n \n Recompensas: \n 550 monedas \n 15 puntos de experiencia",
+                    "Necesitas: 1.400 monedas \n \n Recompensas: \n 600 monedas \n 20 puntos de experiencia",
+                    "Necesitas: 1.450 monedas \n \n Recompensas: \n 650 monedas \n 30 puntos de experiencia",
+                    "Necesitas: 1.600 monedas \n \n Recompensas: \n 800 monedas \n 35 puntos de experiencia",
+                    "Necesitas: 1.500 monedas \n \n Recompensas: \n 700 monedas \n 30 puntos de experiencia",
+                    "Necesitas: 1.450 monedas \n \n Recompensas: \n 650 monedas \n 30 puntos de experiencia",
+                    "Necesitas: 1.800 monedas \n \n Recompensas: \n 900 monedas \n 40 puntos de experiencia"];
+
+//Especificaciones de costo en monedas del personaje
+var cMonedas = [2000, 1300, 1350, 1400, 1450, 1600, 1500, 1450, 1800];
+
+//Especificaciones de recompensas - monedas
+var rMonedas = [1000, 500, 550, 600, 650, 800, 700, 650, 900];
+
+//Especificaciones de recompensas - puntos de experiencia
+var rExperiencia = [50, 10, 15, 20, 30, 35, 30, 30, 40];            
+
+
+var compraPersonajes = function(game){};
+compraPersonajes.prototype = {
+     preload: function(){
+          // Se centra la ventana horizontalmente
+          game.scale.pageAlignHorizontally = true;
+          // Se centra la ventana Verticalmente
+          game.scale.pageAlignVertically = true;
+
+          // Se carga una imagen transparente para colocar detrás de las imágenes que apareceran en el Scrolling
+          game.load.image("transp", "images/transp.png");
+          // Se cargan las imágenes de los 9 personajes buenos
+          game.load.image('pantera', '../img/Componentes/compraPersonajes/AnaPantera.png');
+          game.load.image('gallo', '../img/Componentes/compraPersonajes/AndrésGallo.png');
+          game.load.image('cierva', '../img/Componentes/compraPersonajes/CataCierva.png');
+          game.load.image('jirafa', '../img/Componentes/compraPersonajes/DanielaJirafa.png');
+          game.load.image('leon', '../img/Componentes/compraPersonajes/DanielLeon.png');
+          game.load.image('canario', '../img/Componentes/compraPersonajes/FabiánCanario.png');
+          game.load.image('ruisenor', '../img/Componentes/compraPersonajes/IvánRuiseñor.png');
+          game.load.image('raton', '../img/Componentes/compraPersonajes/PedroRaton.png');
+          game.load.image('hormiga', '../img/Componentes/compraPersonajes/TatiHormiga.png');
+          
+          // Se carga el sprite del botón de compra
+          game.load.spritesheet('button', '../img/Componentes/compraPersonajes/SpriteButtonC.png', 140, 52);
+          game.load.spritesheet('botonVolver', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
+     },
+     create: function(){  
+          // Se coloca como fondo de la ventana el color #2451A6
+          game.stage.backgroundColor = "#2451A6";
+          
+          // Se agrega un título para la ventana de tamaño 30 px
+          // Se coloca en una posición especifica, con la instrucción ".anchor.set(0.5)" se centra en la posición dada
+          game.add.text(game.width / 2, 50, "Compra de personajes", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5);
+
+          // Se agrega la función ScrollingMap a la ventana, con una posición especifica, y se agrega la imagen transparente
+          this.scrollingMap = game.add.tileSprite(0, 0, 650 + characters.length * 90 + 64, game.height, "transp");
+          this.scrollingMap.inputEnabled = true;
+          this.scrollingMap.input.enableDrag(false);
+
+          // Se guarda la posición
+          this.scrollingMap.savedPosition = new Phaser.Point(this.scrollingMap.x, this.scrollingMap.y);
+          this.scrollingMap.isBeingDragged = false; 
+          this.scrollingMap.movingSpeed = 0;
+
+          // Se especifica que el ScrollingMap será sólo horizontal
+          this.scrollingMap.input.allowVerticalDrag = false;
+          this.scrollingMap.input.boundsRect = new Phaser.Rectangle(game.width - this.scrollingMap.width, game.height - this.scrollingMap.height, this.scrollingMap.width * 2 - game.width, this.scrollingMap.height * 2 - game.height);
+          
+          for(var i = 0; i < characters.length; i++){
+               // See agregan las 9 imágenes cargadas previamente de los 9 personajes buenos
+               character = game.add.image(game.width / 2 + i * 90, 170, characters[i]);
+
+               // Se centra la imagen cargada en la posición puesta en la linea anterior
+               character.anchor.set(0.5);
+
+               // Se agrega al scrollingMap cada una de las imágenes cargadas
+               this.scrollingMap.addChild(character);
+          }
+
+          // Se agregan eventos a las imágenes del scrollingMap para cuando este en movimiento
+          this.scrollingMap.events.onDragStart.add(function(){
+               this.scrollingMap.isBeingDragged = true;
+               this.scrollingMap.movingSpeed = 0;
+          }, this);
+
+          // Se agregan enventos a las imágenes del scrollingMap para cuando este quieto
+          this.scrollingMap.events.onDragStop.add(function(){
+               this.scrollingMap.isBeingDragged = false;
+          }, this);
+
+
+          // Se agrega un texto a la ventana para representar los nombres de los personajes, con 24px de tamaño y "Roboto" como tipo de letra
+          // También se agrega un color de fondo y se alinea el texto en el centro
+          apodo = game.add.text(game.world.centerX, 270, "", { font: "24px Roboto", fill: "#ffffff", align: "center", backgroundColor: "#2451A6"});
+          apodo.anchor.set(0.5);
+
+          // Se agrega un texto a la ventana para representar las recompensas de los personajes, con 20px de tamaño y "Roboto" como tipo de letra
+          // Se agrega un color de fondo y se alinea el texto en el centro
+          description = game.add.text(game.world.centerX, 400, "", { font: "20px Roboto", fill: "#ffffff", align: "center", backgroundColor: "#2451A6"});
+          description.anchor.set(0.5);
+
+          startButton = game.add.button(game.world.width / 2, 510, 'button', this.compra, this, 2, 1, 0); // over, out, down, up
+          startButton.anchor.set(0.5);
+         
+          botonVolver = game.add.button(5, 5, 'botonVolver', this.verMapa, 1, 1, 0, 2);
+
+          //compradoL = game.add.text(game.world.centerX, 510, "", { font: "20px Roboto", fill: "#ffffff", align: "center", backgroundColor: "#2451A6"});
+          //compradoL.anchor.set(0.5);
+
+     },
+     compra: function(){
+     	if(comprado[pos]){
+     		alert("¡Ya posees este personaje!");
+     	} else {
+     		//Si no ha comprado el personaje, realiza el proceso necesario para su compra y recibir las recompensas
+     		if(monedas >= cMonedas[pos]){
+     			//Si tiene suficientes monedas
+	          	monedas = monedas - cMonedas[pos] + rMonedas[pos];
+	          	xp = xp + rExperiencia[pos];
+	          	comprado[pos] = true;
+	          	alert("Personaje comprado exitosamente");
+     		}
+     	}
+     },
+    
+    verMapa: function(){
+        game.state.start("navegacion");
+    },
+    
+    update:function(){
+          // Se declara una variable llamada "zoomed" de tipo booleana, que representara cuando un elemento del scrolling map este seleccionada
+          var zoomed = false;
+
+          // Este ciclo recorre el scrollingMap
+          for(var i = 0; i < this.scrollingMap.children.length; i++){
+               if(Math.abs(this.scrollingMap.children[i].world.x - game.width / 2) < 46 && !zoomed){
+                    // Se agranda la imagen al 150%
+                    this.scrollingMap.getChildAt(i).scale.setTo(1.3);
+
+                    // Se pone la variable zoomed en true cuando la imagen del scrollingMap aumente su tamaño
+                    zoomed = true;
+                    for (var j = 0; j < descriptions.length; j++) {
+                         if(i == j){
+                              pos = j;
+                              // Se va modificando los nombres de los personajes de acuerdo al personaje en el que se esté
+                              apodo.setText(namesCharacters[j]);
+
+                              // Se modifican los parámetros de compra de acuerdo al personaje en el que se esté
+                              description.setText(descriptions[j]);
+                         }
+                    }
+
+               }
+               else{
+                    // Se vuelve al tamaño normal el resto de imágenes del scrollingMap
+                    this.scrollingMap.getChildAt(i).scale.setTo(1);   
+               }
+          }
+          if(this.scrollingMap.isBeingDragged){
+               // Si el scrollingMap esta en movimiento se va guardando la posición
+               this.scrollingMap.savedPosition = new Phaser.Point(this.scrollingMap.x, this.scrollingMap.y);
+          }
+          else{
+               if(this.scrollingMap.movingSpeed > 1){
+                    this.scrollingMap.x += this.scrollingMap.movingSpeed * Math.cos(this.scrollingMap.movingangle);
+                    // Si la posición en x es menor al ancho definido para el scrollingMap, se define la velocidad en que se mueve dentro del ScrollingMap
+                    if(this.scrollingMap.x < game.width - this.scrollingMap.width){
+                         this.scrollingMap.x = game.width - this.scrollingMap.width;
+                         this.scrollingMap.movingSpeed *= 0.5;
+                         this.scrollingMap.movingangle += Math.PI;
+                         
+                    }
+                    // Cuando la posición en x dentro del scrollingMap este sobre el limite, no se debe mover más
+                    if(this.scrollingMap.x > 0){
+                         this.scrollingMap.x = 0;
+                         this.scrollingMap.movingSpeed *= 0.5;
+                         this.scrollingMap.movingangle += Math.PI;
+                    }
+                    this.scrollingMap.movingSpeed *= friction;
+                    this.scrollingMap.savedPosition = new Phaser.Point(this.scrollingMap.x, this.scrollingMap.y);
+               }
+               else{
+                    var distance = this.scrollingMap.savedPosition.distance(this.scrollingMap.position);
+                    var angle = this.scrollingMap.savedPosition.angle(this.scrollingMap.position);
+                    if(distance > 4){
+                         this.scrollingMap.movingSpeed = distance * speedMult;
+                         this.scrollingMap.movingangle = angle;
+                    }
+               }
+          }
+     }
+}
