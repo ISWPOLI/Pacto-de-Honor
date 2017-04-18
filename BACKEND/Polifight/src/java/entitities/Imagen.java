@@ -1,46 +1,57 @@
-
-package entitities;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Entidades;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
- * Entidad Imagen
- * @author jrubiaob
+ *
+ * @author Will
  */
 @Entity
-@Table(name = "imagen")
+@Table(name = "imagen", catalog = "pactohonor", schema = "")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Imagen.findAll", query = "SELECT i FROM Imagen i"),
     @NamedQuery(name = "Imagen.findByIdImagen", query = "SELECT i FROM Imagen i WHERE i.idImagen = :idImagen"),
     @NamedQuery(name = "Imagen.findByFoto", query = "SELECT i FROM Imagen i WHERE i.foto = :foto")})
 public class Imagen implements Serializable {
-    
     private static final long serialVersionUID = 1L;
-    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "id_imagen")
+    @Column(name = "id_imagen", nullable = false)
     private Integer idImagen;
-    
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 255)
-    @Column(name = "foto")
+    @Column(name = "foto", nullable = false, length = 255)
     private String foto;
+    @JoinTable(name = "mundo_tiene_imagen", joinColumns = {
+        @JoinColumn(name = "id_imagen", referencedColumnName = "id_imagen", nullable = false)}, inverseJoinColumns = {
+        @JoinColumn(name = "id_mundo", referencedColumnName = "id_mundo", nullable = false)})
+    @ManyToMany
+    private List<Mundo> mundoList;
 
     public Imagen() {
     }
@@ -70,6 +81,15 @@ public class Imagen implements Serializable {
         this.foto = foto;
     }
 
+    @XmlTransient
+    public List<Mundo> getMundoList() {
+        return mundoList;
+    }
+
+    public void setMundoList(List<Mundo> mundoList) {
+        this.mundoList = mundoList;
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;
@@ -92,7 +112,7 @@ public class Imagen implements Serializable {
 
     @Override
     public String toString() {
-        return "entitities.Imagen[ idImagen=" + idImagen + " ]";
+        return "Entidades.Imagen[ idImagen=" + idImagen + " ]";
     }
     
 }
