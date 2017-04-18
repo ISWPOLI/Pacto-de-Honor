@@ -19,7 +19,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
-import mundo.FechaActual;
 
 /**
  * Servicio REST para la entidad Usuario
@@ -27,9 +26,8 @@ import mundo.FechaActual;
  */
 
 @Stateless
-@Path("usuario")
+@Path("entitities.usuario")
 public class UsuarioFacadeREST extends AbstractFacade<Usuario> {
-    
     @PersistenceContext(unitName = "PolifightPU")
     private EntityManager em;
 
@@ -50,11 +48,13 @@ public class UsuarioFacadeREST extends AbstractFacade<Usuario> {
     public String crearUsuario(Usuario entity) {
         String resultado;
         try{
+<<<<<<< HEAD
             entity.setFechaRegistro(FechaActual.timestamp());            
+=======
+>>>>>>> parent of 8dc2cc4... Desarrollo, documentación y pruebas de las entidades Usuario y Rol
             em.persist(entity);   
             resultado = "{'response':'OK'}";
         }catch (Exception e){
-            e.printStackTrace();
             StringWriter errors = new StringWriter();
             e.printStackTrace(new PrintWriter(errors));            
             resultado = "{'response':'KO', 'cause':'"+errors.toString()+"'}";
@@ -75,17 +75,11 @@ public class UsuarioFacadeREST extends AbstractFacade<Usuario> {
     public String editarUsuario(Usuario entity){
         try{
             if(entity.getIdUsuario() != 0){
-                Usuario usuario = super.find(entity.getIdUsuario());
+                Usuario usuario = super.find(entity.getIdCiudad());
                 if(usuario == null){
                    return "{'response':'KO','cause':'User not found'}";
                 }else{
-                    if(entity.getIdPais() != 0)  usuario.setIdPais(entity.getIdPais());
-                    if(entity.getIdCiudad() != 0) usuario.setIdCiudad(entity.getIdCiudad());
-                    if(entity.getIdRolUsuario() != 0) usuario.setIdRolUsuario(entity.getIdRolUsuario());
-                    if(entity.getNombreUsuario() != null) usuario.setNombreUsuario(entity.getNombreUsuario());
-                    if(entity.getApellidoUsuario() != null) usuario.setApellidoUsuario(entity.getApellidoUsuario());
-                    if(entity.getEmailUsuario() != null) usuario.setEmailUsuario(entity.getEmailUsuario());
-                    
+                    if(entity.getNombreUsuario()!= null)  usuario.setNombreUsuario(entity.getNombreUsuario());
                     
                     em.merge(usuario);
 
@@ -175,12 +169,6 @@ public class UsuarioFacadeREST extends AbstractFacade<Usuario> {
     public String countREST() {
         return String.valueOf(super.count());
     }
-    
-    /**
-     * Crear un método para cambiar la contraseña de un usuario.
-     * Debe recibir el id del usuario, la contraseña anterior, la nueva y un token 
-     * de autorización
-     */
 
     @Override
     protected EntityManager getEntityManager() {
