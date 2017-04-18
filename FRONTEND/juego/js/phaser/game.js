@@ -3,6 +3,7 @@ var game = new Phaser.Game (800, 600, Phaser.CANVAS, 'game');
     game.state.add("navegacion", navegacion);
     game.state.add("primer", primer);
     game.state.add("creditos", creditos);
+    game.state.add("compraPersonajes", compraPersonajes);
     game.state.add("rankings", rankings);
     game.state.add("invitarAmigos", invitarAmigos);
     game.state.add("perfilJugador", perfilJugador);
