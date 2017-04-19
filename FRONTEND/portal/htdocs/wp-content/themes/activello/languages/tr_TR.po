@@ -1,0 +1,1538 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Activello Theme\n"
+"POT-Creation-Date: 2017-02-19 17:44+0100\n"
+"PO-Revision-Date: 2017-02-19 17:44+0100\n"
+"Last-Translator: Aigars Silkalns <a.silkalns@gmail.com>\n"
+"Language-Team: colorlib <info@colorlib.com>\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _e;__;esc_attr__;esc_html__;esc_html_e;"
+"esc_attr_x:1,2c;_nx:4c,1,2;_n:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Hoop! Bu sayfa bulunamıyor."
+
+#: ../404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Görünen o'ki bu adreste bir şey bulunamadı. Belki aşağıdaki linklerden "
+"birini denemek yada arama yapmak isteyebilirsiniz?"
+
+#: ../404.php:25
+msgid "Recent Posts"
+msgstr "Son Mesajlar"
+
+#: ../404.php:31
+msgid "Most Used Categories"
+msgstr "En sık kullanılan kategoriler"
+
+#: ../404.php:52
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Aylık arşivlere bakmayı dene. %1$s"
+
+#: ../404.php:53 ../archive.php:66 ../sidebar.php:31
+msgid "Archives"
+msgstr "Arşivler"
+
+#: ../404.php:58
+msgid "Tags"
+msgstr "Etiketler"
+
+#: ../archive.php:27
+#, php-format
+msgid "Author: %s"
+msgstr "Yazar: %s"
+
+#: ../archive.php:30
+#, php-format
+msgid "Day: %s"
+msgstr "Gün:  %s"
+
+#: ../archive.php:33
+#, php-format
+msgid "Month: %s"
+msgstr "Ay: %s"
+
+#: ../archive.php:36
+#, php-format
+msgid "Year: %s"
+msgstr "Yıl: %s"
+
+#: ../archive.php:39
+msgid "Asides"
+msgstr "Yan yorumlar"
+
+#: ../archive.php:42
+msgid "Galleries"
+msgstr "Galeriler"
+
+#: ../archive.php:45
+msgid "Images"
+msgstr "Görüntüler"
+
+#: ../archive.php:48
+msgid "Videos"
+msgstr "Videolar"
+
+#: ../archive.php:51
+msgid "Quotes"
+msgstr "Alıntılar"
+
+#: ../archive.php:54
+msgid "Links"
+msgstr "Bağlantılar"
+
+#: ../archive.php:57
+msgid "Statuses"
+msgstr "Durumlar"
+
+#: ../archive.php:60
+msgid "Audios"
+msgstr "Sesler"
+
+#: ../archive.php:63
+msgid "Chats"
+msgstr "Sohbetler"
+
+#: ../comments.php:28
+#, php-format
+msgctxt "comments title"
+msgid "1 Comment"
+msgid_plural "%1$s Comment"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../comments.php:35 ../comments.php:54
+msgid "Comment navigation"
+msgstr "Yorum navigasyonu"
+
+#: ../comments.php:36 ../comments.php:55
+msgid "&larr; Older Comments"
+msgstr "&larr; Daha Eski Yorumlar"
+
+#: ../comments.php:37 ../comments.php:56
+msgid "Newer Comments &rarr;"
+msgstr " Daha Yeni Yorumlar &rarr;"
+
+#: ../comments.php:66
+msgid "Comments are closed."
+msgstr "Yorumlar Kapalıdır."
+
+#: ../comments.php:77
+msgid "Name"
+msgstr ""
+
+#: ../comments.php:81
+msgid "Email"
+msgstr ""
+
+#: ../comments.php:85
+msgid "Website"
+msgstr ""
+
+#: ../comments.php:94
+msgid "Post Reply"
+msgstr ""
+
+#: ../content-grid.php:16 ../content-page.php:26 ../inc/extras.php:266
+msgid "Edit"
+msgstr "Düzenle"
+
+#: ../content-grid.php:28 ../content.php:41 ../content.php:67
+#: ../inc/extras.php:151
+msgid "Read More"
+msgstr "Fazlasını Oku"
+
+#: ../content-grid.php:37 ../content-page.php:21 ../content-single.php:43
+#: ../content.php:56 ../image.php:79
+msgid "Pages:"
+msgstr "Sayfalar:"
+
+#: ../content-none.php:13
+msgid "Nothing Found"
+msgstr "Bir şey bulunamadı"
+
+#: ../content-none.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"İlk mesajını yayınlamaya hazır mısın? <a href=\"%1$s\">Buradan başla</a>."
+
+#: ../content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Pardon, ama malesef arama terimlerinizle eşleşen bir şey bulunamadı. Lütfen "
+"farklı anahtar kelimelerle tekrar deneyin."
+
+#: ../content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Görünüyorki istediğinizi bulamadık. Muhtemelen arama yapmak yardımcı "
+"olabilir."
+
+#: ../content-single.php:21 ../content.php:22
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: ../content-single.php:55 ../content.php:73
+msgid "No comments yet"
+msgstr ""
+
+#: ../content-single.php:55
+msgid "Comment (1)"
+msgstr ""
+
+#: ../content-single.php:55
+msgid "Comments (%)"
+msgstr ""
+
+#: ../content.php:73
+msgid "1 Comment"
+msgstr "1 Yorum"
+
+#: ../content.php:73
+msgid "% Comments"
+msgstr "% yorum"
+
+#: ../functions.php:71
+msgid "Primary Menu"
+msgstr "Birincil Menü"
+
+#: ../functions.php:114
+msgid "Sidebar"
+msgstr "Kenar çubuğu"
+
+#: ../functions.php:233
+msgid "Left Sidebar"
+msgstr "Sol Kenar Çubuğu"
+
+#: ../functions.php:233
+msgid "Right Sidebar"
+msgstr "Sağ Kenar Çubuğu"
+
+#: ../functions.php:233
+msgid "No Sidebar"
+msgstr ""
+
+#: ../functions.php:233
+msgid "Full Width"
+msgstr ""
+
+#: ../functions.php:235
+msgid "Logo Only"
+msgstr ""
+
+#: ../functions.php:236
+msgid "Logo + Tagline"
+msgstr ""
+
+#: ../functions.php:237
+msgid "Title Only"
+msgstr ""
+
+#: ../functions.php:238
+msgid "Title + Tagline"
+msgstr ""
+
+#: ../functions.php:275 ../searchform.php:14
+msgid "Search"
+msgstr ""
+
+#: ../functions.php:275 ../searchform.php:14
+#, fuzzy
+msgctxt "submit button"
+msgid "Search"
+msgstr "Arama"
+
+#: ../header.php:40
+msgid "Toggle navigation"
+msgstr ""
+
+#: ../image.php:22
+msgid "<i class=\"fa fa-chevron-left\"></i> Previous"
+msgstr "<i class=\"fa fa-chevron-left\"></i> Önceki"
+
+#: ../image.php:23
+msgid "Next <i class=\"fa fa-chevron-right\"></i>"
+msgstr "Sonraki <i class=\"fa fa-chevron-right\"></i>"
+
+#: ../inc/customizer.php:30
+msgid "Logo"
+msgstr ""
+
+#: ../inc/customizer.php:44
+msgid "Show"
+msgstr ""
+
+#: ../inc/customizer.php:53
+msgid "Activello Options"
+msgstr ""
+
+#: ../inc/customizer.php:54
+msgid "Panel to update activello theme options"
+msgstr ""
+
+#: ../inc/customizer.php:60
+#, fuzzy
+msgid "Content Options"
+msgstr "Tema Ayarları"
+
+#: ../inc/customizer.php:73
+msgid "Show post excerpts?"
+msgstr ""
+
+#: ../inc/customizer.php:85
+#, fuzzy
+msgid "Display Comments on Static Pages?"
+msgstr "Ana sayfada gösterilir"
+
+#: ../inc/customizer.php:94
+msgid "Slider Options"
+msgstr ""
+
+#: ../inc/customizer.php:139
+msgid "Layout options"
+msgstr ""
+
+#: ../inc/customizer.php:150
+msgid "Website Layout Options"
+msgstr "Website Düzen Ayarları"
+
+#: ../inc/customizer.php:153
+msgid "Choose between different layout options to be used as default"
+msgstr ""
+
+#: ../inc/customizer.php:162
+msgid "Accent Color"
+msgstr ""
+
+#: ../inc/customizer.php:163 ../inc/customizer.php:173
+#: ../inc/customizer.php:183
+msgid "Default used if no color is selected"
+msgstr "Ren seçilmediyse ön ayarlı renk kullanılır"
+
+#: ../inc/customizer.php:172
+msgid "Social icon color"
+msgstr "Sosyak ikon rengi"
+
+#: ../inc/customizer.php:182
+msgid "Social Icon:hover Color"
+msgstr ""
+
+#: ../inc/customizer.php:189
+msgid "Footer"
+msgstr "Site altı(ayakçı)"
+
+#: ../inc/customizer.php:207
+msgid "Other"
+msgstr "Diğer"
+
+#: ../inc/customizer.php:225
+msgid "Support and Documentation"
+msgstr "Destek ve Dökümanlar"
+
+#: ../inc/customizer.php:368
+msgid "Activello Documentation"
+msgstr ""
+
+#: ../inc/customizer.php:369
+msgid ""
+"The best way to contact us with <b>support questions</b> and <b>bug reports</"
+"b> is via"
+msgstr ""
+"Bizimle temas kurmanın en iyi yolu <b>destek soruları</b> ve <b>hata "
+"raporları</b> ile"
+
+#: ../inc/customizer.php:369
+msgid "Colorlib support forum"
+msgstr "Colorlib destek forumu"
+
+#: ../inc/customizer.php:370
+msgid "If you like this theme, I'd appreciate any of the following:"
+msgstr ""
+"Eğer bu temayı sevdiysen, Takip edenlerden herhangi biri makbule geçer:"
+
+#: ../inc/customizer.php:372
+msgid "Rate this Theme"
+msgstr "Temayı derecelendir"
+
+#: ../inc/customizer.php:373
+msgid "Like on Facebook"
+msgstr "Facebookda beğen"
+
+#: ../inc/customizer.php:374
+msgid "Follow on Twitter"
+msgstr " Twitterda takip et"
+
+#: ../inc/extras.php:54
+msgid "Untitled"
+msgstr ""
+
+#: ../inc/extras.php:71
+msgid ""
+"This post is password protected. To view it please enter your password below:"
+msgstr ""
+
+#: ../inc/extras.php:72
+msgid "Password:"
+msgstr "Şifre:"
+
+#: ../inc/extras.php:75
+msgid "Submit"
+msgstr "Teslim et"
+
+#: ../inc/extras.php:172
+#, php-format
+msgid "Theme by %1$s Powered by %2$s"
+msgstr "Temayı yapan %1$s Çalışmasını sağlayan %2$s"
+
+#: ../inc/extras.php:260
+#, php-format
+msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">says:</span>"
+msgstr ""
+
+#: ../inc/extras.php:266
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../inc/extras.php:273
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../inc/metaboxes.php:16
+msgid ""
+"Select layout for this specific Page only ( Note: This setting only reflects "
+"if page Template is set as Default Template and Blog Type Templates.)"
+msgstr ""
+
+#: ../inc/metaboxes.php:21
+msgid "Select layout for this specific Post only"
+msgstr ""
+
+#: ../inc/metaboxes.php:28
+msgid "Select layout for this specific Product only"
+msgstr ""
+
+#: ../inc/metaboxes.php:58
+msgid "Default"
+msgstr ""
+
+#: ../inc/navwalker.php:196
+msgid "Add a menu"
+msgstr ""
+
+#: ../inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr "Gönderiler navigasyonu"
+
+#: ../inc/template-tags.php:27
+msgid "Older posts"
+msgstr ""
+
+#: ../inc/template-tags.php:31
+msgid "Newer posts"
+msgstr ""
+
+#: ../inc/template-tags.php:56
+msgid "Post navigation"
+msgstr "Gönderi navigasyonu"
+
+#: ../inc/template-tags.php:86
+msgid "Posted on"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:327
+#: ../inc/tgmpa/tgm-plugin-activation.php:79
+msgid "Install Required Plugins"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:328
+#: ../inc/tgmpa/tgm-plugin-activation.php:80
+msgid "Install Plugins"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:330
+#: ../inc/tgmpa/tgm-plugin-activation.php:81
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:332
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:333
+#: ../inc/tgmpa/tgm-plugin-activation.php:82
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:385
+#: ../inc/tgmpa/tgm-plugin-activation.php:93
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:386
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:827
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2533
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3580
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:387
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3159
+#: ../inc/tgmpa/tgm-plugin-activation.php:94
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:388
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2952
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:390
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:392
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:394
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:395
+msgid "Dismiss this notice"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:396
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:397
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:522
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:523
+msgid "Update Required"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:934
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:934
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:937
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:937
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:1982
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2273
+msgid "Required"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2276
+msgid "Recommended"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2292
+msgid "WordPress Repository"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2295
+msgid "External Source"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2298
+msgid "Pre-Packaged"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2315
+msgid "Not Installed"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2319
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2321
+msgid "Active"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2327
+msgid "Required Update not Available"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2330
+msgid "Requires Update"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2333
+msgid "Update recommended"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2388
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2392
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2396
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2400
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2490
+msgid "Installed version:"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2498
+msgid "Minimum required version:"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2510
+msgid "Available version:"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2533
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2547
+msgid "Plugin"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2548
+msgid "Source"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2549
+msgid "Type"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2553
+msgid "Version"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2554
+msgid "Status"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2603
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2608
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2614
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2684
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2717
+#: ../inc/welcome-screen/custom-recommend-action-section.php:108
+#: ../inc/welcome-screen/sections/actions-required.php:41
+#: ../inc/welcome-screen/sections/recommended-plugins.php:24
+msgid "Install"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2723
+msgid "Update"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2726
+#: ../inc/welcome-screen/custom-recommend-action-section.php:112
+#: ../inc/welcome-screen/sections/actions-required.php:45
+#: ../inc/welcome-screen/sections/recommended-plugins.php:28
+msgid "Activate"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2757
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2759
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2800
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2802
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2908
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:2934
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3158
+msgid "Plugin activation failed."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3498
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3501
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3503
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3507
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3509
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3509
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3517
+msgid "Show Details"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3509
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3517
+msgid "Hide Details"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3510
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3512
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3515
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3517
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3518
+msgid "All installations have been completed."
+msgstr ""
+
+#: ../inc/tgmpa/class-tgm-plugin-activation.php:3520
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../inc/tgmpa/tgm-plugin-activation.php:95
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: ../inc/welcome-screen/custom-recommend-action-section.php:116
+#: ../inc/welcome-screen/sections/actions-required.php:49
+#: ../inc/welcome-screen/sections/recommended-plugins.php:32
+msgid "Deactivate"
+msgstr ""
+
+#: ../inc/welcome-screen/notify-system-checks.php:154
+#: ../inc/welcome-screen/notify-system-checks.php:162
+msgid "Install: Widget Importer Exporter Plugin"
+msgstr ""
+
+#: ../inc/welcome-screen/notify-system-checks.php:159
+msgid "Activate: Widget Importer Exporter Plugin"
+msgstr ""
+
+#: ../inc/welcome-screen/notify-system-checks.php:168
+#: ../inc/welcome-screen/notify-system-checks.php:176
+msgid "Install: WordPress Importer"
+msgstr ""
+
+#: ../inc/welcome-screen/notify-system-checks.php:173
+msgid "Activate: WordPress Importer"
+msgstr ""
+
+#: ../inc/welcome-screen/notify-system-checks.php:185
+#: ../inc/welcome-screen/notify-system-checks.php:193
+msgid "Please install the WordPress Importer to create the demo content."
+msgstr ""
+
+#: ../inc/welcome-screen/notify-system-checks.php:190
+msgid "Please activate the WordPress Importer to create the demo content."
+msgstr ""
+
+#: ../inc/welcome-screen/notify-system-checks.php:199
+#: ../inc/welcome-screen/notify-system-checks.php:207
+msgid "Please install the WordPress widget importer to create the demo content"
+msgstr ""
+
+#: ../inc/welcome-screen/notify-system-checks.php:204
+msgid ""
+"Please activate the WordPress Widget Importer to create the demo content."
+msgstr ""
+
+#: ../inc/welcome-screen/sections/actions-required.php:80
+#: ../inc/welcome-screen/welcome-screen.php:149
+msgid "Hooray! There are no required actions for you right now."
+msgstr ""
+
+#: ../inc/welcome-screen/sections/getting-started.php:11
+msgid "Step 1 - Implement recommended actions"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/getting-started.php:12
+msgid ""
+"We've compiled a list of steps for you, to take make sure the experience "
+"you'll have using one of our products is very easy to follow."
+msgstr ""
+
+#: ../inc/welcome-screen/sections/getting-started.php:15
+msgid "No recommended actions left to perform"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/getting-started.php:18
+msgid "Check recommended actions"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/getting-started.php:24
+msgid "Step 2 - Check our documentation"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/getting-started.php:25
+msgid ""
+"Even if you're a long-time WordPress user, we still believe you should give "
+"our documentation a very quick Read."
+msgstr ""
+
+#: ../inc/welcome-screen/sections/getting-started.php:28
+msgid "Full documentation"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/getting-started.php:33
+msgid "Step 3 - Customize everything"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/getting-started.php:34
+msgid ""
+"Using the WordPress Customizer you can easily customize every aspect of the "
+"theme."
+msgstr ""
+
+#: ../inc/welcome-screen/sections/getting-started.php:36
+msgid "Go to Customizer"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/recommended-plugins.php:39
+msgid "Version:"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/support.php:5
+#: ../inc/welcome-screen/sections/support.php:10
+msgid "Contact Support"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/support.php:7
+msgid ""
+"We offer excellent support through our advanced ticketing system. Make sure "
+"to register your purchase before contacting support!"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/support.php:15
+msgid "Documentation"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/support.php:17
+msgid ""
+"This is the place to go to reference different aspects of the theme. Our "
+"online documentation is an incredible resource for learning the ins and outs "
+"of using Activello."
+msgstr ""
+
+#: ../inc/welcome-screen/sections/support.php:20
+msgid "See our full documentation"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/support.php:25
+#: ../inc/welcome-screen/welcome-screen.php:385
+msgid "Changelog"
+msgstr ""
+
+#: ../inc/welcome-screen/sections/support.php:27
+msgid ""
+"Want to get the gist on the latest theme changes? Just consult our changelog "
+"below to get a taste of the recent fixes and features implemented."
+msgstr ""
+
+#: ../inc/welcome-screen/sections/support.php:30
+msgid "See changelog"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-page-setup.php:16
+msgid "Recomended Actions"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-page-setup.php:17
+msgid "We're social"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-page-setup.php:75
+msgid "Download theme sample data"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-page-setup.php:76
+msgid "Head over to our website and download the sample content data."
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-page-setup.php:77
+msgid "Posts"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-page-setup.php:78
+msgid "Widgets"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-page-setup.php:83
+msgid "Import Sample Data"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-page-setup.php:84
+msgid "Import Posts"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-page-setup.php:85
+msgid "Import Widgets"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-screen.php:128
+#, php-format
+msgid ""
+"Welcome! Thank you for choosing Activello! To fully take advantage of the "
+"best our theme can offer please make sure you visit our %swelcome page%s."
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-screen.php:130
+msgid "Get started with Activello"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-screen.php:168
+msgid "View Theme Info"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-screen.php:366
+msgid "Welcome to Activello! - Version "
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-screen.php:369
+msgid ""
+"Activello is now installed and ready to use! Get ready to build something "
+"beautiful. We hope you enjoy it! We want to make sure you have the best "
+"experience using Activello and that is why we gathered here all the "
+"necessary information for you. We hope you will enjoy using Activello, as "
+"much as we enjoy creating great products."
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-screen.php:376
+msgid "Getting Started"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-screen.php:378
+msgid "Recommended Actions"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-screen.php:381
+msgid "Recommended Plugins"
+msgstr ""
+
+#: ../inc/welcome-screen/welcome-screen.php:383
+msgid "Support"
+msgstr ""
+
+#: ../inc/widgets/widget-categories.php:11
+msgid "Activello widget to display categories"
+msgstr ""
+
+#: ../inc/widgets/widget-categories.php:12
+msgid "Activello Categories"
+msgstr ""
+
+#: ../inc/widgets/widget-categories.php:17
+#: ../inc/widgets/widget-categories.php:73
+msgid "Categories"
+msgstr "Bölümler"
+
+#: ../inc/widgets/widget-categories.php:78 ../inc/widgets/widget-social.php:49
+msgid "Title "
+msgstr "Başlık"
+
+#: ../inc/widgets/widget-categories.php:86
+msgid "Limit Categories "
+msgstr "Bölümleri Sınırla"
+
+#: ../inc/widgets/widget-categories.php:99
+msgid "Enable Posts Count"
+msgstr "Gönderi Sayacını Aktifleştir"
+
+#: ../inc/widgets/widget-recent-posts.php:11
+msgid "Activello recent posts widget with thumbnails"
+msgstr ""
+
+#: ../inc/widgets/widget-recent-posts.php:12
+msgid "Activello Recent Posts Widget"
+msgstr ""
+
+#: ../inc/widgets/widget-recent-posts.php:17
+#: ../inc/widgets/widget-recent-posts.php:91
+msgid "recent Posts"
+msgstr ""
+
+#: ../inc/widgets/widget-recent-posts.php:96
+msgid "Title"
+msgstr "Başlık"
+
+#: ../inc/widgets/widget-recent-posts.php:104
+msgid "Limit Posts Number"
+msgstr "Gönderi Sayısını Sınırla"
+
+#: ../inc/widgets/widget-social.php:11
+msgid "Activello theme widget to display social media icons"
+msgstr ""
+
+#: ../inc/widgets/widget-social.php:12
+msgid "Activello Social Widget"
+msgstr ""
+
+#: ../inc/widgets/widget-social.php:17 ../inc/widgets/widget-social.php:46
+msgid "Follow us"
+msgstr "Bizi takip et"
+
+#: ../search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr ": %s için arama sonuçları"
+
+#: ../searchform.php:11
+#, fuzzy
+msgid "Search for:"
+msgstr "Ara..."
+
+#: ../searchform.php:12
+msgctxt "placeholder"
+msgid "Search&hellip;"
+msgstr "Ara&nbsp;&hellip;"
+
+#: ../searchform.php:12
+#, fuzzy
+msgctxt "label"
+msgid "Search for:"
+msgstr "Ara..."
+
+#: ../sidebar.php:38
+msgid "Meta"
+msgstr "Meta"
+
+#~ msgid "Leave a comment"
+#~ msgstr "Yorum Bırak"
+
+#~ msgid "Custom CSS"
+#~ msgstr "Özel CSS"
+
+#~ msgid "Additional CSS"
+#~ msgstr "Fazladan CSS"
+
+#~ msgid ""
+#~ "<p>This post is password protected. To view it please enter your password "
+#~ "below:</p>"
+#~ msgstr ""
+#~ "<p>Bu gönderi şifre korumalıdır. Görüntülemek için şifrenizi aşağıya "
+#~ "girin:</p>"
+
+#~ msgid "Footer Links"
+#~ msgstr "Sayfa Altı Bağlantıları"
+
+#~ msgctxt "comments title"
+#~ msgid "One thought on &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "&ldquo;%2$s&rdquo; üzerine yorum"
+#~ msgstr[1] "&ldquo;%2$s&rdquo; üzerine %1$s yorumlar"
+
+#~ msgid ", "
+#~ msgstr ","
+
+#~ msgid " %1$s"
+#~ msgstr " %1$s"
+
+#~ msgid "Homepage Widget 1"
+#~ msgstr "Ana sayfa Widget 1"
+
+#~ msgid "Displays on the Home Page"
+#~ msgstr "Ana sayfada gösterilir"
+
+#~ msgid "Homepage Widget 2"
+#~ msgstr "Ana sayfa Widget 2"
+
+#~ msgid "Homepage Widget 3"
+#~ msgstr "Ana sayfa Widget 3"
+
+#~ msgid "Footer Widget 1"
+#~ msgstr "Sayfa Altı Widget 1"
+
+#~ msgid "Used for footer widget area"
+#~ msgstr "Sayfa altı widget alanı için kullanıldı"
+
+#~ msgid "Footer Widget 2"
+#~ msgstr "Sayfa Altı Widget 2"
+
+#~ msgid "Footer Widget 3"
+#~ msgstr "Sayfa Altı Widget 3"
+
+#~ msgid "Theme Options"
+#~ msgstr "Tema Ayarları"
+
+#~ msgid "Click OK to reset. Any theme settings will be lost!"
+#~ msgstr ""
+#~ "Sıfırlamak (Reset) için tamama tıklayın. Bütün tema ayarları kaybolacak "
+#~ "(sıfırlanacak)!"
+
+#~ msgid "Default options restored."
+#~ msgstr "Öntanımlı ayarlara dönüldü."
+
+#~ msgid "Options saved."
+#~ msgstr "Ayarlar kaydedildi"
+
+#~ msgid "No file chosen"
+#~ msgstr "Dosya seçilmedi"
+
+#~ msgid "Upload"
+#~ msgstr "Yükle"
+
+#~ msgid "Remove"
+#~ msgstr "Kaldır"
+
+#~ msgid "Upgrade your version of WordPress for full media support."
+#~ msgstr "Tam medya desteği için WordPress sürümünüzü yükseltin."
+
+#~ msgid "View File"
+#~ msgstr "Dosyayı görüntüle"
+
+#~ msgid "No Repeat"
+#~ msgstr "Tekrar yok"
+
+#~ msgid "Repeat Horizontally"
+#~ msgstr "Yatay Tekrar"
+
+#~ msgid "Repeat Vertically"
+#~ msgstr "Dikey Tekrar"
+
+#~ msgid "Repeat All"
+#~ msgstr "Hepsini Tekrarla"
+
+#~ msgid "Top Left"
+#~ msgstr "Sol Üst"
+
+#~ msgid "Top Center"
+#~ msgstr "Merkez Üst"
+
+#~ msgid "Top Right"
+#~ msgstr "Sağ üst"
+
+#~ msgid "Middle Left"
+#~ msgstr "Orta Sol"
+
+#~ msgid "Middle Center"
+#~ msgstr "Orta Merkez"
+
+#~ msgid "Middle Right"
+#~ msgstr "Orta Sağ"
+
+#~ msgid "Bottom Left"
+#~ msgstr "Alt Sol"
+
+#~ msgid "Bottom Center"
+#~ msgstr "Alt Merkez"
+
+#~ msgid "Bottom Right"
+#~ msgstr "Alt Sağ"
+
+#~ msgid "Scroll Normally"
+#~ msgstr "Normal Kaydır"
+
+#~ msgid "Fixed in Place"
+#~ msgstr "Yerinde Sabit"
+
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#~ msgid "Italic"
+#~ msgstr "İtalik"
+
+#~ msgid "Bold"
+#~ msgstr "Kalın"
+
+#~ msgid "Bold Italic"
+#~ msgstr "Kalın İtalik"
+
+#~ msgid "Page %s"
+#~ msgstr "Sayfa  %s"
+
+#~ msgid "Follow us on "
+#~ msgstr "Bizi takip edin"
+
+#~ msgid "Sparkling Documentation"
+#~ msgstr "Sparkling Dökümanları"
+
+#~ msgid "<i class=\"fa fa-chevron-left\"></i> Older posts"
+#~ msgstr "<i class=\"fa fa-chevron-left\"></i> Daha eski gönderiler"
+
+#~ msgid "Newer posts <i class=\"fa fa-chevron-right\"></i>"
+#~ msgstr "Daha yeni gönderiler <i class=\"fa fa-chevron-right\"></i>"
+
+#~ msgid "Sparkling Categories"
+#~ msgstr "Sparkling Bölümleri"
+
+#~ msgid "Sparkling Popular Posts Widget"
+#~ msgstr "Sparkling Popüler Gönderiler Widget ı"
+
+#~ msgid "Popular Posts"
+#~ msgstr "Pöpüler Gönderiler"
+
+#~ msgid "Sparkling Social Widget"
+#~ msgstr "Sparkling Sosyal Widget ı"
+
+#~ msgid "One"
+#~ msgstr "Bir"
+
+#~ msgid "Two"
+#~ msgstr "İki"
+
+#~ msgid "Three"
+#~ msgstr "Üç"
+
+#~ msgid "Four"
+#~ msgstr "Dört"
+
+#~ msgid "Five"
+#~ msgstr "Beş"
+
+#~ msgid "French Toast"
+#~ msgstr "Fransız Tostu"
+
+#~ msgid "Pancake"
+#~ msgstr "Pankek"
+
+#~ msgid "Omelette"
+#~ msgstr "Omlet"
+
+#~ msgid "Crepe"
+#~ msgstr "Krep"
+
+#~ msgid "Waffle"
+#~ msgstr "Waffle"
+
+#~ msgid "Main"
+#~ msgstr "Ana"
+
+#~ msgid "Do You want to display image slider on the Home Page?"
+#~ msgstr "Ana Sayfada görüntü slaytçısının gözükmesini istiyorumusun?"
+
+#~ msgid "Check if you want to enable slider"
+#~ msgstr "Slaytçıyı aktive etmek için işaretle"
+
+#~ msgid "Slider Category"
+#~ msgstr "Slaytçı bölümü"
+
+#~ msgid "Select a category for the featured post slider"
+#~ msgstr "En son gönderi slaytçısı için bölüm seç"
+
+#~ msgid "Number of slide items"
+#~ msgstr "Slayt nesnelerinin sayısı"
+
+#~ msgid "Enter the number of slide items"
+#~ msgstr "Slayt nesnelerinin sayısını gir"
+
+#~ msgid "Choose between Left and Right sidebar options to be used as default"
+#~ msgstr ""
+#~ "Sağ ve Sol kenar çubuğu arasından ön ayarlı olarak kullanılacağı seç"
+
+#~ msgid "Element color"
+#~ msgstr "Element rengi"
+
+#~ msgid "Element color on hover"
+#~ msgstr "Vurgulanmmış alanda element rengi"
+
+#~ msgid "Custom Favicon"
+#~ msgstr "Özel Favicon"
+
+#~ msgid ""
+#~ "Upload a 32px x 32px PNG/GIF image that will represent your websites "
+#~ "favicon"
+#~ msgstr ""
+#~ "Websitenin faviconunu temsil edicek 32px x 32px PNG/GIF görselini yükle"
+
+#~ msgid "Action Button"
+#~ msgstr "Eylem Butonu"
+
+#~ msgid "Call For Action Text"
+#~ msgstr "Eylem yazısını cağır"
+
+#~ msgid "Enter the text for call for action section"
+#~ msgstr "Eylem bölümümün çağırmak için gereken yazıyı gir"
+
+#~ msgid "Call For Action Button Title"
+#~ msgstr "Eylem çağırma butonu başlığı"
+
+#~ msgid "Enter the title for Call For Action button"
+#~ msgstr "Eylem için çağır butonunun başlığını gir"
+
+#~ msgid "CFA button link"
+#~ msgstr "Eylem için çağır butonu bağlantısı"
+
+#~ msgid "Enter the link for Call For Action button"
+#~ msgstr "Eylem için çağır butonu bağlantısını gir"
+
+#~ msgid "Call For Action Text Color"
+#~ msgstr "Eylem için çağır yazı rengi"
+
+#~ msgid "Call For Action Background Color"
+#~ msgstr "Eylem için çağır arkaplan rengi"
+
+#~ msgid "Call For Action Button Border Color"
+#~ msgstr "Eylem için çağır butonu kenar rengi"
+
+#~ msgid "Call For Action Button Text Color"
+#~ msgstr "Eylem için çağır butonu yazı rengi"
+
+#~ msgid "Typography"
+#~ msgstr "Basımcılık"
+
+#~ msgid "Main Body Text"
+#~ msgstr "Ana gövde metni"
+
+#~ msgid "Used in P tags"
+#~ msgstr "P etiketlerinde kullanılır"
+
+#~ msgid "Heading Color"
+#~ msgstr "Heading rengi"
+
+#~ msgid "Color for all headings (h1-h6)"
+#~ msgstr "Bütün (h1-h6)headingler için renk"
+
+#~ msgid "Link Color"
+#~ msgstr "Bağlantı rengi"
+
+#~ msgid "Link:hover Color"
+#~ msgstr "Bağlantı:vurgulanmış rengi"
+
+#~ msgid "Header"
+#~ msgstr "Header"
+
+#~ msgid "Top nav background color"
+#~ msgstr "Üst navigason arkaplan rengi"
+
+#~ msgid "Top nav item color"
+#~ msgstr "Üst navigasyon nesne rengi"
+
+#~ msgid "Link color"
+#~ msgstr "Bağlantı rengi"
+
+#~ msgid "Top nav item hover color"
+#~ msgstr "Üst navigasyon nesne vurgulanmış rengi"
+
+#~ msgid "Link:hover color"
+#~ msgstr "Link:vurgulanmış rengi"
+
+#~ msgid "Top nav dropdown background color"
+#~ msgstr "Üst navigasyon aşağı düşen arkaplan rengi"
+
+#~ msgid "Background of dropdown item hover color"
+#~ msgstr "Aşağı düşen nesnenin vurgulanmış arkaplan rengi"
+
+#~ msgid "Top nav dropdown item color"
+#~ msgstr "Üst navigasyon nesne rengi"
+
+#~ msgid "Dropdown item color"
+#~ msgstr "Aşağı düşen nesne rengi"
+
+#~ msgid "Top nav dropdown item hover color"
+#~ msgstr "Üst navigasyon aşağı düşen vurgulanmış nesne rengi"
+
+#~ msgid "Dropdown item hover color"
+#~ msgstr "Aşağı düşen vurgulanmış nesne rengi"
+
+#~ msgid "Top nav dropdown item background hover color"
+#~ msgstr "Üst navigasyon aşağı düşen vurgulanmış nesnenin arkaplan rengi"
+
+#~ msgid "Footer widget area background color"
+#~ msgstr "Site altı widget alanı arkaplan rengi"
+
+#~ msgid "Footer background color"
+#~ msgstr "Site altı arkaplan rengi"
+
+#~ msgid "Footer text color"
+#~ msgstr "Site altı yazı rengi"
+
+#~ msgid "Footer link color"
+#~ msgstr "Site altı bağlantı rengi"
+
+#~ msgid "Footer information"
+#~ msgstr "Site altı bilgisi"
+
+#~ msgid "Copyright text in footer"
+#~ msgstr "Site altındaki telif hakkı yazısı"
+
+#, fuzzy
+#~ msgid "Footer Social Icons"
+#~ msgstr "Site altı sosyal ikon rengi"
+
+#, fuzzy
+#~ msgid "Show/Hide social icons in footer"
+#~ msgstr "Site altı sosyal ikon rengi"
+
+#~ msgid "Social"
+#~ msgstr "Sosyal"
+
+#~ msgid "Footer social icon color"
+#~ msgstr "Site altı sosyal ikon rengi"
+
+#~ msgid "Add full URL for your social network profiles"
+#~ msgstr "Sosyal ağ profillerinizin tam URL sini ekleyin"
+
+#~ msgid "Facebook"
+#~ msgstr "Facebook"
+
+#~ msgid "Twitter"
+#~ msgstr "Twitter"
+
+#~ msgid "Google+"
+#~ msgstr "Google+"
+
+#~ msgid "Youtube"
+#~ msgstr "Youtube"
+
+#~ msgid "Vimeo"
+#~ msgstr "Vimeo"
+
+#~ msgid "LinkedIn"
+#~ msgstr "LinkedIn"
+
+#~ msgid "Pinterest"
+#~ msgstr "Pinterest"
+
+#~ msgid "RSS Feed"
+#~ msgstr "RSS Besleme"
+
+#~ msgid "Tumblr"
+#~ msgstr "Tumblr"
+
+#~ msgid "Flickr"
+#~ msgstr "Flickr"
+
+#~ msgid "Instagram"
+#~ msgstr "Instagram"
+
+#~ msgid "Dribbble"
+#~ msgstr "Dribbble"
+
+#~ msgid "Skype"
+#~ msgstr "Skype"
+
+#~ msgid "Foursquare"
+#~ msgstr "Foursquare"
+
+#~ msgid "SoundCloud"
+#~ msgstr "SoundCloud"
+
+#~ msgid "GitHub"
+#~ msgstr "GitHub"
+
+#~ msgid "Spotify"
+#~ msgstr "Spotify"

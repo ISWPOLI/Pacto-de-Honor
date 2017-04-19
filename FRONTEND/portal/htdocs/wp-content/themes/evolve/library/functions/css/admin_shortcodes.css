@@ -1,0 +1,41 @@
+#poststuff .t4p_metabox h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 15px 25px;
+    margin-bottom: 15px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -border-radius: 4px;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 10px rgba(0, 0, 0, 0.1) inset, 0 1px 0 rgba(255, 255, 255, 0.6) inset;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .9);
+    background: #e9f3d2;
+    border: 1px solid #acd556;
+    color: #92b750;
+}
+
+.t4p_metabox {
+    padding: 10px 10px 0px 10px;
+}
+
+.t4p_metabox_field {
+    margin-bottom: 15px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.t4p_metabox_field label {
+    font-weight: bold;
+    float: left;
+    width: 15%;
+    line-height: 26px;
+}
+
+.t4p_metabox_field .field {
+    float: left;
+    width: 75%;
+}
+
+.t4p_metabox_field input[type=text] {
+    width: 100%;
+}

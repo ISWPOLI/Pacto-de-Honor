@@ -1,0 +1,17 @@
+.fl-col-group.fl-col-group-responsive-reversed .fluid-width-video-wrapper iframe,
+.fl-col-group.fl-col-group-responsive-reversed .fluid-width-video-wrapper object,
+.fl-col-group.fl-col-group-responsive-reversed .fluid-width-video-wrapper embed {
+	position: relative!important;
+}
+.fl-col-group.fl-col-group-responsive-reversed .fluid-width-video-wrapper {
+	padding-top: 0!important;
+}
+
+.fl-col-group-responsive-reversed .fl-wp-video .wp-video,
+.fl-col-group-responsive-reversed .mejs-mediaelement {
+	position: relative;
+}
+.fl-col-group-responsive-reversed .fl-wp-video {
+	height: 100%;
+	padding-bottom: 30px;
+}
