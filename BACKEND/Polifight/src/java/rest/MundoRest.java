@@ -2,13 +2,13 @@
  * @author William tautiva
  * 
  */
-package rest.services;
+package rest;
 
-import Entidades.Imagen;
-import Entidades.Mundo;
-import Entidades.sessiones.MundoFacade;
+import entities.Mundo;
 import java.util.List;
 import javax.ejb.EJB;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -24,22 +24,26 @@ import javax.ws.rs.core.MediaType;
  * @author Will
  */
 @Path("Mundo")
-public class MundoRest {
+public class MundoRest extends AbstractFacade<Mundo>{
     
-    @EJB
-    private MundoFacade ejbMundoFacade;
-    
+    @PersistenceContext(unitName = "PolifightPU")
+    private EntityManager em;
+
+    public MundoRest(Class<Mundo> entityClass) {
+        super(entityClass);
+    }
+        
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public List<Mundo> findALL() {
-        return ejbMundoFacade.findAll();
+        return super.findAll();
 
     }
 
     @POST
     @Consumes({MediaType.APPLICATION_JSON})
     public void create(Mundo mundo) {
-        ejbMundoFacade.create(mundo);
+        super.create(mundo);
 
     }
 
@@ -48,22 +52,26 @@ public class MundoRest {
     @Path("{id}")
     public void edit(@PathParam("id") Integer id, Mundo mundo) {
 
-        ejbMundoFacade.edit(mundo);
+        super.edit(mundo);
     }
 
     @DELETE
     @Consumes({MediaType.APPLICATION_JSON})
     @Path("{id}")
     public void remmove(@PathParam("id") Integer id) {
-        ejbMundoFacade.remove(ejbMundoFacade.find(id));
+        super.remove(em.find(Mundo.class, id));
     }
 
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     @Path("{id}")
-    public Mundo findByid (@PathParam("id")Integer id ){
-        
-        return ejbMundoFacade.find(id);
+    public Mundo findByid (@PathParam("id")Integer id ){        
+        return em.find(Mundo.class, id);
+    }
+
+    @Override
+    protected EntityManager getEntityManager() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

@@ -1,6 +1,6 @@
 package rest;
 
-import entitities.RolUsuario;
+import entities.RolUsuario;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.List;

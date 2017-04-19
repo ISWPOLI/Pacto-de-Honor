@@ -1,6 +1,6 @@
 package rest;
 
-import entitities.Pais;
+import entities.Pais;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.List;

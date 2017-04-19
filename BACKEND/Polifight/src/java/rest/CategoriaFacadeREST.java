@@ -5,7 +5,7 @@
  */
 package rest;
 
-import entitities.Categoria;
+import entities.Categoria;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;

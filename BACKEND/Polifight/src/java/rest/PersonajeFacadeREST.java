@@ -1,6 +1,6 @@
 package rest;
 
-import entitities.Personaje;
+import entities.Personaje;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.ArrayList;
@@ -186,19 +186,23 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
     /**
      * Retorna los datos nombre, imagen y nivel de dano
      * Se prueba con el TestCase "Crear" del proyecto Personaje-soapui-project
-     * @param id
-     * @return 
+     * @param id del Personaje
+     * @return JSON(String) con la respuesta del servicio
      */
     @GET
     @Path("getData")
     @Produces({"application/json"})
-    public PersonajePrint getData(@QueryParam("id") Integer id){
-        PersonajePrint resultado = new PersonajePrint();
+    public String getData(@QueryParam("id") Integer id){
+        String resultado = "";
         Personaje personaje =  super.find(id);
-        resultado.setId(personaje.getIdPersonaje());
-        resultado.setNombre(personaje.getNombrePersonaje());
-        resultado.setImagen(personaje.getIdImagen());
-        resultado.setNivelDano(String.valueOf(personaje.getNivelDano()));       
+        if(personaje != null){
+            resultado = "{'idPersonaje':'"+personaje.getIdPersonaje()+"', 'nombrePersonaje':'"+personaje.getNombrePersonaje()+"', "
+                    + "'imagen':'"+personaje.getIdImagen()+"', 'nivelDano':'"+personaje.getNivelDano()+"'}";   
+        }else{
+            resultado = "{'response':'KO', 'cause':'Personaje not found'}";
+        }         
+              
+                     
         return resultado;
     }
            

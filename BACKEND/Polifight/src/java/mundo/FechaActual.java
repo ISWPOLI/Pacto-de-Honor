@@ -19,10 +19,10 @@ public class FechaActual {
 	
    /**
     * Genera la fecha y hora actual
-    * @return 
+    * @return String con la fecha y hora actual
     */
     public static String timestamp(){
-        DateFormat hourdateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss ");
+        DateFormat hourdateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss ");
         return hourdateFormat.format(date);
     }
 	

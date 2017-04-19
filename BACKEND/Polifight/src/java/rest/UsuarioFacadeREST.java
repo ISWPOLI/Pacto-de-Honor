@@ -1,11 +1,12 @@
 package rest;
 
-import entitities.Ciudad;
-import entitities.Pais;
-import entitities.RolUsuario;
-import entitities.Usuario;
+import entities.Ciudad;
+import entities.Pais;
+import entities.RolUsuario;
+import entities.Usuario;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import javax.ejb.Stateless;
@@ -127,34 +128,86 @@ public class UsuarioFacadeREST extends AbstractFacade<Usuario> {
 
     /**
      * Al consumir, arroja un json con todos los datos de la tabla
-     * Se prueba con el TestCase "Usuario" del proyecto Usuario-soapui-project
-     * @return List de todos los Usuarios
-     */
+     * Se prueba con el TestCase "Listar" del proyecto Usuario-soapui-project
+     * @return String con todos los Usuarios
+     */    
+    @GET
+    @Path("listUsers")
+    @Produces({"application/json"})
+    public String listarUsuario(){
+        String resultado = "[";
+        Query query = em.createQuery("SELECT u FROM Usuario u");
+        List<Usuario> datos = query.getResultList();
+        for (int i = 0; i < datos.size(); i++) {
+            resultado += "{";
+            if(i == datos.size()-1){
+                resultado += "'idUsuario':'"+datos.get(i).getIdUsuario()+"', 'pais':'"+em.find(Pais.class, datos.get(i).getIdPais()).getNombrePais()+
+                        "', 'ciudad':'"+em.find(Ciudad.class, datos.get(i).getIdCiudad()).getNombreCiudad()+"', 'rol':'"+em.find(RolUsuario.class, datos.get(i).getIdRolUsuario()).getTipoUsuario()+
+                        "', 'nombreUsuario':'"+ datos.get(i).getNombreUsuario()+"', 'apellidoUsuario':'"+datos.get(i).getApellidoUsuario()+"', 'emailUsuario':'"+
+                        datos.get(i).getEmailUsuario()+"', " + "'fechaRegistro':'"+datos.get(i).getFechaRegistro()+"'}";
+            }else{
+                resultado += "'idUsuario':'"+datos.get(i).getIdUsuario()+"', 'pais':'"+em.find(Pais.class, datos.get(i).getIdPais()).getNombrePais()+
+                        "', 'ciudad':'"+em.find(Ciudad.class, datos.get(i).getIdCiudad()).getNombreCiudad()+"', 'rol':'"+em.find(RolUsuario.class, datos.get(i).getIdRolUsuario()).getTipoUsuario()+
+                        "', 'nombreUsuario':'"+ datos.get(i).getNombreUsuario()+"', 'apellidoUsuario':'"+datos.get(i).getApellidoUsuario()+"', 'emailUsuario':'"+
+                        datos.get(i).getEmailUsuario()+"', " + "'fechaRegistro':'"+datos.get(i).getFechaRegistro()+"'},";
+            }
+        }
+        return resultado += "]";
+    }
+            
     @GET
     @Override
     @Produces({"application/json"})
     public List<Usuario> findAll() {
-        return super.findAll();
+        Usuario usuario = new Usuario();
+        List<Usuario> list = new ArrayList<>();
+        list.add(usuario);
+        return list;
     }
     
+    /**
+     * Método que valida si un usuario se encuentra registrado 
+     * @param usuario nombre del usuario
+     * @param contrasena contraseña del usuario
+     * @return String con la respuesta satisfactoria o inválida
+     */
     @POST
+    @Path("login")
     @Produces({"application/json"})
     @Consumes({"application/json"})
     public String login(@QueryParam("user") String usuario, @QueryParam("pass") String contrasena){
-        String resultado;
-        Query query = em.createQuery("SELECT u FROM Usuario u WHERE u.nombreUsuario=:x AND u.contrasenaUsuario=:password");
-        query.setParameter("user", usuario);
-        query.setParameter("password", contrasena);
-        Usuario user = (Usuario) query.getSingleResult();
-        if(user != null){
-            resultado = "{'response':'OK'}";
-            user.setToken(generateToken());
-            user.setFechaToken(FechaActual.timestamp());
-        }else{
-            resultado = "{'response':'OK','cause':'User not found'}";
+        String resultado = "";
+        System.out.println(usuario);
+        System.out.println(contrasena);
+        if(usuario != null&& contrasena != null){
+            Query query = em.createQuery("SELECT u FROM Usuario u WHERE u.nombreUsuario=:user AND u.contrasenaUsuario=:password");
+            query.setParameter("user", usuario);
+            query.setParameter("password", contrasena);
+            try{
+                Usuario user = (Usuario) query.getSingleResult();
+                if(user != null){                    
+                    user.setToken(generateToken());
+                    user.setFechaToken(FechaActual.timestamp());
+                    em.merge(user);
+                    resultado = "{'response':'OK', 'token':'"+user.getToken()+"'}";
+                }else{
+                    resultado = "{'response':'OK','cause':'User not found'}";
+                }
+            }catch (Exception e){
+                resultado = "{'response':'OK','cause':'Unregistered user'}";
+            }
+            
+        }else if(usuario == null){
+            resultado = "{'response':'KO', 'cause':'Field user is empty'}";
+        }else if(contrasena == null){
+            resultado = "{'response':'KO', 'cause':'Field pass is empty'}";
+        }
+        if(usuario == null && contrasena == null){
+            resultado = "{'response':'KO', 'cause':'Field pass and user is empty'}";
         }
         return resultado;
     }
+    
     /**
      * Retorna de acuerdo alrango envidado, donde 0 es el primer dato
      * Se prueba con el TestCase "BuscarPorRango" del proyecto Ciudad-soapui-project
@@ -181,14 +234,16 @@ public class UsuarioFacadeREST extends AbstractFacade<Usuario> {
      * Debe recibir el id del usuario, la contraseña anterior, la nueva y un token 
      * de autorización
      */
-
     @Override
     protected EntityManager getEntityManager() {
         return em;
     }
     
+    /**
+     * Método que genera el token para el consumo de los servicios.
+     * @return 
+     */
     private String generateToken(){
         return UUID.randomUUID().toString().toUpperCase().replaceAll("-", "").concat(FechaActual.timeToken());
     }
-    
 }

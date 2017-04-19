@@ -1,6 +1,6 @@
 package rest;
 
-import entitities.Ciudad;
+import entities.Ciudad;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.List;
