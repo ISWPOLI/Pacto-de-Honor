@@ -35,7 +35,11 @@ public class ApplicationConfig extends Application {
         resources.add(rest.MundoRest.class);
         resources.add(rest.PaisFacadeREST.class);
         resources.add(rest.PersonajeFacadeREST.class);
+        resources.add(rest.PoderFacadeREST.class);
+        resources.add(rest.PruebaPsicotecnicaFacadeREST.class);
+        resources.add(rest.RespuestaPreguntasPsicotecnicasFacadeREST.class);
         resources.add(rest.RolUsuarioFacadeREST.class);
+        resources.add(rest.TipoPruebaFacadeREST.class);
         resources.add(rest.UsuarioFacadeREST.class);
     }
     

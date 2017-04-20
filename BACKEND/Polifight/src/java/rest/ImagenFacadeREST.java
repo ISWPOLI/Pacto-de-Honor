@@ -1,7 +1,7 @@
 
 package rest;
 
-import entitities.Imagen;
+import entities.Imagen;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.List;
