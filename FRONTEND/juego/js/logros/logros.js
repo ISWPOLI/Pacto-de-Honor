@@ -4,14 +4,14 @@ var friction = 0.99;
 var charactersl = ["Mi KuPlagio","Mi LifePlagio","Mi SkillPlagio","The originalPlagio","Mi HitBackground","ExpLogros","The Richest","The Unlocker","The A – List","5 in a row"];
 // Nombres personajes Pacto de honor
 var namesCharactersl = ["Mi KuPlagio", "Mi LifePlagio ", "Mi SkillPlagio ", "The originalPlagio ", "Mi HitBackground  \n“Es poseedor de la experiencia, “Campeón de habilidades”", "Trendy  \n“Este logro indica que eres súper popular”", "The Richest  \n“Podrás presumir tu fortuna”", "The Unlocker \n“Eres el encargado para recuperar a todos los héroes”", "The A – List \n“Aquí mostrarás tus habilidades al llegar al top”","5 in a row \n“Cambio de un mundo a otro con un desempeño perfecto”",];
-var Logroslooked = [false, true,  true, false, false, true, false, false, false, false];
+var Logroslooked = [true, true,  true, false, false, true, false, false, false, false];
 var description;
 var character;
 var apodo;
 var startButton;
 
 var moneyLogros = 10000;
-var rankingLogros = 10;
+var rankingLogros = 1;
 var timeplayedLogros =7000;
 var allHeros = false;
 var xpLogros =100;
@@ -35,7 +35,7 @@ var logros = function(game){};
             game.scale.pageAlignVertically = true;
 
           // Se carga una imagen transparente para colocar detras de las imagenes que apareceran en el Scrolling
-          game.load.image("transp", "images/transp.png");
+          game.load.image("transp", "../img/Componentes/logros/transp.png");
           // Se cargan las imagenes de los 10 logros
           game.load.spritesheet('Mi KuPlagio', '../img/Componentes/logros/KuPlagio.png');
           game.load.spritesheet('Mi LifePlagio', '../img/Componentes/logros/LifePlagio.png');

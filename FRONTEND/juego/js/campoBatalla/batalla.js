@@ -18,8 +18,8 @@ var movV=[false,false,false,false];
 
 var ataquePlagio;
 var ataquePersonalidadV;
-var idPJ="idPUno";
-var idPC="idPUno";
+var idPJ="idPDos";
+var idPC="idPDos";
 //es  200 es temporal y varia dependiendo de la pantalla 
 var costoAtaqueJ=personajesBuenos[idPJ].energia*200;
 var costoAtaqueC=personajesMalos[idPJ].energia[0]*200;
@@ -30,7 +30,7 @@ var secuencia=false;
 var movimientoComputadora="adelante";
 var primeImpacto=false;
 var indice;
-var primer = {
+var batalla = {
 	preload : function() {		
 		funcionesBatalla.cargar(idPJ,idPC);
 	},
