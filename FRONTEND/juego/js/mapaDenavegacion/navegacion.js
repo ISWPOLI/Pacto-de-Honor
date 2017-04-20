@@ -1,16 +1,16 @@
-var popup, popup2, popup3 , popup4, popup5, popup6, popup7,popup7 
-,popup9, popup10, popup11, popup12;
+var popup, popup2, popup3, popup4, popup5, popup6, popup7, popup7, popup9, popup10, popup11, popup12;
 
-var closeButton, closeButton2, closeButton3, closeButton4, closeButton5, closeButton6, closeButton7
-, closeButton8, closeButton9, closeButton10, closeButton11, closeButton12;
+var closeButton, closeButton2, closeButton3, closeButton4, closeButton5, closeButton6, closeButton7, closeButton8, closeButton9, closeButton10, closeButton11, closeButton12;
 var tween;
 
-var btMundo, btMundo2, btMundo3, btMundo4, btMundo5 ,btMundo6 ,btMundo7 ,btMundo8 ,btMundo9 ,btMundo10
-,btMundo11,btMundo12;
+var btMundo, btMundo2, btMundo3, btMundo4, btMundo5 ,btMundo6 ,btMundo7 ,btMundo8 ,btMundo9 ,btMundo10, btMundo11, btMundo12;
 
 var navegacion = function(game){};
 navegacion.prototype = {
     preload: function() {
+        game.scale.pageAlignHorizontally = true;
+        game.scale.pageAlignVertically = true;
+        
         game.load.spritesheet('btMundo2', '../img/Componentes/navegacionMapa/pause.png', 50,50);
         //fondo y escenarios
         game.load.image('fondo', '../img/Componentes/navegacionMapa/mapaNavegacion.png');
@@ -41,6 +41,7 @@ navegacion.prototype = {
         game.load.spritesheet('botonAmigos', '../img/Componentes/navegacionMapa/botonAmigos.png', 62, 62);
         game.load.spritesheet('botonPerfil', '../img/Componentes/navegacionMapa/botonPerfil.png', 62, 62);
         game.load.spritesheet('botonRanking', '../img/Componentes/navegacionMapa/botonRanking.png', 62, 62);
+        game.load.spritesheet('botonCompraPersonajes', '../img/Componentes/navegacionMapa/botonCompraPersonajes.png', 62, 62);
 
         game.load.spritesheet('pause12', '../img/Componentes/navegacionMapa/pause12.png', 50,50);
         game.load.spritesheet('pause13', '../img/Componentes/navegacionMapa/pause13.png', 50,50);
@@ -54,108 +55,89 @@ navegacion.prototype = {
         game.add.sprite(80, 10, 'monedas');
         botonCreditos = game.add.button(735, 5, 'botonCreditos', this.verCreditos, 1, 1, 0, 2);
         botonAmigos = game.add.button(670, 5, 'botonAmigos', this.verInvitarAmigos, 1, 1, 0, 2);
-        botonPerfil = game.add.button(5, 5, 'botonPerfil', this.verPerfil, 1, 1, 0, 2); //El estado de perfil lo está creando Juan Carlos
-        botonRanking = game.add.button(605, 5, 'botonRanking', null, 1, 1, 0, 2); //El estado de Rankings aun no esta creado
-        game.add.text(160, 20, "999999", {font: "16px Roboto", fill: "#ffffff"}); //Label monedas
-     
+        botonPerfil = game.add.button(5, 5, 'botonPerfil', this.verPerfil, 1, 1, 0, 2);
+        botonRanking = game.add.button(605, 5, 'botonRanking', this.verRankings, 1, 1, 0, 2);
+        botonCompraPersonajes = game.add.button(540, 5, 'botonCompraPersonajes', this.verCompraPersonajes, 1, 1, 0, 2);
+        game.add.text(160, 20, "999999", {font: "16px Roboto", fill: "#ffffff"}); //Label monedas     
        
-    btMundo = game.add.button (80, 60, 'pause13', this.onMundo1, 0, 0, 0, 1);
-    btMundo.scale.setTo(0.5, 0.5);
-    btMundo.input.useHandCursor = true;
-    var text = game.add.text(13,1, "1", 
-    	{ font: "40px Arial", fill: "#ff0044"});
-    btMundo.addChild(text);
+        btMundo = game.add.button (80, 60, 'pause13', this.onMundo1, 0, 0, 0, 1);
+        btMundo.scale.setTo(0.5, 0.5);
+        btMundo.input.useHandCursor = true;
+        var text = game.add.text(13,1, "1", { font: "40px Arial", fill: "#ff0044"});
+        btMundo.addChild(text);
     
+        btMundo2 = game.add.button (90, 500, 'pause13',this.onMundo2, 0, 0, 0, 1);
+        btMundo2.scale.setTo(0.5, 0.5);
+        btMundo.input.useHandCursor = true;
+        var text2 = game.add.text(13,1, "2", {font: "40px Arial", fill: "#ff0044"});
+        btMundo2.addChild(text2);
+        
+        btMundo3 = game.add.button (250, 450, 'pause13', this.onMundo3, 0, 0, 0, 1);
+        btMundo3.scale.setTo(0.5, 0.5);
+        var text3 = game.add.text(13,1, "3", { font: "40px Arial", fill: "#ff0044"});
+        btMundo3.addChild(text3);    
 
-     btMundo2 = game.add.button (90, 500, 'pause13',this.onMundo2, 0, 0, 0, 1);
-    btMundo2.scale.setTo(0.5, 0.5);
-     btMundo.input.useHandCursor = true;
-      var text2 = game.add.text(13,1, "2", 
-    	{ font: "40px Arial", fill: "#ff0044"});
-    btMundo2.addChild(text2);
-    
-    
-    btMundo3 = game.add.button (250, 450, 'pause13', this.onMundo3, 0, 0, 0, 1);
-    btMundo3.scale.setTo(0.5, 0.5);
-     var text3 = game.add.text(13,1, "3", 
-    	{ font: "40px Arial", fill: "#ff0044"});
-    btMundo3.addChild(text3);
-    
+        btMundo4 = game.add.button (280, 220, 'pause13', this.onMundo4, 0, 0, 0, 1);
+        btMundo4.scale.setTo(0.5, 0.5);
+        var text4 = game.add.text(13,1, "4", { font: "40px Arial", fill: "#ff0044"});
+        btMundo4.addChild(text4);
+        
+        btMundo5 = game.add.button (330, 80, 'pause13', this.onMundo5, 0, 0, 0, 1);
+        btMundo5.scale.setTo(0.5, 0.5);
+        var text5 = game.add.text(13,1, "5", { font: "40px Arial", fill: "#ff0044"});
+        btMundo5.addChild(text5);    
 
-    btMundo4 = game.add.button (280, 220, 'pause13', this.onMundo4, 0, 0, 0, 1);
-    btMundo4.scale.setTo(0.5, 0.5);
- var text4 = game.add.text(13,1, "4", 
-    	{ font: "40px Arial", fill: "#ff0044"});
-    btMundo4.addChild(text4);
-    
+        btMundo6 = game.add.button (430, 500, 'pause13', this.onMundo6, 0, 0, 0, 1);
+        btMundo6.scale.setTo(0.5, 0.5);
+        var text6 = game.add.text(13,1, "6", { font: "40px Arial", fill: "#ff0044"});
+        btMundo6.addChild(text6);    
 
-    btMundo5 = game.add.button (330, 80, 'pause13', this.onMundo5, 0, 0, 0, 1);
-    btMundo5.scale.setTo(0.5, 0.5);
-     var text5 = game.add.text(13,1, "5", 
-    	{ font: "40px Arial", fill: "#ff0044"});
-    btMundo5.addChild(text5);
-    
+        btMundo7 = game.add.button (520, 220, 'pause13',this.onMundo7, 0, 0, 0, 1);
+        btMundo7.scale.setTo(0.5, 0.5);
+        var text7 = game.add.text(15,1, "7", { font: "40px Arial", fill: "#ff0044"});
+        btMundo7.addChild(text7);
+        
+        btMundo8 = game.add.button (580, 200, 'pause13', this.onMundo8, 0, 0, 0, 1);
+        btMundo8.scale.setTo(0.5, 0.5);
+        var text8 = game.add.text(13,1, "8", { font: "40px Arial", fill: "#ff0044"});
+        btMundo8.addChild(text8);    
 
-    btMundo6 = game.add.button (430, 500, 'pause13', this.onMundo6, 0, 0, 0, 1);
-    btMundo6.scale.setTo(0.5, 0.5);
-     var text6 = game.add.text(13,1, "6", 
-    	{ font: "40px Arial", fill: "#ff0044"});
-    btMundo6.addChild(text6);
+        btMundo9 = game.add.button (550, 80, 'pause13', this.onMundo9, 0, 0, 0, 1);
+        btMundo9.scale.setTo(0.5, 0.5);
+        var text9 = game.add.text(13,1, "9", { font: "40px Arial", fill: "#ff0044"});
+        btMundo9.addChild(text9);
     
-
-    btMundo7 = game.add.button (520, 220, 'pause13',this.onMundo7, 0, 0, 0, 1);
-    btMundo7.scale.setTo(0.5, 0.5);
-     var text7 = game.add.text(15,1, "7", 
-    	{ font: "40px Arial", fill: "#ff0044"});
-    btMundo7.addChild(text7);
-    
-    
-    btMundo8 = game.add.button (580, 200, 'pause13', this.onMundo8, 0, 0, 0, 1);
-    btMundo8.scale.setTo(0.5, 0.5);
-     var text8 = game.add.text(13,1, "8", 
-    	{ font: "40px Arial", fill: "#ff0044"});
-    btMundo8.addChild(text8);
-    
-
-    btMundo9 = game.add.button (550, 80, 'pause13', this.onMundo9, 0, 0, 0, 1);
-    btMundo9.scale.setTo(0.5, 0.5);
-    var text9 = game.add.text(13,1, "9", 
-    	{ font: "40px Arial", fill: "#ff0044"});
-    btMundo9.addChild(text9);
-    
-    btMundo10 = game.add.button (680, 140, 'pause13', this.onMundo10, 0, 0, 0, 1);
-    btMundo10.scale.setTo(0.5, 0.5);
-     var text10 = game.add.text(6,3, "10", 
-    	{ font: "35px Arial", fill: "#ff0044"});
-    btMundo10.addChild(text10);
-    
+        btMundo10 = game.add.button (680, 140, 'pause13', this.onMundo10, 0, 0, 0, 1);
+        btMundo10.scale.setTo(0.5, 0.5);
+        var text10 = game.add.text(6,3, "10", { font: "35px Arial", fill: "#ff0044"});
+        btMundo10.addChild(text10);    
    
-    btMundo11 = game.add.button (700, 240, 'pause13', this.onMundo11, 0, 0, 0, 1);
-    btMundo11.scale.setTo(0.5, 0.5);
-    var text11 = game.add.text(9,3, "11", 
-    	{ font: "35px Arial", fill: "#ff0044"});
-    btMundo11.addChild(text11);
-    
+        btMundo11 = game.add.button (700, 240, 'pause13', this.onMundo11, 0, 0, 0, 1);
+        btMundo11.scale.setTo(0.5, 0.5);
+        var text11 = game.add.text(9,3, "11", { font: "35px Arial", fill: "#ff0044"});
+        btMundo11.addChild(text11);    
 
-    btMundo12 = game.add.button (750, 480, 'pause14',this.onMundo12, 0, 0, 0, 1);
-    btMundo12.scale.setTo(0.5, 0.5);
-
-     var text12 = game.add.text(5,1, "12", 
-    	{ font: "35px Arial", fill: "#FFFF00"});
-    btMundo12.addChild(text12);
+        btMundo12 = game.add.button (750, 480, 'pause14',this.onMundo12, 0, 0, 0, 1);
+        btMundo12.scale.setTo(0.5, 0.5);
+        var text12 = game.add.text(5,1, "12", { font: "35px Arial", fill: "#FFFF00"});
+        btMundo12.addChild(text12);
 
     },
     
     verCreditos: function(){
         game.state.start("creditos");
-    },
-    
+    },    
     verInvitarAmigos: function(){
         game.state.start("invitarAmigos");
-    },
-    
+    },    
     verPerfil: function(){
         game.state.start("perfilJugador");
+    },    
+    verRankings: function(){
+        game.state.start("rankings");
+    },    
+    verCompraPersonajes: function(){
+        game.state.start("compraPersonajes");
     },
     
     //se crea la funcion que ira adentro de cada boton de cada mundo, lo que hara sera abrir el popup con la imagen de el escenario y sus respectivos niveles.
@@ -232,31 +214,30 @@ navegacion.prototype = {
     
     },
     
-    onMundo2 :function() { 
+    onMundo2 :function() {
         var popup = game.add.sprite(game.world.centerX, game.world.centerY, 'posGrados');
- popup.anchor.set(0.7);
- popup.inputEnabled = true;
+        popup.anchor.set(0.7);
+        popup.inputEnabled = true;
 
+        closeButton = game.add.button(130,-200, 'close',closeWindow, 0, 0, 0, 1);
+        closeButton.scale.setTo(0.5, 0.5);
+        popup.addChild(closeButton);
 
-    closeButton = game.add.button(130,-200, 'close',closeWindow, 0, 0, 0, 1);
-    closeButton.scale.setTo(0.5, 0.5);
-popup.addChild(closeButton);
+        var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 2 nivel 1
 
-var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 2 nivel 1
+        nivelButton.inputEnabled = true;
+        nivelButton.input.priorityID = 1;
+        nivelButton.input.useHandCursor = true;
 
-    nivelButton.inputEnabled = true;
-    nivelButton.input.priorityID = 1;
-    nivelButton.input.useHandCursor = true;
+        popup.addChild(nivelButton);
 
- popup.addChild(nivelButton);
+        var nivelButton1 = game.add.button (180, -170, 'nivel2', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 2 nivel 2
 
- var nivelButton1 = game.add.button (180, -170, 'nivel2', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 2 nivel 2
+        nivelButton1.inputEnabled = true;
+        nivelButton1.input.priorityID = 1;
+        nivelButton1.input.useHandCursor = true;
 
-    nivelButton1.inputEnabled = true;
-    nivelButton1.input.priorityID = 1;
-    nivelButton1.input.useHandCursor = true;
-
- popup.addChild(nivelButton1);
+        popup.addChild(nivelButton1);
 
  var nivelButton2 = game.add.button (180, -90, 'nivel3', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 2 nivel 3
 
