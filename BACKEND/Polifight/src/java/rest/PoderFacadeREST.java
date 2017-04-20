@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.poder.Restful.PH.service;
+package rest;
 
 import com.poder.Restful.PH.Poder;
 import com.poder.Restful.PH.PoderPK;

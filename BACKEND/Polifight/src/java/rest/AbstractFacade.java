@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.poder.Restful.PH.service;
+package rest;
 
 import java.util.List;
 import javax.persistence.EntityManager;
