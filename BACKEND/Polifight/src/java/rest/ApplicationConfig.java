@@ -31,8 +31,8 @@ public class ApplicationConfig extends Application {
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(com.poder.Restful.PH.service.ImagenFacadeREST.class);
-        resources.add(com.poder.Restful.PH.service.PoderFacadeREST.class);
         resources.add(rest.CiudadFacadeREST.class);
+        resources.add(rest.PoderFacadeREST.class);
     }
     
 }
