@@ -1,27 +1,23 @@
-window.onload = function() {
-    game = new Phaser.Game(800, 600, Phaser.AUTO, "");
-    game.state.add("seleccionavatar", seleccionavatar);
-    game.state.start("seleccionavatar");
-}
+
 var password;
 var text;
 var text2;
 var str;
 var str2;
 var codigo;
-var seleccionavatar = function(game){};
-seleccionavatar.prototype = {
+var desbloqueo = function(game){};
+desbloqueo.prototype = {
     preload: function(){
-        game.load.spritesheet('pantera1', 'images/pantera1.png', 212,197);
-        game.load.spritesheet('gallo1', 'images/gallo1.png', 212,197);
-        game.load.spritesheet('hormiga1', 'images/hormiga1.png', 212,197);
-        game.load.spritesheet('jirafa1', 'images/jirafa1.png', 212,197);
-        game.load.spritesheet('llama1', 'images/llama1.png', 212,197);
-        game.load.spritesheet('canario1', 'images/canario1.png', 212,197);
-        game.load.spritesheet('pajaro1', 'images/pajaro1.png', 212,197);
-        game.load.spritesheet('leon1', 'images/leon1.png', 212,197);
-        game.load.spritesheet('flecha', 'images/arrow.png', 175.5,89);
- 		game.load.spritesheet('ingresar', 'images/ingresar.png', 193,71);          
+        game.load.spritesheet('pantera1', 'codigosAlfa/pantera1.png', 212,197);
+        game.load.spritesheet('gallo1', 'codigosAlfa/gallo1.png', 212,197);
+        game.load.spritesheet('hormiga1', 'codigosAlfa/hormiga1.png', 212,197);
+        game.load.spritesheet('jirafa1', 'codigosAlfa/jirafa1.png', 212,197);
+        game.load.spritesheet('llama1', 'codigosAlfa/llama1.png', 212,197);
+        game.load.spritesheet('canario1', 'codigosAlfa/canario1.png', 212,197);
+        game.load.spritesheet('pajaro1', 'codigosAlfa/pajaro1.png', 212,197);
+        game.load.spritesheet('leon1', 'codigosAlfa/leon1.png', 212,197);
+        game.load.spritesheet('flecha', 'codigosAlfa/arrow.png', 175.5,89);
+ 		game.load.spritesheet('ingresar', 'codigosAlfa/ingresar.png', 193,71);          
     },
     create: function(){ 
 		game.stage.backgroundColor = '#1873CE';
