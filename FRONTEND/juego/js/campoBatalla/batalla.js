@@ -18,8 +18,8 @@ var movV=[false,false,false,false];
 
 var ataquePlagio;
 var ataquePersonalidadV;
-var idPJ="idPUno";
-var idPC="idPUno";
+var idPJ="idPDos";
+var idPC="idPDos";
 //es  200 es temporal y varia dependiendo de la pantalla 
 var costoAtaqueJ=personajesBuenos[idPJ].energia*200;
 var costoAtaqueC=personajesMalos[idPJ].energia[0]*200;
@@ -30,8 +30,10 @@ var secuencia=false;
 var movimientoComputadora="adelante";
 var primeImpacto=false;
 var indice;
-var primer = {
-	preload : function() {		
+var batalla = {
+	preload : function() {
+		this.preloadBar=this.add.sprite(this.game.world.centerX,this.game.world.centerY,'barraCarga');
+		this.load.setPreloadSprite(this.preloadBar);
 		funcionesBatalla.cargar(idPJ,idPC);
 	},
 
@@ -89,6 +91,7 @@ var primer = {
 		energiaVerdeComputadora = new Phaser.Rectangle(460, 79, 200, 20);
 		
         var botonPoder = game.add.button(145, 105, 'botonPoder', funcionesBatalla.clickBotonPoder, 1, 1, 0, 2);
+   		console.log(this.game.device.desktop);
     },
     
 	render : function() {

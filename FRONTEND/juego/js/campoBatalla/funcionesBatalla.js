@@ -1,7 +1,7 @@
 var funcionesBatalla={
     //funcion que se encarga de cargar todos los elementos del campo de batalla
     cargar:function(idPJ,idPC){
-    game.load.image('fondo', "../img/escenarios/escenariosSecundarios/nivel1.png");
+        game.load.image('fondo', "../img/escenarios/escenariosSecundarios/nivel1.png");
 		game.load.spritesheet('personajeJugador', personajesBuenos[idPJ].rutaSprite, 200, 200);
 		game.load.image('avatarPersonajeJugador', personajesBuenos[idPJ].rutaAvatar);
 		game.load.spritesheet('personajeComputadora', personajesMalos[idPC].rutaSprite, 200, 200);
@@ -349,6 +349,7 @@ var funcionesBatalla={
              movV[0]=true;
         }else if (string.localeCompare("punos")==0){
              personajeComputadora.animations.play('punos'); 
+             personajeComputadora.body.x-=1;
              movV[1]=true;
         }
     },
@@ -359,5 +360,10 @@ var funcionesBatalla={
             this.segundoMovimientoComputadora();
         else if(indice==3)
             this.tercerMovimientoComputadora();
+    },
+    joystick:function(){
+        if(game.device.desktop){
+           var gh = game.add.sprite(game.width/2,game.height/2,'impactoPersonalidadJugador');
+        }
     }
 }
