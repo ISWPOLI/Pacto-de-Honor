@@ -16,20 +16,16 @@ var rankings = function(game){};
     rankings.prototype = {
         preload: function(){
             game.scale.pageAlignHorizontally = true;
-            game.scale.pageAlignVertically = true;
-            
+            game.scale.pageAlignVertically = true;            
             //Se carga el boton para volver al mapa de navegación
             game.load.spritesheet('botonVolver', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
-            
+            //Carga de imagen para el top 5
+            game.load.image('top5', '../img/Componentes/Rankings/top5.png');
             //Carga de imagenes para los botones principales
             game.load.spritesheet('botonDiario', '../img/Componentes/rankings/botonDiario.png', 192, 71);
             game.load.spritesheet('botonSemanal', '../img/Componentes/rankings/botonSemanal.png', 192, 71);
             game.load.spritesheet('botonPoli', '../img/Componentes/rankings/botonPoli.png', 192, 71);
-            game.load.spritesheet('botonGeneral', '../img/Componentes/rankings/botonGeneral.png', 192, 71);
-            
-            //Carga de imagen para el top 5
-            game.load.image('top5', '../img/Componentes/Rankings/top5.png');
-            
+            game.load.spritesheet('botonGeneral', '../img/Componentes/rankings/botonGeneral.png', 192, 71);            
             //Carga de imagenes para los cinco avatares
             game.load.image('avatarUno', jugadores[j1].rutaAvatar);
             game.load.image('avatarDos', jugadores[j2].rutaAvatar);
@@ -41,8 +37,7 @@ var rankings = function(game){};
         create: function(){
             game.stage.backgroundColor = "#0060b2"; //Color de fondo
             game.add.text(game.width / 2, 50, "Rankings", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5); //Título de Rankings
-            
-            top5 = game.add.sprite(30, 260, 'top5');
+            top5 = game.add.sprite(0, 230, 'top5'); //Imagen del top 5
             
             //Se agrega el botón para volver al mapa de navegación
             botonVolver = game.add.button(5, 5, 'botonVolver', this.volver, 1, 1, 0, 2);
@@ -52,12 +47,14 @@ var rankings = function(game){};
             botonPoli = game.add.button(400, 80, 'botonPoli', this.verPoli, 1, 1, 0, 2);
             botonGeneral = game.add.button(600, 80, 'botonGeneral', this.verGeneral, 1, 1, 0, 2);
             
+            //textoRanking varía según el botón oprimido
             textoRanking = game.add.text(game.width / 2, 180, "", {font: "30px Roboto", fill: "#ffffff"});
             textoRanking.anchor.set(0.5);
             
-            textoHead = game.add.text(50, 220, "", { font: "24px Roboto", fill: "#ffffff", tabs: [200, 200, 200]});            
+            //textoHead son los encabezados de cada columna
+            textoHead = game.add.text(50, 200, "", { font: "24px Roboto", fill: "#ffffff", tabs: [150, 150, 150]});            
             textoHead.stroke = "rgb(244,152,49)";
-            textoHead.strokeThickness = 3;                
+            textoHead.strokeThickness = 3;
             textoHead.parseList(encabezados);
                         
             //arregloJugadores es un Array que contiene los 5 jugadores que son Objects
@@ -70,36 +67,68 @@ var rankings = function(game){};
             
             //El método sort ordena los jugadores por nivel
             arregloJugadores.sort(function(a, b){
-                return a.nivel-b.nivel;
+                return b.nivel-a.nivel;
             });
             
-            //La variable tablaJ es la que se muestra en la pantalla
+            //Las tablas representan a los jugadores ordenados
             var tablaJ = [
                 [arregloJugadores[0].nombre, arregloJugadores[0].nivel],
                 [arregloJugadores[1].nombre, arregloJugadores[1].nivel],
                 [arregloJugadores[2].nombre, arregloJugadores[2].nivel],
                 [arregloJugadores[3].nombre, arregloJugadores[3].nivel],
                 [arregloJugadores[4].nombre, arregloJugadores[4].nivel],
-                ];
+            ];            
+            var tablaFacultad = [
+                [arregloJugadores[0].facultad],
+                [arregloJugadores[1].facultad],
+                [arregloJugadores[2].facultad],
+                [arregloJugadores[3].facultad],
+                [arregloJugadores[4].facultad],
+            ];            
+            var tablaUniversidad = [
+                [arregloJugadores[0].universidad],
+                [arregloJugadores[1].universidad],
+                [arregloJugadores[2].universidad],
+                [arregloJugadores[3].universidad],
+                [arregloJugadores[4].universidad],
+            ]; 
             
-            imgAvatar1 = game.add.image(270, 260, arregloJugadores[0].keyAvatar);
+            //Se añaden los avatares de los jugadores
+            imgAvatar1 = game.add.image(210, 250, arregloJugadores[0].keyAvatar);
             imgAvatar1.scale.setTo(0.6);
-            imgAvatar2 = game.add.image(270, 330, arregloJugadores[1].keyAvatar);
+            imgAvatar2 = game.add.image(210, 320, arregloJugadores[1].keyAvatar);
             imgAvatar2.scale.setTo(0.6);
-            imgAvatar3 = game.add.image(270, 400, arregloJugadores[2].keyAvatar);
+            imgAvatar3 = game.add.image(210, 385, arregloJugadores[2].keyAvatar);
             imgAvatar3.scale.setTo(0.6);
-            imgAvatar4 = game.add.image(270, 470, arregloJugadores[3].keyAvatar);
+            imgAvatar4 = game.add.image(210, 455, arregloJugadores[3].keyAvatar);
             imgAvatar4.scale.setTo(0.6);
-            imgAvatar5 = game.add.image(270, 540, arregloJugadores[4].keyAvatar);
+            imgAvatar5 = game.add.image(210, 525, arregloJugadores[4].keyAvatar);
             imgAvatar5.scale.setTo(0.6);
             
-            textoRank = game.add.text(420, 280, "", { font: "24px Roboto", fill: "#ffffff", tabs: [250]});
-            textoRank.lineSpacing = 35;
+            //textoRank, textoFacultad y textoUniversidad son las tablas de datos que se muestran en pantalla
+            textoRank = game.add.text(320, 265, "", { font: "18px Roboto", fill: "#ffffff", tabs: [200]});
+            textoRank.lineSpacing = 42;
             textoRank.parseList(tablaJ);
             
+            textoFacultad = game.add.text(600, 265, "", { font: "18px Roboto", fill: "#ffffff", tabs: [200]});
+            textoFacultad.lineSpacing = 42;
+            textoFacultad.parseList(tablaFacultad);
+            
+            textoUniversidad = game.add.text(600, 265, "", { font: "18px Roboto", fill: "#ffffff", tabs: [200]});
+            textoUniversidad.lineSpacing = 42;
+            textoUniversidad.parseList(tablaUniversidad);
+            
+            //textx es el texto que cambia entre Facultad y Universidad en los encabezados de las columnas
+            textx = game.add.text (630, 200, "", { font: "24px Roboto", fill: "#ffffff"});
+            textx.stroke = "rgb(244,152,49)";
+            textx.strokeThickness = 3;
+            
+            //Se ocultan los tops hasta que un botón sea oprimido
             top5.visible = false;
             textoHead.visible = false;
             textoRank.visible = false;
+            textoFacultad.visible = false;
+            textoUniversidad.visible = false;
             imgAvatar1.visible = false;
             imgAvatar2.visible = false;
             imgAvatar3.visible = false;
@@ -107,12 +136,17 @@ var rankings = function(game){};
             imgAvatar5.visible = false;
         },
         
+        //Función para volver al mapa de navegación
         volver: function(){
             game.state.start("navegacion");
         },
         
+        //En las siguientes funciones se ocultan las variables según corresponda
         verDiario: function(){
-            textoRanking.setText("Ranking Diario");
+            textoRanking.setText("Ranking Diario");            
+            textx.visible = false;
+            textoFacultad.visible = false;
+            textoUniversidad.visible = false;
             
             top5.visible = true;
             textoHead.visible = true;
@@ -126,6 +160,9 @@ var rankings = function(game){};
         
         verSemanal: function(){
             textoRanking.setText("Ranking Semanal");
+            textx.visible = false;
+            textoFacultad.visible = false;
+            textoUniversidad.visible = false;
             
             top5.visible = true;
             textoHead.visible = true;
@@ -140,7 +177,11 @@ var rankings = function(game){};
         
         verPoli: function(){
             textoRanking.setText("Ranking Poli");
+            textx.setText("Facultad");
             
+            textx.visible = true;
+            textoFacultad.visible = true;
+            textoUniversidad.visible = false;
             top5.visible = true;
             textoHead.visible = true;
             textoRank.visible = true;
@@ -153,7 +194,11 @@ var rankings = function(game){};
         
         verGeneral: function(){
             textoRanking.setText("Ranking General");
+            textx.setText("Universidad");
             
+            textx.visible = true;
+            textoFacultad.visible = false;
+            textoUniversidad.visible = true;
             top5.visible = true;
             textoHead.visible = true;
             textoRank.visible = true;
