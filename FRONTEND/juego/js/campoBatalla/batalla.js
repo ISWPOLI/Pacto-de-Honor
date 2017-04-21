@@ -31,7 +31,9 @@ var movimientoComputadora="adelante";
 var primeImpacto=false;
 var indice;
 var batalla = {
-	preload : function() {		
+	preload : function() {
+		this.preloadBar=this.add.sprite(this.game.world.centerX,this.game.world.centerY,'barraCarga');
+		this.load.setPreloadSprite(this.preloadBar);
 		funcionesBatalla.cargar(idPJ,idPC);
 	},
 
@@ -89,6 +91,7 @@ var batalla = {
 		energiaVerdeComputadora = new Phaser.Rectangle(460, 79, 200, 20);
 		
         var botonPoder = game.add.button(145, 105, 'botonPoder', funcionesBatalla.clickBotonPoder, 1, 1, 0, 2);
+   		console.log(this.game.device.desktop);
     },
     
 	render : function() {
