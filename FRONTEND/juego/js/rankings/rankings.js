@@ -2,6 +2,7 @@ var botonVolver;
 var top5;
 var textoRanking;
 var textoHead, textoRank;
+var imgAvatar1, imgAvatar2, imgAvatar3, imgAvatar4, imgAvatar5; 
 
 var j1 = "jugadorUno";
 var j2 = "jugadorDos";
@@ -10,13 +11,6 @@ var j4 = "jugadorCuatro";
 var j5 = "jugadorCinco";
 
 var encabezados = ['Top', 'Avatar', 'Nombre', 'Nivel'];
-var rank = [
-    ['', '[avatar1]', jugadores[j1].nombre, jugadores[j1].nivel],
-    ['', '[avatar2]', 'name2', 'lvl2'],
-    ['', '[avatar3]', 'name3', 'lvl3'],
-    ['', '[avatar4]', 'name4', 'lvl4'],
-    ['', '[avatar5]', 'name5', 'lvl5']
-    ];
 
 var rankings = function(game){};
     rankings.prototype = {
@@ -61,12 +55,56 @@ var rankings = function(game){};
             textoRanking = game.add.text(game.width / 2, 180, "", {font: "30px Roboto", fill: "#ffffff"});
             textoRanking.anchor.set(0.5);
             
-            var style = { font: "24px Roboto", fill: "#ffffff", tabs: [200, 200, 200]};
-            textoHead = game.add.text(50, 220, "", style);
+            textoHead = game.add.text(50, 220, "", { font: "24px Roboto", fill: "#ffffff", tabs: [200, 200, 200]});            
+            textoHead.stroke = "rgb(244,152,49)";
+            textoHead.strokeThickness = 3;                
             textoHead.parseList(encabezados);
-            textoRank = game.add.text(50, 270, "", style);
-            textoRank.lineSpacing = 30;
-            textoRank.parseList(rank);
+                        
+            //arregloJugadores es un Array que contiene los 5 jugadores que son Objects
+            var arregloJugadores = [];
+            arregloJugadores[0]=jugadores[j1];
+            arregloJugadores[1]=jugadores[j2];
+            arregloJugadores[2]=jugadores[j3];
+            arregloJugadores[3]=jugadores[j4];
+            arregloJugadores[4]=jugadores[j5];
+            
+            //El método sort ordena los jugadores por nivel
+            arregloJugadores.sort(function(a, b){
+                return a.nivel-b.nivel;
+            });
+            
+            //La variable tablaJ es la que se muestra en la pantalla
+            var tablaJ = [
+                [arregloJugadores[0].nombre, arregloJugadores[0].nivel],
+                [arregloJugadores[1].nombre, arregloJugadores[1].nivel],
+                [arregloJugadores[2].nombre, arregloJugadores[2].nivel],
+                [arregloJugadores[3].nombre, arregloJugadores[3].nivel],
+                [arregloJugadores[4].nombre, arregloJugadores[4].nivel],
+                ];
+            
+            imgAvatar1 = game.add.image(270, 260, arregloJugadores[0].keyAvatar);
+            imgAvatar1.scale.setTo(0.6);
+            imgAvatar2 = game.add.image(270, 330, arregloJugadores[1].keyAvatar);
+            imgAvatar2.scale.setTo(0.6);
+            imgAvatar3 = game.add.image(270, 400, arregloJugadores[2].keyAvatar);
+            imgAvatar3.scale.setTo(0.6);
+            imgAvatar4 = game.add.image(270, 470, arregloJugadores[3].keyAvatar);
+            imgAvatar4.scale.setTo(0.6);
+            imgAvatar5 = game.add.image(270, 540, arregloJugadores[4].keyAvatar);
+            imgAvatar5.scale.setTo(0.6);
+            
+            textoRank = game.add.text(420, 280, "", { font: "24px Roboto", fill: "#ffffff", tabs: [250]});
+            textoRank.lineSpacing = 35;
+            textoRank.parseList(tablaJ);
+            
+            top5.visible = false;
+            textoHead.visible = false;
+            textoRank.visible = false;
+            imgAvatar1.visible = false;
+            imgAvatar2.visible = false;
+            imgAvatar3.visible = false;
+            imgAvatar4.visible = false;
+            imgAvatar5.visible = false;
         },
         
         volver: function(){
@@ -74,23 +112,59 @@ var rankings = function(game){};
         },
         
         verDiario: function(){
-            textoRanking.setText("Ranking Diario");            
+            textoRanking.setText("Ranking Diario");
+            
+            top5.visible = true;
+            textoHead.visible = true;
+            textoRank.visible = true;
+            imgAvatar1.visible = true;
+            imgAvatar2.visible = true;
+            imgAvatar3.visible = true;
+            imgAvatar4.visible = true;
+            imgAvatar5.visible = true;
         },
         
         verSemanal: function(){
             textoRanking.setText("Ranking Semanal");
+            
+            top5.visible = true;
+            textoHead.visible = true;
+            textoRank.visible = true;
+            imgAvatar1.visible = true;
+            imgAvatar2.visible = true;
+            imgAvatar3.visible = true;
+            imgAvatar4.visible = true;
+            imgAvatar5.visible = true;
+            imgAvatar5.visible = true;
         },
         
         verPoli: function(){
-            textoRanking.setText("Ranking Poli");            
+            textoRanking.setText("Ranking Poli");
+            
+            top5.visible = true;
+            textoHead.visible = true;
+            textoRank.visible = true;
+            imgAvatar1.visible = true;
+            imgAvatar2.visible = true;
+            imgAvatar3.visible = true;
+            imgAvatar4.visible = true;
+            imgAvatar5.visible = true;
         },
         
         verGeneral: function(){
-            textoRanking.setText("Ranking General");            
+            textoRanking.setText("Ranking General");
+            
+            top5.visible = true;
+            textoHead.visible = true;
+            textoRank.visible = true;
+            imgAvatar1.visible = true;
+            imgAvatar2.visible = true;
+            imgAvatar3.visible = true;
+            imgAvatar4.visible = true;
+            imgAvatar5.visible = true;
         },
         
         update: function(){
-            console.log(game.input.mousePointer.x);
-            console.log(game.input.mousePointer.y);
+            
         }
     }
