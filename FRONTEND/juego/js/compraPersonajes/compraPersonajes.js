@@ -1,8 +1,8 @@
 var speedMult = 0.2;
 var friction = 0.99;
-var characters = ["pantera","gallo","cierva","jirafa","leon","canario","ruisenor","raton","hormiga"];
+var animals = ["pantera","gallo","cierva","jirafa","leon","canario","ruisenor","raton","hormiga"];
 // Nombres personajes Pacto de honor
-var namesCharacters = ["Ana Pantera", 
+var names = ["Ana Pantera", 
                        "Andrés Gallo",
                        "Cata Cierva", 
                        "Daniela Jirafa", 
@@ -11,17 +11,17 @@ var namesCharacters = ["Ana Pantera",
                        "Iván Ruiseñor", 
                        "Pedro Ratón", 
                        "Tati Hormiga"];
-var description;
+var scrollText;
 var comprado = [false,true,false,false,false,false,false,false,true];
-var character;
+var animal;
 var monedas = 4000;
 var xp = 8000;
-var apodo;
+var nickname;
 var startButton, botonVolver;
 var compradoL;
 var pos;
 // Especificaciones de compra de los personajes
-var descriptions = ["Necesitas: 2.000 monedas \n \n Recompensas: \n 1.000 monedas \n 50 puntos de experiencia",
+var texts = ["Necesitas: 2.000 monedas \n \n Recompensas: \n 1.000 monedas \n 50 puntos de experiencia",
                     "Necesitas: 1.300 monedas \n \n Recompensas: \n 500 monedas \n 10 puntos de experiencia",
                     "Necesitas: 1.350 monedas \n \n Recompensas: \n 550 monedas \n 15 puntos de experiencia",
                     "Necesitas: 1.400 monedas \n \n Recompensas: \n 600 monedas \n 20 puntos de experiencia",
@@ -50,7 +50,7 @@ compraPersonajes.prototype = {
           game.scale.pageAlignVertically = true;
 
           // Se carga una imagen transparente para colocar detrás de las imágenes que apareceran en el Scrolling
-          game.load.image("transp", "images/transp.png");
+          game.load.image("transp", "../img/Componentes/compraPersonajes/transp.png");
           // Se cargan las imágenes de los 9 personajes buenos
           game.load.image('pantera', '../img/Componentes/compraPersonajes/AnaPantera.png');
           game.load.image('gallo', '../img/Componentes/compraPersonajes/AndrésGallo.png');
@@ -75,7 +75,7 @@ compraPersonajes.prototype = {
           game.add.text(game.width / 2, 50, "Compra de personajes", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5);
 
           // Se agrega la función ScrollingMap a la ventana, con una posición especifica, y se agrega la imagen transparente
-          this.scrollingMap = game.add.tileSprite(0, 0, 650 + characters.length * 90 + 64, game.height, "transp");
+          this.scrollingMap = game.add.tileSprite(0, 0, 650 + animals.length * 90 + 64, game.height, "transp");
           this.scrollingMap.inputEnabled = true;
           this.scrollingMap.input.enableDrag(false);
 
@@ -88,15 +88,15 @@ compraPersonajes.prototype = {
           this.scrollingMap.input.allowVerticalDrag = false;
           this.scrollingMap.input.boundsRect = new Phaser.Rectangle(game.width - this.scrollingMap.width, game.height - this.scrollingMap.height, this.scrollingMap.width * 2 - game.width, this.scrollingMap.height * 2 - game.height);
           
-          for(var i = 0; i < characters.length; i++){
+          for(var i = 0; i < animals.length; i++){
                // See agregan las 9 imágenes cargadas previamente de los 9 personajes buenos
-               character = game.add.image(game.width / 2 + i * 90, 170, characters[i]);
+               animal = game.add.image(game.width / 2 + i * 90, 170, animals[i]);
 
                // Se centra la imagen cargada en la posición puesta en la linea anterior
-               character.anchor.set(0.5);
+               animal.anchor.set(0.5);
 
                // Se agrega al scrollingMap cada una de las imágenes cargadas
-               this.scrollingMap.addChild(character);
+               this.scrollingMap.addChild(animal);
           }
 
           // Se agregan eventos a las imágenes del scrollingMap para cuando este en movimiento
@@ -113,13 +113,13 @@ compraPersonajes.prototype = {
 
           // Se agrega un texto a la ventana para representar los nombres de los personajes, con 24px de tamaño y "Roboto" como tipo de letra
           // También se agrega un color de fondo y se alinea el texto en el centro
-          apodo = game.add.text(game.world.centerX, 270, "", { font: "24px Roboto", fill: "#ffffff", align: "center", backgroundColor: "#2451A6"});
-          apodo.anchor.set(0.5);
+          nickname = game.add.text(game.world.centerX, 270, "", { font: "24px Roboto", fill: "#ffffff", align: "center", backgroundColor: "#2451A6"});
+          nickname.anchor.set(0.5);
 
           // Se agrega un texto a la ventana para representar las recompensas de los personajes, con 20px de tamaño y "Roboto" como tipo de letra
           // Se agrega un color de fondo y se alinea el texto en el centro
-          description = game.add.text(game.world.centerX, 400, "", { font: "20px Roboto", fill: "#ffffff", align: "center", backgroundColor: "#2451A6"});
-          description.anchor.set(0.5);
+          scrollText = game.add.text(game.world.centerX, 400, "", { font: "20px Roboto", fill: "#ffffff", align: "center", backgroundColor: "#2451A6"});
+          scrollText.anchor.set(0.5);
 
           startButton = game.add.button(game.world.width / 2, 510, 'button', this.compra, this, 2, 1, 0); // over, out, down, up
           startButton.anchor.set(0.5);
@@ -161,14 +161,14 @@ compraPersonajes.prototype = {
 
                     // Se pone la variable zoomed en true cuando la imagen del scrollingMap aumente su tamaño
                     zoomed = true;
-                    for (var j = 0; j < descriptions.length; j++) {
+                    for (var j = 0; j < texts.length; j++) {
                          if(i == j){
                               pos = j;
                               // Se va modificando los nombres de los personajes de acuerdo al personaje en el que se esté
-                              apodo.setText(namesCharacters[j]);
+                              nickname.setText(names[j]);
 
                               // Se modifican los parámetros de compra de acuerdo al personaje en el que se esté
-                              description.setText(descriptions[j]);
+                              scrollText.setText(texts[j]);
                          }
                     }
 

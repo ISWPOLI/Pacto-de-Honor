@@ -11,7 +11,7 @@ historieta.prototype = {
      },
      create: function(){
          histo = game.add.sprite(0,0, 'historieta');
-         histo.animations.add('verH', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 0.2, false);
+         histo.animations.add('verH', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 0.3, false);
          histo.animations.play('verH');
          button = game.add.button (game.world.width - 100, game.world.height - 100, 'button', this.verMapa, this, 2 ,1, 0);
          button.anchor.setTo (0.5, 0.5);

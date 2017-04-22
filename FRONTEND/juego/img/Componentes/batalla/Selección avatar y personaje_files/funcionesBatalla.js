@@ -12,7 +12,6 @@ var funcionesBatalla={
 		game.load.spritesheet('ataquePlagio', personajesMalos[idPC].rutaAtaquePlagio,500,500);
 		game.load.image('ataquePersonalidadB', personajesBuenos[idPJ].rutaAtaque);
         game.load.spritesheet('impactoPersonalidadJugador', personajesBuenos[idPJ].rutaImpactoPersonalidad,201,160);
-        game.load.spritesheet('botonPoderJugador', personajesBuenos[idPJ].rutaBotonPoder,62,62);
         game.load.spritesheet('impactoPersonalidadComputadora', personajesMalos[idPC].rutaImpactoPersonalidad,161,145);
         game.load.spritesheet('impactoPlagioComputadora', personajesMalos[idPC].rutaImpactoPlagio,277,277);
 	},
@@ -96,19 +95,6 @@ var funcionesBatalla={
         }
     },
 
-    clickBotonPoder: function(barra){
-        console.log("Click sobre boton de poder");
-        if(!movH[2]&&barra.width>=costoAtaqueJ){
-            console.log("Entra if del boton");
-                barra.width=barra.width-costoAtaqueJ;
-                personajeJugador.animations.play('especial');
-                game.time.events.add(1000,function(){
-                this.activarPersonalidadJ();
-                },this);
-            }
-            movH[2]=true;            
-    },
-    
     activarPersonalidadJ :function(){
         var ataquePersonalidadB=game.add.sprite(0,0,'ataquePersonalidadB')
         game.physics.arcade.enable(ataquePersonalidadB);
