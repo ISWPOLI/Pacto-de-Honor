@@ -11,5 +11,5 @@ var game = new Phaser.Game (800,600, Phaser.CANVAS, 'container');
     game.state.add("logros", logros);
     game.state.add("seleccionpersonaje", seleccionpersonaje);    
     game.state.add("seleccionavatar", seleccionavatar);
-    game.state.add("fin", fin);    
+    game.state.add("fin", fin);
 	game.state.start("seleccionavatar");
