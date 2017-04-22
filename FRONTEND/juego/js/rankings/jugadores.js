@@ -2,23 +2,38 @@
 Con esto nos aseguramos que vaya a funcionar cuando se consuman los servicios 
 */
 var jugadores={
-    "jugadorUno":{"nombre":"Nicolás Martínez",
-                  "rutaAvatar":"../img/componentes/compraPersonajes/DanielLeon.png",
-                  "nivel":5},
+    "jugadorUno":{nombre:"Nicolás Martínez",
+                  facultad:"Ing. y Ciencias Básicas",
+                  universidad:"Poligran",
+                  keyAvatar:"avatarUno",
+                  rutaAvatar:"../img/componentes/compraPersonajes/DanielLeon.png",
+                  nivel:10},
     
-    "jugadorDos":{"nombre":"David Yepes",
-			  "rutaAvatar":"../img/componentes/compraPersonajes/AnaPantera.png",
-              "nivel":8},
+    "jugadorDos":{nombre:"David Yepes",
+                  facultad:"Ing. y Ciencias Básicas",
+                  universidad:"Poligran",
+                  keyAvatar:"avatarDos",
+                  rutaAvatar:"../img/componentes/compraPersonajes/AnaPantera.png",
+                  nivel:14},
     
-    "jugadorTres":{"nombre":"Gabriel Alvarez",
-                  "rutaAvatar":"../img/componentes/compraPersonajes/AndrésGallo.png",
-                  "nivel":7},
+    "jugadorTres":{nombre:"Gabriel Alvarez",
+                   facultad:"Ing. y Ciencias Básicas",
+                   universidad:"Poligran",
+                   keyAvatar:"avatarTres",
+                   rutaAvatar:"../img/componentes/compraPersonajes/AndrésGallo.png",
+                   nivel:7},
     
-    "jugadorCuatro":{"nombre":"Iván Barrantes",
-			  "rutaAvatar":"../img/componentes/compraPersonajes/IvánRuiseñor.png",
-              "nivel":13},
+    "jugadorCuatro":{nombre:"Iván Barrantes",
+                     facultad:"Ing. y Ciencias Básicas",
+                     universidad:"Poligran",
+                     keyAvatar:"avatarCuatro",
+                     rutaAvatar:"../img/componentes/compraPersonajes/IvánRuiseñor.png",
+                     nivel:17},
     
-    "jugadorCinco":{"nombre":"Cristian Garzón",
-                  "rutaAvatar":"../img/componentes/compraPersonajes/CataCierva.png",
-                  "nivel":6}
+    "jugadorCinco":{nombre:"Cristian Garzón",
+                    facultad:"Ing. y Ciencias Básicas",
+                    universidad:"Poligran",
+                    keyAvatar:"avatarCinco",
+                    rutaAvatar:"../img/componentes/compraPersonajes/CataCierva.png",
+                    nivel:3}
 }
