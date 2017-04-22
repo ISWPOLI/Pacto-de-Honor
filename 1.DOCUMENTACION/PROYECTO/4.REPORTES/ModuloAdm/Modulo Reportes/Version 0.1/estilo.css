@@ -45,7 +45,7 @@ a:hover, a:active, a:focus { /* este grupo de selectores proporcionará a un usu
 /* ~~ No se asigna una anchura al encabezado. Se extenderá por toda la anchura del diseño. Contiene un marcador de posición de imagen que debe sustituirse por su propio logotipo vinculado. ~~ */
 .header {
 	height:160px;
-	background-color: #19254B;
+	background-color: #0A0098;
 }
 
 /* ~~ Estas son las columnas para el diseño. ~~ 
@@ -99,7 +99,7 @@ ul.nav a, ul.nav a:visited { /* al agrupar estos selectores, se asegurará de qu
 	width: 160px;  /*esta anchura hace que se pueda hacer clic en todo el botón para IE6. Puede eliminarse si no es necesario proporcionar compatibilidad con IE6. Calcule la anchura adecuada restando el relleno de este vínculo de la anchura del contenedor de barra lateral. */
 	text-decoration: none;
 	color:#FFFFFF;
-	background-color: #142457;
+	background-color: #2C49DC;
 }
 ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* esto cambia el color de fondo y del texto tanto para usuarios que naveguen con ratón como para los que lo hagan con teclado */
 	background-color: #02198E;
@@ -109,7 +109,7 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* esto cambia el color de fon
 /* ~~ Los estilos de pie de página ~~ */
 .footer {
 	padding: 10px 0;
-	background-color: #142457;
+	background-color: #354AB4;
 	position: relative;/* esto da a IE6 hasLayout para borrar correctamente */
 	clear: both; /* esta propiedad de borrado fuerza a .container a conocer dónde terminan las columnas y a contenerlas */
 }
