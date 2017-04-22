@@ -49,6 +49,6 @@ seleccionpersonaje.prototype = {
           startButton.anchor.set(0.5);
      },
      verbatalla : function () {
-         this.state.start ("primer");
+         this.state.start ("batalla");
      }
 }
