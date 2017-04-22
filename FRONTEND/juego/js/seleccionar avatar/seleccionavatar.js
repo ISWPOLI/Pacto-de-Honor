@@ -18,21 +18,25 @@ var descriptions = ["Ana tiene buenos amigos y un gran\ngrupo social, los sigue 
 var seleccionavatar = function(game){};
 seleccionavatar.prototype = {
      preload: function(){
-          game.scale.pageAlignHorizontally = true;
-          game.scale.pageAlignVertically = true;
-
-          game.load.image("transp", "../img/Componentes/selecccion avartar/transp.png");
-          game.load.image('pantera', '../img/Componentes/selecccion avartar/AnaPantera.png');
-          game.load.image('gallo', '../img/Componentes/selecccion avartar/AndresGallo.png');
-          game.load.image('cierva', '../img/Componentes/selecccion avartar/CataCierva.png');
-          game.load.image('girafa', '../img/Componentes/selecccion avartar/DanielaGirafa.png');
-          game.load.image('leon', '../img/Componentes/selecccion avartar/DanielLeon.png');
-          game.load.image('canario', '../img/Componentes/selecccion avartar/FabianCanario.png');
-          game.load.image('ruisenor', '../img/Componentes/selecccion avartar/IvanRuisenor.png');
-          game.load.image('raton', '../img/Componentes/selecccion avartar/PedroRaton.png');
-          game.load.image('hormiga', '../img/Componentes/selecccion avartar/TatiHormiga.png');
-          game.load.spritesheet('button', '../img/Componentes/selecccion avartar/SpriteButton.png', 150, 40);
+         game.scale.pageAlignHorizontally = true;
+         game.scale.pageAlignVertically = true;
+         
+         this.preloadBar=this.add.sprite(this.game.world.centerX,this.game.world.centerY,'barraCarga');
+		 this.load.setPreloadSprite(this.preloadBar);
+         
+         game.load.image("transp", "../img/Componentes/selecccion avartar/transp.png");
+         game.load.image('pantera', '../img/Componentes/selecccion avartar/AnaPantera.png');
+         game.load.image('gallo', '../img/Componentes/selecccion avartar/AndresGallo.png');
+         game.load.image('cierva', '../img/Componentes/selecccion avartar/CataCierva.png');
+         game.load.image('girafa', '../img/Componentes/selecccion avartar/DanielaGirafa.png');
+         game.load.image('leon', '../img/Componentes/selecccion avartar/DanielLeon.png');
+         game.load.image('canario', '../img/Componentes/selecccion avartar/FabianCanario.png');
+         game.load.image('ruisenor', '../img/Componentes/selecccion avartar/IvanRuisenor.png');
+         game.load.image('raton', '../img/Componentes/selecccion avartar/PedroRaton.png');
+         game.load.image('hormiga', '../img/Componentes/selecccion avartar/TatiHormiga.png');
+         game.load.spritesheet('button', '../img/Componentes/selecccion avartar/SpriteButton.png', 150, 40);
      },
+    
      create: function(){  
           game.stage.backgroundColor = "#2451A6"; 
           game.add.text(game.width / 2, 50, "Selección de avatar", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5);
@@ -65,7 +69,6 @@ seleccionavatar.prototype = {
           description.anchor.set(0.5);
           startButton = game.add.button(game.world.width / 2, 540, 'button', this.verH, this, 2, 1, 0); // over, out, down, up
           startButton.anchor.set(0.5);
-
      },
      verH:function(){
         this.state.start("historieta");
