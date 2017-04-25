@@ -10,7 +10,7 @@ var boot ={
     	this.scale.refresh();
     	
     	console.log(game.device.iOS);
-    	game.state.start('batalla');
+    	game.state.start('seleccionavatar');
 
 	}
 
