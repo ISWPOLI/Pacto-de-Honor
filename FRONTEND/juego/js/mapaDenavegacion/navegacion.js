@@ -2,8 +2,7 @@ var popup, popup2, popup3, popup4, popup5, popup6, popup7, popup7, popup9, popup
 
 var closeButton, closeButton2, closeButton3, closeButton4, closeButton5, closeButton6, closeButton7, closeButton8, closeButton9, closeButton10, closeButton11, closeButton12;
 var tween;
-var music;
-var musicButton;
+
 var btMundo, btMundo2, btMundo3, btMundo4, btMundo5 ,btMundo6 ,btMundo7 ,btMundo8 ,btMundo9 ,btMundo10, btMundo11, btMundo12;
 
 var navegacion = function(game){};
@@ -11,8 +10,7 @@ navegacion.prototype = {
     preload: function() {
         game.scale.pageAlignHorizontally = true;
         game.scale.pageAlignVertically = true;
-       game.load.audio('sonidos','../img/Componentes/sonidos/mapa/mapa.mp3');
-         game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3')
+        
         game.load.spritesheet('btMundo2', '../img/Componentes/navegacionMapa/pause.png', 50,50);
         //fondo y escenarios
         game.load.image('fondo', '../img/Componentes/navegacionMapa/mapaNavegacion.png');
@@ -49,15 +47,12 @@ navegacion.prototype = {
         game.load.spritesheet('pause13', '../img/Componentes/navegacionMapa/pause13.png', 50,50);
         game.load.spritesheet('pause14', '../img/Componentes/navegacionMapa/pause14.png', 50,50);
         game.load.image('close', '../img/Componentes/navegacionMapa/orb.png');
-
-        
     },
 
     //se agrega el fondo y se crean los botones de los mundos en donde tenemos button(medida en x, medida en y, nombre de la imagen, la funcion, sprites)
     create:function() {
         game.add.sprite(0, 0, 'fondo');
         game.add.sprite(80, 10, 'monedas');
-
         botonCreditos = game.add.button(735, 5, 'botonCreditos', this.verCreditos, 1, 1, 0, 2);
         botonAmigos = game.add.button(670, 5, 'botonAmigos', this.verInvitarAmigos, 1, 1, 0, 2);
         botonPerfil = game.add.button(5, 5, 'botonPerfil', this.verPerfil, 1, 1, 0, 2);
@@ -127,42 +122,26 @@ navegacion.prototype = {
         var text12 = game.add.text(5,1, "12", { font: "35px Arial", fill: "#FFFF00"});
         btMundo12.addChild(text12);
 
-        music = game.add.audio('sonidos');
-        musicButton = game.add.audio('sonidoBoton');
-        music.play();
-        
-
     },
-  
     
     verCreditos: function(){
         game.state.start("creditos");
-        musicButton.play();
-        music.pause();
     },    
     verInvitarAmigos: function(){
         game.state.start("invitarAmigos");
-        musicButton.play();
-        music.pause();
     },    
     verPerfil: function(){
         game.state.start("perfilJugador");
-        musicButton.play();
-        music.pause();
     },    
     verRankings: function(){
         game.state.start("rankings");
-        musicButton.play();
-        music.pause();
     },    
     verCompraPersonajes: function(){
         game.state.start("compraPersonajes");
-        musicButton.play();
-        music.pause();
     },
+    
     //se crea la funcion que ira adentro de cada boton de cada mundo, lo que hara sera abrir el popup con la imagen de el escenario y sus respectivos niveles.
     onMundo1 :function () {
-        musicButton.play();
         //se agrega ventana emergente popup (medidas en x, medidas en y, nombre imagen)
         popup2 = game.add.sprite(game.world.centerX, game.world.centerY, 'medellin');
         // se agrega la posicion
@@ -184,8 +163,6 @@ navegacion.prototype = {
     
         function iniciarnivel1(){
             game.state.start("seleccionpersonaje");
-            musicButton.play();
-            music.pause();
         }
 
         nivelButton.inputEnabled = true;
@@ -194,12 +171,7 @@ navegacion.prototype = {
         //se agregan al popup
         popup2.addChild(nivelButton);
 
-        var nivelButton1 = game.add.button (180, -170, 'nivel2', iniciarnivel2, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 1 nivel 2
-        
-          function iniciarnivel2(){
-            musicButton.play();
-            //music.pause();
-        }
+        var nivelButton1 = game.add.button (180, -170, 'nivel2', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 1 nivel 2
 
         nivelButton1.inputEnabled = true;
         nivelButton1.input.priorityID = 1;
@@ -207,12 +179,7 @@ navegacion.prototype = {
 
         popup2.addChild(nivelButton1);
 
-        var nivelButton2 = game.add.button (180, -90, 'nivel3',iniciarnivel3, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 1 nivel 3
-        
-          function iniciarnivel3(){
-            musicButton.play();
-            //music.pause();
-        }
+        var nivelButton2 = game.add.button (180, -90, 'nivel3', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 1 nivel 3
 
         nivelButton2.inputEnabled = true;
         nivelButton2.input.priorityID = 1;
@@ -220,12 +187,7 @@ navegacion.prototype = {
 
         popup2.addChild(nivelButton2);
 
-        var nivelButton3 = game.add.button (180, -10, 'nivel4',iniciarnivel4, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 1 nivel 4
-        
-          function iniciarnivel4(){
-            musicButton.play();
-            //music.pause();
-        }
+        var nivelButton3 = game.add.button (180, -10, 'nivel4', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 1 nivel 4
 
         nivelButton3.inputEnabled = true;
         nivelButton3.input.priorityID = 1;
@@ -233,12 +195,7 @@ navegacion.prototype = {
 
         popup2.addChild(nivelButton3);
 
-        var nivelButton4 = game.add.button (180, 70, 'nivel5',iniciarnivel5, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 1 nivel 5
-        
-          function iniciarnivel5(){
-            musicButton.play();
-            //music.pause();
-        }
+        var nivelButton4 = game.add.button (180, 70, 'nivel5', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 1 nivel 5
 
         nivelButton4.inputEnabled = true;
         nivelButton4.input.priorityID = 1;
@@ -266,12 +223,7 @@ navegacion.prototype = {
         closeButton.scale.setTo(0.5, 0.5);
         popup.addChild(closeButton);
 
-        var nivelButton = game.add.button (180, -250, 'nivel1',iniciarnivel1, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 2 nivel 1
-        
-          function iniciarnivel1(){
-            musicButton.play();
-            //music.pause();
-        }
+        var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 2 nivel 1
 
         nivelButton.inputEnabled = true;
         nivelButton.input.priorityID = 1;

@@ -2,8 +2,6 @@ var speedMult = 0.2;
 var friction = 0.99
 var character1;
 var character2;
-var music;
-var musicButton;
 
 var perfilJugador = function(game){};
     perfilJugador.prototype = {
@@ -19,15 +17,10 @@ var perfilJugador = function(game){};
             game.load.spritesheet('boton-jefes', '../img/Componentes/perfilJugador/boton-jefes.png');
             game.load.spritesheet('boton-trofeo', '../img/Componentes/perfilJugador/boton-trofeo.png');
             game.load.spritesheet('boton-alfanumerico', '../img/Componentes/perfilJugador/boton-alfanumerico.png');
-            game.load.audio('sonidos','../img/Componentes/sonidos/perfilDeUsuario/Soliloquy.mp3');
-             game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3')
             //game.load.image('personajes', 'images/personajes.png');		
         },
 
         create : function (){
-            music = game.add.audio('sonidos');
-            musicButton = game.add.audio('sonidoBoton');
-            music.play();
             game.stage.backgroundColor = "#2451A6";
 		    game.add.sprite(50, 50,'avatar');
 		
@@ -41,18 +34,13 @@ var perfilJugador = function(game){};
             game.add.text(400, 130, "Nickname: -----", {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
             game.add.text(600, 130, "Mundo: ----", {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
             game.add.text(360, 200, "Nivel: 0", {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
-            
-            music = game.add.audio('sonidos');
-            music.play();
         },
         
         verNavegacion: function(){
-            music.pause();
             game.state.start("navegacion");
         },
         
         verLogros: function(){
-            music.pause();
             game.state.start("logros");
         },
 
