@@ -27,7 +27,7 @@ import javax.ws.rs.Produces;
 @Stateless
 @Path("entities.tipoprueba")
 public class TipoPruebaFacadeREST extends AbstractFacade<TipoPrueba> {
-    @PersistenceContext(unitName = "Restful_PactoHonorPU")
+    @PersistenceContext(unitName = "PolifightPU")
     private EntityManager em;
 
     public TipoPruebaFacadeREST() {

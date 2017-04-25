@@ -1,6 +1,7 @@
 package rest;
 
 import entities.Personaje;
+import entities.Usuario;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.ArrayList;
@@ -9,16 +10,12 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import javax.persistence.TypedQuery;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
-
-import printEntities.PersonajeIdPrint;
-import printEntities.PersonajePrint;
 
 /**
  * Servicio para la entidad Personaje
@@ -43,18 +40,33 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
      */
     @GET
     @Path("getId")
-    @Consumes({"application/json"})
     @Produces({"application/json"})
-    public List<PersonajeIdPrint> returnId(){
-        Query query = em.createQuery("SELECT p FROM Personaje p");
-        List<Personaje> listP = query.getResultList();        
-        List<PersonajeIdPrint> resultado = new ArrayList<PersonajeIdPrint>();        
-        for (int i = 0; i < listP.size(); i++) {
-            PersonajeIdPrint p = new PersonajeIdPrint();
-            p.setId(listP.get(i).getIdPersonaje());
-            p.setNombrePersonaje(listP.get(i).getNombrePersonaje());
-            resultado.add(p);
+    public String returnId(@QueryParam("token") String token){
+        String resultado = "[";        
+        try {
+            Query queryToken = em.createQuery("SELECT u FROM Usuario u WHERE u.token :=x");
+            System.err.println(token);
+            queryToken.setParameter("x", token);
+            Usuario user = (Usuario) queryToken.getSingleResult();
+            if(user != null){
+                Query query = em.createQuery("SELECT p FROM Personaje p");
+                List<Personaje> datos = query.getResultList();            
+                for (int i = 0; i < datos.size(); i++) {
+                    resultado += "{";
+                    if(i == datos.size()-1){
+                        resultado += "'idPersonje':'"+datos.get(i).getIdPersonaje()+"', nombrePersonaje':'"+datos.get(i).getNombrePersonaje()+"'}";
+                    }else{
+                        resultado += "'idPersonje':'"+datos.get(i).getIdPersonaje()+"', nombrePersonaje':'"+datos.get(i).getNombrePersonaje()+"'},";
+                    }
+                }
+                resultado += "]";
+            }else{
+                resultado = "{'response':'KO', 'cause':'Invalid token'}";
+            }        
+        }catch (Exception e){
+            resultado = "{'response':'KO', 'cause':'Invalid token'}";
         }
+        System.err.println(resultado);
         return resultado;
     }
     

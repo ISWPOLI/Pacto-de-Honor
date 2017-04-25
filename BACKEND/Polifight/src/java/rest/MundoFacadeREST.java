@@ -1,7 +1,7 @@
-package RestFacade;
+package rest;
 
 import com.sun.xml.bind.xmlschema.StrictWildcardPlug;
-import entidad.Mundo;
+import entities.Mundo;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.List;
@@ -24,7 +24,7 @@ import javax.ws.rs.core.MediaType;
 @Stateless
 public class MundoFacadeREST extends AbstractFacade<Mundo> {
 
-    @PersistenceContext(unitName = "ServPU")
+    @PersistenceContext(unitName = "PolifightPU")
     private EntityManager em;
 
     @Override

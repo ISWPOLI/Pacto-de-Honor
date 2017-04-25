@@ -34,19 +34,21 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Mundo.findByIdMundo", query = "SELECT m FROM Mundo m WHERE m.idMundo = :idMundo"),
     @NamedQuery(name = "Mundo.findByNombreMundo", query = "SELECT m FROM Mundo m WHERE m.nombreMundo = :nombreMundo")})
 public class Mundo implements Serializable {
+    
     private static final long serialVersionUID = 1L;
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "id_mundo", nullable = false)
     private Integer idMundo;
+    
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 20)
     @Column(name = "nombre_mundo", nullable = false, length = 20)
     private String nombreMundo;
-    @ManyToMany(mappedBy = "mundoList")
-    private List<Imagen> imagenList;
+
 
     public Mundo() {
     }
@@ -75,16 +77,7 @@ public class Mundo implements Serializable {
     public void setNombreMundo(String nombreMundo) {
         this.nombreMundo = nombreMundo;
     }
-
-    @XmlTransient
-    public List<Imagen> getImagenList() {
-        return imagenList;
-    }
-
-    public void setImagenList(List<Imagen> imagenList) {
-        this.imagenList = imagenList;
-    }
-
+    
     @Override
     public int hashCode() {
         int hash = 0;

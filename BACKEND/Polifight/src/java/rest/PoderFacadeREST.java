@@ -30,7 +30,8 @@ import javax.ws.rs.core.PathSegment;
 @Stateless
 @Path("entities.poder")
 public class PoderFacadeREST extends AbstractFacade<Poder> {
-    @PersistenceContext(unitName = "Restful_PactoHonorPU")
+    
+    @PersistenceContext(unitName = "PolifightPU")
     private EntityManager em;
 
     private PoderPK getPrimaryKey(PathSegment pathSegment) {
