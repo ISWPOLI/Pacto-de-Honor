@@ -9,8 +9,6 @@ var boot ={
 		
     	//
     	//
-    	
-
     	if(isMobile. any()!=null){
    			game.scale.forceOrientation(false, true);
    			this.scale.scaleMode = Phaser.ScaleManager.EXACT_FIT;
@@ -22,7 +20,7 @@ var boot ={
    			this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
    		}
    		this.scale.refresh();
-    	game.state.start('batalla');
+    	game.state.start("seleccionavatar");
 
 	}
 
