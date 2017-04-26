@@ -51,6 +51,8 @@ var batalla = {
 		primeImpacto=false;
 
 		if(dispositivoMovil){
+			this.gamepad = this.game.plugins.add(Phaser.Plugin.VirtualGamepad);
+			this.joystick = this.gamepad.addJoystick(60, 440, 0.5, 'gamepad');
 			cursores = game.input.keyboard.createCursorKeys();
 			esp = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 		}else{
