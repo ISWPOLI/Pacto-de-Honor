@@ -15,6 +15,7 @@ var funcionesBatalla={
         game.load.spritesheet('impactoPersonalidadJugador', personajesBuenos[idPJ].rutaImpactoPersonalidad, 201, 160);
         game.load.spritesheet('impactoPersonalidadComputadora', personajesMalos[idPC].rutaImpactoPersonalidad, 161, 145);
         game.load.spritesheet('impactoPlagioComputadora', personajesMalos[idPC].rutaImpactoPlagio, 277, 277);
+        game.load.spritesheet('gamepad','../img/Componentes/joystick/gamepad_spritesheet.png',100,100);
 
 
     },
@@ -70,12 +71,12 @@ var funcionesBatalla={
     movimientoJugador: function(barra){
         movH[0]=false;
         movH[1]=false;
-        if(movH[2]){
-            if(ataquePersonalidadJ.body.onFloor()){
-                    ataquePersonalidadJ.kill();
-                    movH[2]=false;
-                }
-        }
+        // if(movH[2]){
+        //     if(ataquePersonalidadJ.body.onFloor()){
+        //             ataquePersonalidadJ.kill();
+        //             movH[2]=false;
+        //         }
+        // }
         if (cursores.right.isDown) {
             personajeJugador.body.x+=2;
             personajeJugador.animations.play('correr');
@@ -86,15 +87,15 @@ var funcionesBatalla={
             personajeJugador.animations.play('defensa');
             movH[0]=true;
 
-        } else if (cursores.up.isDown) {
-            if(!movH[2]&&barra.width>=costoAtaqueJ){
-                barra.width=barra.width-costoAtaqueJ;
-                personajeJugador.animations.play('especial');
-                game.time.events.add(100,function(){
-                    this.activarPersonalidadJ();
-                     movH[2]=true;
-                 },this);
-            }   
+        // } else if (cursores.up.isDown) {
+        //     if(!movH[2]&&barra.width>=costoAtaqueJ){
+        //         barra.width=barra.width-costoAtaqueJ;
+        //         personajeJugador.animations.play('especial');
+        //         game.time.events.add(100,function(){
+        //             this.activarPersonalidadJ();
+        //              movH[2]=true;
+        //          },this);
+        //     }   
         } else if (esp.isDown){
             personajeJugador.animations.play('punos');
             personajeJugador.body.x+=1;
@@ -364,9 +365,26 @@ var funcionesBatalla={
         else if(indice==3)
             this.tercerMovimientoComputadora();
     },
-    joystick:function(){
-        if(game.device.desktop){
-           var gh = game.add.sprite(game.width/2,game.height/2,'impactoPersonalidadJugador');
-        }
+    joystick:function(joy,button){
+        
+            movH[0]=false;
+            movH[1]=false;
+            if (joy.properties.right) {
+                personajeJugador.body.x+=2;
+                personajeJugador.animations.play('correr');
+                } else if (joy.properties.left) {
+                    personajeJugador.body.x-=2;
+                    personajeJugador.animations.play('correr');
+                } else if (joy.properties.down) {
+                    personajeJugador.animations.play('defensa');
+                    movH[0]=true;
+                }
+                else if (button.isDown){
+                    personajeJugador.animations.play('punos');
+                    personajeJugador.body.x+=1;
+                    movH[1]=true;
+                }else{
+                    personajeJugador.animations.play('quieto');
+                }
     }
 }
