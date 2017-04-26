@@ -72,9 +72,9 @@
         this.preUpdate = gamepadPoll.bind(this);
     };
     
-	Phaser.Plugin.VirtualGamepad.prototype = 
+    Phaser.Plugin.VirtualGamepad.prototype = 
         Object.create(Phaser.Plugin.prototype);
-	Phaser.Plugin.VirtualGamepad.prototype.constructor = 
+    Phaser.Plugin.VirtualGamepad.prototype.constructor = 
         Phaser.Plugin.VirtualGamepad;
         
     /**
@@ -232,7 +232,7 @@
         
         // Calculate x/y of pointer from joystick center
         var deltaX = point.x - that.joystickPoint.x;
-		var deltaY = point.y - that.joystickPoint.y;
+        var deltaY = point.y - that.joystickPoint.y;
         
         // Get the angle (radians) of the pointer on the joystick
         var rotation = that.joystickPoint.angle(point);
@@ -248,7 +248,7 @@
         // Normalize x/y
         that.joystick.properties.x = parseInt((deltaX / 
             that.joystickRadius) * 100, 10);
-		that.joystick.properties.y = parseInt((deltaY  /
+        that.joystick.properties.y = parseInt((deltaY  /
             that.joystickRadius) * 100, 10);
         
         // Set polar coordinates

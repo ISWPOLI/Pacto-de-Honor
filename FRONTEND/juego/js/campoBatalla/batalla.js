@@ -29,6 +29,9 @@ var movimientoComputadora;//lleva el movimiento que realiza el villano
 var primeImpacto;//se usa para que el ataque plagio solo reste vida una vez
 var indice;//decide que secuencia de ataque realiza el villano
 var fondogame;
+var joystick;
+var button;
+
 var batalla = {
 	preload : function() {
 		this.preloadBar=this.add.sprite(this.game.world.centerX,this.game.world.centerY,'barraCarga');
@@ -50,15 +53,8 @@ var batalla = {
  		movimientoComputadora="adelante";
 		primeImpacto=false;
 
-		if(dispositivoMovil){
-			this.gamepad = this.game.plugins.add(Phaser.Plugin.VirtualGamepad);
-			this.joystick = this.gamepad.addJoystick(60, 440, 0.5, 'gamepad');
-			cursores = game.input.keyboard.createCursorKeys();
-			esp = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
-		}else{
-			cursores = game.input.keyboard.createCursorKeys();
-			esp = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
-		}
+		
+		
 		ataquePersonalidadC = game.add.weapon(10, 'ataquePersonalidadV');
 	 	fondogame = game.add.sprite(0, 0, 'fondo');
 		personajeComputadora = game.add.sprite(650, 450, 'personajeComputadora');
@@ -68,7 +64,19 @@ var batalla = {
 		funcionesBatalla.iniciarSprite(personajeJugador);
 		funcionesBatalla.iniciarSprite(personajeComputadora);
 
-		
+		if(dispositivoMovil){
+			 //Add the VirtualGamepad plugin to the game
+        	 gamepad = game.plugins.add(Phaser.Plugin.VirtualGamepad);
+        	// Add a joystick to the game (only one is allowed right now)
+        	 joystick = gamepad.addJoystick(125, 500, 1.2, 'gamepad');       
+        	// Add a button to the game (only one is allowed right now)
+        	 button = gamepad.addButton(600, 500, 1, 'gamepad');
+			// cursores = game.input.keyboard.createCursorKeys();
+			// esp = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+		}else{
+			cursores = game.input.keyboard.createCursorKeys();
+			esp = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+		}
 
 		game.add.text(145,20,personajesBuenos[idPJ].nombre,{fill:'white'});
 		game.add.text(460,20,personajesMalos[idPC].nombre,{fill:'white'});
@@ -111,6 +119,7 @@ var batalla = {
 		energiaVerdeComputadora = new Phaser.Rectangle(460, 79, 200, 20);
 		
         var botonPoder = game.add.button(145, 105, 'botonPoder', funcionesBatalla.clickBotonPoder, 1, 1, 0, 2);
+
    		
     },
     
@@ -132,17 +141,15 @@ var batalla = {
 		game.debug.geom(energiaVerdeComputadora, 'rgb(0,255,0)');
 	},
 	//se crea esta funcion para disminuir la barra de energia
-	
-	activarPlagio: function(){
-		ataquePlagio.destroy();
-	},
     
 	update : function() {
-		indice=funcionesBatalla.numeroAleatorio(1,4)
-		
+		indice=funcionesBatalla.numeroAleatorio(1,4);
 		funcionesBatalla.cargarEnergia(energiaVerdeJugador);
 		funcionesBatalla.cargarEnergia(energiaVerdeComputadora);
-		funcionesBatalla.movimientoJugador(energiaVerdeJugador);
+		if(dispositivoMovil)
+			funcionesBatalla.joystick(joystick,button);
+		else
+			funcionesBatalla.movimientoJugador(energiaVerdeJugador);
         
         funcionesBatalla.guiaComputadora(movimientoComputadora);
 		if(!secuencia)
