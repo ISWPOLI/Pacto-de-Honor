@@ -32,6 +32,8 @@ desbloqueo.prototype = {
 			borderColor: '#000',
 			borderRadius: 6,
 			placeHolder: 'Tu codigo aqui'});
+	    
+
 
 		btFlechar = game.add.button (10, 10, 'flecha', null, 0, 0, 0, 1);
 		btFlechar.scale.setTo(0.5, 0.5);
@@ -60,7 +62,7 @@ desbloqueo.prototype = {
 		btCanario= game.add.button(260,100,'canario1',this.code8,0,0,0,1);
 		btCanario.scale.setTo(0.5,0.5);
 
-		btIngresar  = game.add.button(570,480,'ingresar',null,this,2,1,0);
+		btIngresar  = game.add.button(570,480,'ingresar',this.alfaNumeric1,this,2,1,0);
 		btIngresar.scale.setTo(0.9,0.9);
 		codigo = game.add.inputField(100,400, {
 		    font: '18px Arial',
@@ -77,7 +79,58 @@ desbloqueo.prototype = {
 		    min:11,
 		    placeHolder: '¡Haz clic en algun personaje para regalar el codigo de el a un amigo!'});
 
-	
+		//var letra = input.value;
+	//alfaNumeric(letra);
+
+	},
+	alfaNumeric1:function(){
+		var letra = input.value;
+		var expresion = /^1[A-Z][-][A-Z]+E$/;
+		if(letra.match(expresion)){
+	alert("esta");
+		}else{
+	alert("no esta");
+		}
+
+
+	},
+
+	alfaNumeric: function(cadenaAnalizar){
+   
+ if(cadenaAnalizar.length!=11){
+        return false;
+        alert("nesta");
+    }
+    var mapnumeros1 = new Array();
+    for(var i = 1; i <= 8 ; i++){
+        mapnumeros1[i]=true;
+    }
+    var string ="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    var mapletras1 = new Array();
+    for(var i = 0 ; i <= string.length; i++){
+        mapletras1[string.substr(i,1)]=true;
+    }
+    
+  
+    
+    for(var i = 0; i < cadenaAnalizar.length ; i++){
+        if(i==0 && mapnumeros1[cadenaAnalizar.substr(i,1)]==undefined){
+            return false;
+            alert("nesta");
+        }else if(((i>=1 && i<=4)||(i>=6 && i<=9)) && mapletras1[cadenaAnalizar.substr(i,1)]==undefined){
+            return false;
+            alert("nesta");
+        }else if(i==5 && cadenaAnalizar.substr(i,1)!="-"){
+            return false;
+            alert("nesta");
+        }else if(i==10 && (cadenaAnalizar.substr(i,1)!="E"&&cadenaAnalizar.substr(i,1)!="P")){
+            return false;
+            alert("nesta");
+        }
+    }
+    return true;
+alert("esta");
+
 
 
 	},
