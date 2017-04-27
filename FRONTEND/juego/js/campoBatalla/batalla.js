@@ -1,6 +1,12 @@
 var personajeJugador;//guarda el sprite del personaje elegido
-var personajeComputadora//guarda el sprite del personaje asignado a un escenario
-var cursores;//crea cursores
+var personajeComputadora//guarda el sprite del personaje asignado a un escenar
+var counter = 0;
+var ti = 0;
+var x = 200; // heroe
+var y = 200; // villano
+var danoH=[6,10]; //daño del heroe
+var danoV=[6,10,15]; //daño del villano
+var musicButton;
 var counter;
 var ti;
 var danoH;//daño del heroe
@@ -37,7 +43,13 @@ var batalla = {
 		this.preloadBar=this.add.sprite(this.game.world.centerX,this.game.world.centerY,'barraCarga');
 		this.load.setPreloadSprite(this.preloadBar);
 		funcionesBatalla.cargar(idPJ,idPC);
+        game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
 	},
+
+
+	create : function() {		
+		game.physics.startSystem(Phaser.Physics.ARCADE);
+        musicButton = game.add.audio('sonidoBoton');
 
 	create : function() {	
 		counter = 0;
@@ -54,7 +66,7 @@ var batalla = {
 		primeImpacto=false;
 
 		
-		
+	
 		ataquePersonalidadC = game.add.weapon(10, 'ataquePersonalidadV');
 	 	fondogame = game.add.sprite(0, 0, 'fondo');
 		personajeComputadora = game.add.sprite(650, 450, 'personajeComputadora');
@@ -90,11 +102,13 @@ var batalla = {
 		pausa.inputEnabled=true;
 		//funcion para pausar
 		pausa.events.onInputUp.add(function () {
+            musicButton.play();
 			funcionesBatalla.pausar()
         });
         game.input.onDown.add(unpause, self);
 		//funcion para reaunudar
         function unpause(event){
+            musicButton.play();
         	funcionesBatalla.unpause(event);
         }  
 		pausa.scale.setTo(0.4, 0.4);

@@ -20,7 +20,7 @@ var perfilJugador = function(game){};
             game.load.spritesheet('boton-trofeo', '../img/Componentes/perfilJugador/boton-trofeo.png');
             game.load.spritesheet('boton-alfanumerico', '../img/Componentes/perfilJugador/boton-alfanumerico.png');
             game.load.audio('sonidos','../img/Componentes/sonidos/perfilDeUsuario/Soliloquy.mp3');
-             game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3')
+             game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
             //game.load.image('personajes', 'images/personajes.png');		
         },
 
@@ -47,13 +47,15 @@ var perfilJugador = function(game){};
         },
         
         verNavegacion: function(){
-            music.pause();
             game.state.start("navegacion");
+            musicButton.play();
+            music.pause();
         },
         
         verLogros: function(){
-            music.pause();
             game.state.start("logros");
+            musicButton.play();
+            music.pause();
         },
 
         update : function(){

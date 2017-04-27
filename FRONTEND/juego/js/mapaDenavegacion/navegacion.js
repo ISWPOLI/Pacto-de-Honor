@@ -11,8 +11,13 @@ navegacion.prototype = {
     preload: function() {
         game.scale.pageAlignHorizontally = true;
         game.scale.pageAlignVertically = true;
+
+       game.load.audio('sonidos','../img/Componentes/sonidos/mapa/mapa.mp3');
+         game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
+
         game.load.audio('sonidos','../img/Componentes/sonidos/mapa/mapa.mp3');
         game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3')
+
         game.load.spritesheet('btMundo2', '../img/Componentes/navegacionMapa/pause.png', 50,50);
         //fondo y escenarios
         game.load.image('fondo', '../img/Componentes/navegacionMapa/mapaNavegacion.png');
@@ -258,6 +263,7 @@ navegacion.prototype = {
     },
     
     onMundo2 :function() {
+        musicButton.play();
         var popup = game.add.sprite(game.world.centerX, game.world.centerY, 'posGrados');
         popup.anchor.set(0.7);
         popup.inputEnabled = true;
@@ -279,7 +285,13 @@ navegacion.prototype = {
 
         popup.addChild(nivelButton);
 
-        var nivelButton1 = game.add.button (180, -170, 'nivel2', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 2 nivel 2
+        var nivelButton1 = game.add.button (180, -170, 'nivel2',iniciarnivel2, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 2 nivel 2
+        
+         function iniciarnivel2(){
+            musicButton.play();
+            //music.pause();
+        }
+
 
         nivelButton1.inputEnabled = true;
         nivelButton1.input.priorityID = 1;
@@ -287,7 +299,12 @@ navegacion.prototype = {
 
         popup.addChild(nivelButton1);
 
- var nivelButton2 = game.add.button (180, -90, 'nivel3', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 2 nivel 3
+ var nivelButton2 = game.add.button (180, -90, 'nivel3',iniciarnivel3, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 2 nivel 3
+         function iniciarnivel3(){
+            musicButton.play();
+            //music.pause();
+        }
+
 
     nivelButton2.inputEnabled = true;
     nivelButton2.input.priorityID = 1;
@@ -295,7 +312,12 @@ navegacion.prototype = {
 
  popup.addChild(nivelButton2);
 
- var nivelButton3 = game.add.button (180, -10, 'nivel4', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 2 nivel 4
+ var nivelButton3 = game.add.button (180, -10, 'nivel4',iniciarnivel4, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 2 nivel 4
+         function iniciarnivel4(){
+            musicButton.play();
+            //music.pause();
+        }
+
 
     nivelButton3.inputEnabled = true;
     nivelButton3.input.priorityID = 1;
@@ -303,8 +325,14 @@ navegacion.prototype = {
 
  popup.addChild(nivelButton3);
 
- var nivelButton4 = game.add.button (180, 70, 'nivel5', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 2 nivel 5
+ var nivelButton4 = game.add.button (180, 70, 'nivel5',iniciarnivel5, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 2 nivel 5
+         function iniciarnivel5(){
+            musicButton.play();
+            //music.pause();
+        }
 
+        
+        
     nivelButton4.inputEnabled = true;
     nivelButton4.input.priorityID = 1;
     nivelButton4.input.useHandCursor = true;
@@ -323,7 +351,7 @@ function closeWindow() {
 //*************************** No se encontro el error de esta creacion de popup "onMundo3" donde el popup es mas grande de lo normal *************************************
  onMundo3 :function() {
 
-
+  musicButton.play();
   popup3 = game.add.sprite(game.world.centerX, game.world.centerY, 'excelencia');
  popup3.anchor.set(0.7);
  popup3.inputEnabled = true;
@@ -333,7 +361,12 @@ function closeWindow() {
     closeButton3 = game.add.button(130,-200, 'close',closeWindow, 0, 0, 0, 1);
     closeButton3.scale.setTo(0.5, 0.5);
 popup3.addChild(closeButton3);
-var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 3 nivel 1
+var nivelButton = game.add.button (180, -250, 'nivel1',iniciarnivel1, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 3 nivel 1      
+      function iniciarnivel1(){
+            musicButton.play();
+            //music.pause();
+        }
+
 
     nivelButton.inputEnabled = true;
     nivelButton.input.priorityID = 1;
@@ -341,7 +374,13 @@ var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En
 
  popup3.addChild(nivelButton);
 
- var nivelButton1 = game.add.button (180, -170, 'nivel2', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 3 nivel 2
+ var nivelButton1 = game.add.button (180, -170, 'nivel2',iniciarnivel2, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 3 nivel 2
+     
+      function iniciarnivel2(){
+            musicButton.play();
+            //music.pause();
+        }
+
 
     nivelButton1.inputEnabled = true;
     nivelButton1.input.priorityID = 1;
@@ -349,7 +388,13 @@ var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En
 
  popup3.addChild(nivelButton1);
 
- var nivelButton2 = game.add.button (180, -90, 'nivel3', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 3 nivel 3
+ var nivelButton2 = game.add.button (180, -90, 'nivel3',iniciarnivel3, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 3 nivel 3     
+     
+      function iniciarnivel3(){
+            musicButton.play();
+            //music.pause();
+        }
+
 
     nivelButton2.inputEnabled = true;
     nivelButton2.input.priorityID = 1;
@@ -357,7 +402,12 @@ var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En
 
  popup3.addChild(nivelButton2);
 
- var nivelButton3 = game.add.button (180, -10, 'nivel4', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 3 nivel 4
+ var nivelButton3 = game.add.button (180, -10, 'nivel4',iniciarnivel4, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 3 nivel 4
+        
+      function iniciarnivel4(){
+            musicButton.play();
+            //music.pause();
+        }
 
     nivelButton3.inputEnabled = true;
     nivelButton3.input.priorityID = 1;
@@ -365,8 +415,14 @@ var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En
 
  popup3.addChild(nivelButton3);
 
- var nivelButton4 = game.add.button (180, 70, 'nivel5', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 3 nivel 5
+ var nivelButton4 = game.add.button (180, 70, 'nivel5',iniciarnivel5, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 3 nivel 5
 
+      function iniciarnivel5(){
+            musicButton.play();
+            //music.pause();
+        }
+   
+     
     nivelButton4.inputEnabled = true;
     nivelButton4.input.priorityID = 1;
     nivelButton4.input.useHandCursor = true;
@@ -384,7 +440,7 @@ function closeWindow() {
 },
 onMundo4 :function() {
 
-
+    musicButton.play();
   popup4 = game.add.sprite(game.world.centerX, game.world.centerY, 'paradero');
  popup4.anchor.set(0.7);
  popup4.inputEnabled = true;
@@ -395,31 +451,55 @@ onMundo4 :function() {
     closeButton4.scale.setTo(0.5, 0.5);
 popup4.addChild(closeButton4);
 
-var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 4 nivel 1
+var nivelButton = game.add.button (180, -250, 'nivel1',iniciarnivel1, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 4 nivel 1
+    
+     function iniciarnivel1(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton.inputEnabled = true;
     nivelButton.input.priorityID = 1;
     nivelButton.input.useHandCursor = true;
 
  popup4.addChild(nivelButton);
 
- var nivelButton1 = game.add.button (180, -170, 'nivel2', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 4 nivel 2
+ var nivelButton1 = game.add.button (180, -170, 'nivel2',iniciarnivel2, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 4 nivel 2
+    
+     function iniciarnivel2(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton1.inputEnabled = true;
     nivelButton1.input.priorityID = 1;
     nivelButton1.input.useHandCursor = true;
 
  popup4.addChild(nivelButton1);
 
- var nivelButton2 = game.add.button (180, -90, 'nivel3', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 4 nivel 3
+ var nivelButton2 = game.add.button (180, -90, 'nivel3',iniciarnivel3, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 4 nivel 3
+    
+     function iniciarnivel3(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton2.inputEnabled = true;
     nivelButton2.input.priorityID = 1;
     nivelButton2.input.useHandCursor = true;
 
  popup4.addChild(nivelButton2);
 
- var nivelButton3 = game.add.button (180, -10, 'nivel4', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 4 nivel 4
+ var nivelButton3 = game.add.button (180, -10, 'nivel4',iniciarnivel4, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 4 nivel 4
+     function iniciarnivel4(){
+            musicButton.play();
+            //music.pause();
+        }
+
+    
 
     nivelButton3.inputEnabled = true;
     nivelButton3.input.priorityID = 1;
@@ -427,8 +507,14 @@ var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En
 
  popup4.addChild(nivelButton3);
 
- var nivelButton4 = game.add.button (180, 70, 'nivel5', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo  4 nivel 5
+ var nivelButton4 = game.add.button (180, 70, 'nivel5',iniciarnivel5, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo  4 nivel 5
+    
+     function iniciarnivel5(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton4.inputEnabled = true;
     nivelButton4.input.priorityID = 1;
     nivelButton4.input.useHandCursor = true;
@@ -444,7 +530,7 @@ function closeWindow() {
 },
 onMundo5 :function() {
 
-
+    musicButton.play();
   popup5 = game.add.sprite(game.world.centerX, game.world.centerY, 'mercadeo');
  popup5.anchor.set(0.7);
  popup5.inputEnabled = true;
@@ -454,40 +540,70 @@ onMundo5 :function() {
     closeButton5.scale.setTo(0.5, 0.5);
 popup5.addChild(closeButton5);
 
-var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 5 nivel 1
+var nivelButton = game.add.button (180, -250, 'nivel1',iniciarnivel1, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 5 nivel 1
+    
+     function iniciarnivel1(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton.inputEnabled = true;
     nivelButton.input.priorityID = 1;
     nivelButton.input.useHandCursor = true;
 
  popup5.addChild(nivelButton);
 
- var nivelButton1 = game.add.button (180, -170, 'nivel2', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 5 nivel 2
+ var nivelButton1 = game.add.button (180, -170, 'nivel2',iniciarnivel2, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 5 nivel 2
+    
+     function iniciarnivel2(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton1.inputEnabled = true;
     nivelButton1.input.priorityID = 1;
     nivelButton1.input.useHandCursor = true;
 
  popup5.addChild(nivelButton1);
 
- var nivelButton2 = game.add.button (180, -90, 'nivel3', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 5 nivel 3
+ var nivelButton2 = game.add.button (180, -90, 'nivel3',iniciarnivel3, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 5 nivel 3
+    
+     function iniciarnivel3(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton2.inputEnabled = true;
     nivelButton2.input.priorityID = 1;
     nivelButton2.input.useHandCursor = true;
 
  popup5.addChild(nivelButton2);
 
- var nivelButton3 = game.add.button (180, -10, 'nivel4', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 5 nivel 4
+ var nivelButton3 = game.add.button (180, -10, 'nivel4',iniciarnivel4, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 5 nivel 4
+    
+     function iniciarnivel4(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton3.inputEnabled = true;
     nivelButton3.input.priorityID = 1;
     nivelButton3.input.useHandCursor = true;
 
  popup5.addChild(nivelButton3);
 
- var nivelButton4 = game.add.button (180, 70, 'nivel5', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 5 nivel 5
+ var nivelButton4 = game.add.button (180, 70, 'nivel5',iniciarnivel5, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 5 nivel 5
+    
+     function iniciarnivel5(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton4.inputEnabled = true;
     nivelButton4.input.priorityID = 1;
     nivelButton4.input.useHandCursor = true;
@@ -503,7 +619,7 @@ function closeWindow() {
 },
 onMundo6 :function() {
 
-
+    musicButton.play();
   popup6 = game.add.sprite(game.world.centerX, game.world.centerY, 'fcs');
  popup6.anchor.set(0.7);
  popup6.inputEnabled = true;
@@ -513,7 +629,12 @@ onMundo6 :function() {
     closeButton6.scale.setTo(0.5, 0.5);
 popup6.addChild(closeButton6);
 
-var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 6 nivel 1
+var nivelButton = game.add.button (180, -250, 'nivel1',iniciarnivel1, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 6 nivel 1
+     function iniciarnivel1(){
+            musicButton.play();
+            //music.pause();
+        }
+
 
     nivelButton.inputEnabled = true;
     nivelButton.input.priorityID = 1;
@@ -521,32 +642,56 @@ var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En
 
  popup6.addChild(nivelButton);
 
- var nivelButton1 = game.add.button (180, -170, 'nivel2', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 6 nivel 2
+ var nivelButton1 = game.add.button (180, -170, 'nivel2',iniciarnivel2, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 6 nivel 2
+    
+     function iniciarnivel2(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton1.inputEnabled = true;
     nivelButton1.input.priorityID = 1;
     nivelButton1.input.useHandCursor = true;
 
  popup6.addChild(nivelButton1);
 
- var nivelButton2 = game.add.button (180, -90, 'nivel3', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 6 nivel 3
+ var nivelButton2 = game.add.button (180, -90, 'nivel3',iniciarnivel3, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 6 nivel 3
+    
+     function iniciarnivel3(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton2.inputEnabled = true;
     nivelButton2.input.priorityID = 1;
     nivelButton2.input.useHandCursor = true;
 
  popup6.addChild(nivelButton2);
 
- var nivelButton3 = game.add.button (180, -10, 'nivel4', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 6 nivel 4
+ var nivelButton3 = game.add.button (180, -10, 'nivel4',iniciarnivel4, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 6 nivel 4
+    
+     function iniciarnivel4(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton3.inputEnabled = true;
     nivelButton3.input.priorityID = 1;
     nivelButton3.input.useHandCursor = true;
 
  popup6.addChild(nivelButton3);
 
- var nivelButton4 = game.add.button (180, 70, 'nivel5', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 6 nivel 5
+ var nivelButton4 = game.add.button (180, 70, 'nivel5',iniciarnivel5, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 6 nivel 5
+    
+     function iniciarnivel5(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton4.inputEnabled = true;
     nivelButton4.input.priorityID = 1;
     nivelButton4.input.useHandCursor = true;
@@ -572,7 +717,7 @@ function closeWindow() {
 },
 onMundo7 :function() {
 
-
+musicButton.play();
 popup7 = game.add.sprite(game.world.centerX, game.world.centerY, 'bienestar');
  popup7.anchor.set(0.7);
  popup7.inputEnabled = true;
@@ -582,40 +727,70 @@ popup7 = game.add.sprite(game.world.centerX, game.world.centerY, 'bienestar');
     closeButton7.scale.setTo(0.5, 0.5);
 popup7.addChild(closeButton7);
 
-var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 7 nivel 1
+var nivelButton = game.add.button (180, -250, 'nivel1',iniciarnivel1, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 7 nivel 1
+    
+     function iniciarnivel1(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton.inputEnabled = true;
     nivelButton.input.priorityID = 1;
     nivelButton.input.useHandCursor = true;
 
  popup7.addChild(nivelButton);
 
- var nivelButton1 = game.add.button (180, -170, 'nivel2', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 7 nivel 2
+ var nivelButton1 = game.add.button (180, -170, 'nivel2',iniciarnivel2, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 7 nivel 2
+    
+     function iniciarnivel2(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton1.inputEnabled = true;
     nivelButton1.input.priorityID = 1;
     nivelButton1.input.useHandCursor = true;
 
  popup7.addChild(nivelButton1);
 
- var nivelButton2 = game.add.button (180, -90, 'nivel3', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 7 nivel 3
+ var nivelButton2 = game.add.button (180, -90, 'nivel3',iniciarnivel3, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 7 nivel 3
+        
+     function iniciarnivel3(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton2.inputEnabled = true;
     nivelButton2.input.priorityID = 1;
     nivelButton2.input.useHandCursor = true;
 
  popup7.addChild(nivelButton2);
 
- var nivelButton3 = game.add.button (180, -10, 'nivel4', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 7 nivel 4
+ var nivelButton3 = game.add.button (180, -10, 'nivel4',iniciarnivel4, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 7 nivel 4
+    
+     function iniciarnivel4(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton3.inputEnabled = true;
     nivelButton3.input.priorityID = 1;
     nivelButton3.input.useHandCursor = true;
 
  popup7.addChild(nivelButton3);
 
- var nivelButton4 = game.add.button (180, 70, 'nivel5', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 7 nivel 5
+ var nivelButton4 = game.add.button (180, 70, 'nivel5',iniciarnivel5, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 7 nivel 5
+    
+     function iniciarnivel5(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton4.inputEnabled = true;
     nivelButton4.input.priorityID = 1;
     nivelButton4.input.useHandCursor = true;
@@ -631,7 +806,7 @@ function closeWindow() {
 },
 onMundo8 :function() {
 
-
+musicButton.play();
 popup8 = game.add.sprite(game.world.centerX, game.world.centerY, 'plazoleta');
  popup8.anchor.set(0.7);
  popup8.inputEnabled = true;
@@ -642,7 +817,13 @@ popup8 = game.add.sprite(game.world.centerX, game.world.centerY, 'plazoleta');
     closeButton8.scale.setTo(0.5, 0.5);
 popup8.addChild(closeButton8);
 
-var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 8 nivel 1
+var nivelButton = game.add.button (180, -250, 'nivel1',iniciarnivel1, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 8 nivel 1
+    
+    
+     function iniciarnivel1(){
+            musicButton.play();
+            //music.pause();
+        }
 
     nivelButton.inputEnabled = true;
     nivelButton.input.priorityID = 1;
@@ -650,7 +831,13 @@ var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En
 
  popup8.addChild(nivelButton);
 
- var nivelButton1 = game.add.button (180, -170, 'nivel2', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 8 nivel 2
+ var nivelButton1 = game.add.button (180, -170, 'nivel2',iniciarnivel2, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 8 nivel 2
+    
+    
+     function iniciarnivel2(){
+            musicButton.play();
+            //music.pause();
+        }
 
     nivelButton1.inputEnabled = true;
     nivelButton1.input.priorityID = 1;
@@ -658,24 +845,40 @@ var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En
 
  popup8.addChild(nivelButton1);
 
- var nivelButton2 = game.add.button (180, -90, 'nivel3', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 8 nivel 3
-
+ var nivelButton2 = game.add.button (180, -90, 'nivel3',iniciarnivel3, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 8 nivel 3
+    
+     function iniciarnivel3(){
+            musicButton.play();
+            //music.pause();
+        }
+    
     nivelButton2.inputEnabled = true;
     nivelButton2.input.priorityID = 1;
     nivelButton2.input.useHandCursor = true;
 
  popup8.addChild(nivelButton2);
 
- var nivelButton3 = game.add.button (180, -10, 'nivel4', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 8 nivel 4
+ var nivelButton3 = game.add.button (180, -10, 'nivel4',iniciarnivel4, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 8 nivel 4
+    
+     function iniciarnivel4(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton3.inputEnabled = true;
     nivelButton3.input.priorityID = 1;
     nivelButton3.input.useHandCursor = true;
 
  popup8.addChild(nivelButton3);
 
- var nivelButton4 = game.add.button (180, 70, 'nivel5', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 8 nivel 5
-
+ var nivelButton4 = game.add.button (180, 70, 'nivel5',iniciarnivel5, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 8 nivel 5
+    
+     function iniciarnivel5(){
+            musicButton.play();
+            //music.pause();
+        }
+    
     nivelButton4.inputEnabled = true;
     nivelButton4.input.priorityID = 1;
     nivelButton4.input.useHandCursor = true;
@@ -691,7 +894,7 @@ function closeWindow() {
 },
 onMundo9 :function() {
 
-
+musicButton.play();
 popup9 = game.add.sprite(game.world.centerX, game.world.centerY, 'fca');
  popup9.anchor.set(0.7);
  popup9.inputEnabled = true;
@@ -702,40 +905,69 @@ popup9 = game.add.sprite(game.world.centerX, game.world.centerY, 'fca');
     closeButton9.scale.setTo(0.5, 0.5);
 popup9.addChild(closeButton9);
 
-var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 9 nivel 1
+var nivelButton = game.add.button (180, -250, 'nivel1',iniciarnivel1, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 9 nivel 1
+    
+     function iniciarnivel1(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton.inputEnabled = true;
     nivelButton.input.priorityID = 1;
     nivelButton.input.useHandCursor = true;
 
  popup9.addChild(nivelButton);
 
- var nivelButton1 = game.add.button (180, -170, 'nivel2', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 9 nivel 2
+ var nivelButton1 = game.add.button (180, -170, 'nivel2',iniciarnivel2, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 9 nivel 2
+    
+     function iniciarnivel2(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton1.inputEnabled = true;
     nivelButton1.input.priorityID = 1;
     nivelButton1.input.useHandCursor = true;
 
  popup9.addChild(nivelButton1);
 
- var nivelButton2 = game.add.button (180, -90, 'nivel3', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 9 nivel 3
-
+ var nivelButton2 = game.add.button (180, -90, 'nivel3',iniciarnivel3, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 9 nivel 3
+    
+     function iniciarnivel3(){
+            musicButton.play();
+            //music.pause();
+        }
+    
     nivelButton2.inputEnabled = true;
     nivelButton2.input.priorityID = 1;
     nivelButton2.input.useHandCursor = true;
 
  popup9.addChild(nivelButton2);
 
- var nivelButton3 = game.add.button (180, -10, 'nivel4', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 9 nivel 4
+ var nivelButton3 = game.add.button (180, -10, 'nivel4',iniciarnivel4, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 9 nivel 4
+    
+     function iniciarnivel4(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton3.inputEnabled = true;
     nivelButton3.input.priorityID = 1;
     nivelButton3.input.useHandCursor = true;
 
  popup9.addChild(nivelButton3);
 
- var nivelButton4 = game.add.button (180, 70, 'nivel5', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 9 nivel 5
+ var nivelButton4 = game.add.button (180, 70, 'nivel5',iniciarnivel5, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 9 nivel 5
+    
+     function iniciarnivel5(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton4.inputEnabled = true;
     nivelButton4.input.priorityID = 1;
     nivelButton4.input.useHandCursor = true;
@@ -751,7 +983,7 @@ function closeWindow() {
 },
 onMundo10 :function() {
 
-
+musicButton.play();
 popup10 = game.add.sprite(game.world.centerX, game.world.centerY, 'cancha');
  popup10.anchor.set(0.7);
  popup10.inputEnabled = true;
@@ -762,31 +994,56 @@ popup10 = game.add.sprite(game.world.centerX, game.world.centerY, 'cancha');
     closeButton10.scale.setTo(0.5, 0.5);
 popup10.addChild(closeButton10);
 
-var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 10 nivel 1
+var nivelButton = game.add.button (180, -250, 'nivel1',iniciarnivel1, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 10 nivel 1
+    
+     function iniciarnivel1(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton.inputEnabled = true;
     nivelButton.input.priorityID = 1;
     nivelButton.input.useHandCursor = true;
 
  popup10.addChild(nivelButton);
 
- var nivelButton1 = game.add.button (180, -170, 'nivel2', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 10 nivel 2
+ var nivelButton1 = game.add.button (180, -170, 'nivel2',iniciarnivel2, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 10 nivel 2
+    
+     function iniciarnivel2(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton1.inputEnabled = true;
     nivelButton1.input.priorityID = 1;
     nivelButton1.input.useHandCursor = true;
 
  popup10.addChild(nivelButton1);
 
- var nivelButton2 = game.add.button (180, -90, 'nivel3', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 10 nivel 3
+ var nivelButton2 = game.add.button (180, -90, 'nivel3',iniciarnivel3, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 10 nivel 3
+    
+     function iniciarnivel3(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton2.inputEnabled = true;
     nivelButton2.input.priorityID = 1;
     nivelButton2.input.useHandCursor = true;
 
  popup10.addChild(nivelButton2);
 
- var nivelButton3 = game.add.button (180, -10, 'nivel4', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 10 nivel 4
+ var nivelButton3 = game.add.button (180, -10, 'nivel4',iniciarnivel4, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 10 nivel 4
+    
+     function iniciarnivel4(){
+            musicButton.play();
+            //music.pause();
+        }
+
+    
 
     nivelButton3.inputEnabled = true;
     nivelButton3.input.priorityID = 1;
@@ -794,8 +1051,14 @@ var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En
 
  popup10.addChild(nivelButton3);
 
- var nivelButton4 = game.add.button (180, 70, 'nivel5', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 10 nivel 5
+ var nivelButton4 = game.add.button (180, 70, 'nivel5',iniciarnivel5, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 10 nivel 5
+    
+     function iniciarnivel5(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton4.inputEnabled = true;
     nivelButton4.input.priorityID = 1;
     nivelButton4.input.useHandCursor = true;
@@ -811,7 +1074,7 @@ function closeWindow() {
 },
 onMundo11 :function() {
 
-
+musicButton.play();
 popup11 = game.add.sprite(game.world.centerX, game.world.centerY, 'ing');
  popup11.anchor.set(0.7);
  popup11.inputEnabled = true;
@@ -822,40 +1085,70 @@ popup11 = game.add.sprite(game.world.centerX, game.world.centerY, 'ing');
     closeButton11.scale.setTo(0.5, 0.5);
 popup11.addChild(closeButton11);
 
-var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 11 nivel 1
+var nivelButton = game.add.button (180, -250, 'nivel1',iniciarnivel1, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 11 nivel 1
+    
+     function iniciarnivel1(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton.inputEnabled = true;
     nivelButton.input.priorityID = 1;
     nivelButton.input.useHandCursor = true;
 
  popup11.addChild(nivelButton);
 
- var nivelButton1 = game.add.button (180, -170, 'nivel2', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 11 nivel 2
+ var nivelButton1 = game.add.button (180, -170, 'nivel2',iniciarnivel2, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 11 nivel 2
+    
+     function iniciarnivel2(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton1.inputEnabled = true;
     nivelButton1.input.priorityID = 1;
     nivelButton1.input.useHandCursor = true;
 
  popup11.addChild(nivelButton1);
 
- var nivelButton2 = game.add.button (180, -90, 'nivel3', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 11 nivel 3
+ var nivelButton2 = game.add.button (180, -90, 'nivel3',iniciarnivel3, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 11 nivel 3
+    
+     function iniciarnivel3(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton2.inputEnabled = true;
     nivelButton2.input.priorityID = 1;
     nivelButton2.input.useHandCursor = true;
 
  popup11.addChild(nivelButton2);
 
- var nivelButton3 = game.add.button (180, -10, 'nivel4', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 11 nivel 4
+ var nivelButton3 = game.add.button (180, -10, 'nivel4',iniciarnivel4, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 11 nivel 4
+    
+     function iniciarnivel4(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton3.inputEnabled = true;
     nivelButton3.input.priorityID = 1;
     nivelButton3.input.useHandCursor = true;
 
  popup11.addChild(nivelButton3);
 
- var nivelButton4 = game.add.button (180, 70, 'nivel5', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 11 nivel 5
+ var nivelButton4 = game.add.button (180, 70, 'nivel5',iniciarnivel5, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 11 nivel 5
+    
+     function iniciarnivel5(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton4.inputEnabled = true;
     nivelButton4.input.priorityID = 1;
     nivelButton4.input.useHandCursor = true;
@@ -871,7 +1164,7 @@ function closeWindow() {
 },
 onMundo12 :function() {
 
-
+musicButton.play();
 popup12 = game.add.sprite(game.world.centerX, game.world.centerY, 'bloquei');
  popup12.anchor.set(0.7);
  popup12.inputEnabled = true;
@@ -881,7 +1174,12 @@ popup12 = game.add.sprite(game.world.centerX, game.world.centerY, 'bloquei');
     closeButton12.scale.setTo(0.5, 0.5);
 popup12.addChild(closeButton12);
 
-var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 12 nivel 1
+var nivelButton = game.add.button (180, -250, 'nivel1',iniciarnivel1, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 12 nivel 1
+     function iniciarnivel1(){
+            musicButton.play();
+            //music.pause();
+        }
+
 
     nivelButton.inputEnabled = true;
     nivelButton.input.priorityID = 1;
@@ -889,32 +1187,56 @@ var nivelButton = game.add.button (180, -250, 'nivel1', null ,null,2, 1, 0);//En
 
  popup12.addChild(nivelButton);
 
- var nivelButton1 = game.add.button (180, -170, 'nivel2', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 12 nivel 2
+ var nivelButton1 = game.add.button (180, -170, 'nivel2',iniciarnivel2, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 12 nivel 2
+    
+     function iniciarnivel2(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton1.inputEnabled = true;
     nivelButton1.input.priorityID = 1;
     nivelButton1.input.useHandCursor = true;
 
  popup12.addChild(nivelButton1);
 
- var nivelButton2 = game.add.button (180, -90, 'nivel3', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 13 nivel 3
+ var nivelButton2 = game.add.button (180, -90, 'nivel3',iniciarnivel3, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 13 nivel 3
+    
+     function iniciarnivel3(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton2.inputEnabled = true;
     nivelButton2.input.priorityID = 1;
     nivelButton2.input.useHandCursor = true;
 
  popup12.addChild(nivelButton2);
 
- var nivelButton3 = game.add.button (180, -10, 'nivel4', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 14 nivel 4
+ var nivelButton3 = game.add.button (180, -10, 'nivel4',iniciarnivel4, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 14 nivel 4
+    
+     function iniciarnivel4(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton3.inputEnabled = true;
     nivelButton3.input.priorityID = 1;
     nivelButton3.input.useHandCursor = true;
 
  popup12.addChild(nivelButton3);
 
- var nivelButton4 = game.add.button (180, 70, 'nivel5', null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 15 nivel 5
+ var nivelButton4 = game.add.button (180, 70, 'nivel5',iniciarnivel5, null ,null,2, 1, 0);//En el null va la funcion de cambio de estado para el mundo 15 nivel 5
+    
+     function iniciarnivel5(){
+            musicButton.play();
+            //music.pause();
+        }
 
+    
     nivelButton4.inputEnabled = true;
     nivelButton4.input.priorityID = 1;
     nivelButton4.input.useHandCursor = true;
