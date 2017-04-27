@@ -20,6 +20,7 @@ var nickname;
 var startButton, botonVolver;
 var compradoL;
 var pos;
+var musicButton;
 // Especificaciones de compra de los personajes
 var texts = ["Necesitas: 2.000 monedas \n \n Recompensas: \n 1.000 monedas \n 50 puntos de experiencia",
                     "Necesitas: 1.300 monedas \n \n Recompensas: \n 500 monedas \n 10 puntos de experiencia",
@@ -65,8 +66,12 @@ compraPersonajes.prototype = {
           // Se carga el sprite del botón de compra
           game.load.spritesheet('button', '../img/Componentes/compraPersonajes/SpriteButtonC.png', 140, 52);
           game.load.spritesheet('botonVolver', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
+          
+          game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3')
      },
      create: function(){  
+          musicButton = game.add.audio ('sonidoBoton');
+          
           // Se coloca como fondo de la ventana el color #2451A6
           game.stage.backgroundColor = "#2451A6";
           
@@ -131,6 +136,7 @@ compraPersonajes.prototype = {
 
      },
      compra: function(){
+         musicButton.play();
      	if(comprado[pos]){
      		alert("¡Ya posees este personaje!");
      	} else {
@@ -147,6 +153,7 @@ compraPersonajes.prototype = {
     
     verMapa: function(){
         game.state.start("navegacion");
+        musicButton.play();
     },
     
     update:function(){
