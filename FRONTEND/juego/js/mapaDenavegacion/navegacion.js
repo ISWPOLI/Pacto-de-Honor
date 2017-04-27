@@ -11,8 +11,13 @@ navegacion.prototype = {
     preload: function() {
         game.scale.pageAlignHorizontally = true;
         game.scale.pageAlignVertically = true;
+
        game.load.audio('sonidos','../img/Componentes/sonidos/mapa/mapa.mp3');
          game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
+
+        game.load.audio('sonidos','../img/Componentes/sonidos/mapa/mapa.mp3');
+        game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3')
+
         game.load.spritesheet('btMundo2', '../img/Componentes/navegacionMapa/pause.png', 50,50);
         //fondo y escenarios
         game.load.image('fondo', '../img/Componentes/navegacionMapa/mapaNavegacion.png');
