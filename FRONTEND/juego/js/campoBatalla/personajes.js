@@ -25,14 +25,13 @@ var personajesMalos={
 			  "rutaAtaquePlagio":"../img/sprites/poderes/poderesPlagioMalos/error404.png",
 			  "rutaImpactoPersonalidad":"../img/sprites/poderes/PoderesImpactos/impactoOso1.png",
 			  "rutaImpactoPlagio":"../img/sprites/poderes/PoderesImpactos/impactoOso2.png",
-			  "daño":[6,2],"energia":[0.5,1],"defensa":10,"vida":200},
+			  "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
 
 	"idPDos":{"nombre":"Fabian Babuino","rutaSprite":"../img/sprites/personajesMalos/babuino.png",
 			  "rutaAvatar":"../img/componentes/batalla/caraBabuino.png",
-			  //se toma otro sprtite porque el del oso no esta 
 			  "rutaAtaque":"../img/sprites/poderes/PoderesPersonalidadMalos/FabianBabuino  PERSONALIDAD.png",
 			  "rutaAtaquePlagio":"../img/sprites/poderes/poderesPlagioMalos/error404.png",
 			  "rutaImpactoPersonalidad":"../img/sprites/poderes/PoderesImpactos/impactoOso1.png",
 			  "rutaImpactoPlagio":"../img/sprites/poderes/PoderesImpactos/impactoOso2.png",
-			  "daño":[6,2],"energia":[0.5,1],"defensa":10,"vida":200}
+			  "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200}
 }
