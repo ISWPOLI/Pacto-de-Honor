@@ -1,7 +1,7 @@
 var dispositivoMovil;
 var boot ={
 	preload: function () {
-		game.load.image('barraCarga','../img/componentes/carga/barraCarga.png');		
+		game.load.image('barraCarga','../img/componentes/carga/barraCarga.png);
 	},
     
 	create: function () {
@@ -9,7 +9,7 @@ var boot ={
 		game.physics.startSystem(Phaser.Physics.ARCADE);
 		
     	if(isMobile. any()!=null){
-            game.scale.forceOrientation(true, false, 'orientation');
+            game.scale.forceOrientation(true, false);
             this.scale.scaleMode = Phaser.ScaleManager.EXACT_FIT;
             dispositivoMovil=true;
    		}else{
