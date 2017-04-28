@@ -16,6 +16,7 @@ historieta.prototype = {
      create: function(){
          music = game.add.audio('sonidos');
          musicButton = game.add.audio('sonidoBoton');
+         music.loop = true;
          music.play();
          histo = game.add.sprite(0,0, 'historieta');
          histo.animations.add('verH', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 0.3, false);

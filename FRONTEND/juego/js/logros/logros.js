@@ -7,6 +7,7 @@ var Logroslooked = [true, true,  true, false, false, true, false, false, false, 
 var description;
 var character;
 var apodo;
+var musicButton;
 var startButton;
 var moneyLogros = 10000;
 var rankingLogros = 1;
@@ -56,9 +57,13 @@ var logros = function(game){};
             game.load.image('5 in a rowLoock', '../img/Componentes/logros/FiveRowLoock.png');
             game.load.spritesheet('botonVolver', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
             // Se carga el sprite del boton seleccionar
-            game.load.spritesheet('button', '../img/Componentes/logros/Spritebloq.png', 150, 40);   
+            game.load.spritesheet('button', '../img/Componentes/logros/Spritebloq.png', 150, 40); 
+            
+            game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
         },
         create: function(){ 
+             musicButton = game.add.audio('sonidoBonton');
+            
           // Se coloca como fondo de la ventana el color #2451A6
           game.stage.backgroundColor = "#2451A6";
           // Se agrega un titulo para la ventana, el cual sera "Logros", de tamaño 30 px, y "Roboto" como tipo de letra
@@ -194,6 +199,7 @@ var logros = function(game){};
       },
         verPerfil: function(){
             game.state.start("perfilJugador");
+             musicButton.play();
         },
         update:function(){
            // Se declara una variable llamada "zoomed" de tipo booleana, que representara cuando un elemento del scrolling map este seleccionada
