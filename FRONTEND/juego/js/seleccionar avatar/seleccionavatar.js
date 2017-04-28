@@ -34,7 +34,7 @@ seleccionavatar.prototype = {
           game.load.image('raton', '../img/Componentes/selecccion avartar/PedroRaton.png');
           game.load.image('hormiga', '../img/Componentes/selecccion avartar/TatiHormiga.png');
           game.load.spritesheet('button', '../img/Componentes/selecccion avartar/SpriteButton.png', 150, 40);
-          game.load.audio('sonidos','../img/Componentes/sonidos/06-encounter.mp3');     
+          game.load.audio('sonidos','../img/Componentes/sonidos/seleccionAvatar.mp3');     
           game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3')
      },
      create: function(){  
@@ -69,9 +69,13 @@ seleccionavatar.prototype = {
           description.anchor.set(0.5);
           startButton = game.add.button(game.world.width / 2, 540, 'button', this.verH, this, 2, 1, 0); // over, out, down, up
           startButton.anchor.set(0.5);
-          music = game.add.audio('sonidos');
+          //music = game.add.audio('sonidos');
          musicButton = game.add.audio('sonidoBoton');
-          music.play();
+         music = game.add.audio('sonidos'); 
+         music.loop=true;
+         music.play();
+         
+         
 
      },
      verH:function(){

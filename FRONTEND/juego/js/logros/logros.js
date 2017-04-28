@@ -7,6 +7,7 @@ var Logroslooked = [true, true,  true, false, false, true, false, false, false, 
 var description;
 var character;
 var apodo;
+var musicButton;
 var startButton;
 
 var moneyLogros = 10000;
@@ -62,9 +63,13 @@ var logros = function(game){};
             
             // Se carga el sprite del boton seleccionar
             game.load.spritesheet('button', '../img/Componentes/logros/Spritebloq.png', 150, 40);   
+            
+            game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
         },
 
         create: function(){ 
+            
+            musicButton = game.add.audio('sonidoBonton');
 
           // Se coloca como fondo de la ventana el color #2451A6
           game.stage.backgroundColor = "#2451A6";
@@ -246,6 +251,7 @@ var logros = function(game){};
 
         verPerfil: function(){
             game.state.start("perfilJugador");
+            musicButton.play();
         },
         
         update:function(){
