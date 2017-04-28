@@ -5,6 +5,7 @@ var characterHeight = 80;
 var spacing = 70;
 var characters = ['pantera','gallo','cierva','girafa','leon','canario','ruisenor','raton','hormiga'];
 var l;
+var musicButton;
 var startButton;
 
 var seleccionpersonaje = function(game){};
@@ -23,8 +24,11 @@ seleccionpersonaje.prototype = {
           game.load.spritesheet('raton', '../img/Componentes/seleccion de personaje/PedroRatonButton.png', 125, 125, 3);
           game.load.spritesheet('hormiga', '../img/Componentes/seleccion de personaje/TatiHormigaButton.png', 125, 125, 3);
           game.load.spritesheet('button', '../img/Componentes/seleccion de personaje/SpriteButton.png', 150, 40);
+         
+         game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
      },
      create: function(){  
+         musicButton = game.add.audio('sonidoBoton');
           game.stage.backgroundColor = "#2451A6"; 
           this.pageText = game.add.text(game.width / 2, 45, "Selección de Personaje", {font: "32px Roboto", fill: "#ffffff"})
           this.pageText.anchor.set(0.5);
@@ -39,9 +43,12 @@ seleccionpersonaje.prototype = {
                for(var j = 0; j < rows; j++){
                     for(l; l < characters.length; l++){
                          //thumb.scale.setTo(1.5);
-                         var button = game.add.button(leftMargin + j * (characterWidth + spacing), topMargin - 350 + i * (characterHeight + spacing), characters[l], null, this, 2, 1, 0);
+                         var button = game.add.button(leftMargin + j * (characterWidth + spacing), topMargin - 350 + i * (characterHeight + spacing), characters[l],sonido ,null, this, 2, 1, 0);
                          l = l + 1;
                          break;
+                         function sonido (){
+                            musicButton.play();
+                        }
                     }
                }
           }
@@ -50,5 +57,6 @@ seleccionpersonaje.prototype = {
      },
      verbatalla : function () {
          this.state.start ("batalla");
+         musicButton.play();
      }
 }

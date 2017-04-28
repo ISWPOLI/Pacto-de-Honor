@@ -5,6 +5,7 @@ var counter;
 var ti;
 var danoH;//daño del heroe
 var danoV; //daño del villano
+var musicButton;
 
 //arreglo para saber que accion esta ejecutando el Heroe
 //[Defensa,ataqueNormal,ataquePersonalidad]
@@ -37,9 +38,11 @@ var batalla = {
 		this.preloadBar=this.add.sprite(this.game.world.centerX,this.game.world.centerY,'barraCarga');
 		this.load.setPreloadSprite(this.preloadBar);
 		funcionesBatalla.cargar(idPJ,idPC);
+        game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
 	},
 
 	create : function() {	
+        musicButton = game.add.audio('sonidoBoton');
 		counter = 0;
 		ti = 0;
 		danoH=personajesBuenos[idPJ].daño;
@@ -90,11 +93,13 @@ var batalla = {
 		pausa.inputEnabled=true;
 		//funcion para pausar
 		pausa.events.onInputUp.add(function () {
+            musicButton.play();
 			funcionesBatalla.pausar()
         });
         game.input.onDown.add(unpause, self);
 		//funcion para reaunudar
         function unpause(event){
+            musicButton.play();
         	funcionesBatalla.unpause(event);
         }  
 		pausa.scale.setTo(0.4, 0.4);
