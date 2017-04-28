@@ -44,9 +44,8 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
     public String returnId(@QueryParam("token") String token){
         String resultado = "[";        
         try {
-            Query queryToken = em.createQuery("SELECT u FROM Usuario u WHERE u.token :=x");
-            System.err.println(token);
-            queryToken.setParameter("x", token);
+            Query queryToken = em.createNamedQuery("Usuario.findToken");
+            queryToken.setParameter("token", token);
             Usuario user = (Usuario) queryToken.getSingleResult();
             if(user != null){
                 Query query = em.createQuery("SELECT p FROM Personaje p");
@@ -73,6 +72,7 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
      /**
      * Crea un dato
      * Se prueba con el TestCase "Crear" del proyecto Personaje-soapui-project
+     * @param token String correspondiente al token que se otorgo en el login
      * @param entity entidad Personaje
      * @return String con la respuesta OK o la excepción
      */
@@ -80,12 +80,20 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
     @Path("create")
     @Consumes({"application/json"})
     @Produces({"application/json"})
-    public String crearPersonaje(Personaje entity) {
+    public String crearPersonaje(@QueryParam("token") String token, Personaje entity) {
         String resultado;
         try{
-            em.persist(entity);   
-            resultado = "{'response':'OK']";
+            Query query = em.createNamedQuery("Usuario.findToken");
+            query.setParameter("token", token);
+            Usuario user = (Usuario) query.getSingleResult();
+            if(user != null){
+                em.persist(entity);   
+                resultado = "{'response':'OK'}";
+            }else{
+                resultado = "{'response':'KO', 'cause':'Token invalid'}";
+            }            
         }catch (Exception e){
+            e.printStackTrace();
             StringWriter errors = new StringWriter();
             e.printStackTrace(new PrintWriter(errors));            
             resultado = "{'response':'KO', 'cause':'"+errors.toString()+"'}";

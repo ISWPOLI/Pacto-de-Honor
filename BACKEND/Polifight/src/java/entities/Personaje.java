@@ -77,7 +77,8 @@ public class Personaje implements Serializable {
     
     @Basic(optional = false)
     @Column(name = "nivel_dano")
-    private int nivelDano;
+    private int nivelDano; 
+    
 
     public Personaje() {
     }
@@ -137,7 +138,7 @@ public class Personaje implements Serializable {
     public void setIdPersonaje(Integer idPersonaje) {
         this.idPersonaje = idPersonaje;
     }
-    
-   
+
+     
     
 }

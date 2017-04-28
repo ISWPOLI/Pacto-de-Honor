@@ -5,16 +5,14 @@
  */
 package rest;
 
-import Entidades.Imagen;
-import com.sun.xml.bind.xmlschema.StrictWildcardPlug;
-import Entidades.Mundo;
+import entities.Imagen;
+import entities.Mundo;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -32,7 +30,7 @@ import javax.ws.rs.core.MediaType;
 @Stateless
 @Path("mundo")
 public class MundoFacadeREST extends AbstractFacade<Mundo> {
-    @PersistenceContext(unitName = "PoliFightPU")
+    @PersistenceContext(unitName = "PolifightPU")
     private EntityManager em;
 
      @Override
