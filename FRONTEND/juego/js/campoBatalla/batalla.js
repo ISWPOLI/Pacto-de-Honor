@@ -33,11 +33,18 @@ var fondogame;
 var joystick;
 var button;
 
+var boxGame = 7;
+var caja;
+var openBox;
+var timeShowBox = 5;
+
 var batalla = {
 	preload : function() {
 		this.preloadBar=this.add.sprite(this.game.world.centerX,this.game.world.centerY,'barraCarga');
 		this.load.setPreloadSprite(this.preloadBar);
-		funcionesBatalla.cargar(idPJ,idPC);
+		boxGame =game.rnd.integerInRange(1, 9);		
+		timeShowBox = game.rnd.integerInRange(5,65);
+		funcionesBatalla.cargar(idPJ,idPC,boxGame);
         game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
 	},
 
@@ -66,6 +73,17 @@ var batalla = {
 		personajeJugador.anchor.setTo(0.5);
 		funcionesBatalla.iniciarSprite(personajeJugador);
 		funcionesBatalla.iniciarSprite(personajeComputadora);
+
+
+		caja = game.add.button(game.rnd.integerInRange(30, (game.width)-30), game.rnd.integerInRange(60, (game.height)-60), "caja",this.catchedBox,this);
+        caja.visible = false;
+        openBox = game.add.image(game.width/2, game.height/2, 'cajaOpen');
+        openBox.anchor.setTo(0.5);
+        openBox.visible =false;
+        caja.inputEnabled=true;
+       	caja.events.onInputUp.add(function () {
+			funcionesBatalla.catchedBox()
+        });
 
 		if(dispositivoMovil){
 			 //Add the VirtualGamepad plugin to the game
@@ -166,7 +184,22 @@ var batalla = {
 		}
 		if (ti <= 70) {
 			text.setText('time: ' + ti);
-		} 
+		}
+		if(ti == timeShowBox){
+			funcionesBatalla.showBox();
+		}
+
+		if(ti == timeShowBox + 3){
+			funcionesBatalla.hideBox();
+		}
+		if (caja.visible) {
+			caja.angle += 1
+			caja.x-=2;
+			caja.y-=3;
+		}
+		if(ti == timeShowBox + 5){
+			funcionesBatalla.hideOpenBox();	
+		}
 		game.physics.arcade.overlap(personajeJugador,ataquePlagio,funcionesBatalla.impactoPlagioC,false,this);
 		game.physics.arcade.overlap(personajeJugador,ataquePersonalidadC.bullets,funcionesBatalla.impactoAtaqueComputadora,false,this);
 		game.physics.arcade.overlap(personajeComputadora,ataquePersonalidadJ,funcionesBatalla.impactoAtaqueJugador,false,this);
