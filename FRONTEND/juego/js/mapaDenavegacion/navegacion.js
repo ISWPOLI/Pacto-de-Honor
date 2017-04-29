@@ -44,7 +44,7 @@ navegacion.prototype = {
         game.load.spritesheet('botonPerfil', '../img/Componentes/navegacionMapa/botonPerfil.png', 62, 62);
         game.load.spritesheet('botonRanking', '../img/Componentes/navegacionMapa/botonRanking.png', 62, 62);
         //game.load.spritesheet('botonCajaSorpresa', '../img/Componentes/cajas/cajam.png', 132, 216);
-        game.load.spritesheet('botonCajaSorpresa', '../img/Componentes/cajas/cajaMisteriosa.png', 62, 62);
+        game.load.spritesheet('botonCajaSorpresa', '../img/Componentes/cajas/cajamis.png', 62, 62);
         game.load.spritesheet('botonCompraPersonajes', '../img/Componentes/navegacionMapa/botonCompraPersonajes.png', 62, 62);
 
         game.load.spritesheet('pause12', '../img/Componentes/navegacionMapa/pause12.png', 50,50);
