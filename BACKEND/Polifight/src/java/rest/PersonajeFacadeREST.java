@@ -4,6 +4,7 @@ import entities.Personaje;
 import entities.Usuario;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -186,15 +187,18 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
     }
     
     /**
-     * Lista todos los personajes de la base de datos
+     * No se usa
      * Se prueba con el TestCase "Listar" del proyecto Personaje-soapui-project
-     * @return List con todos los Personajes registrados
+     * @return List nula; para listar, remitirse al método getId
      */
     @GET
     @Override
     @Produces({"application/json"})
     public List<Personaje> findAll() {
-        return super.findAll();
+        List<Personaje> listP = new ArrayList<Personaje>();
+        Personaje p = new Personaje();
+        listP.add(p);
+        return listP;
     }
     
     /**
