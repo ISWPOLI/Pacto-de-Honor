@@ -8,17 +8,16 @@ var codigo;
 var desbloqueoPersonaje = function(game){};
 desbloqueoPersonaje.prototype = {
     preload: function(){
-
-        game.load.spritesheet('pantera1','../img/Componentes/codigosAlfa/pantera1.png', 212,197);
-        game.load.spritesheet('gallo1', '../img/Componentes/codigosAlfa/gallo1.png', 212,197);
-        game.load.spritesheet('hormiga1', '../img/Componentes/codigosAlfa/hormiga1.png', 212,197);
-        game.load.spritesheet('jirafa1', '../img/Componentes/codigosAlfa/jirafa1.png', 212,197);
-        game.load.spritesheet('llama1', '../img/Componentes/codigosAlfa/llama1.png', 212,197);
-        game.load.spritesheet('canario1', '../img/Componentes/codigosAlfa/canario1.png', 212,197);
-        game.load.spritesheet('pajaro1', '../img/Componentes/codigosAlfa/pajaro1.png', 212,197);
-        game.load.spritesheet('leon1','../img/Componentes/codigosAlfa/leon1.png', 212,197);
-        game.load.spritesheet('flecha', '../img/Componentes/codigosAlfa/arrow.png', 175.5,89);
- 		game.load.spritesheet('ingresar', '../img/Componentes/codigosAlfa/ingresar.png', 193,71);          
+        game.load.spritesheet('pantera1', 'codigosAlfa/pantera1.png', 212,197);
+        game.load.spritesheet('gallo1', 'codigosAlfa/gallo1.png', 212,197);
+        game.load.spritesheet('hormiga1', 'codigosAlfa/hormiga1.png', 212,197);
+        game.load.spritesheet('jirafa1', 'codigosAlfa/jirafa1.png', 212,197);
+        game.load.spritesheet('llama1', 'codigosAlfa/llama1.png', 212,197);
+        game.load.spritesheet('canario1', 'codigosAlfa/canario1.png', 212,197);
+        game.load.spritesheet('pajaro1', 'codigosAlfa/pajaro1.png', 212,197);
+        game.load.spritesheet('leon1', 'codigosAlfa/leon1.png', 212,197);
+        game.load.spritesheet('flecha', 'codigosAlfa/arrow.png', 175.5,89);
+ 		game.load.spritesheet('ingresar', 'codigosAlfa/ingresar.png', 193,71);          
     },
     create: function(){ 
 		game.stage.backgroundColor = '#1873CE';
@@ -79,12 +78,28 @@ desbloqueoPersonaje.prototype = {
 		    max:11,
 		    min:11,
 		    placeHolder: '¡Haz clic en algun personaje para regalar el codigo de el a un amigo!'});
-		var cadenaAnalizar = input.value;
+
+		//var letra = input.value;
+	//alfaNumeric(letra);
+
+	},
+	alfaNumeric1:function(){
+		var letra = input.value;
+		var expresion = /^1[A-Z][-][A-Z]+E$/;
+		if(letra.match(expresion)){
+	alert("esta");
+		}else{
+	alert("no esta");
+		}
 
 
-function validarString (cadenaAnalizar) {
-    if(cadenaAnalizar.length!=11){
-        return alert("tu codigo tiene mas o menos de 11 digitos");
+	},
+
+	alfaNumeric: function(cadenaAnalizar){
+   
+ if(cadenaAnalizar.length!=11){
+        return false;
+        alert("nesta");
     }
     var mapnumeros1 = new Array();
     for(var i = 1; i <= 8 ; i++){
@@ -100,30 +115,23 @@ function validarString (cadenaAnalizar) {
     
     for(var i = 0; i < cadenaAnalizar.length ; i++){
         if(i==0 && mapnumeros1[cadenaAnalizar.substr(i,1)]==undefined){
-            return  return alert("esta mal escrito o no esxite");;
+            return false;
+            alert("nesta");
         }else if(((i>=1 && i<=4)||(i>=6 && i<=9)) && mapletras1[cadenaAnalizar.substr(i,1)]==undefined){
-             return alert("tu codigo esta mal escrito ono existe");
+            return false;
+            alert("nesta");
         }else if(i==5 && cadenaAnalizar.substr(i,1)!="-"){
-            return alert("tu codigo esta mal escrito ono existe");
+            return false;
+            alert("nesta");
         }else if(i==10 && (cadenaAnalizar.substr(i,1)!="E"&&cadenaAnalizar.substr(i,1)!="P")){
-            return alert("tu codigo esta mal escrito ono existe");
+            return false;
+            alert("nesta");
         }
     }
-    return "Has desbloqueoado a un nuevo personaje";
-}  
-		//var letra = input.value;
-	//alfaNumeric(letra);
+    return true;
+alert("esta");
 
-	/*},
-	alfaNumeric1:function(){
-		var letra = input.value;
-		var expresion = /^1[A-Z][-][A-Z]+E$/;
-		if(letra.match(expresion)){
-	alert("esta");
-		}else{
-	alert("no esta");
-		}
-*/
+
 
 	},
 	code1:function(){
