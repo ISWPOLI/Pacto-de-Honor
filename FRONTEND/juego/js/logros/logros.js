@@ -139,14 +139,16 @@ var logros = function(game){};
         function isMikuplagio(i){
           var timeHours = timeplayedLogros/60;
           if (timeHours>=100) {
-            recompensa(20,2500);
-            Logroslooked[i]= false;
+              recompensa(20,2500);
+              Logroslooked[i]= false;
+              pruebasPsicotecnicas.setPrueba6(true);
           };
         }
         function isMiLifePlagio(i){
           if (rankingLogros<= 5) {
             recompensa(20,1000);
             Logroslooked[i]= false;
+              pruebasPsicotecnicas.setPrueba7(true);
           };
         }
         function isMiSkillPlagio(i){
@@ -159,26 +161,31 @@ var logros = function(game){};
           if (((logrosdes*100)/Logroslooked.length)>=70) {
             recompensa(15,800);
             Logroslooked[i] =false;
+              pruebasPsicotecnicas.setPrueba8(true);
           };
         }
         function isTheOriginalPlagio(i){
           recompensa(5,1000);
+            pruebasPsicotecnicas.setPrueba9(true);
           //por implentar no es de servicios Rest
         }
         function isMiHitckGround(i){
           recompensa(20,1000);
+            pruebasPsicotecnicas.setPrueba10(true);
           //por implentar no es de Rest
         }
         function isTheUnloocker(i){
           if (allHeros) {
             recompensa(10,200);
             Logroslooked[i] = false;
+              pruebasPsicotecnicas.setPrueba13(true);
           };
         }
         function isTheRichest(i){
           if (monedas >=1000000) {
             recompensa(30,300);
             Logroslooked[i] = false;
+              pruebasPsicotecnicas.setPrueba12(true);
           };
         }
         function isTheAList(i){
@@ -188,6 +195,7 @@ var logros = function(game){};
         }
         function is5InaRow(i){
           recompensa(50,4000);
+            pruebasPsicotecnicas.setPrueba14(true);
           //por implentar falta que todo un mundo este implentado
         }
         function isMyMater(i){
