@@ -58,11 +58,7 @@ var cajaMisteriosa = function(game){};
         },
 
         create: function(){
-          moneyLogros = logrosplayer["Ulogro"].moneyLogros;
-          rankingLogros = logrosplayer["Ulogro"].rankingLogros;
-          timeplayedLogros = logrosplayer["Ulogro"].timeplayedLogros;
-          allHeros = logrosplayer["Ulogro"].allHeros;
-          xpLogros = logrosplayer["Ulogro"].xpLogros;
+   
 
 
           // Se coloca como fondo de la ventana el color #2451A6
