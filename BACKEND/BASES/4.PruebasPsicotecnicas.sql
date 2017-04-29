@@ -52,6 +52,7 @@ INSERT INTO `pregunta_prueba_psicotecnica`(`id_pregunta_psicotecnica`, `id_prueb
 
 --modificaciones tabla respuesta
 ALTER TABLE `respuesta_preguntas_psicotecnicas` ADD `id_factor` INT NOT NULL ;
+ALTER TABLE `pregunta_prueba_psicotecnica` CHANGE `id_pregunta_psicotecnica` `id_pregunta_psicotecnica` INT(11) NOT NULL AUTO_INCREMENT;
 
 --insercion respuestas
 
