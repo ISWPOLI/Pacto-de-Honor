@@ -33,7 +33,7 @@ import rest.AbstractFacade;
 @Path("Frases")
 public class FraseFacadeREST extends AbstractFacade<Frase> {
 
-    @PersistenceContext(unitName = "PoliFightPU")
+    @PersistenceContext(unitName = "PolifightPU")
     private EntityManager em;
 
     @Override

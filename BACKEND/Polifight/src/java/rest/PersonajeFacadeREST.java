@@ -4,7 +4,6 @@ import entities.Personaje;
 import entities.Usuario;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -48,14 +47,14 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
             queryToken.setParameter("token", token);
             Usuario user = (Usuario) queryToken.getSingleResult();
             if(user != null){
-                Query query = em.createQuery("SELECT p FROM Personaje p");
+                Query query = em.createNamedQuery("Personaje.findAll");
                 List<Personaje> datos = query.getResultList();            
                 for (int i = 0; i < datos.size(); i++) {
                     resultado += "{";
                     if(i == datos.size()-1){
-                        resultado += "'idPersonje':'"+datos.get(i).getIdPersonaje()+"', nombrePersonaje':'"+datos.get(i).getNombrePersonaje()+"'}";
+                        resultado += "'idPersonaje':'"+datos.get(i).getIdPersonaje()+"', nombrePersonaje':'"+datos.get(i).getNombrePersonaje()+"'}";
                     }else{
-                        resultado += "'idPersonje':'"+datos.get(i).getIdPersonaje()+"', nombrePersonaje':'"+datos.get(i).getNombrePersonaje()+"'},";
+                        resultado += "'idPersonaje':'"+datos.get(i).getIdPersonaje()+"', nombrePersonaje':'"+datos.get(i).getNombrePersonaje()+"'},";
                     }
                 }
                 resultado += "]";
@@ -63,6 +62,7 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
                 resultado = "{'response':'KO', 'cause':'Invalid token'}";
             }        
         }catch (Exception e){
+            e.printStackTrace();
             resultado = "{'response':'KO', 'cause':'Invalid token'}";
         }
         System.err.println(resultado);
@@ -104,6 +104,7 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
     /**
      * Edita un dato de acuerdo al id enviado
      * Se prueba con el TestCase "Editar" del proyecto Personaje-soapui-project
+     * @param token String con el token otorgado en el login
      * @param entity entidad Personaje
      * @return mensaje satisfactorio o insatisfactorio
      */
@@ -111,54 +112,77 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
     @Path("edit")
     @Consumes({"application/json"})
     @Produces({"application/json"})
-    public String editarPersonaje(Personaje entity){
+    public String editarPersonaje(@QueryParam("token") String token, Personaje entity){
+         String resultado = "";
         try{
-            if(entity.getIdPersonaje() != 0 && entity.getIdPersonaje() != null){
-                Personaje personaje = super.find(entity.getIdPersonaje());
-                if(personaje == null){
-                   return "{'response':'KO','cause':'Personaje not found'}";
+           Query queryToken = em.createNamedQuery("Usuario.findToken");
+           queryToken.setParameter("token", token);
+           Usuario user = (Usuario) queryToken.getSingleResult();
+           if(user != null){        
+                if(entity.getIdPersonaje() != 0 && entity.getIdPersonaje() != null){
+                    Personaje personaje = super.find(entity.getIdPersonaje());
+                    if(personaje == null){
+                       resultado = "{'response':'KO','cause':'Personaje not found'}";
+                    }else{
+                        if(entity.getCosto() != 0)  personaje.setCosto(entity.getCosto());
+                        if(entity.getDescripcionPersonaje() != null) personaje.setDescripcionPersonaje(entity.getDescripcionPersonaje());
+                        if(entity.getIdCategoria() != 0) personaje.setIdCategoria(entity.getIdCategoria());
+                        if(entity.getIdImagen() != 0) personaje.setIdImagen(entity.getIdImagen());
+                        if(entity.getNivelDano() != 0) personaje.setNivelDano(entity.getNivelDano());
+                        if(entity.getNombrePersonaje() != null) personaje.setNombrePersonaje(entity.getNombrePersonaje());
+
+                        em.merge(personaje);
+
+                        resultado = "{'response':'OK'}";
+                    }
+
                 }else{
-                    if(entity.getCosto() != 0)  personaje.setCosto(entity.getCosto());
-                    if(entity.getDescripcionPersonaje() != null) personaje.setDescripcionPersonaje(entity.getDescripcionPersonaje());
-                    if(entity.getIdCategoria() != 0) personaje.setIdCategoria(entity.getIdCategoria());
-                    if(entity.getIdImagen() != 0) personaje.setIdImagen(entity.getIdImagen());
-                    if(entity.getNivelDano() != 0) personaje.setNivelDano(entity.getNivelDano());
-                    if(entity.getNombrePersonaje() != null) personaje.setNombrePersonaje(entity.getNombrePersonaje());
-
-                    em.merge(personaje);
-
-                    return "{'response':'OK'}";
+                    resultado =  "{'response':'KO','cause':'Not send Id'}";
                 }
-
-            }else{
-                return "{'response':'KO','cause':'Not send Id'}";
-            }
-            
+           }else{
+               resultado = "{'response':'KO', 'cause':'Invalid token'}";
+           }
         }catch (Exception e){
-            return "{'response':'KO','cause':'Exception'}";
-        }
-       
+            e.printStackTrace();
+            resultado = "{'response':'KO', 'cause':'Invalid token'}";
+        }            
+       return resultado;       
     }    
         
     /**
      * Busca un personaje de acuerdo al id
      * Se prueba con el TestCase "Buscar" del proyecto Personaje-soapui-project
      * @param id del Personaje a buscar
+     * @param token String con el token que se otorgo en el login
      * @return Personaje entidad del Personaje
      */
     @GET
     @Path("find")
     @Produces({"application/json"})
-    public String find(@QueryParam("id") Integer id) {
-        Personaje personaje = em.find(Personaje.class, id);
-        if(personaje == null){
-            return "{'response':'KO','cause':'Personaje not found'}";
-        }else{
-            return "{'idPersonaje':'"+personaje.getIdPersonaje()+"', 'idCategoria':'"+personaje.getIdCategoria()+"',"
-                    + "'idImagen':'"+personaje.getIdImagen()+"','nombrePersonaje':'"+personaje.getNombrePersonaje()+"',"
-                    + "'descripcionPersonaje':'"+personaje.getDescripcionPersonaje()+"','costo':'"+personaje.getCosto()+"',"
-                    + "'nivelDano':'"+personaje.getNivelDano()+"'}";
-        }        
+    public String find(@QueryParam("id") Integer id, @QueryParam("token") String token) {
+        String resultado = "";
+        try{
+           Query queryToken = em.createNamedQuery("Usuario.findToken");
+           queryToken.setParameter("token", token);
+           Usuario user = (Usuario) queryToken.getSingleResult();
+           if(user != null){
+               Personaje personaje = em.find(Personaje.class, id);
+               if(personaje == null){
+                   resultado = "{'response':'KO','cause':'Personaje not found'}";
+               }else{
+                   resultado =  "{'idPersonaje':'"+personaje.getIdPersonaje()+"', 'idCategoria':'"+personaje.getIdCategoria()+"',"
+                           + "'idImagen':'"+personaje.getIdImagen()+"','nombrePersonaje':'"+personaje.getNombrePersonaje()+"',"
+                           + "'descripcionPersonaje':'"+personaje.getDescripcionPersonaje()+"','costo':'"+personaje.getCosto()+"',"
+                           + "'nivelDano':'"+personaje.getNivelDano()+"'}";
+               }  
+           }else{
+              resultado = "{'response':'KO', 'cause':'Invalid token'}";
+           }
+        }catch (Exception e){
+             e.printStackTrace();
+             resultado = "{'response':'KO', 'cause':'Invalid token'}";
+         }
+         return resultado;
     }
     
     /**
@@ -185,7 +209,7 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
     @Produces({"application/json"})
     public List<Personaje> findRange(@QueryParam("from") Integer from, @QueryParam("to") Integer to) {
         //SELECT * FROM Personaje WHERE id_personaje BETWEEN 5 AND 7 ORDER BY id_personaje
-        Query query = em.createQuery("SELECT p FROM Personaje p WHERE p.idPersonaje BETWEEN :from AND :to"); 
+        Query query = em.createNamedQuery("Personaje.findRange"); 
         query.setParameter("from", from);
         query.setParameter("to", to);        
         return query.getResultList();
@@ -194,35 +218,62 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
     /**
      * Retorna el número de datos que están en la base de datos
      * Se prueba con el TestCase "NoDatos" del proyecto Personaje-soapui-project
+     * @param token String con el token otorgado en el login
      * @return NoDatos
      */
     @GET
     @Path("count")
     @Produces("text/plain")
-    public String countREST() {
-        return String.valueOf(super.count());
+    public String countREST(@QueryParam("token") String token) {
+        String resultado = "";
+         try{
+            Query queryToken = em.createNamedQuery("Usuario.findToken");
+            queryToken.setParameter("token", token);
+            Usuario user = (Usuario) queryToken.getSingleResult();
+            if(user != null){
+                resultado = String.valueOf(super.count());
+            }else{
+                resultado = "{'response':'KO', 'cause':'Invalid token'}";
+            }
+         }catch(Exception e){
+             e.printStackTrace();
+             resultado = "{'response':'KO', 'cause':'Invalid token'}";
+         }
+        return resultado;
     }
     
     /**
      * Retorna los datos nombre, imagen y nivel de dano
      * Se prueba con el TestCase "Crear" del proyecto Personaje-soapui-project
      * @param id del Personaje
+     * @param token String con el token otorgado en el login
      * @return JSON(String) con la respuesta del servicio
      */
     @GET
     @Path("getData")
     @Produces({"application/json"})
-    public String getData(@QueryParam("id") Integer id){
+    public String getData(@QueryParam("id") Integer id, @QueryParam("token") String token){
         String resultado = "";
-        Personaje personaje =  super.find(id);
-        if(personaje != null){
-            resultado = "{'idPersonaje':'"+personaje.getIdPersonaje()+"', 'nombrePersonaje':'"+personaje.getNombrePersonaje()+"', "
-                    + "'imagen':'"+personaje.getIdImagen()+"', 'nivelDano':'"+personaje.getNivelDano()+"'}";   
-        }else{
-            resultado = "{'response':'KO', 'cause':'Personaje not found'}";
-        }         
-              
-                     
+        try{
+            Query queryToken = em.createNamedQuery("Usuario.findToken");
+            queryToken.setParameter("token", token);
+            Usuario user = (Usuario) queryToken.getSingleResult();
+            if(user != null){
+                Personaje personaje =  super.find(id);
+                if(personaje != null){
+                    resultado = "{'idPersonaje':'"+personaje.getIdPersonaje()+"', 'nombrePersonaje':'"+personaje.getNombrePersonaje()+"', "
+                            + "'imagen':'"+personaje.getIdImagen()+"', 'nivelDano':'"+personaje.getNivelDano()+"'}";   
+                }else{
+                    resultado = "{'response':'KO', 'cause':'Personaje not found'}";
+                }
+            }else{
+                resultado = "{'response':'KO', 'cause':'Invalid token'}";
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+            resultado = "{'response':'KO', 'cause':'Invalid token'}";
+        }
+        
         return resultado;
     }
            
