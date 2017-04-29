@@ -1,4 +1,4 @@
-    href=primer.js;
+    href=batalla.js;
 var fin = {
     preload: function(){
         game.load.image('poli', '../img/componentes/finBatalla/poli.jpg');
