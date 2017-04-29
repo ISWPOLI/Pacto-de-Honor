@@ -6,7 +6,8 @@ var game = new Phaser.Game (800, 600, Phaser.CANVAS, 'game');
     game.state.add("invitarAmigos", invitarAmigos);
     game.state.add("seleccionPersonaje", seleccionPersonaje);    
     game.state.add("seleccionavatar", seleccionavatar);
-    */game.state.add("desbloqueoPersonaje", desbloqueoPersonaje);
+    */
+    game.state.add("desbloqueoPersonaje", desbloqueoPersonaje);
    // game.state.add("fin", fin);    
   
 	game.state.start("desbloqueoPersonaje");

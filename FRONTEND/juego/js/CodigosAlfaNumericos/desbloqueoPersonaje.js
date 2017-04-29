@@ -1,4 +1,3 @@
-
 var password;
 var text;
 var text2;
@@ -63,7 +62,7 @@ desbloqueoPersonaje.prototype = {
 		btCanario= game.add.button(260,100,'canario1',this.code8,0,0,0,1);
 		btCanario.scale.setTo(0.5,0.5);
 
-		btIngresar  = game.add.button(570,480,'ingresar',this.alfaNumeric1,this,2,1,0);
+		btIngresar  = game.add.button(570,480,'ingresar',validarString,this,2,1,0);
 		btIngresar.scale.setTo(0.9,0.9);
 		codigo = game.add.inputField(100,400, {
 		    font: '18px Arial',
@@ -79,12 +78,14 @@ desbloqueoPersonaje.prototype = {
 		    max:11,
 		    min:11,
 		    placeHolder: '¡Haz clic en algun personaje para regalar el codigo de el a un amigo!'});
-		var cadenaAnalizar = input.value;
+		
+	
 
 
-function validarString (cadenaAnalizar) {
+function validarString () {
+	var cadenaAnalizar = input.value;
     if(cadenaAnalizar.length!=11){
-        return alert("tu codigo tiene mas o menos de 11 digitos");
+        return alert("Tu codigo de regalo tiene mas o menos de 11 digitos por favor verificalo");
     }
     var mapnumeros1 = new Array();
     for(var i = 1; i <= 8 ; i++){
@@ -97,19 +98,25 @@ function validarString (cadenaAnalizar) {
     }
     
   
-    
-    for(var i = 0; i < cadenaAnalizar.length ; i++){
+    	
+     for(var i = 0; i < cadenaAnalizar.length ; i++){
         if(i==0 && mapnumeros1[cadenaAnalizar.substr(i,1)]==undefined){
-            return  return alert("esta mal escrito o no esxite");;
+            return alert("Tu codigo esta mal escrito o no existe");;
+
         }else if(((i>=1 && i<=4)||(i>=6 && i<=9)) && mapletras1[cadenaAnalizar.substr(i,1)]==undefined){
-             return alert("tu codigo esta mal escrito ono existe");
+            return alert("Tu codigo esta mal escrito o no existe");;
+
         }else if(i==5 && cadenaAnalizar.substr(i,1)!="-"){
-            return alert("tu codigo esta mal escrito ono existe");
-        }else if(i==10 && (cadenaAnalizar.substr(i,1)!="E"&&cadenaAnalizar.substr(i,1)!="P")){
-            return alert("tu codigo esta mal escrito ono existe");
+            return alert("Tu codigo esta mal escrito o no existe");;
+
+        }else if(i==10 && (cadenaAnalizar.substr(i,1)=="P")){
+            return alert("Has desbloqueado a tu personaje con exito, este codigo ha sido regalado por un profesor");
+
+        }else if(i==10 && (cadenaAnalizar.substr(i,1)=="E")){
+        	return alert("Has desbloqueado a tu personaje con exito, este codigo ha sido regalado por un amigo");
         }
     }
-    return "Has desbloqueoado a un nuevo personaje";
+    return alert("Has desbloqueado a tu personaje con exito");
 }  
 		//var letra = input.value;
 	//alfaNumeric(letra);
@@ -134,11 +141,8 @@ function validarString (cadenaAnalizar) {
 				text = text + possible.charAt(Math.floor(Math.random() * possible.length));
 				text2 = text2 + possible.charAt(Math.floor(Math.random() * possible.length));
 			}
-			codigo.setText("1"+ text + " - " + text2 + "E");
-			var m = codigo.value.includes("1");
-			console.log(m);
-			var n = text.includes("1");
-			console.log(n);
+			codigo.setText("1"+ text + "-" + text2 + "E");
+		
 	},
 	code2:function(){
 	     	text = "";
@@ -148,7 +152,7 @@ function validarString (cadenaAnalizar) {
 				text = text + possible.charAt(Math.floor(Math.random() * possible.length));
 				text2 = text2 + possible.charAt(Math.floor(Math.random() * possible.length));
 			}
-			codigo.setText("2"+ text + " - " + text2 + "E");
+			codigo.setText("2"+ text + "-" + text2 + "E");
 	},
 	code3:function(){
 	     	text = "";
@@ -158,7 +162,7 @@ function validarString (cadenaAnalizar) {
 				text = text + possible.charAt(Math.floor(Math.random() * possible.length));
 				text2 = text2 + possible.charAt(Math.floor(Math.random() * possible.length));
 			}
-			codigo.setText("3"+ text + " - " + text2 + "E");
+			codigo.setText("3"+ text + "-" + text2 + "E");
 	},
 	code4:function(){
 	     	text = "";
@@ -168,7 +172,7 @@ function validarString (cadenaAnalizar) {
 				text = text + possible.charAt(Math.floor(Math.random() * possible.length));
 				text2 = text2 + possible.charAt(Math.floor(Math.random() * possible.length));
 			}
-			codigo.setText("4"+ text + " - " + text2 + "E");
+			codigo.setText("4"+ text + "-" + text2 + "E");
 	},
 	code5:function(){
 	     	text = "";
@@ -178,7 +182,7 @@ function validarString (cadenaAnalizar) {
 				text = text + possible.charAt(Math.floor(Math.random() * possible.length));
 				text2 = text2 + possible.charAt(Math.floor(Math.random() * possible.length));
 			}
-			codigo.setText("5"+ text + " - " + text2 + "E");
+			codigo.setText("5"+ text + "-" + text2 + "E");
 	},
 	code6:function(){
 	     	text = "";
@@ -188,7 +192,7 @@ function validarString (cadenaAnalizar) {
 				text = text + possible.charAt(Math.floor(Math.random() * possible.length));
 				text2 = text2 + possible.charAt(Math.floor(Math.random() * possible.length));
 			}
-			codigo.setText("6"+ text + " - " + text2 + "E");
+			codigo.setText("6"+ text + "-" + text2 + "E");
 	},
 	code7:function(){
 	     	text = "";
@@ -198,7 +202,7 @@ function validarString (cadenaAnalizar) {
 				text = text + possible.charAt(Math.floor(Math.random() * possible.length));
 				text2 = text2 + possible.charAt(Math.floor(Math.random() * possible.length));
 			}
-			codigo.setText("7"+ text + " - " + text2 + "E");
+			codigo.setText("7"+ text + "-" + text2 + "E");
 	},
 	code8:function(){
 	     	text = "";
@@ -208,6 +212,6 @@ function validarString (cadenaAnalizar) {
 				text = text + possible.charAt(Math.floor(Math.random() * possible.length));
 				text2 = text2 + possible.charAt(Math.floor(Math.random() * possible.length));
 			}
-			codigo.setText("8"+ text + " - " + text2 + "E");
+			codigo.setText("8"+ text + "-" + text2 + "E");
 	}
 }
