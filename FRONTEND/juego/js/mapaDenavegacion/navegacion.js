@@ -31,8 +31,8 @@ navegacion.prototype = {
         game.load.spritesheet('botonAmigos', '../img/Componentes/navegacionMapa/botonAmigos.png', 62, 62);
         game.load.spritesheet('botonPerfil', '../img/Componentes/navegacionMapa/botonPerfil.png', 62, 62);
         game.load.spritesheet('botonRanking', '../img/Componentes/navegacionMapa/botonRanking.png', 62, 62);
-        game.load.spritesheet('botonCajaSorpresa', '../img/Componentes/cajas/cajam.png', 132, 216);
-        //game.load.spritesheet('botonCajaSorpresa', '../img/Componentes/cajas/cajanegra.png', 62, 62);
+        //game.load.spritesheet('botonCajaSorpresa', '../img/Componentes/cajas/cajam.png', 132, 216);
+        game.load.spritesheet('botonCajaSorpresa', '../img/Componentes/navegacionMapa/cajanegra.png', 62, 62);
         game.load.spritesheet('botonCompraPersonajes', '../img/Componentes/navegacionMapa/botonCompraPersonajes.png', 62, 62);
 
         game.load.spritesheet('pause12', '../img/Componentes/navegacionMapa/pause12.png', 50,50);
@@ -52,9 +52,9 @@ navegacion.prototype = {
         botonAmigos = game.add.button(670, 5, 'botonAmigos', this.verInvitarAmigos, 1, 1, 0, 2);
         botonPerfil = game.add.button(5, 5, 'botonPerfil', this.verPerfil, 1, 1, 0, 2);
         botonRanking = game.add.button(605, 5, 'botonRanking', this.verRankings, 1, 1, 0, 2);
-        btnCaja = game.add.button(415, 5, 'botonCajaSorpresa', this.verCajaMisteriosa);//475
+       //btnCaja = game.add.button(415, 5, 'botonCajaSorpresa', this.verCajaMisteriosa);//475
 
-        //btnCaja = game.add.button(475, 5, 'botonCajaSorpresa', this.verCajaMisteriosa);//475
+        btnCaja = game.add.button(475, 5, 'botonCajaSorpresa', this.verCajaMisteriosa,1,1,0,2);//475
         botonCompraPersonajes = game.add.button(540, 5, 'botonCompraPersonajes', this.verCompraPersonajes, 1, 1, 0, 2);
         game.add.text(160, 20, "999999", {font: "16px Roboto", fill: "#ffffff"}); //Label monedas     
        
