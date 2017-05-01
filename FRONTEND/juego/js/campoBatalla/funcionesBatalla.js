@@ -1,3 +1,4 @@
+var ganadorBatalla;
 var funcionesBatalla={
     //funcion que se encarga de cargar todos los elementos del campo de batalla
     cargar:function(idPJ,idPC,caa){
@@ -267,6 +268,11 @@ var funcionesBatalla={
      */
      finJuego : function(){
         game.add.text(game.width/4,game.height/2,'JUEGO TERMINADO', {font:'45px'});
+		 if(vidaRojoComputadora.width==0){
+				ganadorBatalla = false;
+			}else{
+				ganadorBatalla = true;
+			}
         game.time.events.add(2000,function(){ game.state.start('fin');},this);
      },
      numeroAleatorio:function(min, max) {

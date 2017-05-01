@@ -160,40 +160,51 @@ navegacion.prototype = {
         music.pause();
     },
 
-        mundo1: function(){
-           game.state.start("Mundo1");
-
+        mundo1: function(){            
+            pruebasPsicotecnicas.setPrueba19(true);
+            game.state.start("Mundo1");
         },
         mundo2:function(){
+            pruebasPsicotecnicas.setPrueba19(true);
             game.state.start("Mundo2");
         },
         mundo3:function(){
+            pruebasPsicotecnicas.setPrueba19(true);
             game.state.start("Mundo3");
         },
         mundo4:function(){
+            pruebasPsicotecnicas.setPrueba19(true);
             game.state.start("Mundo4");
         },
         mundo5:function(){
+            pruebasPsicotecnicas.setPrueba19(true);            
             game.state.start("Mundo5");
         },
         mundo6:function(){
+            pruebasPsicotecnicas.setPrueba19(true);
             game.state.start("Mundo6");
         },
         mundo7:function(){
+            pruebasPsicotecnicas.setPrueba19(true);
             game.state.start("Mundo7");
         },
         mundo8:function(){
+            pruebasPsicotecnicas.setPrueba19(true);
             game.state.start("Mundo8");
         },
         mundo9:function(){
+            pruebasPsicotecnicas.setPrueba19(true);
             game.state.start("Mundo9");
         },
         mundo10:function(){
+            pruebasPsicotecnicas.setPrueba19(true);
             game.state.start("Mundo10");
         },
         mundo11:function(){
+            pruebasPsicotecnicas.setPrueba19(true);
             game.state.start("Mundo11");
         },
         mundo12:function(){
+            pruebasPsicotecnicas.setPrueba19(true);
             game.state.start("Mundo12");
         }}
