@@ -17,8 +17,8 @@ var funcionesBatalla={
         game.load.spritesheet('impactoPersonalidadComputadora', personajesMalos[idPC].rutaImpactoPersonalidad, 161, 145);
         game.load.spritesheet('impactoPlagioComputadora', personajesMalos[idPC].rutaImpactoPlagio, 277, 277);
         game.load.spritesheet('gamepad','../img/Componentes/joystick/gamepad_spritesheet.png',100,100);
-        game.load.image('caja', boxes[caa].root);
-        game.load.image('cajaOpen', boxes[caa].rootOpen);
+        //game.load.image('caja', boxes[caa].root);
+        //game.load.image('cajaOpen', boxes[caa].rootOpen);
 
 
     },
