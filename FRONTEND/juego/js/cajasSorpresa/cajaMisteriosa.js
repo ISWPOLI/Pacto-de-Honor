@@ -33,19 +33,19 @@ var cajaMisteriosa = function(game){};
             game.load.spritesheet(nameBox[1], boxes[2].root);
             game.load.spritesheet(nameBox[2], boxes[3].root);
             game.load.spritesheet(nameBox[3], boxes[4].root);
-            game.load.spritesheet(nameBox[4], boxes[6].root);
+            game.load.spritesheet(nameBox[4], boxes[5].root);
             game.load.spritesheet(nameBox[5], boxes[6].root);
             game.load.spritesheet(nameBox[6], boxes[7].root);
-            game.load.spritesheet(nameBox[7], boxes[8].root);
+
 
             game.load.spritesheet(nameBox[0]+"explosion", boxes[1].rootOpen);
             game.load.spritesheet(nameBox[1]+"explosion", boxes[2].rootOpen);
             game.load.spritesheet(nameBox[2]+"explosion", boxes[3].rootOpen);
             game.load.spritesheet(nameBox[3]+"explosion", boxes[4].rootOpen);
-            game.load.spritesheet(nameBox[4]+"explosion", boxes[6].rootOpen);
+            game.load.spritesheet(nameBox[4]+"explosion", boxes[5].rootOpen);
             game.load.spritesheet(nameBox[5]+"explosion", boxes[6].rootOpen);
             game.load.spritesheet(nameBox[6]+"explosion", boxes[7].rootOpen);
-            game.load.spritesheet(nameBox[7]+"explosion", boxes[8].rootOpen);
+   
     
 
             game.load.spritesheet('atras', '../img/Componentes/logros/atras.png');
