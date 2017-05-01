@@ -33,22 +33,20 @@ var cajaMisteriosa = function(game){};
             game.load.spritesheet(nameBox[1], boxes[2].root);
             game.load.spritesheet(nameBox[2], boxes[3].root);
             game.load.spritesheet(nameBox[3], boxes[4].root);
-            game.load.spritesheet(nameBox[4], boxes[5].root);
+            game.load.spritesheet(nameBox[4], boxes[6].root);
             game.load.spritesheet(nameBox[5], boxes[6].root);
             game.load.spritesheet(nameBox[6], boxes[7].root);
             game.load.spritesheet(nameBox[7], boxes[8].root);
-            game.load.spritesheet(nameBox[8], boxes[9].root);
 
             game.load.spritesheet(nameBox[0]+"explosion", boxes[1].rootOpen);
             game.load.spritesheet(nameBox[1]+"explosion", boxes[2].rootOpen);
             game.load.spritesheet(nameBox[2]+"explosion", boxes[3].rootOpen);
             game.load.spritesheet(nameBox[3]+"explosion", boxes[4].rootOpen);
-            game.load.spritesheet(nameBox[4]+"explosion", boxes[5].rootOpen);
+            game.load.spritesheet(nameBox[4]+"explosion", boxes[6].rootOpen);
             game.load.spritesheet(nameBox[5]+"explosion", boxes[6].rootOpen);
             game.load.spritesheet(nameBox[6]+"explosion", boxes[7].rootOpen);
             game.load.spritesheet(nameBox[7]+"explosion", boxes[8].rootOpen);
-            game.load.spritesheet(nameBox[8]+"explosion", boxes[9].rootOpen);
-
+    
 
             game.load.spritesheet('atras', '../img/Componentes/logros/atras.png');
 
@@ -117,8 +115,9 @@ var cajaMisteriosa = function(game){};
 
           // Se agrega un texto a la ventana para representar las descripciones de los logros, con 20px de tamaño y "Roboto" como tipo de letra
           // Tambien se agrega un color de fondo y se alinea el texto en el centro
-          description = game.add.text((game.world.centerX/3)*3, 300, "", { font: "20px Roboto", fill: "#ffffff", align: "center", backgroundColor: "#2451A6"});
+          description = game.add.text(550, 300, "", { font: "20px Roboto", fill: "#ffffff", align: "center", backgroundColor: "#2451A6"});
           description.anchor.set(0.5);
+
 
           // Se agrega un boton con posiciones especificas, con diferentes estados (Cargados previamente en la funcion onload)
           startButton = game.add.button(game.world.width / 2, 540, 'button', null, this, 2, 1, 0); // over, out, down, up
