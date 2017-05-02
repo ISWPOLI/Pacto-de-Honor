@@ -17,7 +17,9 @@ var movV;
 
 var ataquePlagio;
 var ataquePersonalidadV;
-var idPJ="idPDos";
+var idPJ=cookies.getCookie("name");
+console.log(idPJ);
+//var idPJ="idPDos";
 var idPC="idPDos";
 //es  200 es temporal y varia dependiendo de la pantalla 
 var costoAtaqueJ=personajesBuenos[idPJ].energia*200;
