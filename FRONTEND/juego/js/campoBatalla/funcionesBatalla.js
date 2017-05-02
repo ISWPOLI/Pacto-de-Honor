@@ -1,6 +1,7 @@
+var ganadorBatalla;
 var funcionesBatalla={
     //funcion que se encarga de cargar todos los elementos del campo de batalla
-    cargar:function(idPJ,idPC){
+    cargar:function(idPJ,idPC,caa){
         game.load.image('fondo', "../img/escenarios/escenariosSecundarios/nivel1.png");
 		game.load.spritesheet('personajeJugador', personajesBuenos[idPJ].rutaSprite, 200, 200);
 		game.load.image('avatarPersonajeJugador', personajesBuenos[idPJ].rutaAvatar);
@@ -16,6 +17,8 @@ var funcionesBatalla={
         game.load.spritesheet('impactoPersonalidadComputadora', personajesMalos[idPC].rutaImpactoPersonalidad, 161, 145);
         game.load.spritesheet('impactoPlagioComputadora', personajesMalos[idPC].rutaImpactoPlagio, 277, 277);
         game.load.spritesheet('gamepad','../img/Componentes/joystick/gamepad_spritesheet.png',100,100);
+        //game.load.image('caja', boxes[caa].root);
+        //game.load.image('cajaOpen', boxes[caa].rootOpen);
 
 
     },
@@ -265,6 +268,11 @@ var funcionesBatalla={
      */
      finJuego : function(){
         game.add.text(game.width/4,game.height/2,'JUEGO TERMINADO', {font:'45px'});
+		 if(vidaRojoComputadora.width==0){
+				ganadorBatalla = false;
+			}else{
+				ganadorBatalla = true;
+			}
         game.time.events.add(2000,function(){ game.state.start('fin');},this);
      },
      numeroAleatorio:function(min, max) {
@@ -357,6 +365,29 @@ var funcionesBatalla={
              movV[1]=true;
         }
     },
+     showBox:function(){
+               if (!caja.visible) {
+                caja.visible = true;
+               };
+        },
+     hideBox:function(){
+               if (caja.visible) {
+                caja.visible = false;
+               };
+        },
+    catchedBox:function(){
+        caja.visible = false;
+        if (!openBox.visible) {
+            openBox.visible =true;
+            
+        }    
+    },
+    hideOpenBox:function(){
+               if (openBox.visible) {
+                openBox.visible = false;
+               };
+
+        },
     llamarSecuencia:function(indice){
         if(indice==1)
             this.primerMovimientoComputadora();

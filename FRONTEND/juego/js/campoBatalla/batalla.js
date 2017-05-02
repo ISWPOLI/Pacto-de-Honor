@@ -33,10 +33,18 @@ var fondogame;
 var joystick;
 var button;
 
+//var boxGame = 7;
+//var caja;
+//var openBox;
+//var timeShowBox = 5;
+
 var batalla = {
 	preload : function() {
 		this.preloadBar=this.add.sprite(this.game.world.centerX,this.game.world.centerY,'barraCarga');
 		this.load.setPreloadSprite(this.preloadBar);
+		//boxGame =game.rnd.integerInRange(1, 8);		
+		//timeShowBox = game.rnd.integerInRange(5,65);
+		//funcionesBatalla.cargar(idPJ,idPC,boxGame);
 		funcionesBatalla.cargar(idPJ,idPC);
         game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
 	},
@@ -67,29 +75,108 @@ var batalla = {
 		funcionesBatalla.iniciarSprite(personajeJugador);
 		funcionesBatalla.iniciarSprite(personajeComputadora);
 
+
+		/*caja = game.add.button(game.rnd.integerInRange(30, (game.width)-30), game.rnd.integerInRange(60, (game.height)-60), "caja",this.catchedBox,this);
+        caja.visible = false;
+        openBox = game.add.image(game.width/2, game.height/2, 'cajaOpen');
+        openBox.anchor.setTo(0.5);
+        openBox.visible =false;
+        caja.inputEnabled=true;
+       	caja.events.onInputUp.add(function () {
+			funcionesBatalla.catchedBox()
+        });*/
+
+
 		if(dispositivoMovil){
 			 //Add the VirtualGamepad plugin to the game
         	 gamepad = game.plugins.add(Phaser.Plugin.VirtualGamepad);
         	// Add a joystick to the game (only one is allowed right now)
-        	 joystick = gamepad.addJoystick(125, 500, 1.2, 'gamepad');       
+        	 joystick = gamepad.addJoystick(100, 500, 1, 'gamepad');       
         	// Add a button to the game (only one is allowed right now)
-        	 button = gamepad.addButton(600, 500, 1, 'gamepad');
+        	 button = gamepad.addButton(730, 500, 0.8, 'gamepad');
+			
 			// cursores = game.input.keyboard.createCursorKeys();
 			// esp = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+			
+			//avatarPersonajeJugador.anchor.setTo(0.9);
+			//avatarPersonajeComputadora.anchor.setTo(0.4);
+			
+			var avatarPersonajeComputadora = game.add.sprite(690, 30, 'avatarPersonajeComputadora');
+			var avatarPersonajeJugador = game.add.sprite(20, 30, 'avatarPersonajeJugador');
+			
+			avatarPersonajeComputadora.scale.setTo(0.45);	
+			avatarPersonajeJugador.scale.setTo(0.45);
+			
+			var botonPoder = game.add.button(690, 350, 'botonPoder', funcionesBatalla.clickBotonPoder, 1, 1, 0, 2);
+			botonPoder.scale.setTo(1.2);
+			
+			var pausa = game.add.button(360, 20, 'pausa', this.pausar,this);
+			
+			game.add.text(125,20,personajesBuenos[idPJ].nombre,{fill:'white'});
+			game.add.text(480,20,personajesMalos[idPC].nombre,{fill:'white'});        
+        
+			vidaBlancoJugador = new Phaser.Rectangle(124, 53, 200, 20);//primer barra blanca de vida
+			vidaNegroJugador = new Phaser.Rectangle(123, 52, 202, 22);//primer borde negro de vida 
+			vidaRojoJugador = new Phaser.Rectangle(124, 53, 200, 20);//primer barra roja  de vida
+
+			energiaBlancaJugador = new Phaser.Rectangle(124, 79, 200, 20);//primer barra blanca de energia
+			energiaNegroJugador = new Phaser.Rectangle(123, 78, 202, 22);//primer borde negro de energia
+			energiaVerdeJugador = new Phaser.Rectangle(124, 79, 200, 20);//primer barra verde de energia
+
+			vidaBlancoComputadora = new Phaser.Rectangle(480, 53, 200, 20);//segunda barra blanca de vida
+			vidaNegroComputadora = new Phaser.Rectangle(479, 52, 200, 22);//segunda borde negro de vida 
+			vidaRojoComputadora = new Phaser.Rectangle(480, 53, 200, 20);//segunda barra roja		
+
+			energiaBlancaComputadora = new Phaser.Rectangle(480, 79, 200, 20);
+			energiaNegroComputadora = new Phaser.Rectangle(479, 78, 200, 22);
+			energiaVerdeComputadora = new Phaser.Rectangle(480, 79, 200, 20);
+			
+			pausa.scale.setTo(0.4, 0.4);
+			text = game.add.text(360, 110, 'time: 00', {
+			fill : "white",
+			backgroundColor : 'rgba(0,0,0,0.5)'
+		});
+			
 		}else{
 			cursores = game.input.keyboard.createCursorKeys();
 			esp = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
-		}
-
-		game.add.text(145,20,personajesBuenos[idPJ].nombre,{fill:'white'});
-		game.add.text(460,20,personajesMalos[idPC].nombre,{fill:'white'});
-
-		var avatarPersonajeComputadora = game.add.sprite(665, 30, 'avatarPersonajeComputadora');
-		avatarPersonajeComputadora.scale.setTo(0.6);
-		var avatarPersonajeJugador = game.add.sprite(10, 30, 'avatarPersonajeJugador');
-		avatarPersonajeJugador.scale.setTo(0.6);        
+			
+			var avatarPersonajeComputadora = game.add.sprite(665, 30, 'avatarPersonajeComputadora');
+			var avatarPersonajeJugador = game.add.sprite(10, 30, 'avatarPersonajeJugador');
+			
+			avatarPersonajeComputadora.scale.setTo(0.6);	
+			avatarPersonajeJugador.scale.setTo(0.6);
+			
+			var botonPoder = game.add.button(145, 105, 'botonPoder', funcionesBatalla.clickBotonPoder, 1, 1, 0, 2);
+			
+			var pausa = game.add.button(365, 20, 'pausa', this.pausar,this);
+			
+			game.add.text(145,20,personajesBuenos[idPJ].nombre,{fill:'white'});
+			game.add.text(460,20,personajesMalos[idPC].nombre,{fill:'white'});        
         
-		var pausa = game.add.button(365, 20, 'pausa', this.pausar,this);
+			vidaBlancoJugador = new Phaser.Rectangle(144, 53, 200, 20);//primer barra blanca de vida
+			vidaNegroJugador = new Phaser.Rectangle(143, 52, 202, 22);//primer borde negro de vida 
+			vidaRojoJugador = new Phaser.Rectangle(144, 53, 200, 20);//primer barra roja  de vida
+
+			energiaBlancaJugador = new Phaser.Rectangle(144, 79, 200, 20);//primer barra blanca de energia
+			energiaNegroJugador = new Phaser.Rectangle(143, 78, 202, 22);//primer borde negro de energia
+			energiaVerdeJugador = new Phaser.Rectangle(144, 79, 200, 20);//primer barra verde de energia
+
+			vidaBlancoComputadora = new Phaser.Rectangle(460, 53, 200, 20);//segunda barra blanca de vida
+			vidaNegroComputadora = new Phaser.Rectangle(459, 52, 200, 22);//segunda borde negro de vida 
+			vidaRojoComputadora = new Phaser.Rectangle(460, 53, 200, 20);//segunda barra roja		
+
+			energiaBlancaComputadora = new Phaser.Rectangle(460, 79, 200, 20);
+			energiaNegroComputadora = new Phaser.Rectangle(459, 78, 200, 22);
+			energiaVerdeComputadora = new Phaser.Rectangle(460, 79, 200, 20);
+			
+			pausa.scale.setTo(0.4, 0.4);
+			text = game.add.text(365, 110, 'time: 00', {
+			fill : "white",
+			backgroundColor : 'rgba(0,0,0,0.5)'
+		});
+			
+		}
 		pausa.inputEnabled=true;
 		//funcion para pausar
 		pausa.events.onInputUp.add(function () {
@@ -102,30 +189,7 @@ var batalla = {
             musicButton.play();
         	funcionesBatalla.unpause(event);
         }  
-		pausa.scale.setTo(0.4, 0.4);
-		text = game.add.text(365, 110, 'time: 99', {
-			fill : "white",
-			backgroundColor : 'rgba(0,0,0,0.5)'
-		});
-		vidaBlancoJugador = new Phaser.Rectangle(144, 53, 200, 20);//primer barra blanca de vida
-		vidaNegroJugador = new Phaser.Rectangle(143, 52, 202, 22);//primer borde negro de vida 
-		vidaRojoJugador = new Phaser.Rectangle(144, 53, 200, 20);//primer barra roja  de vida
-
-		energiaBlancaJugador = new Phaser.Rectangle(144, 79, 200, 20);//primer barra blanca de energia
-		energiaNegroJugador = new Phaser.Rectangle(143, 78, 202, 22);//primer borde negro de energia
-		energiaVerdeJugador = new Phaser.Rectangle(144, 79, 200, 20);//primer barra verde de energia
-
-		vidaBlancoComputadora = new Phaser.Rectangle(460, 53, 200, 20);//segunda barra blanca de vida
-		vidaNegroComputadora = new Phaser.Rectangle(459, 52, 200, 22);//segunda borde negro de vida 
-		vidaRojoComputadora = new Phaser.Rectangle(460, 53, 200, 20);//segunda barra roja		
-
-		energiaBlancaComputadora = new Phaser.Rectangle(460, 79, 200, 20);
-		energiaNegroComputadora = new Phaser.Rectangle(459, 78, 200, 22);
-		energiaVerdeComputadora = new Phaser.Rectangle(460, 79, 200, 20);
 		
-        var botonPoder = game.add.button(145, 105, 'botonPoder', funcionesBatalla.clickBotonPoder, 1, 1, 0, 2);
-
-   		
     },
     
 	render : function() {
@@ -166,7 +230,22 @@ var batalla = {
 		}
 		if (ti <= 70) {
 			text.setText('time: ' + ti);
-		} 
+		}
+		/*if(ti == timeShowBox){
+			funcionesBatalla.showBox();
+		}
+
+		if(ti == timeShowBox + 3){
+			funcionesBatalla.hideBox();
+		}
+		if (caja.visible) {
+			caja.angle += 1
+			caja.x-=2;
+			caja.y-=3;
+		}
+		if(ti == timeShowBox + 5){
+			funcionesBatalla.hideOpenBox();	
+		}*/
 		game.physics.arcade.overlap(personajeJugador,ataquePlagio,funcionesBatalla.impactoPlagioC,false,this);
 		game.physics.arcade.overlap(personajeJugador,ataquePersonalidadC.bullets,funcionesBatalla.impactoAtaqueComputadora,false,this);
 		game.physics.arcade.overlap(personajeComputadora,ataquePersonalidadJ,funcionesBatalla.impactoAtaqueJugador,false,this);
