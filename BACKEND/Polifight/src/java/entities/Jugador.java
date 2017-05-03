@@ -28,7 +28,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
     @NamedQuery(name = "Jugador.findAll", query = "SELECT j FROM Jugador j"),
     @NamedQuery(name = "Jugador.findByIdJugador", query = "SELECT j FROM Jugador j WHERE j.idJugador = :idJugador"),
-    @NamedQuery(name = "Jugador.findByIdNivel", query = "SELECT j FROM Jugador j WHERE j.idNivel = :idNivel"),
+    @NamedQuery(name = "Jugador.findByNivel", query = "SELECT j FROM Jugador j WHERE j.nivel = :nivel"),
     @NamedQuery(name = "Jugador.findByNickname", query = "SELECT j FROM Jugador j WHERE j.nickname = :nickname"),
     @NamedQuery(name = "Jugador.findByMonedaJugador", query = "SELECT j FROM Jugador j WHERE j.monedaJugador = :monedaJugador"),
     @NamedQuery(name = "Jugador.findByExperienciaJugador", query = "SELECT j FROM Jugador j WHERE j.experienciaJugador = :experienciaJugador"),
@@ -45,7 +45,7 @@ public class Jugador implements Serializable {
     
     @JoinColumn(name = "id_nivel", referencedColumnName = "id_nivel", insertable = false, updatable = false)
     @ManyToOne(optional = false)
-    private Nivel idNivel;
+    private Nivel nivel;
     
     @Basic(optional = false)
     @NotNull
@@ -112,12 +112,12 @@ public class Jugador implements Serializable {
         this.idJugador = idJugador;
     }
 
-    public Nivel getIdNivel() {
-        return idNivel;
+    public Nivel getNivel() {
+        return nivel;
     }
 
-    public void setIdNivel(Nivel idNivel) {
-        this.idNivel = idNivel;
+    public void setNivel(Nivel nivel) {
+        this.nivel = nivel;
     }
     
     

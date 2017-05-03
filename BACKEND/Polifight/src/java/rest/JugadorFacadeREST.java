@@ -1,8 +1,12 @@
 package rest;
 
+import entities.Categoriaimagen;
+import entities.Imagen;
 import entities.Jugador;
 import entities.Mundo;
 import entities.Nivel;
+import entities.Personaje;
+import entities.PersonajeTieneImagen;
 import entities.Usuario;
 import java.util.List;
 import javax.ejb.Stateless;
@@ -57,28 +61,54 @@ public class JugadorFacadeREST extends AbstractFacade<Jugador> {
 
     /**
      * Método que retorna la estructura solicitada en el issue #455
-     * @param id
-     * @return 
+     * @param idJugador id del jugador que se desea buscar
+     * @param idPersonaje id del Personaje que se desea traer el avatar
+     * @param token token otorgado al momento del login
+     * @return String con los atributos de Jugador
      */
     @GET
     @Path("find")
     @Produces({"application/json"})
-    public String buscarJugador(@QueryParam("id") Integer id, @QueryParam("token") String token) {
+    public String buscarJugador(@QueryParam("idJugador") Integer idJugador, @QueryParam("idPersonaje") Integer idPersonaje, @QueryParam("token") String token) {
          String resultado = "{";
+         int idCategoriaAvatar;
+         String avatar = "Avatar";
         try{
            Query queryToken = em.createNamedQuery("Usuario.findToken");
            queryToken.setParameter("token", token);
            Usuario user = (Usuario) queryToken.getSingleResult();
            if(user != null){
-               Jugador jugador = em.find(Jugador.class, id);
-               Nivel nivel = em.find(Nivel.class, jugador.getIdNivel());
-               Mundo mundo = em.find(Mundo.class, nivel.getMundo());
+               Jugador jugador = em.find(Jugador.class, idJugador);              
                if(jugador == null){
                    resultado = "{'response':'KO','cause':'Jugador not found'}";
                }else{
-                   resultado +=  "'idJugador':'"+jugador.getIdJugador()+"', 'nickname':'"+jugador.getNickname()+"', "
-                           + "'avatar':'', 'mundo':'"+mundo.getNombreMundo()+"', 'nivel':'"+jugador.getIdNivel().getNombreNivel()+"',"
+                    Nivel nivel = em.find(Nivel.class, jugador.getNivel().getIdNivel());
+                    Mundo mundo = em.find(Mundo.class, nivel.getMundo().getIdMundo());
+                    Query queryCategoriaImagen = em.createNamedQuery("Categoriaimagen.findByDescCategoriaImagen")
+                            .setParameter("descCategoriaImagen", "Avatar");
+                    
+                    List<Categoriaimagen> listCategoriaImagen = queryCategoriaImagen.getResultList();
+                    
+                    if(listCategoriaImagen.size() >= 2){
+                        resultado = "{'response':'KO', 'cause':'Existe más de una categoría llamada Avatar'";
+                    }else{
+                        idCategoriaAvatar = listCategoriaImagen.get(0).getIdcategoriaImagen();
+                        Query queryPersonajeImagen = em.createNamedQuery("PersonajeTieneImagen.findImagenForPersonaje")
+                                .setParameter("idCategoriaImagen", listCategoriaImagen.get(0))
+                                .setParameter("idPersonaje", em.find(Personaje.class, idPersonaje));
+                        
+                        List<PersonajeTieneImagen> listPersonajeImagen = queryPersonajeImagen.getResultList();
+                        
+                        if(listPersonajeImagen.size() >= 2){
+                            resultado = "{'response':'KO', 'cause':'Existe más de un avatar asignado al Personaje";
+                        }else{
+                            Imagen imagenAvatar = em.find(Imagen.class, listPersonajeImagen.get(0).getIdImagen().getIdImagen());                            
+                            resultado +=  "'idJugador':'"+jugador.getIdJugador()+"', 'nickname':'"+jugador.getNickname()+"', "
+                           + "'avatar':'"+imagenAvatar.getFoto()+"', 'mundo':'"+mundo.getNombreMundo()+"', 'nivel':'"+jugador.getNivel().getNombreNivel()+"',"
                            + "'monedas':'"+jugador.getMonedaJugador()+"', 'experiencia':'"+jugador.getExperienciaJugador()+"'";
+                        }
+                        
+                    }                   
                }
            }else{
              resultado = "{'response':'KO', 'cause':'Invalid token'}";
