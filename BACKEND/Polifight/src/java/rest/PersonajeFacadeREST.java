@@ -280,7 +280,45 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
         
         return resultado;
     }
-           
+    
+    
+    @GET
+    @Path("badCharacter")
+    @Produces({"application/json"})
+    public String badCharacter(@QueryParam("token") String token){
+        String resultado = "[";
+        try{
+            Query queryToken = em.createNamedQuery("Usuario.findToken");
+            queryToken.setParameter("token", token);
+            Usuario user = (Usuario) queryToken.getSingleResult();
+            if(user != null){                
+                Query query = em.createNamedQuery("Personaje.listBadCharacter");
+                query.setParameter("categoria", 1);
+                List<Personaje> listP = query.getResultList();
+                for (int i = 0; i < listP.size(); i++) {
+                    resultado += "{";
+                    if(i == listP.size()-1){
+                        resultado += "'idPersonaje':'"+listP.get(i).getIdPersonaje()+"', nombrePersonaje':'"+listP.get(i).getNombrePersonaje()+
+                                "','descripcionPersonaje':'"+listP.get(i).getDescripcionPersonaje()+"', 'costo':'"+listP.get(i).getCosto()+"', 'nivelDano':'"+
+                                listP.get(i).getNivelDano()+"'}";
+                    }else{
+                         resultado += "'idPersonaje':'"+listP.get(i).getIdPersonaje()+"', nombrePersonaje':'"+listP.get(i).getNombrePersonaje()+
+                                "','descripcionPersonaje':'"+listP.get(i).getDescripcionPersonaje()+"', 'costo':'"+listP.get(i).getCosto()+"', 'nivelDano':'"+
+                                listP.get(i).getNivelDano()+"'},";
+                    }  
+                }
+                resultado += "]";
+            }else{
+                resultado = "{'response':'KO', 'cause':'Invalid token'}";
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+            resultado = "{'response':'KO', 'cause':'Invalid token'}";
+        }     
+        return resultado;
+    }
+    
+    
     @Override
     protected EntityManager getEntityManager() {
         return em;
