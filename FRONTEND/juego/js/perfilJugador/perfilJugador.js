@@ -33,7 +33,7 @@ var perfilJugador = function(game){};
             game.add.button(90, 290,'boton-personaje', null, 0, 0, 0, 0);
             game.add.button(450, 290,'boton-jefes', null, 0, 0, 0, 0);
             game.add.button(90, 450,'boton-trofeo', this.verLogros, 0, 0, 0, 0);
-            game.add.button(450, 450,'boton-alfanumerico', null, 0, 0, 0, 0);
+            game.add.button(450, 450,'boton-alfanumerico', this.verAlfanumercios, 0, 0, 0, 0);
 
             game.add.text(400, 50, "Perfil del usuario", {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
             game.add.text(400, 130, "Nickname: -----", {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
@@ -56,6 +56,10 @@ var perfilJugador = function(game){};
             music.pause();
             musicButton.play();
         },
+        verAlfanumercios:function(){
+            game.state.start("desbloqueoPersonaje");
+        },
+
 
         update : function(){
 

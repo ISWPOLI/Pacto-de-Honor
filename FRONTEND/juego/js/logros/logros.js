@@ -207,7 +207,7 @@ var logros = function(game){};
       },
         verPerfil: function(){
             game.state.start("perfilJugador");
-             musicButton.play();
+            musicButton.play();
         },
         update:function(){
            // Se declara una variable llamada "zoomed" de tipo booleana, que representara cuando un elemento del scrolling map este seleccionada
