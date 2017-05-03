@@ -20,7 +20,7 @@ var boot ={
    			this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
    		}
    		this.scale.refresh();
-    	game.state.start("perfilJugador");
+    	game.state.start("seleccionavatar");
 
 	}
 
