@@ -72,11 +72,11 @@ seleccionavatar.prototype = {
          musicButton = game.add.audio('sonidoBoton');
          music = game.add.audio('sonidos'); 
          music.loop=true;
-         music.play();
+         music.play();         
     },
     verH:function(){
-         this.state.start("historieta");
-         musicButton.play(); 
+        this.state.start("historieta");
+        musicButton.play();
         music.pause();
     },
     update:function(){
@@ -87,8 +87,8 @@ seleccionavatar.prototype = {
                     zoomed = true;
                     for (var j = 0; j < descriptions.length; j++) {
                          if(i == j){
-                              apodo.setText(namesCharacters[j]);
-                              description.setText(descriptions[j]);
+                             apodo.setText(namesCharacters[j]);
+                             description.setText(descriptions[j]);                             
                          }
                     }
 
