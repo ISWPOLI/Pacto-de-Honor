@@ -19,7 +19,7 @@ var ataquePlagio;
 var ataquePersonalidadV;
 //var idPJ=cookies.getCookie("name");
 //console.log(idPJ);
-var idPJ="idPUno";
+var idPJ="idPDos";
 var idPC="idPDos";
 //es  200 es temporal y varia dependiendo de la pantalla 
 var costoAtaqueJ=personajesBuenos[idPJ].energia*200;
@@ -191,6 +191,7 @@ var batalla = {
             musicButton.play();
         	funcionesBatalla.unpause(event);
         }  
+        game.physics.arcade.gravity.y = 250;
 		
     },
     

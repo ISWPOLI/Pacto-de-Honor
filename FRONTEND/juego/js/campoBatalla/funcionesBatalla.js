@@ -17,6 +17,8 @@ var funcionesBatalla={
         game.load.spritesheet('impactoPersonalidadComputadora', personajesMalos[idPC].rutaImpactoPersonalidad, 161, 145);
         game.load.spritesheet('impactoPlagioComputadora', personajesMalos[idPC].rutaImpactoPlagio, 277, 277);
         game.load.spritesheet('gamepad','../img/Componentes/joystick/gamepad_spritesheet.png',100,100);
+        game.load.image('ataquePersonalidadB', personajesBuenos[idPJ].rutaAtaque);
+        game.load.image('ataquePersonalidadB', personajesBuenos[idPJ].rutaAtaque);
         //game.load.image('caja', boxes[caa].root);
         //game.load.image('cajaOpen', boxes[caa].rootOpen);
 
@@ -87,9 +89,11 @@ var funcionesBatalla={
             personajeJugador.body.x-=2;
             personajeJugador.animations.play('correr');
         } else if (cursores.down.isDown) {
-            personajeJugador.animations.play('defensa');
+            personajeJugador.animations.play('defensa')
+            personajeJugador.body.velocity.y=0;
             movH[0]=true;
-
+        }else if(cursores.up.isDown){
+            personajeJugador.body.velocity.y=-100;
         // } else if (cursores.up.isDown) {
         //     if(!movH[2]&&barra.width>=costoAtaqueJ){
         //         barra.width=barra.width-costoAtaqueJ;
