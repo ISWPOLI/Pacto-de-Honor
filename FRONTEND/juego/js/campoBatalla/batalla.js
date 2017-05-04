@@ -261,7 +261,15 @@ var batalla = {
 		}
 		if(ti == timeShowBox + 5){
 			funcionesBatalla.hideOpenBox();	
-			
+			if (sendGift) {
+
+				if (boxGame == 1) {
+					gameTime = gameTime + funcionesBatalla.giftbox();
+				};
+				
+
+				sendGift =false;
+			};
 		}
 		game.physics.arcade.overlap(personajeJugador,ataquePlagio,funcionesBatalla.impactoPlagioC,false,this);
 		game.physics.arcade.overlap(personajeJugador,ataquePersonalidadC.bullets,funcionesBatalla.impactoAtaqueComputadora,false,this);
