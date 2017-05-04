@@ -35,7 +35,7 @@ var fondogame;
 var joystick;
 var button;
 
-var boxGame = 2;
+var boxGame = 8;
 var caja;
 var openBox;
 var timeShowBox = 5;
@@ -46,7 +46,7 @@ var batalla = {
 	preload : function() {
 		this.preloadBar=this.add.sprite(this.game.world.centerX,this.game.world.centerY,'barraCarga');
 		this.load.setPreloadSprite(this.preloadBar);
-		boxGame =game.rnd.integerInRange(1, 8);		
+		//boxGame =game.rnd.integerInRange(1, 8);		
 		//timeShowBox = game.rnd.integerInRange(5,65);
 		funcionesBatalla.cargar(idPJ,idPC,boxGame);
 		//funcionesBatalla.cargar(idPJ,idPC);
@@ -236,19 +236,7 @@ var batalla = {
 			text.setText('time: ' + ti);
 		}
 		if(ti == timeShowBox){
-			funcionesBatalla.showBox();
-			
-			if (sendGift) {
-
-				if (boxGame == 1) {
-					gameTime = gameTime + funcionesBatalla.giftbox();
-				};
-				if (boxGame == 2) {
-					energiaVerdeJugador.width = energiaVerdeJugador.width +15;
-				};
-				sendGift =false;
-			};
-			
+			funcionesBatalla.showBox();	
 		}
 
 		if(ti == timeShowBox + 3){
@@ -259,7 +247,7 @@ var batalla = {
 			caja.x-=2;
 			caja.y-=3;
 		}
-		if(ti == timeShowBox + 5){
+		if(ti == timeShowBox + 3){
 			funcionesBatalla.hideOpenBox();	
 			if (sendGift) {
 

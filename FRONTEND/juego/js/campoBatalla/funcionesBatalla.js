@@ -444,15 +444,6 @@ var funcionesBatalla={
         newlife =[fatalityu,fatalitycpu];
         return newlife;
     },
-    powerdisable(power){
-        if (power.inputEnabled) {
-            return false;
-        };
-        if (!power.inputEnabled) {
-            return true;
-        };
-
-    },
     llamarSecuencia:function(indice){
         if(indice==1)
             this.primerMovimientoComputadora();
