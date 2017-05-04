@@ -4,6 +4,8 @@ var characters = ["pantera","gallo","cierva","girafa","leon","canario","ruisenor
 var namesCharacters = ["Ana Pantera", "Andres Gallo", "Cata Cierva", "Daniela Girafa", "Daniel León", "Fabian Canario", "Iván Ruiseñor", "Pedro Raton", "Tati Hormiga"];
 var description;
 var apodo;
+var music;
+var musicButton;
 var startButton;
 var descriptions = ["Ana tiene buenos amigos y un gran\ngrupo social, los sigue a todos\nlados y los apoya sin dudar. Pero si\nalgo no le parece o ve que la puede\nafectar, no se toma ni un segundo\npara pensar, sus buenos principios\nlos defiende y no los va a negociar",
                      "Que siempre Madruga, que nunca\nllega tarde, son algunas teorias sobre\nel puntual Andrés. Debo decirles que\nestán en lo correcto, desde el primer\ndia que sus estudios iniciaron, se\npuso a él mismo un gran reto: la\npuntualidad y asistencia lo\ncaracterizarían en todo momento",
@@ -32,6 +34,8 @@ seleccionavatar.prototype = {
           game.load.image('raton', '../img/Componentes/selecccion avartar/PedroRaton.png');
           game.load.image('hormiga', '../img/Componentes/selecccion avartar/TatiHormiga.png');
           game.load.spritesheet('button', '../img/Componentes/selecccion avartar/SpriteButton.png', 150, 40);
+         game.load.audio('sonidos','../img/Componentes/sonidos/seleccionAvatar.mp3');     
+          game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
      },
      create: function(){  
           game.stage.backgroundColor = "#2451A6"; 
@@ -65,12 +69,17 @@ seleccionavatar.prototype = {
           description.anchor.set(0.5);
           startButton = game.add.button(game.world.width / 2, 540, 'button', this.verH, this, 2, 1, 0); // over, out, down, up
           startButton.anchor.set(0.5);
-
-     },
-     verH:function(){
-        this.state.start("historieta");
+         musicButton = game.add.audio('sonidoBoton');
+         music = game.add.audio('sonidos'); 
+         music.loop=true;
+         music.play();         
     },
-     update:function(){
+    verH:function(){
+        this.state.start("historieta");
+        musicButton.play();
+        music.pause();
+    },
+    update:function(){
           var zoomed = false;
           for(var i = 0; i < this.scrollingMap.children.length; i++){
                if(Math.abs(this.scrollingMap.children[i].world.x - game.width / 2) < 46 && !zoomed){
@@ -78,8 +87,8 @@ seleccionavatar.prototype = {
                     zoomed = true;
                     for (var j = 0; j < descriptions.length; j++) {
                          if(i == j){
-                              apodo.setText(namesCharacters[j]);
-                              description.setText(descriptions[j]);
+                             apodo.setText(namesCharacters[j]);
+                             description.setText(descriptions[j]);                             
                          }
                     }
 
