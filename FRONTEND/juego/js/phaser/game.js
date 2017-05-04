@@ -15,7 +15,7 @@ game.state.add("Mundo10", Mundo10);
 game.state.add("Mundo11", Mundo11);
 game.state.add("Mundo12", Mundo12);
 
-
+  game.state.add("desbloqueoPersonaje", desbloqueoPersonaje);
     game.state.add("batalla", batalla);
     game.state.add("creditos", creditos);
     game.state.add("compraPersonajes", compraPersonajes);
@@ -25,6 +25,7 @@ game.state.add("Mundo12", Mundo12);
     game.state.add("logros", logros);
     game.state.add("seleccionpersonaje", seleccionpersonaje);    
     game.state.add("seleccionavatar", seleccionavatar);
+    game.state.add("cajaMisteriosa", cajaMisteriosa);
     game.state.add("boot",boot);
     game.state.add("fin", fin);
     game.state.start("boot");

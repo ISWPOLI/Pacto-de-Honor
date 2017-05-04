@@ -3,7 +3,7 @@
         currentOrientation = null,
         isMobile = /Android|iPhone|iPad|iPod|IEMobile|Opera Mini/i.test(navigator.userAgent),
         init = false;
-
+    //Se crea un objeto con las opciones del script
     var options = {
         startOnPageLoad: true,
         onHide: function(){},
@@ -15,7 +15,7 @@
         zIndex: 1000,
         iconNode: null
     };
-
+    //cssRules dibuja la pantalla de rotación
     var cssRules = [
        "#pleaserotate-graphic { margin-left: 50px; width: 200px; animation: pleaserotateframes ease 2s; animation-iteration-count: infinite; transform-origin: 50% 50%; -webkit-animation: pleaserotateframes ease 2s; -webkit-animation-iteration-count: infinite; -webkit-transform-origin: 50% 50%; -moz-animation: pleaserotateframes ease 2s; -moz-animation-iteration-count: infinite; -moz-transform-origin: 50% 50%; -ms-animation: pleaserotateframes ease 2s; -ms-animation-iteration-count: infinite; -ms-transform-origin: 50% 50%; }",
         "#pleaserotate-backdrop { background-color: white; top: 0; left: 0; position: fixed; width: 100%; height: 100%; }",
@@ -23,7 +23,7 @@
         "#pleaserotate-message { margin-top: 20px; font-size: 2.3em; text-align: center; font-family: Roboto, Geneva, sans-serif; text-transform: uppercase }",
         "#pleaserotate-message small { opacity: 0; display: block; font-size: .6em}"
     ];
-    
+    //cssKeyframeRules hace el dibujo de lcelular girando
     var cssKeyframeRules = [
         "pleaserotateframes{ 0% { transform:  rotate(0deg) ; -moz-transform:  rotate(0deg) ;-webkit-transform:  rotate(0deg) ;-ms-transform:  rotate(0deg) ;} 49% { transform:  rotate(90deg) ;-moz-transform:  rotate(90deg) ;-webkit-transform:  rotate(90deg) ; -ms-transform:  rotate(90deg) ;  } 100% { transform:  rotate(90deg) ;-moz-transform:  rotate(90deg) ;-webkit-transform:  rotate(90deg) ; -ms-transform:  rotate(90deg) ;  } }",
     ];
@@ -146,7 +146,7 @@
             }
         }
     }
-
+    //Función al cambiar la rotación
     function orientationChanged(){
         var triggerOn = currentOrientation && !options.forcePortrait || !currentOrientation && options.forcePortrait,
             propogate;
@@ -169,11 +169,11 @@
         setVisibility(triggerOn);
 
     }
-
+    //Función que retorna true si el dispositivo está en modo Portrait
     function isPortrait(){
         return ( window.innerWidth < window.innerHeight);
     }
-
+    //Función que verifica la rotación
     function checkOrientationChange(){
         if(!isMobile && options.onlyMobile){
             if(!init){

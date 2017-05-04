@@ -42,11 +42,11 @@ seleccionpersonaje.prototype = {
           for(var i = 0; i < columns; i++){
                for(var j = 0; j < rows; j++){
                     for(l; l < characters.length; l++){
-                         //thumb.scale.setTo(1.5);
-                         var button = game.add.button(leftMargin + j * (characterWidth + spacing), topMargin - 350 + i * (characterHeight + spacing), characters[l],sonido ,null, this, 2, 1, 0);
-                         l = l + 1;
-                         break;
-                         function sonido (){
+                        //thumb.scale.setTo(1.5);
+                        var button = game.add.button(leftMargin + j * (characterWidth + spacing), topMargin - 350 + i * (characterHeight + spacing), characters[l], sonido, this, 2, 1, 0);
+                        l = l + 1;
+                        break;    
+                        function sonido (){
                             musicButton.play();
                         }
                     }
@@ -55,8 +55,12 @@ seleccionpersonaje.prototype = {
           startButton = game.add.button(game.world.width / 2, 550, 'button', this.verbatalla, this, 2, 1, 0); // over, out, down, up
           startButton.anchor.set(0.5);
      },
-     verbatalla : function () {
-         this.state.start ("batalla");
-         musicButton.play();
-     }
+    
+    verbatalla: function () {
+        cookies.setCookie("name", "idPUno");
+        this.state.start ("batalla");
+        musicButton.play();
+    }
+    
+    
 }
