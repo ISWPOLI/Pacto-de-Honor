@@ -36,6 +36,7 @@ var cajaMisteriosa = function(game){};
             game.load.spritesheet(nameBox[4], boxes[5].root);
             game.load.spritesheet(nameBox[5], boxes[6].root);
             game.load.spritesheet(nameBox[6], boxes[7].root);
+            game.load.spritesheet(nameBox[7], boxes[8].root);
 
 
             game.load.spritesheet(nameBox[0]+"explosion", boxes[1].rootOpen);
@@ -45,6 +46,7 @@ var cajaMisteriosa = function(game){};
             game.load.spritesheet(nameBox[4]+"explosion", boxes[5].rootOpen);
             game.load.spritesheet(nameBox[5]+"explosion", boxes[6].rootOpen);
             game.load.spritesheet(nameBox[6]+"explosion", boxes[7].rootOpen);
+            game.load.spritesheet(nameBox[7]+"explosion", boxes[8].rootOpen);
    
     
 

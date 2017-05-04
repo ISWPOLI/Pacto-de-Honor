@@ -391,6 +391,68 @@ var funcionesBatalla={
     giftbox:function(){
         return 20;
         },
+         showBox:function(){
+               if (!caja.visible) {
+                caja.visible = true;
+               };
+        },
+     hideBox:function(){
+               if (caja.visible) {
+                caja.visible = false;
+               };
+        },
+    catchedBox:function(){
+        caja.visible = false;
+        if (!openBox.visible) {
+            openBox.visible =true;
+            
+        }    
+    },
+    hideOpenBox:function(){
+               if (openBox.visible) {
+                openBox.visible = false;
+               };
+
+    },
+    giftbox:function(){
+        return 20;
+    },
+    giftlife:function(life){
+        if (life.width<200) {
+            if (life.width + 40 > 200) {
+                return 200;
+            }
+            else{
+                return life.width + 40;
+            }
+        }
+        else{
+            return 0;
+        }
+    },
+    steallife(life){
+        var vida = (life.width*20)/100;
+        return life.width-vida;
+    },
+    changelife(ulife,cpulife){
+        var blood = [ulife.width,cpulife.width];
+        return blood;
+    },
+    fatality(ulife,cpulife){
+        fatalityu = (ulife.width*1)/100;
+        fatalitycpu = (cpulife.width*1)/100;
+        newlife =[fatalityu,fatalitycpu];
+        return newlife;
+    },
+    powerdisable(power){
+        if (power.inputEnabled) {
+            return false;
+        };
+        if (!power.inputEnabled) {
+            return true;
+        };
+
+    },
     llamarSecuencia:function(indice){
         if(indice==1)
             this.primerMovimientoComputadora();

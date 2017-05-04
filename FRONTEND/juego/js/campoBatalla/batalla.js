@@ -46,7 +46,7 @@ var batalla = {
 	preload : function() {
 		this.preloadBar=this.add.sprite(this.game.world.centerX,this.game.world.centerY,'barraCarga');
 		this.load.setPreloadSprite(this.preloadBar);
-		//boxGame =game.rnd.integerInRange(1, 8);		
+		boxGame =game.rnd.integerInRange(1, 8);		
 		//timeShowBox = game.rnd.integerInRange(5,65);
 		funcionesBatalla.cargar(idPJ,idPC,boxGame);
 		//funcionesBatalla.cargar(idPJ,idPC);
@@ -239,12 +239,12 @@ var batalla = {
 			funcionesBatalla.showBox();
 			
 			if (sendGift) {
-				energiaVerdeJugador.width = energiaVerdeJugador.width +15;
+
 				if (boxGame == 1) {
 					gameTime = gameTime + funcionesBatalla.giftbox();
 				};
 				if (boxGame == 2) {
-					
+					energiaVerdeJugador.width = energiaVerdeJugador.width +15;
 				};
 				sendGift =false;
 			};
@@ -261,6 +261,7 @@ var batalla = {
 		}
 		if(ti == timeShowBox + 5){
 			funcionesBatalla.hideOpenBox();	
+			
 		}
 		game.physics.arcade.overlap(personajeJugador,ataquePlagio,funcionesBatalla.impactoPlagioC,false,this);
 		game.physics.arcade.overlap(personajeJugador,ataquePersonalidadC.bullets,funcionesBatalla.impactoAtaqueComputadora,false,this);
