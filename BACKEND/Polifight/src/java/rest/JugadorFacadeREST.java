@@ -85,7 +85,7 @@ public class JugadorFacadeREST extends AbstractFacade<Jugador> {
                     Nivel nivel = em.find(Nivel.class, jugador.getNivel().getIdNivel());
                     Mundo mundo = em.find(Mundo.class, nivel.getMundo().getIdMundo());
                     Query queryCategoriaImagen = em.createNamedQuery("Categoriaimagen.findByDescCategoriaImagen")
-                            .setParameter("descCategoriaImagen", "Avatar");
+                            .setParameter("descCategoriaImagen", avatar);
                     
                     List<Categoriaimagen> listCategoriaImagen = queryCategoriaImagen.getResultList();
                     
