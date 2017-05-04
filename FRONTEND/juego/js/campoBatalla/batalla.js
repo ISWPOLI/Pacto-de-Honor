@@ -272,6 +272,25 @@ var batalla = {
 				if (boxGame == 3) {
 					vidaRojoJugador.width = funcionesBatalla.giftlife(vidaRojoJugador);
 				}
+				if (boxGame == 4) {
+					vidaRojoJugador.width = funcionesBatalla.steallife(vidaRojoJugador);
+				}
+				if (boxGame == 5) {
+					var cblood = funcionesBatalla.changelife(vidaRojoJugador,vidaRojoComputadora);
+					vidaRojoJugador.width = cblood[1];
+					vidaRojoComputadora.width =cblood[0];
+				}
+				if (boxGame == 6) {
+					//botonPoder.inputEnabled = true;
+				}
+				if (boxGame == 7) {
+					//vidaRojoJugador.width = funcionesBatalla.steallife(vidaRojoJugador);
+				}
+				if (boxGame == 8) {
+					var cbloodd = funcionesBatalla.fatality(vidaRojoJugador,vidaRojoComputadora);
+					vidaRojoJugador.width = cbloodd[1];
+					vidaRojoComputadora.width =cbloodd[0];
+				}
 
 				sendGift =false;
 			};
