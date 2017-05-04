@@ -266,7 +266,12 @@ var batalla = {
 				if (boxGame == 1) {
 					gameTime = gameTime + funcionesBatalla.giftbox();
 				};
-				
+				if (boxGame == 2) {
+					energiaVerdeJugador.width = energiaVerdeJugador.width +15;
+				};
+				if (boxGame == 3) {
+					vidaRojoJugador.width = funcionesBatalla.giftlife(vidaRojoJugador);
+				}
 
 				sendGift =false;
 			};
