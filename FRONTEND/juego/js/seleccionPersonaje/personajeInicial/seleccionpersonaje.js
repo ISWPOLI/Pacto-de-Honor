@@ -14,15 +14,15 @@ seleccionpersonaje.prototype = {
           game.scale.pageAlignHorizontally = true;
           game.scale.pageAlignVertically = true;
 
-          game.load.spritesheet('pantera', '../img/Componentes/seleccion de personaje/AnaPanteraButton.png', 125, 125, 3);
-          game.load.spritesheet('gallo', '../img/Componentes/seleccion de personaje/AndresGalloButton.png', 125, 125, 3);
-          game.load.spritesheet('cierva', '../img/Componentes/seleccion de personaje/CataCiervaButton.png', 125, 125, 3);
-          game.load.spritesheet('girafa', '../img/Componentes/seleccion de personaje/DanielaGirafaButton.png', 125, 125, 3);
-          game.load.spritesheet('leon', '../img/Componentes/seleccion de personaje/DanielLeonButton.png', 125, 125, 3);
-          game.load.spritesheet('canario', '../img/Componentes/seleccion de personaje/FabianCanarioButton.png', 125, 125, 3);
-          game.load.spritesheet('ruisenor', '../img/Componentes/seleccion de personaje/IvanRuisenorButton.png', 125, 125, 3);
-          game.load.spritesheet('raton', '../img/Componentes/seleccion de personaje/PedroRatonButton.png', 125, 125, 3);
-          game.load.spritesheet('hormiga', '../img/Componentes/seleccion de personaje/TatiHormigaButton.png', 125, 125, 3);
+          game.load.spritesheet('pantera', '../img/personajes/avatares/caraPantera.png', 125, 125, 3);
+          game.load.spritesheet('gallo', '../imgpersonajes/avatares/caraGallo.png', 125, 125, 3);
+          game.load.spritesheet('cierva', '../img/personajes/avatares/caraCierva.png', 125, 125, 3);
+          game.load.spritesheet('girafa', '../img/personajes/avatares/caraJirafa.png', 125, 125, 3);
+          game.load.spritesheet('leon', '../img/personajes/avatares/caraLeon.png', 125, 125, 3);
+          game.load.spritesheet('canario', '../img/personajes/avatares/caraCanario.png', 125, 125, 3);
+          game.load.spritesheet('ruisenor', '../img/personajes/avatares/caraRuiseñor.png', 125, 125, 3);
+          game.load.spritesheet('raton', '../img/personajes/avatares/caraRatón.png', 125, 125, 3);
+          game.load.spritesheet('hormiga', '../img/personajes/avatares/caraHormiga.png', 125, 125, 3);
           game.load.spritesheet('button', '../img/Componentes/seleccion de personaje/SpriteButton.png', 150, 40);
          
          game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');

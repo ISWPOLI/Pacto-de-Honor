@@ -23,18 +23,18 @@ seleccionavatar.prototype = {
           game.scale.pageAlignHorizontally = true;
           game.scale.pageAlignVertically = true;
 
-          game.load.image("transp", "../img/Componentes/selecccion avartar/transp.png");
-          game.load.image('pantera', '../img/Componentes/selecccion avartar/AnaPantera.png');
-          game.load.image('gallo', '../img/Componentes/selecccion avartar/AndresGallo.png');
-          game.load.image('cierva', '../img/Componentes/selecccion avartar/CataCierva.png');
-          game.load.image('girafa', '../img/Componentes/selecccion avartar/DanielaGirafa.png');
-          game.load.image('leon', '../img/Componentes/selecccion avartar/DanielLeon.png');
-          game.load.image('canario', '../img/Componentes/selecccion avartar/FabianCanario.png');
-          game.load.image('ruisenor', '../img/Componentes/selecccion avartar/IvanRuisenor.png');
-          game.load.image('raton', '../img/Componentes/selecccion avartar/PedroRaton.png');
-          game.load.image('hormiga', '../img/Componentes/selecccion avartar/TatiHormiga.png');
+          game.load.image("transp", "../img/personajes/avatares/transp.png");
+          game.load.image('pantera', '../img/personajes/avatares/CaraPantera.png');
+          game.load.image('gallo', '../img/personajes/avatares/CaraGallo.png');
+          game.load.image('cierva', '../img/personajes/avatares/CaraCierva.png');
+          game.load.image('girafa', '../img/personajes/avatares/CaraJirafa.png');
+          game.load.image('leon', '../img/personajes/avatares/CaraLeon.png');
+          game.load.image('canario', '../img/personajes/avatares/CaraCanario.png');
+          game.load.image('ruisenor', '../img/personajes/avatares/CaraRuiseñor.png');
+          game.load.image('raton', '../img/personajes/avatares/CaraRatón.png');
+          game.load.image('hormiga', '../img/personajes/avatares/CaraHormiga.png');
           game.load.spritesheet('button', '../img/Componentes/selecccion avartar/SpriteButton.png', 150, 40);
-         game.load.audio('sonidos','../img/Componentes/sonidos/seleccionAvatar.mp3');     
+          game.load.audio('sonidos','../img/Componentes/sonidos/seleccionAvatar.mp3');     
           game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
      },
      create: function(){  
