@@ -35,7 +35,7 @@ var fondogame;
 var joystick;
 var button;
 
-var boxGame = 8;
+var boxGame = 6;
 var caja;
 var openBox;
 var timeShowBox = 5;
@@ -248,41 +248,45 @@ var batalla = {
 			caja.y-=3;
 		}
 		if(ti == timeShowBox + 3){
-			funcionesBatalla.hideOpenBox();	
-			if (sendGift) {
+			funcionesBatalla.hideOpenBox();
 
+		}
+		if (boxGame == 7 && !openBox.visible) {
+			danoH=personajesBuenos[idPJ].daño;
+			personajeJugador.scale.setTo(1,1);
+		}
+		if (openBox.visible) {
 				if (boxGame == 1) {
 					gameTime = gameTime + funcionesBatalla.giftbox();
 				};
 				if (boxGame == 2) {
 					energiaVerdeJugador.width = energiaVerdeJugador.width +15;
 				};
-				if (boxGame == 3) {
+				if (boxGame == 3 && !sendGift) {
 					vidaRojoJugador.width = funcionesBatalla.giftlife(vidaRojoJugador);
 				}
-				if (boxGame == 4) {
+				if (boxGame == 4 && !sendGift) {
 					vidaRojoJugador.width = funcionesBatalla.steallife(vidaRojoJugador);
 				}
-				if (boxGame == 5) {
+				if (boxGame == 5 && !sendGift ) {
 					var cblood = funcionesBatalla.changelife(vidaRojoJugador,vidaRojoComputadora);
 					vidaRojoJugador.width = cblood[1];
 					vidaRojoComputadora.width =cblood[0];
 				}
 				if (boxGame == 6) {
-					//botonPoder.inputEnabled = true;
+					energiaVerdeJugador.width = 0;
 				}
 				if (boxGame == 7) {
-					//vidaRojoJugador.width = funcionesBatalla.steallife(vidaRojoJugador);
+					danoH = funcionesBatalla.getstrong(danoH);
+					personajeJugador.scale.setTo(1.5,1.5);
 				}
 				if (boxGame == 8) {
 					var cbloodd = funcionesBatalla.fatality(vidaRojoJugador,vidaRojoComputadora);
 					vidaRojoJugador.width = cbloodd[1];
 					vidaRojoComputadora.width =cbloodd[0];
 				}
-
-				sendGift =false;
-			};
-		}
+				sendGift = true;
+		};
 		game.physics.arcade.overlap(personajeJugador,ataquePlagio,funcionesBatalla.impactoPlagioC,false,this);
 		game.physics.arcade.overlap(personajeJugador,ataquePersonalidadC.bullets,funcionesBatalla.impactoAtaqueComputadora,false,this);
 		game.physics.arcade.overlap(personajeComputadora,ataquePersonalidadJ,funcionesBatalla.impactoAtaqueJugador,false,this);

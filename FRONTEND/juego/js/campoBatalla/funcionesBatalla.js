@@ -430,7 +430,7 @@ var funcionesBatalla={
             return 0;
         }
     },
-    steallife(life){
+    steallisteallife(life){
         var vida = (life.width*20)/100;
         return life.width-vida;
     },
@@ -443,6 +443,19 @@ var funcionesBatalla={
         fatalitycpu = (cpulife.width*1)/100;
         newlife =[fatalityu,fatalitycpu];
         return newlife;
+    },
+    exhausted(){
+        if (power.inputEnabled) {
+            return false;
+        };
+
+    },
+    getstrong(dano){
+        var newStrong = [1,1];
+        for (var i = dano.length - 1; i >= 0; i--) {
+            newStrong[i] = dano[i]*8;
+        };
+        return newStrong;
     },
     llamarSecuencia:function(indice){
         if(indice==1)
