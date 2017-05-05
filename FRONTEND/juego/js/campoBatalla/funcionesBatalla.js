@@ -17,10 +17,10 @@ var funcionesBatalla={
         game.load.spritesheet('impactoPersonalidadComputadora', personajesMalos[idPC].rutaImpactoPersonalidad, 161, 145);
         game.load.spritesheet('impactoPlagioComputadora', personajesMalos[idPC].rutaImpactoPlagio, 277, 277);
         game.load.spritesheet('gamepad','../img/Componentes/joystick/gamepad_spritesheet.png',100,100);
-        game.load.image('ataquePersonalidadB', personajesBuenos[idPJ].rutaAtaque);
-        game.load.image('ataquePersonalidadB', personajesBuenos[idPJ].rutaAtaque);
-        //game.load.image('caja', boxes[caa].root);
-        //game.load.image('cajaOpen', boxes[caa].rootOpen);
+
+        game.load.image('caja', boxes[caa].root);
+        game.load.image('cajaOpen', boxes[caa].rootOpen);
+
 
 
     },
@@ -392,6 +392,75 @@ var funcionesBatalla={
                };
 
         },
+    giftbox:function(){
+        return 20;
+        },
+         showBox:function(){
+               if (!caja.visible) {
+                caja.visible = true;
+               };
+        },
+     hideBox:function(){
+               if (caja.visible) {
+                caja.visible = false;
+               };
+        },
+    catchedBox:function(){
+        caja.visible = false;
+        if (!openBox.visible) {
+            openBox.visible =true;
+            
+        }    
+    },
+    hideOpenBox:function(){
+               if (openBox.visible) {
+                openBox.visible = false;
+               };
+
+    },
+    giftbox:function(){
+        return 20;
+    },
+    giftlife:function(life){
+        if (life.width<200) {
+            if (life.width + 40 > 200) {
+                return 200;
+            }
+            else{
+                return life.width + 40;
+            }
+        }
+        else{
+            return 0;
+        }
+    },
+    steallisteallife(life){
+        var vida = (life.width*20)/100;
+        return life.width-vida;
+    },
+    changelife(ulife,cpulife){
+        var blood = [ulife.width,cpulife.width];
+        return blood;
+    },
+    fatality(ulife,cpulife){
+        fatalityu = (ulife.width*1)/100;
+        fatalitycpu = (cpulife.width*1)/100;
+        newlife =[fatalityu,fatalitycpu];
+        return newlife;
+    },
+    exhausted(){
+        if (power.inputEnabled) {
+            return false;
+        };
+
+    },
+    getstrong(dano){
+        var newStrong = [1,1];
+        for (var i = dano.length - 1; i >= 0; i--) {
+            newStrong[i] = dano[i]*1.5;
+        };
+        return newStrong;
+    },
     llamarSecuencia:function(indice){
         if(indice==1)
             this.primerMovimientoComputadora();
