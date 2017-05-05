@@ -51,20 +51,20 @@ compraPersonajes.prototype = {
           game.scale.pageAlignVertically = true;
 
           // Se carga una imagen transparente para colocar detrás de las imágenes que apareceran en el Scrolling
-          game.load.image("transp", "../img/Componentes/compraPersonajes/transp.png");
+          game.load.image("transp", "../img/personajes/avatares/transp.png");
           // Se cargan las imágenes de los 9 personajes buenos
-          game.load.image('pantera', '../img/personajes/avatares/CaraPantera.png');
-          game.load.image('gallo', '../img/personajes/avatares/CaraGallo.png');
-          game.load.image('cierva', '../img/personajes/avatares/CaraCierva.png');
-          game.load.image('jirafa', '../img/personajes/avatares/CaraJirafa.png');
-          game.load.image('leon', '../img/personajes/avatares/CaraLeon.png');
-          game.load.image('canario', '../img/personajes/avatares/CaraCanario.png');
-          game.load.image('ruisenor', '../img/personajes/avatares/CaraRuiseñor.png');
-          game.load.image('raton', '../img/personajes/avatares/CaraRatón.png');
-          game.load.image('hormiga', '../img/personajes/avatares/CaraHormiga.png');
+          game.load.image('pantera', '../img/personajes/avatares/CaraPantera80.png');
+          game.load.image('gallo', '../img/personajes/avatares/CaraGallo80.png');
+          game.load.image('cierva', '../img/personajes/avatares/CaraCierva80.png');
+          game.load.image('jirafa', '../img/personajes/avatares/CaraJirafa80.png');
+          game.load.image('leon', '../img/personajes/avatares/CaraLeon80.png');
+          game.load.image('canario', '../img/personajes/avatares/CaraCanario80.png');
+          game.load.image('ruisenor', '../img/personajes/avatares/CaraRuiseñor80.png');
+          game.load.image('raton', '../img/personajes/avatares/CaraRatón80.png');
+          game.load.image('hormiga', '../img/personajes/avatares/CaraHormiga80.png');
           
           // Se carga el sprite del botón de compra
-          game.load.spritesheet('button', '../img/Componentes/compraPersonajes/SpriteButtonC.png', 140, 52);
+          game.load.spritesheet('button', '../img/Componentes/botones/SpriteButtonC.png', 140, 52);
           game.load.spritesheet('botonVolver', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
          
          game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
