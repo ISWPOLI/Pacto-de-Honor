@@ -17,11 +17,10 @@ var funcionesBatalla={
         game.load.spritesheet('impactoPersonalidadComputadora', personajesMalos[idPC].rutaImpactoPersonalidad, 161, 145);
         game.load.spritesheet('impactoPlagioComputadora', personajesMalos[idPC].rutaImpactoPlagio, 277, 277);
         game.load.spritesheet('gamepad','../img/Componentes/joystick/gamepad_spritesheet.png',100,100);
-
         game.load.image('caja', boxes[caa].root);
         game.load.image('cajaOpen', boxes[caa].rootOpen);
-
-
+        game.load.image('escudo1', '../img/componentes/batalla/escudo1.png');
+        game.load.image('escudo2', '../img/componentes/batalla/escudo2.png');
 
     },
     //inicializa todos los estados de los sprites de los personajes 
@@ -74,8 +73,8 @@ var funcionesBatalla={
     },
     //esta funcion se encarga de gestionar todos los mivimientos del jugador 
     movimientoJugador: function(barra){
-        movH[0]=false;
-        movH[1]=false;
+        variablesCampoBatalla.movH[0]=false;
+        variablesCampoBatalla.movH[1]=false;
         // if(movH[2]){
         //     if(ataquePersonalidadJ.body.onFloor()){
         //             ataquePersonalidadJ.kill();
@@ -83,94 +82,94 @@ var funcionesBatalla={
         //         }
         // }
         if (cursores.right.isDown) {
-            personajeJugador.body.x+=2;
-            personajeJugador.animations.play('correr');
+            variablesCampoBatalla.personajeJugador.body.x+=2;
+            variablesCampoBatalla.personajeJugador.animations.play('correr');
         } else if (cursores.left.isDown) {
-            personajeJugador.body.x-=2;
-            personajeJugador.animations.play('correr');
+            variablesCampoBatalla.personajeJugador.body.x-=2;
+            variablesCampoBatalla.personajeJugador.animations.play('correr');
         } else if (cursores.down.isDown) {
-            personajeJugador.animations.play('defensa')
-            personajeJugador.body.velocity.y=0;
-            movH[0]=true;
+            variablesCampoBatalla.personajeJugador.animations.play('defensa')
+            variablesCampoBatalla.personajeJugador.body.velocity.y=0;
+            variablesCampoBatalla.movH[0]=true;
         }else if(cursores.up.isDown){
-            personajeJugador.body.velocity.y=-100;
+            
         // } else if (cursores.up.isDown) {
         //     if(!movH[2]&&barra.width>=costoAtaqueJ){
         //         barra.width=barra.width-costoAtaqueJ;
-        //         personajeJugador.animations.play('especial');
+        //         variablesCampoBatalla.personajeJugador.animations.play('especial');
         //         game.time.events.add(100,function(){
         //             this.activarPersonalidadJ();
         //              movH[2]=true;
         //          },this);
         //     }   
         } else if (esp.isDown){
-            personajeJugador.animations.play('punos');
-            personajeJugador.body.x+=1;
-            movH[1]=true;
+            variablesCampoBatalla.personajeJugador.animations.play('punos');
+            variablesCampoBatalla.personajeJugador.body.x+=1;
+            variablesCampoBatalla.movH[1]=true;
         }else{
-            personajeJugador.animations.play('quieto');
+            variablesCampoBatalla.personajeJugador.animations.play('quieto');
         }
     },
     
     //Esta función se activa al oprimir el botón del poder del personaje
     clickBotonPoder: function(){
-        if(movH[2]){
-            if(ataquePersonalidadJ.body.onFloor()){
-                    ataquePersonalidadJ.kill();
-                    movH[2]=false;
+        if(variablesCampoBatalla.movH[2]){
+            if(variablesCampoBatalla.ataquePersonalidadJ.body.onFloor()){
+                    variablesCampoBatalla.ataquePersonalidadJ.kill();
+                    variablesCampoBatalla.movH[2]=false;
                 }
         }
-        if(!movH[2]&&energiaVerdeJugador.width>=costoAtaqueJ){
-                energiaVerdeJugador.width=energiaVerdeJugador.width-costoAtaqueJ;
-                personajeJugador.animations.play('especial');
+        if(!variablesCampoBatalla.movH[2]&&energiaVerdeJugador.width>=variablesCampoBatalla.costoAtaqueJ){
+                energiaVerdeJugador.width=energiaVerdeJugador.width-variablesCampoBatalla.costoAtaqueJ;
+                variablesCampoBatalla.personajeJugador.animations.play('especial');
                 game.time.events.add(100,function(){
                     funcionesBatalla.activarPersonalidadJ();
-                    movH[2]=true;
+                    variablesCampoBatalla.movH[2]=true;
                  },this);
             }
     },
     
     //esta funcion activa el poder de la computadora y lo inicializa como una bala
     activarPersonalidadC :function(){
-         if(!movV[2]&&energiaVerdeComputadora.width>=costoAtaqueC){
-                energiaVerdeComputadora.width=energiaVerdeComputadora.width-costoAtaqueC;
-                personajeComputadora.animations.play('especial');
+         if(!variablesCampoBatalla.movV[2]&&energiaVerdeComputadora.width>=variablesCampoBatalla.costoAtaqueC){
+                energiaVerdeComputadora.width=energiaVerdeComputadora.width-variablesCampoBatalla.costoAtaqueC;
+                variablesCampoBatalla.personajeComputadora.animations.play('especial');
                 game.time.events.add(100,function(){
-                    ataquePersonalidadC = game.add.weapon(10, 'ataquePersonalidadV');
-                    game.physics.arcade.enable(ataquePersonalidadC);
-                    ataquePersonalidadC.trackSprite(personajeComputadora, 0, 0, true);
-                    ataquePersonalidadC.fireAtSprite(personajeJugador);
-                    ataquePersonalidadC.bulletCollideWorldBounds=true;
-                    movV[2]=true;
+                    variablesCampoBatalla.ataquePersonalidadC = game.add.weapon(10, 'ataquePersonalidadV');
+                    game.physics.arcade.enable(variablesCampoBatalla.ataquePersonalidadC);
+                    variablesCampoBatalla.ataquePersonalidadC.trackSprite(variablesCampoBatalla.personajeComputadora, 0, 0, true);
+                    variablesCampoBatalla.ataquePersonalidadC.fireAtSprite(variablesCampoBatalla.personajeJugador);
+                    variablesCampoBatalla.ataquePersonalidadC.bulletCollideWorldBounds=true;
+                    variablesCampoBatalla.movV[2]=true;
                  },this);
             }   
         
     },
     //esta funcion activa el poder plagio  de la computadora y lo inicializa como una bala
     activarPlagioC :function(){
-         if(!movV[3]&&energiaVerdeComputadora.width>=costoPlagioC){
-                energiaVerdeComputadora.width=energiaVerdeComputadora.width-costoPlagioC;
-                personajeComputadora.animations.play('especial');
+         if(!variablesCampoBatalla.movV[3]&&energiaVerdeComputadora.width>=variablesCampoBatalla.costoPlagioC){
+                energiaVerdeComputadora.width=energiaVerdeComputadora.width-variablesCampoBatalla.costoPlagioC;
+                variablesCampoBatalla.personajeComputadora.animations.play('especial');
                 game.time.events.add(100,function(){
-                    ataquePlagio = game.add.sprite(game.height/2,game.width/2, 'ataquePlagio');
-                    game.physics.arcade.enable(ataquePlagio);
-                    ataquePlagio.collideWorldBounds = true; 
-                    ataquePlagio.scale.setTo(0.8);
-                    ataquePlagio.anchor.setTo(0.4);
-                    ataquePlagio.animations.add('especial', [1, 2, 3, 4, 5, 6, 7, 8], 8, false,true);
-                    ataquePlagio.animations.play('especial');
-                    movV[3]=true;
-                    primerImpacto=true;
+                    variablesCampoBatalla.ataquePlagio = game.add.sprite(game.height/2,game.width/2, 'ataquePlagio');
+                    game.physics.arcade.enable(variablesCampoBatalla.ataquePlagio);
+                    variablesCampoBatalla.ataquePlagio.collideWorldBounds = true; 
+                    variablesCampoBatalla.ataquePlagio.scale.setTo(0.8);
+                    variablesCampoBatalla.ataquePlagio.anchor.setTo(0.4);
+                    variablesCampoBatalla.ataquePlagio.animations.add('especial', [1, 2, 3, 4, 5, 6, 7, 8], 8, false,true);
+                    variablesCampoBatalla.ataquePlagio.animations.play('especial');
+                    variablesCampoBatalla.movV[3]=true;
+                    variablesCampoBatalla.primerImpacto=true;
                  },this);
             }   
         
     },
     //esta funcion activa el poder del jugador
     activarPersonalidadJ :function(){
-        ataquePersonalidadJ=game.add.sprite(personajeComputadora.body.x,0,'ataquePersonalidadB');
-        game.physics.arcade.enable(ataquePersonalidadJ);
-        ataquePersonalidadJ.body.collideWorldBounds = true; 
-        ataquePersonalidadJ.body.gravity.y = 300;
+        variablesCampoBatalla.ataquePersonalidadJ=game.add.sprite(variablesCampoBatalla.personajeComputadora.body.x,0,'ataquePersonalidadB');
+        game.physics.arcade.enable(variablesCampoBatalla.ataquePersonalidadJ);
+        variablesCampoBatalla.ataquePersonalidadJ.body.collideWorldBounds = true; 
+        variablesCampoBatalla.ataquePersonalidadJ.body.gravity.y = 300;
     },
     /*Se llama cuando la energia no esta al 100%
     */
@@ -185,10 +184,10 @@ var funcionesBatalla={
     */
     impactoPlagioC : function(personaje,ataque){
         game.time.events.add(1000,function(){ataque.kill();},this);
-        movV[3]=false;
-        if(!movH[0]&&primerImpacto){
-            primerImpacto=false;
-            funcionesBatalla.actualizarVida(vidaRojoJugador,danoV[2]);
+        variablesCampoBatalla.movV[3]=false;
+        if(!variablesCampoBatalla.movH[0]&&variablesCampoBatalla.primerImpacto){
+            variablesCampoBatalla.primerImpacto=false;
+            funcionesBatalla.actualizarVida(vidaRojoJugador,variablesCampoBatalla.danoV[2]);
             funcionesBatalla.spriteImpactoPlagioComputadora();
         }
 
@@ -198,9 +197,9 @@ var funcionesBatalla={
     */
     impactoAtaqueJugador : function(personaje,ataque){
         ataque.kill();
-        movH[2]=false;
-        if(!movV[0]){
-            funcionesBatalla.actualizarVida(vidaRojoComputadora,danoH[1]);
+        variablesCampoBatalla.movH[2]=false;
+        if(!variablesCampoBatalla.movV[0]){
+            funcionesBatalla.actualizarVida(vidaRojoComputadora,variablesCampoBatalla.danoH[1]);
             funcionesBatalla.spriteImpactoJugador();
         }
 
@@ -210,9 +209,9 @@ var funcionesBatalla={
     */
     impactoAtaqueComputadora : function(personaje,ataque){
         ataque.kill();
-        movV[2]=false;
-        if(!movH[0]){
-            funcionesBatalla.actualizarVida(vidaRojoJugador,danoV[1]);
+        variablesCampoBatalla.movV[2]=false;
+        if(!variablesCampoBatalla.movH[0]){
+            funcionesBatalla.actualizarVida(vidaRojoJugador,variablesCampoBatalla.danoV[1]);
             funcionesBatalla.spriteImpactoComputadora();
         }
     },
@@ -220,7 +219,7 @@ var funcionesBatalla={
     *Lo muestra por un segundo y luego lo destruye
     */
     spriteImpactoJugador : function(){
-       var impacto = game.add.sprite(personajeComputadora.body.x,personajeComputadora.body.y, 'impactoPersonalidadJugador');
+       var impacto = game.add.sprite(variablesCampoBatalla.personajeComputadora.body.x,variablesCampoBatalla.personajeComputadora.body.y, 'impactoPersonalidadJugador');
         game.physics.arcade.enable(impacto);
         impacto.animations.add('especial', [1, 2, 3, 4, 5, 6, 7, 8], 9, false,true);
         impacto.animations.play('especial');
@@ -231,14 +230,14 @@ var funcionesBatalla={
     *Lo muestra por un segundo y luego lo destruye
     */
     spriteImpactoComputadora : function(){
-       var impacto = game.add.sprite(personajeJugador.body.x,personajeJugador.body.y, 'impactoPersonalidadComputadora');
+       var impacto = game.add.sprite(variablesCampoBatalla.personajeJugador.body.x,variablesCampoBatalla.personajeJugador.body.y, 'impactoPersonalidadComputadora');
         game.physics.arcade.enable(impacto);
         impacto.animations.add('especiall', [1, 2, 3, 4, 5, 6, 7, 8], 9, false,true);
         impacto.animations.play('especiall');
         game.time.events.add(1000,function(){impacto.kill();},this);
     },
     spriteImpactoPlagioComputadora : function(){
-       var impacto = game.add.sprite(personajeJugador.body.x,personajeJugador.body.y, 'impactoPlagioComputadora');
+       var impacto = game.add.sprite(variablesCampoBatalla.personajeJugador.body.x,variablesCampoBatalla.personajeJugador.body.y, 'impactoPlagioComputadora');
         game.physics.arcade.enable(impacto);
         impacto.animations.add('especiall', [1, 2, 3, 4, 5, 6, 7, 8], 9, false,true);
         impacto.animations.play('especiall');
@@ -249,20 +248,20 @@ var funcionesBatalla={
     *Verifica si hay daño por ataque normal 
     */
     colision : function(){
-        if(movV[1]||movH[1]){
-            personajeJugador.position.x -=100;
-            personajeComputadora.position.x+=200;
+        if(variablesCampoBatalla.movV[1]||variablesCampoBatalla.movH[1]){
+            variablesCampoBatalla.personajeJugador.position.x -=100;
+            variablesCampoBatalla.personajeComputadora.position.x+=200;
         }
         //si se resta vida al jugador 
-        if(movV[1]==true&&!movH[0]){
+        if(variablesCampoBatalla.movV[1]==true&&variablesCampoBatalla.movH[0]){
             funcionesBatalla.actualizarVida(vidaRojoJugador,danoV[0]);
-            movV[0]=false;
+            variablesCampoBatalla.movV[0]=false;
             funcionesBatalla.spriteImpactoComputadora();
         }
         //si se resta vida a la computadora
-        if(movH[1]&&!movV[0]){
-            funcionesBatalla.actualizarVida(vidaRojoComputadora,danoH[0]);
-            movH[0]=false;
+        if(variablesCampoBatalla.movH[1]&&!variablesCampoBatalla.movV[0]){
+            funcionesBatalla.actualizarVida(vidaRojoComputadora,variablesCampoBatalla.danoH[0]);
+            variablesCampoBatalla.movH[0]=false;
             funcionesBatalla.spriteImpactoJugador();
             
         }
@@ -288,14 +287,14 @@ var funcionesBatalla={
     *El personaje se defiende
     */  
     primerMovimientoComputadora:function(){ 
-        secuencia=true;
+        variablesCampoBatalla.secuencia=true;
         game.time.events.add(1000,function(){ 
-            movimientoComputadora="punos";
+            variablesCampoBatalla.movimientoComputadora="punos";
             game.time.events.add(500,function(){
-            movimientoComputadora="defensa";
+            variablesCampoBatalla.movimientoComputadora="defensa";
             game.time.events.add(500,function(){
-                movimientoComputadora="adelante";
-                secuencia=false;
+                variablesCampoBatalla.movimientoComputadora="adelante";
+                variablesCampoBatalla.secuencia=false;
                 },this);
             },this);
         },this); 
@@ -306,17 +305,17 @@ var funcionesBatalla={
     *El lanza el ataque personalidad 
     */  
     segundoMovimientoComputadora:function(){ 
-        secuencia=true;
-        movimientoComputadora="atras";
+        variablesCampoBatalla.secuencia=true;
+        variablesCampoBatalla.movimientoComputadora="atras";
         game.time.events.add(500,function(){ 
-            movimientoComputadora="defensa";
+            variablesCampoBatalla.movimientoComputadora="defensa";
             game.time.events.add(2000,function(){ 
-                movimientoComputadora="quieto";
-                personajeComputadora.animations.play("quieto");
+                variablesCampoBatalla.movimientoComputadora="quieto";
+                variablesCampoBatalla.personajeComputadora.animations.play("quieto");
                 
                 this.activarPersonalidadC();
                 game.time.events.add(2000,function(){ 
-                    secuencia=false;
+                    variablesCampoBatalla.secuencia=false;
                     movimientoComputadora="atras";
                 },this);   
              },this); 
@@ -330,18 +329,18 @@ var funcionesBatalla={
     *El personaje lanza el ataque plagio
     */  
     tercerMovimientoComputadora:function(){ 
-        secuencia=true;
-        movimientoComputadora="punos";
+        variablesCampoBatalla.secuencia=true;
+        variablesCampoBatalla.movimientoComputadora="punos";
         game.time.events.add(1000,function(){ 
-            movimientoComputadora="atras";
+            variablesCampoBatalla.movimientoComputadora="atras";
             game.time.events.add(2000,function(){ 
-                movimientoComputadora="quieto";
-                personajeComputadora.animations.play("quieto");
+                variablesCampoBatalla.movimientoComputadora="quieto";
+                variablesCampoBatalla.personajeComputadora.animations.play("quieto");
                 this.activarPlagioC();
-                game.time.events.add(2000,function(){ 
+                    game.time.events.add(2000,function(){ 
                     movimientoComputadora="adelante";
                     game.time.events.add(2000,function(){
-                        secuencia=false;
+                        variablesCampoBatalla.secuencia=false;
                     },this);
                 },this);   
              },this); 
@@ -352,21 +351,21 @@ var funcionesBatalla={
     /*Con esta funcion se hace un movimiento en el update
     */
     guiaComputadora:function(string){
-        movV[0]=false;
-        movV[1]=false;
+        variablesCampoBatalla.movV[0]=false;
+        variablesCampoBatalla.movV[1]=false;
         if(string.localeCompare("adelante")==0){
-            personajeComputadora.animations.play('correr');
-            personajeComputadora.body.x -= 2; 
+            variablesCampoBatalla.personajeComputadora.animations.play('correr');
+            variablesCampoBatalla.personajeComputadora.body.x -= 2; 
         }else if (string.localeCompare("atras")==0){
-             personajeComputadora.animations.play('correr');
-             personajeComputadora.body.x += 2; 
+            variablesCampoBatalla.personajeComputadora.animations.play('correr');
+            variablesCampoBatalla.personajeComputadora.body.x += 2; 
         }else if (string.localeCompare("defensa")==0){
-             personajeComputadora.animations.play('defensa');
-             movV[0]=true;
+            variablesCampoBatalla.personajeComputadora.animations.play('defensa');
+            variablesCampoBatalla.movV[0]=true;
         }else if (string.localeCompare("punos")==0){
-             personajeComputadora.animations.play('punos'); 
-             personajeComputadora.body.x-=1;
-             movV[1]=true;
+            variablesCampoBatalla.personajeComputadora.animations.play('punos'); 
+            variablesCampoBatalla.personajeComputadora.body.x-=1;
+            variablesCampoBatalla.movV[1]=true;
         }
     },
      showBox:function(){
@@ -471,24 +470,24 @@ var funcionesBatalla={
     },
     joystick:function(joy,button){
         
-            movH[0]=false;
-            movH[1]=false;
+            variablesCampoBatalla.movH[0]=false;
+            variablesCampoBatalla.movH[1]=false;
             if (joy.properties.right) {
-                personajeJugador.body.x+=2;
-                personajeJugador.animations.play('correr');
+                variablesCampoBatalla.personajeJugador.body.x+=2;
+                variablesCampoBatalla.personajeJugador.animations.play('correr');
                 } else if (joy.properties.left) {
-                    personajeJugador.body.x-=2;
-                    personajeJugador.animations.play('correr');
+                    variablesCampoBatalla.personajeJugador.body.x-=2;
+                    variablesCampoBatalla.personajeJugador.animations.play('correr');
                 } else if (joy.properties.down) {
-                    personajeJugador.animations.play('defensa');
-                    movH[0]=true;
+                    variablesCampoBatalla.personajeJugador.animations.play('defensa');
+                    variablesCampoBatalla.movH[0]=true;
                 }
                 else if (button.isDown){
-                    personajeJugador.animations.play('punos');
-                    personajeJugador.body.x+=1;
-                    movH[1]=true;
+                    variablesCampoBatalla.personajeJugador.animations.play('punos');
+                    variablesCampoBatalla.personajeJugador.body.x+=1;
+                    variablesCampoBatalla.movH[1]=true;
                 }else{
-                    personajeJugador.animations.play('quieto');
+                    variablesCampoBatalla.personajeJugador.animations.play('quieto');
                 }
     }
 }
