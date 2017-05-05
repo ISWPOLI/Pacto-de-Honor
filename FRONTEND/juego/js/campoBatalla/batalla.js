@@ -23,8 +23,8 @@ variablesCampoBatalla = {
 	primeImpacto:false,//se usa para que el ataque plagio solo reste vida una vez
 	indice:0,//decide que secuencia de ataque realiza el villano
     fondogame:null,//gurada la imagen del fond
-    ataquePersonalidadJ:null//guarda ataque del jugador
-    escudo1:null //guarda la ruta del escudo uno
+    ataquePersonalidadJ:null,//guarda ataque del jugador
+    escudo1:null, //guarda la ruta del escudo uno
     escudo2:null//guarda la ruta del escudo dos
 };
 
@@ -63,6 +63,8 @@ var batalla = {
  		variablesCampoBatalla.movimientoComputadora="adelante";
 		variablesCampoBatalla.primeImpacto=false;
 		sendGift = true;
+		//variablesCampoBatalla.escudo1 = game.add.sprite(variablesCampoBatalla.avatarPersonajeComputadora.body.x, 0, 'escudo1');
+		//variablesCampoBatalla.escudo2 = game.add.sprite(0, 0, 'escudo2');
 
 		
 		
