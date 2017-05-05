@@ -46,8 +46,8 @@ var batalla = {
 	preload : function() {
 		this.preloadBar=this.add.sprite(this.game.world.centerX,this.game.world.centerY,'barraCarga');
 		this.load.setPreloadSprite(this.preloadBar);
-		//boxGame =game.rnd.integerInRange(1, 8);		
-		//timeShowBox = game.rnd.integerInRange(5,60);
+		boxGame =game.rnd.integerInRange(1, 8);		
+		timeShowBox = game.rnd.integerInRange(5,60);
 		funcionesBatalla.cargar(idPJ,idPC,boxGame);
 		//funcionesBatalla.cargar(idPJ,idPC);
         game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
