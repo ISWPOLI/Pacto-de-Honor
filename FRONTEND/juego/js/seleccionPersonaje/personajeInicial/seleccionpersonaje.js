@@ -14,16 +14,16 @@ seleccionpersonaje.prototype = {
           game.scale.pageAlignHorizontally = true;
           game.scale.pageAlignVertically = true;
 
-          game.load.spritesheet('pantera', '../img/Componentes/seleccion de personaje/AnaPanteraButton.png', 125, 125, 3);
-          game.load.spritesheet('gallo', '../img/Componentes/seleccion de personaje/AndresGalloButton.png', 125, 125, 3);
-          game.load.spritesheet('cierva', '../img/Componentes/seleccion de personaje/CataCiervaButton.png', 125, 125, 3);
-          game.load.spritesheet('girafa', '../img/Componentes/seleccion de personaje/DanielaGirafaButton.png', 125, 125, 3);
-          game.load.spritesheet('leon', '../img/Componentes/seleccion de personaje/DanielLeonButton.png', 125, 125, 3);
-          game.load.spritesheet('canario', '../img/Componentes/seleccion de personaje/FabianCanarioButton.png', 125, 125, 3);
-          game.load.spritesheet('ruisenor', '../img/Componentes/seleccion de personaje/IvanRuisenorButton.png', 125, 125, 3);
-          game.load.spritesheet('raton', '../img/Componentes/seleccion de personaje/PedroRatonButton.png', 125, 125, 3);
-          game.load.spritesheet('hormiga', '../img/Componentes/seleccion de personaje/TatiHormigaButton.png', 125, 125, 3);
-          game.load.spritesheet('button', '../img/Componentes/seleccion de personaje/SpriteButton.png', 150, 40);
+          game.load.spritesheet('pantera', '../img/personajes/avatares/botonPantera.png', 125, 125);
+          game.load.spritesheet('gallo', '../img/personajes/avatares/botonGallo.png', 125, 125);
+          game.load.spritesheet('cierva', '../img/personajes/avatares/botonCierva.png', 125, 125);
+          game.load.spritesheet('girafa', '../img/personajes/avatares/botonJirafa.png', 125, 125);
+          game.load.spritesheet('leon', '../img/personajes/avatares/botonLeon.png', 125, 125);
+          game.load.spritesheet('canario', '../img/personajes/avatares/botonCanario.png', 125, 125);
+          game.load.spritesheet('ruisenor', '../img/personajes/avatares/botonRuiseñor.png', 125, 125);
+          game.load.spritesheet('raton', '../img/personajes/avatares/botonRatón.png', 125, 125);
+          game.load.spritesheet('hormiga', '../img/personajes/avatares/botonHormiga.png', 125, 125);
+          game.load.spritesheet('button', '../img/Componentes/botones/botonSeleccionar.png', 150, 40);
          
          game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
      },
@@ -43,7 +43,7 @@ seleccionpersonaje.prototype = {
                for(var j = 0; j < rows; j++){
                     for(l; l < characters.length; l++){
                         //thumb.scale.setTo(1.5);
-                        var button = game.add.button(leftMargin + j * (characterWidth + spacing), topMargin - 350 + i * (characterHeight + spacing), characters[l], sonido, this, 2, 1, 0);
+                        var button = game.add.button(leftMargin + j * (characterWidth + spacing), topMargin - 350 + i * (characterHeight + spacing), characters[l], sonido, 1, 1, 0, 2);
                         l = l + 1;
                         break;    
                         function sonido (){

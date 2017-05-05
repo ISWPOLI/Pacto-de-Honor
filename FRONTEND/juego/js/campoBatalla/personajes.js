@@ -2,36 +2,36 @@
 *Con esto nos aseguramos que vaya a funcionar cuando de consuman los servicios 
 */
 var personajesBuenos={
-	"idPUno":{"nombre":"Andres Gallo","rutaSprite":"../img/sprites/personajesBuenos/gallo.png",
-			  "rutaAvatar":"../img/componentes/batalla/caraGallo.png",
-              "rutaBotonPoder":"../img/sprites/poderes/PoderesBotones/botonPoderGallo.png",
-			  "rutaAtaque":"../img/sprites/poderes/PoderesPersonalidadBuenos/AndresGallo.png",
-			  "rutaImpactoPersonalidad":"../img/sprites/poderes/PoderesImpactos/impactoGallo.png",
+	"idPUno":{"nombre":"Andres Gallo","rutaSprite":"../img/personajes/personajesBuenos/gallo.png",
+			  "rutaAvatar":"../img/personajes/avatares/caraGallo.png",
+              "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderGallo.png",
+			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/AndresGallo.png",
+			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoGallo.png",
 			  "daño":[6,2],"energia":1,"defensa":10,"vida":200},
 
-	"idPDos":{"nombre":"Daniel Leon","rutaSprite":"../img/sprites/personajesBuenos/leon.png",
-			  "rutaAvatar":"../img/componentes/batalla/caraLeon.png",
-              "rutaBotonPoder":"../img/sprites/poderes/PoderesBotones/botonPoderLeon.png",
-			  "rutaAtaque":"../img/sprites/poderes/PoderesPersonalidadBuenos/DanielLeon.png",
-			  "rutaImpactoPersonalidad":"../img/sprites/poderes/PoderesImpactos/impactoLeon.png",
+	"idPDos":{"nombre":"Daniel Leon","rutaSprite":"../img/personajes/personajesBuenos/leon.png",
+			  "rutaAvatar":"../img/personajes/avatares/caraLeon.png",
+              "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderLeon.png",
+			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/DanielLeon.png",
+			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoLeon.png",
 			  "daño":[6,2],"energia":1,"defensa":10,"vida":200}
 }
 
 var personajesMalos={
-	"idPUno":{"nombre":"Felipe Oso","rutaSprite":"../img/sprites/personajesMalos/oso.png",
-			  "rutaAvatar":"../img/componentes/batalla/caraOso.png",
+	"idPUno":{"nombre":"Felipe Oso","rutaSprite":"../img/personajes/personajesMalos/oso.png",
+			  "rutaAvatar":"../img/personajes/avatares/caraOso.png",
 			  //se toma otro sprtite porque el del oso no esta 
-			  "rutaAtaque":"../img/sprites/poderes/PoderesPersonalidadMalos/camiloPERSONALIDAD.png",
-			  "rutaAtaquePlagio":"../img/sprites/poderes/poderesPlagioMalos/error404.png",
-			  "rutaImpactoPersonalidad":"../img/sprites/poderes/PoderesImpactos/impactoOso1.png",
-			  "rutaImpactoPlagio":"../img/sprites/poderes/PoderesImpactos/impactoOso2.png",
+			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/camiloPERSONALIDAD.png",
+			  "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
+			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
+			  "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
 			  "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
 
-	"idPDos":{"nombre":"Fabian Babuino","rutaSprite":"../img/sprites/personajesMalos/babuino.png",
-			  "rutaAvatar":"../img/componentes/batalla/caraBabuino.png",
-			  "rutaAtaque":"../img/sprites/poderes/PoderesPersonalidadMalos/FabianBabuino  PERSONALIDAD.png",
-			  "rutaAtaquePlagio":"../img/sprites/poderes/poderesPlagioMalos/error404.png",
-			  "rutaImpactoPersonalidad":"../img/sprites/poderes/PoderesImpactos/impactoOso1.png",
-			  "rutaImpactoPlagio":"../img/sprites/poderes/PoderesImpactos/impactoOso2.png",
+	"idPDos":{"nombre":"Fabian Babuino","rutaSprite":"../img/personajes/personajesMalos/babuino.png",
+			  "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
+			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/FabianBabuino  PERSONALIDAD.png",
+			  "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
+			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
+			  "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
 			  "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200}
 }

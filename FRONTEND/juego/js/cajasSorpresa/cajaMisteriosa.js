@@ -27,7 +27,7 @@ var cajaMisteriosa = function(game){};
             game.scale.pageAlignVertically = true;
             
             // Se carga una imagen transparente para colocar detras de las imagenes que apareceran en el Scrolling
-            game.load.image("transp", "../img/Componentes/logros/transp.png");
+            game.load.image("transp", "../img/personajes/avatares/transp.png");
             // Se cargan las imagenes de los 10 logros
             game.load.spritesheet(nameBox[0], boxes[1].root);
             game.load.spritesheet(nameBox[1], boxes[2].root);
@@ -50,11 +50,11 @@ var cajaMisteriosa = function(game){};
    
     
 
-            game.load.spritesheet('atras', '../img/Componentes/logros/atras.png');
+            game.load.spritesheet('atras', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
 
   
             // Se carga el sprite del boton seleccionar
-            game.load.spritesheet('button', '../img/Componentes/logros/Spritebloq.png', 150, 40);   
+            game.load.spritesheet('button', '../img/Componentes/botones/Spritebloq.png', 150, 40);   
         },
 
         create: function(){
@@ -130,7 +130,7 @@ var cajaMisteriosa = function(game){};
                               
 
     
-          game.add.button(0, 0,'atras', this.verPerfil, 1, 1, 0, 2);
+          game.add.button(5, 5,'atras', this.verPerfil, 1, 1, 0, 2);
           //metdo que verica si esta o no bloqueado un logro de ser asi llama al metodo del logro para validar si cumple con los requsitos de desbloqueo
           function isUnloocked(){
            for(var i = 0; i < boxloocked.length; i++){

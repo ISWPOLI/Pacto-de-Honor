@@ -32,7 +32,7 @@ var logros = function(game){};
             game.scale.pageAlignHorizontally = true;
             game.scale.pageAlignVertically = true; 
             // Se carga una imagen transparente para colocar detras de las imagenes que apareceran en el Scrolling
-            game.load.image("transp", "../img/Componentes/logros/transp.png");
+            game.load.image("transp", "../img/personajes/avatares/transp.png");
             // Se cargan las imagenes de los 10 logros
             game.load.spritesheet('Mi KuPlagio', '../img/Componentes/logros/KuPlagio.png');
             game.load.spritesheet('Mi LifePlagio', '../img/Componentes/logros/LifePlagio.png');
@@ -44,7 +44,6 @@ var logros = function(game){};
             game.load.spritesheet('The Unlocker', '../img/Componentes/logros/Unlocker.png');
             game.load.spritesheet('The A – List', '../img/Componentes/logros/Alist.png');
             game.load.spritesheet('5 in a row', '../img/Componentes/logros/FiveRow.png');
-            game.load.spritesheet('atras', '../img/Componentes/logros/atras.png');
             game.load.image('Mi KuPlagioLoock', '../img/Componentes/logros/KuPlagioLoock.png');
             game.load.image('Mi LifePlagioLoock', '../img/Componentes/logros/LifePlagioLoock.png');
             game.load.image('Mi SkillPlagioLoock', '../img/Componentes/logros/SkillPlagioLoock.png');
@@ -57,7 +56,7 @@ var logros = function(game){};
             game.load.image('5 in a rowLoock', '../img/Componentes/logros/FiveRowLoock.png');
             game.load.spritesheet('botonVolver', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
             // Se carga el sprite del boton seleccionar
-            game.load.spritesheet('button', '../img/Componentes/logros/Spritebloq.png', 150, 40); 
+            game.load.spritesheet('button', '../img/Componentes/botones/Spritebloq.png', 150, 40); 
             
             game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
         },
@@ -110,7 +109,7 @@ var logros = function(game){};
           // Se agrega un boton con posiciones especificas, con diferentes estados (Cargados previamente en la funcion onload)
           startButton = game.add.button(game.world.width / 2, 540, 'button', null, this, 2, 1, 0); // over, out, down, up
           startButton.anchor.set(0.5);
-          game.add.button(0, 0,'botonVolver', this.verPerfil, 1, 1, 0, 2);
+          game.add.button(5, 5,'botonVolver', this.verPerfil, 1, 1, 0, 2);
           //metdo que verica si esta o no bloqueado un logro de ser asi llama al metodo del logro para validar si cumple con los requsitos de desbloqueo
           function isUnloocked(){
            for(var i = 0; i < Logroslooked.length; i++){
