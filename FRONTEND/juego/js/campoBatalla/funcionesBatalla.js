@@ -453,7 +453,7 @@ var funcionesBatalla={
     getstrong(dano){
         var newStrong = [1,1];
         for (var i = dano.length - 1; i >= 0; i--) {
-            newStrong[i] = dano[i]*8;
+            newStrong[i] = dano[i]*1.5;
         };
         return newStrong;
     },

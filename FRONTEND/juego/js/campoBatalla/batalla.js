@@ -35,7 +35,7 @@ var fondogame;
 var joystick;
 var button;
 
-var boxGame = 6;
+var boxGame = 7;
 var caja;
 var openBox;
 var timeShowBox = 5;
@@ -47,7 +47,7 @@ var batalla = {
 		this.preloadBar=this.add.sprite(this.game.world.centerX,this.game.world.centerY,'barraCarga');
 		this.load.setPreloadSprite(this.preloadBar);
 		//boxGame =game.rnd.integerInRange(1, 8);		
-		//timeShowBox = game.rnd.integerInRange(5,65);
+		//timeShowBox = game.rnd.integerInRange(5,60);
 		funcionesBatalla.cargar(idPJ,idPC,boxGame);
 		//funcionesBatalla.cargar(idPJ,idPC);
         game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
@@ -67,6 +67,7 @@ var batalla = {
 		secuencia=false;
  		movimientoComputadora="adelante";
 		primeImpacto=false;
+		sendGift = true;
 
 		
 		
@@ -251,7 +252,7 @@ var batalla = {
 			funcionesBatalla.hideOpenBox();
 
 		}
-		if (boxGame == 7 && !openBox.visible) {
+		if (boxGame == 7 &&  ti == timeShowBox + 8) {
 			danoH=personajesBuenos[idPJ].daño;
 			personajeJugador.scale.setTo(1,1);
 		}
