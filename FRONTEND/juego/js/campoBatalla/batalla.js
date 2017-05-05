@@ -35,19 +35,21 @@ var fondogame;
 var joystick;
 var button;
 
-//var boxGame = 7;
-//var caja;
-//var openBox;
-//var timeShowBox = 5;
+var boxGame = 7;
+var caja;
+var openBox;
+var timeShowBox = 5;
+var gameTime =70;
+var sendGift = true;
 
 var batalla = {
 	preload : function() {
 		this.preloadBar=this.add.sprite(this.game.world.centerX,this.game.world.centerY,'barraCarga');
 		this.load.setPreloadSprite(this.preloadBar);
 		//boxGame =game.rnd.integerInRange(1, 8);		
-		//timeShowBox = game.rnd.integerInRange(5,65);
-		//funcionesBatalla.cargar(idPJ,idPC,boxGame);
-		funcionesBatalla.cargar(idPJ,idPC);
+		//timeShowBox = game.rnd.integerInRange(5,60);
+		funcionesBatalla.cargar(idPJ,idPC,boxGame);
+		//funcionesBatalla.cargar(idPJ,idPC);
         game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
 	},
 
@@ -65,6 +67,7 @@ var batalla = {
 		secuencia=false;
  		movimientoComputadora="adelante";
 		primeImpacto=false;
+		sendGift = true;
 
 		
 		
@@ -78,7 +81,7 @@ var batalla = {
 		funcionesBatalla.iniciarSprite(personajeComputadora);
 
 
-		/*caja = game.add.button(game.rnd.integerInRange(30, (game.width)-30), game.rnd.integerInRange(60, (game.height)-60), "caja",this.catchedBox,this);
+		caja = game.add.button(game.rnd.integerInRange(30, (game.width)-30), game.rnd.integerInRange(60, (game.height)-60), "caja",this.catchedBox,this);
         caja.visible = false;
         openBox = game.add.image(game.width/2, game.height/2, 'cajaOpen');
         openBox.anchor.setTo(0.5);
@@ -86,7 +89,7 @@ var batalla = {
         caja.inputEnabled=true;
        	caja.events.onInputUp.add(function () {
 			funcionesBatalla.catchedBox()
-        });*/
+        });
 
 
 		if(dispositivoMovil){
@@ -227,14 +230,14 @@ var batalla = {
 			funcionesBatalla.llamarSecuencia(indice);	
 		counter++;
 		ti = parseInt(counter / 60);
-		if (ti == 70) {
+		if (ti == gameTime) {
 			funcionesBatalla.finJuego();
 		}
-		if (ti <= 70) {
+		if (ti <= gameTime) {
 			text.setText('time: ' + ti);
 		}
-		/*if(ti == timeShowBox){
-			funcionesBatalla.showBox();
+		if(ti == timeShowBox){
+			funcionesBatalla.showBox();	
 		}
 
 		if(ti == timeShowBox + 3){
@@ -245,9 +248,46 @@ var batalla = {
 			caja.x-=2;
 			caja.y-=3;
 		}
-		if(ti == timeShowBox + 5){
-			funcionesBatalla.hideOpenBox();	
-		}*/
+		if(ti == timeShowBox + 3){
+			funcionesBatalla.hideOpenBox();
+
+		}
+		if (boxGame == 7 &&  ti == timeShowBox + 8) {
+			danoH=personajesBuenos[idPJ].daño;
+			personajeJugador.scale.setTo(1,1);
+		}
+		if (openBox.visible) {
+				if (boxGame == 1) {
+					gameTime = gameTime + funcionesBatalla.giftbox();
+				};
+				if (boxGame == 2) {
+					energiaVerdeJugador.width = energiaVerdeJugador.width +15;
+				};
+				if (boxGame == 3 && !sendGift) {
+					vidaRojoJugador.width = funcionesBatalla.giftlife(vidaRojoJugador);
+				}
+				if (boxGame == 4 && !sendGift) {
+					vidaRojoJugador.width = funcionesBatalla.steallife(vidaRojoJugador);
+				}
+				if (boxGame == 5 && !sendGift ) {
+					var cblood = funcionesBatalla.changelife(vidaRojoJugador,vidaRojoComputadora);
+					vidaRojoJugador.width = cblood[1];
+					vidaRojoComputadora.width =cblood[0];
+				}
+				if (boxGame == 6) {
+					energiaVerdeJugador.width = 0;
+				}
+				if (boxGame == 7) {
+					danoH = funcionesBatalla.getstrong(danoH);
+					personajeJugador.scale.setTo(1.5,1.5);
+				}
+				if (boxGame == 8) {
+					var cbloodd = funcionesBatalla.fatality(vidaRojoJugador,vidaRojoComputadora);
+					vidaRojoJugador.width = cbloodd[1];
+					vidaRojoComputadora.width =cbloodd[0];
+				}
+				sendGift = true;
+		};
 		game.physics.arcade.overlap(personajeJugador,ataquePlagio,funcionesBatalla.impactoPlagioC,false,this);
 		game.physics.arcade.overlap(personajeJugador,ataquePersonalidadC.bullets,funcionesBatalla.impactoAtaqueComputadora,false,this);
 		game.physics.arcade.overlap(personajeComputadora,ataquePersonalidadJ,funcionesBatalla.impactoAtaqueJugador,false,this);
