@@ -42,6 +42,7 @@ var button;
 
 var batalla = {
 	preload : function() {
+		
 		this.preloadBar=this.add.sprite(this.game.world.centerX,this.game.world.centerY,'barraCarga');
 		this.load.setPreloadSprite(this.preloadBar);
 		//boxGame =game.rnd.integerInRange(1, 8);		
@@ -191,7 +192,7 @@ var batalla = {
             musicButton.play();
         	funcionesBatalla.unpause(event);
         }  
-        game.physics.arcade.gravity.y = 250;
+        
 		
     },
     
