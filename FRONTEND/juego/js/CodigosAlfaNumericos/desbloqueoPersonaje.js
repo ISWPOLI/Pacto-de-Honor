@@ -17,7 +17,7 @@ desbloqueoPersonaje.prototype = {
         game.load.spritesheet('pajaro1', '../img/Componentes/codigosAlfa/pajaro1.png', 212,197);
         game.load.spritesheet('leon1','../img/Componentes/codigosAlfa/leon1.png', 212,197);
         game.load.spritesheet('flecha', '../img/Componentes/codigosAlfa/arrow.png', 175.5,89);
- 		game.load.spritesheet('ingresar', '../img/Componentes/codigosAlfa/ingresar.png', 193,71); 
+ 		game.load.spritesheet('ingresar', '../img/Componentes/codigosAlfa/ingresar.png', 193,71);          
     },
     create: function(){ 
 		game.stage.backgroundColor = '#1873CE';
