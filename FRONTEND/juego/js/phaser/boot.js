@@ -1,3 +1,9 @@
+/*
+*Este es un estado de precarga
+*en el se cargan los ajustes de pantalla dependiendo del diposistivo
+*se carga la barra una imagen para que sirva de barra de carga 
+*
+*/
 var dispositivoMovil;
 var boot ={
 	preload: function () {
