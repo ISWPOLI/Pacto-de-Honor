@@ -1,4 +1,6 @@
 var ganadorBatalla;
+var golpe;
+var dañoporgolpe;
 var funcionesBatalla={
     //funcion que se encarga de cargar todos los elementos del campo de batalla
     cargar:function(idPJ,idPC,caa){
@@ -19,7 +21,8 @@ var funcionesBatalla={
         game.load.spritesheet('gamepad','../img/Componentes/joystick/gamepad_spritesheet.png',100,100);
         game.load.image('caja', boxes[caa].root);
         game.load.image('cajaOpen', boxes[caa].rootOpen);
-
+        game.load.audio('puñoalaire', '../img/Componentes/sonidos/EfectosDePelea/golpealaire.mp3');
+        game.load.audio('puñoalcuerpo','../img/Componentes/sonidos/EfectosDePelea/golpealcuerpo.mp3');
 
     },
     //inicializa todos los estados de los sprites de los personajes 
@@ -31,7 +34,9 @@ var funcionesBatalla={
     	sprite.animations.add('especial', [23, 24], 10, true);
     	sprite.animations.play('quieto');
 		game.physics.arcade.enable(sprite);
-		sprite.body.collideWorldBounds = true; 
+		sprite.body.collideWorldBounds = true;
+        golpe = game.add.audio('puñoalaire');
+        dañoporgolpe = game.add.audio('puñoalcuerpo');
 	},
     //Esta funcion se activa al dar click en el logo del poli y despliega el menu de pausa 
 	pausar:function(){
@@ -103,6 +108,7 @@ var funcionesBatalla={
             personajeJugador.animations.play('punos');
             personajeJugador.body.x+=1;
             movH[1]=true;
+            golpe.play();
         }else{
             personajeJugador.animations.play('quieto');
         }
@@ -181,6 +187,7 @@ var funcionesBatalla={
     */
     impactoPlagioC : function(personaje,ataque){
         game.time.events.add(1000,function(){ataque.kill();},this);
+        dañoporgolpe.play();
         movV[3]=false;
         if(!movH[0]&&primerImpacto){
             primerImpacto=false;
@@ -220,6 +227,7 @@ var funcionesBatalla={
         game.physics.arcade.enable(impacto);
         impacto.animations.add('especial', [1, 2, 3, 4, 5, 6, 7, 8], 9, false,true);
         impacto.animations.play('especial');
+        
         game.time.events.add(1000,function(){impacto.kill();},this);
         
     },
