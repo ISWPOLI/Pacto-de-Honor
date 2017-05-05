@@ -75,12 +75,12 @@ var funcionesBatalla={
     movimientoJugador: function(barra){
         variablesCampoBatalla.movH[0]=false;
         variablesCampoBatalla.movH[1]=false;
-        // if(movH[2]){
-        //     if(ataquePersonalidadJ.body.onFloor()){
-        //             ataquePersonalidadJ.kill();
-        //             movH[2]=false;
-        //         }
-        // }
+        variablesCampoBatalla.movH[3]=false;
+        if(variablesCampoBatalla.escudo1!=null)
+            variablesCampoBatalla.escudo1.kill();
+        if(variablesCampoBatalla.escudo2!=null)
+            variablesCampoBatalla.escudo2.kill();
+       
         if (cursores.right.isDown) {
             variablesCampoBatalla.personajeJugador.body.x+=2;
             variablesCampoBatalla.personajeJugador.animations.play('correr');
@@ -88,20 +88,16 @@ var funcionesBatalla={
             variablesCampoBatalla.personajeJugador.body.x-=2;
             variablesCampoBatalla.personajeJugador.animations.play('correr');
         } else if (cursores.down.isDown) {
+            variablesCampoBatalla.escudo1 = game.add.sprite(variablesCampoBatalla.personajeJugador.body.x+200, variablesCampoBatalla.personajeJugador.body.y, 'escudo1');
+            variablesCampoBatalla.escudo1.anchor.setTo(0.5,0);
+            
             variablesCampoBatalla.personajeJugador.animations.play('defensa')
             variablesCampoBatalla.personajeJugador.body.velocity.y=0;
             variablesCampoBatalla.movH[0]=true;
         }else if(cursores.up.isDown){
-            
-        // } else if (cursores.up.isDown) {
-        //     if(!movH[2]&&barra.width>=costoAtaqueJ){
-        //         barra.width=barra.width-costoAtaqueJ;
-        //         variablesCampoBatalla.personajeJugador.animations.play('especial');
-        //         game.time.events.add(100,function(){
-        //             this.activarPersonalidadJ();
-        //              movH[2]=true;
-        //          },this);
-        //     }   
+            variablesCampoBatalla.escudo2 = game.add.sprite(variablesCampoBatalla.personajeJugador.body.x+150, variablesCampoBatalla.personajeJugador.body.y, 'escudo2');
+            variablesCampoBatalla.escudo2.anchor.setTo(0.5,0);
+            variablesCampoBatalla.movH[3]=true;
         } else if (esp.isDown){
             variablesCampoBatalla.personajeJugador.animations.play('punos');
             variablesCampoBatalla.personajeJugador.body.x+=1;
@@ -360,6 +356,8 @@ var funcionesBatalla={
             variablesCampoBatalla.personajeComputadora.animations.play('correr');
             variablesCampoBatalla.personajeComputadora.body.x += 2; 
         }else if (string.localeCompare("defensa")==0){
+            variablesCampoBatalla.escudo1 = game.add.sprite(variablesCampoBatalla.personajeComputadora.body.x, variablesCampoBatalla.personajeComputadora.body.y, 'escudo1');
+            variablesCampoBatalla.escudo1.anchor.setTo(0.5,0);
             variablesCampoBatalla.personajeComputadora.animations.play('defensa');
             variablesCampoBatalla.movV[0]=true;
         }else if (string.localeCompare("punos")==0){

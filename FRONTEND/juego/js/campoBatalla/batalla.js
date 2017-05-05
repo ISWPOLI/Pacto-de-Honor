@@ -63,9 +63,7 @@ var batalla = {
  		variablesCampoBatalla.movimientoComputadora="adelante";
 		variablesCampoBatalla.primeImpacto=false;
 		sendGift = true;
-		//variablesCampoBatalla.escudo1 = game.add.sprite(variablesCampoBatalla.avatarPersonajeComputadora.body.x, 0, 'escudo1');
-		//variablesCampoBatalla.escudo2 = game.add.sprite(0, 0, 'escudo2');
-
+		
 		
 		
 		variablesCampoBatalla.ataquePersonalidadC = game.add.weapon(10, 'ataquePersonalidadV');
@@ -77,6 +75,11 @@ var batalla = {
 		funcionesBatalla.iniciarSprite(variablesCampoBatalla.personajeJugador);
 		funcionesBatalla.iniciarSprite(variablesCampoBatalla.personajeComputadora);
 		console.log(variablesCampoBatalla);
+
+
+		variablesCampoBatalla.escudo2 = game.add.sprite(variablesCampoBatalla.personajeJugador.body.x+200, variablesCampoBatalla.personajeJugador.body.y-150, 'escudo2');
+		variablesCampoBatalla.escudo2.anchor.setTo(0.5,0.5);
+		
 
 		caja = game.add.button(game.rnd.integerInRange(30, (game.width)-30), game.rnd.integerInRange(60, (game.height)-60), "caja",this.catchedBox,this);
         caja.visible = false;
