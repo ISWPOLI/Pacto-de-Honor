@@ -47,34 +47,34 @@ var creditos = function(game){};
             //Carga de imagenes para el logo del pacto
             game.load.image('logoPacto', '../img/Componentes/creditos/logoPacto.png');
             //Carga de imagenes para los botones principales
-            game.load.spritesheet('botonPacto', '../img/Componentes/creditos/botonPacto.png', 192, 71);
-            game.load.spritesheet('botonBuenos', '../img/Componentes/creditos/botonBuenos.png', 192, 71);
-            game.load.spritesheet('botonMalos', '../img/Componentes/creditos/botonMalos.png', 192, 71);
-            game.load.spritesheet('botonPlagios', '../img/Componentes/creditos/botonPlagios.png', 192, 71);
+            game.load.spritesheet('botonPacto', '../img/Componentes/botones/botonPacto.png', 192, 71);
+            game.load.spritesheet('botonBuenos', '../img/Componentes/botones/botonBuenos.png', 192, 71);
+            game.load.spritesheet('botonMalos', '../img/Componentes/botones/botonMalos.png', 192, 71);
+            game.load.spritesheet('botonPlagios', '../img/Componentes/botones/botonPlagios.png', 192, 71);
             game.load.spritesheet('botonVolver', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
             //Carga de imagenes para los botones de personajes buenos
-            game.load.spritesheet('anaPantera', '../img/Componentes/creditos/botonPantera.png', 125, 125);
-            game.load.spritesheet('andresGallo', '../img/Componentes/creditos/botonGallo.png', 125, 125);
-            game.load.spritesheet('cataCierva', '../img/Componentes/creditos/botonCierva.png', 125, 125);
-            game.load.spritesheet('danielaJirafa', '../img/Componentes/creditos/botonJirafa.png', 125, 125);
-            game.load.spritesheet('danielLeon', '../img/Componentes/creditos/botonLeon.png', 125, 125);
-            game.load.spritesheet('fabianCanario', '../img/Componentes/creditos/botonCanario.png', 125, 125);
-            game.load.spritesheet('ivanRuisenor', '../img/Componentes/creditos/botonRuisenor.png', 125, 125);
-            game.load.spritesheet('pedroRaton', '../img/Componentes/creditos/botonRaton.png', 125, 125);
-            game.load.spritesheet('tatiHormiga', '../img/Componentes/creditos/botonHormiga.png', 125, 125);
+            game.load.spritesheet('anaPantera', '../img/personajes/avatares/botonPantera.png', 125, 125);
+            game.load.spritesheet('andresGallo', '../img/personajes/avatares/botonGallo.png', 125, 125);
+            game.load.spritesheet('cataCierva', '../img/personajes/avatares/botonCierva.png', 125, 125);
+            game.load.spritesheet('danielaJirafa', '../img/personajes/avatares/botonJirafa.png', 125, 125);
+            game.load.spritesheet('danielLeon', '../img/personajes/avatares/botonLeon.png', 125, 125);
+            game.load.spritesheet('fabianCanario', '../img/personajes/avatares/botonCanario.png', 125, 125);
+            game.load.spritesheet('ivanRuisenor', '../img/personajes/avatares/botonRuiseñor.png', 125, 125);
+            game.load.spritesheet('pedroRaton', '../img/personajes/avatares/botonRatón.png', 125, 125);
+            game.load.spritesheet('tatiHormiga', '../img/personajes/avatares/botonHormiga.png', 125, 125);
             //Carga de imagenes para los botones de personajes malos
-            game.load.spritesheet('anaSaraAbejas', '../img/Componentes/creditos/botonAbejas.png', 75, 75);
-            game.load.spritesheet('fabianBabuino', '../img/Componentes/creditos/botonBabuino.png', 75, 75);
-            game.load.spritesheet('carlosBuitre', '../img/Componentes/creditos/botonBuitre.png', 75, 75);
-            game.load.spritesheet('julianBurro', '../img/Componentes/creditos/botonBurro.png', 75, 75);
-            game.load.spritesheet('juanCamaleon', '../img/Componentes/creditos/botonCamaleon.png', 75, 75);
-            game.load.spritesheet('victorHiena', '../img/Componentes/creditos/botonHiena.png', 75, 75);
-            game.load.spritesheet('nicolasLagarto', '../img/Componentes/creditos/botonLagarto.png', 75, 75);
-            game.load.spritesheet('felipeOso', '../img/Componentes/creditos/botonOso.png', 75, 75);
-            game.load.spritesheet('camiloPerezoso', '../img/Componentes/creditos/botonPerezoso.png', 75, 75);
-            game.load.spritesheet('juanRata', '../img/Componentes/creditos/botonRata.png', 75, 75);
-            game.load.spritesheet('luisVibora', '../img/Componentes/creditos/botonVibora.png', 75, 75);
-            game.load.spritesheet('andresZorro', '../img/Componentes/creditos/botonZorro.png', 75, 75);
+            game.load.spritesheet('anaSaraAbejas', '../img/personajes/avatares/botonAbejas.png', 75, 75);
+            game.load.spritesheet('fabianBabuino', '../img/personajes/avatares/botonBabuino.png', 75, 75);
+            game.load.spritesheet('carlosBuitre', '../img/personajes/avatares/botonBuitre.png', 75, 75);
+            game.load.spritesheet('julianBurro', '../img/personajes/avatares/botonBurro.png', 75, 75);
+            game.load.spritesheet('juanCamaleon', '../img/personajes/avatares/botonCamaleon.png', 75, 75);
+            game.load.spritesheet('victorHiena', '../img/personajes/avatares/botonHiena.png', 75, 75);
+            game.load.spritesheet('nicolasLagarto', '../img/personajes/avatares/botonLagarto.png', 75, 75);
+            game.load.spritesheet('felipeOso', '../img/personajes/avatares/botonOso.png', 75, 75);
+            game.load.spritesheet('camiloPerezoso', '../img/personajes/avatares/botonPerezoso.png', 75, 75);
+            game.load.spritesheet('juanRata', '../img/personajes/avatares/botonRata.png', 75, 75);
+            game.load.spritesheet('luisVibora', '../img/personajes/avatares/botonVibora.png', 75, 75);
+            game.load.spritesheet('andresZorro', '../img/personajes/avatares/botonZorro.png', 75, 75);
             //Carga de imagenes para los botones de Tipos de plagio
             game.load.image('botonClonacion', '../img/Componentes/creditos/botonClonacion.png');
             game.load.image('botonCopiado', '../img/Componentes/creditos/botonCopiado.png');
@@ -92,7 +92,7 @@ var creditos = function(game){};
         
         create: function(){
              musicButton = game.add.audio('sonidoBoton');
-            game.stage.backgroundColor = "#0060b2"; //Color de fondo
+            game.stage.backgroundColor = "#2451A6"; //Color de fondo
             game.add.text(game.width / 2, 50, "Créditos", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5); //Título de Créditos
             
             //Se agregan los botones principales

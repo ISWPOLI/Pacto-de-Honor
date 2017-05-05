@@ -13,7 +13,7 @@ var invitarAmigos = function(game){};
         
         create: function(){
             musicButton = game.add.audio('sonidoBoton');
-            game.stage.backgroundColor = "#0060b2"; //Color de fondo
+            game.stage.backgroundColor = "#2451A6"; //Color de fondo
             game.add.text(game.width / 2, 50, "Invitar amigos", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5); //Título de Invitar Amigos
             
             //Se agrega el botón para volver al mapa de navegación
