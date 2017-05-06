@@ -4,6 +4,8 @@
 INSERT INTO `categoriaImagen`( `descCategoriaImagen`) VALUES ('Sprite');
 INSERT INTO `categoriaImagen`( `descCategoriaImagen`) VALUES ('BotonPoder');
 INSERT INTO `categoriaImagen`( `descCategoriaImagen`) VALUES ('ImpactoPersonalidad');
+INSERT INTO `categoriaImagen`( `descCategoriaImagen`) VALUES ('Avatar');
+
 
 CREATE TABLE `pactohonor`.`personaje_tiene_imagen` ( `id_personaje_tiene_imagen` INT NOT NULL AUTO_INCREMENT , PRIMARY KEY (`id_personaje_tiene_imagen`)) ENGINE = InnoDB;
 ALTER TABLE `personaje_tiene_imagen` ADD `id_Imgen` INT NOT NULL ;
