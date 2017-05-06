@@ -1,4 +1,3 @@
-
 package entities;
 
 import java.io.Serializable;
@@ -26,6 +25,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Usuario.findAll", query = "SELECT u FROM Usuario u"),
+    @NamedQuery(name = "Usuario.findToken", query = "SELECT u FROM Usuario u WHERE u.token =:token"),
     @NamedQuery(name = "Usuario.findByIdUsuario", query = "SELECT u FROM Usuario u WHERE u.idUsuario = :idUsuario"),
     @NamedQuery(name = "Usuario.findByIdPais", query = "SELECT u FROM Usuario u WHERE u.idPais = :idPais"),
     @NamedQuery(name = "Usuario.findByIdCiudad", query = "SELECT u FROM Usuario u WHERE u.idCiudad = :idCiudad"),

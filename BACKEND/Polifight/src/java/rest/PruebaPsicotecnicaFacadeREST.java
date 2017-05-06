@@ -30,7 +30,7 @@ import javax.ws.rs.core.PathSegment;
 @Stateless
 @Path("entities.pruebapsicotecnica")
 public class PruebaPsicotecnicaFacadeREST extends AbstractFacade<PruebaPsicotecnica> {
-    @PersistenceContext(unitName = "Restful_PactoHonorPU")
+    @PersistenceContext(unitName = "PolifightPU")
     private EntityManager em;
 
     private PruebaPsicotecnicaPK getPrimaryKey(PathSegment pathSegment) {

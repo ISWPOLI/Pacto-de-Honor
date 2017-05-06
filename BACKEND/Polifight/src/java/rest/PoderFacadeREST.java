@@ -30,7 +30,8 @@ import javax.ws.rs.core.PathSegment;
 @Stateless
 @Path("entities.poder")
 public class PoderFacadeREST extends AbstractFacade<Poder> {
-    @PersistenceContext(unitName = "Restful_PactoHonorPU")
+    
+    @PersistenceContext(unitName = "PolifightPU")
     private EntityManager em;
 
     private PoderPK getPrimaryKey(PathSegment pathSegment) {
@@ -58,12 +59,6 @@ public class PoderFacadeREST extends AbstractFacade<Poder> {
         super(Poder.class);
     }
 
-    @POST
-    @Override
-    @Consumes({"application/xml", "application/json"})
-    public void create(Poder entity) {
-        super.create(entity);
-    }
 
     @PUT
     @Path("updatePower")
@@ -132,14 +127,7 @@ public class PoderFacadeREST extends AbstractFacade<Poder> {
         }
         return b;
     }
-    @GET
-    @Path("createPower")
-    @Consumes(MediaType.APPLICATION_JSON)
-    public void createPower(Poder a) {
-        super.create(a);
-    }
-
-      
+  
     @GET
     @Path("findPowerByName")
     @Produces (MediaType.APPLICATION_JSON)

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package entities;
 
 import java.io.Serializable;
@@ -29,6 +24,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Personaje.findAll", query = "SELECT p FROM Personaje p"),
+    @NamedQuery(name = "Personaje.findRange", query = "SELECT p FROM Personaje p WHERE p.idPersonaje BETWEEN :from AND :to"),
     @NamedQuery(name = "Personaje.findByIdPersonaje", query = "SELECT p FROM Personaje p WHERE p.idPersonaje = :idPersonaje"),
     @NamedQuery(name = "Personaje.findByIdCategoria", query = "SELECT p FROM Personaje p WHERE p.idCategoria = :idCategoria"),
     @NamedQuery(name = "Personaje.findByIdImagen", query = "SELECT p FROM Personaje p WHERE p.idImagen = :idImagen"),
@@ -77,7 +73,8 @@ public class Personaje implements Serializable {
     
     @Basic(optional = false)
     @Column(name = "nivel_dano")
-    private int nivelDano;
+    private int nivelDano; 
+    
 
     public Personaje() {
     }
@@ -137,7 +134,7 @@ public class Personaje implements Serializable {
     public void setIdPersonaje(Integer idPersonaje) {
         this.idPersonaje = idPersonaje;
     }
-    
-   
+
+     
     
 }

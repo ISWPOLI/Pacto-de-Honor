@@ -1,26 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package entities;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -34,19 +26,21 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Mundo.findByIdMundo", query = "SELECT m FROM Mundo m WHERE m.idMundo = :idMundo"),
     @NamedQuery(name = "Mundo.findByNombreMundo", query = "SELECT m FROM Mundo m WHERE m.nombreMundo = :nombreMundo")})
 public class Mundo implements Serializable {
+    
     private static final long serialVersionUID = 1L;
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "id_mundo", nullable = false)
     private Integer idMundo;
+    
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 20)
     @Column(name = "nombre_mundo", nullable = false, length = 20)
     private String nombreMundo;
-    @ManyToMany(mappedBy = "mundoList")
-    private List<Imagen> imagenList;
+
 
     public Mundo() {
     }
@@ -75,16 +69,7 @@ public class Mundo implements Serializable {
     public void setNombreMundo(String nombreMundo) {
         this.nombreMundo = nombreMundo;
     }
-
-    @XmlTransient
-    public List<Imagen> getImagenList() {
-        return imagenList;
-    }
-
-    public void setImagenList(List<Imagen> imagenList) {
-        this.imagenList = imagenList;
-    }
-
+    
     @Override
     public int hashCode() {
         int hash = 0;
