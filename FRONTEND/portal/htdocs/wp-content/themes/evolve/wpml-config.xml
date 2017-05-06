@@ -1,0 +1,73 @@
+<wpml-config>
+    <admin-texts>
+        <key name="evl_options">
+            <key name="evl_footer_content" />
+            <key name="evl_portfolio_slug" />
+            <key name="evl_content_box1_title" />
+            <key name="evl_content_box2_title" />
+            <key name="evl_content_box3_title" />
+            <key name="evl_content_box4_title" />
+            <key name="evl_content_box5_title" />
+            <key name="evl_content_box1_desc" />
+            <key name="evl_content_box2_desc" />
+            <key name="evl_content_box3_desc" />
+            <key name="evl_content_box4_desc" />
+            <key name="evl_content_box5_desc" />
+            <key name="evl_content_box1_button" />
+            <key name="evl_content_box2_button" />
+            <key name="evl_content_box3_button" />
+            <key name="evl_content_box4_button" />
+            <key name="evl_content_box5_button" />
+            <key name="evl_bootstrap_slide1_title" />
+            <key name="evl_bootstrap_slide2_title" />
+            <key name="evl_bootstrap_slide3_title" />
+            <key name="evl_bootstrap_slide4_title" />
+            <key name="evl_bootstrap_slide5_title" />
+            <key name="evl_bootstrap_slide1_desc" />
+            <key name="evl_bootstrap_slide2_desc" />
+            <key name="evl_bootstrap_slide3_desc" />
+            <key name="evl_bootstrap_slide4_desc" />
+            <key name="evl_bootstrap_slide5_desc" />
+            <key name="evl_bootstrap_slide1_button" />
+            <key name="evl_bootstrap_slide2_button" />
+            <key name="evl_bootstrap_slide3_button" />
+            <key name="evl_bootstrap_slide4_button" />
+            <key name="evl_bootstrap_slide5_button" />
+            <key name="evl_slide1_title" />
+            <key name="evl_slide2_title" />
+            <key name="evl_slide3_title" />
+            <key name="evl_slide4_title" />
+            <key name="evl_slide5_title" />
+            <key name="evl_slide1_desc" />
+            <key name="evl_slide2_desc" />
+            <key name="evl_slide3_desc" />
+            <key name="evl_slide4_desc" />
+            <key name="evl_slide5_desc" />
+            <key name="evl_slide1_button" />
+            <key name="evl_slide2_button" />
+            <key name="evl_slide3_button" />
+            <key name="evl_slide4_button" />
+            <key name="evl_slide5_button" />
+            <key name="evl_gmap_address" />
+            <key name="evl_sent_email_header" />
+            <key name="evl_email_address" />
+            <key name="evl_woo_acc_msg_1" />
+            <key name="evl_woo_acc_msg_2" />
+        </key>
+    </admin-texts>
+    <custom-types>
+        <custom-type translate="1">layerslider</custom-type>
+        <custom-type translate="1">revslider</custom-type>
+        <custom-type translate="1">evolve_faq</custom-type>
+        <custom-type translate="1">evolve_portfolio</custom-type>
+        <custom-type translate="1">slide</custom-type>
+    </custom-types>
+    <taxonomies>
+        <taxonomy translate="1">portfolio_category</taxonomy>
+        <taxonomy translate="1">faq_category</taxonomy>
+        <taxonomy translate="1">portfolio_skills</taxonomy>
+        <taxonomy translate="1">portfolio_tags</taxonomy>
+        <taxonomy translate="1">theme4press_es_groups</taxonomy>
+        <taxonomy translate="1">slide-page</taxonomy>
+    </taxonomies>
+</wpml-config>

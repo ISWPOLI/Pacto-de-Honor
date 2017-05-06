@@ -1,0 +1,22 @@
+.col-md-4 {
+    float: left;
+    width: 33%
+}
+
+.entry-content .thumbnail-post {
+    width: auto
+}
+
+.col-md-6 {
+    width: 50%;
+    float: left;
+}
+
+.col-md-8 {
+    float: left;
+    width: 66%
+}
+
+body #header.sticky-header {
+    background: #efefef
+}

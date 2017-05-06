@@ -1,0 +1,39 @@
+/*!==========================================================================
+   bbPress Styling
+   ========================================================================== */
+        #buddypress a.button,
+        #buddypress input[type=submit],
+        #buddypress .standard-form div.submit input {
+            font-weight: bold;
+            background-color: #eee;
+            border: 0 none;
+            color: #555;
+            text-shadow: none;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 5px 10px;
+        }
+        #buddypress {
+            #avatar-upload-form{
+                #upload{
+                    margin-top: 10px;
+                }
+            }
+            #whats-new-options{
+                overflow: hidden;
+            }
+        }
+        a.bbp-author-avatar {
+            display: inline-block;
+        }
+        #qt_bbp_topic_content_toolbar input[type=button],
+        #qt_bbp_reply_content_toolbar input[type=button] {
+            background-color: #eee;
+            border: 0 none;
+            color: #8c8c8c;
+            text-shadow: none;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 5px 10px;
+            margin: 2px;
+        }

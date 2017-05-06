@@ -1,0 +1,88 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11/03/2017, 08:04:16 PM
+    Author     : JERR
+*/
+#header{
+    font-family: 'Roboto Mediana', sans-serif;/*Letra tipo roboto*/
+    font-size: 16pt; 
+    background-color:#ffffff;
+}
+
+#body {
+    width:auto;
+    max-width: 400px;
+    font-family: 'Roboto Fina', sans-serif;/*Letra tipo roboto*/
+    font-size: 14px;
+    max-height: 500px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+#fromtable{
+    align-content: center;
+    font-family: 'Roboto normal', sans-serif;/*Letra tipo roboto*/
+    font-size: 14px;
+    text-align: center;
+}
+
+#image{ width: 400px;}
+
+#formInicio{ 
+    align-content: center;
+    /*background: #F3F3F3;*/
+    /*border: 2px solid rgba(0,0,0,0.2);*/
+ }
+
+#txtusuario {
+    width: 260px;
+    height: 20px;
+}
+
+#txtpassword{
+    height: 20px;
+    width: 260px;
+}
+
+  #btnlogin:hover{
+      background-color: #3b5999;
+      border-radius:10px;
+      color: #fff;
+      solid:#3b5999;
+}
+  
+  #facebook:hover{
+      background-color: #3b5999;
+      border-radius:15px;
+      border:2px; 
+      solid:#3b5999;
+      color:#fff;
+ }
+
+  #google:hover{
+      background-color: #dd4b39;
+      border-radius:15px;
+      border:2px; 
+      solid:#dd4b39;
+      color:#fff;
+  }
+
+  #Microsoft:hover{
+      background-color: #0072b1;
+      border-radius:15px;
+      border:2px; 
+      solid:#0072b1;
+      color:#fff;
+  }
+
+  #footer{
+      font-family: cursive;/*Letra tipo roboto*/
+      font-size: 9pt;  
+      margin: auto;
+  }
+
+
