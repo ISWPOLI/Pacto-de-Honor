@@ -28,10 +28,10 @@ variablesCampoBatalla = {
     escudo2:null//guarda la ruta del escudo dos
 };
 
-var boxGame = 7;
+var boxGame = 8;
 var caja;
 var openBox;
-var timeShowBox = 5;
+var timeShowBox = 3;
 var gameTime =70;
 var sendGift = true;
 
@@ -41,8 +41,8 @@ var batalla = {
 		console.log(variablesCampoBatalla);
 		this.preloadBar=this.add.sprite(this.game.world.centerX,this.game.world.centerY,'barraCarga');
 		this.load.setPreloadSprite(this.preloadBar);
-		boxGame =game.rnd.integerInRange(1, 8);		
-		timeShowBox = game.rnd.integerInRange(5,60);
+		//boxGame =game.rnd.integerInRange(1, 8);		
+		//timeShowBox = game.rnd.integerInRange(5,60);
 		funcionesBatalla.cargar(variablesCampoBatalla.idPJ,variablesCampoBatalla.idPC,boxGame);
 		//funcionesBatalla.cargar(idPJ,idPC);
         game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
@@ -249,20 +249,20 @@ var batalla = {
 			caja.x-=2;
 			caja.y-=3;
 		}
-		if(variablesCampoBatalla.ti == timeShowBox + 3){
+		if(variablesCampoBatalla.ti == timeShowBox + 5){
 			funcionesBatalla.hideOpenBox();
 
 		}
-		if (boxGame == 7 &&  variablesCampoBatalla.ti == timeShowBox + 8) {
-			danoH=personajesBuenos[idPJ].daño;
+		if (boxGame == 7 && !openBox.visible) {
+			variablesCampoBatalla.danoH=personajesBuenos[variablesCampoBatalla.idPJ].daño;
 			variablesCampoBatalla.personajeJugador.scale.setTo(1,1);
 		}
 		if (openBox.visible) {
 				if (boxGame == 1) {
 					gameTime = gameTime + funcionesBatalla.giftbox();
 				};
-				if (boxGame == 2) {
-					energiaVerdeJugador.width = energiaVerdeJugador.width +15;
+				if (boxGame == 2 && !sendGift) {
+					energiaVerdeJugador.width = funcionesBatalla.giftlife(energiaVerdeJugador);
 				};
 				if (boxGame == 3 && !sendGift) {
 					vidaRojoJugador.width = funcionesBatalla.giftlife(vidaRojoJugador);
@@ -279,8 +279,8 @@ var batalla = {
 					energiaVerdeJugador.width = 0;
 				}
 				if (boxGame == 7) {
-					danoH = funcionesBatalla.getstrong(danoH);
-					personajeJugador.scale.setTo(1.5,1.5);
+					variablesCampoBatalla.danoH = funcionesBatalla.getstrong(variablesCampoBatalla.danoH);
+					variablesCampoBatalla.personajeJugador.scale.setTo(1.5,1.5);
 				}
 				if (boxGame == 8) {
 					var cbloodd = funcionesBatalla.fatality(vidaRojoJugador,vidaRojoComputadora);

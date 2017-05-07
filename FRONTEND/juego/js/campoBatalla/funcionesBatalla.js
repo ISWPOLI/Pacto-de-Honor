@@ -18,9 +18,15 @@ var funcionesBatalla={
         game.load.spritesheet('impactoPlagioComputadora', personajesMalos[idPC].rutaImpactoPlagio, 277, 277);
         game.load.spritesheet('gamepad','../img/Componentes/joystick/gamepad_spritesheet.png',100,100);
         game.load.image('caja', boxes[caa].root);
-        game.load.image('cajaOpen', boxes[caa].rootOpen);
         game.load.image('escudo1', '../img/componentes/batalla/escudo1.png');
         game.load.image('escudo2', '../img/componentes/batalla/escudo2.png');
+         if (caa == 8) {
+             game.load.image('cajaOpen', boxes[caa].fatalityBox);
+         }else{
+             game.load.image('cajaOpen', boxes[caa].rootOpen);
+         }
+       
+
 
     },
     //inicializa todos los estados de los sprites de los personajes 
@@ -373,15 +379,11 @@ var funcionesBatalla={
                 caja.visible = true;
                };
         },
-    /*Con esta funcion se oculta la caja misteriosa
-    */
      hideBox:function(){
                if (caja.visible) {
                 caja.visible = false;
                };
         },
-        /*Con esta funcion se muestra la caja misteriosa ya abierta
-    */
     catchedBox:function(){
         caja.visible = false;
         if (!openBox.visible) {
@@ -389,21 +391,15 @@ var funcionesBatalla={
             
         }    
     },
-    /*Con esta funcion se esconde la caja misteriosa abierta
-    */
     hideOpenBox:function(){
                if (openBox.visible) {
                 openBox.visible = false;
                };
 
-        },
-        /*Con esta funcion se da la recompensa de la caja uno (20segundos mas)
-    */
+    },
     giftbox:function(){
         return 20;
-        },
-          /*Con esta funcion se da la recompensa de la caja 2 (40 mas de vida)
-    */
+    },
     giftlife:function(life){
         if (life.width<200) {
             if (life.width + 40 > 200) {
@@ -414,43 +410,36 @@ var funcionesBatalla={
             }
         }
         else{
-            return 0;
+            return 200;
         }
     },
-        /*Con esta funcion se da la recompensa de la caja 3 (robo de vida)
-    */
-    steallisteallife(life){
+    getenergy(energia){
+
+    }, 
+    steallife(life){
         var vida = (life.width*20)/100;
         return life.width-vida;
     },
-        /*Con esta funcion se da la recompensa de la caja 4
-    */
     changelife(ulife,cpulife){
         var blood = [ulife.width,cpulife.width];
         return blood;
     },
-       /*Con esta funcion se da la recompensa de la caja 8
-    */
     fatality(ulife,cpulife){
         fatalityu = (ulife.width*1)/100;
         fatalitycpu = (cpulife.width*1)/100;
         newlife =[fatalityu,fatalitycpu];
         return newlife;
     },
-       /*Con esta funcion se da la recompensa de la caja 6
-    */
     exhausted(){
         if (power.inputEnabled) {
             return false;
         };
 
     },
-       /*Con esta funcion se da la recompensa de la caja 7
-    */
     getstrong(dano){
         var newStrong = [1,1];
         for (var i = dano.length - 1; i >= 0; i--) {
-            newStrong[i] = dano[i]*1.5;
+            newStrong[i] = dano[i]*8;
         };
         return newStrong;
     },
