@@ -1,7 +1,7 @@
 var speedMult = 0.2;
 var friction = 0.99;
 var characters = ["pantera","gallo","cierva","girafa","leon","canario","ruisenor","raton","hormiga"];
-var namesCharacters = ["Ana Pantera", "Andres Gallo", "Cata Cierva", "Daniela Girafa", "Daniel León", "Fabian Canario", "Iván Ruiseñor", "Pedro Raton", "Tati Hormiga"];
+var namesCharacters = ["Ana Pantera", "Andrés Gallo", "Cata Cierva", "Daniela Jirafa", "Daniel León", "Fabian Canario", "Iván Ruiseñor", "Pedro Ratón", "Tati Hormiga"];
 var description;
 var apodo;
 var music;
@@ -23,18 +23,18 @@ seleccionavatar.prototype = {
           game.scale.pageAlignHorizontally = true;
           game.scale.pageAlignVertically = true;
 
-          game.load.image("transp", "../img/Componentes/selecccion avartar/transp.png");
-          game.load.image('pantera', '../img/Componentes/selecccion avartar/AnaPantera.png');
-          game.load.image('gallo', '../img/Componentes/selecccion avartar/AndresGallo.png');
-          game.load.image('cierva', '../img/Componentes/selecccion avartar/CataCierva.png');
-          game.load.image('girafa', '../img/Componentes/selecccion avartar/DanielaGirafa.png');
-          game.load.image('leon', '../img/Componentes/selecccion avartar/DanielLeon.png');
-          game.load.image('canario', '../img/Componentes/selecccion avartar/FabianCanario.png');
-          game.load.image('ruisenor', '../img/Componentes/selecccion avartar/IvanRuisenor.png');
-          game.load.image('raton', '../img/Componentes/selecccion avartar/PedroRaton.png');
-          game.load.image('hormiga', '../img/Componentes/selecccion avartar/TatiHormiga.png');
-          game.load.spritesheet('button', '../img/Componentes/selecccion avartar/SpriteButton.png', 150, 40);
-         game.load.audio('sonidos','../img/Componentes/sonidos/seleccionAvatar.mp3');     
+          game.load.image("transp", "../img/personajes/avatares/transp.png");
+          game.load.image('pantera', '../img/personajes/avatares/CaraPantera80.png');
+          game.load.image('gallo', '../img/personajes/avatares/CaraGallo80.png');
+          game.load.image('cierva', '../img/personajes/avatares/CaraCierva80.png');
+          game.load.image('girafa', '../img/personajes/avatares/CaraJirafa80.png');
+          game.load.image('leon', '../img/personajes/avatares/CaraLeon80.png');
+          game.load.image('canario', '../img/personajes/avatares/CaraCanario80.png');
+          game.load.image('ruisenor', '../img/personajes/avatares/CaraRuiseñor80.png');
+          game.load.image('raton', '../img/personajes/avatares/CaraRatón80.png');
+          game.load.image('hormiga', '../img/personajes/avatares/CaraHormiga80.png');
+          game.load.spritesheet('button', '../img/Componentes/botones/botonSeleccionar.png', 150, 40);
+          game.load.audio('sonidos','../img/Componentes/sonidos/seleccionAvatar.mp3');     
           game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
      },
      create: function(){  
