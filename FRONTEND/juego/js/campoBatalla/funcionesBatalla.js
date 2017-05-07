@@ -366,16 +366,22 @@ var funcionesBatalla={
             variablesCampoBatalla.movV[1]=true;
         }
     },
+    /*Con esta funcion se muestra la caja misteriosa
+    */
      showBox:function(){
                if (!caja.visible) {
                 caja.visible = true;
                };
         },
+    /*Con esta funcion se oculta la caja misteriosa
+    */
      hideBox:function(){
                if (caja.visible) {
                 caja.visible = false;
                };
         },
+        /*Con esta funcion se muestra la caja misteriosa ya abierta
+    */
     catchedBox:function(){
         caja.visible = false;
         if (!openBox.visible) {
@@ -383,41 +389,21 @@ var funcionesBatalla={
             
         }    
     },
+    /*Con esta funcion se esconde la caja misteriosa abierta
+    */
     hideOpenBox:function(){
                if (openBox.visible) {
                 openBox.visible = false;
                };
 
         },
+        /*Con esta funcion se da la recompensa de la caja uno (20segundos mas)
+    */
     giftbox:function(){
         return 20;
         },
-         showBox:function(){
-               if (!caja.visible) {
-                caja.visible = true;
-               };
-        },
-     hideBox:function(){
-               if (caja.visible) {
-                caja.visible = false;
-               };
-        },
-    catchedBox:function(){
-        caja.visible = false;
-        if (!openBox.visible) {
-            openBox.visible =true;
-            
-        }    
-    },
-    hideOpenBox:function(){
-               if (openBox.visible) {
-                openBox.visible = false;
-               };
-
-    },
-    giftbox:function(){
-        return 20;
-    },
+          /*Con esta funcion se da la recompensa de la caja 2 (40 mas de vida)
+    */
     giftlife:function(life){
         if (life.width<200) {
             if (life.width + 40 > 200) {
@@ -431,26 +417,36 @@ var funcionesBatalla={
             return 0;
         }
     },
+        /*Con esta funcion se da la recompensa de la caja 3 (robo de vida)
+    */
     steallisteallife(life){
         var vida = (life.width*20)/100;
         return life.width-vida;
     },
+        /*Con esta funcion se da la recompensa de la caja 4
+    */
     changelife(ulife,cpulife){
         var blood = [ulife.width,cpulife.width];
         return blood;
     },
+       /*Con esta funcion se da la recompensa de la caja 8
+    */
     fatality(ulife,cpulife){
         fatalityu = (ulife.width*1)/100;
         fatalitycpu = (cpulife.width*1)/100;
         newlife =[fatalityu,fatalitycpu];
         return newlife;
     },
+       /*Con esta funcion se da la recompensa de la caja 6
+    */
     exhausted(){
         if (power.inputEnabled) {
             return false;
         };
 
     },
+       /*Con esta funcion se da la recompensa de la caja 7
+    */
     getstrong(dano){
         var newStrong = [1,1];
         for (var i = dano.length - 1; i >= 0; i--) {
