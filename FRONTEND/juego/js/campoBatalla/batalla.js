@@ -28,7 +28,7 @@ variablesCampoBatalla = {
     escudo2:null//guarda la ruta del escudo dos
 };
 
-var boxGame = 8;
+var boxGame = 1;
 var caja;
 var openBox;
 var timeShowBox = 3;
@@ -258,7 +258,7 @@ var batalla = {
 			variablesCampoBatalla.personajeJugador.scale.setTo(1,1);
 		}
 		if (openBox.visible) {
-				if (boxGame == 1) {
+				if (boxGame == 1 && !sendGift) {
 					gameTime = gameTime + funcionesBatalla.giftbox();
 				};
 				if (boxGame == 2 && !sendGift) {

@@ -379,11 +379,15 @@ var funcionesBatalla={
                 caja.visible = true;
                };
         },
+    /*Con esta funcion se oculta la caja misteriosa
+    */
      hideBox:function(){
                if (caja.visible) {
                 caja.visible = false;
                };
         },
+    /*Con esta funcion se verifica si el usuario atrapo o no la caja misteriosa
+    */
     catchedBox:function(){
         caja.visible = false;
         if (!openBox.visible) {
@@ -391,18 +395,24 @@ var funcionesBatalla={
             
         }    
     },
+    /*Con esta funcion se oculta la caja misteriosa abierta
+    */
     hideOpenBox:function(){
                if (openBox.visible) {
                 openBox.visible = false;
                };
 
     },
+    /*Con esta funcion  la caja misteriosa da 20 segundos mas
+    */
     giftbox:function(){
         return 20;
     },
+     /*Con esta funcion  la caja misteriosa da vida al personaje del jugador
+    */
     giftlife:function(life){
-        if (life.width<200) {
-            if (life.width + 40 > 200) {
+        if (life.width<=200) {
+            if (life.width + 40 >= 200) {
                 return 200;
             }
             else{
@@ -413,29 +423,28 @@ var funcionesBatalla={
             return 200;
         }
     },
-    getenergy(energia){
-
-    }, 
+     /*Con esta funcion  la caja misteriosa roba vida del enemigo 
+    */
     steallife(life){
         var vida = (life.width*20)/100;
         return life.width-vida;
     },
+     /*Con esta funcion  la caja misteriosa cambia de vida
+    */
     changelife(ulife,cpulife){
         var blood = [ulife.width,cpulife.width];
         return blood;
     },
+     /*Con esta funcion  la caja misteriosa deja con 1% de la vida a los dos personajes
+    */
     fatality(ulife,cpulife){
         fatalityu = (ulife.width*1)/100;
         fatalitycpu = (cpulife.width*1)/100;
         newlife =[fatalityu,fatalitycpu];
         return newlife;
     },
-    exhausted(){
-        if (power.inputEnabled) {
-            return false;
-        };
-
-    },
+     /*Con esta funcion  la caja misteriosa da mas daño al pj
+    */
     getstrong(dano){
         var newStrong = [1,1];
         for (var i = dano.length - 1; i >= 0; i--) {
