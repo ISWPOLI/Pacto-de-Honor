@@ -1,0 +1,207 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: motech-spacer\n"
+"POT-Creation-Date: 2016-01-28 16:33-0500\n"
+"PO-Revision-Date: 2016-01-31 16:40-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: index.php:75
+msgid "You can now"
+msgstr "您現在可以"
+
+#: index.php:75
+msgid "hide spacer on mobile screens"
+msgstr "手機屏幕隱藏 spacer"
+
+#: index.php:75
+msgid "or set a custom spacer height for mobile screens."
+msgstr "或者給手機屏幕自定義spacer高度"
+
+#: index.php:77
+msgid "Set spacer height for mobile devices"
+msgstr "給手機屏幕自定義spacer間隔高度"
+
+#: index.php:77
+msgid "Dismiss this notice"
+msgstr "關閉該通知"
+
+#: index.php:252
+msgid "Find me on LinkedIn"
+msgstr "在LinkedIn找我"
+
+#: index.php:253
+msgid "Follow me on Twitter"
+msgstr "在 Twitter 跟著我"
+
+#: index.php:271
+msgid "NEW! Get Premium &raquo;"
+msgstr "新！增至高級 &raquo;"
+
+#: index.php:272
+msgid "Spacer Premium is now available for as low as $20!"
+msgstr "Spacer高級現已低至$ 20！"
+
+#: index.php:280
+msgid "Get Premium"
+msgstr "增至高級"
+
+#: index.php:281
+msgid "Purchase will be processed via PayPal."
+msgstr "通過Paypal進行購買"
+
+#: index.php:282
+msgid ""
+"Every license is valid for the lifetime of the website where it's installed."
+msgstr "每個牌照的有效期在它安裝網站的生命週期。"
+
+#: index.php:289
+msgid "Buy 1 Use"
+msgstr "購買一個使用"
+
+#: index.php:292
+msgid "1 site license"
+msgstr "1 網站許可證"
+
+#: index.php:303
+msgid "Buy"
+msgstr "購買"
+
+#: index.php:303
+msgid "Unlimited"
+msgstr "無限"
+
+#: index.php:306
+msgid "Unlimited sites forever!"
+msgstr "永遠無限網站"
+
+#: index.php:315
+msgid "Cancel"
+msgstr "取消"
+
+#: index.php:338
+msgid "Configuration"
+msgstr "配置"
+
+#: index.php:345
+msgid "Default Spacer Height"
+msgstr "默认spacer高度"
+
+#: index.php:356
+msgid ""
+"Speed up your workflow by setting a default height to apply to your spacers. "
+"Note that you can also enter negative spacing to shift the following content "
+"upwards."
+msgstr ""
+"通過給 spacer 設置默認高度去加快工作流程。請注意，您也可以給 spacer輸入負間距"
+"來上移以下內容。"
+
+#: index.php:357
+msgid "eg: 20"
+msgstr "例如：20"
+
+#: index.php:364
+msgid "Spacer Height Unit"
+msgstr "spacer高度單元"
+
+#: index.php:382
+msgid "Select a unit of measurement to use with your default spacer height."
+msgstr "選擇一個計量單位來使用您的默認 spacer 高度。"
+
+#: index.php:390
+msgid "Default Spacer Height On Mobile (Optional)"
+msgstr "手機的默認 spacer 高度"
+
+#: index.php:401
+msgid ""
+"Set the default spacer height on mobile devices. If left empty, the spacer "
+"mobile height will be the same as the spacer desktop height. If set to 0, "
+"the spacer will be hidden on mobile."
+msgstr ""
+"在手機設置默認spacer 高度。如果留空，手機的spacer高度將和 Desktop高度相同。如"
+"果設置為零,spacer 將消失。"
+
+#: index.php:402
+msgid "eg: 10"
+msgstr "例如：10"
+
+#: index.php:409
+msgid "Spacer Height Unit On Mobile"
+msgstr "手機的Spacer高度"
+
+#: index.php:427
+msgid ""
+"Select a unit of measurement to use with your default spacer height on "
+"mobile devices. This only applies if you have a default spacer height set "
+"for mobile."
+msgstr ""
+"在手機設備跟默認的 Spacer高度 選擇一個計量單位。這僅適用在已經設置默認 spacer"
+"高度的手機。"
+
+#: index.php:435
+msgid "Default Spacer Class (Optional)"
+msgstr "默認 Spacer Class (可選）"
+
+#: index.php:446
+msgid ""
+"Enter a custom css class to apply to all of your spacer elements. Multiple "
+"classes can be added by putting a blank space between each class name"
+msgstr ""
+"請輸入自定義的CSS Class至所有spacer元素。多個 classes 可以通過將每個 Class之"
+"間輸入空格而被添加。"
+
+#: index.php:447
+msgid "eg: MyClass1 Class2"
+msgstr "例如  MyClass1 Class2"
+
+#: index.php:453
+msgid "Spacer Style (Optional)"
+msgstr "Spacer style （可選）"
+
+#: index.php:464
+msgid ""
+"Enter custom css to apply to all of your spacer elements. This is for "
+"advanced users. Just leave this empty if you're not sure what this means or "
+"if you don't have a use for it."
+msgstr ""
+"請輸入自定義的CSS Class至所有spacer元素。這是高級用戶。如果你不知道這是什麼意"
+"思,或者如果你不使用它, 請不要填寫它"
+
+#: index.php:465
+msgid "(for example)"
+msgstr "（例如）"
+
+#: index.php:493
+msgid "Upload Image"
+msgstr "上傳圖片"
+
+#: index.php:499
+msgid "Enter a URL or upload an image."
+msgstr "輸入網址或上傳圖片。"
+
+#: index.php:505
+msgid "Preview"
+msgstr "預覽"
+
+#: index.php:634
+msgid "Settings"
+msgstr "設置"
+
+#: index.php:748 index.php:757 index.php:766
+msgid ""
+"A premium option was not saved. You must first enter your license key to "
+"unlock this premium feature."
+msgstr "那高級選項未曾保存。您必須先輸入許可證密鑰來解鎖該高級功能。"
+
+#: index.php:775
+msgid "Premium Only"
+msgstr "只供高級"

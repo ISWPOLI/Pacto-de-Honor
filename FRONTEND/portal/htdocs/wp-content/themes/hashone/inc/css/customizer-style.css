@@ -1,0 +1,271 @@
+.clearfix:after,
+.clearfix:before{
+  content: "";
+  display: table;
+}
+
+.clearfix:after{
+  clear: both;
+}
+
+.customize-control select{
+    width: 98%;
+}
+
+.hashone-accordion-section-title{
+    color: #0073aa;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    padding: 10px 10px 11px 14px;
+    line-height: 21px;
+    background: #FFF;
+    margin: 0 -12px 0;
+    border-left: 4px solid #0073aa
+}
+
+.customize-control-heading .customize-control-description{
+    margin: 5px 0 0;
+}
+
+.ht-implink{
+  background: #0073aa;
+  padding: 5px 10px;
+  color: #FFF !important;
+  text-align: center;
+  display: block;
+  margin-top: 5px;
+  line-height: 1.2;
+  box-shadow: none;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.ht-implink:focus{
+  box-shadow: none !important;
+}
+
+.ht-implink:hover{
+  background: #000;
+}
+
+/**SWITCH CONTROL*/
+.onoffswitch {
+    position: relative;
+    width: 100px;
+    margin-right: 15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.onoffswitch-inner {
+    width: 200%;
+    margin-left: -100%;
+    -moz-transition: margin .3s ease-in 0s;
+    -webkit-transition: margin .3s ease-in 0s;
+    -o-transition: margin .3s ease-in 0s;
+    transition: margin .3s ease-in 0s
+}
+
+.onoffswitch-inner > div {
+    float: left;
+    position: relative;
+    width: 50%;
+    height: 24px;
+    padding: 0;
+    line-height: 24px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 700;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.onoffswitch-inner .onoffswitch-active {
+    background-color: #d4d4d4;
+    color: #FFF
+}
+
+.onoffswitch-inner .onoffswitch-inactive {
+    background-color: #d4d4d4;
+    color: #FFF;
+    text-align: right
+}
+
+.onoffswitch-switch {
+    width: 50px;
+    margin: 0;
+    text-align: center;
+    border: 0 solid #999;
+    border-radius: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0
+}
+
+.onoffswitch-active .onoffswitch-switch {
+    background: #0073aa;
+    left: 0
+}
+
+.onoffswitch-inactive .onoffswitch-switch {
+    background: #7D7D7D;
+    right: 0
+}
+.switch-on .onoffswitch-inner {
+    margin-left: 0
+}
+
+/*GALLERY CONTROL*/
+.gallery-screenshot{
+  margin-bottom: 10px;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.gallery-screenshot .screen-thumb{
+  width: 50%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 5px;
+  float: left;
+}
+
+.gallery-screenshot .screen-thumb:nth-child(2n+1){
+    clear: both;
+}
+
+.gallery-screenshot .screen-thumb img{ 
+  border: 1px solid #EEE;
+  vertical-align: middle;
+}
+
+#clear-gallery{
+  float: right;
+}
+
+/*CHOSEN*/
+.chosen-container-single .chosen-single {
+    border-radius: 0px;
+    height: 28px;
+    background: #FFF;
+    border-color: #DDDDDD;
+    line-height: 28px;
+    -webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.06);
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.06);
+}
+
+.chosen-container-single .chosen-single div b{
+    background-position: 0px 4px;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single div b {
+  background-position: -18px 4px;
+}
+
+.chosen-container-multi .chosen-choices li{
+    float: none;
+}
+
+/*FontAwesome Icon Styles*/
+.hashone-type-icon{
+  overflow: hidden;
+}
+
+.hashone-selected-icon{
+  background: #F6F6F6;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  border: 1px solid #EEE;
+  position: relative;
+  margin-right: 45px;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.hashone-selected-icon .fa{
+  line-height: 45px;
+  display: block;
+}
+
+.hashone-selected-icon span{
+  position: absolute;
+  background: #F6F6F6;
+  right: -45px;
+  top: -1px;
+  height: 45px;
+  width: 45px;
+  border: 1px solid #EEE;
+  font-size: 20px;
+}
+
+.hashone-icon-list{
+  height: 215px;
+  overflow-y: scroll;
+  font-size: 18px;
+  border: 1px solid #EEE;
+  border-right: 0;
+  border-top: 0;
+  padding-bottom: 4%;
+  display: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.hashone-icon-list li{
+  float: left;
+  margin: 4% 3% 0;
+  height: 40px;
+  width: 16%;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #EEE;
+}
+
+.hashone-icon-list li:hover{
+  background: #333;
+  border: 1px solid #333;
+  color: #FFF;
+}
+
+.hashone-icon-list li.icon-active{
+  background: #0073aa;
+  border: 1px solid #0073aa;
+  color: #FFF;
+}
+
+.customize-pane-parent .control-section .accordion-section-title:before{
+    font-family: dashicons;
+    content: "\f103";
+    font-size: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+#accordion-panel-hashone_general_settings_panel .accordion-section-title:before{
+    content: "\f111";
+}
+
+#accordion-panel-hashone_home_panel .accordion-section-title:before{
+    content: "\f102";
+}
+
+#accordion-panel-nav_menus .accordion-section-title:before{
+    content: "\f333";
+}
+
+#accordion-panel-widgets .accordion-section-title:before{
+    content: "\f116";
+}
+
+#accordion-panel-widgets .accordion-section-title:before{
+    content: "\f116";
+}
+
+#accordion-section-custom_css .accordion-section-title:before{
+    content: "\f499";
+}

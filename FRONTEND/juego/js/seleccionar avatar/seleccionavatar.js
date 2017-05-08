@@ -1,9 +1,11 @@
 var speedMult = 0.2;
 var friction = 0.99;
 var characters = ["pantera","gallo","cierva","girafa","leon","canario","ruisenor","raton","hormiga"];
-var namesCharacters = ["Ana Pantera", "Andres Gallo", "Cata Cierva", "Daniela Girafa", "Daniel León", "Fabian Canario", "Iván Ruiseñor", "Pedro Raton", "Tati Hormiga"];
+var namesCharacters = ["Ana Pantera", "Andrés Gallo", "Cata Cierva", "Daniela Jirafa", "Daniel León", "Fabian Canario", "Iván Ruiseñor", "Pedro Ratón", "Tati Hormiga"];
 var description;
 var apodo;
+var music;
+var musicButton;
 var startButton;
 var descriptions = ["Ana tiene buenos amigos y un gran\ngrupo social, los sigue a todos\nlados y los apoya sin dudar. Pero si\nalgo no le parece o ve que la puede\nafectar, no se toma ni un segundo\npara pensar, sus buenos principios\nlos defiende y no los va a negociar",
                      "Que siempre Madruga, que nunca\nllega tarde, son algunas teorias sobre\nel puntual Andrés. Debo decirles que\nestán en lo correcto, desde el primer\ndia que sus estudios iniciaron, se\npuso a él mismo un gran reto: la\npuntualidad y asistencia lo\ncaracterizarían en todo momento",
@@ -21,17 +23,19 @@ seleccionavatar.prototype = {
           game.scale.pageAlignHorizontally = true;
           game.scale.pageAlignVertically = true;
 
-          game.load.image("transp", "../img/Componentes/selecccion avartar/transp.png");
-          game.load.image('pantera', '../img/Componentes/selecccion avartar/AnaPantera.png');
-          game.load.image('gallo', '../img/Componentes/selecccion avartar/AndresGallo.png');
-          game.load.image('cierva', '../img/Componentes/selecccion avartar/CataCierva.png');
-          game.load.image('girafa', '../img/Componentes/selecccion avartar/DanielaGirafa.png');
-          game.load.image('leon', '../img/Componentes/selecccion avartar/DanielLeon.png');
-          game.load.image('canario', '../img/Componentes/selecccion avartar/FabianCanario.png');
-          game.load.image('ruisenor', '../img/Componentes/selecccion avartar/IvanRuisenor.png');
-          game.load.image('raton', '../img/Componentes/selecccion avartar/PedroRaton.png');
-          game.load.image('hormiga', '../img/Componentes/selecccion avartar/TatiHormiga.png');
-          game.load.spritesheet('button', '../img/Componentes/selecccion avartar/SpriteButton.png', 150, 40);
+          game.load.image("transp", "../img/personajes/avatares/transp.png");
+          game.load.image('pantera', '../img/personajes/avatares/CaraPantera80.png');
+          game.load.image('gallo', '../img/personajes/avatares/CaraGallo80.png');
+          game.load.image('cierva', '../img/personajes/avatares/CaraCierva80.png');
+          game.load.image('girafa', '../img/personajes/avatares/CaraJirafa80.png');
+          game.load.image('leon', '../img/personajes/avatares/CaraLeon80.png');
+          game.load.image('canario', '../img/personajes/avatares/CaraCanario80.png');
+          game.load.image('ruisenor', '../img/personajes/avatares/CaraRuiseñor80.png');
+          game.load.image('raton', '../img/personajes/avatares/CaraRatón80.png');
+          game.load.image('hormiga', '../img/personajes/avatares/CaraHormiga80.png');
+          game.load.spritesheet('button', '../img/Componentes/botones/botonSeleccionar.png', 150, 40);
+          game.load.audio('sonidos','../img/Componentes/sonidos/seleccionAvatar.mp3');     
+          game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
      },
      create: function(){  
           game.stage.backgroundColor = "#2451A6"; 
@@ -65,12 +69,17 @@ seleccionavatar.prototype = {
           description.anchor.set(0.5);
           startButton = game.add.button(game.world.width / 2, 540, 'button', this.verH, this, 2, 1, 0); // over, out, down, up
           startButton.anchor.set(0.5);
-
-     },
-     verH:function(){
-        this.state.start("historieta");
+         musicButton = game.add.audio('sonidoBoton');
+         music = game.add.audio('sonidos'); 
+         music.loop=true;
+         music.play();         
     },
-     update:function(){
+    verH:function(){
+        this.state.start("historieta");
+        musicButton.play();
+        music.pause();
+    },
+    update:function(){
           var zoomed = false;
           for(var i = 0; i < this.scrollingMap.children.length; i++){
                if(Math.abs(this.scrollingMap.children[i].world.x - game.width / 2) < 46 && !zoomed){
@@ -78,8 +87,8 @@ seleccionavatar.prototype = {
                     zoomed = true;
                     for (var j = 0; j < descriptions.length; j++) {
                          if(i == j){
-                              apodo.setText(namesCharacters[j]);
-                              description.setText(descriptions[j]);
+                             apodo.setText(namesCharacters[j]);
+                             description.setText(descriptions[j]);                             
                          }
                     }
 

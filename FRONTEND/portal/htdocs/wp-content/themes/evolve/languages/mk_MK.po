@@ -1,0 +1,521 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: evolve\n"
+"POT-Creation-Date: 2014-01-31 19:11+0100\n"
+"PO-Revision-Date: 2016-06-18 13:09+0530\n"
+"Last-Translator: Andreja Dodov <andreja.dodov@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"Language: mk_MK\n"
+"Plural-Forms: nplurals=2; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : 1;\n"
+"X-Poedit-SearchPath-0: D:/xampp/htdocs/wordpress/wp-content/themes/evolve\n"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/comments.php:10
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+"Оваа објава е заштитена со лозинка. Впиши ја лозинката за да ги видиш "
+"коментарите."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/comments.php:55
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/comments.php:28
+msgid "No Comments Yet"
+msgstr "Нема коментари"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:62
+msgid "Name:"
+msgstr "Име:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:63
+msgid "Email:"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:64
+msgid "Subject:"
+msgstr "Предмет:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:65
+msgid "Comments:"
+msgstr "Коментари:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:91
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:110
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:285
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:112
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:255
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:459
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:667
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:856
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/no-sidebar.php:28
+msgid "EDIT"
+msgstr "УРЕДИ"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:101
+msgid ""
+"Please check if you've filled all the fields with valid information. Thank "
+"you."
+msgstr ""
+"Провери дали се пополнети сите полиња со валидни информации. Благодарам."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:106
+msgid "Thank you"
+msgstr "Ти благодарам"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:106
+msgid "for using my contact form! Your email was successfully sent!"
+msgstr "за користењето на формуларот. Твојата порака е успешно пратена!"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:114
+msgid "Name (required)"
+msgstr "Name (потребно)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:116
+msgid "Email (required)"
+msgstr "Email (потребно)"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:118
+msgid "Subject"
+msgstr "Предмет"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:126
+msgid "Message"
+msgstr "Порака"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/contact.php:144
+msgid "Send Message"
+msgstr "Прати порака"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:93
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:271
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:244
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:442
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:653
+msgid "Written by"
+msgstr "Напишано од"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:95
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:275
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:101
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:247
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:444
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:657
+msgid "edit"
+msgstr "уреди"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:167
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:334
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:518
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:718
+msgid "READ MORE"
+msgstr "ПРОЧИТАЈ ПОВЕЌЕ"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:171
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:258
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:87
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:230
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:522
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:640
+msgid "Leave a Comment"
+msgstr "Остави коментар"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:171
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:258
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:87
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:230
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:522
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:640
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/comments.php:29
+msgid "1 Comment"
+msgstr "1 коментар"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:171
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:258
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:87
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:230
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:522
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:640
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/comments.php:27
+msgid "% Comments"
+msgstr "% коментари"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:340
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:266
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:724
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:865
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/no-sidebar.php:37
+msgid "READ MORE &raquo;"
+msgstr "ПРОЧИТАЈ ПОВЕЌЕ &raquo;"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/content-blog.php:342
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:267
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:726
+msgid "<strong>Pages:</strong>"
+msgstr "<strong>Страни:</strong>"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/header.php:161
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/searchform.php:14
+msgid "Type your search"
+msgstr "Впиши го пребарувањето"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:99
+msgid "By"
+msgstr "Од"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:325
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:569
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:807
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:891
+msgid "Not Found"
+msgstr "Не е најдено"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:331
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:573
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:811
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:895
+msgid "Sorry, but you are looking for something that isn't here."
+msgstr ""
+"Извини, ама тоа што го бараш моментално не е достапно. Проблемот не е до "
+"тебе... до мене е."
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:363
+msgid "Daily archives for"
+msgstr "Дневни објави за"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:365
+msgid "Monthly archives for"
+msgstr "Месечни објави за"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:367
+msgid "Yearly archives for"
+msgstr "Годишни објави за"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:371
+msgid "Posts in category"
+msgstr "Објави во категорија"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:375
+msgid "Posts tagged"
+msgstr "Објави кои вклучуваат "
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:381
+msgid "Search results for"
+msgstr "Пребарано во "
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:386
+msgid "Posts by"
+msgstr "Објави од"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:549
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:787
+msgid "Your search for"
+msgstr "Твоето пребарување за"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:549
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:787
+msgid "did not match any entries"
+msgstr "не дадени резултати"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:554
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:792
+msgid "Suggestions:"
+msgstr "Предлози:"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:556
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:794
+msgid "Make sure all words are spelled correctly."
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:557
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:795
+msgid "Try different keywords."
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:558
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/index.php:796
+msgid "Try more general keywords."
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/navigation.php:23
+msgid ""
+"<div class=\"btn btn-left icon-arrow-left icon-big\">Newer Entries</div>"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/navigation.php:24
+msgid ""
+"<div class=\"btn btn-right icon-arrow-right icon-big\">Older Entries</div>"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/no-sidebar.php:24
+msgid "Untitled"
+msgstr "Неименувано"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/sidebar-2.php:22
+msgid "Pages"
+msgstr "Страни"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/sidebar-2.php:32
+msgid "Categories"
+msgstr "Категории"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/sidebar-2.php:42
+msgid "RSS Syndication"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/sidebar-2.php:44
+msgid "All posts"
+msgstr "Сите објави"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/sidebar-2.php:45
+msgid "All comments"
+msgstr "Сите коментари"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/sidebar.php:22
+msgid "Bootstrap Examples"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-functions.php:114
+msgid "Primary Menu"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-functions.php:158
+msgid "<div class=\"similar-posts\"><h5>Similar posts</h5><ul>"
+msgstr "<div class=\"similar-posts\"><h5>Слични објави</h5><ul>"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-functions.php:455
+#, php-format
+msgid "Page %s"
+msgstr "Страни %s"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-functions.php:476
+msgid "Share on Twitter"
+msgstr "Сподели на Twitter"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-functions.php:477
+msgid "Share on Facebook"
+msgstr "Сподели на FaceBook"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-functions.php:478
+msgid "Share on Google Plus"
+msgstr "Сподели на Google+"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-functions.php:479
+msgid "Share on Pinterest"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-functions.php:480
+msgid "Share by Email"
+msgstr "Сподели по e-mail"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-functions.php:481
+msgid "More options"
+msgstr "повеќе опции"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-functions.php:919
+msgid "Home"
+msgstr "Дома"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-functions.php:974
+msgid "404 - Page not Found"
+msgstr ""
+"404... Охх, како сега да ти кажам... нешто не чини, мора да е до тебе зошто "
+"серверот е на IBM а може и не е ама е многу скап... сакам да кажам извини, "
+"се надевам дека администраторов тука ќе го реши проблемов наскоро. Имај убав "
+"ден!"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-functions.php:975
+msgid "Search"
+msgstr "Пребарај"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-functions.php:1046
+msgid "Read more"
+msgstr "Прочитај повеќе"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/basic-functions.php:1054
+msgid ""
+"<h2 style=\"color:#fff;\">Oops, no posts to display! Please check your post "
+"slider Category (ID) settings</h2>"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/comments.php:33
+msgid "% Trackbacks"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/comments.php:35
+msgid "1 Trackback"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-backup.php:70
+msgid "evolve Setting Import / Export"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-backup.php:70
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-backup.php:99
+msgid "evolve Backup"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-backup.php:101
+msgid "Import Settings"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-backup.php:102
+msgid ""
+"If you have settings in a backup file on your computer, the Import / Export "
+"system can import those into this site. To get started, upload your backup "
+"file to import from below."
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-backup.php:107
+#, php-format
+msgid "Upload File: (Maximum Size: %s)"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-backup.php:110
+msgid "Upload File and Import"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-backup.php:115
+msgid "Export Settings"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-backup.php:116
+msgid ""
+"When you click the button below, the Import / Export system will create a "
+"text file for you to save to your computer."
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-backup.php:117
+#, php-format
+msgid ""
+"This text file can be used to restore your settings here on \"%s\", or to "
+"easily setup another website with the same settings\"."
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-backup.php:121
+msgid "Download Export File"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-backup.php:142
+msgid "Backup Manager"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-backup.php:143
+msgid "Welcome to the evolve Backup Manager."
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-backup.php:144
+msgid "Here are a few notes on using this screen."
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-backup.php:145
+msgid ""
+"The backup manager allows you to backup or restore your \"Theme Options\" "
+"and other settings to or from a text file."
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-backup.php:146
+msgid ""
+"To create a backup, simply select the setting type you'd like to backup (or "
+"\"All Settings\") and hit the \"Download Export File\" button."
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-backup.php:147
+msgid ""
+"To restore your settings from a backup, browse your computer for the file "
+"(under the \"Import Settings\" heading) and hit the \"Upload File and Import"
+"\" button. This will restore only the settings that have changed since the "
+"backup."
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-backup.php:148
+msgid ""
+"Please note that only valid backup files generated through the evolve Backup "
+"Manager should be imported."
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-backup.php:167
+#, php-format
+msgid ""
+"Please note that this backup manager backs up only your settings and not "
+"your content. To backup your content, please use the %sWordPress Export Tool"
+"%s."
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-backup.php:170
+msgid "There was a problem importing your settings. Please Try again."
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-backup.php:172
+msgid "There was a problem exporting your settings. Please Try again."
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-backup.php:174
+msgid "The import file you've provided is invalid. Please try again."
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-backup.php:176
+#, php-format
+msgid "Settings successfully imported. | Return to %sTheme Options%s"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-framework.php:317
+msgid ""
+"<div id=\"t4p-popup-reset\" class=\"t4p-save-popup\"><div class=\"t4p-save-"
+"reset\">Options Reset</div></div>"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-framework.php:358
+msgid ""
+"<div id=\"t4p-popup-save\" class=\"t4p-save-popup\"><div class=\"t4p-save-"
+"reset\">Options Updated</div></div>"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-framework.php:416
+msgid "Theme Options"
+msgstr "Опции на Темата"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-medialibrary-uploader.php:18
+msgid "Options Framework Internal Container"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-medialibrary-uploader.php:81
+msgid "Upload"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-medialibrary-uploader.php:104
+msgid "View File"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-medialibrary-uploader.php:241
+msgid "Gallery"
+msgstr "Галерија"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/options-medialibrary-uploader.php:241
+msgid "Previously Uploaded"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/tabs-widget.php:129
+msgid "says"
+msgstr "вели"
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/widgets.php:27
+msgid ""
+"You are using one column layout. Please visit theme settings page and change "
+"layout to enable sidebar widgets. Widgets placed on this area won't be "
+"active."
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/widgets.php:231
+msgid "Insert your custom image slides"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/widgets.php:233
+msgid "evolve: Carousel Slider"
+msgstr ""
+
+#: D:\xampp\htdocs\wordpress\wp-content\themes\evolve/library/functions/widgets.php:317
+msgid "Title:"
+msgstr "Наслов:"

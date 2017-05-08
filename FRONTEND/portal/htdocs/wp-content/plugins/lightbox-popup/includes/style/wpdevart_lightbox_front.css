@@ -1,0 +1,98 @@
+
+#wpdevart_lb_loading_img{
+	
+}
+
+#wpdevart_lb_content_first_pic{
+	width:100%;
+	height:100%;
+	z-index:2;
+	position:absolute;
+
+}
+#wpdevart_lb_content_second_pic{
+	width:100%;
+	height:100%;
+	z-index:1;
+	position:absolute;	
+}
+#wpdevart_lb_loading_img{
+	position:absolute;	
+	z-index:1000;
+}
+#wpdevart_lb_overlay{
+	
+	z-index:9999;
+	position:fixed;
+	width:100%;
+	height:100%;
+	left:0px;
+	right:0px;
+	top:0px;
+	bottom:0px;	
+}
+
+
+
+#wpdevart_lb_main_window{
+	z-index:99999;
+	overflow: hidden;
+	left:0px;
+	right:0px;
+	top:0px;
+	bottom:0px;	
+}
+
+#wpdevart_lb_pic_content_id{
+	height:100%;
+	position:relative;
+	background-color:#31DC45;
+	
+}
+#wpdevart_lb_main_desc{
+	position:relative;
+	width:100%;
+	height:40px;
+	background-color:#D49D12;
+}
+#wpdevart_lb_main_desc img{
+	cursor:pointer;
+	position: relative;
+    z-index: 1000;
+    max-height: 100%;
+}
+#wpdevart_lb_main_desc{
+	text-align:right;
+}
+
+#wpdevart_lb_main_desc.wpdevart_lb_main_desc{
+	bottom:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*############################# Popup window description ############################*/
+#wpdevart_lb_main_desc{
+	background-color:#D49D12;
+}
+
+
+/*information line styles*/
+#wpdevart_lb_information_content span{
+	display:block;
+}
+#wpdevart_lb_information_content{
+	width:100%
+}
