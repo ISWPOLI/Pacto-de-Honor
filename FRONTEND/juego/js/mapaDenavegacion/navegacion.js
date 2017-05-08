@@ -61,63 +61,63 @@ navegacion.prototype = {
         btMundo = game.add.button (80, 60, 'pause13', this.mundo1, 0, 0, 0, 1);
         btMundo.scale.setTo(0.8, 0.8);
         btMundo.input.useHandCursor = true;
-        var text = game.add.text(13,1, "1", { font: "40px Arial", fill: "#ff0044"});
+        var text = game.add.text(13,1, "1", { font: "40px Arial", fill: "#030300"});
         btMundo.addChild(text);
     
         btMundo2 = game.add.button (90, 500, 'pause13',this.mundo2, 0, 0, 0, 1);
         btMundo2.scale.setTo(0.8, 0.8);
         btMundo.input.useHandCursor = true;
-        var text2 = game.add.text(13,1, "2", {font: "40px Arial", fill: "#ff0044"});
+        var text2 = game.add.text(13,1, "2", {font: "40px Arial", fill: "#030300"});
         btMundo2.addChild(text2);
         
         btMundo3 = game.add.button (250, 450, 'pause13', this.mundo3, 0, 0, 0, 1);
         btMundo3.scale.setTo(0.8, 0.8);
-        var text3 = game.add.text(13,1, "3", { font: "40px Arial", fill: "#ff0044"});
+        var text3 = game.add.text(13,1, "3", { font: "40px Arial", fill: "#030300"});
         btMundo3.addChild(text3);    
 
         btMundo4 = game.add.button (280, 220, 'pause13', this.mundo4, 0, 0, 0, 1);
         btMundo4.scale.setTo(0.8, 0.8);
-        var text4 = game.add.text(13,1, "4", { font: "40px Arial", fill: "#ff0044"});
+        var text4 = game.add.text(13,1, "4", { font: "40px Arial", fill: "#030300"});
         btMundo4.addChild(text4);
         
         btMundo5 = game.add.button (330, 80, 'pause13', this.mundo5, 0, 0, 0, 1);
         btMundo5.scale.setTo(0.8, 0.8);
-        var text5 = game.add.text(13,1, "5", { font: "40px Arial", fill: "#ff0044"});
+        var text5 = game.add.text(13,1, "5", { font: "40px Arial", fill: "#030300"});
         btMundo5.addChild(text5);    
 
         btMundo6 = game.add.button (430, 500, 'pause13', this.mundo6, 0, 0, 0, 1);
         btMundo6.scale.setTo(0.8, 0.8);
-        var text6 = game.add.text(13,1, "6", { font: "40px Arial", fill: "#ff0044"});
+        var text6 = game.add.text(13,1, "6", { font: "40px Arial", fill: "#030300"});
         btMundo6.addChild(text6);    
 
         btMundo7 = game.add.button (520, 220, 'pause13',this.mundo7, 0, 0, 0, 1);
         btMundo7.scale.setTo(0.8, 0.8);
-        var text7 = game.add.text(15,1, "7", { font: "40px Arial", fill: "#ff0044"});
+        var text7 = game.add.text(15,1, "7", { font: "40px Arial", fill: "#030300"});
         btMundo7.addChild(text7);
         
         btMundo8 = game.add.button (580, 200, 'pause13', this.mundo8, 0, 0, 0, 1);
         btMundo8.scale.setTo(0.8, 0.8);
-        var text8 = game.add.text(13,1, "8", { font: "40px Arial", fill: "#ff0044"});
+        var text8 = game.add.text(13,1, "8", { font: "40px Arial", fill: "#030300"});
         btMundo8.addChild(text8);    
 
         btMundo9 = game.add.button (550, 80, 'pause13', this.mundo9, 0, 0, 0, 1);
         btMundo9.scale.setTo(0.8, 0.8);
-        var text9 = game.add.text(13,1, "9", { font: "40px Arial", fill: "#ff0044"});
+        var text9 = game.add.text(13,1, "9", { font: "40px Arial", fill: "#030300"});
         btMundo9.addChild(text9);
     
         btMundo10 = game.add.button (680, 140, 'pause13', this.mundo10, 0, 0, 0, 1);
         btMundo10.scale.setTo(0.8, 0.8);
-        var text10 = game.add.text(6,3, "10", { font: "35px Arial", fill: "#ff0044"});
+        var text10 = game.add.text(6,3, "10", { font: "35px Arial", fill: "#030300"});
         btMundo10.addChild(text10);    
    
         btMundo11 = game.add.button (700, 240, 'pause13', this.mundo11, 0, 0, 0, 1);
         btMundo11.scale.setTo(0.8, 0.8);
-        var text11 = game.add.text(9,3, "11", { font: "35px Arial", fill: "#ff0044"});
+        var text11 = game.add.text(9,3, "11", { font: "35px Arial", fill: "#030300"});
         btMundo11.addChild(text11);    
 
         btMundo12 = game.add.button (750, 480, 'pause14',this.mundo12, 0, 0, 0, 1);
         btMundo12.scale.setTo(0.8, 0.8);
-        var text12 = game.add.text(5,1, "12", { font: "35px Arial", fill: "#FFFF00"});
+        var text12 = game.add.text(5,1, "12", { font: "35px Arial", fill: "#030300"});
         btMundo12.addChild(text12);
 
         music = game.add.audio('sonidos');
