@@ -3,12 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+<<<<<<< HEAD
+//Autor Andres Sierra
+package rest;
+
+import entities.Poder;
+import entities.PoderPK;
+=======
 
 package rest;
 
 import com.poder.Restful.PH.Poder;
 import com.poder.Restful.PH.PoderPK;
 import java.util.ArrayList;
+>>>>>>> 06b43fe11dc9f6596399ecfcf3e5ea6c342dc7b3
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -29,10 +37,17 @@ import javax.ws.rs.core.PathSegment;
  * @author ahsierra
  */
 @Stateless
+<<<<<<< HEAD
+@Path("entities.poder")
+public class PoderFacadeREST extends AbstractFacade<Poder> {
+    
+    @PersistenceContext(unitName = "PolifightPU")
+=======
 @Path("com.poder.restful.ph.poder")
 public class PoderFacadeREST extends AbstractFacade<Poder> {
     
     @PersistenceContext(unitName = "Restful.PHPU")
+>>>>>>> 06b43fe11dc9f6596399ecfcf3e5ea6c342dc7b3
     private EntityManager em;
 
     private PoderPK getPrimaryKey(PathSegment pathSegment) {
@@ -43,7 +58,11 @@ public class PoderFacadeREST extends AbstractFacade<Poder> {
          * it is ignored in the following code.
          * Matrix parameters are used as field names to build a primary key instance.
          */
+<<<<<<< HEAD
+        entities.PoderPK key = new entities.PoderPK();
+=======
         com.poder.Restful.PH.PoderPK key = new com.poder.Restful.PH.PoderPK();
+>>>>>>> 06b43fe11dc9f6596399ecfcf3e5ea6c342dc7b3
         javax.ws.rs.core.MultivaluedMap<String, String> map = pathSegment.getMatrixParameters();
         java.util.List<String> idPoder = map.get("idPoder");
         if (idPoder != null && !idPoder.isEmpty()) {
@@ -60,6 +79,13 @@ public class PoderFacadeREST extends AbstractFacade<Poder> {
         super(Poder.class);
     }
 
+<<<<<<< HEAD
+
+    @PUT
+    @Path("updatePower")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void updatePower(@PathParam("updatePower") PathSegment id, Poder entity) {
+=======
     @POST
     @Override
     @Consumes({"application/xml", "application/json"})
@@ -71,13 +97,18 @@ public class PoderFacadeREST extends AbstractFacade<Poder> {
     @Path("{id}")
     @Consumes({"application/xml", "application/json"})
     public void edit(@PathParam("id") PathSegment id, Poder entity) {
+>>>>>>> 06b43fe11dc9f6596399ecfcf3e5ea6c342dc7b3
         super.edit(entity);
     }
 
     @DELETE
     @Path("{id}")
     public void remove(@PathParam("id") PathSegment id) {
+<<<<<<< HEAD
+        entities.PoderPK key = getPrimaryKey(id);
+=======
         com.poder.Restful.PH.PoderPK key = getPrimaryKey(id);
+>>>>>>> 06b43fe11dc9f6596399ecfcf3e5ea6c342dc7b3
         super.remove(super.find(key));
     }
 
@@ -85,7 +116,11 @@ public class PoderFacadeREST extends AbstractFacade<Poder> {
     @Path("{id}")
     @Produces({"application/xml", "application/json"})
     public Poder find(@PathParam("id") PathSegment id) {
+<<<<<<< HEAD
+        entities.PoderPK key = getPrimaryKey(id);
+=======
         com.poder.Restful.PH.PoderPK key = getPrimaryKey(id);
+>>>>>>> 06b43fe11dc9f6596399ecfcf3e5ea6c342dc7b3
         return super.find(key);
     }
 
@@ -95,6 +130,29 @@ public class PoderFacadeREST extends AbstractFacade<Poder> {
     public List<Poder> findAll() {
         return super.findAll();
     }
+<<<<<<< HEAD
+
+    @GET
+    @Path("{from}/{to}")
+    @Produces({"application/xml", "application/json"})
+    public List<Poder> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
+        return super.findRange(new int[]{from, to});
+    }
+
+    @GET
+    @Path("countPower")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String countREST() {
+        return String.valueOf(super.count());
+    }
+
+    @Override
+    protected EntityManager getEntityManager() {
+        return em;
+    }
+    
+=======
+>>>>>>> 06b43fe11dc9f6596399ecfcf3e5ea6c342dc7b3
     @GET
     @Path("findAllPower")
     @Produces(MediaType.APPLICATION_JSON)
@@ -114,6 +172,9 @@ public class PoderFacadeREST extends AbstractFacade<Poder> {
         }
         return b;
     }
+<<<<<<< HEAD
+  
+=======
     
     @GET
     @Path("createPower")
@@ -149,6 +210,7 @@ public class PoderFacadeREST extends AbstractFacade<Poder> {
 //        }
 //    }
     
+>>>>>>> 06b43fe11dc9f6596399ecfcf3e5ea6c342dc7b3
     @GET
     @Path("findPowerByName")
     @Produces (MediaType.APPLICATION_JSON)
@@ -162,6 +224,9 @@ public class PoderFacadeREST extends AbstractFacade<Poder> {
         }
         return b;
     }
+<<<<<<< HEAD
+ }
+=======
             
     
     @GET
@@ -184,3 +249,4 @@ public class PoderFacadeREST extends AbstractFacade<Poder> {
     }
     
 }
+>>>>>>> 06b43fe11dc9f6596399ecfcf3e5ea6c342dc7b3
