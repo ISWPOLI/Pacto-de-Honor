@@ -1,9 +1,9 @@
 var ganadorBatalla;
 var golpeAlAire;
 var golpe_al_cuerpo;
-var funcionesBatalla={
+var funcionesBatalla = {
     //funcion que se encarga de cargar todos los elementos del campo de batalla
-    cargar:function(idPJ,idPC,caa){
+    cargar: function (idPJ, idPC, caa) {
         game.load.image('fondo', "../img/escenarios/escenariosSecundarios/nivel1.png");
 		game.load.spritesheet('personajeJugador', personajesBuenos[idPJ].rutaSprite, 200, 200);
 		game.load.image('avatarPersonajeJugador', personajesBuenos[idPJ].rutaAvatar);
@@ -18,17 +18,17 @@ var funcionesBatalla={
         game.load.spritesheet('impactoPersonalidadJugador', personajesBuenos[idPJ].rutaImpactoPersonalidad, 201, 160);
         game.load.spritesheet('impactoPersonalidadComputadora', personajesMalos[idPC].rutaImpactoPersonalidad, 161, 145);
         game.load.spritesheet('impactoPlagioComputadora', personajesMalos[idPC].rutaImpactoPlagio, 277, 277);
-        game.load.spritesheet('gamepad','../img/Componentes/joystick/gamepad_spritesheet.png',100,100);
+        game.load.spritesheet('gamepad', '../img/Componentes/joystick/gamepad_spritesheet.png', 100, 100);
         game.load.image('caja', boxes[caa].root);
         game.load.image('cajaOpen', boxes[caa].rootOpen);
         game.load.image('escudo1', '../img/componentes/batalla/escudo1.png');
         game.load.image('escudo2', '../img/componentes/batalla/escudo2.png');
-        game.load.audio('puñoalaire','../img/componentes/sonidos/EfectosDePelea/sonidogolpealaire.mp3');
-        game.load.audio('puñoalcuerpo','../img/componentes/sonidos/EfectosDePelea/sonidogolpealcuerpo.mp3');
+        game.load.audio('puñoalaire', '../img/componentes/sonidos/EfectosDePelea/sonidogolpealaire.mp3');
+        game.load.audio('puñoalcuerpo', '../img/componentes/sonidos/EfectosDePelea/sonidogolpealcuerpo.mp3');
 
     },
     //inicializa todos los estados de los sprites de los personajes 
-	iniciarSprite:function(sprite){
+	iniciarSprite: function (sprite) {
 		sprite.animations.add('quieto', [1], 10, true);
     	sprite.animations.add('correr', [6, 7, 8, 9, 11, 12, 13, 14], 10, true);
     	sprite.animations.add('punos', [16, 17, 18, 19], 7, true);

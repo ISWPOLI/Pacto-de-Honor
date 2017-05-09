@@ -1,10 +1,10 @@
 
-variablesCampoBatalla = {
-	 personajeJugador: null,//guarda el sprite del personaje elegido
-    personajeComputadora:null,//guarda el sprite del personaje asignado a un escenario
-    cursores:null,//crea cursores
-    counter:0,//lleva el tiempo de la partida
-   	ti:0,//muestra el avance del tiempo en segundos
+var variablesCampoBatalla = {
+    personajeJugador: null,//guarda el sprite del personaje elegido
+    personajeComputadora: null,//guarda el sprite del personaje asignado a un escenario
+    cursores: null,//crea cursores
+    counter: 0,//lleva el tiempo de la partida
+   	ti: 0,//muestra el avance del tiempo en segundos
    	danoH:null,//daño del heroe
     danoV:null,//daño del villano
     musicButton:null,
