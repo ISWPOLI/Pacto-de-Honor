@@ -1,4 +1,6 @@
 var ganadorBatalla;
+var golpeAlAire;
+var golpe_al_cuerpo;
 var funcionesBatalla={
     //funcion que se encarga de cargar todos los elementos del campo de batalla
     cargar:function(idPJ,idPC,caa){
@@ -21,6 +23,8 @@ var funcionesBatalla={
         game.load.image('cajaOpen', boxes[caa].rootOpen);
         game.load.image('escudo1', '../img/componentes/batalla/escudo1.png');
         game.load.image('escudo2', '../img/componentes/batalla/escudo2.png');
+        game.load.audio('puñoalaire','../img/componentes/sonidos/EfectosDePelea/sonidogolpealaire.mp3');
+        game.load.audio('puñoalcuerpo','../img/componentes/sonidos/EfectosDePelea/sonidogolpealcuerpo.mp3');
 
     },
     //inicializa todos los estados de los sprites de los personajes 
@@ -32,8 +36,11 @@ var funcionesBatalla={
     	sprite.animations.add('especial', [23, 24], 10, true);
     	sprite.animations.play('quieto');
 		game.physics.arcade.enable(sprite);
-		sprite.body.collideWorldBounds = true; 
+		sprite.body.collideWorldBounds = true;
+        golpeAlAire = game.add.audio('puñoalaire');
+        golpe_al_cuerpo = game.add.audio('puñoalcuerpo');
 	},
+    
     //Esta funcion se activa al dar click en el logo del poli y despliega el menu de pausa 
 	pausar:function(){
 		game.paused=true;
@@ -102,6 +109,7 @@ var funcionesBatalla={
             variablesCampoBatalla.personajeJugador.animations.play('punos');
             variablesCampoBatalla.personajeJugador.body.x+=1;
             variablesCampoBatalla.movH[1]=true;
+            golpeAlAire.play();
         }else{
             variablesCampoBatalla.personajeJugador.animations.play('quieto');
         }
@@ -185,6 +193,7 @@ var funcionesBatalla={
             variablesCampoBatalla.primerImpacto=false;
             funcionesBatalla.actualizarVida(vidaRojoJugador,variablesCampoBatalla.danoV[2]);
             funcionesBatalla.spriteImpactoPlagioComputadora();
+            golpe_al_cuerpo.play();
         }
 
     },
@@ -197,6 +206,7 @@ var funcionesBatalla={
         if(!variablesCampoBatalla.movV[0]){
             funcionesBatalla.actualizarVida(vidaRojoComputadora,variablesCampoBatalla.danoH[1]);
             funcionesBatalla.spriteImpactoJugador();
+            golpe_al_cuerpo.play();
         }
 
     },
@@ -209,6 +219,7 @@ var funcionesBatalla={
         if(!variablesCampoBatalla.movH[0]){
             funcionesBatalla.actualizarVida(vidaRojoJugador,variablesCampoBatalla.danoV[1]);
             funcionesBatalla.spriteImpactoComputadora();
+            golpe_al_cuerpo.play();
         }
     },
     /*Muestra el sprite de impacto del jugador en la poscicion del rival
@@ -253,12 +264,14 @@ var funcionesBatalla={
             funcionesBatalla.actualizarVida(vidaRojoJugador,danoV[0]);
             variablesCampoBatalla.movV[0]=false;
             funcionesBatalla.spriteImpactoComputadora();
+           
         }
         //si se resta vida a la computadora
         if(variablesCampoBatalla.movH[1]&&!variablesCampoBatalla.movV[0]){
             funcionesBatalla.actualizarVida(vidaRojoComputadora,variablesCampoBatalla.danoH[0]);
             variablesCampoBatalla.movH[0]=false;
             funcionesBatalla.spriteImpactoJugador();
+           
             
         }
      },

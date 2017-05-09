@@ -25,7 +25,7 @@ variablesCampoBatalla = {
     fondogame:null,//gurada la imagen del fond
     ataquePersonalidadJ:null,//guarda ataque del jugador
     escudo1:null, //guarda la ruta del escudo uno
-    escudo2:null//guarda la ruta del escudo dos
+    escudo2:null,//guarda la ruta del escudo dos
 };
 
 var boxGame = 7;
