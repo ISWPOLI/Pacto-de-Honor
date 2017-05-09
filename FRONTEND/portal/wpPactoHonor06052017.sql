@@ -1,7 +1,7 @@
 -- phpMyAdmin SQL Dump
 -- version 4.6.5.2
 -- https://www.phpmyadmin.net/
---
+-- update
 -- Servidor: localhost:8889
 -- Tiempo de generación: 06-05-2017 a las 18:22:01
 -- Versión del servidor: 5.6.35
