@@ -8,6 +8,7 @@ var l;
 var musicButton;
 var startButton;
 
+
 var seleccionpersonaje = function(game){};
 seleccionpersonaje.prototype = {
      preload: function(){
@@ -54,6 +55,11 @@ seleccionpersonaje.prototype = {
           }
           startButton = game.add.button(game.world.width / 2, 550, 'button', this.verbatalla, this, 2, 1, 0); // over, out, down, up
           startButton.anchor.set(0.5);
+
+          if(startButton==true){
+            pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba1');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba1('false');
+          }
      },
     
     verbatalla: function () {
