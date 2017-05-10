@@ -21,7 +21,7 @@ seleccionpersonaje.prototype = {
           game.load.spritesheet('leon', '../img/personajes/avatares/botonLeon.png', 125, 125);
           game.load.spritesheet('canario', '../img/personajes/avatares/botonCanario.png', 125, 125);
           game.load.spritesheet('ruisenor', '../img/personajes/avatares/botonRuiseñor.png', 125, 125);
-          game.load.spritesheet('raton', '../img/personajes/avatares/botonRatón.png', 125, 125);
+          game.load.spritesheet('raton', '../img/personajes/avatares/botonRaton.png', 125, 125);
           game.load.spritesheet('hormiga', '../img/personajes/avatares/botonHormiga.png', 125, 125);
           game.load.spritesheet('button', '../img/Componentes/botones/botonSeleccionar.png', 150, 40);
          
