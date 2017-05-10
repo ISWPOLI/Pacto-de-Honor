@@ -1,6 +1,6 @@
-
 variablesCampoBatalla = {
-	 personajeJugador: null,//guarda el sprite del personaje elegido
+    idNivel:null, //Guarda el id del nivel a crear
+	personajeJugador: null,//guarda el sprite del personaje elegido
     personajeComputadora:null,//guarda el sprite del personaje asignado a un escenario
     cursores:null,//crea cursores
     counter:0,//lleva el tiempo de la partida
@@ -12,8 +12,8 @@ variablesCampoBatalla = {
 	movV:null,//arreglo para saber que accion esta ejecutando el villano//[Defensa,ataqueNomal,ataquePersonalidad,ataquePlagio]
     ataquePlagio:null, //guarda el sprite del ataque plagio del villano
 	ataquePersonalidadC:null,//guarda el sprite del ataque de personalidad del villano
-	idPJ:"idPDos",//guarda el id del personaje del jugador
-	idPC:"idPDos",//guarda el id del personaje del mapa
+	idPJ:"idPUno",//guarda el id del personaje del jugador
+	idPC:null,//guarda el id del personaje del mapa
 	costoAtaqueJ:0,//el consumo de energia que causa el ataque
 	costoAtaqueC:0,//el consumo de energia que causa el ataque
 	costoPlagioC:0,//el consumo de energia que causa el ataque
@@ -28,10 +28,10 @@ variablesCampoBatalla = {
     escudo2:null//guarda la ruta del escudo dos
 };
 
-var boxGame = 7;
+var boxGame = 1;
 var caja;
 var openBox;
-var timeShowBox = 5;
+var timeShowBox = 3;
 var gameTime =70;
 var sendGift = true;
 
@@ -41,9 +41,9 @@ var batalla = {
 		console.log(variablesCampoBatalla);
 		this.preloadBar=this.add.sprite(this.game.world.centerX,this.game.world.centerY,'barraCarga');
 		this.load.setPreloadSprite(this.preloadBar);
-		boxGame =game.rnd.integerInRange(1, 8);		
-		timeShowBox = game.rnd.integerInRange(5,60);
-		funcionesBatalla.cargar(variablesCampoBatalla.idPJ,variablesCampoBatalla.idPC,boxGame);
+		//boxGame =game.rnd.integerInRange(1, 8);		
+		//timeShowBox = game.rnd.integerInRange(5,60);
+		funcionesBatalla.cargar(variablesCampoBatalla.idPJ, variablesCampoBatalla.idPC, boxGame, variablesCampoBatalla.idNivel);
 		//funcionesBatalla.cargar(idPJ,idPC);
         game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
 	},
@@ -249,20 +249,20 @@ var batalla = {
 			caja.x-=2;
 			caja.y-=3;
 		}
-		if(variablesCampoBatalla.ti == timeShowBox + 3){
+		if(variablesCampoBatalla.ti == timeShowBox + 5){
 			funcionesBatalla.hideOpenBox();
 
 		}
-		if (boxGame == 7 &&  variablesCampoBatalla.ti == timeShowBox + 8) {
-			danoH=personajesBuenos[idPJ].daño;
+		if (boxGame == 7 && !openBox.visible) {
+			variablesCampoBatalla.danoH=personajesBuenos[variablesCampoBatalla.idPJ].daño;
 			variablesCampoBatalla.personajeJugador.scale.setTo(1,1);
 		}
 		if (openBox.visible) {
-				if (boxGame == 1) {
+				if (boxGame == 1 && !sendGift) {
 					gameTime = gameTime + funcionesBatalla.giftbox();
 				};
-				if (boxGame == 2) {
-					energiaVerdeJugador.width = energiaVerdeJugador.width +15;
+				if (boxGame == 2 && !sendGift) {
+					energiaVerdeJugador.width = funcionesBatalla.giftlife(energiaVerdeJugador);
 				};
 				if (boxGame == 3 && !sendGift) {
 					vidaRojoJugador.width = funcionesBatalla.giftlife(vidaRojoJugador);
@@ -279,8 +279,8 @@ var batalla = {
 					energiaVerdeJugador.width = 0;
 				}
 				if (boxGame == 7) {
-					danoH = funcionesBatalla.getstrong(danoH);
-					personajeJugador.scale.setTo(1.5,1.5);
+					variablesCampoBatalla.danoH = funcionesBatalla.getstrong(variablesCampoBatalla.danoH);
+					variablesCampoBatalla.personajeJugador.scale.setTo(1.5,1.5);
 				}
 				if (boxGame == 8) {
 					var cbloodd = funcionesBatalla.fatality(vidaRojoJugador,vidaRojoComputadora);
