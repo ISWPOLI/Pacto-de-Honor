@@ -9,7 +9,7 @@ var boxes={
 	5:{"root":"../img/componentes/cajas/caja5.png","rootOpen":"../img/componentes/cajas/caja5explosion.png"},
 	6:{"root":"../img/componentes/cajas/caja6.png","rootOpen":"../img/componentes/cajas/caja6explosion.png"},
 	7:{"root":"../img/componentes/cajas/caja7.png","rootOpen":"../img/componentes/cajas/caja7explosion.png"},
-	8:{"root":"../img/componentes/cajas/caja8.png","rootOpen":"../img/componentes/cajas/caja8explosion.png"}
+	8:{"root":"../img/componentes/cajas/caja8.png","rootOpen":"../img/componentes/cajas/caja8explosion.png","fatalityBox":"../img/componentes/cajas/fatality.png"}
 }
 var boxesDes ={
 	"boxMistery":{

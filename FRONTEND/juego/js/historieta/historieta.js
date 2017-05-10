@@ -9,7 +9,7 @@ historieta.prototype = {
           game.scale.pageAlignVertically = true;
 
           game.load.spritesheet('historieta', '../img/Componentes/historieta/historieta.png', 800, 600);
-          game.load.spritesheet('button', '../img/Componentes/historieta/botonSaltar.png', 150, 40);
+          game.load.spritesheet('button', '../img/Componentes/botones/botonSaltar.png', 150, 40);
          game.load.audio('sonidos','../img/Componentes/sonidos/Historieta/historieta.mp3');  
           game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3')
      },

@@ -23,10 +23,10 @@ var rankings = function(game){};
             //Carga de imagen para el top 5
             game.load.image('top5', '../img/Componentes/Rankings/top5.png');
             //Carga de imagenes para los botones principales
-            game.load.spritesheet('botonDiario', '../img/Componentes/rankings/botonDiario.png', 192, 71);
-            game.load.spritesheet('botonSemanal', '../img/Componentes/rankings/botonSemanal.png', 192, 71);
-            game.load.spritesheet('botonPoli', '../img/Componentes/rankings/botonPoli.png', 192, 71);
-            game.load.spritesheet('botonGeneral', '../img/Componentes/rankings/botonGeneral.png', 192, 71);            
+            game.load.spritesheet('botonDiario', '../img/Componentes/botones/botonDiario.png', 192, 71);
+            game.load.spritesheet('botonSemanal', '../img/Componentes/botones/botonSemanal.png', 192, 71);
+            game.load.spritesheet('botonPoli', '../img/Componentes/botones/botonPoli.png', 192, 71);
+            game.load.spritesheet('botonGeneral', '../img/Componentes/botones/botonGeneral.png', 192, 71);            
             //Carga de imagenes para los cinco avatares
             game.load.image('avatarUno', jugadores[j1].rutaAvatar);
             game.load.image('avatarDos', jugadores[j2].rutaAvatar);
@@ -38,7 +38,7 @@ var rankings = function(game){};
         
         create: function(){
             musicButton = game.add.audio('sonidoBoton');
-            game.stage.backgroundColor = "#0060b2"; //Color de fondo
+            game.stage.backgroundColor = "#2451A6"; //Color de fondo
             game.add.text(game.width / 2, 50, "Rankings", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5); //Título de Rankings
             top5 = game.add.sprite(0, 230, 'top5'); //Imagen del top 5
             
@@ -97,16 +97,16 @@ var rankings = function(game){};
             ]; 
             
             //Se añaden los avatares de los jugadores
-            imgAvatar1 = game.add.image(210, 250, arregloJugadores[0].keyAvatar);
-            imgAvatar1.scale.setTo(0.6);
-            imgAvatar2 = game.add.image(210, 320, arregloJugadores[1].keyAvatar);
-            imgAvatar2.scale.setTo(0.6);
-            imgAvatar3 = game.add.image(210, 385, arregloJugadores[2].keyAvatar);
-            imgAvatar3.scale.setTo(0.6);
-            imgAvatar4 = game.add.image(210, 455, arregloJugadores[3].keyAvatar);
-            imgAvatar4.scale.setTo(0.6);
-            imgAvatar5 = game.add.image(210, 525, arregloJugadores[4].keyAvatar);
-            imgAvatar5.scale.setTo(0.6);
+            imgAvatar1 = game.add.image(200, 244, arregloJugadores[0].keyAvatar);
+            imgAvatar1.scale.setTo(0.3);
+            imgAvatar2 = game.add.image(200, 313, arregloJugadores[1].keyAvatar);
+            imgAvatar2.scale.setTo(0.3);
+            imgAvatar3 = game.add.image(200, 382, arregloJugadores[2].keyAvatar);
+            imgAvatar3.scale.setTo(0.3);
+            imgAvatar4 = game.add.image(200, 450, arregloJugadores[3].keyAvatar);
+            imgAvatar4.scale.setTo(0.3);
+            imgAvatar5 = game.add.image(200, 520, arregloJugadores[4].keyAvatar);
+            imgAvatar5.scale.setTo(0.3);
             
             //textoRank, textoFacultad y textoUniversidad son las tablas de datos que se muestran en pantalla
             textoRank = game.add.text(320, 265, "", { font: "18px Roboto", fill: "#ffffff", tabs: [200]});

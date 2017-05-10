@@ -11,17 +11,13 @@ var perfilJugador = function(game){};
             game.scale.pageAlignHorinzontally = true;
             game.scale.pageAlignVertically = true;
             game.load.image('avatar','../img/Componentes/perfilJugador/avatar.png');
-		    //game.load.image('AndresGallo','images/AndresGallo.png');
-		    //game.load.image('CataCierva','images/CataCierva.png');
-		    //game.load.image('AndresZorro','images/AndresZorro.jpg');
-		    game.load.spritesheet('botonVolver', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
-            game.load.spritesheet('boton-personaje', '../img/Componentes/perfilJugador/boton-personaje.png');
-            game.load.spritesheet('boton-jefes', '../img/Componentes/perfilJugador/boton-jefes.png');
-            game.load.spritesheet('boton-trofeo', '../img/Componentes/perfilJugador/boton-trofeo.png');
-            game.load.spritesheet('boton-alfanumerico', '../img/Componentes/perfilJugador/boton-alfanumerico.png');
+		    game.load.spritesheet('atras', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
+            game.load.spritesheet('boton-personaje', '../img/Componentes/botones/boton-personaje.png');
+            game.load.spritesheet('boton-jefes', '../img/Componentes/botones/boton-jefes.png');
+            game.load.spritesheet('boton-trofeo', '../img/Componentes/botones/boton-trofeo.png');
+            game.load.spritesheet('boton-alfanumerico', '../img/Componentes/botones/boton-alfanumerico.png');
             game.load.audio('sonidos','../img/Componentes/sonidos/perfilDeUsuario/perfilDelJugador1.mp3');
-             game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
-            //game.load.image('personajes', 'images/personajes.png');		
+            game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');	
         },
 
         create : function (){
@@ -29,7 +25,7 @@ var perfilJugador = function(game){};
             game.stage.backgroundColor = "#2451A6";
 		    game.add.sprite(50, 50,'avatar');
 		
-            game.add.button(0, 0,'botonVolver', this.verNavegacion, 1, 1, 0, 2);
+            game.add.button(5, 5,'atras', this.verNavegacion, 1, 1, 0, 2);
             game.add.button(90, 290,'boton-personaje', null, 0, 0, 0, 0);
             game.add.button(450, 290,'boton-jefes', null, 0, 0, 0, 0);
             game.add.button(90, 450,'boton-trofeo', this.verLogros, 0, 0, 0, 0);

@@ -1,19 +1,13 @@
 var speedMult = 0.2;
 var friction = 0.99;
 var nameBox;
-// Nombres personajes Pacto de honor
-//var nameBox = ["Mi KuPlagio", "Mi LifePlagio ", "Mi SkillPlagio ", "The originalPlagio ", "Mi HitBackground  \n“Es poseedor de la experiencia, “Campeón de habilidades”", "Trendy  \n“Este logro indica que eres súper popular”", "The Richest  \n“Podrás presumir tu fortuna”", "The Unlocker \n“Eres el encargado para recuperar a todos los héroes”"];
-var boxloocked = [false,false,false,false,false,false,false,false,false];
+ var boxloocked = [false,false,false,false,false,false,false,false,false];
 var description;
 var character;
 var apodo;
 var startButton;
 
-var moneyLogros = 0;
-var rankingLogros = 0;
-var timeplayedLogros =0;
-var allHeros = false;
-var xpLogros = 0;
+
 var imgDesBox;
 
 // Descripción de los logros
@@ -27,7 +21,7 @@ var cajaMisteriosa = function(game){};
             game.scale.pageAlignVertically = true;
             
             // Se carga una imagen transparente para colocar detras de las imagenes que apareceran en el Scrolling
-            game.load.image("transp", "../img/Componentes/logros/transp.png");
+            game.load.image("transp", "../img/personajes/avatares/transp.png");
             // Se cargan las imagenes de los 10 logros
             game.load.spritesheet(nameBox[0], boxes[1].root);
             game.load.spritesheet(nameBox[1], boxes[2].root);
@@ -50,11 +44,11 @@ var cajaMisteriosa = function(game){};
    
     
 
-            game.load.spritesheet('atras', '../img/Componentes/logros/atras.png');
+            game.load.spritesheet('atras', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
 
   
             // Se carga el sprite del boton seleccionar
-            game.load.spritesheet('button', '../img/Componentes/logros/Spritebloq.png', 150, 40);   
+            game.load.spritesheet('button', '../img/Componentes/botones/Spritebloq.png', 150, 40);   
         },
 
         create: function(){
@@ -130,121 +124,13 @@ var cajaMisteriosa = function(game){};
                               
 
     
-          game.add.button(0, 0,'atras', this.verPerfil, 1, 1, 0, 2);
+          game.add.button(5, 5,'atras', this.verCaja, 1, 1, 0, 2);
           //metdo que verica si esta o no bloqueado un logro de ser asi llama al metodo del logro para validar si cumple con los requsitos de desbloqueo
-          function isUnloocked(){
-           for(var i = 0; i < boxloocked.length; i++){
-            if(boxloocked[i]){
-              if(i == 0){
-                isMikuplagio(i);
-                }
-              else if (i == 1) {
-                isMiLifePlagio(i);
-              }  
-              else if (i == 2) {
-                isMiSkillPlagio(i);
-              }
-              else if (i == 3) {
-                isTheOriginalPlagio(i);
-              }
-              else if (i == 4) {
-                isMiHitckGround(i);
-              }
-              else if (i == 5) {
-                isMyMater(i);
-              }
-              else if (i == 6) {
-                isTheRichest(i);
-              }
-              else if (i == 7) {
-                isTheUnloocker(i);
-              }
-              else if (i == 8) {
-                isTheAList(i);
-              }
-              else if (i == 9) {
-                is5InaRow(i);
-                isMyMater(5);
-              }
-              else{}
-
-
-            }
-
-          }
-
-        }
-        function recompensa(exp,mon){
-          xpLogros = xpLogros + exp;
-          moneyLogros = moneyLogros + mon;
-        }
-        function isMikuplagio(i){
-          var timeHours = timeplayedLogros/60;
-          if (timeHours>=100) {
-            recompensa(20,2500);
-            boxloocked[i]= false;
-          };
-
-        }
-        function isMiLifePlagio(i){
-          if (rankingLogros<= 5) {
-            recompensa(20,1000);
-            boxloocked[i]= false;
-          };
-
-        }
-        function isMiSkillPlagio(i){
-          var logrosdes = 0;
-          for(var j = 0; j < boxloocked.length; j++){
-            if (!boxloocked[j]) {
-              logrosdes++;
-            };
-          }
-          if (((logrosdes*100)/boxloocked.length)>=70) {
-            recompensa(15,800);
-            boxloocked[i] =false;
-
-          };
-        }
-        function isTheOriginalPlagio(i){
-
-          recompensa(5,1000);
-          //por implentar no es de servicios Rest
-        }
-        function isMiHitckGround(i){
-          recompensa(20,1000);
-          //por implentar no es de Rest
-        }
-        function isTheUnloocker(i){
-          if (allHeros) {
-            recompensa(10,200);
-            boxloocked[i] = false;
-          };
-        }
-        function isTheRichest(i){
-          if (moneyLogros >=1000000) {
-            recompensa(30,300);
-            boxloocked[i] = false;
-          };
-        }
-        function isTheAList(i){
-          if (rankingLogros ==1) {
-            boxloocked[i] = false;
-          };
-        }
-        function is5InaRow(i){
-          recompensa(50,4000);
-          //por implentar falta que todo un mundo este implentado
-        }
-        function isMyMater(i){
-          if (xpLogros>=1000) {
-            recompensa(0,4000);
-            boxloocked[i] = false;
-          };
-        }
+      
+     
       },
 
-        verPerfil: function(){
+        verCaja: function(){
             game.state.start("navegacion");
         },
         

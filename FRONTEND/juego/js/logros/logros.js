@@ -9,10 +9,15 @@ var character;
 var apodo;
 var musicButton;
 var startButton;
+//catidad de Monedas del Jugador
 var moneyLogros = 10000;
+//posicion del ranking del jugador
 var rankingLogros = 1;
+//Tiempo de juego del jugador
 var timeplayedLogros =7000;
+//Varible que permite identificar si el jugador tiene o no todos los heroes
 var allHeros = false;
+//experiencia de juego del jugador
 var xpLogros =100;
 // Descripción de los logros
 var descriptionsl = [ "Para adquirir este codiciado objetivo debes\nacumular 2 horas de juego ¿Cuestión de tiempo no? \nPues para obtener el logro debes realizar dicho\nproceso con cada uno de los niveles de cada mundo. \nAl final sólo queda un dilema, ¿termino una carrera, o el juego?",
@@ -32,7 +37,7 @@ var logros = function(game){};
             game.scale.pageAlignHorizontally = true;
             game.scale.pageAlignVertically = true; 
             // Se carga una imagen transparente para colocar detras de las imagenes que apareceran en el Scrolling
-            game.load.image("transp", "../img/Componentes/logros/transp.png");
+            game.load.image("transp", "../img/personajes/avatares/transp.png");
             // Se cargan las imagenes de los 10 logros
             game.load.spritesheet('Mi KuPlagio', '../img/Componentes/logros/KuPlagio.png');
             game.load.spritesheet('Mi LifePlagio', '../img/Componentes/logros/LifePlagio.png');
@@ -44,7 +49,6 @@ var logros = function(game){};
             game.load.spritesheet('The Unlocker', '../img/Componentes/logros/Unlocker.png');
             game.load.spritesheet('The A – List', '../img/Componentes/logros/Alist.png');
             game.load.spritesheet('5 in a row', '../img/Componentes/logros/FiveRow.png');
-            game.load.spritesheet('atras', '../img/Componentes/logros/atras.png');
             game.load.image('Mi KuPlagioLoock', '../img/Componentes/logros/KuPlagioLoock.png');
             game.load.image('Mi LifePlagioLoock', '../img/Componentes/logros/LifePlagioLoock.png');
             game.load.image('Mi SkillPlagioLoock', '../img/Componentes/logros/SkillPlagioLoock.png');
@@ -57,7 +61,7 @@ var logros = function(game){};
             game.load.image('5 in a rowLoock', '../img/Componentes/logros/FiveRowLoock.png');
             game.load.spritesheet('botonVolver', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
             // Se carga el sprite del boton seleccionar
-            game.load.spritesheet('button', '../img/Componentes/logros/Spritebloq.png', 150, 40); 
+            game.load.spritesheet('button', '../img/Componentes/botones/Spritebloq.png', 150, 40); 
             
             game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
         },
@@ -110,7 +114,7 @@ var logros = function(game){};
           // Se agrega un boton con posiciones especificas, con diferentes estados (Cargados previamente en la funcion onload)
           startButton = game.add.button(game.world.width / 2, 540, 'button', null, this, 2, 1, 0); // over, out, down, up
           startButton.anchor.set(0.5);
-          game.add.button(0, 0,'botonVolver', this.verPerfil, 1, 1, 0, 2);
+          game.add.button(5, 5,'botonVolver', this.verPerfil, 1, 1, 0, 2);
           //metdo que verica si esta o no bloqueado un logro de ser asi llama al metodo del logro para validar si cumple con los requsitos de desbloqueo
           function isUnloocked(){
            for(var i = 0; i < Logroslooked.length; i++){
@@ -132,10 +136,12 @@ var logros = function(game){};
             }
           }
         }
+        //funcion encargada de dar las recompensas de los logros
         function recompensa(exp,mon){
           xpLogros = xpLogros + exp;
           moneyLogros = moneyLogros + mon;
         }
+        //funcion que comprueba que el jugador lleve porlomenos 100 horas jugadas
         function isMikuplagio(i){
           var timeHours = timeplayedLogros/60;
           if (timeHours>=100) {
@@ -144,6 +150,7 @@ var logros = function(game){};
               pruebasPsicotecnicas.setPrueba6(true);
           };
         }
+        //funcion que Identifica si el jugador esta entre el top 5
         function isMiLifePlagio(i){
           if (rankingLogros<= 5) {
             recompensa(20,1000);
@@ -151,6 +158,7 @@ var logros = function(game){};
               pruebasPsicotecnicas.setPrueba7(true);
           };
         }
+        //funcion que identifica si el jugador ha desbloqueado el  70% como minimo de los logros
         function isMiSkillPlagio(i){
           var logrosdes = 0;
           for(var j = 0; j < Logroslooked.length; j++){
@@ -164,16 +172,19 @@ var logros = function(game){};
               pruebasPsicotecnicas.setPrueba8(true);
           };
         }
+        //por implementar
         function isTheOriginalPlagio(i){
           recompensa(5,1000);
             pruebasPsicotecnicas.setPrueba9(true);
           //por implentar no es de servicios Rest
         }
+        //por implementar
         function isMiHitckGround(i){
           recompensa(20,1000);
             pruebasPsicotecnicas.setPrueba10(true);
           //por implentar no es de Rest
         }
+        //funcion que comprueba que si el jugaro tienen o no todos los heroes
         function isTheUnloocker(i){
           if (allHeros) {
             recompensa(10,200);
@@ -181,6 +192,7 @@ var logros = function(game){};
               pruebasPsicotecnicas.setPrueba13(true);
           };
         }
+        //funcion que comprueba si el jugador tiene porlomenos 1000000 monedas
         function isTheRichest(i){
           if (monedas >=1000000) {
             recompensa(30,300);
@@ -188,16 +200,19 @@ var logros = function(game){};
               pruebasPsicotecnicas.setPrueba12(true);
           };
         }
+        //funcion que Identifica si el jugador esta entre el top 1
         function isTheAList(i){
           if (rankingLogros ==1) {
             Logroslooked[i] = false;
           };
         }
+        //por Implementar
         function is5InaRow(i){
           recompensa(50,4000);
             pruebasPsicotecnicas.setPrueba14(true);
           //por implentar falta que todo un mundo este implentado
         }
+        //funcion que comprueba que el jugador tenga porlomenos 1000 de experiencia
         function isMyMater(i){
           if (xpLogros>=1000) {
             recompensa(0,4000);
