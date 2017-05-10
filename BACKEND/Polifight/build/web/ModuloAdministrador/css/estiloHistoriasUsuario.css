@@ -1,0 +1,14 @@
+@charset "utf-8";
+.resaltar {
+	color: #FFF;
+	background-color: #3E55CA;
+	background-repeat: repeat-x;
+	background-position: center;
+	text-align: center;
+	display: block;
+	padding: 10px;
+	background-image: none;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: bold;
+}
