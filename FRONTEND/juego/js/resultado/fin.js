@@ -16,7 +16,7 @@ var fin = {
     create: function(){
 		var resultado;
 		var color;
-		if(ganadorBatalla){
+		if(!ganadorBatalla){
 			resultado = "GANASTE";
 			color = {fill:'#01DF01',font: '40px Arial'};
 		}else{

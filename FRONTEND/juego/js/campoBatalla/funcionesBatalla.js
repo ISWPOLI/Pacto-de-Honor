@@ -3,8 +3,13 @@ var golpeAlAire;
 var golpe_al_cuerpo;
 var funcionesBatalla = {
     //funcion que se encarga de cargar todos los elementos del campo de batalla
+<<<<<<< HEAD
     cargar: function (idPJ, idPC, caa) {
         game.load.image('fondo', "../img/escenarios/escenariosSecundarios/nivel1.png");
+=======
+    cargar:function(idPJ, idPC, caa, idNivel){
+        game.load.image('fondo', niveles[idNivel].fondo);
+>>>>>>> master
 		game.load.spritesheet('personajeJugador', personajesBuenos[idPJ].rutaSprite, 200, 200);
 		game.load.image('avatarPersonajeJugador', personajesBuenos[idPJ].rutaAvatar);
 		game.load.spritesheet('personajeComputadora', personajesMalos[idPC].rutaSprite, 200, 200);
@@ -20,13 +25,21 @@ var funcionesBatalla = {
         game.load.spritesheet('impactoPlagioComputadora', personajesMalos[idPC].rutaImpactoPlagio, 277, 277);
         game.load.spritesheet('gamepad', '../img/Componentes/joystick/gamepad_spritesheet.png', 100, 100);
         game.load.image('caja', boxes[caa].root);
-        game.load.image('cajaOpen', boxes[caa].rootOpen);
         game.load.image('escudo1', '../img/componentes/batalla/escudo1.png');
         game.load.image('escudo2', '../img/componentes/batalla/escudo2.png');
+<<<<<<< HEAD
         game.load.audio('puñoalaire', '../img/componentes/sonidos/EfectosDePelea/sonidogolpealaire.mp3');
         game.load.audio('puñoalcuerpo', '../img/componentes/sonidos/EfectosDePelea/sonidogolpealcuerpo.mp3');
 
+=======
+         if (caa == 8) {
+             game.load.image('cajaOpen', boxes[caa].fatalityBox);
+         }else{
+             game.load.image('cajaOpen', boxes[caa].rootOpen);
+         }
+>>>>>>> master
     },
+    
     //inicializa todos los estados de los sprites de los personajes 
 	iniciarSprite: function (sprite) {
 		sprite.animations.add('quieto', [1], 10, true);
@@ -379,16 +392,22 @@ var funcionesBatalla = {
             variablesCampoBatalla.movV[1]=true;
         }
     },
+    /*Con esta funcion se muestra la caja misteriosa
+    */
      showBox:function(){
                if (!caja.visible) {
                 caja.visible = true;
                };
         },
+    /*Con esta funcion se oculta la caja misteriosa
+    */
      hideBox:function(){
                if (caja.visible) {
                 caja.visible = false;
                };
         },
+    /*Con esta funcion se verifica si el usuario atrapo o no la caja misteriosa
+    */
     catchedBox:function(){
         caja.visible = false;
         if (!openBox.visible) {
@@ -396,44 +415,24 @@ var funcionesBatalla = {
             
         }    
     },
-    hideOpenBox:function(){
-               if (openBox.visible) {
-                openBox.visible = false;
-               };
-
-        },
-    giftbox:function(){
-        return 20;
-        },
-         showBox:function(){
-               if (!caja.visible) {
-                caja.visible = true;
-               };
-        },
-     hideBox:function(){
-               if (caja.visible) {
-                caja.visible = false;
-               };
-        },
-    catchedBox:function(){
-        caja.visible = false;
-        if (!openBox.visible) {
-            openBox.visible =true;
-            
-        }    
-    },
+    /*Con esta funcion se oculta la caja misteriosa abierta
+    */
     hideOpenBox:function(){
                if (openBox.visible) {
                 openBox.visible = false;
                };
 
     },
+    /*Con esta funcion  la caja misteriosa da 20 segundos mas
+    */
     giftbox:function(){
         return 20;
     },
+     /*Con esta funcion  la caja misteriosa da vida al personaje del jugador
+    */
     giftlife:function(life){
-        if (life.width<200) {
-            if (life.width + 40 > 200) {
+        if (life.width<=200) {
+            if (life.width + 40 >= 200) {
                 return 200;
             }
             else{
@@ -441,33 +440,35 @@ var funcionesBatalla = {
             }
         }
         else{
-            return 0;
+            return 200;
         }
     },
-    steallisteallife(life){
+     /*Con esta funcion  la caja misteriosa roba vida del enemigo 
+    */
+    steallife(life){
         var vida = (life.width*20)/100;
         return life.width-vida;
     },
+     /*Con esta funcion  la caja misteriosa cambia de vida
+    */
     changelife(ulife,cpulife){
         var blood = [ulife.width,cpulife.width];
         return blood;
     },
+     /*Con esta funcion  la caja misteriosa deja con 1% de la vida a los dos personajes
+    */
     fatality(ulife,cpulife){
         fatalityu = (ulife.width*1)/100;
         fatalitycpu = (cpulife.width*1)/100;
         newlife =[fatalityu,fatalitycpu];
         return newlife;
     },
-    exhausted(){
-        if (power.inputEnabled) {
-            return false;
-        };
-
-    },
+     /*Con esta funcion  la caja misteriosa da mas daño al pj
+    */
     getstrong(dano){
         var newStrong = [1,1];
         for (var i = dano.length - 1; i >= 0; i--) {
-            newStrong[i] = dano[i]*1.5;
+            newStrong[i] = dano[i]*8;
         };
         return newStrong;
     },

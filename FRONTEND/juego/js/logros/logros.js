@@ -9,10 +9,15 @@ var character;
 var apodo;
 var musicButton;
 var startButton;
+//catidad de Monedas del Jugador
 var moneyLogros = 10000;
+//posicion del ranking del jugador
 var rankingLogros = 1;
+//Tiempo de juego del jugador
 var timeplayedLogros =7000;
+//Varible que permite identificar si el jugador tiene o no todos los heroes
 var allHeros = false;
+//experiencia de juego del jugador
 var xpLogros =100;
 // Descripción de los logros
 var descriptionsl = [ "Para adquirir este codiciado objetivo debes\nacumular 2 horas de juego ¿Cuestión de tiempo no? \nPues para obtener el logro debes realizar dicho\nproceso con cada uno de los niveles de cada mundo. \nAl final sólo queda un dilema, ¿termino una carrera, o el juego?",
@@ -131,10 +136,12 @@ var logros = function(game){};
             }
           }
         }
+        //funcion encargada de dar las recompensas de los logros
         function recompensa(exp,mon){
           xpLogros = xpLogros + exp;
           moneyLogros = moneyLogros + mon;
         }
+        //funcion que comprueba que el jugador lleve porlomenos 100 horas jugadas
         function isMikuplagio(i){
           var timeHours = timeplayedLogros/60;
           if (timeHours>=100) {
@@ -143,6 +150,7 @@ var logros = function(game){};
               pruebasPsicotecnicas.setPrueba6(true);
           };
         }
+        //funcion que Identifica si el jugador esta entre el top 5
         function isMiLifePlagio(i){
           if (rankingLogros<= 5) {
             recompensa(20,1000);
@@ -150,6 +158,7 @@ var logros = function(game){};
               pruebasPsicotecnicas.setPrueba7(true);
           };
         }
+        //funcion que identifica si el jugador ha desbloqueado el  70% como minimo de los logros
         function isMiSkillPlagio(i){
           var logrosdes = 0;
           for(var j = 0; j < Logroslooked.length; j++){
@@ -163,16 +172,19 @@ var logros = function(game){};
               pruebasPsicotecnicas.setPrueba8(true);
           };
         }
+        //por implementar
         function isTheOriginalPlagio(i){
           recompensa(5,1000);
             pruebasPsicotecnicas.setPrueba9(true);
           //por implentar no es de servicios Rest
         }
+        //por implementar
         function isMiHitckGround(i){
           recompensa(20,1000);
             pruebasPsicotecnicas.setPrueba10(true);
           //por implentar no es de Rest
         }
+        //funcion que comprueba que si el jugaro tienen o no todos los heroes
         function isTheUnloocker(i){
           if (allHeros) {
             recompensa(10,200);
@@ -180,6 +192,7 @@ var logros = function(game){};
               pruebasPsicotecnicas.setPrueba13(true);
           };
         }
+        //funcion que comprueba si el jugador tiene porlomenos 1000000 monedas
         function isTheRichest(i){
           if (monedas >=1000000) {
             recompensa(30,300);
@@ -187,16 +200,19 @@ var logros = function(game){};
               pruebasPsicotecnicas.setPrueba12(true);
           };
         }
+        //funcion que Identifica si el jugador esta entre el top 1
         function isTheAList(i){
           if (rankingLogros ==1) {
             Logroslooked[i] = false;
           };
         }
+        //por Implementar
         function is5InaRow(i){
           recompensa(50,4000);
             pruebasPsicotecnicas.setPrueba14(true);
           //por implentar falta que todo un mundo este implentado
         }
+        //funcion que comprueba que el jugador tenga porlomenos 1000 de experiencia
         function isMyMater(i){
           if (xpLogros>=1000) {
             recompensa(0,4000);
