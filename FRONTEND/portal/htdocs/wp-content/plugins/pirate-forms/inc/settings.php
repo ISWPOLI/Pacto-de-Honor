@@ -490,7 +490,12 @@ function pirate_forms_admin() {
 
 							<h4><?php esc_html_e( 'Are you enjoying Pirate Forms?', 'pirate-forms' ); ?></h4>
 
-							<p class="review-link"><?php echo sprintf( esc_html__( 'Rate our plugin on %1$s WordPress.org %2$s. We\'d really appreciate it!', 'pirate-forms' ), '<a href="https://wordpress.org/support/view/plugin-reviews/pirate-forms" target="_blank" rel="nofollow"> ', '</a>' ); ?></p>
+							<p class="review-link">
+								<?php
+								/* translators: link to WordPress.org repo for PirateForms */
+								echo sprintf( esc_html__( 'Rate our plugin on %1$s WordPress.org %2$s. We\'d really appreciate it!', 'pirate-forms' ), '<a href="https://wordpress.org/support/view/plugin-reviews/pirate-forms" target="_blank" rel="nofollow"> ', '</a>' );
+								?>
+							</p>
 
 							<p><span class="dashicons dashicons-star-filled"></span><span
 										class="dashicons dashicons-star-filled"></span><span
@@ -499,7 +504,12 @@ function pirate_forms_admin() {
 										class="dashicons dashicons-star-filled"></span></p>
 
 							<p>
-								<small><?php echo sprintf( esc_html__( 'If you want a more complex Contact Form Plugin please check %1$s this link %2$s.', 'pirate-forms' ), '<a href="http://www.codeinwp.com/blog/best-contact-form-plugins-wordpress/" target="_blank" >', '</a>' ); ?></small>
+								<small>
+									<?php
+									/* translators: link to blog article about contact form plugins */
+									echo sprintf( esc_html__( 'If you want a more complex Contact Form Plugin please check %1$s this link %2$s.', 'pirate-forms' ), '<a href="http://www.codeinwp.com/blog/best-contact-form-plugins-wordpress/" target="_blank" >', '</a>' );
+									?>
+								</small>
 							</p>
 						</div>
 
