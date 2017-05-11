@@ -205,7 +205,7 @@
     margin: 0 auto;
 }
 
-.fl-row-full-height.fl-row-align-center .fl-col-group:not(.fl-col-group-equal-height) {	
+.fl-builder-ie-11 .fl-row-full-height.fl-row-align-center .fl-col-group:not(.fl-col-group-equal-height) {	
 	display: flex;
 	align-items: center;
 	justify-content: center;

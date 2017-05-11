@@ -278,6 +278,22 @@ final class FLUpdater {
 	}
 
 	/**
+	 * Renders available subscriptions and downloads.
+	 *
+	 * @since 1.10
+	 * @param object $subscription
+	 * @return void
+	 */
+	static public function render_subscriptions( $subscription )
+	{
+		if ( ! $subscription->active || ! $subscription->domain->active || ! isset( $subscription->downloads ) || isset( $subscription->error ) ) {
+			return;
+		}
+		
+		include FL_UPDATER_DIR . 'includes/subscriptions.php';
+	}
+
+	/**
 	 * Static method for getting the subscription license key.
 	 *
 	 * @since 1.0

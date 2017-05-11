@@ -7,6 +7,8 @@ class wpdevart_lightbox_database_params{
 	
 	public $installed_options; // All standard options for Lightbox Popup
 
+	/*################################## Construct function #########################################*/
+		
 	function __construct(){
 		
 		$this->installed_options=array(
@@ -24,7 +26,7 @@ class wpdevart_lightbox_database_params{
 				"popup_initial_height"						=> "300",
 				
 				"popup_youtube_width"						=> "640",
-				"popup_youtube_height"						=> "408",
+				"popup_youtube_height"						=> "410",
 				
 				"popup_vimeo_width"							=> "500",
 				"popup_vimeo_height"						=> "410",
@@ -46,7 +48,7 @@ class wpdevart_lightbox_database_params{
 				"control_buttons_show"						=> "true",
 				"control_buttons_show_in_content"			=> "true",
 				
-				"control_buttons_height"					=> "42",
+				"control_buttons_height"					=> "40",
 				"control_buttons_line_bg_color"				=> "#000000",
 				"control_button_prev_img_src"				=>  wpdevart_lightbox_plugin_url."images/contorl_buttons/prev.png",
 				"control_button_prev_hover_img_src"			=>  wpdevart_lightbox_plugin_url."images/contorl_buttons/prev_hover.png",
@@ -73,7 +75,7 @@ class wpdevart_lightbox_database_params{
 				"information_panel_show"					=> "true",
 				"information_panel_show_in_content"			=> "true",
 				"information_panel_bg_color"				=> "#000000",
-				"information_panel_default_transparency"	=> "80",
+				"information_panel_default_transparency"	=> "75",
 				"information_panel_hover_trancparency"		=> "100",
 				"information_panel_count_image_after_text"	=> "Image",
 				"information_panel_count_image_middle_text"	=> "of",
@@ -89,8 +91,8 @@ class wpdevart_lightbox_database_params{
 				"information_panel_desc_show_if_not"		=> "true",
 				"information_panel_text_for_no_caption"		=> "No Caption",
 				
-				"information_panel_title_padding_left"		=> "4",
-				"information_panel_title_padding_right"		=> "4",
+				"information_panel_title_padding_left"		=> "5",
+				"information_panel_title_padding_right"		=> "5",
 				"information_panel_title_font_size"			=> "15",
 				"information_panel_title_show_if_not"		=> "true",
 				"information_panel_text_for_no_title"		=> "No Title",
