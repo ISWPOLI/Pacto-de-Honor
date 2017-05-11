@@ -144,7 +144,8 @@ final class FLBuilderLoop {
 
 		
 	/**
-	 * Add rewrite rules for custom pagination url to avoid conflict with the default paged param in WP
+	 * Add rewrite rules for custom pagination that allows post modules
+	 * on the same page to be paged independently.
 	 *
 	 * @since 1.9.5
 	 * @return void
@@ -156,12 +157,8 @@ final class FLBuilderLoop {
 			add_rewrite_rule( 'paged-'. $x .'/?([0-9]{1,})/?$', 'index.php?&flpaged'. $x .'=$matches[1]', 'top');
 			add_rewrite_rule( '(.?.+?)/paged-'. $x .'/?([0-9]{1,})/?$', 'index.php?pagename=$matches[1]&flpaged'. $x .'=$matches[2]', 'top');
 			add_rewrite_rule( '([^/]+)/paged-'. $x .'/?([0-9]{1,})/?$', 'index.php?name=$matches[1]&flpaged'. $x .'=$matches[2]', 'top');
-
 			add_rewrite_tag( "%flpaged{$x}%", '([^&]+)');
 		}
-
-		// Flush the rewrite rules so it would take effect
-		flush_rewrite_rules();
 	}
 
 	/**

@@ -1828,7 +1828,7 @@ final class FLBuilder {
 		$rendered_settings = self::render_settings(array(
 			'class' 	=> 'fl-builder-module-settings fl-builder-'. $type .'-settings',
 			'attrs' 	=> 'data-node="'. $node_id .'" data-parent="'. $parent_id .'" data-type="'. $type .'"',
-			'title' 	=> sprintf( '%s ' . __( 'Settings', 'fl-builder' ), $module->name ),
+			'title' 	=> sprintf( __( '%s Settings', 'fl-builder' ), $module->name ),
 			'tabs'  	=> apply_filters( 'fl_builder_render_module_settings', $module->form, $module ),
 			'resizable' => true
 		), $settings);
