@@ -262,7 +262,15 @@ var personajesMalos={
 			     "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
 			     "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
-    "idPTreinta":{"nombre":"Ana y Sara Abejas","rutaSprite":"../img/personajes/personajesMalos/abeja1.png",
+    "idPTreinta":{"nombre":"Ana Abeja","rutaSprite":"../img/personajes/personajesMalos/abeja1.png",
+                "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
+			    "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/Ana Sara PERSONALIDAD.png",
+			    "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
+			    "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
+			    "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
+			    "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+    
+    "idPTreintax":{"nombre":"Sara Abeja","rutaSprite":"../img/personajes/personajesMalos/abeja2.png",
                 "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
 			    "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/Ana Sara PERSONALIDAD.png",
 			    "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",

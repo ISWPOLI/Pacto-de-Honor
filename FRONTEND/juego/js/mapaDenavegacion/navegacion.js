@@ -53,6 +53,9 @@ var navegacion = function(game){};
         game.load.spritesheet('botonAmigos', '../img/Componentes/navegacionMapa/botonAmigos.png', 62, 62);
         game.load.spritesheet('botonPerfil', '../img/Componentes/navegacionMapa/botonPerfil.png', 62, 62);
         game.load.spritesheet('botonRanking', '../img/Componentes/navegacionMapa/botonRanking.png', 62, 62);
+        game.load.spritesheet('botonSonido', '../img/Componentes/navegacionMapa/botonSonido.png', 62, 62);
+        game.load.spritesheet('botonCerrarSesion', '../img/Componentes/navegacionMapa/botonCerrarSesion.png', 62, 62);
+        game.load.spritesheet('botonAjustes', '../img/Componentes/navegacionMapa/botonAjustes.png', 62, 62);
         //game.load.spritesheet('botonCajaSorpresa', '../img/Componentes/cajas/cajam.png', 132, 216);
         game.load.spritesheet('botonCajaSorpresa', '../img/Componentes/navegacionMapa/cajanegra.png', 62, 62);
         game.load.spritesheet('botonCompraPersonajes', '../img/Componentes/navegacionMapa/botonCompraPersonajes.png', 62, 62);
@@ -69,7 +72,13 @@ var navegacion = function(game){};
         game.add.sprite(0, 0, 'fondo');
         game.add.sprite(80, 10, 'monedas');
 
-        botonCreditos = game.add.button(735, 5, 'botonCreditos', this.verCreditos, 1, 1, 0, 2);
+        botonCreditos = game.add.button(735, 70, 'botonCreditos', this.verCreditos, 1, 1, 0, 2);
+        botonSonido = game.add.button(735, 135, 'botonSonido', this.quitarSonido, 1, 1, 0, 2);
+        botonCerrarSesion = game.add.button(735, 200, 'botonCerrarSesion', this.cerrarSesion, 1, 1, 0, 2);
+        botonCreditos.visible = false;
+        botonSonido.visible = false;
+        botonCerrarSesion.visible = false;
+        botonAjustes = game.add.button(735, 5, 'botonAjustes', this.verAjustes, 1, 1, 0, 2);
         botonAmigos = game.add.button(670, 5, 'botonAmigos', this.verInvitarAmigos, 1, 1, 0, 2);
         botonPerfil = game.add.button(5, 5, 'botonPerfil', this.verPerfil, 1, 1, 0, 2);
         botonRanking = game.add.button(605, 5, 'botonRanking', this.verRankings, 1, 1, 0, 2);
@@ -139,24 +148,35 @@ var navegacion = function(game){};
         vN.btMundo12.scale.setTo(0.8, 0.8);
         vN.text12 = game.add.text(5,1, "12", { font: "35px Arial", fill: "#030300"});
         vN.btMundo12.addChild(vN.text12);
-
+        
         vN.music = game.add.audio('sonidos');
         vN.musicButton = game.add.audio('sonidoBoton');
         vN.music.loop = true;
         vN.music.play();
-        
-
     },
   
-    
+    verAjustes: function(){
+        botonCreditos.visible =! botonCreditos.visible;
+        botonSonido.visible =! botonSonido.visible;
+        botonCerrarSesion.visible =! botonCerrarSesion.visible;
+    },        
     verCreditos: function(){
-        game.state.start("creditos");
-       vN.musicButton.play();
-        vN.music.pause();
-    },    
+            game.state.start("creditos");
+    },
+    quitarSonido: function(){
+            if(vN.music.paused){
+               vN.music.resume();
+            }
+        else{
+            vN.music.pause();
+        }        
+    },
+    cerrarSesion: function(){
+            alert("Sesion cerrada");
+    },
     verInvitarAmigos: function(){
         game.state.start("invitarAmigos");
-       vN.musicButton.play();
+        vN.musicButton.play();
         vN.music.pause();
     },    
     verPerfil: function(){

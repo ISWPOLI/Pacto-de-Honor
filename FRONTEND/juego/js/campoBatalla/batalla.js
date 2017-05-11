@@ -157,7 +157,8 @@ var batalla = {
 			var pausa = game.add.button(365, 20, 'pausa', this.pausar,this);
 			
 			game.add.text(145,20,personajesBuenos[variablesCampoBatalla.idPJ].nombre,{fill:'white'});
-			game.add.text(460,20,personajesMalos[variablesCampoBatalla.idPC].nombre,{fill:'white'});        
+			game.add.text(460,20,personajesMalos[variablesCampoBatalla.idPC].nombre,{fill:'white'});       
+			game.add.text(15, 12, variablesCampoBatalla.idNivel, {font: "14px Roboto", fill:'white'});       
         
 			vidaBlancoJugador = new Phaser.Rectangle(144, 53, 200, 20);//primer barra blanca de vida
 			vidaNegroJugador = new Phaser.Rectangle(143, 52, 202, 22);//primer borde negro de vida 
@@ -218,7 +219,7 @@ var batalla = {
 	//se crea esta funcion para disminuir la barra de energia
     
 	update : function() {
-		indice=funcionesBatalla.numeroAleatorio(1,4);
+        indice=funcionesBatalla.numeroAleatorio(1,4);
 		funcionesBatalla.cargarEnergia(energiaVerdeJugador);
 		funcionesBatalla.cargarEnergia(energiaVerdeComputadora);
 		if(dispositivoMovil)
