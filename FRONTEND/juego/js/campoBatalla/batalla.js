@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 var variablesCampoBatalla = {
     personajeJugador: null,//guarda el sprite del personaje elegido
@@ -7,6 +8,8 @@ var variablesCampoBatalla = {
     counter: 0,//lleva el tiempo de la partida
    	ti: 0,//muestra el avance del tiempo en segundos
 =======
+=======
+>>>>>>> master
 variablesCampoBatalla = {
     idNivel:null, //Guarda el id del nivel a crear
 	personajeJugador: null,//guarda el sprite del personaje elegido

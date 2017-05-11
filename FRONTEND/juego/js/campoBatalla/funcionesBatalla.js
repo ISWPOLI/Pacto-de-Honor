@@ -4,8 +4,13 @@ var golpe_al_cuerpo;
 var funcionesBatalla = {
     //funcion que se encarga de cargar todos los elementos del campo de batalla
 <<<<<<< HEAD
+<<<<<<< HEAD
     cargar: function (idPJ, idPC, caa) {
         game.load.image('fondo', "../img/escenarios/escenariosSecundarios/nivel1.png");
+=======
+    cargar:function(idPJ, idPC, caa, idNivel){
+        game.load.image('fondo', niveles[idNivel].fondo);
+>>>>>>> master
 =======
     cargar:function(idPJ, idPC, caa, idNivel){
         game.load.image('fondo', niveles[idNivel].fondo);
@@ -28,15 +33,21 @@ var funcionesBatalla = {
         game.load.image('escudo1', '../img/componentes/batalla/escudo1.png');
         game.load.image('escudo2', '../img/componentes/batalla/escudo2.png');
 <<<<<<< HEAD
+<<<<<<< HEAD
         game.load.audio('puñoalaire', '../img/componentes/sonidos/EfectosDePelea/sonidogolpealaire.mp3');
         game.load.audio('puñoalcuerpo', '../img/componentes/sonidos/EfectosDePelea/sonidogolpealcuerpo.mp3');
 
 =======
+=======
+>>>>>>> master
          if (caa == 8) {
              game.load.image('cajaOpen', boxes[caa].fatalityBox);
          }else{
              game.load.image('cajaOpen', boxes[caa].rootOpen);
          }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
     },
     
