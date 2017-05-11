@@ -1,15 +1,13 @@
-
 vN = {
-
     btMundo:null, 
     btMundo2:null, 
     btMundo3:null, 
     btMundo4:null, 
-    btMundo5:null ,
-    btMundo6:null ,
-    btMundo7:null ,
-    btMundo8:null ,
-    btMundo9:null ,
+    btMundo5:null,
+    btMundo6:null,
+    btMundo7:null,
+    btMundo8:null,
+    btMundo9:null,
     btMundo10:null, 
     btMundo11:null, 
     btMundo12:null,
@@ -28,7 +26,6 @@ vN = {
     text12:0,
     music:null,
     musicButton:null
-
 };
 
 //var nV.vN.music;
@@ -230,5 +227,14 @@ var navegacion = function(game){};
         mundo12:function(){
             pruebasPsicotecnicas.setPrueba19(true);
             game.state.start("Mundo12");
-        }
+        },
+    
+    iniciarNivel: function(lvl) {
+        pruebasPsicotecnicas.setPrueba20(true);
+        variablesCampoBatalla.idNivel = lvl;
+        variablesCampoBatalla.idPC = niveles[lvl].idEnemigo;
+        game.state.start("seleccionpersonaje");
+        vN.musicButton.play();
+        vN.music.pause();
     }
+}
