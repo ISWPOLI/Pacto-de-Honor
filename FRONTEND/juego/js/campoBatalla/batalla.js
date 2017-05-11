@@ -12,7 +12,7 @@ variablesCampoBatalla = {
 	movV:null,//arreglo para saber que accion esta ejecutando el villano//[Defensa,ataqueNomal,ataquePersonalidad,ataquePlagio]
     ataquePlagio:null, //guarda el sprite del ataque plagio del villano
 	ataquePersonalidadC:null,//guarda el sprite del ataque de personalidad del villano
-	idPJ:"idPUno",//guarda el id del personaje del jugador
+	idPJ:null,//guarda el id del personaje del jugador
 	idPC:null,//guarda el id del personaje del mapa
 	costoAtaqueJ:0,//el consumo de energia que causa el ataque
 	costoAtaqueC:0,//el consumo de energia que causa el ataque
