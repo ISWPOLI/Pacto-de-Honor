@@ -60,7 +60,7 @@ var creditos = function(game){};
             game.load.spritesheet('danielLeon', '../img/personajes/avatares/botonLeon.png', 125, 125);
             game.load.spritesheet('fabianCanario', '../img/personajes/avatares/botonCanario.png', 125, 125);
             game.load.spritesheet('ivanRuisenor', '../img/personajes/avatares/botonRuiseñor.png', 125, 125);
-            game.load.spritesheet('pedroRaton', '../img/personajes/avatares/botonRatón.png', 125, 125);
+            game.load.spritesheet('pedroRaton', '../img/personajes/avatares/botonRaton.png', 125, 125);
             game.load.spritesheet('tatiHormiga', '../img/personajes/avatares/botonHormiga.png', 125, 125);
             //Carga de imagenes para los botones de personajes malos
             game.load.spritesheet('anaSaraAbejas', '../img/personajes/avatares/botonAbejas.png', 75, 75);
