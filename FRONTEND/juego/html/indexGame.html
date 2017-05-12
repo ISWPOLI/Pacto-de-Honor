@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="shortcut icon" href="../img/IconoAplicacion/Escudo.ico">
+        <link rel="stylesheet" href="../css/main.css">
         <meta name="mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<title>Poli Fighters</title>
@@ -49,8 +50,20 @@
 	    <script src="../js/resultado/fin.js"></script>
 	    <script src="../js/phaser/game.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+        <script>
+            window.onload = function(){
+                var contenedor = document.getElementById('contenedor_carga');
+                
+                contenedor.style.visibility ='hidden';
+                contenedor.style.opacity = '0';
+            }
+        </script>
     </head>
-	<body>		 
+	<body>		
+     <div id="contenedor_carga">
+        <div id="carga"></div>
+        </div> 
 		<div id="portrait">
 		</div>		 
 	</body>
