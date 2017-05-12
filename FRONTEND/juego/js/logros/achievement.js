@@ -22,7 +22,7 @@ var SetUplogros ={
                      "Para obtener este logro de perfección es necesario \nque pases todo un mundo sin perder ni una sola vez. \n¿Crees ser capaz de cumplir el reto?",
                      ],
     "jugador_tiene_logros":["The Unlocker \n“Eres el encargado para recuperar a todos los héroes”","Mi SkillPlagio","Mater \n Maestro del Pacto"],
-    "mondeas":100,
+    "monedas":100,
     "ranking":7,
     "tiempo":500,
 	"exp":1000

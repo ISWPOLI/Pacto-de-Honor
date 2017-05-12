@@ -380,8 +380,6 @@ var funcionesBatalla={
             variablesCampoBatalla.personajeComputadora.animations.play('correr');
             variablesCampoBatalla.personajeComputadora.body.x += 2; 
         }else if (string.localeCompare("defensa")==0){
-            variablesCampoBatalla.escudo1 = game.add.sprite(variablesCampoBatalla.personajeComputadora.body.x, variablesCampoBatalla.personajeComputadora.body.y, 'escudo1');
-            variablesCampoBatalla.escudo1.anchor.setTo(0.5,0);
             variablesCampoBatalla.personajeComputadora.animations.play('defensa');
             variablesCampoBatalla.movV[0]=true;
         }else if (string.localeCompare("punos")==0){
