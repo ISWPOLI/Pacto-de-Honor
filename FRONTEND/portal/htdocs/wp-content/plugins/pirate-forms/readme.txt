@@ -1,5 +1,5 @@
-=== Simple Contact Form Plugin - PirateForms ===
-Contributors: themeisle, codeinwp, rodicaelena, alexandrastan001, gouravwptech, hardeepasrani
+=== Contact Form & SMTP Plugin by PirateForms ===
+Contributors: themeisle, codeinwp, rodicaelena, hardeepasrani, pirateforms
 Tags:  contact forms plugin, contact form, contact us, contact us form, contacts form plugin, custom form, subscribe form, feedback form, wordpress contact form
 Requires at least: 3.0
 Tested up to: 4.7
@@ -7,12 +7,13 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Makes your contact form page more engaging by creating a good-looking simple WordPress contact form on your website. The interaction with your visitors was never easier.
+A simple and effective WordPress contact form & SMTP plugin. Compatible with best themes out there, is both secure and responsive.
 
 == Description ==
 
-Stay in touch with your visitors very easily. <a href="http://themeisle.com/plugins/pirate-forms/" rel="nofollow">Pirate Contact Forms</a> offers you a great and friendly contact form for your website.
-This is an easy-to-use WordPress contact form with captcha plugin. To create a contact form you just need to use the [pirate_forms] shortcode or the 'Pirate Forms' widget.
+Stay in touch with your visitors very easily. <a href="https://themeisle.com/plugins/pirate-forms/" rel="nofollow">Pirate Contact Forms</a> offers you a great and friendly contact form for your website.
+This is an easy-to-use WordPress contact form with captcha plugin. To create a contact form you just need to use the [pirate_forms] shortcode or use the WordPress contact form widget.
+
 
 **Why use our responsive WordPress Contact Form:**
 
@@ -37,7 +38,13 @@ If you were using Mandrill's SMTP for transactional emails and contact forms, yo
 
 You can keep all the contacts in an archive by saving their e-mail addresses. Pirate Contact Form allows you to do that by providing contact databases.
 
-A simple to use contact form plugin for creating a clean contact form using the [pirate_forms] shortcode or the 'Pirate Forms' widget.
+A simple to use contact form plugin for creating a clean contact form using the [pirate_forms] shortcode or the 'Pirate Forms' form widget.
+
+- What PirateForms isn't for now
+
+
+This is not a form maker or drag & drop builder plugin nor "the best contact form plugin", you cannot add new fields or create multiple forms (subscription forms, payment, order, feedback or quote), there are some great alternatives out there for those like : Caldera Forms or Ninja Forms.
+
 
 
 We've also built some fantastic <a href="http://themeisle.com/wordpress-themes/free/" rel="nofollow" target="_blank">free themes</a> that work well with Pirate Contact Form, check them out.

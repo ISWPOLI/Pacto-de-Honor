@@ -1,7 +1,7 @@
-var speedMult = 0.2;
+﻿var speedMult = 0.2;
 var friction = 0.99;
 var nameBox;
- var boxloocked = [false,false,false,false,false,false,false,false,false];
+ var boxloocked = [false,false,false,false,false,true,false,false,true];
 var description;
 var character;
 var apodo;

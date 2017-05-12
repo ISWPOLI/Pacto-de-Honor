@@ -86,6 +86,9 @@ final class FLBuilderUpdate {
 		
 		// Clear all asset cache.
 		FLBuilderModel::delete_asset_cache_for_all_posts();
+		
+		// Flush the rewrite rules.
+		flush_rewrite_rules();
 	}
 
 	/** 

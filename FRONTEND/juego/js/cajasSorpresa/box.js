@@ -13,7 +13,7 @@ var boxes={
 }
 var boxesDes ={
 	"boxMistery":{
-		"nameBox":["caja 1","caja 2","caja 3","caja 4","caja 5","caja 6","caja 7","caja 8"],
+		"nameBox":["caja 1","caja 2","caja 3","caja 4","caja 5","caja 6","caja 7","Fatality"],
 		"desc":["Esta caja ayudara al usuario con tiempo extra \n(20 segundos) para poder derrotar a su oponente.",
                  "Esta caja ayudara al usuario \ncon un aumento de la barra de energía. ",
                  "Esta caja ayudara al usuario \ncon una porción  pequeña de vida.",

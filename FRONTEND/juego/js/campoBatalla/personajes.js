@@ -2,23 +2,72 @@
 *Con esto nos aseguramos que vaya a funcionar cuando de consuman los servicios 
 */
 var personajesBuenos={
-	"idPUno":{"nombre":"Andres Gallo","rutaSprite":"../img/personajes/personajesBuenos/gallo.png",
-			  "rutaAvatar":"../img/personajes/avatares/caraGallo.png",
-              "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderGallo.png",
-			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/AndresGallo.png",
+	"idPUno":{"nombre":"Ana Pantera","rutaSprite":"../img/personajes/personajesBuenos/pantera.png",
+			  "rutaAvatar":"../img/personajes/avatares/caraPantera.png",
+              "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderPantera.png",
+			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/Ana Pantera.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoGallo.png",
 			  "daño":[6,2],"energia":1,"defensa":10,"vida":200},
 
-	"idPDos":{"nombre":"Daniel Leon","rutaSprite":"../img/personajes/personajesBuenos/leon.png",
+	"idPDos":{"nombre":"Andrés Gallo","rutaSprite":"../img/personajes/personajesBuenos/gallo.png",
+			  "rutaAvatar":"../img/personajes/avatares/caraGallo.png",
+              "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderGallo.png",
+			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/AndresGallo.png",
+			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoLeon.png",
+			  "daño":[6,2],"energia":1,"defensa":10,"vida":200},
+    
+    "idPTres":{"nombre":"Cata Cierva","rutaSprite":"../img/personajes/personajesBuenos/cierva.png",
+			  "rutaAvatar":"../img/personajes/avatares/caraCierva.png",
+              "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderCierva.png",
+			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/Cata Cierva.png",
+			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoGallo.png",
+			  "daño":[6,2],"energia":1,"defensa":10,"vida":200},
+
+	"idPCuatro":{"nombre":"Daniela Jirafa","rutaSprite":"../img/personajes/personajesBuenos/jirafa.png",
+			  "rutaAvatar":"../img/personajes/avatares/caraJirafa.png",
+              "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderJirafa.png",
+			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/Daniela Jirafa.png",
+			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoLeon.png",
+			  "daño":[6,2],"energia":1,"defensa":10,"vida":200},
+    
+    "idPCinco":{"nombre":"Daniel León","rutaSprite":"../img/personajes/personajesBuenos/leon.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraLeon.png",
               "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderLeon.png",
 			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/DanielLeon.png",
+			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoGallo.png",
+			  "daño":[6,2],"energia":1,"defensa":10,"vida":200},
+
+	"idPSeis":{"nombre":"Fabián Canario","rutaSprite":"../img/personajes/personajesBuenos/canario.png",
+			  "rutaAvatar":"../img/personajes/avatares/caraCanario.png",
+              "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderCanario.png",
+			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/Fabian Canario.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoLeon.png",
+			  "daño":[6,2],"energia":1,"defensa":10,"vida":200},
+    
+    "idPSiete":{"nombre":"Iván Ruiseñor","rutaSprite":"../img/personajes/personajesBuenos/ruisenor.png",
+			  "rutaAvatar":"../img/personajes/avatares/caraRuiseñor.png",
+              "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderRuisenor.png",
+			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/Ivan Ruisenor.png",
+			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoGallo.png",
+			  "daño":[6,2],"energia":1,"defensa":10,"vida":200},
+
+	"idPOcho":{"nombre":"Pedro Ratón","rutaSprite":"../img/personajes/personajesBuenos/raton.png",
+			  "rutaAvatar":"../img/personajes/avatares/caraRatón.png",
+              "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderRaton.png",
+			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/Pedro Raton.png",
+			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoLeon.png",
+              "daño":[6,2],"energia":1,"defensa":10,"vida":200},
+              
+    "idPNueve":{"nombre":"Tati Hormiga","rutaSprite":"../img/personajes/personajesBuenos/hormiga.png",
+			  "rutaAvatar":"../img/personajes/avatares/caraHormiga.png",
+              "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderHormiga.png",
+			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/tati Hormiga.png",
+			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoGallo.png",
 			  "daño":[6,2],"energia":1,"defensa":10,"vida":200}
 }
 
 var personajesMalos={
-    /*Enemigos ZORROS MUNDO 1 ************************************************************************************************/
+    /*Enemigos ZORROS MUNDO 1 ***********************************************************************************************/
     
     "idPUno":{"nombre":"Arthur El Veloz","rutaSprite":"../img/personajes/miniPersonajes/Zorro/ZorroVeloz.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraOso.png",
@@ -262,7 +311,15 @@ var personajesMalos={
 			     "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
 			     "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
-    "idPTreinta":{"nombre":"Ana y Sara Abejas","rutaSprite":"../img/personajes/personajesMalos/abeja1.png",
+    "idPTreinta":{"nombre":"Ana Abeja","rutaSprite":"../img/personajes/personajesMalos/abeja1.png",
+                "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
+			    "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/Ana Sara PERSONALIDAD.png",
+			    "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
+			    "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
+			    "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
+			    "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+    
+    "idPTreintax":{"nombre":"Sara Abeja","rutaSprite":"../img/personajes/personajesMalos/abeja2.png",
                 "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
 			    "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/Ana Sara PERSONALIDAD.png",
 			    "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
