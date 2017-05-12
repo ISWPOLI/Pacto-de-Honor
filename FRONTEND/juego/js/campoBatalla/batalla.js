@@ -34,8 +34,6 @@ var openBox;
 var timeShowBox = 3;
 var gameTime =70;
 var sendGift = true;
-
-
 var batalla = {
 	preload : function() {
 		console.log(variablesCampoBatalla);
@@ -44,12 +42,9 @@ var batalla = {
 		//boxGame =game.rnd.integerInRange(1, 8);		
 		//timeShowBox = game.rnd.integerInRange(5,60);
 		funcionesBatalla.cargar(variablesCampoBatalla.idPJ, variablesCampoBatalla.idPC, boxGame, variablesCampoBatalla.idNivel);
-		//funcionesBatalla.cargar(idPJ,idPC);
-        game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
 	},
 
 	create : function() {	
-        variablesCampoBatalla.musicButton = game.add.audio('sonidoBoton');
 		variablesCampoBatalla.counter = 0;
 		variablesCampoBatalla.ti = 0;
 		variablesCampoBatalla.danoH=personajesBuenos[variablesCampoBatalla.idPJ].daño;
@@ -63,10 +58,8 @@ var batalla = {
  		variablesCampoBatalla.movimientoComputadora="adelante";
 		variablesCampoBatalla.primeImpacto=false;
 		sendGift = true;
-		
-		
-		
-		variablesCampoBatalla.ataquePersonalidadC = game.add.weapon(10, 'ataquePersonalidadV');
+        
+        variablesCampoBatalla.ataquePersonalidadC = game.add.weapon(10, 'ataquePersonalidadV');
 	 	variablesCampoBatalla.fondogame = game.add.sprite(0, 0, 'fondo');
 		variablesCampoBatalla.personajeComputadora = game.add.sprite(650, 450, 'personajeComputadora');
 		variablesCampoBatalla.personajeComputadora.anchor.setTo(0.5);
@@ -76,10 +69,8 @@ var batalla = {
 		funcionesBatalla.iniciarSprite(variablesCampoBatalla.personajeComputadora);
 		console.log(variablesCampoBatalla);
 
-
 		variablesCampoBatalla.escudo2 = game.add.sprite(variablesCampoBatalla.personajeJugador.body.x+200, variablesCampoBatalla.personajeJugador.body.y-150, 'escudo2');
-		variablesCampoBatalla.escudo2.anchor.setTo(0.5,0.5);
-		
+		variablesCampoBatalla.escudo2.anchor.setTo(0.5,0.5);		
 
 		caja = game.add.button(game.rnd.integerInRange(30, (game.width)-30), game.rnd.integerInRange(60, (game.height)-60), "caja",this.catchedBox,this);
         caja.visible = false;
@@ -118,8 +109,8 @@ var batalla = {
 			var pausa = game.add.button(360, 20, 'pausa', this.pausar,this);
 			
 			game.add.text(125,20,personajesBuenos[variablesCampoBatalla.idPJ].nombre,{fill:'white'});
-			game.add.text(480,20,personajesMalos[variablesCampoBatalla.idPC].nombre,{fill:'white'});        
-        
+            game.add.text(480,20,personajesMalos[variablesCampoBatalla.idPC].nombre,{fill:'white'});
+                 
 			vidaBlancoJugador = new Phaser.Rectangle(124, 53, 200, 20);//primer barra blanca de vida
 			vidaNegroJugador = new Phaser.Rectangle(123, 52, 202, 22);//primer borde negro de vida 
 			vidaRojoJugador = new Phaser.Rectangle(124, 53, 200, 20);//primer barra roja  de vida
@@ -137,12 +128,9 @@ var batalla = {
 			energiaVerdeComputadora = new Phaser.Rectangle(480, 79, 200, 20);
 			
 			pausa.scale.setTo(0.4, 0.4);
-			text = game.add.text(360, 110, 'time: 00', {
-			fill : "white",
-			backgroundColor : 'rgba(0,0,0,0.5)'
-		});
-			
-		}else{
+			text = game.add.text(360, 110, 'time: 00', {fill : "white", backgroundColor : 'rgba(0,0,0,0.5)'});
+            }
+        else{
 			cursores = game.input.keyboard.createCursorKeys();
 			esp = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 			
@@ -156,9 +144,15 @@ var batalla = {
 			
 			var pausa = game.add.button(365, 20, 'pausa', this.pausar,this);
 			
-			game.add.text(145,20,personajesBuenos[variablesCampoBatalla.idPJ].nombre,{fill:'white'});
-			game.add.text(460,20,personajesMalos[variablesCampoBatalla.idPC].nombre,{fill:'white'});       
-			game.add.text(15, 12, variablesCampoBatalla.idNivel, {font: "14px Roboto", fill:'white'});       
+			var txtNombrePJ = game.add.text(145,20,personajesBuenos[variablesCampoBatalla.idPJ].nombre,{fill:'white'});
+			var txtNombrePC = game.add.text(460,20,personajesMalos[variablesCampoBatalla.idPC].nombre,{fill:'white'});
+            var txtMundoNivel = game.add.text(15, 12, variablesCampoBatalla.idNivel, {font: "14px Roboto", fill:'white'});
+            txtNombrePJ.stroke = "black";
+            txtNombrePJ.strokeThickness = 4;
+            txtNombrePC.stroke = "black";
+            txtNombrePC.strokeThickness = 4;			
+            txtMundoNivel.stroke = "black";
+            txtMundoNivel.strokeThickness = 3;
         
 			vidaBlancoJugador = new Phaser.Rectangle(144, 53, 200, 20);//primer barra blanca de vida
 			vidaNegroJugador = new Phaser.Rectangle(143, 52, 202, 22);//primer borde negro de vida 
@@ -180,23 +174,22 @@ var batalla = {
 			text = game.add.text(365, 110, 'time: 00', {
 			fill : "white",
 			backgroundColor : 'rgba(0,0,0,0.5)'
-		});
-			
+		});			
 		}
+        
 		pausa.inputEnabled=true;
 		//funcion para pausar
 		pausa.events.onInputUp.add(function () {
-            variablesCampoBatalla.musicButton.play();
-			funcionesBatalla.pausar()
+            sonidoBoton.play();
+			funcionesBatalla.pausar();
         });
         game.input.onDown.add(unpause, self);
 		//funcion para reaunudar
         function unpause(event){
-            variablesCampoBatalla.musicButton.play();
+            sonidoBoton.play();
         	funcionesBatalla.unpause(event);
-        }  
-        
-		
+        }
+        boot.verificarMusica("batalla");
     },
     
 	render : function() {

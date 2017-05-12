@@ -22,9 +22,7 @@ var xpLogros;
 var descriptionsl;    
 var logros = function(game){};
     logros.prototype = {
-        preload: function(){
-
-            
+        preload: function(){            
             namesCharactersl = SetUplogros.nombre;
             descriptionsl = SetUplogros.descripcion;
             moneyLogros = SetUplogros.monedas;
@@ -36,11 +34,6 @@ var logros = function(game){};
             for (var i = namesCharactersl.length - 1; i >= 0; i--) {
               Logroslooked[i] = true;
             }
-
-            game.scale.pageAlignHorizontally = true;
-            game.scale.pageAlignVertically = true; 
-            // Se carga una imagen transparente para colocar detras de las imagenes que apareceran en el Scrolling
-            game.load.image("transp", "../img/personajes/avatares/transp.png");
             // Se cargan las imagenes de los 10 logros
             game.load.spritesheet(namesCharactersl[0], '../img/Componentes/logros/KuPlagio.png');
             game.load.spritesheet(namesCharactersl[1], '../img/Componentes/logros/LifePlagio.png');
@@ -62,15 +55,11 @@ var logros = function(game){};
             game.load.image(namesCharactersl[7]+'Loock', '../img/Componentes/logros/UnlockerLoock.png');
             game.load.image(namesCharactersl[8]+'Loock', '../img/Componentes/logros/AlistLoock.png');
             game.load.image(namesCharactersl[9]+'Loock', '../img/Componentes/logros/FiveRowLoock.png');
-            game.load.spritesheet('botonVolver', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
             // Se carga el sprite del boton seleccionar
-            game.load.spritesheet('button', '../img/Componentes/botones/Spritebloq.png', 150, 40); 
-            
-            game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
+            game.load.spritesheet('button', '../img/Componentes/botones/Spritebloq.png', 150, 40);
         },
-        create: function(){ 
-             musicButton = game.add.audio('sonidoBonton');
-            
+        
+        create: function(){            
           // Se coloca como fondo de la ventana el color #2451A6
           game.stage.backgroundColor = "#2451A6";
           // Se agrega un titulo para la ventana, el cual sera "Logros", de tamaño 30 px, y "Roboto" como tipo de letra
@@ -235,7 +224,7 @@ var logros = function(game){};
       },
         verPerfil: function(){
             game.state.start("perfilJugador");
-            musicButton.play();
+            sonidoBoton.play();
         },
         update:function(){
            // Se declara una variable llamada "zoomed" de tipo booleana, que representara cuando un elemento del scrolling map este seleccionada

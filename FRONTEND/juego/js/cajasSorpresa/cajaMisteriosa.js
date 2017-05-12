@@ -1,4 +1,4 @@
-﻿var speedMult = 0.2;
+var speedMult = 0.2;
 var friction = 0.99;
 var nameBox;
  var boxloocked = [false,false,false,false,false,true,false,false,true];
@@ -17,11 +17,6 @@ var cajaMisteriosa = function(game){};
         preload: function(){
             nameBox = boxesDes["boxMistery"].nameBox;
             boxDescription = boxesDes["boxMistery"].desc;
-            game.scale.pageAlignHorizontally = true;
-            game.scale.pageAlignVertically = true;
-            
-            // Se carga una imagen transparente para colocar detras de las imagenes que apareceran en el Scrolling
-            game.load.image("transp", "../img/personajes/avatares/transp.png");
             // Se cargan las imagenes de los 10 logros
             game.load.spritesheet(nameBox[0], boxes[1].root);
             game.load.spritesheet(nameBox[1], boxes[2].root);
@@ -32,7 +27,6 @@ var cajaMisteriosa = function(game){};
             game.load.spritesheet(nameBox[6], boxes[7].root);
             game.load.spritesheet(nameBox[7], boxes[8].root);
 
-
             game.load.spritesheet(nameBox[0]+"explosion", boxes[1].rootOpen);
             game.load.spritesheet(nameBox[1]+"explosion", boxes[2].rootOpen);
             game.load.spritesheet(nameBox[2]+"explosion", boxes[3].rootOpen);
@@ -41,22 +35,14 @@ var cajaMisteriosa = function(game){};
             game.load.spritesheet(nameBox[5]+"explosion", boxes[6].rootOpen);
             game.load.spritesheet(nameBox[6]+"explosion", boxes[7].rootOpen);
             game.load.spritesheet(nameBox[7]+"explosion", boxes[8].rootOpen);
-   
-    
-
-            game.load.spritesheet('atras', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
-
-  
+            
             // Se carga el sprite del boton seleccionar
             game.load.spritesheet('button', '../img/Componentes/botones/Spritebloq.png', 150, 40);   
         },
 
         create: function(){
-   
-
-
-          // Se coloca como fondo de la ventana el color #2451A6
-          game.stage.backgroundColor = "#2451A6";
+            // Se coloca como fondo de la ventana el color #2451A6
+            game.stage.backgroundColor = "#2451A6";
           
           // Se agrega un titulo para la ventana, el cual sera "Logros", de tamaño 30 px, y "Roboto" como tipo de letra
           // Se coloca en una posición especifica, con la instrucción ".anchor.set(0.5)" se centra en la posición dada
@@ -121,21 +107,18 @@ var cajaMisteriosa = function(game){};
 
           imgDesBox =game.add.image(game.world.centerX/2,350,nameBox[0]);
           imgDesBox.anchor.set(0.5);
-                              
-
-    
-          game.add.button(5, 5,'atras', this.verCaja, 1, 1, 0, 2);
+            
+            game.add.button(5, 5,'botonVolver', this.verNavegacion, 1, 1, 0, 2);
           //metdo que verica si esta o no bloqueado un logro de ser asi llama al metodo del logro para validar si cumple con los requsitos de desbloqueo
-      
-     
-      },
+            boot.verificarMusica("menu");
+            },
 
-        verCaja: function(){
+        verNavegacion: function(){
             game.state.start("navegacion");
+            sonidoBoton.play();
         },
         
         update:function(){
-
           var zoomed = false;
 
           // Este ciclo recorre el scrollingMap
