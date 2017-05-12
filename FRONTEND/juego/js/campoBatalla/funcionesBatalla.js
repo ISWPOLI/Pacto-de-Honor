@@ -1,6 +1,4 @@
 var ganadorBatalla;
-var golpeAlAire;
-var golpe_al_cuerpo;
 var funcionesBatalla={
     //funcion que se encarga de cargar todos los elementos del campo de batalla
     cargar:function(idPJ, idPC, caa, idNivel){
@@ -20,8 +18,6 @@ var funcionesBatalla={
         game.load.spritesheet('impactoPlagioComputadora', personajesMalos[idPC].rutaImpactoPlagio, 277, 277);
         game.load.spritesheet('gamepad','../img/Componentes/joystick/gamepad_spritesheet.png',100,100);
         game.load.image('caja', boxes[caa].root);
-        game.load.audio('puñoalaire', '../img/componentes/sonidos/EfectosDePelea/sonidogolpealaire.mp3');
-        game.load.audio('puñoalcuerpo', '../img/componentes/sonidos/EfectosDePelea/sonidogolpealcuerpo.mp3');
         game.load.image('escudo1', '../img/componentes/batalla/escudo1.png');
         game.load.image('escudo2', '../img/componentes/batalla/escudo2.png');
          if (caa == 8) {
@@ -41,8 +37,6 @@ var funcionesBatalla={
     	sprite.animations.play('quieto');
 		game.physics.arcade.enable(sprite);
 		sprite.body.collideWorldBounds = true; 
-        golpeAlAire = game.add.audio('puñoalaire');
-        golpe_al_cuerpo = game.add.audio('puñoalcuerpo');
 	},
     
     //Esta funcion se activa al dar click en el logo del poli y despliega el menu de pausa 
@@ -110,7 +104,6 @@ var funcionesBatalla={
         } else if (cursores.down.isDown) {
             variablesCampoBatalla.escudo1 = game.add.sprite(variablesCampoBatalla.personajeJugador.body.x+200, variablesCampoBatalla.personajeJugador.body.y, 'escudo1');
             variablesCampoBatalla.escudo1.anchor.setTo(0.5,0);
-            golpeAlAire.play();
             
             variablesCampoBatalla.personajeJugador.animations.play('defensa')
             variablesCampoBatalla.personajeJugador.body.velocity.y=0;
@@ -194,7 +187,6 @@ var funcionesBatalla={
         //el 200 es temporal
         if(barra.width<200){
             barra.width=barra.width+0.9;
-            golpe_al_cuerpo.play();
         }
     },
      /*Cuando impacta el ataque pregunta si el jugador se estaba defendiendo
@@ -207,7 +199,6 @@ var funcionesBatalla={
             variablesCampoBatalla.primerImpacto=false;
             funcionesBatalla.actualizarVida(vidaRojoJugador,variablesCampoBatalla.danoV[2]);
             funcionesBatalla.spriteImpactoPlagioComputadora();
-            golpe_al_cuerpo.play();
         }
 
     },
@@ -220,7 +211,6 @@ var funcionesBatalla={
         if(!variablesCampoBatalla.movV[0]){
             funcionesBatalla.actualizarVida(vidaRojoComputadora,variablesCampoBatalla.danoH[1]);
             funcionesBatalla.spriteImpactoJugador();
-            golpe_al_cuerpo.play();
         }
 
     },
