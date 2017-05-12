@@ -47,7 +47,7 @@ class wpdevart_lightbox_front_end{
 		
 	}
 	
-	/*############ Custom CSS Function ################*/
+	/*############ Generate Custom CSS Function ################*/
 	
 	public function generete_custom_css(){
 		echo '<style>#wpdevart_lb_overlay{';

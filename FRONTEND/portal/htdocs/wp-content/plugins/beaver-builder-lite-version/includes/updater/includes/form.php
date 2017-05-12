@@ -59,5 +59,7 @@
 			<input type="button" class="button button-primary" value="<?php esc_attr_e( 'Enter License Key', 'fl-builder' ); ?>">
 		</p>
 	</div>
+	
+	<?php FLUpdater::render_subscriptions( $subscription ); ?>
 
 </div>

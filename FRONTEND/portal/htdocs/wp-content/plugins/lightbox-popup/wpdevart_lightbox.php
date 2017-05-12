@@ -2,8 +2,9 @@
 /**
  * Plugin Name: Lightbox - Gallery Lightbox
  * Plugin URI: http://wpdevart.com/wordpress-lightbox-plugin
+ * Author URI: http://wpdevart.com
  * Description: Lightbox WordPress plugin is an high customizable and responsive product for displaying images and videos in popup. WordPress Lightbox plugin is one of the most popular and useful plugins for WordPress websites.
- * Version: 1.5.0
+ * Version: 1.5.5
  * Author: wpdevart
  * License: GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
@@ -14,6 +15,8 @@ class wpdevart_lightbox{
 	public  $options;
 	
 	public $database_parametrs;	
+
+	/*###################### Construct function ##################*/	
 	
 	function __construct(){		
 		
@@ -56,6 +59,9 @@ class wpdevart_lightbox{
 		$admin_menu = new wpdevart_lightbox_admin_menu(array('databese_parametrs' =>$this->database_parametrs));		
 		
 	}	
+	
+    /*############  Crate fornt end function  ################*/		
+	
 	private function crate_fornt_end(){
 		
 		require_once(wpdevart_lightbox_plugin_path.'includes/front_end.php');	
@@ -63,6 +69,9 @@ class wpdevart_lightbox{
 		$front_end = new wpdevart_lightbox_front_end(array('databese_parametrs' =>$this->database_parametrs));	
 		
 	}
+	
+	/*###################### Registr requeried scripts function ##################*/	
+	
 	public function registr_requeried_scripts(){		
 	
 		wp_register_script('wpdevart_lightbox_front_end_js',wpdevart_lightbox_plugin_url.'includes/javascript/wpdevart_lightbox_front.js',array('jquery'),'1.0',false);
@@ -75,6 +84,8 @@ class wpdevart_lightbox{
 		
 	}
 
+	/*############ Call base function ################*/
+		
 	public function call_base_filters(){
 		
 		add_action( 'init',  array($this,'registr_requeried_scripts') );

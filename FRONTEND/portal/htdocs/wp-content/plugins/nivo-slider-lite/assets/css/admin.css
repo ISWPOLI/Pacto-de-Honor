@@ -1,18 +1,168 @@
-/*
-* Version: 1.0.5
-*/
-
-#nivoslider_settings_box .dev7-pro-feature {
-	display: block;
-	font-size: 13px;
-	font-style: normal;
-	margin-top: 5px;
+#edit-slug-box,
+#postimagediv,
+#minor-publishing,
+.nivo_type,
+.manual.description {
+	display: none;
 }
-#nivoslider_settings_box .dev7-pro-feature a {
+
+.useful-links a {
+	float: right;
+}
+
+.nivo-plugin-images li {
+	display: inline-block;
+	position: relative;
+	margin: 0;
+}
+
+.nivo-plugin-images li .spinner {
+	display: block;
+	float: left;
+}
+
+.nivo-plugin-images li img {
+	max-width: 300px;
+	margin: 0 10px 10px 0;
+	padding: 3px;
+	border: 1px solid #dfdfdf;
+	background: none repeat scroll 0 0 #fff;
+}
+
+.nivo_plugin-thumbs {
+	margin: 0;
+	padding: 3px 0 0;
+	list-style: none outside none;
+}
+
+.nivo_plugin-thumbs li {
+	display: inline-block;
+	position: relative;
+	margin: 0;
+}
+
+.nivo_plugin-thumbs li img {
+	margin: 0 10px 5px 0;
+	padding: 2px;
+	border: 1px solid #dfdfdf;
+	background: none repeat scroll 0 0 #fff;
+}
+
+#nivo_license .spinner,
+#nivo_license #deactivate-license,
+#nivo_license #activate-license,
+.reattach-spinner {
+	float: left;
+}
+
+.nivo-upsell-box {
+	text-align: center;
+}
+
+.nivo-upsell-box h3 {
+	text-align: left;
+}
+
+.nivo-upsell-box ul {
+	padding-left: 10px;
+	text-align: left;
+	list-style-type: disc;
+}
+
+.nivo-upsell-box {
+	padding-left: 20px;
+}
+
+/* The switch - the box around the slider */
+.nivo-switch {
+	display: inline-block;
+	position: relative;
+	width: 30px;
+	height: 18px;
+	margin-left: 20px;
+}
+
+/* Hide default HTML checkbox */
+.nivo-switch input {
+	display: none;
+}
+
+/* The slider */
+.nivo-tracking sup {
+	vertical-align: 3px;
+}
+
+.nivo-slider {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #ccc;
+	cursor: pointer;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.nivo-slider:before {
+	position: absolute;
+	bottom: 1.5px;
+	left: 2px;
+	width: 15px;
+	height: 15px;
+	background-color: white;
+	content: "";
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .nivo-slider {
+	background-color: #0085ba;
+}
+
+input:focus + .nivo-slider {
+	-webkit-box-shadow: 0 0 1px #0085ba;
+	box-shadow: 0 0 1px #0085ba;
+}
+
+input:checked + .nivo-slider:before {
+	-webkit-transform: translateX(11px);
+	-ms-transform: translateX(11px);
+	transform: translateX(11px);
+}
+
+/* Rounded sliders */
+.nivo-slider.visualizer-round {
+	border-radius: 34px;
+}
+
+.nivo-slider.visualizer-round:before {
+	border-radius: 50%;
+}
+
+.nivo-tracking p small sup {
+	margin-left: -3px;
+}
+
+.nivo-tracking p {
+	padding-left: 14px;
+	color: #23282d;
+	font-size: 12px;
+	line-height: 12px;
+	text-align: left;
+}
+
+.nivo-tracking span {
+	margin-left: 10px;
+	color: #23282d;
+	background: none;
+	font-size: 14px;
 	font-weight: bold;
 }
 
-#nivoslider_upgrade_box ul {
-	list-style: disc;
-	margin: 0 0 20px 20px;
+.nivo-plugin-thumbs li {
+	display: inline-block;
+	float: left;
+	margin-left: 3px;
+	border: 1px #ccc solid;
 }

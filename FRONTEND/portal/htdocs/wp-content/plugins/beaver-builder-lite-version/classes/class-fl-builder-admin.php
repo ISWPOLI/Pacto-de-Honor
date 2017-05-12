@@ -61,6 +61,9 @@ final class FLBuilderAdmin {
 	
 			// Trigger the activation notice.
 			self::trigger_activate_notice();
+			
+			// Flush the rewrite rules.
+			flush_rewrite_rules();
 		}
 	}
 

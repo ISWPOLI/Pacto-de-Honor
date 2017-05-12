@@ -12,7 +12,7 @@ variablesCampoBatalla = {
 	movV:null,//arreglo para saber que accion esta ejecutando el villano//[Defensa,ataqueNomal,ataquePersonalidad,ataquePlagio]
     ataquePlagio:null, //guarda el sprite del ataque plagio del villano
 	ataquePersonalidadC:null,//guarda el sprite del ataque de personalidad del villano
-	idPJ:"idPUno",//guarda el id del personaje del jugador
+	idPJ:null,//guarda el id del personaje del jugador
 	idPC:null,//guarda el id del personaje del mapa
 	costoAtaqueJ:0,//el consumo de energia que causa el ataque
 	costoAtaqueC:0,//el consumo de energia que causa el ataque
@@ -157,7 +157,8 @@ var batalla = {
 			var pausa = game.add.button(365, 20, 'pausa', this.pausar,this);
 			
 			game.add.text(145,20,personajesBuenos[variablesCampoBatalla.idPJ].nombre,{fill:'white'});
-			game.add.text(460,20,personajesMalos[variablesCampoBatalla.idPC].nombre,{fill:'white'});        
+			game.add.text(460,20,personajesMalos[variablesCampoBatalla.idPC].nombre,{fill:'white'});       
+			game.add.text(15, 12, variablesCampoBatalla.idNivel, {font: "14px Roboto", fill:'white'});       
         
 			vidaBlancoJugador = new Phaser.Rectangle(144, 53, 200, 20);//primer barra blanca de vida
 			vidaNegroJugador = new Phaser.Rectangle(143, 52, 202, 22);//primer borde negro de vida 
@@ -218,7 +219,7 @@ var batalla = {
 	//se crea esta funcion para disminuir la barra de energia
     
 	update : function() {
-		indice=funcionesBatalla.numeroAleatorio(1,4);
+        indice=funcionesBatalla.numeroAleatorio(1,4);
 		funcionesBatalla.cargarEnergia(energiaVerdeJugador);
 		funcionesBatalla.cargarEnergia(energiaVerdeComputadora);
 		if(dispositivoMovil)

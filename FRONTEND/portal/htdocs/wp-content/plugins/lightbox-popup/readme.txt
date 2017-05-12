@@ -1,10 +1,10 @@
-=== Lightbox ===
+=== Lightbox - Gallery Lightbox ===
 Contributors: wpdevart
 Donate link: http://wpdevart.com/wordpress-lightbox-plugin
-Tags: lightbox, lightbox popup, light box, lightbox gallery, popup lightbox, lightbox photo, image lightbox, gallery lightbox, video lightbox, Nivo Lightbox, lightbox image, wordpress image lightbox, lightbox message, lightbox message, Lightbox slider, responsive lightbox, lightbox youtube, photo lightbox, WP Lightbox, wordpress lightbox, lightbox effect, Jquery lightbox, wordpress slideshow lightbox, css3 lightbox, popup box, swipe, popup, wordpress popup, Responsive Popup, popups, popup box           
+Tags: lightbox, image lightbox, lightbox gallery, video lightbox, popup lightbox, lightbox photo, lightbox popup, gallery lightbox, Nivo Lightbox, lightbox image, wordpress image lightbox, lightbox message, lightbox message, Lightbox slider, responsive lightbox, lightbox youtube, photo lightbox, WP Lightbox, wordpress lightbox, lightbox effect, Jquery lightbox, wordpress slideshow lightbox, css3 lightbox, popup box, swipe, popup, wordpress popup, Responsive Popup, popups, popup box           
 Requires at least: 3.4.0
-Tested up to: 4.7.3
-Stable tag: 1.5.0
+Tested up to: 4.7.4
+Stable tag: 1.5.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -14,26 +14,26 @@ Lightbox - Gallery Lightbox WordPress plugin is an high customizable and respons
 
 WordPress lightbox is an high customizable and responsive plugin for displaying images and videos in popup. You just need install our plugin and enable it, lightbox will automatically add lightbox effect for your all images.
 For adding videos to lightbox you need to check our FAQ page(it's simple). 
-There are a lot of settings that will help you to get the lightbox you need.
+There are a lot of settings that will help you to configure what you need.
 
 ### Check our Lightbox demo page here
 
-[Lightbox Demo Page](http://demo.wpdevart.com/wordpress-lightbox-demo)
+[Demo Page](http://demo.wpdevart.com/wordpress-lightbox-demo)
 
 If are using a lot of images and videos on your website then the WordPress lightbox is an necessary plugin for you.
 
-Our WordPress lightbox plugin have a lot of free and Premium features, so let's get acquainted with Lightbox features.
+Our plugin have a lot of free and Premium features, here are some of  them.
 
 ### Features of WordPress Lightbox plugin
 
 *   **Fully Responsive**
 *   **Handy admin panel and easy use**
 *   **Tested on all modern browsers**
-*   **Our Lightbox works perfectly with all versions of WordPress**
+*   **Works perfectly with all versions of WordPress**
 *   **Image and Video lightbox**
 *   **Ability to set the overlay transparency**
 *   **Ability to set Popup background color**
-*   **Ability to upload lightbox loading image**
+*   **Ability to upload loading image**
 *   **Ability to set Popup Initial Width**
 *   **Ability to set Popup Initial Height**
 *   **Ability to set Popup Max Width**
@@ -48,7 +48,7 @@ Our WordPress lightbox plugin have a lot of free and Premium features, so let's 
 *   **Ability to show Control Buttons in content or outside content**
 *   **Ability to set Control Buttons Line Height**
 *   **Ability to set Control buttons line Background Color**
-*   **Ability to change/upload lightbox all control buttons**
+*   **Ability to change/upload all control buttons**
 *   **Ability to Show/Hide information panel**
 *   **Ability to show information panel inside content(images) or outside content**
 *   **Ability to set information line height**
@@ -64,7 +64,7 @@ Our WordPress lightbox plugin have a lot of free and Premium features, so let's 
 *   **Ability to set information line elements ordering**
 *   **Ability to hide Count, Description and Title sections**
 *   **Ability to download images**
-*   **User friendly back-end for WordPress Lightbox plugin**
+*   **User friendly back-end**
 *   **Tested on popular WordPress themes**
 
 You can upgrade WordPress Lightbox plugin to [Lightbox Pro](http://wpdevart.com/wordpress-lightbox-plugin/) to add some great features.
@@ -114,7 +114,7 @@ We recommend you to take a look for this useful plugins - [WordPress Gallery](ht
 
 **You can check the best offer page here - [Best Price](http://wpdevart.com/the-best-offer-from-wpdevart)**
 
-== Installation ==
+### Installation
 
 ### First of all download our WordPress Lightbox plugin ZIP file.
   
@@ -127,12 +127,6 @@ Follow these steps for installing Lightbox plugin
 5. Now go to our plugin settings page(from the left panel of Dashboard) and configure Lightbox options.
 
 Now your images will be displayed in lightbox. If any problem occurs contact us at support@wpdevart.com.
-
-### The Best Offer From WpDevArt
-
-**You can check the best offer page here - [Best Price](http://wpdevart.com/the-best-offer-from-wpdevart)**
-
-We recommend you to take a look for this useful plugins - [WordPress Gallery](https://wordpress.org/plugins/gallery-album), [WordPress Contact Form](https://wordpress.org/plugins/contact-forms-builder/), [WordPress Coming Soon plugin](https://wordpress.org/plugins/coming-soon-page/), [WordPress booking](https://wordpress.org/plugins/booking-calendar), [WordPress Poll plugin](https://wordpress.org/plugins/polls-widget/), [WordPress Facebook like box](https://wordpress.org/plugins/like-box), [WordPress YouTube](https://wordpress.org/plugins/youtube-video-player), [WordPress Countdown plugin](https://wordpress.org/plugins/widget-countdown), [Facebook comments WordPress](https://wordpress.org/plugins/comments-from-facebook) .
 
 == Frequently Asked Questions ==
 
@@ -185,10 +179,10 @@ We also recommend you to take a look for this useful plugins - [WordPress Galler
 
 == Screenshots ==
 
-1.  **WordPress Lightbox plugin** Front-end    
-2.  **WordPress Lightbox plugin** Front-end      
-3.  **WordPress Lightbox plugin** Back-end     
-4.  **WordPress Lightbox plugin** Back-end  
+1.  Front-end    
+2.  Front-end      
+3.  Back-end     
+4.  Back-end  
 
 == Changelog ==
 
@@ -338,7 +332,7 @@ We also recommend you to take a look for this useful plugins - [WordPress Galler
 
 = 1.3.6 =
 
-* Edited Lightbox popup admin option descriptions.
+* Edited admin option descriptions.
 
 = 1.3.7 =
 
@@ -391,6 +385,10 @@ We also recommend you to take a look for this useful plugins - [WordPress Galler
 = 1.4.9 =
 
 * Added featured plugin description.
+
+= 1.5.5 =
+
+* Changed default parameters.
 
 == Other Notes ==
 
