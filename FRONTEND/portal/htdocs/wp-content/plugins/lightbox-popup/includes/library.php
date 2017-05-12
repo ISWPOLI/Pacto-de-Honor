@@ -9,6 +9,8 @@ class wpdevart_lightbox_setting{
 	public static function get_variables(){	}
 	public static function generete_iframe_by_array($params){}
 	public static function generete_animation_select($select_id='',$curent_effect='none'){}
+
+    /*############ Get option function ################*/
 	
 	public static function get_option($option_name,$default_value=NULL){
 			$all_options=get_option(self::databese_initial_name);
@@ -45,7 +47,7 @@ class wpdevart_lightbox_setting{
 		}
 	}
 
-	/*###################### Fonts function ##################*/
+	/*###################### Generate Fonts function ##################*/
 	
 	public static function generete_fonts($select_id='',$curent_font='none'){
 	?>

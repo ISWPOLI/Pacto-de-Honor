@@ -26,7 +26,7 @@ var boot ={
    			this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
    		}
    		this.scale.refresh();
-    	game.state.start("desbloqueoPersonaje");
+    	game.state.start("seleccionavatar");
 
 	}
 

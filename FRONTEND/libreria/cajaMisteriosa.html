@@ -1,0 +1,225 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="shortcut icon" type="image/x-icon" href="img/logosinfondo.ico">
+		<title>Caja Misteriosa</title>
+		<link rel="stylesheet" href="css/styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+	</head>
+	<body>
+		<header>
+			<div>
+				<img class="portada" src="img/portada.png">
+			</div>
+			<nav>
+				<ul>
+					<li><a href="inicio.html">Inicio</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section class="main">
+			<section class="articles">
+				<article>
+					<h2>cajaMisteriosa.js</h2>
+					<br/>
+					<p>En esta clase se muestran los 9 tipos de cajas sorpresa que hay, mostrando al jugador las caracteristicas y recompensas de cada una de ellas.</p>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno">
+							<td colspan="2">Funciones</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>preload</b> ( )
+								<br/>
+								Función de Phaser, que sirve para cargar cosas.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>create</b> ( )
+								<br/>
+								Función de Phaser, que sirve para agregar cosas.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>verCaja</b> ( )
+								<br/>
+								Se dirigirá a la seccion de navegacion.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>update</b> ( )
+								<br/>
+								Función de Phaser, que sirve para cambiar cosas en el juego.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno">
+							<td colspan="2">preload( )</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+								<br/>
+								<br/>
+								Esta es una función del framework Phaser en la que cargaremos todos los componentes a ser utilizados en el juego como imágenes, sonidos, fondos, sprites, etc. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+								<br/>
+								<br/>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno">
+							<td colspan="2">create( )</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+								<br/>
+								<br/>
+								Esta es una función del framework Phaser, aquí se añadirán los componentes al juego. En esta función asignamos la posición inicial, el tamaño, etc. De todos los componentes. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+								<br/>
+								<br/>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno">
+							<td colspan="2">verCaja( )</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+								<br/>
+								<br/>
+								Esta función se encargará de dirigir el juego a la sección <b>navegacion.js</b>
+								<br/>
+								<br/>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno">
+							<td colspan="2">update( )</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+								<br/>
+								<br/>
+								Esta es una función del framework Phaser, aquí estarán todos los cambios o ‘acciones’ del juego. Qué hacer al presionar una tecla, al mover el cursor, al chocar una pared; en fin, toda la lógica del juego. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+								<br/>
+								<br/>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno">
+							<td colspan="3">Variables</td>
+						</tr>
+						<tr>
+							<td><b>speedMult</b></td>
+							<td>Double</td>
+							<td>Representa la velocidad dentro de un scroll.</td>
+						</tr>
+						<tr>
+							<td><b>friction</b></td>
+							<td>Double</td>
+							<td>Representa la friccion dentro del scroll.</td>
+						</tr>
+						<tr>
+							<td><b>apodo</b></td>
+							<td>String</td>
+							<td>Cadena que representa el nombre de una caja sorpresa en un determinado momento dentro de un scroll.</td>
+						</tr>
+						<tr>
+							<td><b>boxloocked</b></td>
+							<td>Boolean [ ]</td>
+							<td>Arreglo de 9 posiciones, las cuales representan si una caja sorpresa esta bloqeuada o desbloqueada.</td>
+						</tr>
+						<tr>
+							<td><b>description</b></td>
+							<td>String</td>
+							<td>Cadena que representa la descripción de una caja sorpresa en un determinado momento dentro de un scroll.</td>
+						</tr>
+						<tr>
+							<td><b>startButton</b></td>
+							<td>PhaserButton</td>
+							<td>Botón que muestra al jugador si una caja sorpresa esta bloqueada o desbloqueada.</td>
+						</tr>
+						<tr>
+							<td><b>zoomed</b></td>
+							<td>Boolean</td>
+							<td>Representa si una imagen dentro del scroll esta seleccionada o no.</td>
+						</tr>
+					</table>
+				</article>
+			</section>
+			<aside>
+				<h3>Clases</h3>
+				<p><a href="verificacionDeCodigo.html">VerificacionDeCodigo.js</a></p>
+				<p><a href="codigoUsado.html">CodigoUsado.js</a></p>
+				<p><a href="desbloqueoPersonaje.html">DesbloqueoPersonaje.js</a></p>
+				<p><a href="#">CajaMisteriosa.js</a></p>
+				<p><a href="batalla.html">Batalla.js</a></p>
+				<p><a href="funcionesBatalla.html">FuncionesBatalla.js</a></p>
+				<p><a href="compraPersonajes.html">CompraPersonajes.js</a></p>
+				<p><a href="cookies.html">Cookies.js</a></p>
+				<p><a href="creditos.html">Creditos.js</a></p>
+				<p><a href="historieta.html">Historieta.js</a></p>
+				<p><a href="invitarAmigos.html">InvitarAmigos.js</a></p>
+				<p><a href="logros.html">Logros.js</a></p>
+				<p><a href="mundo1.html">Mundo1.js</a></p>
+				<p><a href="mundo2.html">Mundo2.js</a></p>
+				<p><a href="mundo3.html">Mundo3.js</a></p>
+				<p><a href="mundo4.html">Mundo4.js</a></p>
+				<p><a href="mundo5.html">Mundo5.js</a></p>
+				<p><a href="mundo6.html">Mundo6.js</a></p>
+				<p><a href="mundo7.html">Mundo7.js</a></p>
+				<p><a href="mundo8.html">Mundo8.js</a></p>
+				<p><a href="mundo9.html">Mundo9.js</a></p>
+				<p><a href="mundo10.html">Mundo10.js</a></p>
+				<p><a href="mundo11.html">Mundo11.js</a></p>
+				<p><a href="mundo12.html">Mundo12.js</a></p>
+				<p><a href="navegacion.html">Navegacion.js</a></p>
+				<p><a href="perfilJugador.html">PerfilJugador.js</a></p>
+				<p><a href="boot.html">Boot.js</a></p>
+				<p><a href="game.html">Game.js</a></p>
+				<p><a href="movil.html">Movil.js</a></p>
+				<p><a href="pleaseRotate.html">PleaseRotate.js</a></p>
+				<p><a href="pruebasPsicotecnicas.html">PruebasPsicotecnicas.js</a></p>
+				<p><a href="rankings.html">Rankings.js</a></p>
+				<p><a href="fin.html">Fin.js</a></p>
+				<p><a href="seleccionAvatar.html">SeleccionAvatar.js</a></p>
+				<p><a href="seleccionPersonaje.html">SeleccionPersonaje.js</a></p>
+			</aside>
+		</section>
+		<footer>
+			<p>
+				Poli Fighters - 2017
+			</p>
+		</footer>
+	</body>
+</html>

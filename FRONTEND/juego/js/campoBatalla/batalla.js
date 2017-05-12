@@ -1,6 +1,6 @@
-
 variablesCampoBatalla = {
-	 personajeJugador: null,//guarda el sprite del personaje elegido
+    idNivel:null, //Guarda el id del nivel a crear
+	personajeJugador: null,//guarda el sprite del personaje elegido
     personajeComputadora:null,//guarda el sprite del personaje asignado a un escenario
     cursores:null,//crea cursores
     counter:0,//lleva el tiempo de la partida
@@ -12,8 +12,8 @@ variablesCampoBatalla = {
 	movV:null,//arreglo para saber que accion esta ejecutando el villano//[Defensa,ataqueNomal,ataquePersonalidad,ataquePlagio]
     ataquePlagio:null, //guarda el sprite del ataque plagio del villano
 	ataquePersonalidadC:null,//guarda el sprite del ataque de personalidad del villano
-	idPJ:"idPDos",//guarda el id del personaje del jugador
-	idPC:"idPDos",//guarda el id del personaje del mapa
+	idPJ:null,//guarda el id del personaje del jugador
+	idPC:null,//guarda el id del personaje del mapa
 	costoAtaqueJ:0,//el consumo de energia que causa el ataque
 	costoAtaqueC:0,//el consumo de energia que causa el ataque
 	costoPlagioC:0,//el consumo de energia que causa el ataque
@@ -43,7 +43,7 @@ var batalla = {
 		this.load.setPreloadSprite(this.preloadBar);
 		//boxGame =game.rnd.integerInRange(1, 8);		
 		//timeShowBox = game.rnd.integerInRange(5,60);
-		funcionesBatalla.cargar(variablesCampoBatalla.idPJ,variablesCampoBatalla.idPC,boxGame);
+		funcionesBatalla.cargar(variablesCampoBatalla.idPJ, variablesCampoBatalla.idPC, boxGame, variablesCampoBatalla.idNivel);
 		//funcionesBatalla.cargar(idPJ,idPC);
         game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
 	},
@@ -157,7 +157,8 @@ var batalla = {
 			var pausa = game.add.button(365, 20, 'pausa', this.pausar,this);
 			
 			game.add.text(145,20,personajesBuenos[variablesCampoBatalla.idPJ].nombre,{fill:'white'});
-			game.add.text(460,20,personajesMalos[variablesCampoBatalla.idPC].nombre,{fill:'white'});        
+			game.add.text(460,20,personajesMalos[variablesCampoBatalla.idPC].nombre,{fill:'white'});       
+			game.add.text(15, 12, variablesCampoBatalla.idNivel, {font: "14px Roboto", fill:'white'});       
         
 			vidaBlancoJugador = new Phaser.Rectangle(144, 53, 200, 20);//primer barra blanca de vida
 			vidaNegroJugador = new Phaser.Rectangle(143, 52, 202, 22);//primer borde negro de vida 
@@ -218,7 +219,7 @@ var batalla = {
 	//se crea esta funcion para disminuir la barra de energia
     
 	update : function() {
-		indice=funcionesBatalla.numeroAleatorio(1,4);
+        indice=funcionesBatalla.numeroAleatorio(1,4);
 		funcionesBatalla.cargarEnergia(energiaVerdeJugador);
 		funcionesBatalla.cargarEnergia(energiaVerdeComputadora);
 		if(dispositivoMovil)

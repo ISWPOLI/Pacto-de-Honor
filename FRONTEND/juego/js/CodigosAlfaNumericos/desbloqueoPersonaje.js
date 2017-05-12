@@ -1,9 +1,16 @@
-var password;
-var text;
-var text2;
-var str;
-var str2;
-var codigo;
+variableDesbloqueoPersonaje ={
+	input:null,
+	codigo:null,
+	mapnumeros1:0,
+	mapletras1:0,
+	string:"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+	CadenaAnalizar:0,
+	possible:"ABCDEFGHIJKLMNIOPQRSTUVWXYZ1234567890",
+	text:null,
+	text2:null
+
+};
+
 var desbloqueoPersonaje = function(game){};
 desbloqueoPersonaje.prototype = {
     preload: function(){
@@ -23,7 +30,7 @@ desbloqueoPersonaje.prototype = {
     create: function(){ 
 		game.stage.backgroundColor = "#2451A6";
 		game.add.plugin(PhaserInput.Plugin);
-	    var input = game.add.inputField(100, 493,{
+	    variableDesbloqueoPersonaje.input = game.add.inputField(100, 493,{
 			font: '18px Arial',
 			fill: '#212121',
 			fontWeight: 'bold',
@@ -74,7 +81,7 @@ desbloqueoPersonaje.prototype = {
 
 		btIngresar  = game.add.button(570,480,'ingresar',validarString,this,2,1,0);
 		btIngresar.scale.setTo(0.9,0.9);
-		codigo = game.add.inputField(100,400, {
+		variableDesbloqueoPersonaje.codigo = game.add.inputField(100,400, {
 		    font: '18px Arial',
 		    fill: '#212121',
 		    fillAlpha: 1,
@@ -93,40 +100,40 @@ desbloqueoPersonaje.prototype = {
 
 
 function validarString () {
-	var cadenaAnalizar = input.value;
-    if(cadenaAnalizar.length!=11){
+	variableDesbloqueoPersonaje.CadenaAnalizar = variableDesbloqueoPersonaje.input.value;
+    if(variableDesbloqueoPersonaje.CadenaAnalizar.length!=11){
         return alert("Tu codigo de regalo tiene mas o menos de 11 digitos por favor verificalo");
     }
-    var mapnumeros1 = new Array();
+    variableDesbloqueoPersonaje.mapnumeros1 = new Array();
     for(var i = 1; i <= 8 ; i++){
-        mapnumeros1[i]=true;
+        variableDesbloqueoPersonaje.mapnumeros1[i]=true;
     }
-    var string ="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    var mapletras1 = new Array();
-    for(var i = 0 ; i <= string.length; i++){
-        mapletras1[string.substr(i,1)]=true;
+    //variableDesbloqueoPersonaje.string ="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    variableDesbloqueoPersonaje.mapletras1 = new Array();
+    for(var i = 0 ; i <= variableDesbloqueoPersonaje.string.length; i++){
+        variableDesbloqueoPersonaje.mapletras1[variableDesbloqueoPersonaje.string.substr(i,1)]=true;
     }
     
   
     	
-     for(var i = 0; i < cadenaAnalizar.length ; i++){
-        if(i==0 && mapnumeros1[cadenaAnalizar.substr(i,1)]==undefined){
+     for(var i = 0; i < variableDesbloqueoPersonaje.CadenaAnalizar.length ; i++){
+        if(i==0 && variableDesbloqueoPersonaje.mapnumeros1[variableDesbloqueoPersonaje.CadenaAnalizar.substr(i,1)]==undefined){
             return alert("Tu codigo esta mal escrito o no existe");;
 
-        }else if(((i>=1 && i<=4)||(i>=6 && i<=9)) && mapletras1[cadenaAnalizar.substr(i,1)]==undefined){
+        }else if(((i>=1 && i<=4)||(i>=6 && i<=9)) && variableDesbloqueoPersonaje.mapletras1[variableDesbloqueoPersonaje.CadenaAnalizar.substr(i,1)]==undefined){
             return alert("Tu codigo esta mal escrito o no existe");;
 
-        }else if(i==5 && cadenaAnalizar.substr(i,1)!="-"){
+        }else if(i==5 && variableDesbloqueoPersonaje.CadenaAnalizar.substr(i,1)!="-"){
             return alert("Tu codigo esta mal escrito o no existe");;
 
-        }else if(i==10 && (cadenaAnalizar.substr(i,1)=="P")){
+        }else if(i==10 && (variableDesbloqueoPersonaje.CadenaAnalizar.substr(i,1)=="P")){
             return alert("Has desbloqueado a tu personaje con exito, este codigo ha sido regalado por un profesor");
 
-        }else if(i==10 && (cadenaAnalizar.substr(i,1)=="E")){
+        }else if(i==10 && (variableDesbloqueoPersonaje.CadenaAnalizar.substr(i,1)=="E")){
         	return alert("Has desbloqueado a tu personaje con exito, este codigo ha sido regalado por un amigo");
         }
     }
-    return alert("Has desbloqueado a tu personaje con exito");
+    return alert("Tu codigo esta mal escrito o no existe");
 }  
 		//var letra = input.value;
 	//alfaNumeric(letra);
@@ -149,93 +156,93 @@ game.state.start("perfilJugador");
 
 	},
 	code1:function(){
-	     	text = "";
-	     	text2 = "";
-			var possible = "ABCDEFGHIJKLMNIOPQRSTUVWXYZ1234567890";
+	     	variableDesbloqueoPersonaje.text = "";
+	     	variableDesbloqueoPersonaje.text2 = "";
+			//var possible = "ABCDEFGHIJKLMNIOPQRSTUVWXYZ1234567890";
 			for(var i = 0; i < 4; i++){
-				text = text + possible.charAt(Math.floor(Math.random() * possible.length));
-				text2 = text2 + possible.charAt(Math.floor(Math.random() * possible.length));
+				variableDesbloqueoPersonaje.text = variableDesbloqueoPersonaje.text + variableDesbloqueoPersonaje.possible.charAt(Math.floor(Math.random() * variableDesbloqueoPersonaje.possible.length));
+				variableDesbloqueoPersonaje.text2 = variableDesbloqueoPersonaje.text2 + variableDesbloqueoPersonaje.possible.charAt(Math.floor(Math.random() * variableDesbloqueoPersonaje.possible.length));
 			}
-			codigo.setText("1"+ text + "-" + text2 + "E");
+			variableDesbloqueoPersonaje.codigo.setText("1"+ variableDesbloqueoPersonaje.text + "-" + variableDesbloqueoPersonaje.text2 + "E");
 		
 	},
 	code2:function(){
-	     	text = "";
-	     	text2 = "";
-			var possible = "ABCDEFGHIJKLMNIOPQRSTUVWXYZ1234567890";
+	     	variableDesbloqueoPersonaje.text = "";
+	     	variableDesbloqueoPersonaje.text2 = "";
+			//var possible = "ABCDEFGHIJKLMNIOPQRSTUVWXYZ1234567890";
 			for(var i = 0; i < 4; i++){
-				text = text + possible.charAt(Math.floor(Math.random() * possible.length));
-				text2 = text2 + possible.charAt(Math.floor(Math.random() * possible.length));
+				variableDesbloqueoPersonaje.text = variableDesbloqueoPersonaje.text + variableDesbloqueoPersonaje.possible.charAt(Math.floor(Math.random() * variableDesbloqueoPersonaje.possible.length));
+				variableDesbloqueoPersonaje.text2 = variableDesbloqueoPersonaje.text2 + variableDesbloqueoPersonaje.possible.charAt(Math.floor(Math.random() * variableDesbloqueoPersonaje.possible.length));
 			}
-			codigo.setText("2"+ text + "-" + text2 + "E");
+			variableDesbloqueoPersonaje.codigo.setText("2"+ variableDesbloqueoPersonaje.text + "-" + variableDesbloqueoPersonaje.text2 + "E");
 	},
 	code3:function(){
-	     	text = "";
-	     	text2 = "";
-			var possible = "ABCDEFGHIJKLMNIOPQRSTUVWXYZ1234567890";
+	     	variableDesbloqueoPersonaje.text = "";
+	     	variableDesbloqueoPersonaje.text2 = "";
+			//var possible = "ABCDEFGHIJKLMNIOPQRSTUVWXYZ1234567890";
 			for(var i = 0; i < 4; i++){
-				text = text + possible.charAt(Math.floor(Math.random() * possible.length));
-				text2 = text2 + possible.charAt(Math.floor(Math.random() * possible.length));
+				variableDesbloqueoPersonaje.text = variableDesbloqueoPersonaje.text + variableDesbloqueoPersonaje.possible.charAt(Math.floor(Math.random() * variableDesbloqueoPersonaje.possible.length));
+				variableDesbloqueoPersonaje.text2 = variableDesbloqueoPersonaje.text2 + variableDesbloqueoPersonaje.possible.charAt(Math.floor(Math.random() * variableDesbloqueoPersonaje.possible.length));
 			}
-			codigo.setText("3"+ text + "-" + text2 + "E");
+			variableDesbloqueoPersonaje.codigo.setText("3"+ variableDesbloqueoPersonaje.text + "-" + variableDesbloqueoPersonaje.text2 + "E");
 	},
 	code4:function(){
-	     	text = "";
-	     	text2 = "";
-			var possible = "ABCDEFGHIJKLMNIOPQRSTUVWXYZ1234567890";
+	     	variableDesbloqueoPersonaje.text = "";
+	     	variableDesbloqueoPersonaje.text2 = "";
+			//var possible = "ABCDEFGHIJKLMNIOPQRSTUVWXYZ1234567890";
 			for(var i = 0; i < 4; i++){
-				text = text + possible.charAt(Math.floor(Math.random() * possible.length));
-				text2 = text2 + possible.charAt(Math.floor(Math.random() * possible.length));
+				variableDesbloqueoPersonaje.text = variableDesbloqueoPersonaje.text + variableDesbloqueoPersonaje.possible.charAt(Math.floor(Math.random() * variableDesbloqueoPersonaje.possible.length));
+				variableDesbloqueoPersonaje.text2 =variableDesbloqueoPersonaje.text2 + variableDesbloqueoPersonaje.possible.charAt(Math.floor(Math.random() * variableDesbloqueoPersonaje.possible.length));
 			}
-			codigo.setText("4"+ text + "-" + text2 + "E");
+			variableDesbloqueoPersonaje.codigo.setText("4"+ variableDesbloqueoPersonaje.text + "-" + variableDesbloqueoPersonaje.text2 + "E");
 	},
 	code5:function(){
-	     	text = "";
-	     	text2 = "";
-			var possible = "ABCDEFGHIJKLMNIOPQRSTUVWXYZ1234567890";
+	     	variableDesbloqueoPersonaje.text = "";
+	     	variableDesbloqueoPersonaje.text2 = "";
+			//var possible = "ABCDEFGHIJKLMNIOPQRSTUVWXYZ1234567890";
 			for(var i = 0; i < 4; i++){
-				text = text + possible.charAt(Math.floor(Math.random() * possible.length));
-				text2 = text2 + possible.charAt(Math.floor(Math.random() * possible.length));
+				variableDesbloqueoPersonaje.text = variableDesbloqueoPersonaje.text + variableDesbloqueoPersonaje.possible.charAt(Math.floor(Math.random() * variableDesbloqueoPersonaje.possible.length));
+				variableDesbloqueoPersonaje.text2 = variableDesbloqueoPersonaje.text2 + variableDesbloqueoPersonaje.possible.charAt(Math.floor(Math.random() * variableDesbloqueoPersonaje.possible.length));
 			}
-			codigo.setText("5"+ text + "-" + text2 + "E");
+			variableDesbloqueoPersonaje.codigo.setText("5"+ variableDesbloqueoPersonaje.text + "-" + variableDesbloqueoPersonaje.text2 + "E");
 	},
 	code6:function(){
-	     	text = "";
-	     	text2 = "";
-			var possible = "ABCDEFGHIJKLMNIOPQRSTUVWXYZ1234567890";
+	     	variableDesbloqueoPersonaje.text = "";
+	     	variableDesbloqueoPersonaje.text2 = "";
+			//var possible = "ABCDEFGHIJKLMNIOPQRSTUVWXYZ1234567890";
 			for(var i = 0; i < 4; i++){
-				text = text + possible.charAt(Math.floor(Math.random() * possible.length));
-				text2 = text2 + possible.charAt(Math.floor(Math.random() * possible.length));
+				variableDesbloqueoPersonaje.text = variableDesbloqueoPersonaje.text + variableDesbloqueoPersonaje.possible.charAt(Math.floor(Math.random() * variableDesbloqueoPersonaje.possible.length));
+				variableDesbloqueoPersonaje.text2 = variableDesbloqueoPersonaje.text2 + variableDesbloqueoPersonaje.possible.charAt(Math.floor(Math.random() * variableDesbloqueoPersonaje.possible.length));
 			}
-			codigo.setText("6"+ text + "-" + text2 + "E");
+			variableDesbloqueoPersonaje.codigo.setText("6"+ variableDesbloqueoPersonaje.text + "-" + variableDesbloqueoPersonaje.text2 + "E");
 	},
 	code7:function(){
-	     	text = "";
-	     	text2 = "";
-			var possible = "ABCDEFGHIJKLMNIOPQRSTUVWXYZ1234567890";
+	     	variableDesbloqueoPersonaje.text = "";
+	     	variableDesbloqueoPersonaje.text2 = "";
+			//var possible = "ABCDEFGHIJKLMNIOPQRSTUVWXYZ1234567890";
 			for(var i = 0; i < 4; i++){
-				text = text + possible.charAt(Math.floor(Math.random() * possible.length));
-				text2 = text2 + possible.charAt(Math.floor(Math.random() * possible.length));
+				variableDesbloqueoPersonaje.text = variableDesbloqueoPersonaje.text + variableDesbloqueoPersonaje.possible.charAt(Math.floor(Math.random() * variableDesbloqueoPersonaje.possible.length));
+				variableDesbloqueoPersonaje.text2 = variableDesbloqueoPersonaje.text2 + variableDesbloqueoPersonaje.possible.charAt(Math.floor(Math.random() * variableDesbloqueoPersonaje.possible.length));
 			}
-			codigo.setText("7"+ text + "-" + text2 + "E");
+			variableDesbloqueoPersonaje.codigo.setText("7"+ variableDesbloqueoPersonaje.text + "-" + variableDesbloqueoPersonaje.text2 + "E");
 	},
 	code8:function(){
-	     	text = "";
-	     	text2 = "";
-			var possible = "ABCDEFGHIJKLMNIOPQRSTUVWXYZ1234567890";
+	     	variableDesbloqueoPersonaje.text = "";
+	     	variableDesbloqueoPersonaje.text2 = "";
+			//var possible = "ABCDEFGHIJKLMNIOPQRSTUVWXYZ1234567890";
 			for(var i = 0; i < 4; i++){
-				text = text + possible.charAt(Math.floor(Math.random() * possible.length));
-				text2 = text2 + possible.charAt(Math.floor(Math.random() * possible.length));
+				variableDesbloqueoPersonaje.text = variableDesbloqueoPersonaje.text + variableDesbloqueoPersonaje.possible.charAt(Math.floor(Math.random() * variableDesbloqueoPersonaje.possible.length));
+				variableDesbloqueoPersonaje.text2 = variableDesbloqueoPersonaje.text2 + variableDesbloqueoPersonaje.possible.charAt(Math.floor(Math.random() * variableDesbloqueoPersonaje.possible.length));
 			}
-			codigo.setText("8"+ text + "-" + text2 + "E");
+			variableDesbloqueoPersonaje.codigo.setText("8"+ variableDesbloqueoPersonaje.text + "-" + variableDesbloqueoPersonaje.text2 + "E");
 
 	},code9:function(){
-	     	text = "";
-	     	text2 = "";
-			var possible = "ABCDEFGHIJKLMNIOPQRSTUVWXYZ1234567890";
+	     	variableDesbloqueoPersonaje.text = "";
+	     	variableDesbloqueoPersonaje.text2 = "";
+			//var possible = "ABCDEFGHIJKLMNIOPQRSTUVWXYZ1234567890";
 			for(var i = 0; i < 4; i++){
-				text = text + possible.charAt(Math.floor(Math.random() * possible.length));
-				text2 = text2 + possible.charAt(Math.floor(Math.random() * possible.length));
+				variableDesbloqueoPersonaje.text = variableDesbloqueoPersonaje.text + variableDesbloqueoPersonaje.possible.charAt(Math.floor(Math.random() * variableDesbloqueoPersonaje.possible.length));
+				variableDesbloqueoPersonaje.text2 = variableDesbloqueoPersonaje.text2 + variableDesbloqueoPersonaje.possible.charAt(Math.floor(Math.random() * variableDesbloqueoPersonaje.possible.length));
 			}
-			codigo.setText("9"+ text + "-" + text2 + "E");
+			variableDesbloqueoPersonaje.codigo.setText("9"+ variableDesbloqueoPersonaje.text + "-" + variableDesbloqueoPersonaje.text2 + "E");
 }}

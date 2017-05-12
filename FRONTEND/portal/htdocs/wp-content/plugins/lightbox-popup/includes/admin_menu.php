@@ -77,7 +77,9 @@ class wpdevart_lightbox_admin_menu{
 		}
 		return NULL;
 	}
+	
 	/*############ Lightbox Popup Database Function ################*/
+	
 	public function save_in_databese(){
 		$kk=1;	
 			
@@ -557,7 +559,7 @@ class wpdevart_lightbox_admin_menu{
                     
                		 <tr>
 						<td>
-							Control Button Line Height<span title="Type Control Button Line Height(px)" class="desription_class">?</span>
+							Control button line height<span title="Type Control Button Line Height(px)" class="desription_class">?</span>
 						</td>
 						<td>
 							<input type="number"  id="control_buttons_height" name="control_buttons_height"  min="0"  step="1"  value="<?php echo $page_parametrs['control_buttons_height'] ?>"/>	<small>Px</small>					
@@ -565,7 +567,7 @@ class wpdevart_lightbox_admin_menu{
 					</tr>
                     <tr>
 						<td>
-							 Control buttons line Background Color  <span title=" Choose control buttons line background color" class="desription_class">?</span>
+							 Control buttons line background color  <span title=" Choose control buttons line background color" class="desription_class">?</span>
 						</td>
 						<td>                            
 							<input type="text" class="color_option" id="control_buttons_line_bg_color" name="control_buttons_line_bg_color"  value="<?php echo $page_parametrs['control_buttons_line_bg_color'] ?>"/>						
@@ -573,7 +575,7 @@ class wpdevart_lightbox_admin_menu{
 					</tr>
                      <tr>
 						<td>
-							control buttons line transparency <span class="pro_feature"> (pro)</span><span title="Set control buttons line background transparency" class="desription_class">?</span>
+							Control buttons line transparency <span class="pro_feature"> (pro)</span><span title="Set control buttons line background transparency" class="desription_class">?</span>
 						</td>
 						<td>
                         	<input type="text" size="3" class="lightbox_number_slider pro_input" data-max-val="100" data-min-val="0" name="control_buttons_line_default_transparency" value="100" id="control_buttons_line_default_transparency" style="border:0; color:#f6931f; font-weight:bold; width:35px" >%
@@ -1058,6 +1060,9 @@ class wpdevart_lightbox_admin_menu{
 		</div>        
 		<?php		
 	}
+	
+		/*################################## INFORMATION LINE FUNCTION #########################################*/
+		
 	private function information_line_panel($page_parametrs){
 		
 		?>
@@ -1411,7 +1416,9 @@ class wpdevart_lightbox_admin_menu{
 		</div>        
 		<?php		
 	}
+	
 	/*################################## FEATURED PLUGINS FUNCTION #########################################*/
+
 	public function featured_plugins(){
 		$plugins_array=array(
 			'gallery_album'=>array(
@@ -1419,7 +1426,13 @@ class wpdevart_lightbox_admin_menu{
 						'site_url'		=>	'http://wpdevart.com/wordpress-gallery-plugin',
 						'title'			=>	'WordPress Gallery plugin',
 						'description'	=>	'Gallery plugin is an useful tool that will help you to create Galleries and Albums. Try our nice Gallery views and awesome animations.'
-						),		
+						),
+			'Booking Calendar'=>array(
+						'image_url'		=>	wpdevart_lightbox_plugin_url.'images/featured_plugins/Booking_calendar_featured.png',
+						'site_url'		=>	'http://wpdevart.com/wordpress-booking-calendar-plugin/',
+						'title'			=>	'WordPress Booking Calendar',
+						'description'	=>	'WordPress Booking Calendar plugin is an awesome tool to create a booking system for your website. Create booking calendars in a few minutes.'
+						),						
 			'coming_soon'=>array(
 						'image_url'		=>	wpdevart_lightbox_plugin_url.'images/featured_plugins/coming_soon.jpg',
 						'site_url'		=>	'http://wpdevart.com/wordpress-coming-soon-plugin/',
@@ -1431,12 +1444,6 @@ class wpdevart_lightbox_admin_menu{
 						'site_url'		=>	'http://wpdevart.com/wordpress-contact-form-plugin/',
 						'title'			=>	'Contact Form Builder',
 						'description'	=>	'Contact Form plugin is an nice and handy tool for creating different types of contact forms on your WordPress websites.'
-						),	
-			'Booking Calendar'=>array(
-						'image_url'		=>	wpdevart_lightbox_plugin_url.'images/featured_plugins/Booking_calendar_featured.png',
-						'site_url'		=>	'http://wpdevart.com/wordpress-booking-calendar-plugin/',
-						'title'			=>	'Booking Calendar',
-						'description'	=>	'WordPress Booking Calendar plugin is an awesome tool to create a booking system for your website. Create booking calendars in a few minutes.'
 						),	
 			'youtube'=>array(
 						'image_url'		=>	wpdevart_lightbox_plugin_url.'images/featured_plugins/youtube.png',
@@ -1465,7 +1472,7 @@ class wpdevart_lightbox_admin_menu{
 			'poll'=>array(
 						'image_url'		=>	wpdevart_lightbox_plugin_url.'images/featured_plugins/poll.png',
 						'site_url'		=>	'http://wpdevart.com/wordpress-polls-plugin',
-						'title'			=>	'Poll',
+						'title'			=>	'WordPress Poll system',
 						'description'	=>	'WordPress Polls plugin is an wonderful tool for creating polls and survey forms for your visitors. You can use polls on widgets, posts and pages.'
 						),
 												

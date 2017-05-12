@@ -1,8 +1,8 @@
 var ganadorBatalla;
 var funcionesBatalla={
     //funcion que se encarga de cargar todos los elementos del campo de batalla
-    cargar:function(idPJ,idPC,caa){
-        game.load.image('fondo', "../img/escenarios/escenariosSecundarios/nivel1.png");
+    cargar:function(idPJ, idPC, caa, idNivel){
+        game.load.image('fondo', niveles[idNivel].fondo);
 		game.load.spritesheet('personajeJugador', personajesBuenos[idPJ].rutaSprite, 200, 200);
 		game.load.image('avatarPersonajeJugador', personajesBuenos[idPJ].rutaAvatar);
 		game.load.spritesheet('personajeComputadora', personajesMalos[idPC].rutaSprite, 200, 200);
@@ -25,10 +25,8 @@ var funcionesBatalla={
          }else{
              game.load.image('cajaOpen', boxes[caa].rootOpen);
          }
-       
-
-
     },
+    
     //inicializa todos los estados de los sprites de los personajes 
 	iniciarSprite:function(sprite){
 		sprite.animations.add('quieto', [1], 10, true);
@@ -40,6 +38,7 @@ var funcionesBatalla={
 		game.physics.arcade.enable(sprite);
 		sprite.body.collideWorldBounds = true; 
 	},
+    
     //Esta funcion se activa al dar click en el logo del poli y despliega el menu de pausa 
 	pausar:function(){
 		game.paused=true;
@@ -51,20 +50,29 @@ var funcionesBatalla={
             // Only act if paused
         if(game.paused){
                 //Condicional si se oprime en Continuar
-            if(event.x > 320 && event.x < 530 && event.y > 250 && event.y < 300){
+            if(event.x > 380 && event.x < 475 && event.y > 255 && event.y < 280){
                 lal.destroy();
                 game.paused = false;
             }
                 //Condicional si se oprime en Reiniciar
-            else if(event.x > 320 && event.x < 530 && event.y > 320 && event.y < 370) {
+            else if(event.x > 380 && event.x < 475 && event.y > 300 && event.y < 330) {
                 game.paused = false;
                 game.state.start(game.state.current);
                 counter = 0;
             }
             //Condicional si se oprime en Salir
-            else if (event.x > 320 && event.x < 530 && event.y > 380 && event.y < 420) {
+            else if (event.x > 390 && event.x < 465 && event.y > 350 && event.y < 380) {
                 game.paused = false;
                 game.state.start("navegacion");
+            }
+            //Condicional si se oprime en Sonido
+            else if (event.x > 410 && event.x < 450 && event.y > 390 && event.y < 425) {
+                if(vN.music.paused){
+                    vN.music.resume();
+                    }
+                else{
+                    vN.music.pause();
+                    } 
             }
         }
     },

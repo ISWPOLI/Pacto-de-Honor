@@ -30,9 +30,26 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
+<<<<<<< HEAD
+        resources.add(rest.CategoriaFacadeREST.class);
+        resources.add(rest.CiudadFacadeREST.class);
+        resources.add(rest.FraseFacadeREST.class);
+        resources.add(rest.ImagenFacadeREST.class);
+        resources.add(rest.JugadorFacadeREST.class);
+        resources.add(rest.MundoFacadeREST.class);
+        resources.add(rest.PaisFacadeREST.class);
+        resources.add(rest.PersonajeFacadeREST.class);
+        resources.add(rest.PoderFacadeREST.class);
+        resources.add(rest.PruebaPsicotecnicaFacadeREST.class);
+        resources.add(rest.RespuestaPreguntasPsicotecnicasFacadeREST.class);
+        resources.add(rest.RolUsuarioFacadeREST.class);
+        resources.add(rest.TipoPruebaFacadeREST.class);
+        resources.add(rest.UsuarioFacadeREST.class);
+=======
         resources.add(com.poder.Restful.PH.service.ImagenFacadeREST.class);
         resources.add(rest.CiudadFacadeREST.class);
         resources.add(rest.PoderFacadeREST.class);
+>>>>>>> 06b43fe11dc9f6596399ecfcf3e5ea6c342dc7b3
     }
     
 }
