@@ -45,6 +45,7 @@ var boot ={
 	create: function () {
 		this.game.stage.backgroundColor = '#B22222';
 		game.physics.startSystem(Phaser.Physics.ARCADE);
+        cookies.setCookie("token", rtaLogin.token);
         
     	if(isMobile. any()!=null){
    			game.scale.forceOrientation(false, true);
