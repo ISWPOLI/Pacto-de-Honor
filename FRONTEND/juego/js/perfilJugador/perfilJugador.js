@@ -4,6 +4,10 @@ var character1;
 var character2;
 var music;
 var musicButton;
+var NicknamePerfil;
+//var MundoPerfil;
+//var NivelPerfil;
+//var MonedasPerfil;
 
 var perfilJugador = function(game){};
     perfilJugador.prototype = {
@@ -21,6 +25,11 @@ var perfilJugador = function(game){};
         },
 
         create : function (){
+
+            NicknamePerfil = datosperfil["datos"].nickname;
+            MundoPerfil = datosperfil["datos"].mundo;
+            NivelPerfil = datosperfil["datos"].nivel;
+            MonedasPerfil = datosperfil["datos"].monedas;
             musicButton = game.add.audio('sonidoBoton');
             game.stage.backgroundColor = "#2451A6";
 		    game.add.sprite(50, 50,'avatar');
@@ -32,9 +41,10 @@ var perfilJugador = function(game){};
             game.add.button(450, 450,'boton-alfanumerico', this.verAlfanumercios, 0, 0, 0, 0);
 
             game.add.text(400, 50, "Perfil del usuario", {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
-            game.add.text(400, 130, "Nickname: -----", {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
-            game.add.text(600, 130, "Mundo: ----", {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
-            game.add.text(360, 200, "Nivel: 0", {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
+            game.add.text(400, 130, "Nickname: " + NicknamePerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
+            game.add.text(590, 130, "Mundo: " +MundoPerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
+            game.add.text(360, 200, "Nivel: " +NivelPerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
+            game.add.text(590, 200, "Monedas: " +MonedasPerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
             
             music = game.add.audio('sonidos');
             music.loop = true;
