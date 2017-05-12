@@ -1,0 +1,335 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="shortcut icon" type="image/x-icon" href="img/logosinfondo.ico">
+		<title>Batalla</title>
+		<link rel="stylesheet" href="css/styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+	</head>
+	<body>
+		<header>
+			<div>
+				<img class="portada" src="img/portada.png">
+			</div>
+			<nav>
+				<ul>
+					<li><a href="inicio.html">Inicio</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section class="main">
+			<section class="articles">
+				<article>
+					<h2>batalla.js</h2>
+					<br/>
+					<p>Dependiendo del dispositivo del cual se accede al juego se agregan las barras de vida y energia del jugador y de la computadora, contiene la logica de los golpes, impactos de cada uno y el tiempo de la batalla.</p>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno">
+							<td colspan="2">Funciones</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>preload</b> ( )
+								<br/>
+								Función de Phaser, que sirve para cargar cosas.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>create</b> ( )
+								<br/>
+								Función de Phaser, que sirve para agregar cosas.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>Render</b> ( )
+								<br/>
+								Función de Phaser, que sirve renderizar el juego.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>update</b> ( )
+								<br/>
+								Función de Phaser, que sirve para cambiar cosas en el juego.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno">
+							<td colspan="2">preload( )</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+								<br/>
+								<br/>
+								Esta es una función del framework Phaser en la que cargaremos todos los componentes a ser utilizados en el juego como imágenes, sonidos, fondos, sprites, etc. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+								<br/>
+								<br/>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno">
+							<td colspan="2">create( )</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+								<br/>
+								<br/>
+								Esta es una función del framework Phaser, aquí se añadirán los componentes al juego. En esta función asignamos la posición inicial, el tamaño, etc. De todos los componentes. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+								<br/>
+								<br/>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno">
+							<td colspan="2">render( )</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+								<br/>
+								<br/>
+								Esta es una función del framework Phaser, aquí se renderizará el juego. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+								<br/>
+								<br/>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno">
+							<td colspan="2">update( )</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+								<br/>
+								<br/>
+								Esta es una función del framework Phaser, aquí estarán todos los cambios o ‘acciones’ del juego. Qué hacer al presionar una tecla, al mover el cursor, al chocar una pared; en fin, toda la lógica del juego. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+								<br/>
+								<br/>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno">
+							<td colspan="3">Variables</td>
+						</tr>
+						<tr>
+							<td><b>idNivel</b></td>
+							<td>int</td>
+							<td>Representa el id del nivel seleccionado.</td>
+						</tr>
+						<tr>
+							<td><b>personajeJugador</b></td>
+							<td>PhaserSprite</td>
+							<td>Sprite del personaje del jugador.</td>
+						</tr>
+						<tr>
+							<td><b>personajeComputadora</b></td>
+							<td>PhaserSprite</td>
+							<td>Sprite del personaje de la computadora.</td>
+						</tr>
+						<tr>
+							<td><b>cursores</b></td>
+							<td>PhaserKeyboard</td>
+							<td>Cursores que se usaran para que el jugador mueva al personaje.</td>
+						</tr>
+						<tr>
+							<td><b>counter</b></td>
+							<td>int</td>
+							<td>Lleva el tiempo de la partida.</td>
+						</tr>
+						<tr>
+							<td><b>ti</b></td>
+							<td>int</td>
+							<td>Muestra el avance del tiempo de la partida en segundos.</td>
+						</tr>
+						<tr>
+							<td><b>danoH</b></td>
+							<td>Double [ ]</td>
+							<td>Arreglo de 3 posiciones que indica el daño que ocasiona el jugador con cada uno de sus ataques.</td>
+						</tr>
+						<tr>
+							<td><b>danoV</b></td>
+							<td>Double [ ]</td>
+							<td>Arreglo de 3 posiciones que indica el daño que ocasiona la computadora con cada uno de sus ataques.</td>
+						</tr>
+						<tr>
+							<td><b>musicButton</b></td>
+							<td>PhaserButton</td>
+							<td>Botón que se usa para agregar sonidos a la batalla.</td>
+						</tr>
+						<tr>
+							<td><b>movH</b></td>
+							<td>Boolean [ ]</td>
+							<td>Arreglo de 4 posiciones, las cuales, la primera significa que el jugador se esta defendiendo, la segunda significa que el jugador esta atacando con el ataque normal, la tercera significa que el jugador esta atacando con el ataque de personalidad y la cuarta posición significa que el jugador se esta defendiendo de un ataque tipo plagio.</td>
+						</tr>
+						<tr>
+							<td><b>movV</b></td>
+							<td>Boolean [ ]</td>
+							<td>Arreglo de 4 posiciones, las cuales, la primera significa que la computadora se esta defendiendo, la segunda significa que la computadora esta atacando con el ataque normal, la tercera significa que la computadora esta atacando con el ataque de personalidad y la cuarta posición significa que la computadora esta atacando con el ataque tipo plagio.</td>
+						</tr>
+						<tr>
+							<td><b>ataquePlagio</b></td>
+							<td>PhaserSprite</td>
+							<td>Sprite del poder de plagio de la computadora.</td>
+						</tr>
+						<tr>
+							<td><b>ataquePersonalidadC</b></td>
+							<td>PhaserSprite</td>
+							<td>Sprite del poder de personalidad de la computadora.</td>
+						</tr>
+						<tr>
+							<td><b>idPJ</b></td>
+							<td>int</td>
+							<td>Entero que contiene el id del personaje del jugador</td>
+						</tr>
+						<tr>
+							<td><b>idPC</b></td>
+							<td>int</td>
+							<td>Entero que contiene el id del personaje la computadora</td>
+						</tr>
+						<tr>
+							<td><b>costoAtaqueJ</b></td>
+							<td>double</td>
+							<td>Costo en la barra de energía cuando el jugador use el ataque de personalidad</td>
+						</tr>
+						<tr>
+							<td><b>costoAtaqueC</b></td>
+							<td>double</td>
+							<td>Costo en la barra de energía cuando la computadora use el ataque de personalidad</td>
+						</tr>
+						<tr>
+							<td><b>costoPlagioC</b></td>
+							<td>double</td>
+							<td>Costo en la barra de energía cuando la computadora use el ataque dtipo plagio</td>
+						</tr>
+						<tr>
+							<td><b>secuencia</b></td>
+							<td>boolean</td>
+							<td>variable booleana que esta en tru cuando la computadora este realizando un movimiento y en false cuando no lo este realizando.</td>
+						</tr>
+						<tr>
+							<td><b>movimientoComputadora</b></td>
+							<td>String</td>
+							<td>Cadena que identificará el movimiento que realizará la computadora.</td>
+						</tr>
+						<tr>
+							<td><b>primerImpacto</b></td>
+							<td>Boolean</td>
+							<td>Se usa para que el ataque tipo plagio de la computadora solo reste vida una vez.</td>
+						</tr>
+						<tr>
+							<td><b>indice</b></td>
+							<td>int</td>
+							<td>Indice que representa el indice del movimiendo que esta realizando la computadora.</td>
+						</tr>
+						<tr>
+							<td><b>fondoGame</b></td>
+							<td>PhaserSprite</td>
+							<td>Sprite del fondo de la batalla.</td>
+						</tr>
+						<tr>
+							<td><b>ataquePersonalidadJ</b></td>
+							<td>PhaserSprite</td>
+							<td>Sprite del ataque de personalidad del jugador.</td>
+						</tr>
+						<tr>
+							<td><b>escudo1</b></td>
+							<td>PhaserSprite</td>
+							<td>Sprite del primer escudo del jugador.</td>
+						</tr>
+						<tr>
+							<td><b>escudo2</b></td>
+							<td>PhaserSprite</td>
+							<td>Sprite del segundo escudo del jugador.</td>
+						</tr>
+						<tr>
+							<td><b>gamePad</b></td>
+							<td>PhaserPlugin</td>
+							<td>Plugin de phaser para utilizar joystick en los dispositivos moviles.</td>
+						</tr>
+						<tr>
+							<td><b>joystick</b></td>
+							<td>PhaserJoystick</td>
+							<td>Joystick para queel jugador mueva al personaje durante la batalla.</td>
+						</tr>
+						<tr>
+							<td><b>pausa</b></td>
+							<td>PhaserButton</td>
+							<td>Botón para pausar la batalla.</td>
+						</tr>
+					</table>
+				</article>
+			</section>
+			<aside>
+				<h3>Clases</h3>
+				<p><a href="verificacionDeCodigo.html">VerificacionDeCodigo.js</a></p>
+				<p><a href="codigoUsado.html">CodigoUsado.js</a></p>
+				<p><a href="desbloqueoPersonaje.html">DesbloqueoPersonaje.js</a></p>
+				<p><a href="cajaMisteriosa.html">CajaMisteriosa.js</a></p>
+				<p><a href="#">Batalla.js</a></p>
+				<p><a href="funcionesBatalla.html">FuncionesBatalla.js</a></p>
+				<p><a href="compraPersonajes.html">CompraPersonajes.js</a></p>
+				<p><a href="cookies.html">Cookies.js</a></p>
+				<p><a href="creditos.html">Creditos.js</a></p>
+				<p><a href="historieta.html">Historieta.js</a></p>
+				<p><a href="invitarAmigos.html">InvitarAmigos.js</a></p>
+				<p><a href="logros.html">Logros.js</a></p>
+				<p><a href="mundo1.html">Mundo1.js</a></p>
+				<p><a href="mundo2.html">Mundo2.js</a></p>
+				<p><a href="mundo3.html">Mundo3.js</a></p>
+				<p><a href="mundo4.html">Mundo4.js</a></p>
+				<p><a href="mundo5.html">Mundo5.js</a></p>
+				<p><a href="mundo6.html">Mundo6.js</a></p>
+				<p><a href="mundo7.html">Mundo7.js</a></p>
+				<p><a href="mundo8.html">Mundo8.js</a></p>
+				<p><a href="mundo9.html">Mundo9.js</a></p>
+				<p><a href="mundo10.html">Mundo10.js</a></p>
+				<p><a href="mundo11.html">Mundo11.js</a></p>
+				<p><a href="mundo12.html">Mundo12.js</a></p>
+				<p><a href="navegacion.html">Navegacion.js</a></p>
+				<p><a href="perfilJugador.html">PerfilJugador.js</a></p>
+				<p><a href="boot.html">Boot.js</a></p>
+				<p><a href="game.html">Game.js</a></p>
+				<p><a href="movil.html">Movil.js</a></p>
+				<p><a href="pleaseRotate.html">PleaseRotate.js</a></p>
+				<p><a href="pruebasPsicotecnicas.html">PruebasPsicotecnicas.js</a></p>
+				<p><a href="rankings.html">Rankings.js</a></p>
+				<p><a href="fin.html">Fin.js</a></p>
+				<p><a href="seleccionAvatar.html">SeleccionAvatar.js</a></p>
+				<p><a href="seleccionPersonaje.html">SeleccionPersonaje.js</a></p>
+			</aside>
+		</section>
+		<footer>
+			<p>
+				Poli Fighters - 2017
+			</p>
+		</footer>
+	</body>
+</html>
