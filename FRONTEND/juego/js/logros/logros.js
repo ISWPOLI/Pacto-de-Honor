@@ -252,7 +252,7 @@ var logros = function(game){};
       },
         verPerfil: function(){
             game.state.start("perfilJugador");
-            sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
 
         },
         update:function(){
