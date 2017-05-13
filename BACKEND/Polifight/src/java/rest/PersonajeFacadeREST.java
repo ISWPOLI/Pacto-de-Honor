@@ -42,7 +42,7 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
     @Path("getId")
     @Produces({"application/json"})
     public String returnId(@QueryParam("token") String token){
-        String resultado = "[";        
+        String resultado = "{\"datos\":[";        
         try {
             Query queryToken = em.createNamedQuery("Usuario.findToken");
             queryToken.setParameter("token", token);
@@ -53,12 +53,12 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
                 for (int i = 0; i < datos.size(); i++) {
                     resultado += "{";
                     if(i == datos.size()-1){
-                        resultado += "'idPersonaje':'"+datos.get(i).getIdPersonaje()+"', nombrePersonaje':'"+datos.get(i).getNombrePersonaje()+"'}";
+                        resultado += "\"idPersonaje\":"+datos.get(i).getIdPersonaje()+", \"nombrePersonaje\":\""+datos.get(i).getNombrePersonaje()+"\"}";
                     }else{
-                        resultado += "'idPersonaje':'"+datos.get(i).getIdPersonaje()+"', nombrePersonaje':'"+datos.get(i).getNombrePersonaje()+"'},";
+                        resultado += "\"idPersonaje\":"+datos.get(i).getIdPersonaje()+", \"nombrePersonaje\":\""+datos.get(i).getNombrePersonaje()+"\"},";
                     }
                 }
-                resultado += "]";
+                resultado += "]}";
             }else{
                 resultado = "{'response':'KO', 'cause':'Invalid token'}";
             }        
@@ -66,7 +66,6 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
             e.printStackTrace();
             resultado = "{'response':'KO', 'cause':'Invalid token'}";
         }
-        System.err.println(resultado);
         return resultado;
     }
     
@@ -233,6 +232,7 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
          try{
             Query queryToken = em.createNamedQuery("Usuario.findToken");
             queryToken.setParameter("token", token);
+             System.err.println(token);
             Usuario user = (Usuario) queryToken.getSingleResult();
             if(user != null){
                 resultado = String.valueOf(super.count());

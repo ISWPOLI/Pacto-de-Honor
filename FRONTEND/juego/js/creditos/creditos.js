@@ -46,14 +46,12 @@ variablesCreditos={
   textoPacto:null, 
   textoBuenos:null, 
   textoMalos:null, 
-  textoPlagios:null,
-  musicButton:null
+  textoPlagios:null
+  
 }
 var creditos = function(game){};
     creditos.prototype = {
         preload: function(){
-            game.scale.pageAlignHorizontally = true;
-            game.scale.pageAlignVertically = true;
             //Carga de imagenes para el logo del pacto
             game.load.image('logoPacto', '../img/Componentes/creditos/logoPacto.png');
             //Carga de imagenes para los botones principales
@@ -61,7 +59,6 @@ var creditos = function(game){};
             game.load.spritesheet('botonBuenos', '../img/Componentes/botones/botonBuenos.png', 192, 71);
             game.load.spritesheet('botonMalos', '../img/Componentes/botones/botonMalos.png', 192, 71);
             game.load.spritesheet('botonPlagios', '../img/Componentes/botones/botonPlagios.png', 192, 71);
-            game.load.spritesheet('botonVolver', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
             //Carga de imagenes para los botones de personajes buenos
             game.load.spritesheet('anaPantera', '../img/personajes/avatares/botonPantera.png', 125, 125);
             game.load.spritesheet('andresGallo', '../img/personajes/avatares/botonGallo.png', 125, 125);
@@ -96,12 +93,10 @@ var creditos = function(game){};
             game.load.image('botonError404', '../img/Componentes/creditos/botonError404.png');
             game.load.image('botonRSS', '../img/Componentes/creditos/botonRSS.png');
             game.load.image('botonReutilizacion', '../img/Componentes/creditos/botonReutilizacion.png');
-            
-             game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
         },
         
         create: function(){
-            variablesCreditos.musicButton = game.add.audio('sonidoBoton');
+
             game.stage.backgroundColor = "#2451A6"; //Color de fondo
             game.add.text(game.width / 2, 50, "Créditos", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5); //Título de Créditos
             
@@ -196,49 +191,57 @@ var creditos = function(game){};
             variablesCreditos.textoPlagios = game.add.text(200, 400, "", {font: "18px Roboto", fill: "#ffffff", align: "left", boundsAlignH: "left", boundsAlignV: "top", wordWrap: true, wordWrapWidth: 400});
             
             //Se crea el logo del Pacto y se oculta
+
             variablesCreditos.logoPacto = game.add.image(500, 300, 'logoPacto');
             variablesCreditos.logoPacto.visible = false;
+
+         
+            
+            boot.verificarMusica("menu");
+
         },
             
         /*Funciones que se llaman al oprimir el boton de cada personaje
         Dentro de estas funciones se sobreescribe la variable de texto de las descripciones de los personajes o tipos de plagio segun corresponde*/
-        panteraClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoBuenos.setText(variablesCreditos.descripcionesBuenos[0]);},        
-        galloClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoBuenos.setText(variablesCreditos.descripcionesBuenos[1]);},
-        ciervaClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoBuenos.setText(variablesCreditos.descripcionesBuenos[2]);},
-        jirafaClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoBuenos.setText(variablesCreditos.descripcionesBuenos[3]);},
-        leonClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoBuenos.setText(variablesCreditos.descripcionesBuenos[4]);},
-        canarioClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoBuenos.setText(variablesCreditos.descripcionesBuenos[5]);},
-        ruisenorClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoBuenos.setText(variablesCreditos.descripcionesBuenos[6]);},
-        ratonClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoBuenos.setText(variablesCreditos.descripcionesBuenos[7]);},
-        hormigaClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoBuenos.setText(variablesCreditos.descripcionesBuenos[8]);},
-        abejasClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[0]);},
-        babuinoClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[1]);},
-        buitreClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[2]);},
-        burroClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[3]);},
-        camaleonClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[4]);},
-        hienaClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[5]);},
-        lagartoClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[6]);},
-        osoClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[7]);},
-        perezosoClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[8]);},
-        rataClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[9]);},
-        viboraClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[10]);},
-        zorroClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[11]);},        
-        clonacionClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[0]);},
-        copiadoClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[1]);},
-        busquedaReemplazoClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[2]);},
-        remixClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[3]);},
-        recicladoClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[4]);},
-        hibridoClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[5]);},
-        mosaicoClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[6]);},
-        error404Click: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[7]);},
-        RSSClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[8]);},
-        reutilizacionClick: function(){variablesCreditos.musicButton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[9]);},
+
+        panteraClick: function(){sonidoBoton.play(); variablesCreditos.textoBuenos.setText(variablesCreditos.descripcionesBuenos[0]);},        
+        galloClick: function(){sonidoBoton.play(); variablesCreditos.textoBuenos.setText(variablesCreditos.descripcionesBuenos[1]);},
+        ciervaClick: function(){sonidoBoton.play(); variablesCreditos.textoBuenos.setText(variablesCreditos.descripcionesBuenos[2]);},
+        jirafaClick: function(){sonidoBoton.play(); variablesCreditos.textoBuenos.setText(variablesCreditos.descripcionesBuenos[3]);},
+        leonClick: function(){sonidoBoton.play(); variablesCreditos.textoBuenos.setText(variablesCreditos.descripcionesBuenos[4]);},
+        canarioClick: function(){sonidoBoton.play(); variablesCreditos.textoBuenos.setText(variablesCreditos.descripcionesBuenos[5]);},
+        ruisenorClick: function(){sonidoBoton.play(); variablesCreditos.textoBuenos.setText(variablesCreditos.descripcionesBuenos[6]);},
+        ratonClick: function(){sonidoBoton.play(); variablesCreditos.textoBuenos.setText(variablesCreditos.descripcionesBuenos[7]);},
+        hormigaClick: function(){sonidoBoton.play(); variablesCreditos.textoBuenos.setText(variablesCreditos.descripcionesBuenos[8]);},
+        abejasClick: function(){sonidoBoton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[0]);},
+        babuinoClick: function(){sonidoBoton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[1]);},
+        buitreClick: function(){sonidoBoton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[2]);},
+        burroClick: function(){sonidoBoton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[3]);},
+        camaleonClick: function(){sonidoBoton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[4]);},
+        hienaClick: function(){sonidoBoton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[5]);},
+        lagartoClick: function(){sonidoBoton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[6]);},
+        osoClick: function(){sonidoBoton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[7]);},
+        perezosoClick: function(){sonidoBoton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[8]);},
+        rataClick: function(){sonidoBoton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[9]);},
+        viboraClick: function(){sonidoBoton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[10]);},
+        zorroClick: function(){sonidoBoton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[11]);},        
+        clonacionClick: function(){sonidoBoton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[0]);},
+        copiadoClick: function(){sonidoBoton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[1]);},
+        busquedaReemplazoClick: function(){sonidoBoton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[2]);},
+        remixClick: function(){sonidoBoton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[3]);},
+        recicladoClick: function(){sonidoBoton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[4]);},
+        hibridoClick: function(){sonidoBoton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[5]);},
+        mosaicoClick: function(){sonidoBoton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[6]);},
+        error404Click: function(){sonidoBoton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[7]);},
+        RSSClick: function(){sonidoBoton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[8]);},
+        reutilizacionClick: function(){sonidoBoton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[9]);},
+
         
         //Dentro de las siguientes funciones se ponen visibles o no visibles los elementos de la pantalla según corresponda
         
         //Funcion que se llama al oprimir el boton '¿Qué es el Pacto de Honor?'
         verPacto: function(){
-            musicButton.play();
+            sonidoBoton.play();
             botonPantera.visible = false;
             botonGallo.visible = false;
             botonCierva.visible = false;
@@ -280,8 +283,13 @@ var creditos = function(game){};
         
         //Funcion que se llama al oprimir el boton 'Personajes Buenos'
         verPersonajesBuenos: function(){
+
             musicButton.play();
             variablesCreditos.textoBuenos.setText("");
+
+            sonidoBoton.play();
+            
+
             botonAbejas.visible = false;
             botonBabuino.visible = false;
             botonBuitre.visible = false;
@@ -323,8 +331,13 @@ var creditos = function(game){};
         
         //Funcion que se llama al oprimir el boton 'Personajes Malos'
         verPersonajesMalos: function(){
-            musicButton.play();
+
+           
             variablesCreditos.textoMalos.setText("");
+
+            sonidoBoton.play();
+           
+
             botonPantera.visible = false;
             botonGallo.visible = false;
             botonCierva.visible = false;
@@ -366,8 +379,13 @@ var creditos = function(game){};
         
         //Funcion que se llama al oprimir el boton 'Tipos de plagio'
         verPlagios: function(){
-            variablesCreditos.musicButton.play();
+
+            
             variablesCreditos.textoPlagios.setText("");
+
+            sonidoBoton.play();
+            
+
             botonAbejas.visible = false;
             botonBabuino.visible = false;
             botonBuitre.visible = false;
@@ -409,7 +427,7 @@ var creditos = function(game){};
         
         //Funcion que se llama al oprimir el botón de regreso
         volver: function(){
-            variablesCreditos.musicButton.play();
+            sonidoBoton.play();
             game.state.start("navegacion");
         },        
         update:function(){

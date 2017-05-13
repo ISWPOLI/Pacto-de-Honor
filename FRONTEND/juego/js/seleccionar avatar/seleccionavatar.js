@@ -1,6 +1,6 @@
 var speedMult = 0.2;
 var friction = 0.99;
-var characters = ["pantera","gallo","cierva","girafa","leon","canario","ruisenor","raton","hormiga"];
+var characters = ["pantera","gallo","cierva","jirafa","leon","canario","ruisenor","raton","hormiga"];
 var namesCharacters = ["Ana Pantera", "Andrés Gallo", "Cata Cierva", "Daniela Jirafa", "Daniel León", "Fabian Canario", "Iván Ruiseñor", "Pedro Ratón", "Tati Hormiga"];
 var description;
 var apodo;
@@ -20,23 +20,9 @@ var descriptions = ["Ana tiene buenos amigos y un gran\ngrupo social, los sigue 
 var seleccionavatar = function(game){};
 seleccionavatar.prototype = {
      preload: function(){
-          game.scale.pageAlignHorizontally = true;
-          game.scale.pageAlignVertically = true;
 
-          game.load.image("transp", "../img/personajes/avatares/transp.png");
-          game.load.image('pantera', '../img/personajes/avatares/CaraPantera80.png');
-          game.load.image('gallo', '../img/personajes/avatares/CaraGallo80.png');
-          game.load.image('cierva', '../img/personajes/avatares/CaraCierva80.png');
-          game.load.image('girafa', '../img/personajes/avatares/CaraJirafa80.png');
-          game.load.image('leon', '../img/personajes/avatares/CaraLeon80.png');
-          game.load.image('canario', '../img/personajes/avatares/CaraCanario80.png');
-          game.load.image('ruisenor', '../img/personajes/avatares/CaraRuiseñor80.png');
-          game.load.image('raton', '../img/personajes/avatares/CaraRatón80.png');
-          game.load.image('hormiga', '../img/personajes/avatares/CaraHormiga80.png');
-          game.load.spritesheet('button', '../img/Componentes/botones/botonSeleccionar.png', 150, 40);
-          game.load.audio('sonidos','../img/Componentes/sonidos/seleccionAvatar.mp3');     
-          game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
      },
+    
      create: function(){  
           game.stage.backgroundColor = "#2451A6"; 
           game.add.text(game.width / 2, 50, "Selección de avatar", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5);
@@ -53,32 +39,34 @@ seleccionavatar.prototype = {
                fish = game.add.image(game.width / 2 + i * 90, 130, characters[i]);
                fish.anchor.set(0.5);
                this.scrollingMap.addChild(fish);
-          }
+      }
+         this.scrollingMap.events.onDragStart.add(function(){
+            this.scrollingMap.isBeingDragged = true;
+            this.scrollingMap.movingSpeed = 0;
+         }, this);
+         this.scrollingMap.events.onDragStop.add(function(){
+            this.scrollingMap.isBeingDragged = false;
+         }, this);
+         
+         apodo = game.add.text(game.world.centerX, 230, "", { font: "24px Roboto", fill: "#ffffff", align: "center", backgroundColor: "#2451A6"});
+         apodo.anchor.set(0.5);
+         description = game.add.text(game.world.centerX, 380, "", { font: "20px Roboto", fill: "#ffffff", align: "center", backgroundColor: "#2451A6"});
+         description.anchor.set(0.5);
+         startButton = game.add.button(game.world.width / 2, 540, 'botonSeleccionar', this.verH, this, 2, 1, 0); // over, out, down, up
+         startButton.anchor.set(0.5);
 
-          this.scrollingMap.events.onDragStart.add(function(){
-               this.scrollingMap.isBeingDragged = true;
-               this.scrollingMap.movingSpeed = 0;
-          }, this);
-          this.scrollingMap.events.onDragStop.add(function(){
-               this.scrollingMap.isBeingDragged = false;
-          }, this);
+         if(startButton==true){
 
-          apodo = game.add.text(game.world.centerX, 230, "", { font: "24px Roboto", fill: "#ffffff", align: "center", backgroundColor: "#2451A6"});
-          apodo.anchor.set(0.5);
-          description = game.add.text(game.world.centerX, 380, "", { font: "20px Roboto", fill: "#ffffff", align: "center", backgroundColor: "#2451A6"});
-          description.anchor.set(0.5);
-          startButton = game.add.button(game.world.width / 2, 540, 'button', this.verH, this, 2, 1, 0); // over, out, down, up
-          startButton.anchor.set(0.5);
-         musicButton = game.add.audio('sonidoBoton');
-         music = game.add.audio('sonidos'); 
-         music.loop=true;
-         music.play();         
+         }
+
+         musicaMenus.play();
     },
     verH:function(){
+        musicaMenus.pause();
+        sonidoBoton.play();
         this.state.start("historieta");
-        musicButton.play();
-        music.pause();
     },
+    
     update:function(){
           var zoomed = false;
           for(var i = 0; i < this.scrollingMap.children.length; i++){

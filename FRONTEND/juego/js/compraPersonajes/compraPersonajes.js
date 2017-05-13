@@ -1,82 +1,61 @@
 variablesCompraPersonajes={
-     speedMult : 0.2,
-     friction :0.99,
-     animals : ["pantera","gallo","cierva","jirafa","leon","canario","ruisenor","raton","hormiga"],
-     // Nombres personajes Pacto de honor
-     names : ["Ana Pantera", 
-                       "Andrés Gallo",
-                       "Cata Cierva", 
-                       "Daniela Jirafa", 
-                       "Daniel León", 
-                       "Fabián Canario", 
-                       "Iván Ruiseñor", 
-                       "Pedro Ratón", 
-                       "Tati Hormiga"],
-     scrollText:null,
-     comprado : [false,true,false,false,false,false,false,false,true],
-     animal:null,
-     monedas : 4000,
-     xp : 8000,
-     nickname:null,
-     startButton:null, 
-     botonVolver:null,
-     compradoL:null,
-     pos:null,
-     musicButton:null,
+  speedMult : 0.2,
+  friction :0.99,
+  animals : ["pantera","gallo","cierva","jirafa","leon","canario","ruisenor","raton","hormiga"],
+  // Nombres personajes Pacto de honor
+  names : ["Ana Pantera", 
+                     "Andrés Gallo",
+                     "Cata Cierva", 
+                     "Daniela Jirafa", 
+                     "Daniel León", 
+                     "Fabián Canario", 
+                     "Iván Ruiseñor", 
+                     "Pedro Ratón", 
+                     "Tati Hormiga"],
+  scrollText:null,
+  comprado : [false,true,false,false,false,false,false,false,true],
+  animal:null,
+  monedas : 4000,
+  xp : 8000,
+  nickname:null,
+  startButton:null, 
+  botonVolver:null,
+  compradoL:null,
+  pos:null,
+  musicButton:null,
 
-     // Especificaciones de compra de los personajes
-     texts : ["Necesitas: 2.000 monedas \n \n Recompensas: \n 1.000 monedas \n 50 puntos de experiencia",
-                    "Necesitas: 1.300 monedas \n \n Recompensas: \n 500 monedas \n 10 puntos de experiencia",
-                    "Necesitas: 1.350 monedas \n \n Recompensas: \n 550 monedas \n 15 puntos de experiencia",
-                    "Necesitas: 1.400 monedas \n \n Recompensas: \n 600 monedas \n 20 puntos de experiencia",
-                    "Necesitas: 1.450 monedas \n \n Recompensas: \n 650 monedas \n 30 puntos de experiencia",
-                    "Necesitas: 1.600 monedas \n \n Recompensas: \n 800 monedas \n 35 puntos de experiencia",
-                    "Necesitas: 1.500 monedas \n \n Recompensas: \n 700 monedas \n 30 puntos de experiencia",
-                    "Necesitas: 1.450 monedas \n \n Recompensas: \n 650 monedas \n 30 puntos de experiencia",
-                    "Necesitas: 1.800 monedas \n \n Recompensas: \n 900 monedas \n 40 puntos de experiencia"],
+  // Especificaciones de compra de los personajes
+  texts : ["Necesitas: 2.000 monedas \n \n Recompensas: \n 1.000 monedas \n 50 puntos de experiencia",
+                  "Necesitas: 1.300 monedas \n \n Recompensas: \n 500 monedas \n 10 puntos de experiencia",
+                  "Necesitas: 1.350 monedas \n \n Recompensas: \n 550 monedas \n 15 puntos de experiencia",
+                  "Necesitas: 1.400 monedas \n \n Recompensas: \n 600 monedas \n 20 puntos de experiencia",
+                  "Necesitas: 1.450 monedas \n \n Recompensas: \n 650 monedas \n 30 puntos de experiencia",
+                  "Necesitas: 1.600 monedas \n \n Recompensas: \n 800 monedas \n 35 puntos de experiencia",
+                  "Necesitas: 1.500 monedas \n \n Recompensas: \n 700 monedas \n 30 puntos de experiencia",
+                  "Necesitas: 1.450 monedas \n \n Recompensas: \n 650 monedas \n 30 puntos de experiencia",
+                  "Necesitas: 1.800 monedas \n \n Recompensas: \n 900 monedas \n 40 puntos de experiencia"],
 
-     //Especificaciones de costo en monedas del personaje
-     cMonedas : [2000, 1300, 1350, 1400, 1450, 1600, 1500, 1450, 1800],
+  //Especificaciones de costo en monedas del personaje
+  cMonedas : [2000, 1300, 1350, 1400, 1450, 1600, 1500, 1450, 1800],
 
-     //Especificaciones de recompensas - monedas
-     rMonedas : [1000, 500, 550, 600, 650, 800, 700, 650, 900],
 
-     //Especificaciones de recompensas - puntos de experiencia
-     rExperiencia : [50, 10, 15, 20, 30, 35, 30, 30, 40]      
+  //Especificaciones de recompensas - monedas
+  rMonedas : [1000, 500, 550, 600, 650, 800, 700, 650, 900],
+
+  //Especificaciones de recompensas - puntos de experiencia
+  rExperiencia : [50, 10, 15, 20, 30, 35, 30, 30, 40]      
 
 }
 var compraPersonajes = function(game){};
 compraPersonajes.prototype = {
-     preload: function(){
-          // Se centra la ventana horizontalmente
-          game.scale.pageAlignHorizontally = true;
-          // Se centra la ventana Verticalmente
-          game.scale.pageAlignVertically = true;
-
-          // Se carga una imagen transparente para colocar detrás de las imágenes que apareceran en el Scrolling
-          game.load.image("transp", "../img/personajes/avatares/transp.png");
-          // Se cargan las imágenes de los 9 personajes buenos
-          game.load.image('pantera', '../img/personajes/avatares/CaraPantera80.png');
-          game.load.image('gallo', '../img/personajes/avatares/CaraGallo80.png');
-          game.load.image('cierva', '../img/personajes/avatares/CaraCierva80.png');
-          game.load.image('jirafa', '../img/personajes/avatares/CaraJirafa80.png');
-          game.load.image('leon', '../img/personajes/avatares/CaraLeon80.png');
-          game.load.image('canario', '../img/personajes/avatares/CaraCanario80.png');
-          game.load.image('ruisenor', '../img/personajes/avatares/CaraRuiseñor80.png');
-          game.load.image('raton', '../img/personajes/avatares/CaraRatón80.png');
-          game.load.image('hormiga', '../img/personajes/avatares/CaraHormiga80.png');
-          
-          // Se carga el sprite del botón de compra
-          game.load.spritesheet('button', '../img/Componentes/botones/SpriteButtonC.png', 140, 52);
-          game.load.spritesheet('botonVolver', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
-         
-         game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
-     },
-     create: function(){  
-          variablesCompraPersonajes.musicButton = game.add.audio ('sonidoBoton');
-         
-          // Se coloca como fondo de la ventana el color #2451A6
-          game.stage.backgroundColor = "#2451A6";
+    preload: function(){
+        // Se carga el sprite del botón de compra
+        game.load.spritesheet('button', '../img/Componentes/botones/SpriteButtonC.png', 140, 52);
+    },
+    
+    create: function(){  
+        // Se coloca como fondo de la ventana el color #2451A6
+        game.stage.backgroundColor = "#2451A6";
           
           // Se agrega un título para la ventana de tamaño 30 px
           // Se coloca en una posición especifica, con la instrucción ".anchor.set(0.5)" se centra en la posición dada
@@ -129,18 +108,26 @@ compraPersonajes.prototype = {
           variablesCompraPersonajes.scrollText = game.add.text(game.world.centerX, 400, "", { font: "20px Roboto", fill: "#ffffff", align: "center", backgroundColor: "#2451A6"});
           variablesCompraPersonajes.scrollText.anchor.set(0.5);
 
+
           variablesCompraPersonajes.startButton = game.add.button(game.world.width / 2, 510, 'button', this.compra, this, 2, 1, 0); // over, out, down, up
           variablesCompraPersonajes.startButton.anchor.set(0.5);
+
+          if(startButton==true){
+            pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba5');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba5('false');
+         }
          
           variablesCompraPersonajes.botonVolver = game.add.button(5, 5, 'botonVolver', this.verMapa, 1, 1, 0, 2);
 
           //compradoL = game.add.text(game.world.centerX, 510, "", { font: "20px Roboto", fill: "#ffffff", align: "center", backgroundColor: "#2451A6"});
           //compradoL.anchor.set(0.5);
+        
+        boot.verificarMusica("menu");
 
      },
-     compra: function(){
-         variablesCompraPersonajes.musicButton.play();
+     compra: function(){  
      	if(variablesCompraPersonajes.comprado[variablesCompraPersonajes.pos]){
+         sonidoBoton.play();
      		alert("¡Ya posees este personaje!");
      	} else {
      		//Si no ha comprado el personaje, realiza el proceso necesario para su compra y recibir las recompensas
@@ -156,7 +143,7 @@ compraPersonajes.prototype = {
     
     verMapa: function(){
         game.state.start("navegacion");
-        variablesCompraPersonajes.musicButton.play();
+        sonidoBoton.play();
     },
     
     update:function(){

@@ -73,12 +73,8 @@ var funcionesBatalla={
             }
             //Condicional si se oprime en Sonido
             else if (event.x > 410 && event.x < 450 && event.y > 390 && event.y < 425) {
-                if(vN.music.paused){
-                    vN.music.resume();
-                    }
-                else{
-                    vN.music.pause();
-                    } 
+                if(!musicaOnOff){musicaOnOff = true; musicaBatalla.resume();}
+                else{musicaOnOff = false; musicaBatalla.pause();}
             }
         }
     },
@@ -110,7 +106,7 @@ var funcionesBatalla={
         } else if (cursores.down.isDown) {
             variablesCampoBatalla.escudo1 = game.add.sprite(variablesCampoBatalla.personajeJugador.body.x+200, variablesCampoBatalla.personajeJugador.body.y, 'escudo1');
             variablesCampoBatalla.escudo1.anchor.setTo(0.5,0);
-            golpeAlAire.play();
+            
             
             variablesCampoBatalla.personajeJugador.animations.play('defensa')
             variablesCampoBatalla.personajeJugador.body.velocity.y=0;
@@ -124,6 +120,7 @@ var funcionesBatalla={
             variablesCampoBatalla.personajeJugador.animations.play('punos');
             variablesCampoBatalla.personajeJugador.body.x+=1;
             variablesCampoBatalla.movH[1]=true;
+            golpeAlAire.play();
         }else{
             variablesCampoBatalla.personajeJugador.animations.play('quieto');
         }
@@ -195,20 +192,20 @@ var funcionesBatalla={
         //el 200 es temporal
         if(barra.width<200){
             barra.width=barra.width+0.9;
-            golpe_al_cuerpo.play();
         }
     },
      /*Cuando impacta el ataque pregunta si el jugador se estaba defendiendo
     *Si no se estaba defendiendo causa daño y llama al sprite de impacto 
     */
     impactoPlagioC : function(personaje,ataque){
+        golpe_al_cuerpo.play();
         game.time.events.add(1000,function(){ataque.kill();},this);
         variablesCampoBatalla.movV[3]=false;
         if(!variablesCampoBatalla.movH[0]&&variablesCampoBatalla.primerImpacto){
             variablesCampoBatalla.primerImpacto=false;
             funcionesBatalla.actualizarVida(vidaRojoJugador,variablesCampoBatalla.danoV[2]);
             funcionesBatalla.spriteImpactoPlagioComputadora();
-            golpe_al_cuerpo.play();
+            
         }
 
     },
@@ -216,6 +213,7 @@ var funcionesBatalla={
     *Si no se estaba defendiendo causa daño y llama al sprite de impacto 
     */
     impactoAtaqueJugador : function(personaje,ataque){
+        golpe_al_cuerpo.play();
         ataque.kill();
         variablesCampoBatalla.movH[2]=false;
         if(!variablesCampoBatalla.movV[0]){
@@ -229,6 +227,7 @@ var funcionesBatalla={
     *Si no se estaba defendiendo causa daño y llama al sprite de impacto 
     */
     impactoAtaqueComputadora : function(personaje,ataque){
+        golpe_al_cuerpo.play();
         ataque.kill();
         variablesCampoBatalla.movV[2]=false;
         if(!variablesCampoBatalla.movH[0]){

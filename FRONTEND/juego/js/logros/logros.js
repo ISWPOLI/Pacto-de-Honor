@@ -6,7 +6,6 @@ variableLogros={
   description:null,
   character:null,
   apodo:null,
-  musicButton:null,
   startButton:null,
   LogrosJugador:null,
   //catidad de Monedas del Jugador
@@ -25,6 +24,7 @@ variableLogros={
  
 var logros = function(game){};
     logros.prototype = {
+
         preload: function(){
 
             
@@ -36,14 +36,12 @@ var logros = function(game){};
             variableLogros.xpLogros = SetUplogros.exp;
             variableLogros.LogrosJugador = SetUplogros.jugador_tiene_logros;
 
+      
+
+
             for (var i = variableLogros.namesCharactersl.length - 1; i >= 0; i--) {
               variableLogros.Logroslooked[i] = true;
             }
-
-            game.scale.pageAlignHorizontally = true;
-            game.scale.pageAlignVertically = true; 
-            // Se carga una imagen transparente para colocar detras de las imagenes que apareceran en el Scrolling
-            game.load.image("transp", "../img/personajes/avatares/transp.png");
             // Se cargan las imagenes de los 10 logros
             game.load.spritesheet(variableLogros.namesCharactersl[0], '../img/Componentes/logros/KuPlagio.png');
             game.load.spritesheet(variableLogros.namesCharactersl[1], '../img/Componentes/logros/LifePlagio.png');
@@ -65,15 +63,13 @@ var logros = function(game){};
             game.load.image(variableLogros.namesCharactersl[7]+'Loock', '../img/Componentes/logros/UnlockerLoock.png');
             game.load.image(variableLogros.namesCharactersl[8]+'Loock', '../img/Componentes/logros/AlistLoock.png');
             game.load.image(variableLogros.namesCharactersl[9]+'Loock', '../img/Componentes/logros/FiveRowLoock.png');
-            game.load.spritesheet('botonVolver', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
+
             // Se carga el sprite del boton seleccionar
-            game.load.spritesheet('button', '../img/Componentes/botones/Spritebloq.png', 150, 40); 
-            
-            game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
+            game.load.spritesheet('button', '../img/Componentes/botones/Spritebloq.png', 150, 40);
         },
-        create: function(){ 
-             variableLogros.musicButton = game.add.audio('sonidoBonton');
-            
+
+        
+        create: function(){            
           // Se coloca como fondo de la ventana el color #2451A6
           game.stage.backgroundColor = "#2451A6";
           // Se agrega un titulo para la ventana, el cual sera "Logros", de tamaño 30 px, y "Roboto" como tipo de letra
@@ -162,16 +158,23 @@ var logros = function(game){};
           var timeHours = variableLogros.timeplayedLogros/60;
           if (timeHours>=100) {
               recompensa(20,2500);
+
               variableLogros.Logroslooked[i]= false;
               pruebasPsicotecnicas.setPrueba6(true);
+              //pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba6');
+              pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba6(true);
           };
         }
         //funcion que Identifica si el jugador esta entre el top 5
         function isMiLifePlagio(i){
           if (variableLogros.rankingLogros<= 5) {
             recompensa(20,1000);
+
             variableLogros.Logroslooked[i]= false;
-              pruebasPsicotecnicas.setPrueba7(true);
+            pruebasPsicotecnicas.setPrueba7(true);
+            //pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba7');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba7(false);
+
           };
         }
         //funcion que identifica si el jugador ha desbloqueado el  70% como minimo de los logros
@@ -184,36 +187,47 @@ var logros = function(game){};
           }
           if (((logrosdes*100)/variableLogros.Logroslooked.length)>=70) {
             recompensa(15,800);
+
             variableLogros.Logroslooked[i] =false;
-              pruebasPsicotecnicas.setPrueba8(true);
+           // pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba8');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba8(true);
+
           };
         }
         //por implementar
         function isTheOriginalPlagio(i){
           recompensa(5,1000);
-            pruebasPsicotecnicas.setPrueba9(true);
+            //pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba9');
+            pruebasPsicotecnicas.setPrueba9(false);
           //por implentar no es de servicios Rest
         }
         //por implementar
         function isMiHitckGround(i){
           recompensa(20,1000);
-            pruebasPsicotecnicas.setPrueba10(true);
+          //pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba10');
+          pruebasPsicotecnicas.setPrueba10(true);
           //por implentar no es de Rest
         }
         //funcion que comprueba que si el jugaro tienen o no todos los heroes
         function isTheUnloocker(i){
           if (variableLogros.allHeros) {
             recompensa(10,200);
+
             variableLogros.Logroslooked[i] = false;
-              pruebasPsicotecnicas.setPrueba13(true);
+            //pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba11');
+            pruebasPsicotecnicas.setPrueba11(false);
+
           };
         }
         //funcion que comprueba si el jugador tiene porlomenos 1000000 monedas
         function isTheRichest(i){
           if (variableLogros.moneyLogros >=1000000) {
             recompensa(30,300);
+
             variableLogros.Logroslooked[i] = false;
-              pruebasPsicotecnicas.setPrueba12(true);
+              //pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba12');
+              pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba12(true);
+
           };
         }
         //funcion que Identifica si el jugador esta entre el top 1
@@ -238,7 +252,8 @@ var logros = function(game){};
       },
         verPerfil: function(){
             game.state.start("perfilJugador");
-            variableLogros.musicButton.play();
+            sonidoBoton.play();
+
         },
         update:function(){
            // Se declara una variable llamada "zoomed" de tipo booleana, que representara cuando un elemento del scrolling map este seleccionada

@@ -1,3 +1,4 @@
+
 ﻿variablesCajaMisteriosa={ 
   speedMult : 0.2,
   friction :0.99,
@@ -11,6 +12,7 @@
   boxDescription:null 
 }
 
+
 // Descripción de los logros
    
 var cajaMisteriosa = function(game){};
@@ -18,11 +20,7 @@ var cajaMisteriosa = function(game){};
         preload: function(){
             variablesCajaMisteriosa.nameBox = boxesDes["boxMistery"].nameBox;
             variablesCajaMisteriosa.boxDescription = boxesDes["boxMistery"].desc;
-            game.scale.pageAlignHorizontally = true;
-            game.scale.pageAlignVertically = true;
             
-            // Se carga una imagen transparente para colocar detras de las imagenes que apareceran en el Scrolling
-            game.load.image("transp", "../img/personajes/avatares/transp.png");
             // Se cargan las imagenes de los 10 logros
             game.load.spritesheet(variablesCajaMisteriosa.nameBox [0], boxes[1].root);
             game.load.spritesheet(variablesCajaMisteriosa.nameBox [1], boxes[2].root);
@@ -53,11 +51,8 @@ var cajaMisteriosa = function(game){};
         },
 
         create: function(){
-   
-
-
-          // Se coloca como fondo de la ventana el color #2451A6
-          game.stage.backgroundColor = "#2451A6";
+            // Se coloca como fondo de la ventana el color #2451A6
+            game.stage.backgroundColor = "#2451A6";
           
           // Se agrega un titulo para la ventana, el cual sera "Logros", de tamaño 30 px, y "Roboto" como tipo de letra
           // Se coloca en una posición especifica, con la instrucción ".anchor.set(0.5)" se centra en la posición dada
@@ -126,17 +121,17 @@ var cajaMisteriosa = function(game){};
 
     
           game.add.button(5, 5,'atras', this.verCaja, 1, 1, 0, 2);
-          //metdo que verica si esta o no bloqueado un logro de ser asi llama al metodo del logro para validar si cumple con los requsitos de desbloqueo
-      
-     
-      },
 
-        verCaja: function(){
+          //metdo que verica si esta o no bloqueado un logro de ser asi llama al metodo del logro para validar si cumple con los requsitos de desbloqueo
+            boot.verificarMusica("menu");
+            },
+
+        verNavegacion: function(){
             game.state.start("navegacion");
+            sonidoBoton.play();
         },
         
         update:function(){
-
           var zoomed = false;
 
           // Este ciclo recorre el scrollingMap
