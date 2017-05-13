@@ -116,9 +116,10 @@ var funcionesBatalla={
             variablesCampoBatalla.personajeJugador.body.velocity.y=0;
             variablesCampoBatalla.movH[0]=true;
         }else if(cursores.up.isDown){
-            variablesCampoBatalla.escudo2 = game.add.sprite(variablesCampoBatalla.personajeJugador.body.x+150, variablesCampoBatalla.personajeJugador.body.y, 'escudo2');
-            variablesCampoBatalla.escudo2.anchor.setTo(0.5,0);
-            variablesCampoBatalla.movH[3]=true;
+             variablesCampoBatalla.personajeJugador.body.velocity.y=-250;
+            // variablesCampoBatalla.escudo2 = game.add.sprite(variablesCampoBatalla.personajeJugador.body.x+150, variablesCampoBatalla.personajeJugador.body.y, 'escudo2');
+            // variablesCampoBatalla.escudo2.anchor.setTo(0.5,0);
+            // variablesCampoBatalla.movH[3]=true;
         } else if (esp.isDown){
             variablesCampoBatalla.personajeJugador.animations.play('punos');
             variablesCampoBatalla.personajeJugador.body.x+=1;
@@ -274,7 +275,7 @@ var funcionesBatalla={
         }
         //si se resta vida al jugador 
         if(variablesCampoBatalla.movV[1]==true&&variablesCampoBatalla.movH[0]){
-            funcionesBatalla.actualizarVida(vidaRojoJugador,danoV[0]);
+            funcionesBatalla.actualizarVida(vidaRojoJugador,variablesCampoBatalladanoV[0]);
             variablesCampoBatalla.movV[0]=false;
             funcionesBatalla.spriteImpactoComputadora();
         }
