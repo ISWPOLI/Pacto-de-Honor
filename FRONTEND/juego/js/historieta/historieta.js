@@ -1,7 +1,7 @@
-var histo;
-var button;
-var music;
-var musicButton;
+variablesHistorieta={
+    histo:null,
+    button:null
+}
 var historieta = function(game){};
 historieta.prototype = {
      preload: function(){
@@ -11,12 +11,13 @@ historieta.prototype = {
      },
     
      create: function(){
-         histo = game.add.sprite(0,0, 'historieta');
-         histo.animations.add('verH', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 0.3, false);
-         histo.animations.play('verH');
-         button = game.add.button (game.world.width - 100, game.world.height - 100, 'button', this.verMapa, this, 2 ,1, 0);
-         button.anchor.setTo (0.5, 0.5);
-         musicaMapa.play();
+
+        musicaMapa.play();
+         variablesHistorieta.histo = game.add.sprite(0,0, 'historieta');
+         variablesHistorieta.histo.animations.add('verH', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 0.3, false);
+         variablesHistorieta.histo.animations.play('verH');
+         variablesHistorieta.button = game.add.button (game.world.width - 100, game.world.height - 100, 'button', this.verMapa, this, 2 ,1, 0);
+         variablesHistorieta.button.anchor.setTo (0.5, 0.5);
      },
     
     verMapa: function(){
