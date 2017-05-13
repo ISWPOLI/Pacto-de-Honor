@@ -1,2 +1,0 @@
-### V 1.0.1
-- removed main.css and moved its contents to style.css

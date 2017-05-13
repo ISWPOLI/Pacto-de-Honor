@@ -104,6 +104,12 @@ compraPersonajes.prototype = {
 
           startButton = game.add.button(game.world.width / 2, 510, 'button', this.compra, this, 2, 1, 0); // over, out, down, up
           startButton.anchor.set(0.5);
+
+          if(startButton==true){
+            pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba5');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba5('false');
+         }
+
          
           botonVolver = game.add.button(5, 5, 'botonVolver', this.verMapa, 1, 1, 0, 2);
 
