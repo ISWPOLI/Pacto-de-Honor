@@ -54,6 +54,11 @@ seleccionavatar.prototype = {
          description.anchor.set(0.5);
          startButton = game.add.button(game.world.width / 2, 540, 'botonSeleccionar', this.verH, this, 2, 1, 0); // over, out, down, up
          startButton.anchor.set(0.5);
+
+         if(startButton==true){
+
+         }
+
          musicaMenus.play();
     },
     verH:function(){
