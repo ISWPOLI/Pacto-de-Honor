@@ -39,73 +39,49 @@ var cMonedas = [2000, 1300, 1350, 1400, 1450, 1600, 1500, 1450, 1800];
 var rMonedas = [1000, 500, 550, 600, 650, 800, 700, 650, 900];
 
 //Especificaciones de recompensas - puntos de experiencia
-var rExperiencia = [50, 10, 15, 20, 30, 35, 30, 30, 40];            
-
+var rExperiencia = [50, 10, 15, 20, 30, 35, 30, 30, 40];
 
 var compraPersonajes = function(game){};
 compraPersonajes.prototype = {
-     preload: function(){
-          // Se centra la ventana horizontalmente
-          game.scale.pageAlignHorizontally = true;
-          // Se centra la ventana Verticalmente
-          game.scale.pageAlignVertically = true;
-
-          // Se carga una imagen transparente para colocar detrás de las imágenes que apareceran en el Scrolling
-          game.load.image("transp", "../img/personajes/avatares/transp.png");
-          // Se cargan las imágenes de los 9 personajes buenos
-          game.load.image('pantera', '../img/personajes/avatares/CaraPantera80.png');
-          game.load.image('gallo', '../img/personajes/avatares/CaraGallo80.png');
-          game.load.image('cierva', '../img/personajes/avatares/CaraCierva80.png');
-          game.load.image('jirafa', '../img/personajes/avatares/CaraJirafa80.png');
-          game.load.image('leon', '../img/personajes/avatares/CaraLeon80.png');
-          game.load.image('canario', '../img/personajes/avatares/CaraCanario80.png');
-          game.load.image('ruisenor', '../img/personajes/avatares/CaraRuiseñor80.png');
-          game.load.image('raton', '../img/personajes/avatares/CaraRatón80.png');
-          game.load.image('hormiga', '../img/personajes/avatares/CaraHormiga80.png');
-          
-          // Se carga el sprite del botón de compra
-          game.load.spritesheet('button', '../img/Componentes/botones/SpriteButtonC.png', 140, 52);
-          game.load.spritesheet('botonVolver', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
+    preload: function(){
+        // Se carga el sprite del botón de compra
+        game.load.spritesheet('button', '../img/Componentes/botones/SpriteButtonC.png', 140, 52);
+    },
+    
+    create: function(){  
+        // Se coloca como fondo de la ventana el color #2451A6
+        game.stage.backgroundColor = "#2451A6";
          
-         game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
-     },
-     create: function(){  
-          musicButton = game.add.audio ('sonidoBoton');
+        // Se agrega un título para la ventana de tamaño 30 px
+        // Se coloca en una posición especifica, con la instrucción ".anchor.set(0.5)" se centra en la posición dada
+        game.add.text(game.width / 2, 50, "Compra de personajes", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5);
+
+        // Se agrega la función ScrollingMap a la ventana, con una posición especifica, y se agrega la imagen transparente
+        this.scrollingMap = game.add.tileSprite(0, 0, 650 + animals.length * 90 + 64, game.height, "transp");
+        this.scrollingMap.inputEnabled = true;
+        this.scrollingMap.input.enableDrag(false);
+        // Se guarda la posición
+        this.scrollingMap.savedPosition = new Phaser.Point(this.scrollingMap.x, this.scrollingMap.y);
+        this.scrollingMap.isBeingDragged = false; 
+        this.scrollingMap.movingSpeed = 0;
+
+        // Se especifica que el ScrollingMap será sólo horizontal
+        this.scrollingMap.input.allowVerticalDrag = false;
+        this.scrollingMap.input.boundsRect = new Phaser.Rectangle(game.width - this.scrollingMap.width, game.height - this.scrollingMap.height, this.scrollingMap.width * 2 - game.width, this.scrollingMap.height * 2 - game.height);
          
-          // Se coloca como fondo de la ventana el color #2451A6
-          game.stage.backgroundColor = "#2451A6";
-          
-          // Se agrega un título para la ventana de tamaño 30 px
-          // Se coloca en una posición especifica, con la instrucción ".anchor.set(0.5)" se centra en la posición dada
-          game.add.text(game.width / 2, 50, "Compra de personajes", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5);
+        for(var i = 0; i < animals.length; i++){
+            // See agregan las 9 imágenes cargadas previamente de los 9 personajes buenos
+            animal = game.add.image(game.width / 2 + i * 90, 170, animals[i]);
 
-          // Se agrega la función ScrollingMap a la ventana, con una posición especifica, y se agrega la imagen transparente
-          this.scrollingMap = game.add.tileSprite(0, 0, 650 + animals.length * 90 + 64, game.height, "transp");
-          this.scrollingMap.inputEnabled = true;
-          this.scrollingMap.input.enableDrag(false);
+            // Se centra la imagen cargada en la posición puesta en la linea anterior
+            animal.anchor.set(0.5);
 
-          // Se guarda la posición
-          this.scrollingMap.savedPosition = new Phaser.Point(this.scrollingMap.x, this.scrollingMap.y);
-          this.scrollingMap.isBeingDragged = false; 
-          this.scrollingMap.movingSpeed = 0;
-
-          // Se especifica que el ScrollingMap será sólo horizontal
-          this.scrollingMap.input.allowVerticalDrag = false;
-          this.scrollingMap.input.boundsRect = new Phaser.Rectangle(game.width - this.scrollingMap.width, game.height - this.scrollingMap.height, this.scrollingMap.width * 2 - game.width, this.scrollingMap.height * 2 - game.height);
-          
-          for(var i = 0; i < animals.length; i++){
-               // See agregan las 9 imágenes cargadas previamente de los 9 personajes buenos
-               animal = game.add.image(game.width / 2 + i * 90, 170, animals[i]);
-
-               // Se centra la imagen cargada en la posición puesta en la linea anterior
-               animal.anchor.set(0.5);
-
-               // Se agrega al scrollingMap cada una de las imágenes cargadas
-               this.scrollingMap.addChild(animal);
-          }
-
-          // Se agregan eventos a las imágenes del scrollingMap para cuando este en movimiento
-          this.scrollingMap.events.onDragStart.add(function(){
+            // Se agrega al scrollingMap cada una de las imágenes cargadas
+            this.scrollingMap.addChild(animal);
+        }
+        
+        // Se agregan eventos a las imágenes del scrollingMap para cuando este en movimiento
+        this.scrollingMap.events.onDragStart.add(function(){
                this.scrollingMap.isBeingDragged = true;
                this.scrollingMap.movingSpeed = 0;
           }, this);
@@ -133,10 +109,12 @@ compraPersonajes.prototype = {
 
           //compradoL = game.add.text(game.world.centerX, 510, "", { font: "20px Roboto", fill: "#ffffff", align: "center", backgroundColor: "#2451A6"});
           //compradoL.anchor.set(0.5);
+        
+        boot.verificarMusica("menu");
 
      },
      compra: function(){
-         musicButton.play();
+         sonidoBoton.play();
      	if(comprado[pos]){
      		alert("¡Ya posees este personaje!");
      	} else {
@@ -153,7 +131,7 @@ compraPersonajes.prototype = {
     
     verMapa: function(){
         game.state.start("navegacion");
-        musicButton.play();
+        sonidoBoton.play();
     },
     
     update:function(){

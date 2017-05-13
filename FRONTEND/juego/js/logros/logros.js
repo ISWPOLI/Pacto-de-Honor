@@ -1,80 +1,72 @@
 var speedMult = 0.2;
 var friction = 0.99;
-var charactersl = ["Mi KuPlagio","Mi LifePlagio","Mi SkillPlagio","The originalPlagio","Mi HitBackground","ExpLogros","The Richest","The Unlocker","The A – List","5 in a row"];
-// Nombres personajes Pacto de honor
-var namesCharactersl = ["Mi KuPlagio", "Mi LifePlagio ", "Mi SkillPlagio ", "The originalPlagio ", "Mi HitBackground  \n“Es poseedor de la experiencia, “Campeón de habilidades”", "Trendy  \n“Este logro indica que eres súper popular”", "The Richest  \n“Podrás presumir tu fortuna”", "The Unlocker \n“Eres el encargado para recuperar a todos los héroes”", "The A – List \n“Aquí mostrarás tus habilidades al llegar al top”","5 in a row \n“Cambio de un mundo a otro con un desempeño perfecto”",];
-var Logroslooked = [true, true,  true, false, false, true, false, false, false, false];
+var namesCharactersl;
+var Logroslooked = [null];
 var description;
 var character;
 var apodo;
 var musicButton;
 var startButton;
+var LogrosJugador;
 //catidad de Monedas del Jugador
-var moneyLogros = 10000;
+var moneyLogros = 0;
 //posicion del ranking del jugador
-var rankingLogros = 1;
+var rankingLogros = 0;
 //Tiempo de juego del jugador
-var timeplayedLogros =7000;
+var timeplayedLogros =0;
 //Varible que permite identificar si el jugador tiene o no todos los heroes
 var allHeros = false;
 //experiencia de juego del jugador
-var xpLogros =100;
+var xpLogros;
 // Descripción de los logros
-var descriptionsl = [ "Para adquirir este codiciado objetivo debes\nacumular 2 horas de juego ¿Cuestión de tiempo no? \nPues para obtener el logro debes realizar dicho\nproceso con cada uno de los niveles de cada mundo. \nAl final sólo queda un dilema, ¿termino una carrera, o el juego?",
-                     "Su nombre lo dice todo. \nPara obtenerlo debes encabezar las tablas de posición.\nObtendrás 100 monedas por la permanencia durante 2 días \nen las primeras cinco posiciones de la tabla.\n No hay vía fácil, no hay camino rápido.\nSimplemente debes ser el mejor en los combates. ¿Te atreverías a intentar conseguirlo?",
-                     "Para obtenerlo debes ganar cada batalla de cada escenario. \nLas monedas obtenidas podrán ser cambiadas en puntos de vida.\n Barra de vida que incrementara de acuerdo al número de batallas ganadas. \nPrincipalmente debes ser el mejor en los enfrentamientos.\n¿Te atreverías a intentar?",
-                     "Para adquirir este codiciado logro \ndebes acumular 3 batallas victoriosas \n¿Cuestión de estrategia no? Pues para obtener el logro \ndebes realizar dicho proceso antes de la batalla final de cada nivel.",
-                     "Su nombre lo dice todo. \nPara obtenerlo debes encabezar las tablas de posición.\nObtendrás 100 monedas por la permanencia durante 2 días \nen las primeras cinco posiciones de la tabla.\n No hay vía fácil, no hay camino rápido.\nSimplemente debes ser el mejor en los combates. ¿Te atreverías a intentar conseguirlo?",
-                     "Realmente has logrado ser muy popular, \n¿cómo lo sabemos?: \n¡Hemos detectado que has realizado más de 10 interacciones, es decir, \nentre tu cantidad de amigos y los códigos que has recibido, \nlogran demostrarnos que definitivamente eres un hit!",
-                     "Este logro tiene 3 etapas, la primera cuando \nposeas tus primeras 50 monedas, la segunda etapa \ncuando obtengas 200 monedas y por último \ncuando tu fortuna llegue a 500 monedas.",
-                     "Este logro también tiene 3 etapas: \nLa primera al desbloquear al primer personaje en el mundo 2, \nen la segunda etapa desbloquearás de nuevo este logro al obtener \ntu quinto personaje y, por último, al desbloquear todos los \npersonajes y estar listo para la batalla final.",
-                     "Para obtener las recompensas de este logro \ndebes cumplir 3 objetivos: Llegar al top 10 \nde al menos 1 ranking, como segundo objetivo debes llegar \nal top 5 de al menos 2 rankings y por último debes \nestar entre el top 3 de TODOS los rankings. \n¿Estás listo/lista para resaltar?",
-                     "Para obtener este logro de perfección es necesario \nque pases todo un mundo sin perder ni una sola vez. \n¿Crees ser capaz de cumplir el reto?",
-                     ];    
+var descriptionsl;    
 var logros = function(game){};
     logros.prototype = {
-        preload: function(){
-            game.scale.pageAlignHorizontally = true;
-            game.scale.pageAlignVertically = true; 
-            // Se carga una imagen transparente para colocar detras de las imagenes que apareceran en el Scrolling
-            game.load.image("transp", "../img/personajes/avatares/transp.png");
+        preload: function(){            
+            namesCharactersl = SetUplogros.nombre;
+            descriptionsl = SetUplogros.descripcion;
+            moneyLogros = SetUplogros.monedas;
+            rankingLogros = SetUplogros.ranking;
+            timeplayedLogros = SetUplogros.tiempo;
+            xpLogros = SetUplogros.exp;
+            LogrosJugador = SetUplogros.jugador_tiene_logros;
+
+            for (var i = namesCharactersl.length - 1; i >= 0; i--) {
+              Logroslooked[i] = true;
+            }
             // Se cargan las imagenes de los 10 logros
-            game.load.spritesheet('Mi KuPlagio', '../img/Componentes/logros/KuPlagio.png');
-            game.load.spritesheet('Mi LifePlagio', '../img/Componentes/logros/LifePlagio.png');
-            game.load.spritesheet('Mi SkillPlagio', '../img/Componentes/logros/SkillPlagio.png');
-            game.load.spritesheet('The originalPlagio', '../img/Componentes/logros/OriginalPlagio.png');
-            game.load.spritesheet('Mi HitBackground', '../img/Componentes/logros/HitBackground.png');
-            game.load.spritesheet('ExpLogros', '../img/Componentes/logros/experiencia.png');
-            game.load.spritesheet('The Richest', '../img/Componentes/logros/Richest.png');
-            game.load.spritesheet('The Unlocker', '../img/Componentes/logros/Unlocker.png');
-            game.load.spritesheet('The A – List', '../img/Componentes/logros/Alist.png');
-            game.load.spritesheet('5 in a row', '../img/Componentes/logros/FiveRow.png');
-            game.load.image('Mi KuPlagioLoock', '../img/Componentes/logros/KuPlagioLoock.png');
-            game.load.image('Mi LifePlagioLoock', '../img/Componentes/logros/LifePlagioLoock.png');
-            game.load.image('Mi SkillPlagioLoock', '../img/Componentes/logros/SkillPlagioLoock.png');
-            game.load.image('The originalPlagioLoock', '../img/Componentes/logros/OriginalPlagioLoock.png');
-            game.load.image('Mi HitBackgroundLoock', '../img/Componentes/logros/HitBackgroundLoock.png');
-            game.load.image('ExpLogrosLoock', '../img/Componentes/logros/experienciaLoock.png');
-            game.load.image('The RichestLoock', '../img/Componentes/logros/RichestLoock.png');
-            game.load.image('The UnlockerLoock', '../img/Componentes/logros/UnlockerLoock.png');
-            game.load.image('The A – ListLoock', '../img/Componentes/logros/AlistLoock.png');
-            game.load.image('5 in a rowLoock', '../img/Componentes/logros/FiveRowLoock.png');
-            game.load.spritesheet('botonVolver', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
+            game.load.spritesheet(namesCharactersl[0], '../img/Componentes/logros/KuPlagio.png');
+            game.load.spritesheet(namesCharactersl[1], '../img/Componentes/logros/LifePlagio.png');
+            game.load.spritesheet(namesCharactersl[2], '../img/Componentes/logros/SkillPlagio.png');
+            game.load.spritesheet(namesCharactersl[3], '../img/Componentes/logros/OriginalPlagio.png');
+            game.load.spritesheet(namesCharactersl[4], '../img/Componentes/logros/HitBackground.png');
+            game.load.spritesheet(namesCharactersl[5], '../img/Componentes/logros/experiencia.png');
+            game.load.spritesheet(namesCharactersl[6], '../img/Componentes/logros/Richest.png');
+            game.load.spritesheet(namesCharactersl[7], '../img/Componentes/logros/Unlocker.png');
+            game.load.spritesheet(namesCharactersl[8], '../img/Componentes/logros/Alist.png');
+            game.load.spritesheet(namesCharactersl[9], '../img/Componentes/logros/FiveRow.png');
+            game.load.image(namesCharactersl[0]+'Loock', '../img/Componentes/logros/KuPlagioLoock.png');
+            game.load.image(namesCharactersl[1]+'Loock', '../img/Componentes/logros/LifePlagioLoock.png');
+            game.load.image(namesCharactersl[2]+'Loock', '../img/Componentes/logros/SkillPlagioLoock.png');
+            game.load.image(namesCharactersl[3]+'Loock', '../img/Componentes/logros/OriginalPlagioLoock.png');
+            game.load.image(namesCharactersl[4]+'Loock', '../img/Componentes/logros/HitBackgroundLoock.png');
+            game.load.image(namesCharactersl[5]+'Loock', '../img/Componentes/logros/experienciaLoock.png');
+            game.load.image(namesCharactersl[6]+'Loock', '../img/Componentes/logros/RichestLoock.png');
+            game.load.image(namesCharactersl[7]+'Loock', '../img/Componentes/logros/UnlockerLoock.png');
+            game.load.image(namesCharactersl[8]+'Loock', '../img/Componentes/logros/AlistLoock.png');
+            game.load.image(namesCharactersl[9]+'Loock', '../img/Componentes/logros/FiveRowLoock.png');
             // Se carga el sprite del boton seleccionar
-            game.load.spritesheet('button', '../img/Componentes/botones/Spritebloq.png', 150, 40); 
-            
-            game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
+            game.load.spritesheet('button', '../img/Componentes/botones/Spritebloq.png', 150, 40);
         },
-        create: function(){ 
-             musicButton = game.add.audio('sonidoBonton');
-            
+        
+        create: function(){            
           // Se coloca como fondo de la ventana el color #2451A6
           game.stage.backgroundColor = "#2451A6";
           // Se agrega un titulo para la ventana, el cual sera "Logros", de tamaño 30 px, y "Roboto" como tipo de letra
           // Se coloca en una posición especifica, con la instrucción ".anchor.set(0.5)" se centra en la posición dada
           game.add.text(game.width / 2, 50, "Logros", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5);
           // Se agrega la funcion ScrollingMap a la ventana, con una posición especifica, y se agrega la imagen transparente
-          this.scrollingMap = game.add.tileSprite(0, 0, 650 + charactersl.length * 90 + 64, game.height, "transp");
+          this.scrollingMap = game.add.tileSprite(0, 0, 650 + namesCharactersl.length * 90 + 64, game.height, "transp");
           this.scrollingMap.inputEnabled = true;
           this.scrollingMap.input.enableDrag(false);
           // Se guarda la posición
@@ -84,11 +76,12 @@ var logros = function(game){};
           // Se especifica que el ScrollingMap sera solo horizontal
           this.scrollingMap.input.allowVerticalDrag = false;
           this.scrollingMap.input.boundsRect = new Phaser.Rectangle(game.width - this.scrollingMap.width, game.height - this.scrollingMap.height, this.scrollingMap.width * 2 - game.width, this.scrollingMap.height * 2 - game.height);
+          playedUnloock();
           isUnloocked();
-          for(var i = 0; i < charactersl.length; i++){
+          for(var i = 0; i < namesCharactersl.length; i++){
               // se agrega cada una de las 10 imagenes cargadas previamente de los 10 logros
-              if (Logroslooked[i]) character = game.add.image(game.width / 2 + i * 90, 130, charactersl[i]+"Loock");
-                else character = game.add.image(game.width / 2 + i * 90, 130, charactersl[i]);
+              if (Logroslooked[i]) character = game.add.image(game.width / 2 + i * 90, 130, namesCharactersl[i]+"Loock");
+                else character = game.add.image(game.width / 2 + i * 90, 130, namesCharactersl[i]);
               // Se centra la imagen cargada en la posición puesta en la linea anterior
               character.anchor.set(0.5);
               // Se agrega al scrollingMap cada una de las imagenes cargadas
@@ -133,6 +126,15 @@ var logros = function(game){};
                 isMyMater(5);
               }
               else{}
+            }
+          }
+        }
+        function playedUnloock(){
+          for (var i = namesCharactersl.length - 1; i >= 0; i--) {
+            for (var k = LogrosJugador.length - 1; k >= 0; k--) {
+              if (namesCharactersl[i] == LogrosJugador[k]) {
+                Logroslooked[i] = false;
+              }
             }
           }
         }
@@ -222,7 +224,7 @@ var logros = function(game){};
       },
         verPerfil: function(){
             game.state.start("perfilJugador");
-            musicButton.play();
+            sonidoBoton.play();
         },
         update:function(){
            // Se declara una variable llamada "zoomed" de tipo booleana, que representara cuando un elemento del scrolling map este seleccionada
