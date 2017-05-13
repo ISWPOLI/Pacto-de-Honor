@@ -73,12 +73,8 @@ var funcionesBatalla={
             }
             //Condicional si se oprime en Sonido
             else if (event.x > 410 && event.x < 450 && event.y > 390 && event.y < 425) {
-                if(vN.music.paused){
-                    vN.music.resume();
-                    }
-                else{
-                    vN.music.pause();
-                    } 
+                if(!musicaOnOff){musicaOnOff = true; musicaBatalla.resume();}
+                else{musicaOnOff = false; musicaBatalla.pause();}
             }
         }
     },

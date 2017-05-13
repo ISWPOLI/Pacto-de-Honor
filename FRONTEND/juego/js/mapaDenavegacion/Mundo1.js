@@ -85,8 +85,9 @@ var Mundo1 = {
         //se le da una escala al popup cuando sale
         popup2.scale.set(0.8);
 
-        function closeWindow() {
+        function closeWindow() {            
             game.state.start("navegacion");
+            sonidoBoton.play();
             // crea una variable tween que lo que hara sera la funcion para cerrar el popup
         }
     }
