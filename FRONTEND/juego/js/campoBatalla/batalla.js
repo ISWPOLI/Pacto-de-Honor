@@ -65,12 +65,13 @@ var batalla = {
 		variablesCampoBatalla.personajeComputadora.anchor.setTo(0.5);
 		variablesCampoBatalla.personajeJugador = game.add.sprite(150, 450, 'personajeJugador');
 		variablesCampoBatalla.personajeJugador.anchor.setTo(0.5);
+
 		funcionesBatalla.iniciarSprite(variablesCampoBatalla.personajeJugador);
 		funcionesBatalla.iniciarSprite(variablesCampoBatalla.personajeComputadora);
-		console.log(variablesCampoBatalla);
+		variablesCampoBatalla.personajeJugador.body.gravity.y=250;
+		
 
-		variablesCampoBatalla.escudo2 = game.add.sprite(variablesCampoBatalla.personajeJugador.body.x+200, variablesCampoBatalla.personajeJugador.body.y-150, 'escudo2');
-		variablesCampoBatalla.escudo2.anchor.setTo(0.5,0.5);		
+
 
 		caja = game.add.button(game.rnd.integerInRange(30, (game.width)-30), game.rnd.integerInRange(60, (game.height)-60), "caja",this.catchedBox,this);
         caja.visible = false;
