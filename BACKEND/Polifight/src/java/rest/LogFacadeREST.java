@@ -32,7 +32,12 @@ public class LogFacadeREST extends AbstractFacade<Log> {
     @PersistenceContext(unitName = "PolifightPU")
     private EntityManager em;
     
-    
+    /**
+     * Retorna los id de los datos en la tabla Log
+     * * Se prueba con el TestCase "ListarId" del proyecto Log-soapui-project
+     * @param token
+     * @return List con los datos
+     */
     @GET
     @Path("getId")
     @Produces({"application/json"})
@@ -48,9 +53,9 @@ public class LogFacadeREST extends AbstractFacade<Log> {
                 for (int i = 0; i < datos.size(); i++) {
                     resultado += "{";
                     if(i == datos.size()-1){
-                        resultado += "\"idPersonaje\":"+datos.get(i).getIdPersonaje();
+                        resultado += "\"idLog\":"+datos.get(i).getIdLog();
                     }else{
-                        resultado += "\"idPersonaje\":"+datos.get(i).getIdPersonaje();
+                        resultado += "\"idLog\":"+datos.get(i).getIdLog();
                     }
                 }
                 resultado += "]}";
@@ -91,37 +96,83 @@ public class LogFacadeREST extends AbstractFacade<Log> {
      * Busca un dato de acuerdo al id que recibe
      * Se prueba con el TestCase "Buscar" del proyecto Log-soapui-project
      * @param id del Log a buscar
+     * @param token para poder realizar la busqueda
      * @return String con la entity Log
      */
     @GET
     @Path("find")
     @Produces({"application/json"})
-    public String find(@QueryParam("id") Integer id){
-        Log log = em.find(Log.class, id);
-        if (log == null){
-            return "{'response':'Error','cause':'Log not found'}";
-        }else{
-            return "{'idLog':'"+log.getIdLog()+"', 'idJugador':'"+log.getIdJugador()+"' 'tiempoLog':'"+log.getTiempoLog()+"'}"+"' 'fechaInicio':'"+log.getFechaInicio()+"'}"+"' 'fechaFinal':'"+log.getFechaFinal()+"'}"+"' 'idNivel':'"+log.getIdNivel()+"'}"+"' 'idMundo':'"+log.getIdMundo()+"'}"+"' 'idPersonaje':'"+log.getIdPersonaje();
-        }        
+    public String find(@QueryParam("id") Integer id, @QueryParam("token") String token){
+        try{
+           Query queryToken = em.createNamedQuery("Usuario.findToken");
+           queryToken.setParameter("token", token);
+           Usuario user = (Usuario) queryToken.getSingleResult();
+           if (user != null){
+               Log log = em.find(Log.class, id);
+               if (log == null){
+                   return "{'response':'Error','cause':'Log not found'}";
+               }else{
+                   return "{'idLog':'"+log.getIdLog()+"', 'idJugador':'"+log.getIdJugador()+"' 'tiempoLog':'"+log.getTiempoLog()+"'}"+"' 'fechaInicio':'"+log.getFechaInicio()+"'}"+"' 'fechaFinal':'"+log.getFechaFinal()+"'}"+"' 'idNivel':'"+log.getIdNivel()+"'}"+"' 'idMundo':'"+log.getIdMundo()+"'}"+"' 'idPersonaje':'"+log.getIdPersonaje();
+               }
+           }else{
+               return "{'response':'Error','cause':'Log not found'}";
+           }
+        }catch (Exception e){
+             e.printStackTrace();
+             return "{'response':'Error', 'cause':'Invalid token'}";
+        }
     }
     
     /**
      * Busca un dato de acuerdo al id_jugador que recibe
      * Se prueba con el TestCase "BuscarJugador" del proyecto Log-soapui-project
      * @param idJugador del Log a buscar
+     * 
      * @return String con la entity Log
      */
     @GET
     @Path("findJugador")
     @Produces({"application/json"})
-    public String findJugador(@QueryParam("idJugador") Integer idJ){
-        Log log = em.find(Log.class, idJ);
-        if (log == null){
-            return "{'response':'Error','cause':'Player not found'}";
-        }else{
-            return "{'idLog':'"+log.getIdLog()+"', 'idJugador':'"+log.getIdJugador()+"' 'tiempoLog':'"+log.getTiempoLog()+"'}"+"' 'fechaInicio':'"+log.getFechaInicio()+"'}"+"' 'fechaFinal':'"+log.getFechaFinal()+"'}"+"' 'idNivel':'"+log.getIdNivel()+"'}"+"' 'idMundo':'"+log.getIdMundo()+"'}"+"' 'idPersonaje':'"+log.getIdPersonaje();
-        }        
+    public String findJugador(@QueryParam("idJ") Integer idJ){
+        String resultado = "[";
+        Query query = em.createQuery("SELECT l FROM Log l WHERE l.idJugador="+idJ);
+        List<Log> datos = query.getResultList();
+        for (int i = 0; i < datos.size(); i++) {
+            resultado += "{";
+            if(i == datos.size()-1){
+                resultado += "'idLog':'"+datos.get(i).getIdNivel()+"', 'idJugador':'"+datos.get(i).getIdJugador()+"', 'tiempoLog':'"+datos.get(i).getTiempoLog()+"', 'fechaInicio':'"+datos.get(i).getFechaInicio()+"', 'fechaFinal':'"+datos.get(i).getFechaFinal()+"', 'idNivel':'"+datos.get(i).getIdNivel()+"', 'idMundo':'"+datos.get(i).getIdMundo()+"', 'idPersonaje':'"+datos.get(i).getIdPersonaje();
+            }else{
+                resultado += "'idLog':'"+datos.get(i).getIdNivel()+"', 'idJugador':'"+datos.get(i).getIdJugador()+"', 'tiempoLog':'"+datos.get(i).getTiempoLog()+"', 'fechaInicio':'"+datos.get(i).getFechaInicio()+"', 'fechaFinal':'"+datos.get(i).getFechaFinal()+"', 'idNivel':'"+datos.get(i).getIdNivel()+"', 'idMundo':'"+datos.get(i).getIdMundo()+"', 'idPersonaje':'"+datos.get(i).getIdPersonaje();;
+            }
+        }
+        return resultado += "]";
     }
+    
+    /**
+     * Busca un dato de acuerdo al id_jugador y id_nivel que recibe
+     * Se prueba con el TestCase "BuscarJugadorporNivel" del proyecto Log-soapui-project
+     * @param idJugador del Log a buscar
+     * @param idNivel del Log a buscar
+     * @return String con la entity Log
+     */
+    @GET
+    @Path("findJugadorNivel")
+    @Produces({"application/json"})
+    public String findJugadorNivel(@QueryParam("idJugador") Integer idJ, @QueryParam("idNivel") Integer idN){
+        String resultado = "[";
+        Query query = em.createQuery("SELECT l FROM Log l WHERE l.idJugador="+idJ);
+        List<Log> datos = query.getResultList();
+        for (int i = 0; i < datos.size(); i++) {
+            resultado += "{";
+            if(i == datos.size()-1){
+                resultado += "'idLog':'"+datos.get(i).getIdNivel()+"', 'idJugador':'"+datos.get(i).getIdJugador()+"', 'tiempoLog':'"+datos.get(i).getTiempoLog()+"', 'fechaInicio':'"+datos.get(i).getFechaInicio()+"', 'fechaFinal':'"+datos.get(i).getFechaFinal()+"', 'idNivel':'"+datos.get(i).getIdNivel()+"', 'idMundo':'"+datos.get(i).getIdMundo()+"', 'idPersonaje':'"+datos.get(i).getIdPersonaje();
+            }else{
+                resultado += "'idLog':'"+datos.get(i).getIdNivel()+"', 'idJugador':'"+datos.get(i).getIdJugador()+"', 'tiempoLog':'"+datos.get(i).getTiempoLog()+"', 'fechaInicio':'"+datos.get(i).getFechaInicio()+"', 'fechaFinal':'"+datos.get(i).getFechaFinal()+"', 'idNivel':'"+datos.get(i).getIdNivel()+"', 'idMundo':'"+datos.get(i).getIdMundo()+"', 'idPersonaje':'"+datos.get(i).getIdPersonaje();;
+            }
+        }
+        return resultado += "]";
+    }
+    
     
     /**
      * Al consumir, arroja un json con todos los datos de la tabla

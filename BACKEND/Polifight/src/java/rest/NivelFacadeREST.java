@@ -72,7 +72,7 @@ public class NivelFacadeREST extends AbstractFacade<Nivel> {
                     return "{'response':'Error','cause':'Level not found'}";
                 }else{
                     if(entity.getIdNivel() != 0) nivel.setIdNivel(entity.getIdNivel());
-                    if(entity.getIdMundo() != 0) nivel.setIdMundo(entity.getIdMundo());
+                    if(entity.getIdMundo() != null) nivel.setIdMundo(entity.getIdMundo());
                     if(entity.getNombreNivel()!= null) nivel.setNombreNivel(entity.getNombreNivel());
                     
                     em.merge(nivel);
