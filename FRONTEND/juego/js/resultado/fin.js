@@ -101,5 +101,6 @@ var fin = {
     },
     volver: function(){
         game.state.start('navegacion');
+        sonidoBoton.play();
     }
 }
