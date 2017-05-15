@@ -135,7 +135,7 @@ function validarString () {
 	},
 	verPerfilJugador:function(){
         game.state.start("perfilJugador");
-        sonidoBoton.play();
+        variablesBoot.sonidoBoton.play();
     },
     
 	code1:function(){

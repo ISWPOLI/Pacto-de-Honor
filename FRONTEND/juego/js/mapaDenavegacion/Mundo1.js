@@ -87,7 +87,7 @@ var Mundo1 = {
 
         function closeWindow() {            
             game.state.start("navegacion");
-            sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
             // crea una variable tween que lo que hara sera la funcion para cerrar el popup
         }
     }
