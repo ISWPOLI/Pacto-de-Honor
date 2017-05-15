@@ -1,12 +1,14 @@
 var speedMult = 0.2;
 var friction = 0.99;
 var characters = ["pantera","gallo","cierva","jirafa","leon","canario","ruisenor","raton","hormiga"];
-var namesCharacters = ["Ana Pantera", "Andrés Gallo", "Cata Cierva", "Daniela Jirafa", "Daniel León", "Fabian Canario", "Iván Ruiseñor", "Pedro Ratón", "Tati Hormiga"];
+var idPersonajesBuenos = ["idPUno", "idPDos", "idPTres", "idPCuatro", "idPCinco", "idPSeis", "idPSiete", "idPOcho", "idPNueve"];
+var namesCharacters = ["Ana Pantera", "Andrés Gallo", "Cata Cierva", "Daniela Jirafa", "Daniel León", "Fabián Canario", "Iván Ruiseñor", "Pedro Ratón", "Tati Hormiga"];
 var description;
 var apodo;
 var music;
 var musicButton;
 var startButton;
+var avatarSeleccionado;
 var descriptions = ["Ana tiene buenos amigos y un gran\ngrupo social, los sigue a todos\nlados y los apoya sin dudar. Pero si\nalgo no le parece o ve que la puede\nafectar, no se toma ni un segundo\npara pensar, sus buenos principios\nlos defiende y no los va a negociar",
                      "Que siempre Madruga, que nunca\nllega tarde, son algunas teorias sobre\nel puntual Andrés. Debo decirles que\nestán en lo correcto, desde el primer\ndia que sus estudios iniciaron, se\npuso a él mismo un gran reto: la\npuntualidad y asistencia lo\ncaracterizarían en todo momento",
                      "Siempre una cara tierna y una\nsonrisa despierta, para Cata la\namabilidad es su mejor receta, por\neso saludar y dar las gracias, son\npasos básicos, que para ella,\nayudan a tratar bien a la gente",
@@ -30,8 +32,8 @@ seleccionavatar.prototype = {
           this.scrollingMap.inputEnabled = true;
           this.scrollingMap.input.enableDrag(false);
           this.scrollingMap.savedPosition = new Phaser.Point(this.scrollingMap.x, this.scrollingMap.y);
-          this.scrollingMap.isBeingDragged = false; 
-          this.scrollingMap.movingSpeed = 0; 
+          this.scrollingMap.isBeingDragged = false;
+          this.scrollingMap.movingSpeed = 0;
           this.scrollingMap.input.allowVerticalDrag = false;
           this.scrollingMap.input.boundsRect = new Phaser.Rectangle(game.width - this.scrollingMap.width, game.height - this.scrollingMap.height, this.scrollingMap.width * 2 - game.width, this.scrollingMap.height * 2 - game.height);
           
@@ -64,6 +66,7 @@ seleccionavatar.prototype = {
     verH:function(){
         musicaMenus.pause();
         sonidoBoton.play();
+        datosperfil["datos"].avatar  = personajesBuenos[avatarSeleccionado].rutaAvatar;
         this.state.start("historieta");
     },
     
@@ -75,11 +78,11 @@ seleccionavatar.prototype = {
                     zoomed = true;
                     for (var j = 0; j < descriptions.length; j++) {
                          if(i == j){
-                             apodo.setText(namesCharacters[j]);
-                             description.setText(descriptions[j]);                             
+                             apodo.setText(namesCharacters[j]);                             
+                             description.setText(descriptions[j]);
+                             avatarSeleccionado = idPersonajesBuenos[j];
                          }
                     }
-
                }
                else{
                     this.scrollingMap.getChildAt(i).scale.setTo(1);   
@@ -94,8 +97,7 @@ seleccionavatar.prototype = {
                     if(this.scrollingMap.x < game.width - this.scrollingMap.width){
                          this.scrollingMap.x = game.width - this.scrollingMap.width;
                          this.scrollingMap.movingSpeed *= 0.5;
-                         this.scrollingMap.movingangle += Math.PI;
-                         
+                         this.scrollingMap.movingangle += Math.PI;                         
                     }
                     if(this.scrollingMap.x > 0){
                          this.scrollingMap.x = 0;

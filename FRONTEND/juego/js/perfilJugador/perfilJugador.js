@@ -5,14 +5,11 @@ var character2;
 var music;
 var musicButton;
 var NicknamePerfil;
-//var MundoPerfil;
-//var NivelPerfil;
-//var MonedasPerfil;
 
 var perfilJugador = function(game){};
     perfilJugador.prototype = {
         preload : function(){
-            game.load.image('avatar','../img/Componentes/perfilJugador/avatar.png');
+            game.load.image('avatar', datosperfil["datos"].avatar);
 		    game.load.spritesheet('boton-personaje', '../img/Componentes/botones/boton-personaje.png');
             game.load.spritesheet('boton-jefes', '../img/Componentes/botones/boton-jefes.png');
             game.load.spritesheet('boton-trofeo', '../img/Componentes/botones/boton-trofeo.png');
@@ -26,7 +23,7 @@ var perfilJugador = function(game){};
             MonedasPerfil = datosperfil["datos"].monedas;
             musicButton = game.add.audio('sonidoBoton');
             game.stage.backgroundColor = "#2451A6";
-		    game.add.sprite(50, 50,'avatar');
+		    game.add.sprite(80, 50,'avatar').scale.setTo(0.8);            
 		
             game.add.button(5, 5,'botonVolver', this.verNavegacion, 1, 1, 0, 2);
             game.add.button(90, 290,'boton-personaje', null, 0, 0, 0, 0);
@@ -56,7 +53,6 @@ var perfilJugador = function(game){};
             game.state.start("desbloqueoPersonaje");
             sonidoBoton.play();
         },
-
         update : function(){
 
 	   }
