@@ -25,7 +25,9 @@ variablesCampoBatalla = {
     fondogame:null,//gurada la imagen del fond
     ataquePersonalidadJ:null,//guarda ataque del jugador
     escudo1:null, //guarda la ruta del escudo uno
-    escudo2:null//guarda la ruta del escudo dos
+    escudo2:null,//guarda la ruta del escudo dos
+    golpeAlAire:null,//sonido del juego
+	golpe_al_cuerpo:null//sonido del juego
 };
 
 var boxGame = 1;
@@ -84,7 +86,7 @@ var batalla = {
         });
 
 
-		if(dispositivoMovil){
+		if(variablesBoot.dispositivoMovil){
 			 //Add the VirtualGamepad plugin to the game
         	 gamepad = game.plugins.add(Phaser.Plugin.VirtualGamepad);
         	// Add a joystick to the game (only one is allowed right now)
@@ -181,13 +183,13 @@ var batalla = {
 		pausa.inputEnabled=true;
 		//funcion para pausar
 		pausa.events.onInputUp.add(function () {
-            sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
 			funcionesBatalla.pausar();
         });
         game.input.onDown.add(unpause, self);
 		//funcion para reaunudar
         function unpause(event){
-            sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
         	funcionesBatalla.unpause(event);
         }
         boot.verificarMusica("batalla");
@@ -216,7 +218,7 @@ var batalla = {
         indice=funcionesBatalla.numeroAleatorio(1,4);
 		funcionesBatalla.cargarEnergia(energiaVerdeJugador);
 		funcionesBatalla.cargarEnergia(energiaVerdeComputadora);
-		if(dispositivoMovil)
+		if(variablesBoot.dispositivoMovil)
 			funcionesBatalla.joystick(joystick,button);
 		else
 			funcionesBatalla.movimientoJugador(energiaVerdeJugador);

@@ -127,7 +127,7 @@ compraPersonajes.prototype = {
      },
      compra: function(){  
      	if(variablesCompraPersonajes.comprado[variablesCompraPersonajes.pos]){
-         sonidoBoton.play();
+         variablesBoot.sonidoBoton.play();
      		alert("¡Ya posees este personaje!");
      	} else {
      		//Si no ha comprado el personaje, realiza el proceso necesario para su compra y recibir las recompensas
@@ -143,7 +143,7 @@ compraPersonajes.prototype = {
     
     verMapa: function(){
         game.state.start("navegacion");
-        sonidoBoton.play();
+        variablesBoot.sonidoBoton.play();
     },
     
     update:function(){

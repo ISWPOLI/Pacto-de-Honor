@@ -43,7 +43,7 @@ var cajaMisteriosa = function(game){};
    
     
 
-            game.load.spritesheet('atras', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
+            //game.load.spritesheet('atras', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
 
   
             // Se carga el sprite del boton seleccionar
@@ -120,7 +120,7 @@ var cajaMisteriosa = function(game){};
                               
 
     
-          game.add.button(5, 5,'atras', this.verCaja, 1, 1, 0, 2);
+          game.add.button(5, 5,'botonVolver', this.verNavegacion, 1, 1, 0, 2);
 
           //metdo que verica si esta o no bloqueado un logro de ser asi llama al metodo del logro para validar si cumple con los requsitos de desbloqueo
             boot.verificarMusica("menu");
@@ -128,7 +128,7 @@ var cajaMisteriosa = function(game){};
 
         verNavegacion: function(){
             game.state.start("navegacion");
-            sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
         },
         
         update:function(){

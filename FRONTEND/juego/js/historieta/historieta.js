@@ -12,16 +12,16 @@ historieta.prototype = {
     
      create: function(){
 
-        musicaMapa.play();
-         variablesHistorieta.histo = game.add.sprite(0,0, 'historieta');
-         variablesHistorieta.histo.animations.add('verH', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 0.3, false);
-         variablesHistorieta.histo.animations.play('verH');
-         variablesHistorieta.button = game.add.button (game.world.width - 100, game.world.height - 100, 'button', this.verMapa, this, 2 ,1, 0);
-         variablesHistorieta.button.anchor.setTo (0.5, 0.5);
+        variablesBoot.musicaMapa.play();
+        variablesHistorieta.histo = game.add.sprite(0,0, 'historieta');
+        variablesHistorieta.histo.animations.add('verH', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 0.3, false);
+        variablesHistorieta.histo.animations.play('verH');
+        variablesHistorieta.button = game.add.button (game.world.width - 100, game.world.height - 100, 'button', this.verMapa, this, 2 ,1, 0);
+        variablesHistorieta.button.anchor.setTo (0.5, 0.5);
      },
     
     verMapa: function(){
         this.state.start("navegacion");
-        sonidoBoton.play();
+        variablesBoot.sonidoBoton.play();
     }
 } 

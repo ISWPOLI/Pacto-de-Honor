@@ -1,5 +1,4 @@
-    href=batalla.js;
-	href=funcionesBatalla.js;
+
 var fin = {
     preload: function(){
 		this.preloadBar=this.add.sprite(this.game.world.centerX,this.game.world.centerY,'barraCarga');
@@ -23,7 +22,7 @@ var fin = {
 			resultado = "PERDISTE";
 			color = {fill:'#DF0101',font: '40px Arial'};
 		}
-		if(dispositivoMovil){
+		if(variablesBoot.dispositivoMovil){
 			
 			/*
 			*
@@ -101,6 +100,6 @@ var fin = {
     },
     volver: function(){
         game.state.start('navegacion');
-        sonidoBoton.play();
+        variablesBoot.sonidoBoton.play();
     }
 }

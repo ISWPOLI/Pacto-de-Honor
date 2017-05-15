@@ -59,11 +59,11 @@ seleccionavatar.prototype = {
 
          }
 
-         musicaMenus.play();
+         variablesBoot.musicaMenus.play();
     },
     verH:function(){
-        musicaMenus.pause();
-        sonidoBoton.play();
+        variablesBoot.musicaMenus.pause();
+        variablesBoot.sonidoBoton.play();
         this.state.start("historieta");
     },
     
