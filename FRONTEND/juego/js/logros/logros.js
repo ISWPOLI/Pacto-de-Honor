@@ -249,6 +249,10 @@ var logros = function(game){};
             variableLogros.Logroslooked[i] = false;
           };
         }
+            
+            pages = game.add.text(475, 50, null, { font: "14px Roboto", fill: "#ffffff"});
+            pages.anchor.setTo(0.5);
+            pages.alpha = 0.5;
       },
         verPerfil: function(){
             game.state.start("perfilJugador");
@@ -267,6 +271,8 @@ var logros = function(game){};
                     zoomed = true;
                     for (var j = 0; j < variableLogros.descriptionsl.length; j++) {
                          if(i == j){
+                             
+                             pages.setText(j+1+"/10");
                               // Se va modificando los nombres de los personajes de acuerdo al personaje en el que se este
                               variableLogros.apodo.setText(variableLogros.namesCharactersl[j]);
                               // Se va modificando las descripciones de los personajes de acuerdo al personaje en el que se este
