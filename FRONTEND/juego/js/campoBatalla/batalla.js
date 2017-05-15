@@ -1,5 +1,5 @@
 variablesCampoBatalla = {
-    idNivel:null, //Guarda el id del nivel a crear
+    idNivel:"1-5", //Guarda el id del nivel a crear
 	personajeJugador: null,//guarda el sprite del personaje elegido
     personajeComputadora:null,//guarda el sprite del personaje asignado a un escenario
     cursores:null,//crea cursores
@@ -12,8 +12,8 @@ variablesCampoBatalla = {
 	movV:null,//arreglo para saber que accion esta ejecutando el villano//[Defensa,ataqueNomal,ataquePersonalidad,ataquePlagio]
     ataquePlagio:null, //guarda el sprite del ataque plagio del villano
 	ataquePersonalidadC:null,//guarda el sprite del ataque de personalidad del villano
-	idPJ:null,//guarda el id del personaje del jugador
-	idPC:null,//guarda el id del personaje del mapa
+	idPJ:"idPUno",//guarda el id del personaje del jugador
+	idPC:"idPUno",//guarda el id del personaje del mapa
 	costoAtaqueJ:0,//el consumo de energia que causa el ataque
 	costoAtaqueC:0,//el consumo de energia que causa el ataque
 	costoPlagioC:0,//el consumo de energia que causa el ataque
@@ -27,15 +27,19 @@ variablesCampoBatalla = {
     escudo1:null, //guarda la ruta del escudo uno
     escudo2:null,//guarda la ruta del escudo dos
     golpeAlAire:null,//sonido del juego
-	golpe_al_cuerpo:null//sonido del juego
+	golpe_al_cuerpo:null,//sonido del juego
+	orientacion:false,//pregunta si hubo cambio de posciciones
+	saltoJ:0,//tiempo de salto
+	ganadaor:null//true si el jugador gana
 };
 
 var boxGame = 1;
 var caja;
 var openBox;
 var timeShowBox = 3;
-var gameTime =70;
 var sendGift = true;
+var rect;
+var rect1;
 var batalla = {
 	preload : function() {
 		console.log(variablesCampoBatalla);
@@ -47,7 +51,9 @@ var batalla = {
 	},
 
 	create : function() {	
-		variablesCampoBatalla.counter = 0;
+		variablesCampoBatalla.saltoJ=0; 
+		variablesCampoBatalla.orientacion = false;
+		variablesCampoBatalla.counter = 7200;
 		variablesCampoBatalla.ti = 0;
 		variablesCampoBatalla.danoH=personajesBuenos[variablesCampoBatalla.idPJ].daño;
 		variablesCampoBatalla.danoV=personajesMalos[variablesCampoBatalla.idPC].daño;
@@ -63,17 +69,17 @@ var batalla = {
         
         variablesCampoBatalla.ataquePersonalidadC = game.add.weapon(10, 'ataquePersonalidadV');
 	 	variablesCampoBatalla.fondogame = game.add.sprite(0, 0, 'fondo');
-		variablesCampoBatalla.personajeComputadora = game.add.sprite(650, 450, 'personajeComputadora');
+		variablesCampoBatalla.personajeComputadora = game.add.sprite(650, 300, 'personajeComputadora');
 		variablesCampoBatalla.personajeComputadora.anchor.setTo(0.5);
-		variablesCampoBatalla.personajeJugador = game.add.sprite(150, 450, 'personajeJugador');
+		variablesCampoBatalla.personajeJugador = game.add.sprite(150, 300, 'personajeJugador');
 		variablesCampoBatalla.personajeJugador.anchor.setTo(0.5);
 
 		funcionesBatalla.iniciarSprite(variablesCampoBatalla.personajeJugador);
 		funcionesBatalla.iniciarSprite(variablesCampoBatalla.personajeComputadora);
-		variablesCampoBatalla.personajeJugador.body.gravity.y=250;
 		
-
-
+		
+		// variablesCampoBatalla.personajeJugador.scale.setTo(-1,1);
+		// variablesCampoBatalla.personajeComputadora.scale.setTo(-1,1);
 
 		caja = game.add.button(game.rnd.integerInRange(30, (game.width)-30), game.rnd.integerInRange(60, (game.height)-60), "caja",this.catchedBox,this);
         caja.visible = false;
@@ -84,8 +90,16 @@ var batalla = {
        	caja.events.onInputUp.add(function () {
 			funcionesBatalla.catchedBox()
         });
+        //se crea un rectangulo invisibe para simular el piso 
+       	rect = game.add.sprite(0, 0, null);
+       	game.physics.arcade.enable(rect);
+       	rect.body.setSize(800, 45, 0, 400); 
+       	rect.body.collideWorldBounds = true; 
 
-
+       	rect1 = game.add.sprite(0, 0, null);
+       	game.physics.arcade.enable(rect1);
+       	rect1.body.setSize(800, 45, 0, 400); 
+       	rect1.body.collideWorldBounds = true; 
 		if(variablesBoot.dispositivoMovil){
 			 //Add the VirtualGamepad plugin to the game
         	 gamepad = game.plugins.add(Phaser.Plugin.VirtualGamepad);
@@ -129,6 +143,7 @@ var batalla = {
 			energiaBlancaComputadora = new Phaser.Rectangle(480, 79, 200, 20);
 			energiaNegroComputadora = new Phaser.Rectangle(479, 78, 200, 22);
 			energiaVerdeComputadora = new Phaser.Rectangle(480, 79, 200, 20);
+			
 			
 			pausa.scale.setTo(0.4, 0.4);
 			text = game.add.text(360, 110, 'time: 00', {fill : "white", backgroundColor : 'rgba(0,0,0,0.5)'});
@@ -193,6 +208,9 @@ var batalla = {
         	funcionesBatalla.unpause(event);
         }
         boot.verificarMusica("batalla");
+
+
+        
     },
     
 	render : function() {
@@ -203,6 +221,7 @@ var batalla = {
 		game.debug.geom(energiaNegroJugador, '#000', false);
 		game.debug.geom(energiaBlancaJugador, '#fff');
 		game.debug.geom(energiaVerdeJugador, 'rgb(0,255,0)');
+		
 
 		game.debug.geom(vidaNegroComputadora, '#000', false);
 		game.debug.geom(vidaBlancoComputadora, '#fff');
@@ -226,12 +245,13 @@ var batalla = {
         funcionesBatalla.guiaComputadora(variablesCampoBatalla.movimientoComputadora);
 		if(!variablesCampoBatalla.secuencia)
 			funcionesBatalla.llamarSecuencia(indice);	
-		variablesCampoBatalla.counter++;
+
+		variablesCampoBatalla.counter-=50;
 		variablesCampoBatalla.ti = parseInt(variablesCampoBatalla.counter / 60);
-		if (variablesCampoBatalla.ti == gameTime) {
+		if (variablesCampoBatalla.ti < 0) {
 			funcionesBatalla.finJuego();
 		}
-		if (variablesCampoBatalla.ti <= gameTime) {
+		if (variablesCampoBatalla.ti >= 0) {
 			text.setText('time: ' + variablesCampoBatalla.ti);
 		}
 		if(variablesCampoBatalla.ti == timeShowBox){
@@ -254,6 +274,7 @@ var batalla = {
 			variablesCampoBatalla.danoH=personajesBuenos[variablesCampoBatalla.idPJ].daño;
 			variablesCampoBatalla.personajeJugador.scale.setTo(1,1);
 		}
+	
 		if (openBox.visible) {
 				if (boxGame == 1 && !sendGift) {
 					gameTime = gameTime + funcionesBatalla.giftbox();
@@ -286,6 +307,8 @@ var batalla = {
 				}
 				sendGift = true;
 		};
+		game.physics.arcade.collide(rect1, variablesCampoBatalla.personajeJugador);
+		game.physics.arcade.collide(rect, variablesCampoBatalla.personajeComputadora);
 		game.physics.arcade.overlap(variablesCampoBatalla.personajeJugador,variablesCampoBatalla.ataquePlagio,funcionesBatalla.impactoPlagioC,false,this);
 		game.physics.arcade.overlap(variablesCampoBatalla.personajeJugador,variablesCampoBatalla.ataquePersonalidadC.bullets,funcionesBatalla.impactoAtaqueComputadora,false,this);
 		game.physics.arcade.overlap(variablesCampoBatalla.personajeComputadora,variablesCampoBatalla.ataquePersonalidadJ,funcionesBatalla.impactoAtaqueJugador,false,this);

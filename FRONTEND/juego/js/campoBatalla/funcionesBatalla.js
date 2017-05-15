@@ -40,6 +40,8 @@ var funcionesBatalla={
     	sprite.animations.play('quieto');
 		game.physics.arcade.enable(sprite);
 		sprite.body.collideWorldBounds = true; 
+        //sprite.body.bounce=0.5
+        sprite.body.gravity.y=250;
         variablesCampoBatalla.golpeAlAire = game.add.audio('puñoalaire');
         variablesCampoBatalla.golpe_al_cuerpo = game.add.audio('puñoalcuerpo');
 	},
@@ -91,16 +93,21 @@ var funcionesBatalla={
         variablesCampoBatalla.movH[0]=false;
         variablesCampoBatalla.movH[1]=false;
         variablesCampoBatalla.movH[3]=false;
+      
+
+       // variablesCampoBatalla.personajeComputadora.body.velocity.y=0;
+      
+        variablesCampoBatalla.personajeJugador.body.velocity.x=0;
         if(variablesCampoBatalla.escudo1!=null)
             variablesCampoBatalla.escudo1.kill();
         if(variablesCampoBatalla.escudo2!=null)
             variablesCampoBatalla.escudo2.kill();
        
         if (cursores.right.isDown) {
-            variablesCampoBatalla.personajeJugador.body.x+=2;
+            variablesCampoBatalla.personajeJugador.body.velocity.x+=150;
             variablesCampoBatalla.personajeJugador.animations.play('correr');
         } else if (cursores.left.isDown) {
-            variablesCampoBatalla.personajeJugador.body.x-=2;
+            variablesCampoBatalla.personajeJugador.body.velocity.x+=-150;
             variablesCampoBatalla.personajeJugador.animations.play('correr');
         } else if (cursores.down.isDown) {
             variablesCampoBatalla.escudo1 = game.add.sprite(variablesCampoBatalla.personajeJugador.body.x+200, variablesCampoBatalla.personajeJugador.body.y, 'escudo1');
@@ -108,18 +115,19 @@ var funcionesBatalla={
             
             
             variablesCampoBatalla.personajeJugador.animations.play('defensa')
-            variablesCampoBatalla.personajeJugador.body.velocity.y=0;
             variablesCampoBatalla.movH[0]=true;
-        }else if(cursores.up.isDown){
-             variablesCampoBatalla.personajeJugador.body.velocity.y=-250;
+        }else if(cursores.up.isDown&& (variablesCampoBatalla.personajeJugador.body.y>355)&&(game.time.now > variablesCampoBatalla.saltoJ)){
+             variablesCampoBatalla.personajeJugador.body.velocity.y-=500;
+
+              variablesCampoBatalla.saltoJ = game.time.now + 800;
             // variablesCampoBatalla.escudo2 = game.add.sprite(variablesCampoBatalla.personajeJugador.body.x+150, variablesCampoBatalla.personajeJugador.body.y, 'escudo2');
             // variablesCampoBatalla.escudo2.anchor.setTo(0.5,0);
             // variablesCampoBatalla.movH[3]=true;
-        } else if (esp.isDown){
-            variablesCampoBatalla.personajeJugador.animations.play('punos');
-            variablesCampoBatalla.personajeJugador.body.x+=1;
-            variablesCampoBatalla.movH[1]=true;
-            variablesCampoBatalla.golpeAlAire.play();
+        // } else if (esp.isDown){
+        //     variablesCampoBatalla.personajeJugador.animations.play('punos');
+        //     variablesCampoBatalla.personajeJugador.body.x+=1;
+        //     variablesCampoBatalla.movH[1]=true;
+        //     variablesCampoBatalla.golpeAlAire.play();
         }else{
             variablesCampoBatalla.personajeJugador.animations.play('quieto');
         }
@@ -273,7 +281,7 @@ var funcionesBatalla={
         }
         //si se resta vida al jugador 
         if(variablesCampoBatalla.movV[1]==true&&variablesCampoBatalla.movH[0]){
-            funcionesBatalla.actualizarVida(vidaRojoJugador,variablesCampoBatalladanoV[0]);
+            funcionesBatalla.actualizarVida(vidaRojoJugador,variablesCampoBatalla.danoV[0]);
             variablesCampoBatalla.movV[0]=false;
             funcionesBatalla.spriteImpactoComputadora();
         }
@@ -291,9 +299,9 @@ var funcionesBatalla={
      finJuego : function(){
         game.add.text(game.width/4,game.height/2,'JUEGO TERMINADO', {font:'45px'});
 		 if(vidaRojoComputadora.width==0){
-				ganadorBatalla = false;
-			}else{
 				ganadorBatalla = true;
+			}else{
+				ganadorBatalla = false;
 			}
         game.time.events.add(2000,function(){ game.state.start('fin');},this);
      },
@@ -307,11 +315,11 @@ var funcionesBatalla={
     */  
     primerMovimientoComputadora:function(){ 
         variablesCampoBatalla.secuencia=true;
-        game.time.events.add(1000,function(){ 
+        game.time.events.add(3000,function(){ 
             variablesCampoBatalla.movimientoComputadora="punos";
             game.time.events.add(500,function(){
             variablesCampoBatalla.movimientoComputadora="defensa";
-            game.time.events.add(500,function(){
+            game.time.events.add(100,function(){
                 variablesCampoBatalla.movimientoComputadora="adelante";
                 variablesCampoBatalla.secuencia=false;
                 },this);
@@ -358,7 +366,7 @@ var funcionesBatalla={
                 this.activarPlagioC();
                     game.time.events.add(2000,function(){ 
                     movimientoComputadora="adelante";
-                    game.time.events.add(2000,function(){
+                    game.time.events.add(3000,function(){
                         variablesCampoBatalla.secuencia=false;
                     },this);
                 },this);   
