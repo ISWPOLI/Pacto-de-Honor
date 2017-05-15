@@ -122,6 +122,10 @@ compraPersonajes.prototype = {
           //compradoL = game.add.text(game.world.centerX, 510, "", { font: "20px Roboto", fill: "#ffffff", align: "center", backgroundColor: "#2451A6"});
           //compradoL.anchor.set(0.5);
         
+        pages = game.add.text(game.world.width/2, 235, null, { font: "14px Roboto", fill: "#ffffff"});
+        pages.anchor.setTo(0.5);
+        pages.alpha = 0.5;
+        
         boot.verificarMusica("menu");
 
      },
@@ -160,12 +164,12 @@ compraPersonajes.prototype = {
                     zoomed = true;
                     for (var j = 0; j < variablesCompraPersonajes.texts.length; j++) {
                          if(i == j){
-                              variablesCompraPersonajes.pos = j;
-                              // Se va modificando los nombres de los personajes de acuerdo al personaje en el que se esté
-                              variablesCompraPersonajes.nickname.setText(variablesCompraPersonajes.names[j]);
-
-                              // Se modifican los parámetros de compra de acuerdo al personaje en el que se esté
-                              variablesCompraPersonajes.scrollText.setText(variablesCompraPersonajes.texts[j]);
+                             variablesCompraPersonajes.pos = j;
+                             // Se va modificando los nombres de los personajes de acuerdo al personaje en el que se esté
+                             variablesCompraPersonajes.nickname.setText(variablesCompraPersonajes.names[j]);
+                             // Se modifican los parámetros de compra de acuerdo al personaje en el que se esté
+                             variablesCompraPersonajes.scrollText.setText(variablesCompraPersonajes.texts[j]);
+                             pages.setText(j+1+"/9");
                          }
                     }
 

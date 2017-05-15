@@ -117,10 +117,12 @@ var cajaMisteriosa = function(game){};
 
           variablesCajaMisteriosa.imgDesBox =game.add.image(game.world.centerX/2,350,variablesCajaMisteriosa.nameBox[0]);
           variablesCajaMisteriosa.imgDesBox.anchor.set(0.5);
-                              
-
-    
-          game.add.button(5, 5,'botonVolver', this.verNavegacion, 1, 1, 0, 2);
+            
+            pages = game.add.text(game.world.width/2, 220, null, { font: "14px Roboto", fill: "#ffffff"});
+            pages.anchor.setTo(0.5);
+            pages.alpha = 0.5;
+            
+            game.add.button(5, 5,'botonVolver', this.verNavegacion, 1, 1, 0, 2);
 
           //metdo que verica si esta o no bloqueado un logro de ser asi llama al metodo del logro para validar si cumple con los requsitos de desbloqueo
             boot.verificarMusica("menu");
@@ -144,18 +146,19 @@ var cajaMisteriosa = function(game){};
                     zoomed = true;
                     for (var j = 0; j < variablesCajaMisteriosa.boxDescription.length; j++) {
                          if(i == j){
-                              // Se va modificando los nombres de los personajes de acuerdo al personaje en el que se este
-                              variablesCajaMisteriosa.apodo.setText(variablesCajaMisteriosa.nameBox[j]);
+                             pages.setText(j+1+"/8");
+                             // Se va modificando los nombres de los personajes de acuerdo al personaje en el que se este
+                             variablesCajaMisteriosa.apodo.setText(variablesCajaMisteriosa.nameBox[j]);
                              // startButton.pendingDestroy = true;
 
-                              // Se va modificando las descripciones de los personajes de acuerdo al personaje en el que se este
-                              variablesCajaMisteriosa.description.setText(variablesCajaMisteriosa.boxDescription[j]);
-                              variablesCajaMisteriosa.imgDesBox.pendingDestroy = true;
-                              variablesCajaMisteriosa.imgDesBox =game.add.image(game.world.centerX/2,350,variablesCajaMisteriosa.nameBox[j]+"explosion");
-                              variablesCajaMisteriosa.imgDesBox.anchor.set(0.5);
+                             // Se va modificando las descripciones de los personajes de acuerdo al personaje en el que se este
+                             variablesCajaMisteriosa.description.setText(variablesCajaMisteriosa.boxDescription[j]);
+                             variablesCajaMisteriosa.imgDesBox.pendingDestroy = true;
+                             variablesCajaMisteriosa.imgDesBox =game.add.image(game.world.centerX/2,350,variablesCajaMisteriosa.nameBox[j]+"explosion");
+                             variablesCajaMisteriosa.imgDesBox.anchor.set(0.5);
                               
 
-                              if (variablesCajaMisteriosa.boxloocked[j]) {
+                             if (variablesCajaMisteriosa.boxloocked[j]) {
                                 
                                  // this.scrollingMap.game.add.image(game.width / 2 + i * 90, 130, characters[i]);
                                   variablesCajaMisteriosa.startButton = game.add.button(game.world.width / 2, 540, 'button',null, this, 2, 2, 2); 
