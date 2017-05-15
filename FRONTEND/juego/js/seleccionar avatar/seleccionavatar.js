@@ -1,12 +1,14 @@
 var speedMult = 0.2;
 var friction = 0.99;
 var characters = ["pantera","gallo","cierva","jirafa","leon","canario","ruisenor","raton","hormiga"];
+var idPersonajesBuenos = ["idPUno", "idPDos", "idPTres", "idPCuatro", "idPCinco", "idPSeis", "idPSiete", "idPOcho", "idPNueve"];
 var namesCharacters = ["Ana Pantera", "Andrés Gallo", "Cata Cierva", "Daniela Jirafa", "Daniel León", "Fabian Canario", "Iván Ruiseñor", "Pedro Ratón", "Tati Hormiga"];
 var description;
 var apodo;
 var music;
 var musicButton;
 var startButton;
+var avatarSeleccionado;
 var descriptions = ["Ana tiene buenos amigos y un gran\ngrupo social, los sigue a todos\nlados y los apoya sin dudar. Pero si\nalgo no le parece o ve que la puede\nafectar, no se toma ni un segundo\npara pensar, sus buenos principios\nlos defiende y no los va a negociar",
                      "Que siempre Madruga, que nunca\nllega tarde, son algunas teorias sobre\nel puntual Andrés. Debo decirles que\nestán en lo correcto, desde el primer\ndia que sus estudios iniciaron, se\npuso a él mismo un gran reto: la\npuntualidad y asistencia lo\ncaracterizarían en todo momento",
                      "Siempre una cara tierna y una\nsonrisa despierta, para Cata la\namabilidad es su mejor receta, por\neso saludar y dar las gracias, son\npasos básicos, que para ella,\nayudan a tratar bien a la gente",
@@ -64,6 +66,7 @@ seleccionavatar.prototype = {
     verH:function(){
         variablesBoot.musicaMenus.pause();
         variablesBoot.sonidoBoton.play();
+        datosperfil["datos"].avatar  = personajesBuenos[avatarSeleccionado].rutaAvatar;
         this.state.start("historieta");
     },
     
@@ -76,7 +79,8 @@ seleccionavatar.prototype = {
                     for (var j = 0; j < descriptions.length; j++) {
                          if(i == j){
                              apodo.setText(namesCharacters[j]);
-                             description.setText(descriptions[j]);                             
+                             description.setText(descriptions[j]);
+                             avatarSeleccionado = idPersonajesBuenos[j];
                          }
                     }
 
