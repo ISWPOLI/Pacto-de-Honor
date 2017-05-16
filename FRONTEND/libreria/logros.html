@@ -3,7 +3,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<link rel="shortcut icon" type="image/x-icon" href="img/logosinfondo.ico">
-		<title>Desbloqueo Personaje</title>
+		<title>Logros</title>
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="icons/icons.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -25,9 +25,9 @@
 		<section class="main">
 			<section class="articles">
 				<article>
-					<h2>desbloqueoPersonaje.js</h2>
+					<h2>logros.js</h2>
 					<br/>
-					<p>Esta clase se usa para obtener o regalar un personaje del juego mediante un código alfanúmerico, cuando se obtiene un personaje se muestra al jugador si fue regalado por un estudiante o por un profesor.</p>
+					<p>En esta clase se muestran al jugador los tipos de logros que hay, su nombre y como desbloquearlos. Además cada logro mostrará su estado (bloqueado o desbloqueado).</p>
 					<br/>
 					<br/>
 					<table>
@@ -59,91 +59,123 @@
 							</td>
 						</tr>
 						<tr>
-							<td>String</td>
+							<td>void</td>
 							<td>
-								<b>validarString</b> ( )
+								<b>isUnloocked</b> ( )
 								<br/>
-								Verifica si el código alfanúmerico es valido.
+								Verifica si un logro esta bloqueado o desbloqueado.
 							</td>
 						</tr>
 						<tr>
 							<td>void</td>
 							<td>
-								<b>verPerfilJugador</b> ( )
+								<b>playedUnloock</b> ( )
 								<br/>
-								Se dirige a la seccion del perfil del jugador.
+								Bloquea todos los logros.
 							</td>
 						</tr>
 						<tr>
 							<td>void</td>
 							<td>
-								<b>code1</b> ( )
+								<b>recompensa</b> (<b>int</b> exp, <b>int</b> monedas)
 								<br/>
-								Genera un código alfanúmerico cuando se elija a Ana Pantera.
+								Da recompensas economicas y de experiencia al jugador.
 							</td>
 						</tr>
 						<tr>
 							<td>void</td>
 							<td>
-								<b>code2</b> ( )
+								<b>isMikuplagio</b> (<b>int</b> i)
 								<br/>
-								Genera un código alfanúmerico cuando se elija a Cata Cierva.
+								Verifica que el jugador lleve por lo menos 100 horas de juego.
 							</td>
 						</tr>
 						<tr>
 							<td>void</td>
 							<td>
-								<b>code3</b> ( )
+								<b>isMiLifePlagio</b> (<b>int</b> i)
 								<br/>
-								Genera un código alfanúmerico cuando se elija a Iván Ruiseñor.
+								Verifica si el jugador esta dentro del top 5 del ranking.
 							</td>
 						</tr>
 						<tr>
 							<td>void</td>
 							<td>
-								<b>code4</b> ( )
+								<b>isMiSkillPlagio</b> (<b>int</b> i)
 								<br/>
-								Genera un código alfanúmerico cuando se elija a Daniel León.
+								Verifica que el jugador haya desbloqueo mas del 70% de los logros.
 							</td>
 						</tr>
 						<tr>
 							<td>void</td>
 							<td>
-								<b>code5</b> ( )
+								<b>isTheOriginalPlagio</b> (<b>int</b> i)
 								<br/>
-								Genera un código alfanúmerico cuando se elija a Daniela Jirafa.
+								Verifica que el jugador lleve 3 victorias consecutivas en un mundo.
 							</td>
 						</tr>
 						<tr>
 							<td>void</td>
 							<td>
-								<b>code6</b> ( )
+								<b>isMiHitckGround</b> (<b>int</b> i)
 								<br/>
-								Genera un código alfanúmerico cuando se elija a Andres Gallo.
+								Verifica si el jugador lleva 5 días consecutivos dentro del top 5.
 							</td>
 						</tr>
 						<tr>
 							<td>void</td>
 							<td>
-								<b>code7</b> ( )
+								<b>isTheUnloocker</b> (<b>int</b> i)
 								<br/>
-								Genera un código alfanúmerico cuando se elija a Tati Hormiga.
+								Verifica que el jugador tenga todos los personajes buenos en su posesion.
 							</td>
 						</tr>
 						<tr>
 							<td>void</td>
 							<td>
-								<b>code8</b> ( )
+								<b>isTheRichest</b> (<b>int</b> i)
 								<br/>
-								Genera un código alfanúmerico cuando se elija a Fabián Canario.
+								Verifica que el jugador tengo 1000000 (un millón) o mas de monedas.
 							</td>
 						</tr>
 						<tr>
 							<td>void</td>
 							<td>
-								<b>code9</b> ( )
+								<b>isTheAList</b> (<b>int</b> i)
 								<br/>
-								Genera un código alfanúmerico cuando se elija a Pedro Ratón.
+								Verifica que el jugador este en la primera posición del ranking.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>is5InaRow</b> (<b>int</b> i)
+								<br/>
+								Verifica que el jugador haya pasado por un mundo sin ser derrotado.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>isMyMater</b> (<b>int</b> i)
+								<br/>
+								Verifica que el jugador tenga 1000 putnos o mas de experiencia.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>verPerfil</b> ( )
+								<br/>
+								Regresará a la sección llamada <b>perfilJugador.js</b>.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>update</b> ( )
+								<br/>
+								Función de Phaser, que sirve para cambiar componentes en el juego.
 							</td>
 						</tr>
 					</table>
@@ -197,7 +229,7 @@
 								No recibe parámetros.
 							</td>
 							<td>
-								Esta es una función del framework Phaser en la que cargaremos todos los componentes a ser utilizados en el juego como imágenes, sonidos, fondos, sprites, etc. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+								Esta es una función del framework Phaser, aquí se añadirán los componentes al juego. En esta función asignamos la posición inicial, el tamaño, etc. De todos los componentes. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
 							</td>
 							<td>
 								No tiene retorno.
@@ -207,7 +239,7 @@
 					<br/>
 					<table>
 						<tr class="filauno tabla2">
-							<td colspan="3">validarString( )</td>
+							<td colspan="3">isUnloocked( )</td>
 						</tr>
 						<tr>
 							<td>
@@ -225,35 +257,7 @@
 								No recibe parámetros.
 							</td>
 							<td>
-								Verificará el código alfanúmerico introducido, y determinará si este es valido o no.
-							</td>
-							<td>
-								Retornará una cadena especificando si el código alfanúmerico esta mal escrito o no existe y si fue regalado por un profesor o por un estudiante.
-							</td>
-						</tr>
-					</table>
-					<br/>
-					<table>
-						<tr class="filauno tabla2">
-							<td colspan="3">verPerfilJugador( )</td>
-						</tr>
-						<tr>
-							<td>
-								<b>Parámetros</b>
-							</td>
-							<td>
-								<b>Descripción</b>
-							</td>
-							<td>
-								<b>Retorno</b>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								No recibe parámetros.
-							</td>
-							<td>
-								Se dirige a la sección del juego llamada <b>perfilJugador.js</b>.
+								Esta función verifica si un logro esta bloqueado o desbloqueado.
 							</td>
 							<td>
 								No tiene retorno.
@@ -263,7 +267,7 @@
 					<br/>
 					<table>
 						<tr class="filauno tabla2">
-							<td colspan="3">code1( )</td>
+							<td colspan="3">playedUnloock( )</td>
 						</tr>
 						<tr>
 							<td>
@@ -281,7 +285,7 @@
 								No recibe parámetros.
 							</td>
 							<td>
-								Genera un código alfanúmerico después de que el botón de <b>Ana Pantera</b> sea presionado, para ser regalado a otro jugador.
+								Esta función bloquea todos los logros.
 							</td>
 							<td>
 								No tiene retorno.
@@ -291,7 +295,7 @@
 					<br/>
 					<table>
 						<tr class="filauno tabla2">
-							<td colspan="3">code2( )</td>
+							<td colspan="3">recompensa(int exp, int monedas)</td>
 						</tr>
 						<tr>
 							<td>
@@ -306,10 +310,10 @@
 						</tr>
 						<tr>
 							<td>
-								No recibe parámetros.
+								Recibe como parámetros los puntos de experiencia y la cantidad de monedas que se obsequieran al jugador.
 							</td>
 							<td>
-								Genera un código alfanúmerico después de que el botón de <b>Cata Cierva</b> sea presionado, para ser regalado a otro jugador.
+								Esta función da recompensas economicas y de experiencia al jugador. 
 							</td>
 							<td>
 								No tiene retorno.
@@ -319,7 +323,7 @@
 					<br/>
 					<table>
 						<tr class="filauno tabla2">
-							<td colspan="3">code3( )</td>
+							<td colspan="3">isMikuplagio(int i)</td>
 						</tr>
 						<tr>
 							<td>
@@ -334,10 +338,10 @@
 						</tr>
 						<tr>
 							<td>
-								No recibe parámetros.
+								Recibe como parámetro un índice númerico que representara una posición en el arreglo de desbloqueo de logros.
 							</td>
 							<td>
-								Genera un código alfanúmerico después de que el botón de <b>Iván Ruiseñor</b> sea presionado, para ser regalado a otro jugador.
+								Esta función verifica que el jugador lleve por lo menos 100 horas de juego. 
 							</td>
 							<td>
 								No tiene retorno.
@@ -347,7 +351,7 @@
 					<br/>
 					<table>
 						<tr class="filauno tabla2">
-							<td colspan="3">code4( )</td>
+							<td colspan="3">isMiLifePlagio(int i)</td>
 						</tr>
 						<tr>
 							<td>
@@ -362,10 +366,10 @@
 						</tr>
 						<tr>
 							<td>
-								No recibe parámetros.
+								Recibe como parámetro un índice númerico que representara una posición en el arreglo de desbloqueo de logros.
 							</td>
 							<td>
-								Genera un código alfanúmerico después de que el botón de <b>Daniel León</b> sea presionado, para ser regalado a otro jugador.
+								Esta función verifica si el jugador esta dentro del top 5 del ranking.
 							</td>
 							<td>
 								No tiene retorno.
@@ -375,7 +379,7 @@
 					<br/>
 					<table>
 						<tr class="filauno tabla2">
-							<td colspan="3">code5( )</td>
+							<td colspan="3">isMiSkillPlagio(int i)</td>
 						</tr>
 						<tr>
 							<td>
@@ -390,10 +394,10 @@
 						</tr>
 						<tr>
 							<td>
-								No recibe parámetros.
+								Recibe como parámetro un índice númerico que representara una posición en el arreglo de desbloqueo de logros.
 							</td>
 							<td>
-								Genera un código alfanúmerico después de que el botón de <b>Daniela Jirafa</b> sea presionado, para ser regalado a otro jugador.
+								Esta función verifica que el jugador haya desbloqueo mas del 70% de los logros.
 							</td>
 							<td>
 								No tiene retorno.
@@ -403,7 +407,7 @@
 					<br/>
 					<table>
 						<tr class="filauno tabla2">
-							<td colspan="3">code6( )</td>
+							<td colspan="3">isTheOriginalPlagio(int i)</td>
 						</tr>
 						<tr>
 							<td>
@@ -418,10 +422,10 @@
 						</tr>
 						<tr>
 							<td>
-								No recibe parámetros.
+								Recibe como parámetro un índice númerico que representara una posición en el arreglo de desbloqueo de logros.
 							</td>
 							<td>
-								Genera un código alfanúmerico después de que el botón de <b>Andrés Gallo</b> sea presionado, para ser regalado a otro jugador.
+								Esta función verifica que el jugador lleve 3 victorias consecutivas en un mundo.
 							</td>
 							<td>
 								No tiene retorno.
@@ -431,7 +435,7 @@
 					<br/>
 					<table>
 						<tr class="filauno tabla2">
-							<td colspan="3">code7( )</td>
+							<td colspan="3">isMiHitckGround(int i)</td>
 						</tr>
 						<tr>
 							<td>
@@ -446,10 +450,10 @@
 						</tr>
 						<tr>
 							<td>
-								No recibe parámetros.
+								Recibe como parámetro un índice númerico que representara una posición en el arreglo de desbloqueo de logros.
 							</td>
 							<td>
-								Genera un código alfanúmerico después de que el botón de <b>Tati Hormiga</b> sea presionado, para ser regalado a otro jugador.
+								Esta función verifica si el jugador lleva 5 días consecutivos dentro del top 5. 
 							</td>
 							<td>
 								No tiene retorno.
@@ -459,7 +463,7 @@
 					<br/>
 					<table>
 						<tr class="filauno tabla2">
-							<td colspan="3">code8( )</td>
+							<td colspan="3">isTheUnloocker(int i)</td>
 						</tr>
 						<tr>
 							<td>
@@ -474,10 +478,10 @@
 						</tr>
 						<tr>
 							<td>
-								No recibe parámetros.
+								Recibe como parámetro un índice númerico que representara una posición en el arreglo de desbloqueo de logros.
 							</td>
 							<td>
-								Genera un código alfanúmerico después de que el botón de <b>Fabián Canario</b> sea presionado, para ser regalado a otro jugador.
+								Esta función verifica que el jugador tenga todos los personajes buenos en su posesion.
 							</td>
 							<td>
 								No tiene retorno.
@@ -487,7 +491,119 @@
 					<br/>
 					<table>
 						<tr class="filauno tabla2">
-							<td colspan="3">code9( )</td>
+							<td colspan="3">isTheRichest(int i)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro un índice númerico que representara una posición en el arreglo de desbloqueo de logros.
+							</td>
+							<td>
+								Esta función verifica que el jugador tengo 1000000 (un millón) o mas de monedas.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">isTheAList(int i)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro un índice númerico que representara una posición en el arreglo de desbloqueo de logros.
+							</td>
+							<td>
+								Esta función verifica que el jugador este en la primera posición del ranking.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">is5InaRow(int i)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro un índice númerico que representara una posición en el arreglo de desbloqueo de logros.
+							</td>
+							<td>
+								Esta función verifica que el jugador haya pasado por un mundo sin ser derrotado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">isMyMater(int i)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro un índice númerico que representara una posición en el arreglo de desbloqueo de logros.
+							</td>
+							<td>
+								Esta función verifica que el jugador tenga 1000 putnos o mas de experiencia.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">verPerfil( )</td>
 						</tr>
 						<tr>
 							<td>
@@ -505,7 +621,35 @@
 								No recibe parámetros.
 							</td>
 							<td>
-								Genera un código alfanúmerico después de que el botón de <b>Pedro Ratón</b> sea presionado, para ser regalado a otro jugador.
+								Regresará a la sección llamada <b>perfilJugador.js</b>. 
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">update( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta es una función del framework Phaser, aquí estarán todos los cambios o ‘acciones’ del juego. Qué hacer al presionar una tecla, al mover el cursor, al chocar una pared; en fin, toda la lógica del juego. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
 							</td>
 							<td>
 								No tiene retorno.
@@ -530,84 +674,64 @@
 							</td>
 						</tr>
 						<tr>
-							<td>desbloqueoPersonaje</td>
-							<td>PhaserGame</td>
-							<td>Variable para inicializar a librería de Phaser.</td>
+							<td>speedMult</td>
+							<td>double</td>
+							<td>Representa la velocidad dentro de un scroll.</td>
 						</tr>
 						<tr>
-							<td>input</td>
-							<td>PhaserInput</td>
-							<td>Input en el cual el jugador ingresará un código alfanúmerico para obtener un personaje.</td>
+							<td>friction</td>
+							<td>double</td>
+							<td>Representa la fricción dentro de un scroll.</td>
 						</tr>
 						<tr>
-							<td>btFlechar</td>
-							<td>PhaserButton</td>
-							<td>Botón que servirá para regresar a la sección <b>navegacion.js</b>.</td>
-						</tr>
-						<tr>
-							<td>btPantera</td>
-							<td>PhaserButton</td>
-							<td>Botón que servirá para seleccionar a Ana Pantera.</td>
-						</tr>
-						<tr>
-							<td>btLLama</td>
-							<td>PhaserButton</td>
-							<td>Botón que servirá para seleccionar a Cata Cierva.</td>
-						</tr>
-						<tr>
-							<td>btPajaro</td>
-							<td>PhaserButton</td>
-							<td>Botón que servirá para seleccionar a Iván Ruiseñor.</td>
-						</tr>
-						<tr>
-							<td>btLeon</td>
-							<td>PhaserButton</td>
-							<td>Botón que servirá para seleccionar a Daniel León.</td>
-						</tr>
-						<tr>
-							<td>btJirafa</td>
-							<td>PhaserButton</td>
-							<td>Botón que servirá para seleccionar a Daniel Jirafa.</td>
-						</tr>
-						<tr>
-							<td>btGallo</td>
-							<td>PhaserButton</td>
-							<td>Botón que servirá para seleccionar a Andrés Gallo.</td>
-						</tr>
-						<tr>
-							<td>btHormiga</td>
-							<td>PhaserButton</td>
-							<td>Botón que servirá para seleccionar a Tati Hormiga.</td>
-						</tr>
-						<tr>
-							<td>btCanario</td>
-							<td>PhaserButton</td>
-							<td>Botón que servirá para seleccionar a Fabián Canario.</td>
-						</tr>
-						<tr>
-							<td>btRata</td>
-							<td>PhaserButton</td>
-							<td>Botón que servirá para seleccionar a Pedro Ratón.</td>
-						</tr>
-						<tr>
-							<td>btIngresar</td>
-							<td>PhaserButton</td>
-							<td>Botón que se usará para validar que el código alfanúmerico que el jugador introduzca sea valido.</td>
-						</tr>
-						<tr>
-							<td>codigo</td>
-							<td>PhaserInput</td>
-							<td>Input en el cual aparecerá un código generado después de presionar algun personaje.</td>
-						</tr>
-						<tr>
-							<td>text</td>
+							<td>namesCharactersl</td>
 							<td>String</td>
-							<td>Cadena de texto que representa la primera parte del código alfanúmerico.</td>
+							<td>Cadena que representará el nombre de cada logro en un determinado momento del scroll.</td>
 						</tr>
 						<tr>
-							<td>text2</td>
+							<td>Logroslooked</td>
+							<td>boolean</td>
+							<td>Arreglo que contiene valores booleanos y estos representan si un logro esta bloqueado o desbloqueado.</td>
+						</tr>
+						<tr>
+							<td>description</td>
 							<td>String</td>
-							<td>Cadena de texto que representa la segunda parte del código alfanúmerico.</td>
+							<td>Cadena que representará la descripción de cada logro en un determinado momento del scroll.</td>
+						</tr>
+						<tr>
+							<td>startButton</td>
+							<td>PhaserButton</td>
+							<td>Botón que mostrará al jugador si un logro esta bloqueado o desbloqueado.</td>
+						</tr>
+						<tr>
+							<td>moneyLogros</td>
+							<td>int</td>
+							<td>Cantidad de monedas que tiene el jugador.</td>
+						</tr>
+						<tr>
+							<td>rankingLogros</td>
+							<td>int</td>
+							<td>Posición del ranking en la que esta el jugador.</td>
+						</tr>
+						<tr>
+							<td>timeplayedLogros</td>
+							<td>int</td>
+							<td>Tiempo total de juego que lleva el jugador.</td>
+						</tr>
+						<tr>
+							<td>allHeros</td>
+							<td>boolean</td>
+							<td>Representa si el jugador tiene todos los personajes buenos desbloqueados o no.</td>
+						</tr>
+						<tr>
+							<td>xpLogros</td>
+							<td>int</td>
+							<td>Puntos de experiencia que tiene el jugador.</td>
+						</tr>
+						<tr>
+							<td>zoomed</td>
+							<td>boolean</td>
+							<td>Representa si un logro dentro del scroll esta seleccionado o no.</td>
 						</tr>
 					</table>
 				</article>
