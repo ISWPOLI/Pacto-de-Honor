@@ -15,15 +15,17 @@ import java.util.Date;
  */
 public class FechaActual {
     
-   private static Date date = new Date();
+   private Date date;
 	
    /**
     * Genera la fecha y hora actual
     * @return String con la fecha y hora actual
     */
     public static String timestamp(){
+        FechaActual f = new FechaActual();
+        f.date = new Date();
         DateFormat hourdateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss ");
-        return hourdateFormat.format(date);
+        return hourdateFormat.format(f.date);
     }
 	
     /**
@@ -31,7 +33,9 @@ public class FechaActual {
      * @return String con la fecha y hora sin espacios
      */
     public static String timeToken(){
+        FechaActual f = new FechaActual();
+        f.date = new Date();
         DateFormat hourDateFormat = new SimpleDateFormat("ddMMyyHHmmss");
-        return hourDateFormat.format(date);
+        return hourDateFormat.format(f.date);
     }
 }

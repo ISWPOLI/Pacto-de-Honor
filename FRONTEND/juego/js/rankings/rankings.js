@@ -16,10 +16,6 @@ var encabezados = ['Top', 'Avatar', 'Nombre', 'Nivel'];
 var rankings = function(game){};
     rankings.prototype = {
         preload: function(){
-            game.scale.pageAlignHorizontally = true;
-            game.scale.pageAlignVertically = true;            
-            //Se carga el boton para volver al mapa de navegación
-            game.load.spritesheet('botonVolver', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
             //Carga de imagen para el top 5
             game.load.image('top5', '../img/Componentes/Rankings/top5.png');
             //Carga de imagenes para los botones principales
@@ -33,11 +29,10 @@ var rankings = function(game){};
             game.load.image('avatarTres', jugadores[j3].rutaAvatar);
             game.load.image('avatarCuatro', jugadores[j4].rutaAvatar);
             game.load.image('avatarCinco', jugadores[j5].rutaAvatar);
-            game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
         },
         
         create: function(){
-            musicButton = game.add.audio('sonidoBoton');
+            musicButton = game.add.audio('variablesBoot.sonidoBoton');
             game.stage.backgroundColor = "#2451A6"; //Color de fondo
             game.add.text(game.width / 2, 50, "Rankings", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5); //Título de Rankings
             top5 = game.add.sprite(0, 230, 'top5'); //Imagen del top 5
@@ -137,17 +132,19 @@ var rankings = function(game){};
             imgAvatar3.visible = false;
             imgAvatar4.visible = false;
             imgAvatar5.visible = false;
+            
+            boot.verificarMusica("menu");
         },
         
         //Función para volver al mapa de navegación
         volver: function(){
             game.state.start("navegacion");
-             musicButton.play();
+            variablesBoot.sonidoBoton.play();
         },
         
         //En las siguientes funciones se ocultan las variables según corresponda
         verDiario: function(){
-             musicButton.play();
+            variablesBoot.sonidoBoton.play();
             textoRanking.setText("Ranking Diario");            
             textx.visible = false;
             textoFacultad.visible = false;
@@ -164,7 +161,7 @@ var rankings = function(game){};
         },
         
         verSemanal: function(){
-             musicButton.play();
+            variablesBoot.sonidoBoton.play();
             textoRanking.setText("Ranking Semanal");
             textx.visible = false;
             textoFacultad.visible = false;
@@ -182,7 +179,7 @@ var rankings = function(game){};
         },
         
         verPoli: function(){
-             musicButton.play();
+            variablesBoot.sonidoBoton.play();
             textoRanking.setText("Ranking Poli");
             textx.setText("Facultad");
             
@@ -200,7 +197,7 @@ var rankings = function(game){};
         },
         
         verGeneral: function(){
-             musicButton.play();
+            variablesBoot.sonidoBoton.play();
             textoRanking.setText("Ranking General");
             textx.setText("Universidad");
             

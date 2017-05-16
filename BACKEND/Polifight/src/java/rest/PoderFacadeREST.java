@@ -3,20 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-<<<<<<< HEAD
 //Autor Andres Sierra
 package rest;
 
 import entities.Poder;
 import entities.PoderPK;
-=======
-
-package rest;
-
-import com.poder.Restful.PH.Poder;
-import com.poder.Restful.PH.PoderPK;
-import java.util.ArrayList;
->>>>>>> 06b43fe11dc9f6596399ecfcf3e5ea6c342dc7b3
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -37,17 +28,10 @@ import javax.ws.rs.core.PathSegment;
  * @author ahsierra
  */
 @Stateless
-<<<<<<< HEAD
 @Path("entities.poder")
 public class PoderFacadeREST extends AbstractFacade<Poder> {
     
     @PersistenceContext(unitName = "PolifightPU")
-=======
-@Path("com.poder.restful.ph.poder")
-public class PoderFacadeREST extends AbstractFacade<Poder> {
-    
-    @PersistenceContext(unitName = "Restful.PHPU")
->>>>>>> 06b43fe11dc9f6596399ecfcf3e5ea6c342dc7b3
     private EntityManager em;
 
     private PoderPK getPrimaryKey(PathSegment pathSegment) {
@@ -58,11 +42,7 @@ public class PoderFacadeREST extends AbstractFacade<Poder> {
          * it is ignored in the following code.
          * Matrix parameters are used as field names to build a primary key instance.
          */
-<<<<<<< HEAD
         entities.PoderPK key = new entities.PoderPK();
-=======
-        com.poder.Restful.PH.PoderPK key = new com.poder.Restful.PH.PoderPK();
->>>>>>> 06b43fe11dc9f6596399ecfcf3e5ea6c342dc7b3
         javax.ws.rs.core.MultivaluedMap<String, String> map = pathSegment.getMatrixParameters();
         java.util.List<String> idPoder = map.get("idPoder");
         if (idPoder != null && !idPoder.isEmpty()) {
@@ -79,36 +59,18 @@ public class PoderFacadeREST extends AbstractFacade<Poder> {
         super(Poder.class);
     }
 
-<<<<<<< HEAD
 
     @PUT
     @Path("updatePower")
     @Consumes(MediaType.APPLICATION_JSON)
     public void updatePower(@PathParam("updatePower") PathSegment id, Poder entity) {
-=======
-    @POST
-    @Override
-    @Consumes({"application/xml", "application/json"})
-    public void create(Poder entity) {
-        super.create(entity);
-    }
-
-    @PUT
-    @Path("{id}")
-    @Consumes({"application/xml", "application/json"})
-    public void edit(@PathParam("id") PathSegment id, Poder entity) {
->>>>>>> 06b43fe11dc9f6596399ecfcf3e5ea6c342dc7b3
         super.edit(entity);
     }
 
     @DELETE
     @Path("{id}")
     public void remove(@PathParam("id") PathSegment id) {
-<<<<<<< HEAD
         entities.PoderPK key = getPrimaryKey(id);
-=======
-        com.poder.Restful.PH.PoderPK key = getPrimaryKey(id);
->>>>>>> 06b43fe11dc9f6596399ecfcf3e5ea6c342dc7b3
         super.remove(super.find(key));
     }
 
@@ -116,11 +78,7 @@ public class PoderFacadeREST extends AbstractFacade<Poder> {
     @Path("{id}")
     @Produces({"application/xml", "application/json"})
     public Poder find(@PathParam("id") PathSegment id) {
-<<<<<<< HEAD
         entities.PoderPK key = getPrimaryKey(id);
-=======
-        com.poder.Restful.PH.PoderPK key = getPrimaryKey(id);
->>>>>>> 06b43fe11dc9f6596399ecfcf3e5ea6c342dc7b3
         return super.find(key);
     }
 
@@ -130,7 +88,6 @@ public class PoderFacadeREST extends AbstractFacade<Poder> {
     public List<Poder> findAll() {
         return super.findAll();
     }
-<<<<<<< HEAD
 
     @GET
     @Path("{from}/{to}")
@@ -151,8 +108,6 @@ public class PoderFacadeREST extends AbstractFacade<Poder> {
         return em;
     }
     
-=======
->>>>>>> 06b43fe11dc9f6596399ecfcf3e5ea6c342dc7b3
     @GET
     @Path("findAllPower")
     @Produces(MediaType.APPLICATION_JSON)
@@ -172,45 +127,7 @@ public class PoderFacadeREST extends AbstractFacade<Poder> {
         }
         return b;
     }
-<<<<<<< HEAD
   
-=======
-    
-    @GET
-    @Path("createPower")
-    @Consumes(MediaType.APPLICATION_JSON)
-    public void createPower(String[] Poder) {
-        PoderPK nuevoPK = new PoderPK(Integer.parseInt(Poder[0]),Integer.parseInt(Poder[1]));
-        Poder nuevo = new Poder();
-        nuevo.setPoderPK(nuevoPK);
-        nuevo.setNombrePoder(Poder[2]);
-        nuevo.setDescripcionPoder(Poder[3]);
-        nuevo.setFormaPoder(Integer.parseInt(Poder[4]));
-        nuevo.setPotenciaPoder(Integer.parseInt(Poder[5]));
-        nuevo.setTipoPoder(Integer.parseInt(Poder[6]));
-        super.create(nuevo);
-    }
-
-//    @GET
-//    @Path("editPower")
-//    @Consumes (MediaType.APPLICATION_JSON)
-//    public void editPower(@PathParam("editPower") int idPoder, int idImagen, String NombrePoder, String DescripcionPoder, int FormaPoder, int PotenciaPoder, int TipoPoder){
-//        List<Poder> a = findAllPower();
-//        for (int i = 0; i < a.size(); i++) {
-//            if(a.get(i).getNombrePoder().equals(NombrePoder) || a.get(i).getPoderPK().getIdPoder() == idPoder){
-//                PoderPK nuevo = new PoderPK(idPoder,idImagen);
-//                a.get(i).setPoderPK(nuevo);
-//                a.get(i).setNombrePoder(NombrePoder);
-//                a.get(i).setDescripcionPoder(DescripcionPoder);
-//                a.get(i).setFormaPoder(FormaPoder);
-//                a.get(i).setPotenciaPoder(PotenciaPoder);
-//                a.get(i).setTipoPoder(TipoPoder);
-//                super.edit(a.get(i));
-//            }
-//        }
-//    }
-    
->>>>>>> 06b43fe11dc9f6596399ecfcf3e5ea6c342dc7b3
     @GET
     @Path("findPowerByName")
     @Produces (MediaType.APPLICATION_JSON)
@@ -224,29 +141,4 @@ public class PoderFacadeREST extends AbstractFacade<Poder> {
         }
         return b;
     }
-<<<<<<< HEAD
  }
-=======
-            
-    
-    @GET
-    @Path("{from}/{to}")
-    @Produces({"application/xml", "application/json"})
-    public List<Poder> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
-        return super.findRange(new int[]{from, to});
-    }
-
-    @GET
-    @Path("countPower")
-    @Produces(MediaType.APPLICATION_JSON)
-    public String countREST() {
-        return String.valueOf(super.count());
-    }
-
-    @Override
-    protected EntityManager getEntityManager() {
-        return em;
-    }
-    
-}
->>>>>>> 06b43fe11dc9f6596399ecfcf3e5ea6c342dc7b3

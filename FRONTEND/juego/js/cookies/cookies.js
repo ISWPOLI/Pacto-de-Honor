@@ -21,13 +21,14 @@ var cookies = {
     },
     //Método que revisa las cookies para ver si existe, si no, la crea
     checkCookie: function() {
-        var user = getCookie("username");
+        var user = cookies.getCookie("token");
+        console.log("usuario:"+ user);
         if (user != "") {
             alert("Welcome again " + user);
         } else {
             user = prompt("Please enter your name:", "");
             if (user != "" && user != null) {
-                setCookie("username", user, 365);
+                cookies.setCookie("token", user);
             }
         }
     }
