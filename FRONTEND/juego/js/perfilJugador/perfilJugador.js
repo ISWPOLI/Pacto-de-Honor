@@ -29,7 +29,7 @@ var perfilJugador = function(game){};
 		
             game.add.button(5, 5,'botonVolver', this.verNavegacion, 1, 1, 0, 2);
             game.add.button(90, 290,'boton-personaje', null, 0, 0, 0, 0);
-            game.add.button(450, 290,'boton-jefes', null, 0, 0, 0, 0);
+            game.add.button(450, 290,'boton-jefes', this.verJefes, 0, 0, 0, 0);
             game.add.button(90, 450,'boton-trofeo', this.verLogros, 0, 0, 0, 0);
             game.add.button(450, 450,'boton-alfanumerico', this.verAlfanumercios, 0, 0, 0, 0);
 
@@ -49,6 +49,10 @@ var perfilJugador = function(game){};
         
         verLogros: function(){
             game.state.start("logros");
+            variablesBoot.sonidoBoton.play();
+        },
+         verJefes: function(){
+            game.state.start("boss");
             variablesBoot.sonidoBoton.play();
         },
         verAlfanumercios:function(){
