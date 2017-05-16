@@ -3,7 +3,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<link rel="shortcut icon" type="image/x-icon" href="img/logosinfondo.ico">
-		<title>Batalla</title>
+		<title>Creditos</title>
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="icons/icons.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -25,9 +25,9 @@
 		<section class="main">
 			<section class="articles">
 				<article>
-					<h2>batalla.js</h2>
+					<h2>creditos.js</h2>
 					<br/>
-					<p>Dependiendo del dispositivo del cual se accede al juego se agregan las barras de vida y energia del jugador y de la computadora, contiene la logica de los golpes, impactos de cada uno y el tiempo de la batalla.</p>
+					<p>En esta clase el jugador podrá observar todo lo relacionado al pacto de honor, como por ejemplo que es el pacto de honor, la descripción de personalidad de los personajes bueno, la descripción de personalidad de los personajes malos y la descripción de cada uno de los 8 tipos de plagio.</p>
 					<br/>
 					<br/>
 					<table>
@@ -47,7 +47,7 @@
 							<td>
 								<b>preload</b> ( )
 								<br/>
-								Función de Phaser, que sirve para cargar componentes del juego.
+								Función de Phaser, que sirve para cargar cosas.
 							</td>
 						</tr>
 						<tr>
@@ -55,23 +55,47 @@
 							<td>
 								<b>create</b> ( )
 								<br/>
-								Función de Phaser, que sirve para agregar componentes al juego.
+								Función de Phaser, que sirve para agregar cosas.
 							</td>
 						</tr>
 						<tr>
 							<td>void</td>
 							<td>
-								<b>Render</b> ( )
+								<b>verPacto</b> ( )
 								<br/>
-								Función de Phaser, que sirve renderizar el juego.
+								Mostrará en la ventana del juego, que es el pacto de honor.
 							</td>
 						</tr>
 						<tr>
 							<td>void</td>
 							<td>
-								<b>update</b> ( )
+								<b>verPersonajesBuenos</b> ( )
 								<br/>
-								Función de Phaser, que sirve para cambiar componentes en el juego.
+								Mostrará en la ventana del juego la descripción de personalidad de todos los personajes buenos.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>verPersonajesMalos</b> ( )
+								<br/>
+								Mostrará en la ventana del juego la descripción de personalidad de todos los personajes malos.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>verPlagios</b> ( )
+								<br/>
+								Mostrará en la ventana del juego la descripción de cada tipo de plagio.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>volver</b> ( )
+								<br/>
+								Regresará a la sección del juego llamada <b>navegación</b> después de que el botón regresar sea presionado.
 							</td>
 						</tr>
 					</table>
@@ -135,7 +159,7 @@
 					<br/>
 					<table>
 						<tr class="filauno tabla2">
-							<td colspan="3">render( )</td>
+							<td colspan="3">verPacto( )</td>
 						</tr>
 						<tr>
 							<td>
@@ -153,17 +177,17 @@
 								No recibe parámetros.
 							</td>
 							<td>
-								Esta es una función del framework Phaser, aquí se renderizará el juego. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+								Esta función mostrará al jugador que es el pacto de honor en la ventana de juego.
 							</td>
 							<td>
-								No tiene retorno.
+								Retorna una descripción sobre que es el pacto del honor.
 							</td>
 						</tr>
 					</table>
 					<br/>
 					<table>
 						<tr class="filauno tabla2">
-							<td colspan="3">update( )</td>
+							<td colspan="3">verPersonajesBuenos( )</td>
 						</tr>
 						<tr>
 							<td>
@@ -181,7 +205,91 @@
 								No recibe parámetros.
 							</td>
 							<td>
-								Esta es una función del framework Phaser, aquí estarán todos los cambios o ‘acciones’ del juego. Qué hacer al presionar una tecla, al mover el cursor, al chocar una pared; en fin, toda la lógica del juego. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+								Esta función mostrará al jugador la descripción de cada personaje bueno en la ventana de juego.
+							</td>
+							<td>
+								Retorna una descripción de personalidad sobre cada personaje bueno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">verPersonajesMalos( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función mostrará al jugador la descripción de cada personaje malo en la ventana de juego.
+							</td>
+							<td>
+								Retorna una descripción de personalidad sobre cada personaje malo.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">verPlagios( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función mostrará al jugador la descripción de cada uno de los 10 tipos de plagios en la ventana de juego.
+							</td>
+							<td>
+								Retorna una descripción de cada tipo de plagio.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">volver( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función permitirá que se regrese a la sección llamada <b>navegacion.js</b> después de que el botón volver sea presionado.
 							</td>
 							<td>
 								No tiene retorno.
@@ -206,151 +314,77 @@
 							</td>
 						</tr>
 						<tr>
-							<td>idNivel</td>
-							<td>int</td>
-							<td>Representa el id del nivel seleccionado.</td>
-						</tr>
-						<tr>
-							<td>personajeJugador</td>
-							<td>PhaserSprite</td>
-							<td>Sprite del personaje del jugador.</td>
-						</tr>
-						<tr>
-							<td>personajeComputadora</td>
-							<td>PhaserSprite</td>
-							<td>Sprite del personaje de la computadora.</td>
-						</tr>
-						<tr>
-							<td>cursores</td>
-							<td>PhaserKeyboard</td>
-							<td>Cursores que se usaran para que el jugador mueva al personaje.</td>
-						</tr>
-						<tr>
-							<td>counter</td>
-							<td>int</td>
-							<td>Representa el tiempo de la partida.</td>
-						</tr>
-						<tr>
-							<td>ti</td>
-							<td>int</td>
-							<td>Muestra el avance del tiempo de la partida en segundos.</td>
-						</tr>
-						<tr>
-							<td>danoH</td>
-							<td>Double [ ]</td>
-							<td>Arreglo de 3 posiciones que indica el daño que ocasiona el jugador con cada uno de sus ataques.</td>
-						</tr>
-						<tr>
-							<td>danoV</td>
-							<td>Double [ ]</td>
-							<td>Arreglo de 3 posiciones que indica el daño que ocasiona la computadora con cada uno de sus ataques.</td>
-						</tr>
-						<tr>
-							<td>musicButton</td>
+							<td><b>botonVolver</b></td>
 							<td>PhaserButton</td>
-							<td>Botón que se usa para agregar sonidos a la batalla.</td>
+							<td>Botón para regresar a la sección llamada <b>navegacion.js</b>.</td>
 						</tr>
 						<tr>
-							<td>movH</td>
-							<td>Boolean [ ]</td>
-							<td>Arreglo de 4 posiciones, las cuales, la primera significa que el jugador se esta defendiendo, la segunda significa que el jugador esta atacando con el ataque normal, la tercera significa que el jugador esta atacando con el ataque de personalidad y la cuarta posición significa que el jugador se esta defendiendo de un ataque tipo plagio.</td>
+							<td><b>botonPacto</b></td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado mostrará descripción del pacto de honor.</td>
 						</tr>
 						<tr>
-							<td>movV</td>
-							<td>Boolean [ ]</td>
-							<td>Arreglo de 4 posiciones, las cuales, la primera significa que la computadora se esta defendiendo, la segunda significa que la computadora esta atacando con el ataque normal, la tercera significa que la computadora esta atacando con el ataque de personalidad y la cuarta posición significa que la computadora esta atacando con el ataque tipo plagio.</td>
+							<td><b>botonBuenos</b></td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado mostrará descripción de personalidad de cada uno de los personajes buenos.</td>
 						</tr>
 						<tr>
-							<td>ataquePlagio</td>
-							<td>PhaserSprite</td>
-							<td>Sprite del poder de plagio de la computadora.</td>
+							<td><b>botonMalos</b></td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado mostrará descripción de personalidad de cada uno de los personajes malos.</td>
 						</tr>
 						<tr>
-							<td>ataquePersonalidadC</td>
-							<td>PhaserSprite</td>
-							<td>Sprite del poder de personalidad de la computadora.</td>
+							<td><b>botonPlagios</b></td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado mostrará descripción de cada uno de los 10 tipos de plagio.</td>
 						</tr>
 						<tr>
-							<td>idPJ</td>
-							<td>int</td>
-							<td>Entero que contiene el id del personaje del jugador</td>
-						</tr>
-						<tr>
-							<td>idPC</td>
-							<td>int</td>
-							<td>Entero que contiene el id del personaje la computadora</td>
-						</tr>
-						<tr>
-							<td>costoAtaqueJ</td>
-							<td>double</td>
-							<td>Costo en la barra de energía cuando el jugador use el ataque de personalidad</td>
-						</tr>
-						<tr>
-							<td>costoAtaqueC</td>
-							<td>double</td>
-							<td>Costo en la barra de energía cuando la computadora use el ataque de personalidad</td>
-						</tr>
-						<tr>
-							<td>costoPlagioC</td>
-							<td>double</td>
-							<td>Costo en la barra de energía cuando la computadora use el ataque dtipo plagio</td>
-						</tr>
-						<tr>
-							<td>secuencia</td>
-							<td>boolean</td>
-							<td>variable booleana que esta en tru cuando la computadora este realizando un movimiento y en false cuando no lo este realizando.</td>
-						</tr>
-						<tr>
-							<td>movimientoComputadora</td>
+							<td><b>descripcionPacto</b></td>
 							<td>String</td>
-							<td>Cadena que identificará el movimiento que realizará la computadora.</td>
+							<td>Cadena en la que esta la descripción de que es el pacto de honor.</td>
 						</tr>
 						<tr>
-							<td>primerImpacto</td>
-							<td>Boolean</td>
-							<td>Se usa para que el ataque tipo plagio de la computadora solo reste vida una vez.</td>
+							<td><b>descripcionesBuenos</b></td>
+							<td>String [ ]</td>
+							<td>Arreglo de 9 posiciones, contiene las descripciones de personalidad de los personajes buenos.</td>
 						</tr>
 						<tr>
-							<td>indice</td>
-							<td>int</td>
-							<td>Indice que representa el indice del movimiendo que esta realizando la computadora.</td>
+							<td><b>descripcionesMalos</b></td>
+							<td>String [ ]</td>
+							<td>Arreglo de 12 posiciones, contiene las descripciones de personalidad de los personajes Malos.</td>
 						</tr>
 						<tr>
-							<td>fondoGame</td>
-							<td>PhaserSprite</td>
-							<td>Sprite del fondo de la batalla.</td>
+							<td><b>plagios</b></td>
+							<td>String [ ]</td>
+							<td>Arreglo de 10 posiciones, contiene las descripciones cada uno de los 10 tipos de plagio.</td>
 						</tr>
 						<tr>
-							<td>ataquePersonalidadJ</td>
-							<td>PhaserSprite</td>
-							<td>Sprite del ataque de personalidad del jugador.</td>
+							<td><b>logoPacto</b></td>
+							<td>PhaserImage</td>
+							<td>Imagen que será el logo del pacto de honor.</td>
 						</tr>
 						<tr>
-							<td>escudo1</td>
-							<td>PhaserSprite</td>
-							<td>Sprite del primer escudo del jugador.</td>
+							<td><b>textoPacto</b></td>
+							<td>Phasertext</td>
+							<td>Cadena de la descripción de que es el pacto de honor que estará en la ventana del juego.</td>
 						</tr>
 						<tr>
-							<td>escudo2</td>
-							<td>PhaserSprite</td>
-							<td>Sprite del segundo escudo del jugador.</td>
+							<td><b>textoBuenos</b></td>
+							<td>Phasertext</td>
+							<td>Cadena de la descripción de personalidad de los personajes buenos que estará en la ventana del juego.</td>
 						</tr>
 						<tr>
-							<td>gamePad</td>
-							<td>PhaserPlugin</td>
-							<td>Plugin de phaser para utilizar joystick en los dispositivos moviles.</td>
+							<td><b>textoMalos</b></td>
+							<td>Phasertext</td>
+							<td>Cadena de la descripción de personalidad de los personajes malos que estará en la ventana del juego.</td>
 						</tr>
 						<tr>
-							<td>joystick</td>
-							<td>PhaserJoystick</td>
-							<td>Joystick para queel jugador mueva al personaje durante la batalla.</td>
-						</tr>
-						<tr>
-							<td>pausa</td>
-							<td>PhaserButton</td>
-							<td>Botón para pausar la batalla.</td>
+							<td><b>textoPlagios</b></td>
+							<td>Phasertext</td>
+							<td>Cadena de la descripción de los 10 tipos de palgio que estará en la ventana del juego.</td>
 						</tr>
 					</table>
+					<br/>
 				</article>
 			</section>
 			<aside>

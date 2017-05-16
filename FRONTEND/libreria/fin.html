@@ -3,7 +3,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<link rel="shortcut icon" type="image/x-icon" href="img/logosinfondo.ico">
-		<title>Verficación de Codigo</title>
+		<title>Fin</title>
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="icons/icons.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -25,9 +25,9 @@
 		<section class="main">
 			<section class="articles">
 				<article>
-					<h2>VerificacionDeCodigo.js</h2>
+					<h2>fin.js</h2>
 					<br/>
-					<p>Esta clase se usará para validar un código alfanúmerico introducido por el jugador, en la cual se valida que tenga 11 caracteres, que empiece con un número del 1-9, que en la sexta posición alla un guión y que en la ultima posición alla una "P" o una "E".</p>
+					<p>En esta clase se obtiene el ganador de la batalla y se muestra su nombre y sus recompensas.</p>
 					<br/>
 					<br/>
 					<table>
@@ -43,11 +43,27 @@
 							</td>
 						</tr>
 						<tr>
-							<td>String</td>
+							<td>void</td>
 							<td>
-								<b>validarString</b> (<b>String</b> cadenaAnalizar)
+								<b>preload</b> ( )
 								<br/>
-								Verificar si el código alfanúmerico es valido.
+								Función de Phaser, que sirve para cargar componentes del juego.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>create</b> ( )
+								<br/>
+								Función de Phaser, que sirve para agregar componentes al juego.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>volver</b> ( )
+								<br/>
+								Se dirigirá a la seccion llamada <b>navegacion.js</b>.
 							</td>
 						</tr>
 					</table>
@@ -55,7 +71,7 @@
 					<br/>
 					<table>
 						<tr class="filauno tabla2">
-							<td colspan="3">validarString</td>
+							<td colspan="3">preload( )</td>
 						</tr>
 						<tr>
 							<td>
@@ -70,13 +86,69 @@
 						</tr>
 						<tr>
 							<td>
-								Esta función recibe como parametro una cadena <b>cadenaAnalizar</b> que representa un código alfanúmerico.
+								No recibe parámetros.
 							</td>
 							<td>
-								Verificará el código alfanúmerico introducido, y determinará si este es valido o no.
+								Esta es una función del framework Phaser en la que cargaremos todos los componentes a ser utilizados en el juego como imágenes, sonidos, fondos, sprites, etc. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
 							</td>
 							<td>
-								Retornará una cadena especificando si el código alfanúmerico esta mal escrito o no existe.
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">create( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta es una función del framework Phaser, aquí se añadirán los componentes al juego. En esta función asignamos la posición inicial, el tamaño, etc. De todos los componentes. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">volver( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función se encargará de dirigir el juego a la sección <b>navegacion.js</b>.
+							</td>
+							<td>
+								No tiene retorno.
 							</td>
 						</tr>
 					</table>
@@ -98,19 +170,29 @@
 							</td>
 						</tr>
 						<tr>
-							<td>mapnumeros1</td>
-							<td>boolean [ ]</td>
-							<td>Arreglo de 9 posiciones para identificar cada uno de los personajes que se desbloquea</td>
-						</tr>
-						<tr>
-							<td>string</td>
+							<td>resultado</td>
 							<td>String</td>
-							<td>Cadena que contiene todas las letras y números del abecedario</td>
+							<td>Cadena que contiene el resultado del jugador en la batalla, esta cadena puede ser "GANASTE" o "PERDISTE".</td>
 						</tr>
 						<tr>
-							<td>mapletras1</td>
-							<td>boolean [ ]</td>
-							<td>Arreglo de 36 posiciones, en el cual cada posición representa una posición de "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"</td>
+							<td>name</td>
+							<td>String</td>
+							<td>Cadena que representa el nombre del ganador.</td>
+						</tr>
+						<tr>
+							<td>volver</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado, regresará a la sección <b>navegacion.js</b>.</td>
+						</tr>
+						<tr>
+							<td>monedas</td>
+							<td>String</td>
+							<td>Monedas ganadas por la batalla.</td>
+						</tr>
+						<tr>
+							<td>experiencia</td>
+							<td>String</td>
+							<td>Experiencia ganada por la batalla.</td>
 						</tr>
 					</table>
 				</article>
