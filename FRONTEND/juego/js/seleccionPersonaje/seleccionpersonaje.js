@@ -3,7 +3,8 @@ variablesSeleccionPersonaje={
     seleccionado:null,
     txtSeleccionado:null,
     botones : [],
-    avatarSeleccionado:null
+    avatarSeleccionado:null,
+    niveles:[]
 }
 
 var seleccionpersonaje = function(game){};
@@ -43,6 +44,17 @@ seleccionpersonaje.prototype = {
             pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba1('false');
         }
         
+        $.each(personajesBuenos, function (key, data) {
+            variablesSeleccionPersonaje.niveles.push(personajesBuenos[key].nivel);
+            
+        });
+        var cont=0;
+        for (var i = 75; i <= 375; i=i+150) {
+            for (var j = 175; j <= 475; j=j+150) {
+                game.add.text(j+55, i+125, "lv:"+variablesSeleccionPersonaje.niveles[cont], {font: "20px Roboto", fill: "#ffffff"});
+                cont++;
+            }
+        }
         boot.verificarMusica("menu");
     },
     
