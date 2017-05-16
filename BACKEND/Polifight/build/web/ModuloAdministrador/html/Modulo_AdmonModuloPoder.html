@@ -1,65 +1,139 @@
 <!DOCTYPE html PUBLIC 
-    <head>
+<head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Modulo_AdmonInicio</title>
-<link href="Version 0.1/estilo.css" rel="stylesheet" type="text/css" />
-
+<link href="E:\Modulo_Administración_Version4\Mod v1\Version 0.1\estilo.css" rel="stylesheet" type="text/css" />
+<link href="Version 0.1/estiloHistoriasUsuario.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-    <form action="CapturaModuloPoder" method="POST">
-        <div class="container">
-            <div class="header"><!-- end .header -->
-                <div align="center"><img src="Imagenes y Logos/Malla Pacto Honor.png" width="550" height="150"></div>
-            </div>
-            <div class="Menus">
-                <ul class="nav">
-                    <li><a href="#"><img src="Imagenes y Logos/Perfil.png" width="150" height="150">Nombre usuario</a></li>
-                    <li><a href="index.html">Inicio</a>
-                    <li><a href="Modulo_AdmonModulos.html">Home administracion</a>
-                        <ul>
-                            <li><a href="Modulo_AdmonModuloPoder.html">Poder</a></li>
-                            <li><a href="Modulo_AdmonModuloUsuario.html">Usuario</a></li>
-                            <li><a href="Modulo_AdmonModuloRolUsuario.html">	Rol usuario</a></li>
-                            <li><a href="Modulo_AdmonModuloMundo.html">Mundo</a></li>
-                            <li><a href="Modulo_AdmonModuloNivel.html">Nivel</a></li>
-                            <li><a href="Modulo_AdmonModuloPersonaje.html">Personaje</a></li>
-                            <li><a href="Modulo_AdmonModuloFrase.html">Frase</a></li>
-                            <li><a href="Modulo_AdmonModuloCategoria.html">Categoria</a></li>
-                        </ul>
-                    </li>
 
-                    <li><a href="#">Reportes</a></li>
-                    <li><a href="#">Salir</a></li>
-                </ul>
+<div class="container">
+  <div class="header"><!-- end .header -->
+    <div align="center"><img src="E:\Modulo_Administración_Version4\Mod v1\Imagenes y Logos\Malla Pacto Honor.png" width="550" height="150"></div>
+  </div>
+  <div class="Menus">
+    <ul class="nav">
+    <li><a href="#"><img src="E:\Modulo_Administración_Version4\Mod v1\Imagenes y Logos\Perfil.png" width="150" height="150">Nombre usuario</a></li>
+<li><a href="E:\Modulo_Administración_Version4\Mod v1\Modulo_AdmonInicio.html">Inicio</a>
+      <li><a href="E:\Modulo_Administración_Version4\Mod v1\Modulo_AdmonModulos.html">Home administracion</a></li>
+      <li><a href="E:\Modulo_Administración_Version4\Mod v1\Modulo_AdmonModuloPoder.html">	Poder</a></li>
+      <li><a href="E:\Modulo_Administración_Version4\Mod v1\Modulo_AdmonModuloUsuario.html">	Usuario</a></li>
+      <li><a href="E:\Modulo_Administración_Version4\Mod v1\Modulo_AdmonModuloRolUsuario.html">	Rol usuario</a></li>
+            <li><a href="E:\Modulo_Administración_Version4\Mod v1\Modulo_AdmonModuloMundo.html">	Mundo</a></li>
+      <li><a href="E:\Modulo_Administración_Version4\Mod v1\Modulo_AdmonModuloNivel.html">Nivel</a></li>
+      <li><a href="E:\Modulo_Administración_Version4\Mod v1\Modulo_AdmonModuloPersonaje.html">Personaje</a></li>
+      <li><a href="E:\Modulo_Administración_Version4\Mod v1\Modulo_AdmonModuloFrase.html">Frase</a></li>
+      <li><a href="E:\Modulo_Administración_Version4\Mod v1\Modulo_AdmonModuloCategoria.html">Categoria</a></li>
+      <li><a href="E:\Modulo_Administración_Version4\Mod v1\Modulo_AdmonModuloReportes.html">Reportes</a></li>
+      <li><a href="#">Salir</a></li>
+    </ul>
+    </ul>
 
-                <!-- end .Menus --></div>
-            <div class="content">
-                <h1> Administración Poder </h1>
-                <!--Titulo principal --> 
-                <div align="center">
-                    <p>
-                    <table width="400">
-                        <tr><td>Id Poder</td><td><input type="text" name="Idpoder"></td></tr>
-                        <tr><td>Nombre Poder </td><td><input type="text" name="Poder"></td></tr>
-                        <tr><td>                 </td><td><input type="submit" value="Buscar"></td></tr>
-                                                 </td><td><input type="submit" value="Añadir"></td></tr>
-                                                 </td><td><input type="submit" value="Eliminar"></td></tr>
-                                                 </td><td><input type="submit" value="Guardar"></td></tr>
-
-                    </table>
-
-                    </p>
-                </div>
-
-                <!-- end .content --></div>
-            <div class="sidebar2">
-                <img src="Imagenes y Logos/soypactodehonorlateral7_0.jpg" width="150" height="1500"></div>
-            <div class="footer">
-                <img src="Imagenes y Logos/Logo Poli.png" width="200" height="80">
-                <!-- end .footer --></div>
-            <!-- end .container --></div>
+  <!-- end .Menus --></div>
+  <div class="content">
+    <h1> Poder </h1>
+     <h2>Modulo administración <h2>
+    <!--Titulo principal --> 
+        <p>&nbsp;</p>
+     <form name="form1" method="post" action="">
+      <table width="42%" height="586" border="0" align="left">
+        <tr>
+          <td width="13%"><label for="idMundo2">idPoder</label></td>
+          <td width="16%"><input name="idMundo" type="text" id="idMundo2" value="001" size="15" maxlength="15"></td>
+          <td width="15%">&nbsp;</td>
+          <td width="16%">&nbsp;</td>
+          <td width="9%"><label for="buscar">buscar</label></td>
+          <td width="31%"><input name="buscar" type="text" id="buscar" value="superFight" size="15" maxlength="15"></td>
+        </tr>
+        <tr>
+          <td>nombre</td>
+          <td><input name="IdNombre" type="text" id="IdNombre" value="superPoder" size="15" maxlength="15"></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr align="center">
+          <th>&nbsp;</th>
+          <th colspan="5" rowspan="5"><img src="Imagenes y Logos/Fondo.jpg" alt="" width="438" height="292"></th>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td align="center"><input type="button" name="button" id="button" value="agregar"></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td align="right"><span class="resaltar">
+            <input type="button" name="button2" id="button2" value="añadir">
+          </span></td>
+          <td align="left"><span class="resaltar">
+            <input type="button" name="button3" id="button3" value="modificar">
+          </span></td>
+          <td align="center"> <span class="resaltar">
+            <input type="button" name="button4" id="button4" value="Eliminar">
+          </span></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td align="center"><span class="resaltar">
+            <input type="submit" name="button5" id="button5" value="Enviar">
+          </span></td>
+          <td align="right"><span class="resaltar">
+            <input type="reset" name="button6" id="button6" value="Restablecer">
+          </span></td>
+          <td align="right">&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
     </form>
-
+    <div align="center"></div>
+    
+    
+        
+  <!-- end .content --></div>
+  <div class="sidebar2">
+    <h4>Fondos</h4>
+    <p>Por naturaleza, el color de fondo de cualquier div sólo se muestra a lo largo del contenido. Si desea usar una línea divisora en lugar de un color, coloque un borde en el lado de la div de .content (pero sólo en el caso de que siempre vaya a tener más contenido).</p>
+    <!-- end .sidebar2 --></div>
+  <div class="footer">
+    <img src="E:\Modulo_Administración_Version4\Mod v1\Imagenes y Logos\Logo Poli.png" width="200" height="80">
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
 </body>
 </html>

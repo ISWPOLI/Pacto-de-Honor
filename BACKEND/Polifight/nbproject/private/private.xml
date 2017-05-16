@@ -1,21 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <file>file:/E:/PoliFightersJuego/Pacto-de-Honor/BACKEND/Polifight/src/java/rest/ImagenFacadeREST.java</file>
-=======
-            <file>file:/C:/Users/jrubiaob/Documents/Juan/Universidad/Practica/Pacto-de-Honor/BACKEND/Polifight/src/conf/persistence.xml</file>
-            <file>file:/C:/Users/jrubiaob/Documents/Juan/Universidad/Practica/Pacto-de-Honor/BACKEND/Polifight/src/java/rest/JugadorFacadeREST.java</file>
-            <file>file:/C:/Users/jrubiaob/Documents/Juan/Universidad/Practica/Pacto-de-Honor/BACKEND/Polifight/src/java/entities/Categoriaimagen.java</file>
->>>>>>> 1a032495c3a1e40c19257ab6c244ab6212a3965d
-=======
-            <file>file:/C:/Pacto-de-Honor/BACKEND/Polifight/src/java/rest/AbstractFacade.java</file>
-            <file>file:/C:/Pacto-de-Honor/BACKEND/Polifight/src/java/rest/ImagenFacadeREST.java</file>
-            <file>file:/C:/Pacto-de-Honor/BACKEND/Polifight/src/java/rest/PoderFacadeREST.java</file>
->>>>>>> 06b43fe11dc9f6596399ecfcf3e5ea6c342dc7b3
+            <file>file:/C:/Users/jrubiaob/Documents/Juan/Universidad/Practica/Pacto-de-Honor/BACKEND/Polifight/src/java/rest/PersonajeFacadeREST.java</file>
         </group>
     </open-files>
 </project-private>

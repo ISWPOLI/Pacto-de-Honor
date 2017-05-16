@@ -24,21 +24,11 @@ vN = {
     text10:0,
     text11:0,
     text12:0,
-    music:null,
-    musicButton:null
 };
 
-//var nV.vN.music;
-//var nV.vN.musicButton;
-//var btMundo, btMundo2, btMundo3, btMundo4, btMundo5 ,btMundo6 ,btMundo7 ,btMundo8 ,btMundo9 ,btMundo10, btMundo11, btMundo12;
-///var ;
 var navegacion = function(game){};
     navegacion.prototype = {
     preload: function() {
-        game.scale.pageAlignHorizontally = true;
-        game.scale.pageAlignVertically = true;
-        game.load.audio('sonidos','../img/Componentes/sonidos/mapa/mapa.mp3');
-        game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
         game.load.spritesheet('btMundo2', '../img/Componentes/navegacionMapa/pause.png', 50,50);
         game.load.image('monedas', '../img/Componentes/navegacionMapa/monedas.png');
         game.load.image('fondo', '../img/Componentes/navegacionMapa/mapaNavegacion.png');
@@ -62,9 +52,6 @@ var navegacion = function(game){};
         game.load.spritesheet('pause12', '../img/Componentes/navegacionMapa/pause12.png', 50,50);
         game.load.spritesheet('pause13', '../img/Componentes/navegacionMapa/pause13.png', 50,50);
         game.load.spritesheet('pause14', '../img/Componentes/navegacionMapa/pause14.png', 50,50);
-      
-
-        
     },
 
     //se agrega el fondo y se crean los botones de los mundos en donde tenemos button(medida en x, medida en y, nombre de la imagen, la funcion, sprites)
@@ -85,7 +72,7 @@ var navegacion = function(game){};
        //btnCaja = game.add.button(415, 5, 'botonCajaSorpresa', this.verCajaMisteriosa);//475
         vN.btnCaja = game.add.button(475, 5, 'botonCajaSorpresa', this.verCajaMisteriosa,1,1,0,2);//475
         botonCompraPersonajes = game.add.button(540, 5, 'botonCompraPersonajes', this.verCompraPersonajes, 1, 1, 0, 2);
-        game.add.text(160, 20, "999999", {font: "16px Roboto", fill: "#ffffff"}); //Label monedas     
+        game.add.text(160, 20, datosperfil["datos"].monedas, {font: "16px Roboto", fill: "#ffffff"}); //Label monedas desde perfilJugador   
        
         vN.btMundo = game.add.button (80, 60, 'pause13', this.mundo1, 0, 0, 0, 1);
         vN.btMundo.scale.setTo(0.8, 0.8);
@@ -149,103 +136,112 @@ var navegacion = function(game){};
         vN.text12 = game.add.text(5,1, "12", { font: "35px Arial", fill: "#030300"});
         vN.btMundo12.addChild(vN.text12);
         
-        vN.music = game.add.audio('sonidos');
-        vN.musicButton = game.add.audio('sonidoBoton');
-        vN.music.loop = true;
-        vN.music.play();
+        boot.verificarMusica("mapa");
     },
   
     verAjustes: function(){
+        variablesBoot.sonidoBoton.play();
         botonCreditos.visible =! botonCreditos.visible;
         botonSonido.visible =! botonSonido.visible;
         botonCerrarSesion.visible =! botonCerrarSesion.visible;
     },        
     verCreditos: function(){
-            game.state.start("creditos");
+        game.state.start("creditos");
+        variablesBoot.sonidoBoton.play();
     },
     quitarSonido: function(){
-            if(vN.music.paused){
-               vN.music.resume();
+            if(!variablesBoot.musicaOnOff){
+                variablesBoot.musicaOnOff = true;
+                variablesBoot.musicaMapa.resume();
             }
         else{
-            vN.music.pause();
-        }        
+            variablesBoot.musicaOnOff = false;
+            variablesBoot.musicaMapa.pause();
+        }
     },
     cerrarSesion: function(){
-            alert("Sesion cerrada");
+        variablesBoot.sonidoBoton.play();
+        alert("Sesion cerrada");
     },
     verInvitarAmigos: function(){
         game.state.start("invitarAmigos");
-        vN.musicButton.play();
-        vN.music.pause();
+        variablesBoot.sonidoBoton.play();
     },    
     verPerfil: function(){
         game.state.start("perfilJugador");
-        vN.musicButton.play();
-        vN.music.pause();
+        variablesBoot.sonidoBoton.play();
     },
     verCajaMisteriosa: function(){
         game.state.start("cajaMisteriosa");
-        vN.musicButton.play();
-        vN.music.pause();
+        variablesBoot.sonidoBoton.play();
     },     
     verRankings: function(){
         game.state.start("rankings");
-        vN.musicButton.play();
-        vN.music.pause();
+        variablesBoot.sonidoBoton.play();
     },    
     verCompraPersonajes: function(){
         game.state.start("compraPersonajes");
-        vN.musicButton.play();
-        vN.music.pause();
+        variablesBoot.sonidoBoton.play();
     },
 
         mundo1: function(){            
             pruebasPsicotecnicas.setPrueba19(true);
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo1");
         },
         mundo2:function(){
             pruebasPsicotecnicas.setPrueba19(true);
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo2");
         },
         mundo3:function(){
             pruebasPsicotecnicas.setPrueba19(true);
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo3");
         },
         mundo4:function(){
             pruebasPsicotecnicas.setPrueba19(true);
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo4");
         },
         mundo5:function(){
-            pruebasPsicotecnicas.setPrueba19(true);            
+            pruebasPsicotecnicas.setPrueba19(true);
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo5");
         },
         mundo6:function(){
             pruebasPsicotecnicas.setPrueba19(true);
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo6");
         },
         mundo7:function(){
             pruebasPsicotecnicas.setPrueba19(true);
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo7");
         },
         mundo8:function(){
             pruebasPsicotecnicas.setPrueba19(true);
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo8");
         },
         mundo9:function(){
             pruebasPsicotecnicas.setPrueba19(true);
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo9");
         },
         mundo10:function(){
             pruebasPsicotecnicas.setPrueba19(true);
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo10");
         },
         mundo11:function(){
             pruebasPsicotecnicas.setPrueba19(true);
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo11");
         },
         mundo12:function(){
             pruebasPsicotecnicas.setPrueba19(true);
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo12");
         },
     
@@ -254,7 +250,6 @@ var navegacion = function(game){};
         variablesCampoBatalla.idNivel = lvl;
         variablesCampoBatalla.idPC = niveles[lvl].idEnemigo;
         game.state.start("seleccionpersonaje");
-        vN.musicButton.play();
-        vN.music.pause();
+        variablesBoot.sonidoBoton.play();
     }
 }

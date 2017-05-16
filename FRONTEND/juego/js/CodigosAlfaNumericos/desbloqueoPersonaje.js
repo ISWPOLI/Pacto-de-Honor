@@ -14,19 +14,9 @@ variableDesbloqueoPersonaje ={
 var desbloqueoPersonaje = function(game){};
 desbloqueoPersonaje.prototype = {
     preload: function(){
-
-        game.load.spritesheet('pantera1','../img/personajes/avatares/botonPantera.png', 125, 125);
-        game.load.spritesheet('gallo1', '../img/personajes/avatares/botonGallo.png', 125, 125);
-        game.load.spritesheet('hormiga1', '../img/personajes/avatares/botonHormiga.png', 125, 125);
-        game.load.spritesheet('jirafa1', '../img/personajes/avatares/botonJirafa.png', 125, 125);
-        game.load.spritesheet('llama1', '../img/personajes/avatares/botonCierva.png', 125, 125);
-        game.load.spritesheet('canario1', '../img/personajes/avatares/botonCanario.png', 125, 125);
-        game.load.spritesheet('pajaro1', '../img/personajes/avatares/botonRuiseñor.png', 125, 125);
-        game.load.spritesheet('leon1','../img/personajes/avatares/botonLeon.png', 125, 125);
-        game.load.spritesheet('rata1','../img/personajes/avatares/botonRaton.png', 125, 125);
-        game.load.spritesheet('volver', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
- 		game.load.spritesheet('ingresar', '../img/Componentes/botones/ingresar.png', 193,71);
+        game.load.spritesheet('ingresar', '../img/Componentes/botones/ingresar.png', 193,71);
     },
+    
     create: function(){ 
 		game.stage.backgroundColor = "#2451A6";
 		game.add.plugin(PhaserInput.Plugin);
@@ -40,43 +30,41 @@ desbloqueoPersonaje.prototype = {
 			borderColor: '#000',
 			borderRadius: 6,
 			placeHolder: 'Tu codigo aqui'});
-	    
-
-
-		btFlechar = game.add.button (5, 5, 'volver', this.verPerfilJugador, 0, 0, 0, 1);
+        
+        btFlechar = game.add.button (5, 5, 'botonVolver', this.verPerfilJugador, 0, 0, 0, 1);
 		
-		btPantera = game.add.button (240, 60, 'pantera1', this.code1, 0, 0, 0, 1);
+		btPantera = game.add.button (240, 60, 'botonPantera', this.code1, 0, 0, 0, 1);
 		btPantera.scale.setTo(0.8,0.8);
 		//btPantera.scale.setTo(0.5, 0.5);
 
-		btLLama = game.add.button(380,280,'llama1',this.code2,0,0,0,1);
+		btLLama = game.add.button(380,280,'botonCierva',this.code2,0,0,0,1);
 		btLLama.scale.setTo(0.8,0.8);
 		//btLLama.scale.setTo(0.5,0.5);
 
-		btPajaro= game.add.button(380,170,'pajaro1',this.code3,0,0,0,1);
+		btPajaro= game.add.button(380,170,'botonRuisenor',this.code3,0,0,0,1);
 		btPajaro.scale.setTo(0.8,0.8);
 		//btPajaro.scale.setTo(0.5,0.5);
 
-		btLeon = game.add.button(240,280,'leon1',this.code4,0,0,0,1);
+		btLeon = game.add.button(240,280,'botonLeon',this.code4,0,0,0,1);
 		btLeon.scale.setTo(0.8,0.8);
 		//btLeon.scale.setTo(0.5,0.5);
 
-		btJirafa= game.add.button(520,280,'jirafa1',this.code5,0,0,0,1);
+		btJirafa= game.add.button(520,280,'botonJirafa',this.code5,0,0,0,1);
 		btJirafa.scale.setTo(0.8,0.8);
 		//btJirafa.scale.setTo(0.5,0.5);
 
-		btGallo = game.add.button(520,170,'gallo1',this.code6,0,0,0,1);
+		btGallo = game.add.button(520,170,'botonGallo',this.code6,0,0,0,1);
 		btGallo.scale.setTo(0.8,0.8);
 		//btGallo.scale.setTo(0.5,0.5);
 
-		btHotmiga= game.add.button(520,60,'hormiga1',this.code7,0,0,0,1);
+		btHotmiga= game.add.button(520,60,'botonHormiga',this.code7,0,0,0,1);
 		
 		btHotmiga.scale.setTo(0.8,0.8);
 
-		btCanario= game.add.button(380,60,'canario1',this.code8,0,0,0,1);
+		btCanario= game.add.button(380,60,'botonCanario',this.code8,0,0,0,1);
 		btCanario.scale.setTo(0.8,0.8);
 		//btCanario.scale.setTo(0.5,0.5);
-		btRata= game.add.button(240,170,'rata1',this.code9,0,0,0,1);
+		btRata= game.add.button(240,170,'botonRaton',this.code9,0,0,0,1);
 		btRata.scale.setTo(0.8,0.8);
 
 		btIngresar  = game.add.button(570,480,'ingresar',validarString,this,2,1,0);
@@ -95,9 +83,6 @@ desbloqueoPersonaje.prototype = {
 		    max:11,
 		    min:11,
 		    placeHolder: '¡Haz clic en algun personaje para regalar el codigo de el a un amigo!'});
-		
-	
-
 
 function validarString () {
 	variableDesbloqueoPersonaje.CadenaAnalizar = variableDesbloqueoPersonaje.input.value;
@@ -114,9 +99,7 @@ function validarString () {
         variableDesbloqueoPersonaje.mapletras1[variableDesbloqueoPersonaje.string.substr(i,1)]=true;
     }
     
-  
-    	
-     for(var i = 0; i < variableDesbloqueoPersonaje.CadenaAnalizar.length ; i++){
+    for(var i = 0; i < variableDesbloqueoPersonaje.CadenaAnalizar.length ; i++){
         if(i==0 && variableDesbloqueoPersonaje.mapnumeros1[variableDesbloqueoPersonaje.CadenaAnalizar.substr(i,1)]==undefined){
             return alert("Tu codigo esta mal escrito o no existe");;
 
@@ -151,10 +134,10 @@ function validarString () {
 
 	},
 	verPerfilJugador:function(){
-
-game.state.start("perfilJugador");
-
-	},
+        game.state.start("perfilJugador");
+        variablesBoot.sonidoBoton.play();
+    },
+    
 	code1:function(){
 	     	variableDesbloqueoPersonaje.text = "";
 	     	variableDesbloqueoPersonaje.text2 = "";

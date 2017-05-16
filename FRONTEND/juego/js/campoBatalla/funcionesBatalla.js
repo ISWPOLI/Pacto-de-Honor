@@ -1,4 +1,5 @@
-var ganadorBatalla;
+
+
 var funcionesBatalla={
     //funcion que se encarga de cargar todos los elementos del campo de batalla
     cargar:function(idPJ, idPC, caa, idNivel){
@@ -18,6 +19,8 @@ var funcionesBatalla={
         game.load.spritesheet('impactoPlagioComputadora', personajesMalos[idPC].rutaImpactoPlagio, 277, 277);
         game.load.spritesheet('gamepad','../img/Componentes/joystick/gamepad_spritesheet.png',100,100);
         game.load.image('caja', boxes[caa].root);
+        game.load.audio('puñoalaire', '../img/componentes/sonidos/EfectosDePelea/sonidogolpealaire.mp3');
+        game.load.audio('puñoalcuerpo', '../img/componentes/sonidos/EfectosDePelea/sonidogolpealcuerpo.mp3');
         game.load.image('escudo1', '../img/componentes/batalla/escudo1.png');
         game.load.image('escudo2', '../img/componentes/batalla/escudo2.png');
          if (caa == 8) {
@@ -37,6 +40,8 @@ var funcionesBatalla={
     	sprite.animations.play('quieto');
 		game.physics.arcade.enable(sprite);
 		sprite.body.collideWorldBounds = true; 
+        variablesCampoBatalla.golpeAlAire = game.add.audio('puñoalaire');
+        variablesCampoBatalla.golpe_al_cuerpo = game.add.audio('puñoalcuerpo');
 	},
     
     //Esta funcion se activa al dar click en el logo del poli y despliega el menu de pausa 
@@ -67,12 +72,8 @@ var funcionesBatalla={
             }
             //Condicional si se oprime en Sonido
             else if (event.x > 410 && event.x < 450 && event.y > 390 && event.y < 425) {
-                if(vN.music.paused){
-                    vN.music.resume();
-                    }
-                else{
-                    vN.music.pause();
-                    } 
+                if(!variablesBoot.musicaOnOff){variablesBoot.musicaOnOff = true; variablesBoot.musicaBatalla.resume();}
+                else{variablesBoot.musicaOnOff = false; variablesBoot.musicaBatalla.pause();}
             }
         }
     },
@@ -105,17 +106,20 @@ var funcionesBatalla={
             variablesCampoBatalla.escudo1 = game.add.sprite(variablesCampoBatalla.personajeJugador.body.x+200, variablesCampoBatalla.personajeJugador.body.y, 'escudo1');
             variablesCampoBatalla.escudo1.anchor.setTo(0.5,0);
             
+            
             variablesCampoBatalla.personajeJugador.animations.play('defensa')
             variablesCampoBatalla.personajeJugador.body.velocity.y=0;
             variablesCampoBatalla.movH[0]=true;
         }else if(cursores.up.isDown){
-            variablesCampoBatalla.escudo2 = game.add.sprite(variablesCampoBatalla.personajeJugador.body.x+150, variablesCampoBatalla.personajeJugador.body.y, 'escudo2');
-            variablesCampoBatalla.escudo2.anchor.setTo(0.5,0);
-            variablesCampoBatalla.movH[3]=true;
+             variablesCampoBatalla.personajeJugador.body.velocity.y=-250;
+            // variablesCampoBatalla.escudo2 = game.add.sprite(variablesCampoBatalla.personajeJugador.body.x+150, variablesCampoBatalla.personajeJugador.body.y, 'escudo2');
+            // variablesCampoBatalla.escudo2.anchor.setTo(0.5,0);
+            // variablesCampoBatalla.movH[3]=true;
         } else if (esp.isDown){
             variablesCampoBatalla.personajeJugador.animations.play('punos');
             variablesCampoBatalla.personajeJugador.body.x+=1;
             variablesCampoBatalla.movH[1]=true;
+            variablesCampoBatalla.golpeAlAire.play();
         }else{
             variablesCampoBatalla.personajeJugador.animations.play('quieto');
         }
@@ -193,12 +197,14 @@ var funcionesBatalla={
     *Si no se estaba defendiendo causa daño y llama al sprite de impacto 
     */
     impactoPlagioC : function(personaje,ataque){
+        variablesCampoBatalla.golpe_al_cuerpo.play();
         game.time.events.add(1000,function(){ataque.kill();},this);
         variablesCampoBatalla.movV[3]=false;
         if(!variablesCampoBatalla.movH[0]&&variablesCampoBatalla.primerImpacto){
             variablesCampoBatalla.primerImpacto=false;
             funcionesBatalla.actualizarVida(vidaRojoJugador,variablesCampoBatalla.danoV[2]);
             funcionesBatalla.spriteImpactoPlagioComputadora();
+            
         }
 
     },
@@ -206,11 +212,13 @@ var funcionesBatalla={
     *Si no se estaba defendiendo causa daño y llama al sprite de impacto 
     */
     impactoAtaqueJugador : function(personaje,ataque){
+        variablesCampoBatalla.golpe_al_cuerpo.play();
         ataque.kill();
         variablesCampoBatalla.movH[2]=false;
         if(!variablesCampoBatalla.movV[0]){
             funcionesBatalla.actualizarVida(vidaRojoComputadora,variablesCampoBatalla.danoH[1]);
             funcionesBatalla.spriteImpactoJugador();
+            variablesCampoBatalla.golpe_al_cuerpo.play();
         }
 
     },
@@ -218,6 +226,7 @@ var funcionesBatalla={
     *Si no se estaba defendiendo causa daño y llama al sprite de impacto 
     */
     impactoAtaqueComputadora : function(personaje,ataque){
+        variablesCampoBatalla.golpe_al_cuerpo.play();
         ataque.kill();
         variablesCampoBatalla.movV[2]=false;
         if(!variablesCampoBatalla.movH[0]){
@@ -264,7 +273,7 @@ var funcionesBatalla={
         }
         //si se resta vida al jugador 
         if(variablesCampoBatalla.movV[1]==true&&variablesCampoBatalla.movH[0]){
-            funcionesBatalla.actualizarVida(vidaRojoJugador,danoV[0]);
+            funcionesBatalla.actualizarVida(vidaRojoJugador,variablesCampoBatalladanoV[0]);
             variablesCampoBatalla.movV[0]=false;
             funcionesBatalla.spriteImpactoComputadora();
         }
@@ -370,8 +379,6 @@ var funcionesBatalla={
             variablesCampoBatalla.personajeComputadora.animations.play('correr');
             variablesCampoBatalla.personajeComputadora.body.x += 2; 
         }else if (string.localeCompare("defensa")==0){
-            variablesCampoBatalla.escudo1 = game.add.sprite(variablesCampoBatalla.personajeComputadora.body.x, variablesCampoBatalla.personajeComputadora.body.y, 'escudo1');
-            variablesCampoBatalla.escudo1.anchor.setTo(0.5,0);
             variablesCampoBatalla.personajeComputadora.animations.play('defensa');
             variablesCampoBatalla.movV[0]=true;
         }else if (string.localeCompare("punos")==0){

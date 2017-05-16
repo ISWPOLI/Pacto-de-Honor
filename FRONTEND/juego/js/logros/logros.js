@@ -1,83 +1,82 @@
-var speedMult = 0.2;
-var friction = 0.99;
-var namesCharactersl;
-var Logroslooked = [null];
-var description;
-var character;
-var apodo;
-var musicButton;
-var startButton;
-var LogrosJugador;
-//catidad de Monedas del Jugador
-var moneyLogros = 0;
-//posicion del ranking del jugador
-var rankingLogros = 0;
-//Tiempo de juego del jugador
-var timeplayedLogros =0;
-//Varible que permite identificar si el jugador tiene o no todos los heroes
-var allHeros = false;
-//experiencia de juego del jugador
-var xpLogros;
-// Descripción de los logros
-var descriptionsl;    
+variableLogros={
+  speedMult : 0.2,
+  friction : 0.99,
+  namesCharactersl:null,
+  Logroslooked : [null],
+  description:null,
+  character:null,
+  apodo:null,
+  startButton:null,
+  LogrosJugador:null,
+  //catidad de Monedas del Jugador
+  moneyLogros :0,
+  //posicion del ranking del jugador
+  rankingLogros : 0,
+  //Tiempo de juego del jugador
+  timeplayedLogros :0,
+  //Varible que permite identificar si el jugador tiene o no todos los heroes
+  allHeros : false,
+  //experiencia de juego del jugador
+  xpLogros:null,
+  // Descripción de los logros
+  descriptionsl:null    
+}
+ 
 var logros = function(game){};
     logros.prototype = {
+
         preload: function(){
 
             
-            namesCharactersl = SetUplogros.nombre;
-            descriptionsl = SetUplogros.descripcion;
-            moneyLogros = SetUplogros.monedas;
-            rankingLogros = SetUplogros.ranking;
-            timeplayedLogros = SetUplogros.tiempo;
-            xpLogros = SetUplogros.exp;
-            LogrosJugador = SetUplogros.jugador_tiene_logros;
+            variableLogros.namesCharactersl = SetUplogros.nombre;
+            variableLogros.descriptionsl = SetUplogros.descripcion;
+            variableLogros.moneyLogros = SetUplogros.monedas;
+            variableLogros.rankingLogros = SetUplogros.ranking;
+            variableLogros.timeplayedLogros = SetUplogros.tiempo;
+            variableLogros.xpLogros = SetUplogros.exp;
+            variableLogros.LogrosJugador = SetUplogros.jugador_tiene_logros;
 
-            for (var i = namesCharactersl.length - 1; i >= 0; i--) {
-              Logroslooked[i] = true;
+      
+
+
+            for (var i = variableLogros.namesCharactersl.length - 1; i >= 0; i--) {
+              variableLogros.Logroslooked[i] = true;
             }
-
-            game.scale.pageAlignHorizontally = true;
-            game.scale.pageAlignVertically = true; 
-            // Se carga una imagen transparente para colocar detras de las imagenes que apareceran en el Scrolling
-            game.load.image("transp", "../img/personajes/avatares/transp.png");
             // Se cargan las imagenes de los 10 logros
-            game.load.spritesheet(namesCharactersl[0], '../img/Componentes/logros/KuPlagio.png');
-            game.load.spritesheet(namesCharactersl[1], '../img/Componentes/logros/LifePlagio.png');
-            game.load.spritesheet(namesCharactersl[2], '../img/Componentes/logros/SkillPlagio.png');
-            game.load.spritesheet(namesCharactersl[3], '../img/Componentes/logros/OriginalPlagio.png');
-            game.load.spritesheet(namesCharactersl[4], '../img/Componentes/logros/HitBackground.png');
-            game.load.spritesheet(namesCharactersl[5], '../img/Componentes/logros/experiencia.png');
-            game.load.spritesheet(namesCharactersl[6], '../img/Componentes/logros/Richest.png');
-            game.load.spritesheet(namesCharactersl[7], '../img/Componentes/logros/Unlocker.png');
-            game.load.spritesheet(namesCharactersl[8], '../img/Componentes/logros/Alist.png');
-            game.load.spritesheet(namesCharactersl[9], '../img/Componentes/logros/FiveRow.png');
-            game.load.image(namesCharactersl[0]+'Loock', '../img/Componentes/logros/KuPlagioLoock.png');
-            game.load.image(namesCharactersl[1]+'Loock', '../img/Componentes/logros/LifePlagioLoock.png');
-            game.load.image(namesCharactersl[2]+'Loock', '../img/Componentes/logros/SkillPlagioLoock.png');
-            game.load.image(namesCharactersl[3]+'Loock', '../img/Componentes/logros/OriginalPlagioLoock.png');
-            game.load.image(namesCharactersl[4]+'Loock', '../img/Componentes/logros/HitBackgroundLoock.png');
-            game.load.image(namesCharactersl[5]+'Loock', '../img/Componentes/logros/experienciaLoock.png');
-            game.load.image(namesCharactersl[6]+'Loock', '../img/Componentes/logros/RichestLoock.png');
-            game.load.image(namesCharactersl[7]+'Loock', '../img/Componentes/logros/UnlockerLoock.png');
-            game.load.image(namesCharactersl[8]+'Loock', '../img/Componentes/logros/AlistLoock.png');
-            game.load.image(namesCharactersl[9]+'Loock', '../img/Componentes/logros/FiveRowLoock.png');
-            game.load.spritesheet('botonVolver', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
+            game.load.spritesheet(variableLogros.namesCharactersl[0], '../img/Componentes/logros/KuPlagio.png');
+            game.load.spritesheet(variableLogros.namesCharactersl[1], '../img/Componentes/logros/LifePlagio.png');
+            game.load.spritesheet(variableLogros.namesCharactersl[2], '../img/Componentes/logros/SkillPlagio.png');
+            game.load.spritesheet(variableLogros.namesCharactersl[3], '../img/Componentes/logros/OriginalPlagio.png');
+            game.load.spritesheet(variableLogros.namesCharactersl[4], '../img/Componentes/logros/HitBackground.png');
+            game.load.spritesheet(variableLogros.namesCharactersl[5], '../img/Componentes/logros/experiencia.png');
+            game.load.spritesheet(variableLogros.namesCharactersl[6], '../img/Componentes/logros/Richest.png');
+            game.load.spritesheet(variableLogros.namesCharactersl[7], '../img/Componentes/logros/Unlocker.png');
+            game.load.spritesheet(variableLogros.namesCharactersl[8], '../img/Componentes/logros/Alist.png');
+            game.load.spritesheet(variableLogros.namesCharactersl[9], '../img/Componentes/logros/FiveRow.png');
+            game.load.image(variableLogros.namesCharactersl[0]+'Loock', '../img/Componentes/logros/KuPlagioLoock.png');
+            game.load.image(variableLogros.namesCharactersl[1]+'Loock', '../img/Componentes/logros/LifePlagioLoock.png');
+            game.load.image(variableLogros.namesCharactersl[2]+'Loock', '../img/Componentes/logros/SkillPlagioLoock.png');
+            game.load.image(variableLogros.namesCharactersl[3]+'Loock', '../img/Componentes/logros/OriginalPlagioLoock.png');
+            game.load.image(variableLogros.namesCharactersl[4]+'Loock', '../img/Componentes/logros/HitBackgroundLoock.png');
+            game.load.image(variableLogros.namesCharactersl[5]+'Loock', '../img/Componentes/logros/experienciaLoock.png');
+            game.load.image(variableLogros.namesCharactersl[6]+'Loock', '../img/Componentes/logros/RichestLoock.png');
+            game.load.image(variableLogros.namesCharactersl[7]+'Loock', '../img/Componentes/logros/UnlockerLoock.png');
+            game.load.image(variableLogros.namesCharactersl[8]+'Loock', '../img/Componentes/logros/AlistLoock.png');
+            game.load.image(variableLogros.namesCharactersl[9]+'Loock', '../img/Componentes/logros/FiveRowLoock.png');
+
             // Se carga el sprite del boton seleccionar
-            game.load.spritesheet('button', '../img/Componentes/botones/Spritebloq.png', 150, 40); 
-            
-            game.load.audio('sonidoBoton', '../img/Componentes/sonidos/Botones/1.mp3');
+            game.load.spritesheet('button', '../img/Componentes/botones/Spritebloq.png', 150, 40);
         },
-        create: function(){ 
-             musicButton = game.add.audio('sonidoBonton');
-            
+
+        
+        create: function(){            
           // Se coloca como fondo de la ventana el color #2451A6
           game.stage.backgroundColor = "#2451A6";
           // Se agrega un titulo para la ventana, el cual sera "Logros", de tamaño 30 px, y "Roboto" como tipo de letra
           // Se coloca en una posición especifica, con la instrucción ".anchor.set(0.5)" se centra en la posición dada
           game.add.text(game.width / 2, 50, "Logros", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5);
           // Se agrega la funcion ScrollingMap a la ventana, con una posición especifica, y se agrega la imagen transparente
-          this.scrollingMap = game.add.tileSprite(0, 0, 650 + namesCharactersl.length * 90 + 64, game.height, "transp");
+          this.scrollingMap = game.add.tileSprite(0, 0, 650 + variableLogros.namesCharactersl.length * 90 + 64, game.height, "transp");
           this.scrollingMap.inputEnabled = true;
           this.scrollingMap.input.enableDrag(false);
           // Se guarda la posición
@@ -89,14 +88,14 @@ var logros = function(game){};
           this.scrollingMap.input.boundsRect = new Phaser.Rectangle(game.width - this.scrollingMap.width, game.height - this.scrollingMap.height, this.scrollingMap.width * 2 - game.width, this.scrollingMap.height * 2 - game.height);
           playedUnloock();
           isUnloocked();
-          for(var i = 0; i < namesCharactersl.length; i++){
+          for(var i = 0; i < variableLogros.namesCharactersl.length; i++){
               // se agrega cada una de las 10 imagenes cargadas previamente de los 10 logros
-              if (Logroslooked[i]) character = game.add.image(game.width / 2 + i * 90, 130, namesCharactersl[i]+"Loock");
-                else character = game.add.image(game.width / 2 + i * 90, 130, namesCharactersl[i]);
+              if (variableLogros.Logroslooked[i]) variableLogros.character = game.add.image(game.width / 2 + i * 90, 130, variableLogros.namesCharactersl[i]+"Loock");
+                else variableLogros.character = game.add.image(game.width / 2 + i * 90, 130, variableLogros.namesCharactersl[i]);
               // Se centra la imagen cargada en la posición puesta en la linea anterior
-              character.anchor.set(0.5);
+              variableLogros.character.anchor.set(0.5);
               // Se agrega al scrollingMap cada una de las imagenes cargadas
-              this.scrollingMap.addChild(character);
+              this.scrollingMap.addChild(variableLogros.character);
           }
           // Se agrega enventos a las imagenes del scrollingMap para cuando este en movimiento
           this.scrollingMap.events.onDragStart.add(function(){
@@ -109,20 +108,20 @@ var logros = function(game){};
           }, this);
           // Se agrega un texto a la ventana para representar los nombres de los logros, con 24px de tamaño y "Roboto" como tipo de letra
           // Tambien se agrega un color de fondo y se alinea el texto en el centro
-          apodo = game.add.text(game.world.centerX, 230, "", { font: "24px Roboto", fill: "#ffffff", align: "center", backgroundColor: "#2451A6"});
-          apodo.anchor.set(0.5);
+          variableLogros.apodo = game.add.text(game.world.centerX, 230, "", { font: "24px Roboto", fill: "#ffffff", align: "center", backgroundColor: "#2451A6"});
+          variableLogros.apodo.anchor.set(0.5);
           // Se agrega un texto a la ventana para representar las descripciones de los logros, con 20px de tamaño y "Roboto" como tipo de letra
           // Tambien se agrega un color de fondo y se alinea el texto en el centro
-          description = game.add.text(game.world.centerX, 380, "", { font: "20px Roboto", fill: "#ffffff", align: "center", backgroundColor: "#2451A6"});
-          description.anchor.set(0.5);
+          variableLogros.description = game.add.text(game.world.centerX, 380, "", { font: "20px Roboto", fill: "#ffffff", align: "center", backgroundColor: "#2451A6"});
+          variableLogros.description.anchor.set(0.5);
           // Se agrega un boton con posiciones especificas, con diferentes estados (Cargados previamente en la funcion onload)
-          startButton = game.add.button(game.world.width / 2, 540, 'button', null, this, 2, 1, 0); // over, out, down, up
-          startButton.anchor.set(0.5);
+          variableLogros.startButton = game.add.button(game.world.width / 2, 540, 'button', null, this, 2, 1, 0); // over, out, down, up
+          variableLogros.startButton.anchor.set(0.5);
           game.add.button(5, 5,'botonVolver', this.verPerfil, 1, 1, 0, 2);
           //metdo que verica si esta o no bloqueado un logro de ser asi llama al metodo del logro para validar si cumple con los requsitos de desbloqueo
           function isUnloocked(){
-           for(var i = 0; i < Logroslooked.length; i++){
-            if(Logroslooked[i]){
+           for(var i = 0; i < variableLogros.Logroslooked.length; i++){
+            if(variableLogros.Logroslooked[i]){
               if(i == 0) isMikuplagio(i);
               else if (i == 1) isMiLifePlagio(i); 
               else if (i == 2) isMiSkillPlagio(i);
@@ -141,82 +140,100 @@ var logros = function(game){};
           }
         }
         function playedUnloock(){
-          for (var i = namesCharactersl.length - 1; i >= 0; i--) {
-            for (var k = LogrosJugador.length - 1; k >= 0; k--) {
-              if (namesCharactersl[i] == LogrosJugador[k]) {
-                Logroslooked[i] = false;
+          for (var i = variableLogros.namesCharactersl.length - 1; i >= 0; i--) {
+            for (var k = variableLogros.LogrosJugador.length - 1; k >= 0; k--) {
+              if (variableLogros.namesCharactersl[i] == variableLogros.LogrosJugador[k]) {
+                variableLogros.Logroslooked[i] = false;
               }
             }
           }
         }
         //funcion encargada de dar las recompensas de los logros
         function recompensa(exp,mon){
-          xpLogros = xpLogros + exp;
-          moneyLogros = moneyLogros + mon;
+          variableLogros.xpLogros = variableLogros.xpLogros + exp;
+          variableLogros.moneyLogros = variableLogros.moneyLogros + mon;
         }
         //funcion que comprueba que el jugador lleve porlomenos 100 horas jugadas
         function isMikuplagio(i){
-          var timeHours = timeplayedLogros/60;
+          var timeHours = variableLogros.timeplayedLogros/60;
           if (timeHours>=100) {
               recompensa(20,2500);
-              Logroslooked[i]= false;
+
+              variableLogros.Logroslooked[i]= false;
               pruebasPsicotecnicas.setPrueba6(true);
+              //pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba6');
+              pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba6(true);
           };
         }
         //funcion que Identifica si el jugador esta entre el top 5
         function isMiLifePlagio(i){
-          if (rankingLogros<= 5) {
+          if (variableLogros.rankingLogros<= 5) {
             recompensa(20,1000);
-            Logroslooked[i]= false;
-              pruebasPsicotecnicas.setPrueba7(true);
+
+            variableLogros.Logroslooked[i]= false;
+            pruebasPsicotecnicas.setPrueba7(true);
+            //pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba7');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba7(false);
+
           };
         }
         //funcion que identifica si el jugador ha desbloqueado el  70% como minimo de los logros
         function isMiSkillPlagio(i){
           var logrosdes = 0;
-          for(var j = 0; j < Logroslooked.length; j++){
-            if (!Logroslooked[j]) {
+          for(var j = 0; j < variableLogros.Logroslooked.length; j++){
+            if (!variableLogros.Logroslooked[j]) {
               logrosdes++;
             };
           }
-          if (((logrosdes*100)/Logroslooked.length)>=70) {
+          if (((logrosdes*100)/variableLogros.Logroslooked.length)>=70) {
             recompensa(15,800);
-            Logroslooked[i] =false;
-              pruebasPsicotecnicas.setPrueba8(true);
+
+            variableLogros.Logroslooked[i] =false;
+           // pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba8');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba8(true);
+
           };
         }
         //por implementar
         function isTheOriginalPlagio(i){
           recompensa(5,1000);
-            pruebasPsicotecnicas.setPrueba9(true);
+            //pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba9');
+            pruebasPsicotecnicas.setPrueba9(false);
           //por implentar no es de servicios Rest
         }
         //por implementar
         function isMiHitckGround(i){
           recompensa(20,1000);
-            pruebasPsicotecnicas.setPrueba10(true);
+          //pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba10');
+          pruebasPsicotecnicas.setPrueba10(true);
           //por implentar no es de Rest
         }
         //funcion que comprueba que si el jugaro tienen o no todos los heroes
         function isTheUnloocker(i){
-          if (allHeros) {
+          if (variableLogros.allHeros) {
             recompensa(10,200);
-            Logroslooked[i] = false;
-              pruebasPsicotecnicas.setPrueba13(true);
+
+            variableLogros.Logroslooked[i] = false;
+            //pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba11');
+            pruebasPsicotecnicas.setPrueba11(false);
+
           };
         }
         //funcion que comprueba si el jugador tiene porlomenos 1000000 monedas
         function isTheRichest(i){
-          if (monedas >=1000000) {
+          if (variableLogros.moneyLogros >=1000000) {
             recompensa(30,300);
-            Logroslooked[i] = false;
-              pruebasPsicotecnicas.setPrueba12(true);
+
+            variableLogros.Logroslooked[i] = false;
+              //pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba12');
+              pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba12(true);
+
           };
         }
         //funcion que Identifica si el jugador esta entre el top 1
         function isTheAList(i){
-          if (rankingLogros ==1) {
-            Logroslooked[i] = false;
+          if (variableLogros.rankingLogros ==1) {
+            variableLogros.Logroslooked[i] = false;
           };
         }
         //por Implementar
@@ -227,15 +244,20 @@ var logros = function(game){};
         }
         //funcion que comprueba que el jugador tenga porlomenos 1000 de experiencia
         function isMyMater(i){
-          if (xpLogros>=1000) {
+          if (variableLogros.xpLogros>=1000) {
             recompensa(0,4000);
-            Logroslooked[i] = false;
+            variableLogros.Logroslooked[i] = false;
           };
         }
+            
+            pages = game.add.text(475, 50, null, { font: "14px Roboto", fill: "#ffffff"});
+            pages.anchor.setTo(0.5);
+            pages.alpha = 0.5;
       },
         verPerfil: function(){
             game.state.start("perfilJugador");
-            musicButton.play();
+            variablesBoot.sonidoBoton.play();
+
         },
         update:function(){
            // Se declara una variable llamada "zoomed" de tipo booleana, que representara cuando un elemento del scrolling map este seleccionada
@@ -247,20 +269,22 @@ var logros = function(game){};
                     this.scrollingMap.getChildAt(i).scale.setTo(1.5);
                     // Se pone la variable zoomed en true cuando la imagen del scrollingMap aumente su tamaño
                     zoomed = true;
-                    for (var j = 0; j < descriptionsl.length; j++) {
+                    for (var j = 0; j < variableLogros.descriptionsl.length; j++) {
                          if(i == j){
+                             
+                             pages.setText(j+1+"/10");
                               // Se va modificando los nombres de los personajes de acuerdo al personaje en el que se este
-                              apodo.setText(namesCharactersl[j]);
+                              variableLogros.apodo.setText(variableLogros.namesCharactersl[j]);
                               // Se va modificando las descripciones de los personajes de acuerdo al personaje en el que se este
-                              description.setText(descriptionsl[j]);
-                              if (Logroslooked[j]) { 
+                              variableLogros.description.setText(variableLogros.descriptionsl[j]);
+                              if (variableLogros.Logroslooked[j]) { 
                                  // this.scrollingMap.game.add.image(game.width / 2 + i * 90, 130, characters[i]);
-                                  startButton = game.add.button(game.world.width / 2, 540, 'button',null, this, 2, 2, 2); 
-                                  startButton.anchor.set(0.5);
+                                  variableLogros.startButton = game.add.button(game.world.width / 2, 540, 'button',null, this, 2, 2, 2); 
+                                  variableLogros.startButton.anchor.set(0.5);
                               }
                               else{
-                                   startButton = game.add.button(game.world.width / 2, 540, 'button',null, this, 1, 1, 1); 
-                                  startButton.anchor.set(0.5);
+                                   variableLogros.startButton = game.add.button(game.world.width / 2, 540, 'button',null, this, 1, 1, 1); 
+                                  variableLogros.startButton.anchor.set(0.5);
                               }
                          }
                     }
@@ -286,14 +310,14 @@ var logros = function(game){};
                          this.scrollingMap.movingSpeed *= 0.5;
                          this.scrollingMap.movingangle += Math.PI;
                     }
-                    this.scrollingMap.movingSpeed *= friction;
+                    this.scrollingMap.movingSpeed *= variableLogros.friction;
                     this.scrollingMap.savedPosition = new Phaser.Point(this.scrollingMap.x, this.scrollingMap.y);
                }
                else{
                     var distance = this.scrollingMap.savedPosition.distance(this.scrollingMap.position);
                     var angle = this.scrollingMap.savedPosition.angle(this.scrollingMap.position);
                     if(distance > 4){
-                         this.scrollingMap.movingSpeed = distance * speedMult;
+                         this.scrollingMap.movingSpeed = distance * variableLogros.speedMult;
                          this.scrollingMap.movingangle = angle;
                     }
                }
