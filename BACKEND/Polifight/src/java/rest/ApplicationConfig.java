@@ -3,15 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-package com.poder.Restful.PH.service;
+package rest;
 
 import java.util.Set;
 import javax.ws.rs.core.Application;
 
 /**
  *
- * @author ahsierra
+ * @author jrubiaob
  */
 @javax.ws.rs.ApplicationPath("webresources")
 public class ApplicationConfig extends Application {
@@ -30,9 +29,21 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
-        resources.add(com.poder.Restful.PH.service.ImagenFacadeREST.class);
+        resources.add(rest.CategoriaFacadeREST.class);
         resources.add(rest.CiudadFacadeREST.class);
+        resources.add(rest.CrossOriginResourceSharingFilter.class);
+        resources.add(rest.FraseFacadeREST.class);
+        resources.add(rest.ImagenFacadeREST.class);
+        resources.add(rest.JugadorFacadeREST.class);
+        resources.add(rest.MundoFacadeREST.class);
+        resources.add(rest.PaisFacadeREST.class);
+        resources.add(rest.PersonajeFacadeREST.class);
         resources.add(rest.PoderFacadeREST.class);
+        resources.add(rest.PruebaPsicotecnicaFacadeREST.class);
+        resources.add(rest.RespuestaPreguntasPsicotecnicasFacadeREST.class);
+        resources.add(rest.RolUsuarioFacadeREST.class);
+        resources.add(rest.TipoPruebaFacadeREST.class);
+        resources.add(rest.UsuarioFacadeREST.class);
     }
     
 }

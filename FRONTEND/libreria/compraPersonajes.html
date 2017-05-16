@@ -1,0 +1,382 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="shortcut icon" type="image/x-icon" href="img/logosinfondo.ico">
+		<title>Compra Personajes</title>
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="icons/icons.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<script src="js/jquery-latest.js"></script>
+		<script src="js/goUpButton.js"></script>
+	</head>
+	<body>
+		<nav class="goUp icon-chevron-up"></nav>
+		<header>
+			<div>
+				<img class="portada" src="img/portada.png">
+			</div>
+			<nav>
+				<ul>
+					<li><a href="inicio.html">Inicio</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section class="main">
+			<section class="articles">
+				<article>
+					<h2>compraPersonajes.js</h2>
+					<br/>
+					<p>En esta clase el jugador podrá comprar personajes usando monedas del juego.</p>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla1">
+							<td colspan="2">Funciones</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Dato de retorno</b>
+							</td>
+							<td>
+								<b>Descripción breve</b>
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>preload</b> ( )
+								<br/>
+								Función de Phaser, que sirve para cargar componentes del juego.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>create</b> ( )
+								<br/>
+								Función de Phaser, que sirve para agregar componentes al juego.
+							</td>
+						</tr>
+						<tr>
+							<td>String</td>
+							<td>
+								<b>compra</b> ( )
+								<br/>
+								Permite que el jugador compre algún personaje y avisa si la compra se realizó exitosamente.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>verMapa</b> ( )
+								<br/>
+								Inicia el estado de <b>navegacion.js</b> después de que sea presiona el botón de regresar.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>update</b> ( )
+								<br/>
+								Función de Phaser, que sirve para cambiar componentes en el juego.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">preload( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta es una función del framework Phaser en la que cargaremos todos los componentes a ser utilizados en el juego como imágenes, sonidos, fondos, sprites, etc. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">create( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta es una función del framework Phaser, aquí se añadirán los componentes al juego. En esta función asignamos la posición inicial, el tamaño, etc. De todos los componentes. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">compra( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función verifica si el jugador ya tiene el personaje a comprar, si esto sucede le avisa esto mediante un mensaje en la ventana de juego, y si no realiza la compra exitosamente, descontando las monedas y aumentando la experiencia del jugador.
+							</td>
+							<td>
+								Retorna una cadena que será mostrada en la ventana del juego, esta cadena puede ser "¡Ya posees este personaje!" o "Personaje comprado exitosamente".
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">verMapa( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función permite iniciar el estado de <b>navegacion.js</b> después de que el botón de regresar sea presionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">update( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta es una función del framework Phaser, aquí estarán todos los cambios o ‘acciones’ del juego. Qué hacer al presionar una tecla, al mover el cursor, al chocar una pared; en fin, toda la lógica del juego. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla3">
+							<td colspan="3">Variables</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Nombre</b>
+							</td>
+							<td>
+								<b>Tipo de dato</b>
+							</td>
+							<td>
+								<b>Explicación</b>
+							</td>
+						</tr>
+						<tr>
+							<td>speedMult</td>
+							<td>double</td>
+							<td>Representa la velocidad dentro del scroll.</td>
+						</tr>
+						<tr>
+							<td>friction</td>
+							<td>double</td>
+							<td>Representa la fricción dentro del scroll.</td>
+						</tr>
+						<tr>
+							<td>animals</td>
+							<td>String [ ]</td>
+							<td>Arreglo de 9 posiciones en el cual se encuentran los nombres de los 9 animales de los personajes buenos.</td>
+						</tr>
+						<tr>
+							<td>names</td>
+							<td>String [ ]</td>
+							<td>Arreglo de 9 posiciones en el cual se encuentran los nombres de los 9 personajes buenos.</td>
+						</tr>
+						<tr>
+							<td>scrollText</td>
+							<td>String</td>
+							<td>Cadena que será mostrada en la ventada del juego en un determinado momento del scroll.</td>
+						</tr>
+						<tr>
+							<td>comprado</td>
+							<td>boolean [ ]</td>
+							<td>Arreglo de 9 posiciones que contiene si un personaje fue comprado (true) o si no fue comprado (false).</td>
+						</tr>
+						<tr>
+							<td>animal</td>
+							<td>String</td>
+							<td>Cadena, la cual es el nombre del personaje a comprar.</td>
+						</tr>
+						<tr>
+							<td>monedas</td>
+							<td>int</td>
+							<td>Monedas que tiene el jugador.</td>
+						</tr>
+						<tr>
+							<td>xp</td>
+							<td>int</td>
+							<td>Experiencia que tiene el jugador.</td>
+						</tr>
+						<tr>
+							<td>nickname</td>
+							<td>String</td>
+							<td>Nickname del jugador.</td>
+						</tr>
+						<tr>
+							<td>startButton</td>
+							<td>PhaserButton</td>
+							<td>Botón de comprar.</td>
+						</tr>
+						<tr>
+							<td>botonVolver</td>
+							<td>PhaserButton</td>
+							<td>Botón de volver.</td>
+						</tr>
+						<tr>
+							<td>compradoL</td>
+							<td>PhaserText</td>
+							<td>Cadena que aparece en la ventana mostrando si un personaje esta comprado o no.</td>
+						</tr>
+						<tr>
+							<td>musicButton</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado reproducirá un audio.</td>
+						</tr>
+						<tr>
+							<td>texts</td>
+							<td>String [ ]</td>
+							<td>Arreglo de 9 posiciones, el cual contiene la descripción de cuanto cuesta cada personaje y sus recompensas al comprarlo.</td>
+						</tr>
+						<tr>
+							<td>cMonedas</td>
+							<td>int [ ]</td>
+							<td>Arreglo de enteros de 9 posiciones, el cual contiene los precios de cada personaje.</td>
+						</tr>
+						<tr>
+							<td>rMonedas</td>
+							<td>int [ ]</td>
+							<td>Arreglo de enteros de 9 posiciones, el cual contiene las recompensas economicas al comprar cada uno de los personajes.</td>
+						</tr>
+						<tr>
+							<td>rExperiencia</td>
+							<td>int [ ]</td>
+							<td>Arreglo de enteros de 9 posiciones, el cual contiene las recompensas de experiencia al comprar cada uno de los personajes.</td>
+						</tr>
+					</table>
+					<br/>
+				</article>
+			</section>
+			<aside>
+				<h3>Clases</h3>
+				<p><a href="batalla.html">Batalla</a></p>
+				<p><a href="boot.html">Boot</a></p>
+				<p><a href="cajaMisteriosa.html">Caja Misteriosa</a></p>
+				<p><a href="codigoUsado.html">Codigo Usado</a></p>
+				<p><a href="compraPersonajes.html">Compra Personajes</a></p>
+				<p><a href="cookies.html">Cookies</a></p>
+				<p><a href="creditos.html">Creditos</a></p>
+				<p><a href="desbloqueoPersonaje.html">Desbloqueo Personaje</a></p>
+				<p><a href="fin.html">Fin</a></p>
+				<p><a href="funcionesBatalla.html">Funciones Batalla</a></p>
+				<p><a href="game.html">Game</a></p>
+				<p><a href="historieta.html">Historieta</a></p>
+				<p><a href="invitarAmigos.html">Invitar Amigos</a></p>
+				<p><a href="logros.html">Logros</a></p>
+				<p><a href="movil.html">Móvil</a></p>
+				<p><a href="mundo1.html">Mundo1</a></p>
+				<p><a href="mundo2.html">Mundo2</a></p>
+				<p><a href="mundo3.html">Mundo3</a></p>
+				<p><a href="mundo4.html">Mundo4</a></p>
+				<p><a href="mundo5.html">Mundo5</a></p>
+				<p><a href="mundo6.html">Mundo6</a></p>
+				<p><a href="mundo7.html">Mundo7</a></p>
+				<p><a href="mundo8.html">Mundo8</a></p>
+				<p><a href="mundo9.html">Mundo9</a></p>
+				<p><a href="mundo10.html">Mundo10</a></p>
+				<p><a href="mundo11.html">Mundo11</a></p>
+				<p><a href="mundo12.html">Mundo12</a></p>
+				<p><a href="navegacion.html">Navegación</a></p>
+				<p><a href="perfilJugador.html">Perfil Jugador</a></p>
+				<p><a href="pruebasPsicotecnicas.html">Pruebas Psicotécnicas</a></p>
+				<p><a href="rankings.html">Rankings</a></p>
+				<p><a href="seleccionAvatar.html">Selección Avatar</a></p>
+				<p><a href="seleccionPersonaje.html">Selección Personaje</a></p>
+				<p><a href="verificacionDeCodigo.html">Verificación de Código</a></p>
+			</aside>
+		</section>
+		<footer>
+			<p>
+				Poli Fighters - 2017
+			</p>
+		</footer>
+	</body>
+</html>

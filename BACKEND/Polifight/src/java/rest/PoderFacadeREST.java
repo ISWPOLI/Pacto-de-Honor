@@ -3,12 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+//Autor Andres Sierra
 package rest;
 
-import com.poder.Restful.PH.Poder;
-import com.poder.Restful.PH.PoderPK;
-import java.util.ArrayList;
+import entities.Poder;
+import entities.PoderPK;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -29,10 +28,10 @@ import javax.ws.rs.core.PathSegment;
  * @author ahsierra
  */
 @Stateless
-@Path("com.poder.restful.ph.poder")
+@Path("entities.poder")
 public class PoderFacadeREST extends AbstractFacade<Poder> {
     
-    @PersistenceContext(unitName = "Restful.PHPU")
+    @PersistenceContext(unitName = "PolifightPU")
     private EntityManager em;
 
     private PoderPK getPrimaryKey(PathSegment pathSegment) {
@@ -43,7 +42,7 @@ public class PoderFacadeREST extends AbstractFacade<Poder> {
          * it is ignored in the following code.
          * Matrix parameters are used as field names to build a primary key instance.
          */
-        com.poder.Restful.PH.PoderPK key = new com.poder.Restful.PH.PoderPK();
+        entities.PoderPK key = new entities.PoderPK();
         javax.ws.rs.core.MultivaluedMap<String, String> map = pathSegment.getMatrixParameters();
         java.util.List<String> idPoder = map.get("idPoder");
         if (idPoder != null && !idPoder.isEmpty()) {
@@ -60,24 +59,18 @@ public class PoderFacadeREST extends AbstractFacade<Poder> {
         super(Poder.class);
     }
 
-    @POST
-    @Override
-    @Consumes({"application/xml", "application/json"})
-    public void create(Poder entity) {
-        super.create(entity);
-    }
 
     @PUT
-    @Path("{id}")
-    @Consumes({"application/xml", "application/json"})
-    public void edit(@PathParam("id") PathSegment id, Poder entity) {
+    @Path("updatePower")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void updatePower(@PathParam("updatePower") PathSegment id, Poder entity) {
         super.edit(entity);
     }
 
     @DELETE
     @Path("{id}")
     public void remove(@PathParam("id") PathSegment id) {
-        com.poder.Restful.PH.PoderPK key = getPrimaryKey(id);
+        entities.PoderPK key = getPrimaryKey(id);
         super.remove(super.find(key));
     }
 
@@ -85,7 +78,7 @@ public class PoderFacadeREST extends AbstractFacade<Poder> {
     @Path("{id}")
     @Produces({"application/xml", "application/json"})
     public Poder find(@PathParam("id") PathSegment id) {
-        com.poder.Restful.PH.PoderPK key = getPrimaryKey(id);
+        entities.PoderPK key = getPrimaryKey(id);
         return super.find(key);
     }
 
@@ -95,75 +88,7 @@ public class PoderFacadeREST extends AbstractFacade<Poder> {
     public List<Poder> findAll() {
         return super.findAll();
     }
-    @GET
-    @Path("findAllPower")
-    @Produces(MediaType.APPLICATION_JSON)
-    public List<Poder> findAllPower() {
-        return super.findAll();
-    } 
-    @GET
-    @Path("findPower")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Poder findPower(@PathParam("findPower") int id){
-        List<Poder> a = findAllPower();
-        Poder b = new Poder(); 
-        for (int i = 0; i < a.size(); i++) {
-            if(a.get(i).getPoderPK().getIdPoder() == id){
-                b = a.get(i);
-            }
-        }
-        return b;
-    }
-    
-    @GET
-    @Path("createPower")
-    @Consumes(MediaType.APPLICATION_JSON)
-    public void createPower(String[] Poder) {
-        PoderPK nuevoPK = new PoderPK(Integer.parseInt(Poder[0]),Integer.parseInt(Poder[1]));
-        Poder nuevo = new Poder();
-        nuevo.setPoderPK(nuevoPK);
-        nuevo.setNombrePoder(Poder[2]);
-        nuevo.setDescripcionPoder(Poder[3]);
-        nuevo.setFormaPoder(Integer.parseInt(Poder[4]));
-        nuevo.setPotenciaPoder(Integer.parseInt(Poder[5]));
-        nuevo.setTipoPoder(Integer.parseInt(Poder[6]));
-        super.create(nuevo);
-    }
 
-//    @GET
-//    @Path("editPower")
-//    @Consumes (MediaType.APPLICATION_JSON)
-//    public void editPower(@PathParam("editPower") int idPoder, int idImagen, String NombrePoder, String DescripcionPoder, int FormaPoder, int PotenciaPoder, int TipoPoder){
-//        List<Poder> a = findAllPower();
-//        for (int i = 0; i < a.size(); i++) {
-//            if(a.get(i).getNombrePoder().equals(NombrePoder) || a.get(i).getPoderPK().getIdPoder() == idPoder){
-//                PoderPK nuevo = new PoderPK(idPoder,idImagen);
-//                a.get(i).setPoderPK(nuevo);
-//                a.get(i).setNombrePoder(NombrePoder);
-//                a.get(i).setDescripcionPoder(DescripcionPoder);
-//                a.get(i).setFormaPoder(FormaPoder);
-//                a.get(i).setPotenciaPoder(PotenciaPoder);
-//                a.get(i).setTipoPoder(TipoPoder);
-//                super.edit(a.get(i));
-//            }
-//        }
-//    }
-    
-    @GET
-    @Path("findPowerByName")
-    @Produces (MediaType.APPLICATION_JSON)
-    public Poder findPowerByName(@PathParam("findPowerByName") String nombrePoder){
-        List<Poder> a = findAllPower();
-        Poder b = new Poder();
-        for (int i = 0; i < a.size(); i++) {
-            if(a.get(i).getNombrePoder().equals(nombrePoder)){
-                b = a.get(i);
-            }
-        }
-        return b;
-    }
-            
-    
     @GET
     @Path("{from}/{to}")
     @Produces({"application/xml", "application/json"})
@@ -183,4 +108,37 @@ public class PoderFacadeREST extends AbstractFacade<Poder> {
         return em;
     }
     
-}
+    @GET
+    @Path("findAllPower")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Poder> findAllPower() {
+        return super.findAll();
+    } 
+    @GET
+    @Path("findPower")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Poder findPower(@PathParam("findPower") int id){
+        List<Poder> a = findAllPower();
+        Poder b = new Poder(); 
+        for (int i = 0; i < a.size(); i++) {
+            if(a.get(i).getPoderPK().getIdPoder() == id){
+                b = a.get(i);
+            }
+        }
+        return b;
+    }
+  
+    @GET
+    @Path("findPowerByName")
+    @Produces (MediaType.APPLICATION_JSON)
+    public Poder findPowerByName(@PathParam("findPowerByName") String nombrePoder){
+        List<Poder> a = findAllPower();
+        Poder b = new Poder();
+        for (int i = 0; i < a.size(); i++) {
+            if(a.get(i).getNombrePoder().equals(nombrePoder)){
+                b = a.get(i);
+            }
+        }
+        return b;
+    }
+ }
