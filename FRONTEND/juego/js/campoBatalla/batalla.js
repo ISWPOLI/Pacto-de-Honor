@@ -28,7 +28,7 @@ variablesCampoBatalla = {
     escudo2:null,//guarda la ruta del escudo dos
     golpeAlAire:null,//sonido del juego
 	golpe_al_cuerpo:null,//sonido del juego
-	orientacion:false,//pregunta si hubo cambio de posciciones
+	cambioOrientacion:false,//pregunta si hubo cambio de posciciones
 	saltoJ:0,//tiempo de salto
 	ganadaor:null//true si el jugador gana
 };
@@ -52,7 +52,7 @@ var batalla = {
 
 	create : function() {	
 		variablesCampoBatalla.saltoJ=0; 
-		variablesCampoBatalla.orientacion = false;
+		variablesCampoBatalla.cambioOrientacion = false;
 		variablesCampoBatalla.counter = 7200;
 		variablesCampoBatalla.ti = 0;
 		variablesCampoBatalla.danoH=personajesBuenos[variablesCampoBatalla.idPJ].daño;
@@ -78,8 +78,7 @@ var batalla = {
 		funcionesBatalla.iniciarSprite(variablesCampoBatalla.personajeComputadora);
 		
 		
-		// variablesCampoBatalla.personajeJugador.scale.setTo(-1,1);
-		// variablesCampoBatalla.personajeComputadora.scale.setTo(-1,1);
+		
 
 		caja = game.add.button(game.rnd.integerInRange(30, (game.width)-30), game.rnd.integerInRange(60, (game.height)-60), "caja",this.catchedBox,this);
         caja.visible = false;
@@ -237,6 +236,7 @@ var batalla = {
         indice=funcionesBatalla.numeroAleatorio(1,4);
 		funcionesBatalla.cargarEnergia(energiaVerdeJugador);
 		funcionesBatalla.cargarEnergia(energiaVerdeComputadora);
+		
 		if(variablesBoot.dispositivoMovil)
 			funcionesBatalla.joystick(joystick,button);
 		else
@@ -246,7 +246,7 @@ var batalla = {
 		if(!variablesCampoBatalla.secuencia)
 			funcionesBatalla.llamarSecuencia(indice);	
 
-		variablesCampoBatalla.counter-=50;
+		variablesCampoBatalla.counter--;
 		variablesCampoBatalla.ti = parseInt(variablesCampoBatalla.counter / 60);
 		if (variablesCampoBatalla.ti < 0) {
 			funcionesBatalla.finJuego();
@@ -306,7 +306,29 @@ var batalla = {
 					vidaRojoComputadora.width =cbloodd[0];
 				}
 				sendGift = true;
-		};
+		};		
+			
+			if(Math.abs(Math.abs(variablesCampoBatalla.personajeJugador.body.x)-Math.abs(variablesCampoBatalla.personajeComputadora.body.x))<98){
+				if(variablesCampoBatalla.cambioOrientacion){
+					variablesCampoBatalla.personajeJugador.scale.setTo(1,1);
+					variablesCampoBatalla.personajeComputadora.scale.setTo(1,1);
+					variablesCampoBatalla.personajeComputadora.body.x+=200;
+					variablesCampoBatalla.personajeJugador.body.x-=100;
+					variablesCampoBatalla.cambioOrientacion=false;
+				}else{
+					variablesCampoBatalla.personajeJugador.scale.setTo(-1,1);
+					variablesCampoBatalla.personajeComputadora.scale.setTo(-1,1);
+					variablesCampoBatalla.personajeComputadora.body.x-=100;
+					variablesCampoBatalla.personajeJugador.body.x+=100;
+					variablesCampoBatalla.cambioOrientacion=true;
+				}
+			}
+			
+			
+			
+
+		
+		
 		game.physics.arcade.collide(rect1, variablesCampoBatalla.personajeJugador);
 		game.physics.arcade.collide(rect, variablesCampoBatalla.personajeComputadora);
 		game.physics.arcade.overlap(variablesCampoBatalla.personajeJugador,variablesCampoBatalla.ataquePlagio,funcionesBatalla.impactoPlagioC,false,this);

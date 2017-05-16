@@ -40,7 +40,6 @@ var funcionesBatalla={
     	sprite.animations.play('quieto');
 		game.physics.arcade.enable(sprite);
 		sprite.body.collideWorldBounds = true; 
-        //sprite.body.bounce=0.5
         sprite.body.gravity.y=250;
         variablesCampoBatalla.golpeAlAire = game.add.audio('puñoalaire');
         variablesCampoBatalla.golpe_al_cuerpo = game.add.audio('puñoalcuerpo');
@@ -93,10 +92,6 @@ var funcionesBatalla={
         variablesCampoBatalla.movH[0]=false;
         variablesCampoBatalla.movH[1]=false;
         variablesCampoBatalla.movH[3]=false;
-      
-
-       // variablesCampoBatalla.personajeComputadora.body.velocity.y=0;
-      
         variablesCampoBatalla.personajeJugador.body.velocity.x=0;
         if(variablesCampoBatalla.escudo1!=null)
             variablesCampoBatalla.escudo1.kill();
@@ -110,26 +105,29 @@ var funcionesBatalla={
             variablesCampoBatalla.personajeJugador.body.velocity.x+=-150;
             variablesCampoBatalla.personajeJugador.animations.play('correr');
         } else if (cursores.down.isDown) {
-            variablesCampoBatalla.escudo1 = game.add.sprite(variablesCampoBatalla.personajeJugador.body.x+200, variablesCampoBatalla.personajeJugador.body.y, 'escudo1');
+            if(variablesCampoBatalla.cambioOrientacion)
+                 variablesCampoBatalla.escudo1 = game.add.sprite(variablesCampoBatalla.personajeJugador.body.x, variablesCampoBatalla.personajeJugador.body.y, 'escudo1');
+             else
+                 variablesCampoBatalla.escudo1 = game.add.sprite(variablesCampoBatalla.personajeJugador.body.x+200, variablesCampoBatalla.personajeJugador.body.y, 'escudo1');
             variablesCampoBatalla.escudo1.anchor.setTo(0.5,0);
-            
-            
             variablesCampoBatalla.personajeJugador.animations.play('defensa')
             variablesCampoBatalla.movH[0]=true;
         }else if(cursores.up.isDown&& (variablesCampoBatalla.personajeJugador.body.y>355)&&(game.time.now > variablesCampoBatalla.saltoJ)){
              variablesCampoBatalla.personajeJugador.body.velocity.y-=500;
 
               variablesCampoBatalla.saltoJ = game.time.now + 800;
-            // variablesCampoBatalla.escudo2 = game.add.sprite(variablesCampoBatalla.personajeJugador.body.x+150, variablesCampoBatalla.personajeJugador.body.y, 'escudo2');
-            // variablesCampoBatalla.escudo2.anchor.setTo(0.5,0);
-            // variablesCampoBatalla.movH[3]=true;
-        // } else if (esp.isDown){
-        //     variablesCampoBatalla.personajeJugador.animations.play('punos');
-        //     variablesCampoBatalla.personajeJugador.body.x+=1;
-        //     variablesCampoBatalla.movH[1]=true;
-        //     variablesCampoBatalla.golpeAlAire.play();
+           
+        } else if (esp.isDown){
+             variablesCampoBatalla.personajeJugador.animations.play('punos');
+
+            if(variablesCampoBatalla.cambioOrientacion)
+                variablesCampoBatalla.personajeJugador.body.velocity.x-=50;
+             else
+               variablesCampoBatalla.personajeJugador.body.velocity.x+=50;
+            variablesCampoBatalla.movH[1]=true;
+            variablesCampoBatalla.golpeAlAire.play();
         }else{
-            variablesCampoBatalla.personajeJugador.animations.play('quieto');
+            variablesCampoBatalla.personajeJugador.frame = 1;
         }
     },
     
@@ -275,9 +273,15 @@ var funcionesBatalla={
     *Verifica si hay daño por ataque normal 
     */
     colision : function(){
+        if(variablesCampoBatalla.cambioOrientacion){
+                    variablesCampoBatalla.personajeJugador.position.x +=100;
+                    variablesCampoBatalla.personajeComputadora.position.x-=200;
+                }else{
+                    variablesCampoBatalla.personajeJugador.position.x -=100;
+                    variablesCampoBatalla.personajeComputadora.position.x+=200;
+                }
         if(variablesCampoBatalla.movV[1]||variablesCampoBatalla.movH[1]){
-            variablesCampoBatalla.personajeJugador.position.x -=100;
-            variablesCampoBatalla.personajeComputadora.position.x+=200;
+            
         }
         //si se resta vida al jugador 
         if(variablesCampoBatalla.movV[1]==true&&variablesCampoBatalla.movH[0]){
