@@ -15,6 +15,7 @@ var fin = {
 		var color;
         var exp;
         var coins;
+       
 		if(variablesCampoBatalla.ganador){
 			resultado = "GANASTE";
 			color = {fill:'#01DF01',font: '40px Arial'};
@@ -26,6 +27,7 @@ var fin = {
             coins=0;
             exp=5
 		}
+        
 		if(variablesBoot.dispositivoMovil){
 			
 			/*
@@ -40,7 +42,7 @@ var fin = {
         	personaje.anchor.setTo(1.1);
         	personaje.frame = 24;
         
-        	var name = 'name user'
+        	var name = datosperfil["datos"].nickname;
         	win= game.add.text(game.world.width/3,game.world.height/4,resultado,color);
         	win.anchor.x=0.5;
         	win.anchor.y = 0.5;

@@ -30,7 +30,9 @@ variablesCampoBatalla = {
 	golpe_al_cuerpo:null,//sonido del juego
 	cambioOrientacion:false,//pregunta si hubo cambio de posciciones
 	saltoJ:0,//tiempo de salto
-	ganadaor:null//true si el jugador gana
+	ganador:null,//true si el jugador gana
+	animP:null,//guarda la animaicon de punos del personaje del jugador
+	animE:null//guarda la animaicon de escudo
 };
 
 var boxGame = 1;
@@ -42,7 +44,7 @@ var rect;
 var rect1;
 var batalla = {
 	preload : function() {
-		console.log(variablesCampoBatalla);
+		
 		this.preloadBar=this.add.sprite(this.game.world.centerX,this.game.world.centerY,'barraCarga');
 		this.load.setPreloadSprite(this.preloadBar);
 		//boxGame =game.rnd.integerInRange(1, 8);		
@@ -99,6 +101,10 @@ var batalla = {
        	game.physics.arcade.enable(rect1);
        	rect1.body.setSize(800, 45, 0, 400); 
        	rect1.body.collideWorldBounds = true; 
+
+
+       	
+
 		if(variablesBoot.dispositivoMovil){
 			 //Add the VirtualGamepad plugin to the game
         	 gamepad = game.plugins.add(Phaser.Plugin.VirtualGamepad);
@@ -148,8 +154,10 @@ var batalla = {
 			text = game.add.text(360, 110, 'time: 00', {fill : "white", backgroundColor : 'rgba(0,0,0,0.5)'});
             }
         else{
+
 			cursores = game.input.keyboard.createCursorKeys();
-			esp = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+			
+			teclaEscudo = game.input.keyboard.addKey(Phaser.Keyboard.M);
 			
 			var avatarPersonajeComputadora = game.add.sprite(665, 30, 'avatarPersonajeComputadora');
 			var avatarPersonajeJugador = game.add.sprite(10, 30, 'avatarPersonajeJugador');
@@ -211,6 +219,7 @@ var batalla = {
 
         
     },
+       		
     
 	render : function() {
 		game.debug.geom(vidaNegroJugador, '#000', false);
@@ -240,7 +249,7 @@ var batalla = {
 		if(variablesBoot.dispositivoMovil)
 			funcionesBatalla.joystick(joystick,button);
 		else
-			funcionesBatalla.movimientoJugador(energiaVerdeJugador);
+			funcionesBatalla.movimientoJugador();
         
         funcionesBatalla.guiaComputadora(variablesCampoBatalla.movimientoComputadora);
 		if(!variablesCampoBatalla.secuencia)
