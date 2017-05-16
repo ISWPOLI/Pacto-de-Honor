@@ -3,7 +3,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<link rel="shortcut icon" type="image/x-icon" href="img/logosinfondo.ico">
-		<title>Batalla</title>
+		<title>Compra Personajes</title>
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="icons/icons.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -25,9 +25,9 @@
 		<section class="main">
 			<section class="articles">
 				<article>
-					<h2>batalla.js</h2>
+					<h2>compraPersonajes.js</h2>
 					<br/>
-					<p>Dependiendo del dispositivo del cual se accede al juego se agregan las barras de vida y energia del jugador y de la computadora, contiene la logica de los golpes, impactos de cada uno y el tiempo de la batalla.</p>
+					<p>En esta clase el jugador podrá comprar personajes usando monedas del juego.</p>
 					<br/>
 					<br/>
 					<table>
@@ -59,11 +59,19 @@
 							</td>
 						</tr>
 						<tr>
+							<td>String</td>
+							<td>
+								<b>compra</b> ( )
+								<br/>
+								Permite que el jugador compre algún personaje y avisa si la compra se realizó exitosamente.
+							</td>
+						</tr>
+						<tr>
 							<td>void</td>
 							<td>
-								<b>Render</b> ( )
+								<b>verMapa</b> ( )
 								<br/>
-								Función de Phaser, que sirve renderizar el juego.
+								Inicia el estado de <b>navegacion.js</b> después de que sea presiona el botón de regresar.
 							</td>
 						</tr>
 						<tr>
@@ -135,7 +143,7 @@
 					<br/>
 					<table>
 						<tr class="filauno tabla2">
-							<td colspan="3">render( )</td>
+							<td colspan="3">compra( )</td>
 						</tr>
 						<tr>
 							<td>
@@ -153,7 +161,35 @@
 								No recibe parámetros.
 							</td>
 							<td>
-								Esta es una función del framework Phaser, aquí se renderizará el juego. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+								Esta función verifica si el jugador ya tiene el personaje a comprar, si esto sucede le avisa esto mediante un mensaje en la ventana de juego, y si no realiza la compra exitosamente, descontando las monedas y aumentando la experiencia del jugador.
+							</td>
+							<td>
+								Retorna una cadena que será mostrada en la ventana del juego, esta cadena puede ser "¡Ya posees este personaje!" o "Personaje comprado exitosamente".
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">verMapa( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función permite iniciar el estado de <b>navegacion.js</b> después de que el botón de regresar sea presionado.
 							</td>
 							<td>
 								No tiene retorno.
@@ -206,151 +242,97 @@
 							</td>
 						</tr>
 						<tr>
-							<td>idNivel</td>
+							<td>speedMult</td>
+							<td>double</td>
+							<td>Representa la velocidad dentro del scroll.</td>
+						</tr>
+						<tr>
+							<td>friction</td>
+							<td>double</td>
+							<td>Representa la fricción dentro del scroll.</td>
+						</tr>
+						<tr>
+							<td>animals</td>
+							<td>String [ ]</td>
+							<td>Arreglo de 9 posiciones en el cual se encuentran los nombres de los 9 animales de los personajes buenos.</td>
+						</tr>
+						<tr>
+							<td>names</td>
+							<td>String [ ]</td>
+							<td>Arreglo de 9 posiciones en el cual se encuentran los nombres de los 9 personajes buenos.</td>
+						</tr>
+						<tr>
+							<td>scrollText</td>
+							<td>String</td>
+							<td>Cadena que será mostrada en la ventada del juego en un determinado momento del scroll.</td>
+						</tr>
+						<tr>
+							<td>comprado</td>
+							<td>boolean [ ]</td>
+							<td>Arreglo de 9 posiciones que contiene si un personaje fue comprado (true) o si no fue comprado (false).</td>
+						</tr>
+						<tr>
+							<td>animal</td>
+							<td>String</td>
+							<td>Cadena, la cual es el nombre del personaje a comprar.</td>
+						</tr>
+						<tr>
+							<td>monedas</td>
 							<td>int</td>
-							<td>Representa el id del nivel seleccionado.</td>
+							<td>Monedas que tiene el jugador.</td>
 						</tr>
 						<tr>
-							<td>personajeJugador</td>
-							<td>PhaserSprite</td>
-							<td>Sprite del personaje del jugador.</td>
-						</tr>
-						<tr>
-							<td>personajeComputadora</td>
-							<td>PhaserSprite</td>
-							<td>Sprite del personaje de la computadora.</td>
-						</tr>
-						<tr>
-							<td>cursores</td>
-							<td>PhaserKeyboard</td>
-							<td>Cursores que se usaran para que el jugador mueva al personaje.</td>
-						</tr>
-						<tr>
-							<td>counter</td>
+							<td>xp</td>
 							<td>int</td>
-							<td>Representa el tiempo de la partida.</td>
+							<td>Experiencia que tiene el jugador.</td>
 						</tr>
 						<tr>
-							<td>ti</td>
-							<td>int</td>
-							<td>Muestra el avance del tiempo de la partida en segundos.</td>
+							<td>nickname</td>
+							<td>String</td>
+							<td>Nickname del jugador.</td>
 						</tr>
 						<tr>
-							<td>danoH</td>
-							<td>Double [ ]</td>
-							<td>Arreglo de 3 posiciones que indica el daño que ocasiona el jugador con cada uno de sus ataques.</td>
+							<td>startButton</td>
+							<td>PhaserButton</td>
+							<td>Botón de comprar.</td>
 						</tr>
 						<tr>
-							<td>danoV</td>
-							<td>Double [ ]</td>
-							<td>Arreglo de 3 posiciones que indica el daño que ocasiona la computadora con cada uno de sus ataques.</td>
+							<td>botonVolver</td>
+							<td>PhaserButton</td>
+							<td>Botón de volver.</td>
+						</tr>
+						<tr>
+							<td>compradoL</td>
+							<td>PhaserText</td>
+							<td>Cadena que aparece en la ventana mostrando si un personaje esta comprado o no.</td>
 						</tr>
 						<tr>
 							<td>musicButton</td>
 							<td>PhaserButton</td>
-							<td>Botón que se usa para agregar sonidos a la batalla.</td>
+							<td>Botón que al ser presionado reproducirá un audio.</td>
 						</tr>
 						<tr>
-							<td>movH</td>
-							<td>Boolean [ ]</td>
-							<td>Arreglo de 4 posiciones, las cuales, la primera significa que el jugador se esta defendiendo, la segunda significa que el jugador esta atacando con el ataque normal, la tercera significa que el jugador esta atacando con el ataque de personalidad y la cuarta posición significa que el jugador se esta defendiendo de un ataque tipo plagio.</td>
+							<td>texts</td>
+							<td>String [ ]</td>
+							<td>Arreglo de 9 posiciones, el cual contiene la descripción de cuanto cuesta cada personaje y sus recompensas al comprarlo.</td>
 						</tr>
 						<tr>
-							<td>movV</td>
-							<td>Boolean [ ]</td>
-							<td>Arreglo de 4 posiciones, las cuales, la primera significa que la computadora se esta defendiendo, la segunda significa que la computadora esta atacando con el ataque normal, la tercera significa que la computadora esta atacando con el ataque de personalidad y la cuarta posición significa que la computadora esta atacando con el ataque tipo plagio.</td>
+							<td>cMonedas</td>
+							<td>int [ ]</td>
+							<td>Arreglo de enteros de 9 posiciones, el cual contiene los precios de cada personaje.</td>
 						</tr>
 						<tr>
-							<td>ataquePlagio</td>
-							<td>PhaserSprite</td>
-							<td>Sprite del poder de plagio de la computadora.</td>
+							<td>rMonedas</td>
+							<td>int [ ]</td>
+							<td>Arreglo de enteros de 9 posiciones, el cual contiene las recompensas economicas al comprar cada uno de los personajes.</td>
 						</tr>
 						<tr>
-							<td>ataquePersonalidadC</td>
-							<td>PhaserSprite</td>
-							<td>Sprite del poder de personalidad de la computadora.</td>
-						</tr>
-						<tr>
-							<td>idPJ</td>
-							<td>int</td>
-							<td>Entero que contiene el id del personaje del jugador</td>
-						</tr>
-						<tr>
-							<td>idPC</td>
-							<td>int</td>
-							<td>Entero que contiene el id del personaje la computadora</td>
-						</tr>
-						<tr>
-							<td>costoAtaqueJ</td>
-							<td>double</td>
-							<td>Costo en la barra de energía cuando el jugador use el ataque de personalidad</td>
-						</tr>
-						<tr>
-							<td>costoAtaqueC</td>
-							<td>double</td>
-							<td>Costo en la barra de energía cuando la computadora use el ataque de personalidad</td>
-						</tr>
-						<tr>
-							<td>costoPlagioC</td>
-							<td>double</td>
-							<td>Costo en la barra de energía cuando la computadora use el ataque dtipo plagio</td>
-						</tr>
-						<tr>
-							<td>secuencia</td>
-							<td>boolean</td>
-							<td>variable booleana que esta en tru cuando la computadora este realizando un movimiento y en false cuando no lo este realizando.</td>
-						</tr>
-						<tr>
-							<td>movimientoComputadora</td>
-							<td>String</td>
-							<td>Cadena que identificará el movimiento que realizará la computadora.</td>
-						</tr>
-						<tr>
-							<td>primerImpacto</td>
-							<td>Boolean</td>
-							<td>Se usa para que el ataque tipo plagio de la computadora solo reste vida una vez.</td>
-						</tr>
-						<tr>
-							<td>indice</td>
-							<td>int</td>
-							<td>Indice que representa el indice del movimiendo que esta realizando la computadora.</td>
-						</tr>
-						<tr>
-							<td>fondoGame</td>
-							<td>PhaserSprite</td>
-							<td>Sprite del fondo de la batalla.</td>
-						</tr>
-						<tr>
-							<td>ataquePersonalidadJ</td>
-							<td>PhaserSprite</td>
-							<td>Sprite del ataque de personalidad del jugador.</td>
-						</tr>
-						<tr>
-							<td>escudo1</td>
-							<td>PhaserSprite</td>
-							<td>Sprite del primer escudo del jugador.</td>
-						</tr>
-						<tr>
-							<td>escudo2</td>
-							<td>PhaserSprite</td>
-							<td>Sprite del segundo escudo del jugador.</td>
-						</tr>
-						<tr>
-							<td>gamePad</td>
-							<td>PhaserPlugin</td>
-							<td>Plugin de phaser para utilizar joystick en los dispositivos moviles.</td>
-						</tr>
-						<tr>
-							<td>joystick</td>
-							<td>PhaserJoystick</td>
-							<td>Joystick para queel jugador mueva al personaje durante la batalla.</td>
-						</tr>
-						<tr>
-							<td>pausa</td>
-							<td>PhaserButton</td>
-							<td>Botón para pausar la batalla.</td>
+							<td>rExperiencia</td>
+							<td>int [ ]</td>
+							<td>Arreglo de enteros de 9 posiciones, el cual contiene las recompensas de experiencia al comprar cada uno de los personajes.</td>
 						</tr>
 					</table>
+					<br/>
 				</article>
 			</section>
 			<aside>
