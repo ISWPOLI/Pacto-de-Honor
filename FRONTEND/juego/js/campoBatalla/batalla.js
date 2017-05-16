@@ -133,9 +133,9 @@ var batalla = {
 			game.add.text(125,20,personajesBuenos[variablesCampoBatalla.idPJ].nombre,{fill:'white'});
             game.add.text(480,20,personajesMalos[variablesCampoBatalla.idPC].nombre,{fill:'white'});
                  
-			vidaBlancoJugador = new Phaser.Rectangle(124, 53, 200, 20);//primer barra blanca de vida
-			vidaNegroJugador = new Phaser.Rectangle(123, 52, 202, 22);//primer borde negro de vida 
-			vidaRojoJugador = new Phaser.Rectangle(124, 53, 200, 20);//primer barra roja  de vida
+			vidaBlancoJugador = new Phaser.Rectangle(124, 53, personajesBuenos[idPJ].vida, 20);//primer barra blanca de vida
+			vidaNegroJugador = new Phaser.Rectangle(123, 52, personajesBuenos[idPJ].vida+2, 22);//primer borde negro de vida 
+			vidaRojoJugador = new Phaser.Rectangle(124, 53, personajesBuenos[idPJ].vida, 20);//primer barra roja  de vida
 
 			energiaBlancaJugador = new Phaser.Rectangle(124, 79, 200, 20);//primer barra blanca de energia
 			energiaNegroJugador = new Phaser.Rectangle(123, 78, 202, 22);//primer borde negro de energia

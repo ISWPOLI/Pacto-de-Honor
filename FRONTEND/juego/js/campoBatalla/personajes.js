@@ -14,35 +14,35 @@ var personajesBuenos={
               "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderGallo.png",
 			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/AndresGallo.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoLeon.png",
-			  "daño":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":3},
+			  "daño":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":4},
     
     "idPTres":{"nombre":"Cata Cierva","rutaSprite":"../img/personajes/personajesBuenos/cierva.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraCierva.png",
               "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderCierva.png",
 			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/Cata Cierva.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoGallo.png",
-			  "daño":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":3},
+			  "daño":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":5},
 
 	"idPCuatro":{"nombre":"Daniela Jirafa","rutaSprite":"../img/personajes/personajesBuenos/jirafa.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraJirafa.png",
               "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderJirafa.png",
 			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/Daniela Jirafa.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoLeon.png",
-			  "daño":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":3},
+			  "daño":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":6},
     
     "idPCinco":{"nombre":"Daniel León","rutaSprite":"../img/personajes/personajesBuenos/leon.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraLeon.png",
               "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderLeon.png",
 			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/DanielLeon.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoGallo.png",
-			  "daño":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":3},
+			  "daño":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":7},
 
 	"idPSeis":{"nombre":"Fabián Canario","rutaSprite":"../img/personajes/personajesBuenos/canario.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraCanario.png",
               "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderCanario.png",
 			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/Fabian Canario.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoLeon.png",
-			  "daño":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":3},
+			  "daño":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":8},
     
     "idPSiete":{"nombre":"Iván Ruiseñor","rutaSprite":"../img/personajes/personajesBuenos/ruisenor.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraRuiseñor.png",
@@ -63,7 +63,7 @@ var personajesBuenos={
               "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderHormiga.png",
 			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/tati Hormiga.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoGallo.png",
-			  "daño":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":3}
+			  "daño":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":2}
 }
 
 var personajesMalos={
