@@ -33,6 +33,9 @@ var jefes = function(game){};
             game.load.spritesheet('juanRata', '../img/personajes/avatares/botonRata.png', 75, 75);
             game.load.spritesheet('luisVibora', '../img/personajes/avatares/botonVibora.png', 75, 75);
             game.load.spritesheet('andresZorro', '../img/personajes/avatares/botonZorro.png', 75, 75);
+            game.load.spritesheet('abejaderrota', '../img/Componentes/jefes/abejaderrota.png', 400,400);
+            game.load.spritesheet('micoderrota', '../img/Componentes/jefes/micoderrota.png', 400,400);
+            game.load.spritesheet('buitrederrota', '../img/Componentes/jefes/buitrederrota.png', 400,400);
 
        
         },
@@ -85,10 +88,24 @@ var jefes = function(game){};
             boot.verificarMusica("menu");
 
         },
-        abejasClick: function(){variablesBoot.sonidoBoton.play();
-                                   var s = game.add.sprite(450, 230, 'anaSaraAbejas');
-                                        s.rotate = 0.15;},
-       
+        abejasClick: function(){
+            variablesBoot.sonidoBoton.play();
+            var s = game.add.sprite(400, 150, 'abejaderrota');
+            s.rotate = 0.15;
+            s.scale.setTo(1);
+        },
+        babuinoClick:function(){
+           variablesBoot.sonidoBoton.play();
+            var s = game.add.sprite(400, 150, 'micoderrota');
+            s.rotate = 0.15;
+            s.scale.setTo(1);
+       },
+        buitreClick:function(){
+           variablesBoot.sonidoBoton.play();
+            var s = game.add.sprite(400, 150, 'buitrederrota');
+            s.rotate = 0.15;
+            s.scale.setTo(1);
+       },
         
         //Funcion que se llama al oprimir el boton 'Personajes Malos'
         verPersonajesMalos: function(){
