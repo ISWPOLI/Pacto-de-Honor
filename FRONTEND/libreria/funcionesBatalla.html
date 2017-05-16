@@ -1,0 +1,1447 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="shortcut icon" type="image/x-icon" href="img/logosinfondo.ico">
+		<title>Funciones Batalla</title>
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="icons/icons.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<script src="js/jquery-latest.js"></script>
+		<script src="js/goUpButton.js"></script>
+	</head>
+	<body>
+		<nav class="goUp icon-chevron-up"></nav>
+		<header>
+			<div>
+				<img class="portada" src="img/portada.png">
+			</div>
+			<nav>
+				<ul>
+					<li><a href="inicio.html">Inicio</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section class="main">
+			<section class="articles">
+				<article>
+					<h2>funcionesBatalla.js</h2>
+					<br/>
+					<p>Dentro de esta clase se encuentran todas las funciones que se utilizaran durante la batalla, las funciones de esta clase se usan dentro de <b>batalla.js</b>.</p>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla1">
+							<td colspan="2">Funciones</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Dato de retorno</b>
+							</td>
+							<td>
+								<b>Descripción breve</b>
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>cargar</b> (<b>String</b> idPJ, <b>String</b> idPC, <b>int</b> caa, <b>String</b> idNivel)
+								<br/>
+								Carga los sprites necesarios para la batalla.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>iniciarSprite</b> (<b>PhaserSprite</b> sprite)
+								<br/>
+								Agrega animaciones (movimientos) al sprite e inicia una de ellas.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>pausar</b> ( )
+								<br/>
+								Pone la batalla en estado de pausa.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>unpause</b> ( )
+								<br/>
+								Reanuda, reinicia, sale, o silencia el sonido de la batalla.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>actualizarVida</b> (<b>PhaserRectangle</b> barra, <b>double</b> daño)
+								<br/>
+								Disminuye la barra de vida del personaje o de la computadora según el daño recibido.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>movimientoJugador</b> (<b>PhaserRectangle</b> barra)
+								<br/>
+								Gestiona todos los movimientos del jugador para la versión web según la tecla presionada.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>clickBotonPoder</b> ( )
+								<br/>
+								Disminuye la barra de energía del jugador, y muestra el sprite del poder de personalidad del jugador.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>activarPersonalidadC</b> ( )
+								<br/>
+								Muestra el sprite del poder de personalidad de la computadora.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>activarPlagioC</b> ( )
+								<br/>
+								Muestra el sprite del poder de plagio de la computadora.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>activarPersonalidadJ</b> ( )
+								<br/>
+								Muestra el sprite del poder de personalidad del jugador.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>cargarEnergia</b> (<b>PhaserRectangle</b> barra)
+								<br/>
+								Carga la barra de energía del jugador y de la computadora mientras esta no este al 100%.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>impactoPlagioC</b> (<b>PhaserSprite</b> personaje, <b>PhaserSprite</b> ataque)
+								<br/>
+								Disminuye la barra de vida del jugador cuando el poder tipo plagio impacte con el jugador.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>impactoAtaqueJugador</b> (<b>PhaserSprite</b> personaje, <b>PhaserSprite</b> ataque)
+								<br/>
+								Disminuye la barra de vida de la computadora cuando el poder de personalidad del jugador impacte con la computadora.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>impactoAtaqueComputadora</b> (<b>PhaserSprite</b> personaje, <b>PhaserSprite</b> ataque)
+								<br/>
+								Disminuye la barra de vida del jugador cuando el poder de personalidad la computadora impacte con el jugador.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>spriteImpactoJugador</b> ( )
+								<br/>
+								Muestra el sprite de impacto después de que el jugador ataque con el poder de personalidad.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>spriteImpactoComputadora</b> ( )
+								<br/>
+								Muestra el sprite de impacto después de que la computadora ataque con el poder de personalidad.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>spriteImpactoPlagioComputadora</b> ( )
+								<br/>
+								Muestra el sprite de impacto después de que la computadora ataque con el poder tipo plagio.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>colision</b> ( )
+								<br/>
+								Disminuye la barra de vida del jugador o de la computadora despues de que alguno de estos golpee al otro.
+							</td>
+						</tr>
+						<tr>
+							<td>String</td>
+							<td>
+								<b>finJuego</b> ( )
+								<br/>
+								Muestra en la ventana del juego "JUEGO TERMINADO". 
+							</td>
+						</tr>
+						<tr>
+							<td>int</td>
+							<td>
+								<b>numeroAleatorio</b> (<b>int</b> min, <b>int</b> max)
+								<br/>
+								Devuelve un número al azar entre un mínimo y un máximo.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>primerMovimientoComputadora</b> ( )
+								<br/>
+								Permite a la computadora realizar una primera combinación de movimientos especificos.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>segundoMovimientoComputadora</b> ( )
+								<br/>
+								Permite a la computadora realizar una segunda combinación de movimientos especificos.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>tercerMovimientoComputadora</b> ( )
+								<br/>
+								Permite a la computadora realizar una tercera combinación de movimientos especificos.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>guiaComputadora</b> (<b>String</b> string)
+								<br/>
+								Define algún movimiento para la computadora con una cadena especifica.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>showBox</b> ( )
+								<br/>
+								Muestra una caja misteriosa durante la batalla.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>hideBox</b> ( )
+								<br/>
+								Oculta una caja misteriosa que este en la batalla.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>catchedBox</b> ( )
+								<br/>
+								Verifica si el jugador atrapó la caja misteriosa.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>hideOpenBox</b> ( )
+								<br/>
+								Oculta una caja misteriosa después de ser abierta por el jugador.
+							</td>
+						</tr>
+						<tr>
+							<td>int</td>
+							<td>
+								<b>giftBox</b> ( )
+								<br/>
+								Aumenta el total del tiempo de la batalla en 20 segundos.
+							</td>
+						</tr>
+						<tr>
+							<td>int</td>
+							<td>
+								<b>giftLife</b> (<b>PhaserRectangle</b> life)
+								<br/>
+								Aumenta la barra de vida del jugador durante la batalla.
+							</td>
+						</tr>
+						<tr>
+							<td>int</td>
+							<td>
+								<b>stealLife</b> (<b>PhaserRectangle</b> life)
+								<br/>
+								Roba vida de la computadora.
+							</td>
+						</tr>
+						<tr>
+							<td>int [ ]</td>
+							<td>
+								<b>changeLife</b> (<b>PhaserRectangle</b> ulife, <b>PhaserRectangle</b> cpulife)
+								<br/>
+								Devuelve la vida del jugador y la de la computadora en un arreglo.
+							</td>
+						</tr>
+						<tr>
+							<td>int [ ]</td>
+							<td>
+								<b>fatality</b> (<b>PhaserRectangle</b> ulife, <b>PhaserRectangle</b> cpulife)
+								<br/>
+								Baja la vida del jugador y de la computadora al 1% de la barra.
+							</td>
+						</tr>
+						<tr>
+							<td>int [ ]</td>
+							<td>
+								<b>getStrong</b> (<b>double [ ]</b> dano)
+								<br/>
+								Aumenta el daño que causa el jugador a la computadora.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>llamarSecuencia</b> (<b>int</b> indice)
+								<br/>
+								Mueve al personaje de la computadora dependiendo del valor del indice.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>joystick</b> (<b>PhaserJoystick</b> joy, <b>PhaserJoystickButton</b> button)
+								<br/>
+								Gestiona todos los movimientos del jugador para la versión movil según la dirección joystick.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">cargar(String idPJ, String idPC, int caa, String idNivel)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe 4 parámetros, los cuales son, un cadena que representa un índice del jugador dentro del JSON <b>personajes.js</b>, una cadena que representa un índice de la computadora dentro del JSON <b>personajes.js</b>, un índice númerico del 1-8 que representa la caja sorpresa y una cadena que representa un índice del nivel seleccionado.
+							</td>
+							<td>
+								En esta función se cargan todos los sprites necesarios para la batalla, los cuales son, el del escenario, personajes, avatares, botón de pausa, menú de pausa, poder de personalidad del jugador, poder de personalidad de la computadora, poder tipo plagio de la computadora, impacto del poder de personalidad del jugador, impacto del poder de personalidad de la computadora, impacto de poder tipo palgio de la computadora, escudos y cajas sorpresa.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">iniciarSprite(PhaserSprite sprite)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro el sprite al cual se le agregarán animaciones y las fisicas de Phaser.
+							</td>
+							<td>
+								En esta función se crean las animaciones del sprite, se le agregan las fisicas de phaser (Mas información <a class="phaser_link" target="_blank" href="http://phaser.io/docs/2.4.4/Phaser.Physics.html">aqui</a>) y se establecen los limites del sprite.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">pausar( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función se encarga de poner el juego en estado de pausa y agrega el menú de pausa a la ventana.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">unpause( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Dependiendo de la opción seleccionada dentro del menú de pausa, reanuda, reinicia, sale, o silencia la batalla.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">actualizarVida(PhaserRectangle barra, double daño)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro la barra de vida del jugador o de la computadora y como segundo parámetro recibe el daño recibido.
+							</td>
+							<td>
+								Esta función actualiza la barra de vida del jugador o de la computadora dependiendo del daño recibido, en caso de que la barra de vida se agote, se ejecutará la función <b>finJuego()</b>.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">movimientoJugador(PhaserRectangle barra)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro la barra de vida del jugador o de la computadora.
+							</td>
+							<td>
+								Esta función se ejecuta cuando se accede al juego desde la versión web, dentro de ella se gestionan los movimientos del jugador dependiendo si algún cursor del teclado o la tecla de espacio está presionada.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">clickBotonPoder( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función se ejecutará cuando el jugador presione el botón de poder de personalidad, disminuye la barra de energía de este y también muestra el sprite del poder de personalidad del jugador.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">activarPersonalidadC( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Está función se encarga de mostrar el sprite del poder de personalidad de la computadora, también disminuye la barra de energía de la computadora.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">activarPlagioC( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Está función se encarga de mostrar el sprite del poder tipo plagio de la computadora, también disminuye la barra de energía de la computadora.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">activarPersonalidadJ( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Está función se encarga agregar las fisicas de phaser (Mas información <a class="phaser_link" target="_blank" href="http://phaser.io/docs/2.4.4/Phaser.Physics.html">aqui</a>) al sprite del poder de personalidad del jugador.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">cargarEnergia(PhaserRectangle barra)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro la barra (energía o vida) a cargar.
+							</td>
+							<td>
+								Esta función carga la barra de energía del jugador y de la computadora mientras esta no este al 100%.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">impactoPlagioC(PhaserSprite personaje, PhaserSprite ataque)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetros el sprite del jugador y el sprite del poder tipo plagio de la computadora.
+							</td>
+							<td>
+								Esta función disminuye la barra de vida del jugador cuando el poder tipo plagio de la computadora impacte con el jugador.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">impactoAtaqueJugador(PhaserSprite personaje, PhaserSprite ataque)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetros el sprite de la computadora y el sprite del poder de personalidad del jugador.
+							</td>
+							<td>
+								Esta función disminuye la barra de vida de la computadora cuando el poder de personalidad del jugador impacte con la computadora. 
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">impactoAtaqueComputadora(PhaserSprite personaje, PhaserSprite ataque)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetros el sprite del jugador y el sprite del poder de personalidad de la computadora.
+							</td>
+							<td>
+								Esta función disminuye la barra de vida del jugador cuando el poder de personalidad de la computadora impacte con el jugador.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">spriteImpactoJugador( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función muestra el sprite de impacto durante 1 segundos después de que el jugador ataque con el poder de personalidad.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">spriteImpactoComputadora( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función muestra el sprite de impacto durante 1 segundo después de que la computadora ataque con el poder de personalidad. 
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">spriteImpactoPlagioComputadora( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función muestra el sprite de impacto durante 1 segundo después de que la computadora ataque con el poder tipo plagio.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">colision( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función disminuye la barra de vida del jugador o de la computadora despues de que alguno de estos golpee al otro.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">finJuego( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función determina quien agno la batalla verificando quien tiene la barra de vida vacia, luego muestra un mensaje en la ventana, el cual es "JUEGO TERMINADO".
+							</td>
+							<td>
+								Retorna un String que será mostrado en la vetana del juego.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">numeroAleatorio(int min, int max)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetros un número mínimo y un número máximo.
+							</td>
+							<td>
+								Esta función calcula un número al azar entre el rango de un mínimo y un máximo.
+							</td>
+							<td>
+								Retorna un número entero.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">primerMovimientoComputadora( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función permite a la computadora realizar una primera combinación de movimientos especificos. 
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">segundoMovimientoComputadora( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función permite a la computadora realizar una segunda combinación de movimientos especificos. 
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">tercerMovimientoComputadora( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función permite a la computadora realizar una tercera combinación de movimientos especificos. 
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">guiaComputadora(String string)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro una cadena que indica que movimiento hará la computadora.
+							</td>
+							<td>
+								Esta función permite que la computadora haga un movimiento especifico dependiendo de una cadena, esta cadena puede ser "adelante", "atras", "defensa" y "punos".
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">showBox( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función muestra una caja misteriosa durante la batalla.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">hideBox( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función oculta una caja misteriosa que este en la batalla.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">catchedBox( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función verifica si el jugador atrapó la caja misteriosa.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">hideOpenBox( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función oculta una caja misteriosa después de ser abierta por el jugador. 
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">giftBox( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función aumenta el tiempo total de la batalla en 20 segundos.
+							</td>
+							<td>
+								Retorna un número entero que representa el número en segundos a aumentar en la batalla.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">giftLife(PhaserRectangle life)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro la barra de vida del jugador.
+							</td>
+							<td>
+								Esta función aumenta la barra de vida del jugador durante la batalla. 
+							</td>
+							<td>
+								Retorna un número entero que representa el valor que se aumentó a la barra de vida.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">steallife(PhaserRectangle life)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro la barra de vida de la computadora.
+							</td>
+							<td>
+								Esta función roba vida de la computadora. 
+							</td>
+							<td>
+								Retorna un número entero que representa el valor de vida que fue quitado a la computadora.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">changeLife(PhaserRectangle ulife, PhaserRectangle cpulife)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetros la barra de vida del jugador y la barra de vida de la computadora.
+							</td>
+							<td>
+								Esta función devuelve la vida del jugador y la de la computadora en un arreglo. 
+							</td>
+							<td>
+								Retorna un arreglo de enteros, el cual tiene dos posiciones y contiene la cantidad de vida del jugador y de la computadora.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">fatality(PhaserRectangle ulife, PhaserRectangle cpulife)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetros la barra de vida del jugador y la barra de vida de la computadora.
+							</td>
+							<td>
+								Esta función baja la vida del jugador y la vida de la computadora al 1%. 
+							</td>
+							<td>
+								Retorna un arreglo de enteros, el cual tiene dos posiciones y contiene la cantidad de vida del jugador y de la computadora.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">getStrong(double dano)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro el daño que causa el jugador.
+							</td>
+							<td>
+								Esta función aumenta el daño que causa el jugador.
+							</td>
+							<td>
+								Retorna un arreglo de enteros, el cual tiene dos posiciones y contiene los nuevos valores de daño que causa el jugador.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">llamarSecuencia(int indice)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro un índice númerico que determinará los movimientos de la computadora.
+							</td>
+							<td>
+								Esta función mueve al personaje de la computadora dependiendo del valor de un índice, este valor puede ser 1, 2 o 3.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">joystick(PhaserJoystick joy, PhaserJoystickButton button) </td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetros el joystick de phaser y el botón del joystick.
+							</td>
+							<td>
+								Esta función gestiona todos los movimientos del jugador para la versión movil según la dirección joystick.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla3">
+							<td colspan="3">Variables</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Nombre</b>
+							</td>
+							<td>
+								<b>Tipo de dato</b>
+							</td>
+							<td>
+								<b>Explicación</b>
+							</td>
+						</tr>
+						<tr>
+							<td>ganadorBatalla</td>
+							<td>boolean</td>
+							<td>Representa si el jugador gano (true) o perdio (false) la batalla.</td>
+						</tr>
+						<tr>
+							<td>golpeAlAire</td>
+							<td>PhaserAudio</td>
+							<td>Audio cuando el jugador o la computadora golpee el aire.</td>
+						</tr>
+						<tr>
+							<td>golpe_al_cuerpo</td>
+							<td>PhaserAudio</td>
+							<td>Audio cuando el jugador o la computadora golpee el cuerpo del rival.</td>
+						</tr>
+						<tr>
+							<td>lal</td>
+							<td>PhaserImage</td>
+							<td>Imagen del menú de pausa.</td>
+						</tr>
+						<tr>
+							<td>counter</td>
+							<td>int</td>
+							<td>Representa el contador del tiempo de la batalla.</td>
+						</tr>
+						<tr>
+							<td>impacto</td>
+							<td>PhaserSprite</td>
+							<td>Sprite de impacto ya sea del jugador o de la computadora.</td>
+						</tr>
+						<tr>
+							<td>newLife</td>
+							<td>int [ ]</td>
+							<td>Arreglo, el cual contiene la vida del jugador y de la computadora después de que este al 1%.</td>
+						</tr>
+						<tr>
+							<td>newStrong</td>
+							<td>int [ ]</td>
+							<td>Arreglo, el cual contiene el daño del jugador.</td>
+						</tr>
+					</table>
+				</article>
+			</section>
+			<aside>
+				<h3>Clases</h3>
+				<p><a href="batalla.html">Batalla</a></p>
+				<p><a href="boot.html">Boot</a></p>
+				<p><a href="cajaMisteriosa.html">Caja Misteriosa</a></p>
+				<p><a href="codigoUsado.html">Codigo Usado</a></p>
+				<p><a href="compraPersonajes.html">Compra Personajes</a></p>
+				<p><a href="cookies.html">Cookies</a></p>
+				<p><a href="creditos.html">Creditos</a></p>
+				<p><a href="desbloqueoPersonaje.html">Desbloqueo Personaje</a></p>
+				<p><a href="fin.html">Fin</a></p>
+				<p><a href="funcionesBatalla.html">Funciones Batalla</a></p>
+				<p><a href="game.html">Game</a></p>
+				<p><a href="historieta.html">Historieta</a></p>
+				<p><a href="invitarAmigos.html">Invitar Amigos</a></p>
+				<p><a href="logros.html">Logros</a></p>
+				<p><a href="movil.html">Móvil</a></p>
+				<p><a href="mundo1.html">Mundo1</a></p>
+				<p><a href="mundo2.html">Mundo2</a></p>
+				<p><a href="mundo3.html">Mundo3</a></p>
+				<p><a href="mundo4.html">Mundo4</a></p>
+				<p><a href="mundo5.html">Mundo5</a></p>
+				<p><a href="mundo6.html">Mundo6</a></p>
+				<p><a href="mundo7.html">Mundo7</a></p>
+				<p><a href="mundo8.html">Mundo8</a></p>
+				<p><a href="mundo9.html">Mundo9</a></p>
+				<p><a href="mundo10.html">Mundo10</a></p>
+				<p><a href="mundo11.html">Mundo11</a></p>
+				<p><a href="mundo12.html">Mundo12</a></p>
+				<p><a href="navegacion.html">Navegación</a></p>
+				<p><a href="perfilJugador.html">Perfil Jugador</a></p>
+				<p><a href="pruebasPsicotecnicas.html">Pruebas Psicotécnicas</a></p>
+				<p><a href="rankings.html">Rankings</a></p>
+				<p><a href="seleccionAvatar.html">Selección Avatar</a></p>
+				<p><a href="seleccionPersonaje.html">Selección Personaje</a></p>
+				<p><a href="verificacionDeCodigo.html">Verificación de Código</a></p>
+			</aside>
+		</section>
+		<footer>
+			<p>
+				Poli Fighters - 2017
+			</p>
+		</footer>
+	</body>
+</html>

@@ -3,7 +3,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<link rel="shortcut icon" type="image/x-icon" href="img/logosinfondo.ico">
-		<title>Verficación de Codigo</title>
+		<title>Cookies</title>
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="icons/icons.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -25,9 +25,9 @@
 		<section class="main">
 			<section class="articles">
 				<article>
-					<h2>VerificacionDeCodigo.js</h2>
+					<h2>cookies.js</h2>
 					<br/>
-					<p>Esta clase se usará para validar un código alfanúmerico introducido por el jugador, en la cual se valida que tenga 11 caracteres, que empiece con un número del 1-9, que en la sexta posición alla un guión y que en la ultima posición alla una "P" o una "E".</p>
+					<p>En esta clase se implementan las cookies para guardar lo que se consume de un servicio, y asi no consumirlo una y otra vez.</p>
 					<br/>
 					<br/>
 					<table>
@@ -43,11 +43,27 @@
 							</td>
 						</tr>
 						<tr>
+							<td>void</td>
+							<td>
+								<b>setCookie</b> (<b>String</b> cname, <b>String</b> cvalue)
+								<br/>
+								Crea una cookie.
+							</td>
+						</tr>
+						<tr>
 							<td>String</td>
 							<td>
-								<b>validarString</b> (<b>String</b> cadenaAnalizar)
+								<b>getCookie</b> (<b>String</b> cname)
 								<br/>
-								Verificar si el código alfanúmerico es valido.
+								Obtiene el valor de una cookie.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>checkCookie</b> ( )
+								<br/>
+								Revisa las cookies en busca de una, en caso de no encontrarla, esta función la crea.
 							</td>
 						</tr>
 					</table>
@@ -55,7 +71,7 @@
 					<br/>
 					<table>
 						<tr class="filauno tabla2">
-							<td colspan="3">validarString</td>
+							<td colspan="3">setCookie(String cname, String cvalue)</td>
 						</tr>
 						<tr>
 							<td>
@@ -70,13 +86,69 @@
 						</tr>
 						<tr>
 							<td>
-								Esta función recibe como parametro una cadena <b>cadenaAnalizar</b> que representa un código alfanúmerico.
+								Recibe como parámetros una key y su valor.
 							</td>
 							<td>
-								Verificará el código alfanúmerico introducido, y determinará si este es valido o no.
+								Crea una cookie con una <b>key</b> y un <b>valor</b> especifico.
 							</td>
 							<td>
-								Retornará una cadena especificando si el código alfanúmerico esta mal escrito o no existe.
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">getCookie(String cname)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro una key de una cookie.
+							</td>
+							<td>
+								Obtiene el valor de una cookie con una <b>key</b> especifica.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">checkCookie( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Revisa la cookies existentes en busca de una en especifico, en caso de no encontrarla, esta función la crea.
+							</td>
+							<td>
+								No tiene retorno.
 							</td>
 						</tr>
 					</table>
@@ -98,21 +170,22 @@
 							</td>
 						</tr>
 						<tr>
-							<td>mapnumeros1</td>
-							<td>boolean [ ]</td>
-							<td>Arreglo de 9 posiciones para identificar cada uno de los personajes que se desbloquea</td>
-						</tr>
-						<tr>
-							<td>string</td>
+							<td>name</td>
 							<td>String</td>
-							<td>Cadena que contiene todas las letras y números del abecedario</td>
+							<td>Key de la cookie.</td>
 						</tr>
 						<tr>
-							<td>mapletras1</td>
-							<td>boolean [ ]</td>
-							<td>Arreglo de 36 posiciones, en el cual cada posición representa una posición de "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"</td>
+							<td>ca</td>
+							<td>cookie [ ]</td>
+							<td>Arreglo de cookies, las cuales estan divididas por ";".</td>
+						</tr>
+						<tr>
+							<td>user</td>
+							<td>String</td>
+							<td>Cookie obtenida con la función <b>getCookie( )</b>.</td>
 						</tr>
 					</table>
+					<br/>
 				</article>
 			</section>
 			<aside>
