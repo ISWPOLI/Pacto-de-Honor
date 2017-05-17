@@ -1,19 +1,22 @@
 variablesJefes={
 //Variables de botones
-  botonVolver:null, 
-  botonPacto:null, 
-  botonBuenos:null, 
-  botonMalos:null, 
-  botonPlagios:null,
-
-  
-//Variables de los textos y el logo
-  logoPacto:null, 
-  textoPacto:null, 
-  textoBuenos:null, 
-  textoMalos:null, 
-  textoPlagios:null
-  
+    botonVolver:null, 
+    botonPacto:null, 
+    botonBuenos:null, 
+    botonMalos:null, 
+    botonPlagios:null,
+    abejalock:null,
+    micolock:null,
+    buitrelock:null,
+    burrolock:null,
+    camaleonlock:null,
+    hienalock:null,
+    
+    
+    rata:null
+    
+    
+      
 }
 var jefes = function(game){};
     jefes.prototype = {
@@ -36,6 +39,11 @@ var jefes = function(game){};
             game.load.spritesheet('abejaderrota', '../img/Componentes/jefes/abejaderrota.png', 400,400);
             game.load.spritesheet('micoderrota', '../img/Componentes/jefes/micoderrota.png', 400,400);
             game.load.spritesheet('buitrederrota', '../img/Componentes/jefes/buitrederrota.png', 400,400);
+            game.load.spritesheet('burroderrota', '../img/Componentes/jefes/burroderrota.png', 400,400);
+            game.load.spritesheet('camaleonderrota', '../img/Componentes/jefes/camaleonderrota.png', 400,400);
+            game.load.spritesheet('hienaderrota', '../img/Componentes/jefes/hienaderrota.png', 400,400);
+             game.load.spritesheet('rata', '../img/Componentes/jefes/rata.png', 400,400);
+            
 
        
         },
@@ -43,7 +51,7 @@ var jefes = function(game){};
         create: function(){
 
             game.stage.backgroundColor = "#2451A6"; //Color de fondo
-            game.add.text(game.width / 2, 50, "Boss", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5); //Título de Créditos
+            game.add.text(game.width / 2, 50, "Jefes", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5); //Título de Créditos
             
     
             //Se crean los botones de los personajes malos
@@ -86,79 +94,77 @@ var jefes = function(game){};
             
             variablesJefes.botonVolver = game.add.button(5, 5, 'botonVolver', this.volver, 1, 1, 0, 2);
             boot.verificarMusica("menu");
+            
+            variablesJefes.abejalock = game.add.sprite(400, 150, 'abejaderrota');
+            variablesJefes.micolock = game.add.sprite(400, 150, 'micoderrota');
+            variablesJefes.buitrelock =game.add.sprite(400, 150, 'buitrederrota');
+            variablesJefes.burrolock = game.add.sprite(400, 150, 'burroderrota');
+            variablesJefes.camaleonlock  = game.add.sprite(400, 150, 'camaleonderrota');
+            variablesJefes.hienalock  = game.add.sprite(400, 150, 'hienaderrota');
+            variablesJefes.rata  = game.add.sprite(350, 100, 'rata');
+            
+            hideBoss();
+            
+        function hideBoss(){
 
+            variablesJefes.abejalock.visible = false;
+            variablesJefes.micolock.visible =false;
+            variablesJefes.buitrelock.visible = false;
+            variablesJefes.burrolock.visible = false;
+            variablesJefes.camaleonlock.visible = false;
+            variablesJefes.hienalock.visible = false;
+        }
+
+        },
+        hidee:function(){
+            
+            variablesJefes.abejalock.visible = false;
+            variablesJefes.micolock.visible =false;
+            variablesJefes.buitrelock.visible = false;
+            variablesJefes.burrolock.visible = false;
+            variablesJefes.camaleonlock.visible = false;
+            variablesJefes.hienalock.visible = false;
         },
         abejasClick: function(){
             variablesBoot.sonidoBoton.play();
-            var s = game.add.sprite(400, 150, 'abejaderrota');
-            s.rotate = 0.15;
-            s.scale.setTo(1);
+            
+            variablesJefes.abejalock.visible = false;
+            variablesJefes.micolock.visible =false;
+            variablesJefes.buitrelock.visible = false;
+            variablesJefes.burrolock.visible = false;
+            variablesJefes.camaleonlock.visible = false;
+            variablesJefes.hienalock.visible = false;
+            variablesJefes.abejalock.visible = true;
+            
         },
         babuinoClick:function(){
            variablesBoot.sonidoBoton.play();
-            var s = game.add.sprite(400, 150, 'micoderrota');
-            s.rotate = 0.15;
-            s.scale.setTo(1);
+            hidee();
+            variablesJefes.micolock.visible =true;
+           
        },
         buitreClick:function(){
            variablesBoot.sonidoBoton.play();
-            var s = game.add.sprite(400, 150, 'buitrederrota');
-            s.rotate = 0.15;
-            s.scale.setTo(1);
+          variablesJefes.buitrelock.visible = true;
        },
-        
-        //Funcion que se llama al oprimir el boton 'Personajes Malos'
-        verPersonajesMalos: function(){
-
-           
-            variablesJefes.textoMalos.setText("");
-
+        burroClick: function(){
             variablesBoot.sonidoBoton.play();
-        
-            variablesJefes.textoPacto.visible = false;
-            variablesJefes.logoPacto.visible = false;
-            variablesJefes.textoBuenos.visible = false;
-            variablesJefes.textoPlagios.visible=false;
-     
-                        
-            variablesJefes.textoMalos.visible = true;
-            botonAbejas.visible = true;
-            botonBabuino.visible = true;
-            botonBuitre.visible = true;
-            botonBurro.visible = true;
-            botonCamaleon.visible = true;
-            botonHiena.visible = true;
-            botonLagarto.visible = true;
-            botonOso.visible = true;
-            botonPerezoso.visible = true;
-            botonRata.visible = true;
-            botonVibora.visible = true;
-            botonZorro.visible = true;
+            hideBoss();
+            variablesJefes.burrolock.visible = true;
+    
         },
-        
-        //Funcion que se llama al oprimir el boton 'Tipos de plagio'
-        verPlagios: function(){
-
-            
-            variablesJefes.textoPlagios.setText("");
-
-            variablesBoot.sonidoBoton.play();
-            
-
-            botonAbejas.visible = false;
-            botonBabuino.visible = false;
-            botonBuitre.visible = false;
-            botonBurro.visible = false;
-            botonCamaleon.visible = false;
-            botonHiena.visible = false;
-            botonLagarto.visible = false;
-            botonOso.visible = false;
-            botonPerezoso.visible = false;
-            botonRata.visible = false;
-            botonVibora.visible = false;
-            botonZorro.visible = false;
-       
-        },
+        camaleonClick:function(){
+           variablesBoot.sonidoBoton.play();
+            hideBoss();
+            variablesJefes.camaleonlock.visible = true;
+         
+       },
+        hienaClick:function(){
+           variablesBoot.sonidoBoton.play();
+            hideBoss();        
+           variablesJefes.hienalock.visible = true;
+       },
+    
         
         //Funcion que se llama al oprimir el botón de regreso
         volver: function(){
