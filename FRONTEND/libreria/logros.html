@@ -1,0 +1,783 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="shortcut icon" type="image/x-icon" href="img/logosinfondo.ico">
+		<title>Logros</title>
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="icons/icons.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<script src="js/jquery-latest.js"></script>
+		<script src="js/goUpButton.js"></script>
+	</head>
+	<body>
+		<nav class="goUp icon-chevron-up"></nav>
+		<header>
+			<div>
+				<img class="portada" src="img/portada.png">
+			</div>
+			<nav>
+				<ul>
+					<li><a href="inicio.html">Inicio</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section class="main">
+			<section class="articles">
+				<article>
+					<h2>logros.js</h2>
+					<br/>
+					<p>En esta clase se muestran al jugador los tipos de logros que hay, su nombre y como desbloquearlos. Además cada logro mostrará su estado (bloqueado o desbloqueado).</p>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla1">
+							<td colspan="2">Funciones</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Dato de retorno</b>
+							</td>
+							<td>
+								<b>Descripción breve</b>
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>preload</b> ( )
+								<br/>
+								Función de Phaser, que sirve para cargar componentes del juego.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>create</b> ( )
+								<br/>
+								Función de Phaser, que sirve para agregar componentes al juego.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>isUnloocked</b> ( )
+								<br/>
+								Verifica si un logro esta bloqueado o desbloqueado.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>playedUnloock</b> ( )
+								<br/>
+								Bloquea todos los logros.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>recompensa</b> (<b>int</b> exp, <b>int</b> monedas)
+								<br/>
+								Da recompensas economicas y de experiencia al jugador.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>isMikuplagio</b> (<b>int</b> i)
+								<br/>
+								Verifica que el jugador lleve por lo menos 100 horas de juego.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>isMiLifePlagio</b> (<b>int</b> i)
+								<br/>
+								Verifica si el jugador esta dentro del top 5 del ranking.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>isMiSkillPlagio</b> (<b>int</b> i)
+								<br/>
+								Verifica que el jugador haya desbloqueo mas del 70% de los logros.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>isTheOriginalPlagio</b> (<b>int</b> i)
+								<br/>
+								Verifica que el jugador lleve 3 victorias consecutivas en un mundo.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>isMiHitckGround</b> (<b>int</b> i)
+								<br/>
+								Verifica si el jugador lleva 5 días consecutivos dentro del top 5.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>isTheUnloocker</b> (<b>int</b> i)
+								<br/>
+								Verifica que el jugador tenga todos los personajes buenos en su posesion.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>isTheRichest</b> (<b>int</b> i)
+								<br/>
+								Verifica que el jugador tengo 1000000 (un millón) o mas de monedas.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>isTheAList</b> (<b>int</b> i)
+								<br/>
+								Verifica que el jugador este en la primera posición del ranking.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>is5InaRow</b> (<b>int</b> i)
+								<br/>
+								Verifica que el jugador haya pasado por un mundo sin ser derrotado.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>isMyMater</b> (<b>int</b> i)
+								<br/>
+								Verifica que el jugador tenga 1000 putnos o mas de experiencia.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>verPerfil</b> ( )
+								<br/>
+								Regresará a la sección llamada <b>perfilJugador.js</b>.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>update</b> ( )
+								<br/>
+								Función de Phaser, que sirve para cambiar componentes en el juego.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">preload( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta es una función del framework Phaser en la que cargaremos todos los componentes a ser utilizados en el juego como imágenes, sonidos, fondos, sprites, etc. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">create( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta es una función del framework Phaser, aquí se añadirán los componentes al juego. En esta función asignamos la posición inicial, el tamaño, etc. De todos los componentes. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">isUnloocked( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función verifica si un logro esta bloqueado o desbloqueado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">playedUnloock( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función bloquea todos los logros.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">recompensa(int exp, int monedas)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetros los puntos de experiencia y la cantidad de monedas que se obsequieran al jugador.
+							</td>
+							<td>
+								Esta función da recompensas economicas y de experiencia al jugador. 
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">isMikuplagio(int i)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro un índice númerico que representara una posición en el arreglo de desbloqueo de logros.
+							</td>
+							<td>
+								Esta función verifica que el jugador lleve por lo menos 100 horas de juego. 
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">isMiLifePlagio(int i)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro un índice númerico que representara una posición en el arreglo de desbloqueo de logros.
+							</td>
+							<td>
+								Esta función verifica si el jugador esta dentro del top 5 del ranking.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">isMiSkillPlagio(int i)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro un índice númerico que representara una posición en el arreglo de desbloqueo de logros.
+							</td>
+							<td>
+								Esta función verifica que el jugador haya desbloqueo mas del 70% de los logros.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">isTheOriginalPlagio(int i)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro un índice númerico que representara una posición en el arreglo de desbloqueo de logros.
+							</td>
+							<td>
+								Esta función verifica que el jugador lleve 3 victorias consecutivas en un mundo.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">isMiHitckGround(int i)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro un índice númerico que representara una posición en el arreglo de desbloqueo de logros.
+							</td>
+							<td>
+								Esta función verifica si el jugador lleva 5 días consecutivos dentro del top 5. 
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">isTheUnloocker(int i)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro un índice númerico que representara una posición en el arreglo de desbloqueo de logros.
+							</td>
+							<td>
+								Esta función verifica que el jugador tenga todos los personajes buenos en su posesion.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">isTheRichest(int i)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro un índice númerico que representara una posición en el arreglo de desbloqueo de logros.
+							</td>
+							<td>
+								Esta función verifica que el jugador tengo 1000000 (un millón) o mas de monedas.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">isTheAList(int i)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro un índice númerico que representara una posición en el arreglo de desbloqueo de logros.
+							</td>
+							<td>
+								Esta función verifica que el jugador este en la primera posición del ranking.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">is5InaRow(int i)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro un índice númerico que representara una posición en el arreglo de desbloqueo de logros.
+							</td>
+							<td>
+								Esta función verifica que el jugador haya pasado por un mundo sin ser derrotado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">isMyMater(int i)</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro un índice númerico que representara una posición en el arreglo de desbloqueo de logros.
+							</td>
+							<td>
+								Esta función verifica que el jugador tenga 1000 putnos o mas de experiencia.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">verPerfil( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Regresará a la sección llamada <b>perfilJugador.js</b>. 
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">update( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta es una función del framework Phaser, aquí estarán todos los cambios o ‘acciones’ del juego. Qué hacer al presionar una tecla, al mover el cursor, al chocar una pared; en fin, toda la lógica del juego. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla3">
+							<td colspan="3">Variables</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Nombre</b>
+							</td>
+							<td>
+								<b>Tipo de dato</b>
+							</td>
+							<td>
+								<b>Explicación</b>
+							</td>
+						</tr>
+						<tr>
+							<td>speedMult</td>
+							<td>double</td>
+							<td>Representa la velocidad dentro de un scroll.</td>
+						</tr>
+						<tr>
+							<td>friction</td>
+							<td>double</td>
+							<td>Representa la fricción dentro de un scroll.</td>
+						</tr>
+						<tr>
+							<td>namesCharactersl</td>
+							<td>String</td>
+							<td>Cadena que representará el nombre de cada logro en un determinado momento del scroll.</td>
+						</tr>
+						<tr>
+							<td>Logroslooked</td>
+							<td>boolean</td>
+							<td>Arreglo que contiene valores booleanos y estos representan si un logro esta bloqueado o desbloqueado.</td>
+						</tr>
+						<tr>
+							<td>description</td>
+							<td>String</td>
+							<td>Cadena que representará la descripción de cada logro en un determinado momento del scroll.</td>
+						</tr>
+						<tr>
+							<td>startButton</td>
+							<td>PhaserButton</td>
+							<td>Botón que mostrará al jugador si un logro esta bloqueado o desbloqueado.</td>
+						</tr>
+						<tr>
+							<td>moneyLogros</td>
+							<td>int</td>
+							<td>Cantidad de monedas que tiene el jugador.</td>
+						</tr>
+						<tr>
+							<td>rankingLogros</td>
+							<td>int</td>
+							<td>Posición del ranking en la que esta el jugador.</td>
+						</tr>
+						<tr>
+							<td>timeplayedLogros</td>
+							<td>int</td>
+							<td>Tiempo total de juego que lleva el jugador.</td>
+						</tr>
+						<tr>
+							<td>allHeros</td>
+							<td>boolean</td>
+							<td>Representa si el jugador tiene todos los personajes buenos desbloqueados o no.</td>
+						</tr>
+						<tr>
+							<td>xpLogros</td>
+							<td>int</td>
+							<td>Puntos de experiencia que tiene el jugador.</td>
+						</tr>
+						<tr>
+							<td>zoomed</td>
+							<td>boolean</td>
+							<td>Representa si un logro dentro del scroll esta seleccionado o no.</td>
+						</tr>
+					</table>
+				</article>
+			</section>
+			<aside>
+				<h3>Clases</h3>
+				<p><a href="batalla.html">Batalla</a></p>
+				<p><a href="boot.html">Boot</a></p>
+				<p><a href="cajaMisteriosa.html">Caja Misteriosa</a></p>
+				<p><a href="codigoUsado.html">Codigo Usado</a></p>
+				<p><a href="compraPersonajes.html">Compra Personajes</a></p>
+				<p><a href="cookies.html">Cookies</a></p>
+				<p><a href="creditos.html">Creditos</a></p>
+				<p><a href="desbloqueoPersonaje.html">Desbloqueo Personaje</a></p>
+				<p><a href="fin.html">Fin</a></p>
+				<p><a href="funcionesBatalla.html">Funciones Batalla</a></p>
+				<p><a href="game.html">Game</a></p>
+				<p><a href="historieta.html">Historieta</a></p>
+				<p><a href="invitarAmigos.html">Invitar Amigos</a></p>
+				<p><a href="logros.html">Logros</a></p>
+				<p><a href="movil.html">Móvil</a></p>
+				<p><a href="mundo1.html">Mundo1</a></p>
+				<p><a href="mundo2.html">Mundo2</a></p>
+				<p><a href="mundo3.html">Mundo3</a></p>
+				<p><a href="mundo4.html">Mundo4</a></p>
+				<p><a href="mundo5.html">Mundo5</a></p>
+				<p><a href="mundo6.html">Mundo6</a></p>
+				<p><a href="mundo7.html">Mundo7</a></p>
+				<p><a href="mundo8.html">Mundo8</a></p>
+				<p><a href="mundo9.html">Mundo9</a></p>
+				<p><a href="mundo10.html">Mundo10</a></p>
+				<p><a href="mundo11.html">Mundo11</a></p>
+				<p><a href="mundo12.html">Mundo12</a></p>
+				<p><a href="navegacion.html">Navegación</a></p>
+				<p><a href="perfilJugador.html">Perfil Jugador</a></p>
+				<p><a href="pruebasPsicotecnicas.html">Pruebas Psicotécnicas</a></p>
+				<p><a href="rankings.html">Rankings</a></p>
+				<p><a href="seleccionAvatar.html">Selección Avatar</a></p>
+				<p><a href="seleccionPersonaje.html">Selección Personaje</a></p>
+				<p><a href="verificacionDeCodigo.html">Verificación de Código</a></p>
+			</aside>
+		</section>
+		<footer>
+			<p>
+				Poli Fighters - 2017
+			</p>
+		</footer>
+	</body>
+</html>

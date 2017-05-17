@@ -1,0 +1,250 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="shortcut icon" type="image/x-icon" href="img/logosinfondo.ico">
+		<title>Boot</title>
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="icons/icons.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<script src="js/jquery-latest.js"></script>
+		<script src="js/goUpButton.js"></script>
+	</head>
+	<body>
+		<nav class="goUp icon-chevron-up"></nav>
+		<header>
+			<div>
+				<img class="portada" src="img/portada.png">
+			</div>
+			<nav>
+				<ul>
+					<li><a href="inicio.html">Inicio</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section class="main">
+			<section class="articles">
+				<article>
+					<h2>boot.js</h2>
+					<br/>
+					<p>Esta clase se usa para crear un estado de precarga en donde se cargan los audios a usar, la barra de carga, los botones de regresar, los avatares de los personajes y los sprites de los personajes. Ademas, esta clase verifica en que sección del juego esta el jugador para asi gestionar los sonidos del juego.</p>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla1">
+							<td colspan="2">Funciones</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Dato de retorno</b>
+							</td>
+							<td>
+								<b>Descripción breve</b>
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>preload</b> ( )
+								<br/>
+								Función de Phaser, que sirve para cargar componentes del juego.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>create</b> ( )
+								<br/>
+								Función de Phaser, que sirve para agregar componentes al juego.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>verficarMusica</b> (<b>String</b> x)
+								<br/>
+								Gestiona los sonidos del juego según la sección en donde se esta.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">preload( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta es una función del framework Phaser en la que cargaremos todos los componentes a ser utilizados en el juego como imágenes, sonidos, fondos, sprites, etc. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">create( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta es una función del framework Phaser, aquí se añadirán los componentes al juego. En esta función asignamos la posición inicial, el tamaño, etc. De todos los componentes. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">verificarMusica( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Recibe como parámetro una cadena que represnta la sección en donde el jugador esta.
+							</td>
+							<td>
+								Gestiona los sonidos del juego dependiendo de la sección en donde el jugador esta, estas secciones pueden ser "menu", "mapa" o "batalla".
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla3">
+							<td colspan="3">Variables</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Nombre</b>
+							</td>
+							<td>
+								<b>Tipo de dato</b>
+							</td>
+							<td>
+								<b>Explicación</b>
+							</td>
+						</tr>
+						<tr>
+							<td>dispositivoMovil</td>
+							<td>boolean</td>
+							<td>Representa si el jugador accede al jeugo desde un dispositivo móvil o no.</td>
+						</tr>
+						<tr>
+							<td>musicaMapa</td>
+							<td>PhaserAudio</td>
+							<td>Audio que representa la música del mapa.</td>
+						</tr>
+						<tr>
+							<td>musicaMenus</td>
+							<td>PhaserAudio</td>
+							<td>Audio que representa la música de los diferentes menús del juego.</td>
+						</tr>
+						<tr>
+							<td>musicaBatalla</td>
+							<td>PhaserAudio</td>
+							<td>Audio que representa la música de la batalla.</td>
+						</tr>
+						<tr>
+							<td>sonidoBoton</td>
+							<td>PhaserAudio</td>
+							<td>Audio que representa el click de un botón del juego.</td>
+						</tr>
+						<tr>
+							<td>musicaOnOff</td>
+							<td>PhaserAudio</td>
+							<td>Audio que representa la música del juego, se usa para silenciar o no, el juego.</td>
+						</tr>
+					</table>
+				</article>
+			</section>
+
+			<aside>
+				<h3>Clases</h3>
+				<p><a href="batalla.html">Batalla</a></p>
+				<p><a href="boot.html">Boot</a></p>
+				<p><a href="cajaMisteriosa.html">Caja Misteriosa</a></p>
+				<p><a href="codigoUsado.html">Codigo Usado</a></p>
+				<p><a href="compraPersonajes.html">Compra Personajes</a></p>
+				<p><a href="cookies.html">Cookies</a></p>
+				<p><a href="creditos.html">Creditos</a></p>
+				<p><a href="desbloqueoPersonaje.html">Desbloqueo Personaje</a></p>
+				<p><a href="fin.html">Fin</a></p>
+				<p><a href="funcionesBatalla.html">Funciones Batalla</a></p>
+				<p><a href="game.html">Game</a></p>
+				<p><a href="historieta.html">Historieta</a></p>
+				<p><a href="invitarAmigos.html">Invitar Amigos</a></p>
+				<p><a href="logros.html">Logros</a></p>
+				<p><a href="movil.html">Móvil</a></p>
+				<p><a href="mundo1.html">Mundo1</a></p>
+				<p><a href="mundo2.html">Mundo2</a></p>
+				<p><a href="mundo3.html">Mundo3</a></p>
+				<p><a href="mundo4.html">Mundo4</a></p>
+				<p><a href="mundo5.html">Mundo5</a></p>
+				<p><a href="mundo6.html">Mundo6</a></p>
+				<p><a href="mundo7.html">Mundo7</a></p>
+				<p><a href="mundo8.html">Mundo8</a></p>
+				<p><a href="mundo9.html">Mundo9</a></p>
+				<p><a href="mundo10.html">Mundo10</a></p>
+				<p><a href="mundo11.html">Mundo11</a></p>
+				<p><a href="mundo12.html">Mundo12</a></p>
+				<p><a href="navegacion.html">Navegación</a></p>
+				<p><a href="perfilJugador.html">Perfil Jugador</a></p>
+				<p><a href="pruebasPsicotecnicas.html">Pruebas Psicotécnicas</a></p>
+				<p><a href="rankings.html">Rankings</a></p>
+				<p><a href="seleccionAvatar.html">Selección Avatar</a></p>
+				<p><a href="seleccionPersonaje.html">Selección Personaje</a></p>
+				<p><a href="verificacionDeCodigo.html">Verificación de Código</a></p>
+			</aside>
+		</section>
+		<footer>
+			<p>
+				Poli Fighters - 2017
+			</p>
+		</footer>
+	</body>
+</html>

@@ -5,10 +5,13 @@
 		<link rel="shortcut icon" type="image/x-icon" href="img/logosinfondo.ico">
 		<title>Verficación de Codigo</title>
 		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="icons/icons.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="js/jquery-latest.js"></script>
+		<script src="js/goUpButton.js"></script>
 	</head>
 	<body>
+		<nav class="goUp icon-chevron-up"></nav>
 		<header>
 			<div>
 				<img class="portada" src="img/portada.png">
@@ -28,8 +31,16 @@
 					<br/>
 					<br/>
 					<table>
-						<tr class="filauno">
+						<tr class="filauno tabla1">
 							<td colspan="2">Funciones</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Dato de retorno</b>
+							</td>
+							<td>
+								<b>Descripción breve</b>
+							</td>
 						</tr>
 						<tr>
 							<td>String</td>
@@ -43,17 +54,28 @@
 					<br/>
 					<br/>
 					<table>
-						<tr class="filauno">
-							<td colspan="2">validarString</td>
+						<tr class="filauno tabla2">
+							<td colspan="3">validarString</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
 						</tr>
 						<tr>
 							<td>
 								Esta función recibe como parametro una cadena <b>cadenaAnalizar</b> que representa un código alfanúmerico.
-								<br/>
-								<br/>
+							</td>
+							<td>
 								Verificará el código alfanúmerico introducido, y determinará si este es valido o no.
-								<br/>
-								<br/>
+							</td>
+							<td>
 								Retornará una cadena especificando si el código alfanúmerico esta mal escrito o no existe.
 							</td>
 						</tr>
@@ -61,21 +83,32 @@
 					<br/>
 					<br/>
 					<table>
-						<tr class="filauno">
+						<tr class="filauno tabla3">
 							<td colspan="3">Variables</td>
 						</tr>
 						<tr>
-							<td><b>mapnumeros1</b></td>
+							<td>
+								<b>Nombre</b>
+							</td>
+							<td>
+								<b>Tipo de dato</b>
+							</td>
+							<td>
+								<b>Explicación</b>
+							</td>
+						</tr>
+						<tr>
+							<td>mapnumeros1</td>
 							<td>boolean [ ]</td>
 							<td>Arreglo de 9 posiciones para identificar cada uno de los personajes que se desbloquea</td>
 						</tr>
 						<tr>
-							<td><b>string</b></td>
+							<td>string</td>
 							<td>String</td>
 							<td>Cadena que contiene todas las letras y números del abecedario</td>
 						</tr>
 						<tr>
-							<td><b>mapletras1</b></td>
+							<td>mapletras1</td>
 							<td>boolean [ ]</td>
 							<td>Arreglo de 36 posiciones, en el cual cada posición representa una posición de "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"</td>
 						</tr>
@@ -84,41 +117,40 @@
 			</section>
 			<aside>
 				<h3>Clases</h3>
-				<p><a href="#">VerificacionDeCodigo.js</a></p>
-				<p><a href="codigoUsado.html">CodigoUsado.js</a></p>
-				<p><a href="desbloqueoPersonaje.html">DesbloqueoPersonaje.js</a></p>
-				<p><a href="cajaMisteriosa.html">CajaMisteriosa.js</a></p>
-				<p><a href="batalla.html">Batalla.js</a></p>
-				<p><a href="funcionesBatalla.html">FuncionesBatalla.js</a></p>
-				<p><a href="compraPersonajes.html">CompraPersonajes.js</a></p>
-				<p><a href="cookies.html">Cookies.js</a></p>
-				<p><a href="creditos.html">Creditos.js</a></p>
-				<p><a href="historieta.html">Historieta.js</a></p>
-				<p><a href="invitarAmigos.html">InvitarAmigos.js</a></p>
-				<p><a href="logros.html">Logros.js</a></p>
-				<p><a href="mundo1.html">Mundo1.js</a></p>
-				<p><a href="mundo2.html">Mundo2.js</a></p>
-				<p><a href="mundo3.html">Mundo3.js</a></p>
-				<p><a href="mundo4.html">Mundo4.js</a></p>
-				<p><a href="mundo5.html">Mundo5.js</a></p>
-				<p><a href="mundo6.html">Mundo6.js</a></p>
-				<p><a href="mundo7.html">Mundo7.js</a></p>
-				<p><a href="mundo8.html">Mundo8.js</a></p>
-				<p><a href="mundo9.html">Mundo9.js</a></p>
-				<p><a href="mundo10.html">Mundo10.js</a></p>
-				<p><a href="mundo11.html">Mundo11.js</a></p>
-				<p><a href="mundo12.html">Mundo12.js</a></p>
-				<p><a href="navegacion.html">Navegacion.js</a></p>
-				<p><a href="perfilJugador.html">PerfilJugador.js</a></p>
-				<p><a href="boot.html">Boot.js</a></p>
-				<p><a href="game.html">Game.js</a></p>
-				<p><a href="movil.html">Movil.js</a></p>
-				<p><a href="pleaseRotate.html">PleaseRotate.js</a></p>
-				<p><a href="pruebasPsicotecnicas.html">PruebasPsicotecnicas.js</a></p>
-				<p><a href="rankings.html">Rankings.js</a></p>
-				<p><a href="fin.html">Fin.js</a></p>
-				<p><a href="seleccionAvatar.html">SeleccionAvatar.js</a></p>
-				<p><a href="seleccionPersonaje.html">SeleccionPersonaje.js</a></p>
+				<p><a href="batalla.html">Batalla</a></p>
+				<p><a href="boot.html">Boot</a></p>
+				<p><a href="cajaMisteriosa.html">Caja Misteriosa</a></p>
+				<p><a href="codigoUsado.html">Codigo Usado</a></p>
+				<p><a href="compraPersonajes.html">Compra Personajes</a></p>
+				<p><a href="cookies.html">Cookies</a></p>
+				<p><a href="creditos.html">Creditos</a></p>
+				<p><a href="desbloqueoPersonaje.html">Desbloqueo Personaje</a></p>
+				<p><a href="fin.html">Fin</a></p>
+				<p><a href="funcionesBatalla.html">Funciones Batalla</a></p>
+				<p><a href="game.html">Game</a></p>
+				<p><a href="historieta.html">Historieta</a></p>
+				<p><a href="invitarAmigos.html">Invitar Amigos</a></p>
+				<p><a href="logros.html">Logros</a></p>
+				<p><a href="movil.html">Móvil</a></p>
+				<p><a href="mundo1.html">Mundo1</a></p>
+				<p><a href="mundo2.html">Mundo2</a></p>
+				<p><a href="mundo3.html">Mundo3</a></p>
+				<p><a href="mundo4.html">Mundo4</a></p>
+				<p><a href="mundo5.html">Mundo5</a></p>
+				<p><a href="mundo6.html">Mundo6</a></p>
+				<p><a href="mundo7.html">Mundo7</a></p>
+				<p><a href="mundo8.html">Mundo8</a></p>
+				<p><a href="mundo9.html">Mundo9</a></p>
+				<p><a href="mundo10.html">Mundo10</a></p>
+				<p><a href="mundo11.html">Mundo11</a></p>
+				<p><a href="mundo12.html">Mundo12</a></p>
+				<p><a href="navegacion.html">Navegación</a></p>
+				<p><a href="perfilJugador.html">Perfil Jugador</a></p>
+				<p><a href="pruebasPsicotecnicas.html">Pruebas Psicotécnicas</a></p>
+				<p><a href="rankings.html">Rankings</a></p>
+				<p><a href="seleccionAvatar.html">Selección Avatar</a></p>
+				<p><a href="seleccionPersonaje.html">Selección Personaje</a></p>
+				<p><a href="verificacionDeCodigo.html">Verificación de Código</a></p>
 			</aside>
 		</section>
 		<footer>
