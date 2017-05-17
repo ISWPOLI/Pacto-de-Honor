@@ -10,7 +10,12 @@ variablesJefes={
     buitrelock:null,
     burrolock:null,
     camaleonlock:null,
-    hienalock:null
+    hienalock:null,
+    
+    
+    rata:null
+    
+    
       
 }
 var jefes = function(game){};
@@ -37,6 +42,7 @@ var jefes = function(game){};
             game.load.spritesheet('burroderrota', '../img/Componentes/jefes/burroderrota.png', 400,400);
             game.load.spritesheet('camaleonderrota', '../img/Componentes/jefes/camaleonderrota.png', 400,400);
             game.load.spritesheet('hienaderrota', '../img/Componentes/jefes/hienaderrota.png', 400,400);
+             game.load.spritesheet('rata', '../img/Componentes/jefes/rata.png', 400,400);
             
 
        
@@ -95,6 +101,7 @@ var jefes = function(game){};
             variablesJefes.burrolock = game.add.sprite(400, 150, 'burroderrota');
             variablesJefes.camaleonlock  = game.add.sprite(400, 150, 'camaleonderrota');
             variablesJefes.hienalock  = game.add.sprite(400, 150, 'hienaderrota');
+            variablesJefes.rata  = game.add.sprite(350, 100, 'rata');
             
             hideBoss();
             
@@ -109,15 +116,30 @@ var jefes = function(game){};
         }
 
         },
+        hidee:function(){
+            
+            variablesJefes.abejalock.visible = false;
+            variablesJefes.micolock.visible =false;
+            variablesJefes.buitrelock.visible = false;
+            variablesJefes.burrolock.visible = false;
+            variablesJefes.camaleonlock.visible = false;
+            variablesJefes.hienalock.visible = false;
+        },
         abejasClick: function(){
             variablesBoot.sonidoBoton.play();
-            hideBoss();
+            
+            variablesJefes.abejalock.visible = false;
+            variablesJefes.micolock.visible =false;
+            variablesJefes.buitrelock.visible = false;
+            variablesJefes.burrolock.visible = false;
+            variablesJefes.camaleonlock.visible = false;
+            variablesJefes.hienalock.visible = false;
             variablesJefes.abejalock.visible = true;
             
         },
         babuinoClick:function(){
            variablesBoot.sonidoBoton.play();
-            hideBoss();
+            hidee();
             variablesJefes.micolock.visible =true;
            
        },
