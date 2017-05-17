@@ -3,6 +3,7 @@ package rest;
 import entities.Categoriaimagen;
 import entities.Imagen;
 import entities.Jugador;
+import entities.JugadorTienePersonaje;
 import entities.Mundo;
 import entities.Nivel;
 import entities.Personaje;
@@ -113,6 +114,9 @@ public class JugadorFacadeREST extends AbstractFacade<Jugador> {
            }else{
              resultado = "{'response':'KO', 'cause':'Invalid token'}";
            }
+        }catch (IllegalArgumentException e){
+            e.printStackTrace();
+            resultado = "{'response':'KO', 'cause':'IllegalArgumentException. Verifique los campos, si el inconveniente persiste consulte con el administrador'}";
         }catch (Exception e){
             e.printStackTrace();
             resultado = "{'response':'KO', 'cause':'Invalid token'}";
@@ -120,6 +124,74 @@ public class JugadorFacadeREST extends AbstractFacade<Jugador> {
         return resultado += "}";
     }
 
+    /**
+     * Método de compra que permite saber cuántos personajes buenos tiene un jugador
+     * @param idJugador id del jugador que se desea consultar
+     * @param token String correspondiente al token otorgado en el momento de hacer el login
+     * @return 
+     */
+    @GET
+    @Path("compra")
+    @Produces({"application/json"})
+    public String compra(@QueryParam("idJugador") Integer idJugador, @QueryParam("token") String token){
+        int cont = 0;
+        String resultado = "";
+        try{
+            //Verifica el token
+           Query queryToken = em.createNamedQuery("Usuario.findToken");
+           queryToken.setParameter("token", token);
+           Usuario user = (Usuario) queryToken.getSingleResult();
+           if(user != null){
+               //Trae la lista de la tabla Jugador tiene Personaje
+               Query queryJugadorTiene = em.createNamedQuery("JugadorTienePersonaje.findPlayerJugador");
+               queryJugadorTiene.setParameter("idJugador", idJugador);
+               List<JugadorTienePersonaje> j = queryJugadorTiene.getResultList();
+               //Valida si tiene más de un personaje asociado
+               if(!j.isEmpty()){
+                    //Si solo tiene uno asociado en la tabla Jugador tiene Personaje
+                    if(j.size() == 1){
+                       //Busca el personaje y valida si es bueno
+                       Personaje personaje = em.find(Personaje.class, j.get(0).getJugador().getIdJugador());
+                       if(personaje.getIdCategoria() == 1){
+                           resultado = "{\"idPersonaje\":\""+personaje.getIdPersonaje()+"\",\"nombrePersonaje\":\""+personaje.getNombrePersonaje()+"\"}";
+                       }else{
+                           resultado = "{\"response\":\"No tiene personajes buenos asignados\"}";
+                       }                                   
+                    }else{
+                       resultado = "{\"datos\":[";  
+                       for (int i = 0; i < j.size(); i++) {
+                           Personaje personaje = em.find(Personaje.class, j.get(i).getPersonaje().getIdPersonaje());
+                           if(personaje.getIdCategoria() == 1){
+                               //Si es el último no pone una coma, de lo contrario la ingresa
+                               if(i == j.size()-1){
+                                resultado += "{\"idPersonaje\":"+personaje.getIdPersonaje()+", \"nombrePersonaje\":\""+personaje.getNombrePersonaje()+"\"}";
+                                cont ++;
+                               }else{
+                                 resultado += "{\"idPersonaje\":"+personaje.getIdPersonaje()+", \"nombrePersonaje\":\""+personaje.getNombrePersonaje()+"\"},";
+                                 cont ++;
+                               }
+                           }
+                           if(cont == 0){
+                               resultado = "{\"response\":\"No tiene personajes buenos asignados\"}";
+                           }
+
+                       }
+                       resultado += "]}";
+                   }   
+               }else{
+                   resultado = "{\"response\":\"No tiene personajes buenos asignados\"}";
+               }
+               
+           }else{
+               resultado = "{'response':'KO', 'cause':'Invalid token'}";               
+           }           
+        }catch(Exception e){
+            resultado = "{'response':'KO', 'cause':'Invalid token'}";
+            e.printStackTrace();
+        }
+        return resultado;
+    }
+    
     @GET
     @Override
     @Produces({"application/xml", "application/json"})
@@ -127,12 +199,7 @@ public class JugadorFacadeREST extends AbstractFacade<Jugador> {
         return super.findAll();
     }
 
-    @GET
-    @Path("{from}/{to}")
-    @Produces({"application/xml", "application/json"})
-    public List<Jugador> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
-        return super.findRange(new int[]{from, to});
-    }
+   
 
     @GET
     @Path("count")

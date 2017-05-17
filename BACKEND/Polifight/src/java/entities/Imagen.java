@@ -25,6 +25,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Imagen.findAll", query = "SELECT i FROM Imagen i"),
     @NamedQuery(name = "Imagen.findByIdImagen", query = "SELECT i FROM Imagen i WHERE i.idImagen = :idImagen"),
     @NamedQuery(name = "Imagen.findByFoto", query = "SELECT i FROM Imagen i WHERE i.foto = :foto")})
+
 public class Imagen implements Serializable {
     
     private static final long serialVersionUID = 1L;
@@ -68,30 +69,5 @@ public class Imagen implements Serializable {
     public void setFoto(String foto) {
         this.foto = foto;
     }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (idImagen != null ? idImagen.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Imagen)) {
-            return false;
-        }
-        Imagen other = (Imagen) object;
-        if ((this.idImagen == null && other.idImagen != null) || (this.idImagen != null && !this.idImagen.equals(other.idImagen))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "entitities.Imagen[ idImagen=" + idImagen + " ]";
-    }
-    
+      
 }

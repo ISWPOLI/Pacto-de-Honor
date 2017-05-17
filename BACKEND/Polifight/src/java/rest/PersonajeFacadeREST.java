@@ -35,7 +35,8 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
     
     /**
      * Retorna los id de los datos en la tabla Personaje
-     * * Se prueba con el TestCase "ListarId" del proyecto Personaje-soapui-project
+     * Se prueba con el TestCase "ListarId" del proyecto Personaje-soapui-project
+     * @param token String correspondiente al token otorgado en el login
      * @return List con los datos
      */
     @GET
