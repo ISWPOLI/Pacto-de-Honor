@@ -283,12 +283,8 @@ var creditos = function(game){};
         
         //Funcion que se llama al oprimir el boton 'Personajes Buenos'
         verPersonajesBuenos: function(){
-
-            musicButton.play();
             variablesCreditos.textoBuenos.setText("");
-
-            variablesBoot.sonidoBoton.play();
-            
+            variablesBoot.sonidoBoton.play();            
 
             botonAbejas.visible = false;
             botonBabuino.visible = false;
