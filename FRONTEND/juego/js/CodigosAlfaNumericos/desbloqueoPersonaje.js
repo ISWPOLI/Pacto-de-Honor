@@ -110,10 +110,28 @@ function validarString () {
             return alert("Tu codigo esta mal escrito o no existe");;
 
         }else if(i==10 && (cadenaAnalizar.substr(i,1)=="P")){
+           $.ajax({
+     type: "GET"
+    dataType: 'json',
+    url: 'perfil.json',
+    success: function(data) {
+     //Poner aquí la función
             return alert("Has desbloqueado a tu personaje con exito, este codigo ha sido regalado por un profesor");
+     }
+     
+});
 
         }else if(i==10 && (cadenaAnalizar.substr(i,1)=="E")){
-        	return alert("Has desbloqueado a tu personaje con exito, este codigo ha sido regalado por un amigo");
+        $.ajax({
+     type: "GET"
+    dataType: 'json',
+    url: 'perfil.json',
+    success: function(data) {
+     //Poner aquí la función
+            return alert("Has desbloqueado a tu personaje con exito, este codigo ha sido regalado por un profesor");
+     }
+     
+});
         }
     }
     return alert("Has desbloqueado a tu personaje con exito");
