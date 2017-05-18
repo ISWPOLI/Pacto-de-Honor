@@ -106,8 +106,8 @@ compraPersonajes.prototype = {
           startButton.anchor.set(0.5);
 
           if(startButton==true){
-            pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba5');
-            pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba5('false');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getpregunta440');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.setpregunta440('true');
          }
 
          

@@ -103,20 +103,47 @@ function validarString () {
         if(i==0 && variableDesbloqueoPersonaje.mapnumeros1[variableDesbloqueoPersonaje.CadenaAnalizar.substr(i,1)]==undefined){
             return alert("Tu codigo esta mal escrito o no existe");;
 
+            pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getprgunta35');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.setpregunta('true');
+
+            pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getprgunta240');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.setpregunta('true');
+
+
         }else if(((i>=1 && i<=4)||(i>=6 && i<=9)) && variableDesbloqueoPersonaje.mapletras1[variableDesbloqueoPersonaje.CadenaAnalizar.substr(i,1)]==undefined){
             return alert("Tu codigo esta mal escrito o no existe");;
+            pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getprgunta35');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.setpregunta('true');
+
+            pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getprgunta240');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.setpregunta('true');
+
 
         }else if(i==5 && variableDesbloqueoPersonaje.CadenaAnalizar.substr(i,1)!="-"){
             return alert("Tu codigo esta mal escrito o no existe");;
+			pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getprgunta35');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.setpregunta('true');
+
+            pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getprgunta240');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.setpregunta('true');
+
 
         }else if(i==10 && (variableDesbloqueoPersonaje.CadenaAnalizar.substr(i,1)=="P")){
             return alert("Has desbloqueado a tu personaje con exito, este codigo ha sido regalado por un profesor");
+
 
         }else if(i==10 && (variableDesbloqueoPersonaje.CadenaAnalizar.substr(i,1)=="E")){
         	return alert("Has desbloqueado a tu personaje con exito, este codigo ha sido regalado por un amigo");
         }
     }
     return alert("Tu codigo esta mal escrito o no existe");
+    		pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getprgunta35');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.setpregunta('true');
+
+            pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getprgunta240');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.setpregunta('true');
+
+
 }  
 		//var letra = input.value;
 	//alfaNumeric(letra);

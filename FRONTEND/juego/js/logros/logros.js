@@ -150,8 +150,8 @@ var logros = function(game){};
               recompensa(20,2500);
               Logroslooked[i]= false;
 
-              pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba6');
-              pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba6(true);
+              pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba227');
+              pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba227(true);
           };
         }
         //funcion que Identifica si el jugador esta entre el top 5
@@ -159,8 +159,8 @@ var logros = function(game){};
           if (rankingLogros<= 5) {
             recompensa(20,1000);
             Logroslooked[i]= false;
-              pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba7');
-              pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba7(false);
+              pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba227');
+              pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba227(true);
           };
         }
         //funcion que identifica si el jugador ha desbloqueado el  70% como minimo de los logros
@@ -174,22 +174,22 @@ var logros = function(game){};
           if (((logrosdes*100)/Logroslooked.length)>=70) {
             recompensa(15,800);
             Logroslooked[i] =false;
-            pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba8');
-            pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba8(true);
+            pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba227');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba227(true);
           };
         }
         //por implementar
         function isTheOriginalPlagio(i){
           recompensa(5,1000);
-            pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba9');
-            pruebasPsicotecnicas.setPrueba9(false);
+            pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba227');
+            pruebasPsicotecnicas.setPrueba227(true);
           //por implentar no es de servicios Rest
         }
         //por implementar
         function isMiHitckGround(i){
           recompensa(20,1000);
-          pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba10');
-          pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba10(true);
+          pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba227');
+          pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba227(true);
           //por implentar no es de Rest
         }
         //funcion que comprueba que si el jugaro tienen o no todos los heroes
@@ -197,8 +197,8 @@ var logros = function(game){};
           if (allHeros) {
             recompensa(10,200);
             Logroslooked[i] = false;
-              pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba11');
-              pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba11(false);
+              pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba227');
+              pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba227(true);
           };
         }
         //funcion que comprueba si el jugador tiene porlomenos 1000000 monedas
@@ -206,8 +206,8 @@ var logros = function(game){};
           if (monedas >=1000000) {
             recompensa(30,300);
             Logroslooked[i] = false;
-              pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba12');
-              pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba12(true);
+              pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba227');
+              pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba227(true);
           };
         }
         //funcion que Identifica si el jugador esta entre el top 1
@@ -219,7 +219,8 @@ var logros = function(game){};
         //por Implementar
         function is5InaRow(i){
           recompensa(50,4000);
-            pruebasPsicotecnicas.setPrueba14(true);
+          pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba227');
+          pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba14(true);
           //por implentar falta que todo un mundo este implentado
         }
         //funcion que comprueba que el jugador tenga porlomenos 1000 de experiencia

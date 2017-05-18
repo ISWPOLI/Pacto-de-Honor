@@ -37,8 +37,14 @@ seleccionpersonaje.prototype = {
         startButton.anchor.set(0.5);
 
         if(startButton==true){
-            pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba1');
-            pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba1('false');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getpregunta26');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.setpregunta26('false');
+
+            pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getpregunta269');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.setpregunta269('true');
+
+            pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getpregunta254');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.setpregunta254('true');
         }
         
         boot.verificarMusica("menu");
