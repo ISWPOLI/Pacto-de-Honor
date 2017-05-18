@@ -22,7 +22,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "JugadorTienePersonaje.findAll", query = "SELECT j FROM JugadorTienePersonaje j"),
-    @NamedQuery(name = "JugadorTienePersonaje.findByIdJugadortienepersonaje", query = "SELECT j FROM JugadorTienePersonaje j WHERE j.idJugadortienepersonaje = :idJugadortienepersonaje")})
+    @NamedQuery(name = "JugadorTienePersonaje.findByIdJugadortienepersonaje", query = "SELECT j FROM JugadorTienePersonaje j WHERE j.idJugadortienepersonaje = :idJugadortienepersonaje"),
+    @NamedQuery(name = "JugadorTienePersonaje.findPlayerJugador", query = "SELECT j FROM JugadorTienePersonaje j WHERE j.jugador.idJugador = :idJugador")})
 public class JugadorTienePersonaje implements Serializable {
     
     private static final long serialVersionUID = 1L;
@@ -40,6 +41,7 @@ public class JugadorTienePersonaje implements Serializable {
     @JoinColumn(name = "id_personaje", referencedColumnName = "id_personaje", insertable = false, updatable = false)
     @ManyToOne(optional = false)
     private Personaje personaje;
+    
     public JugadorTienePersonaje() {
     }
 
