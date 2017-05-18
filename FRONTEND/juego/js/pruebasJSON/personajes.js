@@ -5,65 +5,65 @@ var personajesBuenos={
 	"idPUno":{"nombre":"Ana Pantera","rutaSprite":"../img/personajes/personajesBuenos/pantera.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraPantera.png",
               "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderPantera.png",
-			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/Ana Pantera.png",
+			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/AnaPantera.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoGallo.png",
-			  "daño":[6,10],"energia":0.2,"defensa":10,"vida":200,"nivel":3},
+			  "dano":[6,10],"energia":0.2,"defensa":10,"vida":200,"nivel":3},
 
 	"idPDos":{"nombre":"Andrés Gallo","rutaSprite":"../img/personajes/personajesBuenos/gallo.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraGallo.png",
               "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderGallo.png",
 			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/AndresGallo.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoLeon.png",
-			  "daño":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":4},
+			  "dano":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":4},
     
     "idPTres":{"nombre":"Cata Cierva","rutaSprite":"../img/personajes/personajesBuenos/cierva.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraCierva.png",
               "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderCierva.png",
-			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/Cata Cierva.png",
+			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/CataCierva.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoGallo.png",
-			  "daño":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":5},
+			  "dano":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":5},
 
 	"idPCuatro":{"nombre":"Daniela Jirafa","rutaSprite":"../img/personajes/personajesBuenos/jirafa.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraJirafa.png",
               "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderJirafa.png",
-			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/Daniela Jirafa.png",
+			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/DanielaJirafa.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoLeon.png",
-			  "daño":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":6},
+			  "dano":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":6},
     
     "idPCinco":{"nombre":"Daniel León","rutaSprite":"../img/personajes/personajesBuenos/leon.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraLeon.png",
               "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderLeon.png",
 			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/DanielLeon.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoGallo.png",
-			  "daño":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":7},
+			  "dano":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":7},
 
 	"idPSeis":{"nombre":"Fabián Canario","rutaSprite":"../img/personajes/personajesBuenos/canario.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraCanario.png",
               "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderCanario.png",
-			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/Fabian Canario.png",
+			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/FabianCanario.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoLeon.png",
-			  "daño":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":8},
+			  "dano":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":8},
     
-    "idPSiete":{"nombre":"Iván Ruiseñor","rutaSprite":"../img/personajes/personajesBuenos/ruisenor.png",
-			  "rutaAvatar":"../img/personajes/avatares/caraRuiseñor.png",
+    "idPSiete":{"nombre":"Iván Ruisenor","rutaSprite":"../img/personajes/personajesBuenos/ruisenor.png",
+			  "rutaAvatar":"../img/personajes/avatares/caraRuisenor.png",
               "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderRuisenor.png",
-			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/Ivan Ruisenor.png",
+			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/IvanRuisenor.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoGallo.png",
-			  "daño":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":3},
+			  "dano":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":3},
 
 	"idPOcho":{"nombre":"Pedro Ratón","rutaSprite":"../img/personajes/personajesBuenos/raton.png",
-			  "rutaAvatar":"../img/personajes/avatares/caraRatón.png",
+			  "rutaAvatar":"../img/personajes/avatares/caraRaton.png",
               "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderRaton.png",
-			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/Pedro Raton.png",
+			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/PedroRaton.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoLeon.png",
-              "daño":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":3},
+              "dano":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":3},
               
     "idPNueve":{"nombre":"Tati Hormiga","rutaSprite":"../img/personajes/personajesBuenos/hormiga.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraHormiga.png",
               "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderHormiga.png",
-			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/tati Hormiga.png",
+			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/tatiHormiga.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoGallo.png",
-			  "daño":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":2}
+			  "dano":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":2}
 }
 
 var personajesMalos={
@@ -75,7 +75,7 @@ var personajesMalos={
 			  "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			  "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			  "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			  "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
 
 	"idPDos":{"nombre":"Andy El Gris","rutaSprite":"../img/personajes/miniPersonajes/Zorro/ZorroGris.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -83,7 +83,7 @@ var personajesMalos={
 			  "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			  "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			  "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			  "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPTres":{"nombre":"Ander El Ártico","rutaSprite":"../img/personajes/miniPersonajes/Zorro/ZorroArtico.png",
                "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -91,7 +91,7 @@ var personajesMalos={
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPCuatro":{"nombre":"Arnold El Desierto","rutaSprite":"../img/personajes/miniPersonajes/Zorro/ZorroDesierto.png",
                  "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -99,15 +99,15 @@ var personajesMalos={
 			     "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			     "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			     "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			     "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			     "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPCinco":{"nombre":"Andrés Zorro","rutaSprite":"../img/personajes/personajesMalos/zorro.png",
                 "rutaAvatar":"../img/personajes/avatares/caraZorro.png",
-			    "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/FabianBabuino  PERSONALIDAD.png",
+			    "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/FabianBabuinoPERSONALIDAD.png",
 			    "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			    "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			    "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			    "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			    "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     /*Enemigos OSOS MUNDO 2 ************************************************************************************************/
     
@@ -117,7 +117,7 @@ var personajesMalos={
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
 
 	"idPSiete":{"nombre":"Enrique Malayo","rutaSprite":"../img/personajes/miniPersonajes/Oso/OsoMalayo.png",
                 "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -125,7 +125,7 @@ var personajesMalos={
                 "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
                 "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
                 "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-                "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+                "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPOcho":{"nombre":"Leonardo Polar","rutaSprite":"../img/personajes/miniPersonajes/Oso/OsoPolar.png",
                "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -133,7 +133,7 @@ var personajesMalos={
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPNueve":{"nombre":"Luke Grizzly","rutaSprite":"../img/personajes/miniPersonajes/Oso/OsoGrizzly.png",
                 "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -141,7 +141,7 @@ var personajesMalos={
 			    "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			    "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			    "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			    "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			    "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPDiez":{"nombre":"Felipe Oso","rutaSprite":"../img/personajes/personajesMalos/oso.png",
                "rutaAvatar":"../img/personajes/avatares/caraOso.png",
@@ -149,7 +149,7 @@ var personajesMalos={
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     /*Enemigos PEREZOSOS MUNDO 3 ***********************************************************************************************/
     
@@ -159,7 +159,7 @@ var personajesMalos={
 			  "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			  "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			  "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			  "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
 
 	"idPDoce":{"nombre":"William 2 dedos","rutaSprite":"../img/personajes/miniPersonajes/Perezoso/PerezosoWilliam.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -167,7 +167,7 @@ var personajesMalos={
 			  "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			  "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			  "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			  "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPTrece":{"nombre":"René Piramil","rutaSprite":"../img/personajes/miniPersonajes/Perezoso/PerezosoRene.png",
                "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -175,7 +175,7 @@ var personajesMalos={
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPCatorce":{"nombre":"Asher Dúo-Piramil","rutaSprite":"../img/personajes/miniPersonajes/Perezoso/PerezosoAsher.png",
                  "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -183,7 +183,7 @@ var personajesMalos={
 			     "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			     "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			     "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			     "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			     "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPQuince":{"nombre":"Camilo Perezoso","rutaSprite":"../img/personajes/personajesMalos/perezoso.png",
                 "rutaAvatar":"../img/personajes/avatares/caraPerezoso.png",
@@ -191,7 +191,7 @@ var personajesMalos={
 			    "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			    "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			    "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			    "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			    "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     /*Enemigos BURROS MUNDO 4 ***********************************************************************************************/
     
@@ -201,7 +201,7 @@ var personajesMalos={
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
 
 	"idPDiecisiete":{"nombre":"Javier Zamorano","rutaSprite":"../img/personajes/miniPersonajes/Burro/BurroZamorano.png",
                 "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -209,7 +209,7 @@ var personajesMalos={
                 "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
                 "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
                 "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-                "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+                "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPDieciocho":{"nombre":"Marco Andaluz","rutaSprite":"../img/personajes/miniPersonajes/Burro/BurroAndaluz.png",
                "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -217,7 +217,7 @@ var personajesMalos={
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPDiecinueve":{"nombre":"Franklin Provence","rutaSprite":"../img/personajes/miniPersonajes/Burro/BurroProvence.png",
                 "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -225,7 +225,7 @@ var personajesMalos={
 			    "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			    "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			    "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			    "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			    "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPVeinte":{"nombre":"Julián Burro","rutaSprite":"../img/personajes/personajesMalos/Burro.png",
                "rutaAvatar":"../img/personajes/avatares/caraBurro.png",
@@ -233,7 +233,7 @@ var personajesMalos={
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     /*Enemigos CAMALEONES MUNDO 5 ***********************************************************************************************/
     
@@ -243,7 +243,7 @@ var personajesMalos={
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
 
 	"idPVeintidos":{"nombre":"Uriel Tigre","rutaSprite":"../img/personajes/miniPersonajes/Camaleon/CamaleonTigre.png",
                 "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -251,7 +251,7 @@ var personajesMalos={
                 "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
                 "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
                 "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-                "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+                "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPVeintitres":{"nombre":"Izaro Pigmeo","rutaSprite":"../img/personajes/miniPersonajes/Camaleon/CamaleonPigmeo.png",
                "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -259,7 +259,7 @@ var personajesMalos={
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPVeinticuatro":{"nombre":"Samay Rieppeleon","rutaSprite":"../img/personajes/miniPersonajes/Camaleon/CamaleonRieppeleon.png",
                 "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -267,15 +267,15 @@ var personajesMalos={
 			    "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			    "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			    "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			    "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			    "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPVeinticinco":{"nombre":"Juan Camaleón","rutaSprite":"../img/personajes/personajesMalos/camaleon.png",
                "rutaAvatar":"../img/personajes/avatares/caraCamaleon.png",
-			   "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/Juan Camaleon PERSONALIDAD.png",
+			   "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/JuanCamaleonPERSONALIDAD.png",
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     /*Enemigos ABEJAS MUNDO 6 ***********************************************************************************************/
     
@@ -285,7 +285,7 @@ var personajesMalos={
 			  "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			  "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			  "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			  "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
 
 	"idPVeintisiete":{"nombre":"Gloria Africanizada","rutaSprite":"../img/personajes/miniPersonajes/Abeja/AbejaAfricanizada.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -293,7 +293,7 @@ var personajesMalos={
 			  "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			  "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			  "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			  "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPVeintiocho":{"nombre":"Evelyn Parasito","rutaSprite":"../img/personajes/miniPersonajes/Abeja/AbejaParasito.png",
                "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -301,7 +301,7 @@ var personajesMalos={
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPVeintinueve":{"nombre":"Camila Nocturna","rutaSprite":"../img/personajes/miniPersonajes/Abeja/AbejaNocturna.png",
                  "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -309,7 +309,7 @@ var personajesMalos={
 			     "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			     "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			     "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			     "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			     "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPTreinta":{"nombre":"Ana Abeja","rutaSprite":"../img/personajes/personajesMalos/abeja1.png",
                 "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -317,15 +317,15 @@ var personajesMalos={
 			    "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			    "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			    "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			    "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			    "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPTreintax":{"nombre":"Sara Abeja","rutaSprite":"../img/personajes/personajesMalos/abeja2.png",
                 "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
-			    "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/Ana Sara PERSONALIDAD.png",
+			    "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/AnaSaraPERSONALIDAD.png",
 			    "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			    "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			    "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			    "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			    "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     /*Enemigos RATAS MUNDO 7 ***********************************************************************************************/
     
@@ -335,7 +335,7 @@ var personajesMalos={
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
 
 	"idPTreintaydos":{"nombre":"Jasón Gris","rutaSprite":"../img/personajes/miniPersonajes/Rata/RataGris.png",
                 "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -343,7 +343,7 @@ var personajesMalos={
                 "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
                 "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
                 "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-                "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+                "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPTreintaytres":{"nombre":"Everth Negro","rutaSprite":"../img/personajes/miniPersonajes/Rata/RataNegra.png",
                "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -351,7 +351,7 @@ var personajesMalos={
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPTreintaycuatro":{"nombre":"Hilario Rattus","rutaSprite":"../img/personajes/miniPersonajes/Rata/RataRattus.png",
                 "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -359,15 +359,15 @@ var personajesMalos={
 			    "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			    "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			    "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			    "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			    "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPTreintaycinco":{"nombre":"Juan Rata","rutaSprite":"../img/personajes/personajesMalos/rata.png",
                "rutaAvatar":"../img/personajes/avatares/caraRata.png",
-			   "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/Juan Rata PERSONALIDAD.png",
+			   "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/JuanRataPERSONALIDAD.png",
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     /*Enemigos BUITRES MUNDO 8 ***********************************************************************************************/
     
@@ -377,7 +377,7 @@ var personajesMalos={
 			  "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			  "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			  "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			  "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
 
 	"idPTreintaysiete":{"nombre":"Alexis Cuervo","rutaSprite":"../img/personajes/miniPersonajes/Buitre/BuitreCuervo.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -385,7 +385,7 @@ var personajesMalos={
 			  "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			  "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			  "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			  "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPTreintayocho":{"nombre":"César Negro","rutaSprite":"../img/personajes/miniPersonajes/Buitre/BuitreNegro.png",
                "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -393,7 +393,7 @@ var personajesMalos={
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPTreintaynueve":{"nombre":"Antonio Cornejo","rutaSprite":"../img/personajes/miniPersonajes/Buitre/BuitreCorneja.png",
                  "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -401,15 +401,15 @@ var personajesMalos={
 			     "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			     "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			     "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			     "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			     "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPCuarenta":{"nombre":"Carlos Buitre","rutaSprite":"../img/personajes/personajesMalos/buitre.png",
                 "rutaAvatar":"../img/personajes/avatares/caraBuitre.png",
-			    "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/Carlos PERSONALIDAD.png",
+			    "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/CarlosPERSONALIDAD.png",
 			    "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			    "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			    "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			    "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			    "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     /*Enemigos HIENAS MUNDO 9 ***********************************************************************************************/
     
@@ -419,7 +419,7 @@ var personajesMalos={
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
 
 	"idPCuarentaydos":{"nombre":"Petro Parda","rutaSprite":"../img/personajes/miniPersonajes/Hiena/HienaParda.png",
                 "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -427,7 +427,7 @@ var personajesMalos={
                 "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
                 "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
                 "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-                "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+                "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPCuarentaytres":{"nombre":"Trevor Manchada","rutaSprite":"../img/personajes/miniPersonajes/Hiena/HienaManchada.png",
                "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -435,7 +435,7 @@ var personajesMalos={
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPCuarentaycuatro":{"nombre":"Jaime Próteles","rutaSprite":"../img/personajes/miniPersonajes/Hiena/HienaProteles.png",
                 "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -443,15 +443,15 @@ var personajesMalos={
 			    "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			    "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			    "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			    "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			    "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPCuarentaycinco":{"nombre":"Víctor Hiena","rutaSprite":"../img/personajes/personajesMalos/hiena.png",
                "rutaAvatar":"../img/personajes/avatares/caraHiena.png",
-			   "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/VIctor PERSONALIDAD.png",
+			   "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/VictorPERSONALIDAD.png",
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     /*Enemigos LAGARTOS MUNDO 10 ***********************************************************************************************/
     
@@ -461,7 +461,7 @@ var personajesMalos={
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
 
 	"idPCuarentaysiete":{"nombre":"Fabio Iguana","rutaSprite":"../img/personajes/miniPersonajes/Lagarto/LagartoIguana.png",
                 "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -469,7 +469,7 @@ var personajesMalos={
                 "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
                 "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
                 "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-                "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+                "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPCuarentayocho":{"nombre":"Fito Komodo","rutaSprite":"../img/personajes/miniPersonajes/Lagarto/LagartoKomodo.png",
                "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -477,7 +477,7 @@ var personajesMalos={
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPCuarentaynueve":{"nombre":"Andrés Espinoso","rutaSprite":"../img/personajes/miniPersonajes/Lagarto/LagartoEspinoso.png",
                 "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -485,7 +485,7 @@ var personajesMalos={
 			    "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			    "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			    "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			    "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			    "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPCincuenta":{"nombre":"Nicolás Lagarto","rutaSprite":"../img/personajes/personajesMalos/lagarto.png",
                "rutaAvatar":"../img/personajes/avatares/caraLagarto.png",
@@ -493,7 +493,7 @@ var personajesMalos={
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     /*Enemigos VIBORAS MUNDO 11 ***********************************************************************************************/
     
@@ -503,7 +503,7 @@ var personajesMalos={
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
 
 	"idPCincuentaydos":{"nombre":"Humberto Gaditana","rutaSprite":"../img/personajes/miniPersonajes/Vibora/ViboraGaditana.png",
                 "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -511,7 +511,7 @@ var personajesMalos={
                 "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
                 "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
                 "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-                "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+                "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPCincuentaytres":{"nombre":"Lucas Mamba","rutaSprite":"../img/personajes/miniPersonajes/Vibora/ViboraMamba.png",
                "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -519,7 +519,7 @@ var personajesMalos={
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPCincuentaycuatro":{"nombre":"Farid Pitón","rutaSprite":"../img/personajes/miniPersonajes/Vibora/ViboraPiton.png",
                 "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -527,15 +527,15 @@ var personajesMalos={
 			    "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			    "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			    "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			    "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			    "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPCincuentaycinco":{"nombre":"Luis Víbora","rutaSprite":"../img/personajes/personajesMalos/vibora.png",
                "rutaAvatar":"../img/personajes/avatares/caraVibora.png",
-			   "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/LuisPERSONALIDAD.png",
+			   "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/LuisVPERSONALIDAD.png",
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     /*Enemigos BABUINOS MUNDO 12 ***********************************************************************************************/
     
@@ -545,7 +545,7 @@ var personajesMalos={
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
 
 	"idPCincuentaysiete":{"nombre":"Luis Gibón","rutaSprite":"../img/personajes/miniPersonajes/Babuino/BabuinoGibon.png",
                 "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -553,7 +553,7 @@ var personajesMalos={
                 "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
                 "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
                 "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-                "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+                "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPCincuentayocho":{"nombre":"José Titi Pigmeo","rutaSprite":"../img/personajes/miniPersonajes/Babuino/BabuinoPigmeo.png",
                "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -561,7 +561,7 @@ var personajesMalos={
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPCincuentaynueve":{"nombre":"Macaco Reshus","rutaSprite":"../img/personajes/miniPersonajes/Babuino/BabuinoMacaco.png",
                 "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
@@ -569,13 +569,13 @@ var personajesMalos={
 			    "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			    "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			    "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			    "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
+			    "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPSesenta":{"nombre":"Fabian Babuino","rutaSprite":"../img/personajes/personajesMalos/babuino.png",
                "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
-			   "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/FabianBabuino  PERSONALIDAD.png",
+			   "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/FabianBabuinoPERSONALIDAD.png",
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
 			   "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
-			   "daño":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200}
+			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200}
 }

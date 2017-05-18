@@ -42,12 +42,11 @@ variablesCreditos={
                "Fuente RSS\n\nCitar correctamente las fuentes pero casi sin incluir párrafos con creación propia.\n\nFrecuencia: 2.8",
                "Reutilización\n\nCitar correctamente las fuentes haciendo demasiado uso de la estructura y/o los términos originales del texto.\n\nFrecuencia: 2.8"],
 //Variables de los textos y el logo
-  logoPacto:null, 
+  logoPacto:null,
   textoPacto:null, 
-  textoBuenos:null, 
+  textoBuenos:null,
   textoMalos:null, 
-  textoPlagios:null
-  
+  textoPlagios:null  
 }
 var creditos = function(game){};
     creditos.prototype = {
@@ -59,16 +58,6 @@ var creditos = function(game){};
             game.load.spritesheet('botonBuenos', '../img/Componentes/botones/botonBuenos.png', 192, 71);
             game.load.spritesheet('botonMalos', '../img/Componentes/botones/botonMalos.png', 192, 71);
             game.load.spritesheet('botonPlagios', '../img/Componentes/botones/botonPlagios.png', 192, 71);
-            //Carga de imagenes para los botones de personajes buenos
-            game.load.spritesheet('anaPantera', '../img/personajes/avatares/botonPantera.png', 125, 125);
-            game.load.spritesheet('andresGallo', '../img/personajes/avatares/botonGallo.png', 125, 125);
-            game.load.spritesheet('cataCierva', '../img/personajes/avatares/botonCierva.png', 125, 125);
-            game.load.spritesheet('danielaJirafa', '../img/personajes/avatares/botonJirafa.png', 125, 125);
-            game.load.spritesheet('danielLeon', '../img/personajes/avatares/botonLeon.png', 125, 125);
-            game.load.spritesheet('fabianCanario', '../img/personajes/avatares/botonCanario.png', 125, 125);
-            game.load.spritesheet('ivanRuisenor', '../img/personajes/avatares/botonRuiseñor.png', 125, 125);
-            game.load.spritesheet('pedroRaton', '../img/personajes/avatares/botonRaton.png', 125, 125);
-            game.load.spritesheet('tatiHormiga', '../img/personajes/avatares/botonHormiga.png', 125, 125);
             //Carga de imagenes para los botones de personajes malos
             game.load.spritesheet('anaSaraAbejas', '../img/personajes/avatares/botonAbejas.png', 75, 75);
             game.load.spritesheet('fabianBabuino', '../img/personajes/avatares/botonBabuino.png', 75, 75);
@@ -108,15 +97,15 @@ var creditos = function(game){};
             variablesCreditos.botonPlagios = game.add.button(600, 100, 'botonPlagios', this.verPlagios, 1, 1, 0, 2);
             
             //Se crean los botones de los personajes buenos        
-            botonPantera = game.add.button (10, 200, 'anaPantera', this.panteraClick, 1, 1, 0, 2);
-            botonGallo = game.add.button (140, 200, 'andresGallo', this.galloClick, 1, 1, 0, 2);
-            botonCierva = game.add.button (270, 200, 'cataCierva', this.ciervaClick, 1, 1, 0, 2);
-            botonJirafa = game.add.button (10, 330, 'danielaJirafa', this.jirafaClick, 1, 1, 0, 2);
-            botonLeon = game.add.button (140, 330, 'danielLeon', this.leonClick, 1, 1, 0, 2);
-            botonCanario = game.add.button (270, 330, 'fabianCanario', this.canarioClick, 1, 1, 0, 2);
-            botonRuisenor = game.add.button (10, 460, 'ivanRuisenor', this.ruisenorClick, 1, 1, 0, 2);
-            botonRaton = game.add.button (140, 460, 'pedroRaton', this.ratonClick, 1, 1, 0, 2);
-            botonHormiga = game.add.button (270, 460, 'tatiHormiga', this.hormigaClick, 1, 1, 0, 2);
+            botonPantera = game.add.button (10, 200, 'botonPantera', this.panteraClick, 1, 1, 0, 2);
+            botonGallo = game.add.button (140, 200, 'botonGallo', this.galloClick, 1, 1, 0, 2);
+            botonCierva = game.add.button (270, 200, 'botonCierva', this.ciervaClick, 1, 1, 0, 2);
+            botonJirafa = game.add.button (10, 330, 'botonJirafa', this.jirafaClick, 1, 1, 0, 2);
+            botonLeon = game.add.button (140, 330, 'botonLeon', this.leonClick, 1, 1, 0, 2);
+            botonCanario = game.add.button (270, 330, 'botonCanario', this.canarioClick, 1, 1, 0, 2);
+            botonRuisenor = game.add.button (10, 460, 'botonRuisenor', this.ruisenorClick, 1, 1, 0, 2);
+            botonRaton = game.add.button (140, 460, 'botonRaton', this.ratonClick, 1, 1, 0, 2);
+            botonHormiga = game.add.button (270, 460, 'botonHormiga', this.hormigaClick, 1, 1, 0, 2);
             
             //Se crean los botones de los personajes malos
             botonAbejas = game.add.button (20, 200, 'anaSaraAbejas', this.abejasClick, 1, 1, 0, 2);

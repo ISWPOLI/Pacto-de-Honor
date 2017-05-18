@@ -57,8 +57,8 @@ var batalla = {
 		variablesCampoBatalla.cambioOrientacion = false;
 		variablesCampoBatalla.counter = 7200;
 		variablesCampoBatalla.ti = 0;
-		variablesCampoBatalla.danoH=personajesBuenos[variablesCampoBatalla.idPJ].daño;
-		variablesCampoBatalla.danoV=personajesMalos[variablesCampoBatalla.idPC].daño;
+		variablesCampoBatalla.danoH=personajesBuenos[variablesCampoBatalla.idPJ].dano;
+		variablesCampoBatalla.danoV=personajesMalos[variablesCampoBatalla.idPC].dano;
 		variablesCampoBatalla.movH=[false,false,false,false];
 		variablesCampoBatalla.movV=[false,false,false,false,false];
 		variablesCampoBatalla.costoAtaqueJ=personajesBuenos[variablesCampoBatalla.idPJ].energia*200;
@@ -280,7 +280,7 @@ var batalla = {
 
 		}
 		if (boxGame == 7 && !openBox.visible) {
-			variablesCampoBatalla.danoH=personajesBuenos[variablesCampoBatalla.idPJ].daño;
+			variablesCampoBatalla.danoH=personajesBuenos[variablesCampoBatalla.idPJ].dano;
 			variablesCampoBatalla.personajeJugador.scale.setTo(1,1);
 		}
 	
