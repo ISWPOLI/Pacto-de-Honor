@@ -19,8 +19,8 @@ var funcionesBatalla={
         game.load.spritesheet('impactoPlagioComputadora', personajesMalos[idPC].rutaImpactoPlagio, 277, 277);
         game.load.spritesheet('gamepad','../img/Componentes/joystick/gamepad_spritesheet.png',100,100);
         game.load.image('caja', boxes[caa].root);
-        game.load.audio('puñoalaire', '../img/componentes/sonidos/EfectosDePelea/sonidogolpealaire.mp3');
-        game.load.audio('puñoalcuerpo', '../img/componentes/sonidos/EfectosDePelea/sonidogolpealcuerpo.mp3');
+        game.load.audio('punoalaire', '../img/componentes/sonidos/EfectosDePelea/sonidogolpealaire.mp3');
+        game.load.audio('punoalcuerpo', '../img/componentes/sonidos/EfectosDePelea/sonidogolpealcuerpo.mp3');
         game.load.image('escudo1', '../img/componentes/batalla/escudo1.png');
         game.load.image('escudo2', '../img/componentes/batalla/escudo2.png');
          if (caa == 8) {
@@ -45,8 +45,8 @@ var funcionesBatalla={
 		game.physics.arcade.enable(sprite);
 		sprite.body.collideWorldBounds = true; 
         sprite.body.gravity.y=250;
-        variablesCampoBatalla.golpeAlAire = game.add.audio('puñoalaire');
-        variablesCampoBatalla.golpe_al_cuerpo = game.add.audio('puñoalcuerpo');
+        variablesCampoBatalla.golpeAlAire = game.add.audio('punoalaire');
+        variablesCampoBatalla.golpe_al_cuerpo = game.add.audio('punoalcuerpo');
 	},
 
     finEspecial:function(sprite,animation){
@@ -102,9 +102,9 @@ var funcionesBatalla={
         }
     },
     //con esta funcion se refelja el daño causado
-    actualizarVida: function(barra,daño){
-        if(barra.width-daño>0)
-            barra.width=barra.width-daño;
+    actualizarVida: function(barra,dano){
+        if(barra.width-dano>0)
+            barra.width=barra.width-dano;
         else{
             barra.width=0;
             this.finJuego();

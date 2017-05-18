@@ -6,7 +6,7 @@ var fin = {
         game.load.image('poli', '../img/componentes/finBatalla/poli.jpg');
         game.load.image('monedas','../img/Componentes/finBatalla/moneda.png');  
         game.load.image('experiencia','../img/Componentes/finBatalla/experiencia.png');
-        game.load.spritesheet('botonVolver','../img/Componentes/finBatalla/botonVolver.png',598,140);
+        game.load.spritesheet('botonFinBatalla','../img/Componentes/finBatalla/botonVolver.png',598,140);
         
         
     },
@@ -65,7 +65,7 @@ var fin = {
         	game.add.text(game.world.width/1.4,game.world.height/1.58,'+ 350',{fill:'#2E64FE',font: '40px Arial'});
         
         	//se le agrega el boton que lo devuelve a la pantalla principal
-        	volver = game.add.button(game.world.width/1.53,game.world.height/1.2,'botonVolver',this.volver,1,1,0,2);
+        	volver = game.add.button(game.world.width/1.53,game.world.height/1.2,'botonFinBatalla',this.volver,1,1,0,2);
         	volver.scale.setTo(0.4);
         	volver.anchor.setTo(0.3);
 				
@@ -99,7 +99,7 @@ var fin = {
         	game.add.text(game.world.width/1.4,game.world.height/1.58,'+ '+exp,{fill:'#2E64FE',font: '40px Arial'});
         
         	//se le agrega el boton que lo devuelve a la pantalla principal
-        	volver = game.add.button(game.world.width/1.53,game.world.height/1.2,'botonVolver',this.volver,1,1,0,2);
+        	volver = game.add.button(game.world.width/1.53,game.world.height/1.2,'botonFinBatalla',this.volver,1,1,0,2);
         	volver.scale.setTo(0.4);
         	volver.anchor.setTo(0.3);
 		}
