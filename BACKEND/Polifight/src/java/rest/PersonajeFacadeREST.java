@@ -1,6 +1,7 @@
 package rest;
 
 import entities.Personaje;
+import entities.PersonajeTieneImagen;
 import entities.Usuario;
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -319,7 +320,30 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
         return resultado;
     }
     
-    
+    @GET
+    @Path("preBattle")
+    @Produces({"application/json"})
+    public String preBatalla(@QueryParam("idPersonaje") Integer idPersonaje, @QueryParam("token") String token){
+         String resultado = "{";
+         System.err.println(idPersonaje);
+        try{
+            Query queryToken = em.createNamedQuery("Usuario.findToken");
+            queryToken.setParameter("token", token);
+            Usuario user = (Usuario) queryToken.getSingleResult();
+            if(user != null){ 
+                Query queryPersImag = em.createNamedQuery("PersonajeTieneImagen.findImagenForPersonaje");
+                queryPersImag.setParameter("idPersonaje", String.valueOf(idPersonaje));
+                List<PersonajeTieneImagen> listPersImag = queryPersImag.getResultList();
+                for (int i = 0; i < listPersImag.size(); i++) {
+                    System.err.println(listPersImag.get(i).getIdPersonaje());
+                }
+            }   
+        }catch(Exception e){
+            e.printStackTrace();
+            resultado = "{'response':'KO', 'cause':'Invalid token'}";
+        }
+        return resultado;
+    }
     @Override
     protected EntityManager getEntityManager() {
         return em;

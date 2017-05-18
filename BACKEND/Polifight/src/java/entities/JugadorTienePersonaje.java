@@ -42,6 +42,9 @@ public class JugadorTienePersonaje implements Serializable {
     @ManyToOne(optional = false)
     private Personaje personaje;
     
+    @Column(name = "nivel_personaje")
+    private Integer nivelPersonaje;
+    
     public JugadorTienePersonaje() {
     }
 
@@ -69,11 +72,19 @@ public class JugadorTienePersonaje implements Serializable {
         return personaje;
     }
 
+    public Integer getNivelPersonaje() {
+        return nivelPersonaje;
+    }
+
+    public void setNivelPersonaje(Integer nivelPersonaje) {
+        this.nivelPersonaje = nivelPersonaje;
+    }
+
     public void setPersonaje(Personaje personaje) {
         this.personaje = personaje;
     }  
     
-
+    
     @Override
     public int hashCode() {
         int hash = 0;
