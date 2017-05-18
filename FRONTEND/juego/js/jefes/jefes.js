@@ -459,7 +459,7 @@ var jefes = function(game){};
         //Funcion que se llama al oprimir el botón de regreso
         volver: function(){
             variablesBoot.sonidoBoton.play();
-            game.state.start("navegacion");
+            game.state.start("perfilJugador");
         },        
         update:function(){
         }
