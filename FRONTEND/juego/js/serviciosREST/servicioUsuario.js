@@ -1,8 +1,8 @@
-var surl = "http://192.168.101.22:8080/Polifight/webresources/usuario/login?user=Estudiante&pass=demo123";
+var surl = "http://192.168.101.22:8080/Polifight/webresources/usuario";
 function callWebService(){
     try{ 
         $.ajax({
-            url: surl,
+            url: surl+"/login?user=Estudiante&pass=demo123",
             method: "POST",
             async: true,
             contentType: "application/json; charset=utf-8",
@@ -15,5 +15,3 @@ function callWebService(){
         alert(err);
     }
 }
-
-callWebService();
