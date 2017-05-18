@@ -72,11 +72,11 @@ header nav ul li a:hover { /* hover del los links del menú de navegación*/
 
 .main .articles div .imagenLeft {
     float:left;
-    margin-right:3%;
+    margin-right:10%;
 }
 .main .articles div .imagenRight {
     float:right;
-    margin-left:3%;
+    margin-left:5%;
 }
 
 .main .articles article { /* articulos del main */
