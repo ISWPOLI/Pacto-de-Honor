@@ -643,6 +643,8 @@ var funcionesBatalla={
                 } else if (joy.properties.down) {
                     variablesCampoBatalla.personajeJugador.animations.play('defensa');
                     variablesCampoBatalla.movH[0]=true;
+                }else if (joy.properties.up&&(variablesCampoBatalla.personajeJugador.body.y>355)&&(game.time.now > variablesCampoBatalla.saltoJ)){                
+                           variablesCampoBatalla.personajeJugador.body.velocity.y-=500;
                 }
                 else if (button.isDown){
                     variablesCampoBatalla.personajeJugador.animations.play('punos');
