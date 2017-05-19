@@ -2,24 +2,24 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<link rel="shortcut icon" href="../img/IconoAplicacion/Escudo.ico">
+        <link rel="shortcut icon" href="../img/IconoAplicacion/Escudo.ico">
         <meta name="mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<title>Poli Fighters</title>
+        <!--Scripts de ayuda de Phaser-->
 		<script src="../js/phaser/phaser.js"></script>
         <script src="../js/phaser/phaser-input.js"></script>
 		<script src="../js/phaser/phaser-plugin-virtual-gamepad.js"></script>
 		<script src="../js/phaser/movil.js"></script>
-		<script src="../js/phaser/pleaserotate.js"></script>		
+		<script src="../js/phaser/pleaserotate.js"></script>
+        <script src="../js/phaser/jquery-3.2.1.min.js"></script>
+        <!--Scripts estados del juego-->
 		<script src="../js/phaser/boot.js"></script>
 		<script src="../js/cookies/cookies.js"></script>
-		<script src="../js/cookies/servicioLogin.js"></script>
-		<script src="../js/campoBatalla/personajes.js"></script>
-		<script src="../js/cajasSorpresa/box.js"></script>
-		<script src="../js/campoBatalla/funcionesBatalla.js"></script>
-		<script src="../js/rankings/jugadores.js"></script>
-        <script src="../js/seleccionar avatar/seleccionavatar.js"></script>
+        <script src="../js/jefes/jefes.js"></script>
+		<script src="../js/seleccionPersonaje/seleccionpersonaje.js"></script>
+        <script src="../js/CodigosAlfaNumericos/desbloqueoPersonaje.js"></script>
+        <script src="../js/seleccionAvatar/seleccionavatar.js"></script>
         <script src="../js/historieta/historieta.js"></script>
         <script src="../js/cajasSorpresa/cajaMisteriosa.js"></script>
         <script src="../js/creditos/creditos.js"></script>
@@ -27,15 +27,10 @@
         <script src="../js/compraPersonajes/compraPersonajes.js"></script>
         <script src="../js/invitarAmigos/invitarAmigos.js"></script>
         <script src="../js/rankings/rankings.js"></script>
-        <script src="../js/perfilJugador/perfilJugador.js"></script>
-        <script src="../js/perfilJugador/perfil.js"></script>
         <script src="../js/logros/logros.js"></script>
-        <script src="../js/logros/achievement.js"></script>
-        <script src="../js/jefes/jefes.js"></script>
-		<script src="../js/seleccionPersonaje/seleccionpersonaje.js"></script>
-        <script src="../js/CodigosAlfaNumericos/desbloqueoPersonaje.js"></script>
+        <script src="../js/campeones/campeones.js"></script>
+        <script src="../js/perfilJugador/perfilJugador.js"></script>
         <script src="../js/mapaDenavegacion/navegacion.js"></script>
-        <script src="../js/mapaDenavegacion/niveles.js"></script>
         <script src="../js/mapaDenavegacion/Mundo1.js"></script>
         <script src="../js/mapaDenavegacion/Mundo2.js"></script>
         <script src="../js/mapaDenavegacion/Mundo3.js"></script>
@@ -47,14 +42,26 @@
         <script src="../js/mapaDenavegacion/Mundo9.js"></script>
         <script src="../js/mapaDenavegacion/Mundo10.js"></script>
         <script src="../js/mapaDenavegacion/Mundo11.js"></script>
-        <script src="../js/mapaDenavegacion/Mundo12.js"></script>        
+        <script src="../js/mapaDenavegacion/Mundo12.js"></script>
 	    <script src="../js/campoBatalla/batalla.js"></script>
+        <script src="../js/campoBatalla/funcionesBatalla.js"></script>
 	    <script src="../js/resultado/fin.js"></script>
-	    <script src="../js/phaser/game.js"></script>
+        <script src="../js/phaser/game.js"></script>
+        <!--Scripts de JSON de prueba-->
+		<script src="../js/pruebasJSON/servicioLogin.js"></script>
+		<script src="../js/pruebasJSON/personajes.js"></script>
+		<script src="../js/pruebasJSON/box.js"></script>
+		<script src="../js/pruebasJSON/jugadores.js"></script>
+        <script src="../js/pruebasJSON/niveles.js"></script>
+        <script src="../js/pruebasJSON/perfil.js"></script>
+        <script src="../js/pruebasJSON/achievement.js"></script>
+        <script src="../js/pruebasJSON/boss.js"></script>
+        <script src="../js/pruebasJSON/heroes.js"></script>
+        <!--Scripts de los servicios-->
+        <script src="../js/serviciosREST/servicioUsuario.js"></script>
+        	    
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </head>
-	<body>		 
-		<div id="portrait">
-		</div>
+	<body>
 	</body>
 </html>

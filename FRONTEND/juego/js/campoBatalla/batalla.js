@@ -56,9 +56,12 @@ var batalla = {
 		variablesCampoBatalla.saltoJ=0; 
 		variablesCampoBatalla.cambioOrientacion = false;
 		variablesCampoBatalla.counter = 7200;
+         if(variablesCampoBatalla.idNivel=='1-1' && !variablesBoot.dispositivoMovil){
+            variablesCampoBatalla.counter=8500;
+         }
 		variablesCampoBatalla.ti = 0;
-		variablesCampoBatalla.danoH=personajesBuenos[variablesCampoBatalla.idPJ].daño;
-		variablesCampoBatalla.danoV=personajesMalos[variablesCampoBatalla.idPC].daño;
+		variablesCampoBatalla.danoH=personajesBuenos[variablesCampoBatalla.idPJ].dano;
+		variablesCampoBatalla.danoV=personajesMalos[variablesCampoBatalla.idPC].dano;
 		variablesCampoBatalla.movH=[false,false,false,false];
 		variablesCampoBatalla.movV=[false,false,false,false,false];
 		variablesCampoBatalla.costoAtaqueJ=personajesBuenos[variablesCampoBatalla.idPJ].energia*200;
@@ -242,7 +245,9 @@ var batalla = {
 	//se crea esta funcion para disminuir la barra de energia
     
 	update : function() {
+         if(variablesCampoBatalla.counter<7200){
         indice=funcionesBatalla.numeroAleatorio(1,4);
+         }
 		funcionesBatalla.cargarEnergia(energiaVerdeJugador);
 		funcionesBatalla.cargarEnergia(energiaVerdeComputadora);
 		
@@ -251,9 +256,12 @@ var batalla = {
 		else
 			funcionesBatalla.movimientoJugador();
         
-        funcionesBatalla.guiaComputadora(variablesCampoBatalla.movimientoComputadora);
+          if(variablesCampoBatalla.counter<7200){ funcionesBatalla.guiaComputadora(variablesCampoBatalla.movimientoComputadora);
+       } 
 		if(!variablesCampoBatalla.secuencia)
-			funcionesBatalla.llamarSecuencia(indice);	
+			 if(variablesCampoBatalla.counter<7200){
+            funcionesBatalla.llamarSecuencia(indice);	
+             }
 
 		variablesCampoBatalla.counter--;
 		variablesCampoBatalla.ti = parseInt(variablesCampoBatalla.counter / 60);
@@ -263,6 +271,44 @@ var batalla = {
 		if (variablesCampoBatalla.ti >= 0) {
 			text.setText('time: ' + variablesCampoBatalla.ti);
 		}
+        if(variablesCampoBatalla.idNivel=='1-1' && !variablesBoot.dispositivoMovil){
+    
+        if(variablesCampoBatalla.counter==8460){
+            funcionesBatalla.tutorial();
+           } if(variablesCampoBatalla.counter==8300){
+             texto1.destroy();
+            derecha.destroy();
+            izquierda.destroy();
+        } if(variablesCampoBatalla.counter==8260){
+            funcionesBatalla.tutorial2();
+           }if(variablesCampoBatalla.counter==8100){
+             texto2.destroy();
+            arriba.destroy();
+        } if(variablesCampoBatalla.counter==8060){
+            funcionesBatalla.tutorial3();
+           }if(variablesCampoBatalla.counter==7900){
+             texto3.destroy();
+            abajo.destroy();
+        } if(variablesCampoBatalla.counter==7860 ){
+            funcionesBatalla.tutorial4();
+           }if(variablesCampoBatalla.counter==7700){
+             texto4.destroy();
+            m.destroy();
+        } if(variablesCampoBatalla.counter==7660 ){
+            funcionesBatalla.tutorial5();
+           } if(variablesCampoBatalla.counter==7500){
+             texto5.destroy();
+            espacio.destroy();
+        }if(variablesCampoBatalla.counter==7460){
+            funcionesBatalla.tutorial6();
+           }if(variablesCampoBatalla.counter==7250){
+             texto6.destroy();
+            n.destroy();
+            vida.destroy();
+               energia.destroy();
+               btnpoder.destroy();
+        }
+        }
 		if(variablesCampoBatalla.ti == timeShowBox){
 			funcionesBatalla.showBox();	
 		}
@@ -280,7 +326,7 @@ var batalla = {
 
 		}
 		if (boxGame == 7 && !openBox.visible) {
-			variablesCampoBatalla.danoH=personajesBuenos[variablesCampoBatalla.idPJ].daño;
+			variablesCampoBatalla.danoH=personajesBuenos[variablesCampoBatalla.idPJ].dano;
 			variablesCampoBatalla.personajeJugador.scale.setTo(1,1);
 		}
 	
