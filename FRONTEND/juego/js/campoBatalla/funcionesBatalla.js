@@ -23,7 +23,14 @@ var funcionesBatalla={
         game.load.audio('punoalcuerpo', '../img/componentes/sonidos/EfectosDePelea/sonidogolpealcuerpo.mp3');
         game.load.image('escudo1', '../img/componentes/batalla/escudo1.png');
         game.load.image('escudo2', '../img/componentes/batalla/escudo2.png');
-         if (caa == 8) {
+         game.load.image('flechaIzquierda','../img/componentes/batalla/izquierdapc.png');
+        game.load.image('flechaDerecha','../img/componentes/batalla/derechapc.png');
+         game.load.image('flechaArriba','../img/componentes/batalla/arribapc.png');
+        game.load.image('flechaAbajo','../img/componentes/batalla/abajopc.png');
+         game.load.image('teclam','../img/componentes/batalla/teclaM.png');
+         game.load.image('teclan','../img/componentes/batalla/teclaN.png');
+        game.load.image('espacio','../img/componentes/batalla/space.png');
+        if (caa == 8) {
              game.load.image('cajaOpen', boxes[caa].fatalityBox);
          }else{
              game.load.image('cajaOpen', boxes[caa].rootOpen);
@@ -100,6 +107,75 @@ var funcionesBatalla={
                 else{variablesBoot.musicaOnOff = false; variablesBoot.musicaBatalla.pause();}
             }
         }
+    },
+    tutorial:function(){
+         texto1 = game.add.text(450,270,"Presione las teclas \n                y \n \npara moverse por el \n  campo de batalla ");
+        vida = game.add.text(310,20,"vida",{fill:"red"});
+        energia = game.add.text(210,100,"energia",{fill:"green"});
+         texto1.stroke = "white";
+            texto1.strokeThickness = 4;
+            texto1.stroke = "white";
+            texto1.anchor.setTo(0.5);
+            vida.strokeThickness = 4;
+            vida.stroke = "white";
+            energia.strokeThickness = 4;
+            energia.stroke = "white";
+            izquierda = game.add.sprite(330,210,'flechaIzquierda');
+            izquierda.scale.setTo(0.4);
+            derecha = game.add.sprite(470,210,'flechaDerecha');
+            derecha.scale.setTo(0.4);
+       
+    },
+    tutorial2:function(){
+         texto2 = game.add.text(450,270,"Utilice la tecla \n \n \n  para saltar ");
+         texto2.stroke = "white";
+            texto2.strokeThickness = 4;
+            texto2.stroke = "white";
+            texto2.strokeThickness = 4;
+            texto2.anchor.setTo(0.5);
+            arriba = game.add.sprite(400,230,'flechaArriba');
+            arriba.scale.setTo(0.4);
+    },
+      tutorial3:function(){
+         texto3 = game.add.text(450,270,"  Con la tecla \n \n \npodra usar uno\nde sus escudos ");
+         texto3.stroke = "white";
+            texto3.strokeThickness = 4;
+            texto3.stroke = "white";
+            texto3.strokeThickness = 4;
+            texto3.anchor.setTo(0.5);
+            abajo = game.add.sprite(400,210,'flechaAbajo');
+            abajo.scale.setTo(0.4);
+    },
+    tutorial4:function(){
+         texto4 = game.add.text(450,270,"Si presiona la tecla \n \nusted activará otro escudo");
+         texto4.stroke = "white";
+            texto4.strokeThickness = 4;
+            texto4.stroke = "white";
+            texto4.strokeThickness = 4;
+            texto4.anchor.setTo(0.5);
+            m = game.add.sprite(370,240,'teclam');
+            m.scale.setTo(1.8);
+    },
+       tutorial5:function(){
+         texto5 = game.add.text(450,270,"Si presiona la tecla \n \nusted podrá golpear a su rival");
+         texto5.stroke = "white";
+            texto5.strokeThickness = 4;
+            texto5.stroke = "white";
+            texto5.strokeThickness = 4;
+            texto5.anchor.setTo(0.5);
+            espacio = game.add.sprite(300,240,'espacio');
+            espacio.scale.setTo(0.1);
+    },   tutorial6:function(){
+         texto6 = game.add.text(450,270,"Finalmente si presiona la tecla \n \n  o pulsando el boton azul, \n  usted podra usar el poder especial");
+         texto6.stroke = "white";
+        btnpoder = game.add.text (150,150,"boton de poder",{fill:"blue"});
+            texto6.strokeThickness = 4;
+            texto6.stroke = "white";
+            btnpoder.strokeThickness = 4;
+            btnpoder.stroke = "white";
+            texto6.anchor.setTo(0.5);
+            n = game.add.sprite(370,230,'teclan');
+            n.scale.setTo(1.8);
     },
     //con esta funcion se refelja el daño causado
     actualizarVida: function(barra,dano){
