@@ -1,5 +1,9 @@
 package rest;
 
+import entities.Categoriaimagen;
+import entities.Imagen;
+import entities.Jugador;
+import entities.JugadorTienePersonaje;
 import entities.Personaje;
 import entities.PersonajeTieneImagen;
 import entities.Usuario;
@@ -320,23 +324,54 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
         return resultado;
     }
     
+    /**
+     * Método para cargar la pre batalla, issue #562
+     * @param idPersonaje entero que indica el id del personaje seleccionado
+     * @param idJugador entero que indica el id del jugador
+     * @param token String que corresponde al token otorgado en el login
+     * @return String estructura JSON solicitada
+     */
     @GET
     @Path("preBattle")
     @Produces({"application/json"})
-    public String preBatalla(@QueryParam("idPersonaje") Integer idPersonaje, @QueryParam("token") String token){
+    public String preBatalla(@QueryParam("idPersonaje") Integer idPersonaje, @QueryParam("idJugador") Integer idJugador,@QueryParam("token") String token){
          String resultado = "{";
-         System.err.println(idPersonaje);
         try{
             Query queryToken = em.createNamedQuery("Usuario.findToken");
             queryToken.setParameter("token", token);
             Usuario user = (Usuario) queryToken.getSingleResult();
             if(user != null){ 
+                Personaje personaje = em.find(Personaje.class, idPersonaje);
+                
                 Query queryPersImag = em.createNamedQuery("PersonajeTieneImagen.findImagenForPersonaje");
-                queryPersImag.setParameter("idPersonaje", String.valueOf(idPersonaje));
+                queryPersImag.setParameter("idPersonaje", personaje);
                 List<PersonajeTieneImagen> listPersImag = queryPersImag.getResultList();
-                for (int i = 0; i < listPersImag.size(); i++) {
-                    System.err.println(listPersImag.get(i).getIdPersonaje());
-                }
+                
+                Query queryJugaPerso = em.createNamedQuery("JugadorTienePersonaje.personajeAndJugador");
+                queryJugaPerso.setParameter("idJugador", idJugador);
+                queryJugaPerso.setParameter("idPersonaje", idPersonaje);                
+                
+                try{
+                    JugadorTienePersonaje jugTiePers = (JugadorTienePersonaje) queryJugaPerso.getSingleResult();
+                    try{
+                        Jugador jugador = em.find(Jugador.class, idJugador);                
+                
+                        resultado += "\"nombrePersonaje\":\""+personaje.getNombrePersonaje()+"\",";
+                        for (int i = 0; i < listPersImag.size(); i++) {
+                            Imagen imagen = em.find(Imagen.class, listPersImag.get(i).getIdImagen().getIdImagen());
+                            Categoriaimagen catImagen = em.find(Categoriaimagen.class, listPersImag.get(i).getIdcategoriaImagen().getIdcategoriaImagen());
+                            resultado += "\""+catImagen.getDescCategoriaImagen().toLowerCase()+"\":\""+imagen.getFoto()+"\",";                    
+                        }
+                        resultado += "\"dano\":\""+personaje.getNivelDano()+"\",";              
+                        resultado += "\"nivel\":\""+jugTiePers.getNivelPersonaje()+"\",";
+                        resultado += "\"experiencia\":\""+jugador.getExperienciaJugador()+"\"}";
+                    }catch (Exception r){
+                        
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
+                    resultado = "{'response':'KO', 'cause':'The player is not assigned the character'}";
+                }                
             }   
         }catch(Exception e){
             e.printStackTrace();
@@ -344,6 +379,8 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
         }
         return resultado;
     }
+    
+    
     @Override
     protected EntityManager getEntityManager() {
         return em;

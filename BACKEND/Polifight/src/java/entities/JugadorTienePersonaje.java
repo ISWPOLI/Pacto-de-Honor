@@ -23,7 +23,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
     @NamedQuery(name = "JugadorTienePersonaje.findAll", query = "SELECT j FROM JugadorTienePersonaje j"),
     @NamedQuery(name = "JugadorTienePersonaje.findByIdJugadortienepersonaje", query = "SELECT j FROM JugadorTienePersonaje j WHERE j.idJugadortienepersonaje = :idJugadortienepersonaje"),
-    @NamedQuery(name = "JugadorTienePersonaje.findPlayerJugador", query = "SELECT j FROM JugadorTienePersonaje j WHERE j.jugador.idJugador = :idJugador")})
+    @NamedQuery(name = "JugadorTienePersonaje.findPlayerJugador", query = "SELECT j FROM JugadorTienePersonaje j WHERE j.jugador.idJugador = :idJugador"),
+    @NamedQuery(name = "JugadorTienePersonaje.personajeAndJugador", query = "SELECT j FROM JugadorTienePersonaje j WHERE j.jugador.idJugador = :idJugador AND j.personaje.idPersonaje = :idPersonaje")})
 public class JugadorTienePersonaje implements Serializable {
     
     private static final long serialVersionUID = 1L;
