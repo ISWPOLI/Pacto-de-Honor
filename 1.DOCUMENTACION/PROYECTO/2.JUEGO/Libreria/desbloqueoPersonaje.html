@@ -1,0 +1,659 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="shortcut icon" type="image/x-icon" href="img/logosinfondo.ico">
+		<title>Desbloqueo Personaje</title>
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="icons/icons.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<script src="js/jquery-latest.js"></script>
+		<script src="js/goUpButton.js"></script>
+	</head>
+	<body>
+		<nav class="goUp icon-chevron-up"></nav>
+		<header>
+			<div>
+				<img class="portada" src="img/portada.png">
+			</div>
+			<nav>
+				<ul>
+					<li><a href="inicio.html">Inicio</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section class="main">
+			<section class="articles">
+				<article>
+					<h2>desbloqueoPersonaje.js</h2>
+					<br/>
+					<p>Esta clase se usa para obtener o regalar un personaje del juego mediante un código alfanúmerico, cuando se obtiene un personaje se muestra al jugador si fue regalado por un estudiante o por un profesor.</p>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla1">
+							<td colspan="2">Funciones</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Dato de retorno</b>
+							</td>
+							<td>
+								<b>Descripción breve</b>
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>preload</b> ( )
+								<br/>
+								Función de Phaser, que sirve para cargar componentes del juego.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>create</b> ( )
+								<br/>
+								Función de Phaser, que sirve para agregar componentes al juego.
+							</td>
+						</tr>
+						<tr>
+							<td>String</td>
+							<td>
+								<b>validarString</b> ( )
+								<br/>
+								Verifica si el código alfanúmerico es valido.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>verPerfilJugador</b> ( )
+								<br/>
+								Se dirige a la seccion del perfil del jugador.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>code1</b> ( )
+								<br/>
+								Genera un código alfanúmerico cuando se elija a Ana Pantera.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>code2</b> ( )
+								<br/>
+								Genera un código alfanúmerico cuando se elija a Cata Cierva.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>code3</b> ( )
+								<br/>
+								Genera un código alfanúmerico cuando se elija a Iván Ruiseñor.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>code4</b> ( )
+								<br/>
+								Genera un código alfanúmerico cuando se elija a Daniel León.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>code5</b> ( )
+								<br/>
+								Genera un código alfanúmerico cuando se elija a Daniela Jirafa.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>code6</b> ( )
+								<br/>
+								Genera un código alfanúmerico cuando se elija a Andres Gallo.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>code7</b> ( )
+								<br/>
+								Genera un código alfanúmerico cuando se elija a Tati Hormiga.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>code8</b> ( )
+								<br/>
+								Genera un código alfanúmerico cuando se elija a Fabián Canario.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>code9</b> ( )
+								<br/>
+								Genera un código alfanúmerico cuando se elija a Pedro Ratón.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">preload( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta es una función del framework Phaser en la que cargaremos todos los componentes a ser utilizados en el juego como imágenes, sonidos, fondos, sprites, etc. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">create( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta es una función del framework Phaser en la que cargaremos todos los componentes a ser utilizados en el juego como imágenes, sonidos, fondos, sprites, etc. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">validarString( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Verificará el código alfanúmerico introducido, y determinará si este es valido o no.
+							</td>
+							<td>
+								Retornará una cadena especificando si el código alfanúmerico esta mal escrito o no existe y si fue regalado por un profesor o por un estudiante.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">verPerfilJugador( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Se dirige a la sección del juego llamada <b>perfilJugador.js</b>.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">code1( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Genera un código alfanúmerico después de que el botón de <b>Ana Pantera</b> sea presionado, para ser regalado a otro jugador.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">code2( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Genera un código alfanúmerico después de que el botón de <b>Cata Cierva</b> sea presionado, para ser regalado a otro jugador.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">code3( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Genera un código alfanúmerico después de que el botón de <b>Iván Ruiseñor</b> sea presionado, para ser regalado a otro jugador.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">code4( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Genera un código alfanúmerico después de que el botón de <b>Daniel León</b> sea presionado, para ser regalado a otro jugador.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">code5( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Genera un código alfanúmerico después de que el botón de <b>Daniela Jirafa</b> sea presionado, para ser regalado a otro jugador.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">code6( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Genera un código alfanúmerico después de que el botón de <b>Andrés Gallo</b> sea presionado, para ser regalado a otro jugador.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">code7( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Genera un código alfanúmerico después de que el botón de <b>Tati Hormiga</b> sea presionado, para ser regalado a otro jugador.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">code8( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Genera un código alfanúmerico después de que el botón de <b>Fabián Canario</b> sea presionado, para ser regalado a otro jugador.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">code9( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Genera un código alfanúmerico después de que el botón de <b>Pedro Ratón</b> sea presionado, para ser regalado a otro jugador.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla3">
+							<td colspan="3">Variables</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Nombre</b>
+							</td>
+							<td>
+								<b>Tipo de dato</b>
+							</td>
+							<td>
+								<b>Explicación</b>
+							</td>
+						</tr>
+						<tr>
+							<td>desbloqueoPersonaje</td>
+							<td>PhaserGame</td>
+							<td>Variable para inicializar a librería de Phaser.</td>
+						</tr>
+						<tr>
+							<td>input</td>
+							<td>PhaserInput</td>
+							<td>Input en el cual el jugador ingresará un código alfanúmerico para obtener un personaje.</td>
+						</tr>
+						<tr>
+							<td>btFlechar</td>
+							<td>PhaserButton</td>
+							<td>Botón que servirá para regresar a la sección <b>navegacion.js</b>.</td>
+						</tr>
+						<tr>
+							<td>btPantera</td>
+							<td>PhaserButton</td>
+							<td>Botón que servirá para seleccionar a Ana Pantera.</td>
+						</tr>
+						<tr>
+							<td>btLLama</td>
+							<td>PhaserButton</td>
+							<td>Botón que servirá para seleccionar a Cata Cierva.</td>
+						</tr>
+						<tr>
+							<td>btPajaro</td>
+							<td>PhaserButton</td>
+							<td>Botón que servirá para seleccionar a Iván Ruiseñor.</td>
+						</tr>
+						<tr>
+							<td>btLeon</td>
+							<td>PhaserButton</td>
+							<td>Botón que servirá para seleccionar a Daniel León.</td>
+						</tr>
+						<tr>
+							<td>btJirafa</td>
+							<td>PhaserButton</td>
+							<td>Botón que servirá para seleccionar a Daniel Jirafa.</td>
+						</tr>
+						<tr>
+							<td>btGallo</td>
+							<td>PhaserButton</td>
+							<td>Botón que servirá para seleccionar a Andrés Gallo.</td>
+						</tr>
+						<tr>
+							<td>btHormiga</td>
+							<td>PhaserButton</td>
+							<td>Botón que servirá para seleccionar a Tati Hormiga.</td>
+						</tr>
+						<tr>
+							<td>btCanario</td>
+							<td>PhaserButton</td>
+							<td>Botón que servirá para seleccionar a Fabián Canario.</td>
+						</tr>
+						<tr>
+							<td>btRata</td>
+							<td>PhaserButton</td>
+							<td>Botón que servirá para seleccionar a Pedro Ratón.</td>
+						</tr>
+						<tr>
+							<td>btIngresar</td>
+							<td>PhaserButton</td>
+							<td>Botón que se usará para validar que el código alfanúmerico que el jugador introduzca sea valido.</td>
+						</tr>
+						<tr>
+							<td>codigo</td>
+							<td>PhaserInput</td>
+							<td>Input en el cual aparecerá un código generado después de presionar algun personaje.</td>
+						</tr>
+						<tr>
+							<td>text</td>
+							<td>String</td>
+							<td>Cadena de texto que representa la primera parte del código alfanúmerico.</td>
+						</tr>
+						<tr>
+							<td>text2</td>
+							<td>String</td>
+							<td>Cadena de texto que representa la segunda parte del código alfanúmerico.</td>
+						</tr>
+					</table>
+				</article>
+			</section>
+			<aside>
+				<h3>Clases</h3>
+				<p><a href="batalla.html">Batalla</a></p>
+				<p><a href="boot.html">Boot</a></p>
+				<p><a href="cajaMisteriosa.html">Caja Misteriosa</a></p>
+				<p><a href="codigoUsado.html">Codigo Usado</a></p>
+				<p><a href="compraPersonajes.html">Compra Personajes</a></p>
+				<p><a href="cookies.html">Cookies</a></p>
+				<p><a href="creditos.html">Creditos</a></p>
+				<p><a href="desbloqueoPersonaje.html">Desbloqueo Personaje</a></p>
+				<p><a href="fin.html">Fin</a></p>
+				<p><a href="funcionesBatalla.html">Funciones Batalla</a></p>
+				<p><a href="game.html">Game</a></p>
+				<p><a href="historieta.html">Historieta</a></p>
+				<p><a href="invitarAmigos.html">Invitar Amigos</a></p>
+				<p><a href="logros.html">Logros</a></p>
+				<p><a href="movil.html">Móvil</a></p>
+				<p><a href="mundo1.html">Mundo1</a></p>
+				<p><a href="mundo2.html">Mundo2</a></p>
+				<p><a href="mundo3.html">Mundo3</a></p>
+				<p><a href="mundo4.html">Mundo4</a></p>
+				<p><a href="mundo5.html">Mundo5</a></p>
+				<p><a href="mundo6.html">Mundo6</a></p>
+				<p><a href="mundo7.html">Mundo7</a></p>
+				<p><a href="mundo8.html">Mundo8</a></p>
+				<p><a href="mundo9.html">Mundo9</a></p>
+				<p><a href="mundo10.html">Mundo10</a></p>
+				<p><a href="mundo11.html">Mundo11</a></p>
+				<p><a href="mundo12.html">Mundo12</a></p>
+				<p><a href="navegacion.html">Navegación</a></p>
+				<p><a href="perfilJugador.html">Perfil Jugador</a></p>
+				<p><a href="pruebasPsicotecnicas.html">Pruebas Psicotécnicas</a></p>
+				<p><a href="rankings.html">Rankings</a></p>
+				<p><a href="seleccionAvatar.html">Selección Avatar</a></p>
+				<p><a href="seleccionPersonaje.html">Selección Personaje</a></p>
+				<p><a href="verificacionDeCodigo.html">Verificación de Código</a></p>
+			</aside>
+		</section>
+		<footer>
+			<p>
+				Poli Fighters - 2017
+			</p>
+		</footer>
+	</body>
+</html>

@@ -1,5 +1,8 @@
-var botonVolver;
-var musicButton;
+variablesInvitarAmigos={
+    botonVolver:null
+}
+
+
 var invitarAmigos = function(game){};
     invitarAmigos.prototype = {
         preload: function(){
@@ -10,14 +13,14 @@ var invitarAmigos = function(game){};
             game.add.text(game.width / 2, 50, "Invitar amigos", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5); //Título de Invitar Amigos
             
             //Se agrega el botón para volver al mapa de navegación
-            botonVolver = game.add.button(5, 5, 'botonVolver', this.volver, 1, 1, 0, 2);
+            variablesInvitarAmigos.botonVolver = game.add.button(5, 5, 'botonVolver', this.volver, 1, 1, 0, 2);
             
             boot.verificarMusica("menu");
         },
         
         volver: function(){
             game.state.start("navegacion");
-            sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
         },
         
         update: function(){

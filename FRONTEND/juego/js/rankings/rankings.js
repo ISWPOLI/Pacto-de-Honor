@@ -32,7 +32,7 @@ var rankings = function(game){};
         },
         
         create: function(){
-            musicButton = game.add.audio('sonidoBoton');
+            musicButton = game.add.audio('variablesBoot.sonidoBoton');
             game.stage.backgroundColor = "#2451A6"; //Color de fondo
             game.add.text(game.width / 2, 50, "Rankings", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5); //Título de Rankings
             top5 = game.add.sprite(0, 230, 'top5'); //Imagen del top 5
@@ -139,12 +139,12 @@ var rankings = function(game){};
         //Función para volver al mapa de navegación
         volver: function(){
             game.state.start("navegacion");
-            sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
         },
         
         //En las siguientes funciones se ocultan las variables según corresponda
         verDiario: function(){
-            sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
             textoRanking.setText("Ranking Diario");            
             textx.visible = false;
             textoFacultad.visible = false;
@@ -161,7 +161,7 @@ var rankings = function(game){};
         },
         
         verSemanal: function(){
-            sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
             textoRanking.setText("Ranking Semanal");
             textx.visible = false;
             textoFacultad.visible = false;
@@ -179,7 +179,7 @@ var rankings = function(game){};
         },
         
         verPoli: function(){
-            sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
             textoRanking.setText("Ranking Poli");
             textx.setText("Facultad");
             
@@ -197,7 +197,7 @@ var rankings = function(game){};
         },
         
         verGeneral: function(){
-            sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
             textoRanking.setText("Ranking General");
             textx.setText("Universidad");
             

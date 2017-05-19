@@ -140,108 +140,108 @@ var navegacion = function(game){};
     },
   
     verAjustes: function(){
-        sonidoBoton.play();
+        variablesBoot.sonidoBoton.play();
         botonCreditos.visible =! botonCreditos.visible;
         botonSonido.visible =! botonSonido.visible;
         botonCerrarSesion.visible =! botonCerrarSesion.visible;
     },        
     verCreditos: function(){
         game.state.start("creditos");
-        sonidoBoton.play();
+        variablesBoot.sonidoBoton.play();
     },
     quitarSonido: function(){
-            if(!musicaOnOff){
-                musicaOnOff = true;
-                musicaMapa.resume();
+            if(!variablesBoot.musicaOnOff){
+                variablesBoot.musicaOnOff = true;
+                variablesBoot.musicaMapa.resume();
             }
         else{
-            musicaOnOff = false;
-            musicaMapa.pause();
+            variablesBoot.musicaOnOff = false;
+            variablesBoot.musicaMapa.pause();
         }
     },
     cerrarSesion: function(){
-        sonidoBoton.play();
+        variablesBoot.sonidoBoton.play();
         alert("Sesion cerrada");
     },
     verInvitarAmigos: function(){
         game.state.start("invitarAmigos");
-        sonidoBoton.play();
+        variablesBoot.sonidoBoton.play();
     },    
     verPerfil: function(){
         game.state.start("perfilJugador");
-        sonidoBoton.play();
+        variablesBoot.sonidoBoton.play();
     },
     verCajaMisteriosa: function(){
         game.state.start("cajaMisteriosa");
-        sonidoBoton.play();
+        variablesBoot.sonidoBoton.play();
     },     
     verRankings: function(){
         game.state.start("rankings");
-        sonidoBoton.play();
+        variablesBoot.sonidoBoton.play();
     },    
     verCompraPersonajes: function(){
         game.state.start("compraPersonajes");
-        sonidoBoton.play();
+        variablesBoot.sonidoBoton.play();
     },
 
         mundo1: function(){            
             pruebasPsicotecnicas.setPrueba19(true);
-            sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo1");
         },
         mundo2:function(){
             pruebasPsicotecnicas.setPrueba19(true);
-            sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo2");
         },
         mundo3:function(){
             pruebasPsicotecnicas.setPrueba19(true);
-            sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo3");
         },
         mundo4:function(){
             pruebasPsicotecnicas.setPrueba19(true);
-            sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo4");
         },
         mundo5:function(){
             pruebasPsicotecnicas.setPrueba19(true);
-            sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo5");
         },
         mundo6:function(){
             pruebasPsicotecnicas.setPrueba19(true);
-            sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo6");
         },
         mundo7:function(){
             pruebasPsicotecnicas.setPrueba19(true);
-            sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo7");
         },
         mundo8:function(){
             pruebasPsicotecnicas.setPrueba19(true);
-            sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo8");
         },
         mundo9:function(){
             pruebasPsicotecnicas.setPrueba19(true);
-            sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo9");
         },
         mundo10:function(){
             pruebasPsicotecnicas.setPrueba19(true);
-            sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo10");
         },
         mundo11:function(){
             pruebasPsicotecnicas.setPrueba19(true);
-            sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo11");
         },
         mundo12:function(){
             pruebasPsicotecnicas.setPrueba19(true);
-            sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
             game.state.start("Mundo12");
         },
     
@@ -250,6 +250,6 @@ var navegacion = function(game){};
         variablesCampoBatalla.idNivel = lvl;
         variablesCampoBatalla.idPC = niveles[lvl].idEnemigo;
         game.state.start("seleccionpersonaje");
-        sonidoBoton.play();
+        variablesBoot.sonidoBoton.play();
     }
 }

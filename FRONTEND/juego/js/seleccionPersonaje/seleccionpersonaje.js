@@ -1,8 +1,11 @@
-var musicButton;
-var startButton;
-var seleccionado;
-var txtSeleccionado;
-var botones = [];
+variablesSeleccionPersonaje={
+    startButton:null,
+    seleccionado:null,
+    txtSeleccionado:null,
+    botones : [],
+    avatarSeleccionado:null,
+    niveles:[]
+}
 
 var seleccionpersonaje = function(game){};
 seleccionpersonaje.prototype = {
@@ -15,114 +18,125 @@ seleccionpersonaje.prototype = {
         botonVolver = game.add.button(5, 5, 'botonVolver', this.verNavegacion, 1, 1, 0, 2);
         this.pageText = game.add.text(game.width / 2, 45, "Selección de Personaje", {font: "32px Roboto", fill: "#ffffff"})
         this.pageText.anchor.set(0.5); //Se crea el titulo
-        txtSeleccionado = game.add.text(10, 540, "Personaje Seleccionado", {font: "20px Roboto", fill: "#ffffff"}); //Texto para pj seleccionado
-        avatarSeleccionado = game.add.image (270, 550, null); //Se crea una imagen vacia para el pj seleccionado
-        avatarSeleccionado.anchor.setTo(0.5);
-        avatarSeleccionado.scale.setTo(0.5);
-        txtSeleccionado.visible = false; 
-        avatarSeleccionado.visible = false; //Se ocultan el texto y la imagen del pj seleccionado
+        variablesSeleccionPersonaje.txtSeleccionado = game.add.text(10, 540, "Personaje Seleccionado", {font: "20px Roboto", fill: "#ffffff"}); //Texto para pj seleccionado
+        variablesSeleccionPersonaje.avatarSeleccionado = game.add.image (270, 550, null); //Se crea una imagen vacia para el pj seleccionado
+        variablesSeleccionPersonaje.avatarSeleccionado.anchor.setTo(0.5);
+        variablesSeleccionPersonaje.avatarSeleccionado.scale.setTo(0.5);
+        variablesSeleccionPersonaje.txtSeleccionado.visible = false; 
+        variablesSeleccionPersonaje.avatarSeleccionado.visible = false; //Se ocultan el texto y la imagen del pj seleccionado
         
         //Se crean los botones de los personajes
-        botones[0] = game.add.button(175, 75, 'botonPantera', this.clickPantera, 1, 1, 0, 2);
-        botones[1] = game.add.button(325, 75, 'botonGallo', this.clickGallo, 1, 1, 0, 2);
-        botones[2] = game.add.button(475, 75, 'botonCierva', this.clickCierva, 1, 1, 0, 2);
-        botones[3] = game.add.button(175, 225, 'botonJirafa', this.clickJirafa, 1, 1, 0, 2);
-        botones[4] = game.add.button(325, 225, 'botonLeon', this.clickLeon, 1, 1, 0, 2);
-        botones[5] = game.add.button(475, 225, 'botonCanario', this.clickCanario, 1, 1, 0, 2);
-        botones[6] = game.add.button(175, 375, 'botonRuisenor', this.clickRuisenor, 1, 1, 0, 2);
-        botones[7] = game.add.button(325, 375, 'botonRaton', this.clickRaton, 1, 1, 0, 2);
-        botones[8] = game.add.button(475, 375, 'botonHormiga', this.clickHormiga, 1, 1, 0, 2);
+        variablesSeleccionPersonaje.botones[0] = game.add.button(175, 75, 'botonPantera', this.clickPantera, 1, 1, 0, 2);
+        variablesSeleccionPersonaje.botones[1] = game.add.button(325, 75, 'botonGallo', this.clickGallo, 1, 1, 0, 2);
+        variablesSeleccionPersonaje.botones[2] = game.add.button(475, 75, 'botonCierva', this.clickCierva, 1, 1, 0, 2);
+        variablesSeleccionPersonaje.botones[3] = game.add.button(175, 225, 'botonJirafa', this.clickJirafa, 1, 1, 0, 2);
+        variablesSeleccionPersonaje.botones[4] = game.add.button(325, 225, 'botonLeon', this.clickLeon, 1, 1, 0, 2);
+        variablesSeleccionPersonaje.botones[5] = game.add.button(475, 225, 'botonCanario', this.clickCanario, 1, 1, 0, 2);
+        variablesSeleccionPersonaje.botones[6] = game.add.button(175, 375, 'botonRuisenor', this.clickRuisenor, 1, 1, 0, 2);
+        variablesSeleccionPersonaje.botones[7] = game.add.button(325, 375, 'botonRaton', this.clickRaton, 1, 1, 0, 2);
+        variablesSeleccionPersonaje.botones[8] = game.add.button(475, 375, 'botonHormiga', this.clickHormiga, 1, 1, 0, 2);
                  
-        startButton = game.add.button(game.world.width / 2, 550, 'botonSeleccionar', this.verbatalla, this, 2, 1, 0); // over, out, down, up
-        startButton.anchor.set(0.5);
+        variablesSeleccionPersonaje.startButton = game.add.button(game.world.width / 2, 550, 'botonSeleccionar', this.verbatalla, this, 2, 1, 0); // over, out, down, up
+        variablesSeleccionPersonaje.startButton.anchor.set(0.5);
 
         if(startButton==true){
             pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba1');
             pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba1('false');
         }
         
+        $.each(personajesBuenos, function (key, data) {
+            variablesSeleccionPersonaje.niveles.push(personajesBuenos[key].nivel);
+            
+        });
+        var cont=0;
+        for (var i = 75; i <= 375; i=i+150) {
+            for (var j = 175; j <= 475; j=j+150) {
+                game.add.text(j+55, i+125, "lv:"+variablesSeleccionPersonaje.niveles[cont], {font: "20px Roboto", fill: "#ffffff"});
+                cont++;
+            }
+        }
         boot.verificarMusica("menu");
     },
     
     verNavegacion: function(){
-        sonidoBoton.play();
+        variablesBoot.sonidoBoton.play();
         game.state.start("navegacion");
     },
                          
     //Cada una de las siguientes funciones modifica la variable del campo de batalla idPJ y hace visible el texto y la imagen del pj seleccionado
     clickPantera: function(){
         variablesCampoBatalla.idPJ="idPUno";
-        avatarSeleccionado.loadTexture('pantera');
-        txtSeleccionado.visible = true;
-        avatarSeleccionado.visible = true;
-        sonidoBoton.play();
+        variablesSeleccionPersonaje.avatarSeleccionado.loadTexture('pantera');
+        variablesSeleccionPersonaje.txtSeleccionado.visible = true;
+        variablesSeleccionPersonaje.avatarSeleccionado.visible = true;
+        variablesBoot.sonidoBoton.play();
     },
     clickGallo: function(){
         variablesCampoBatalla.idPJ="idPDos";
-        avatarSeleccionado.loadTexture('gallo');
-        txtSeleccionado.visible = true;
-        avatarSeleccionado.visible = true;
-        sonidoBoton.play();
+        variablesSeleccionPersonaje.avatarSeleccionado.loadTexture('gallo');
+        variablesSeleccionPersonaje.txtSeleccionado.visible = true;
+        variablesSeleccionPersonaje.avatarSeleccionado.visible = true;
+        variablesBoot.sonidoBoton.play();
     },
     clickCierva: function(){
         variablesCampoBatalla.idPJ="idPTres";
-        avatarSeleccionado.loadTexture('cierva');
-        avatarSeleccionado.visible = true;
-        txtSeleccionado.visible = true;
-        avatarSeleccionado.visible = true;
-        sonidoBoton.play();
+        variablesSeleccionPersonaje.avatarSeleccionado.loadTexture('cierva');
+        variablesSeleccionPersonaje.avatarSeleccionado.visible = true;
+        variablesSeleccionPersonaje.txtSeleccionado.visible = true;
+        variablesSeleccionPersonaje.avatarSeleccionado.visible = true;
+        variablesBoot.sonidoBoton.play();
     },
     clickJirafa: function(){
         variablesCampoBatalla.idPJ="idPCuatro";
-        avatarSeleccionado.loadTexture('jirafa');
-        avatarSeleccionado.visible = true;
-        txtSeleccionado.visible = true;
-        avatarSeleccionado.visible = true;
-        sonidoBoton.play();
+        variablesSeleccionPersonaje.avatarSeleccionado.loadTexture('jirafa');
+        variablesSeleccionPersonaje.avatarSeleccionado.visible = true;
+        variablesSeleccionPersonaje.txtSeleccionado.visible = true;
+        variablesSeleccionPersonaje.avatarSeleccionado.visible = true;
+        variablesBoot.sonidoBoton.play();
     },
     clickLeon: function(){
         variablesCampoBatalla.idPJ="idPCinco";
-        avatarSeleccionado.loadTexture('leon');
-        avatarSeleccionado.visible = true;
-        txtSeleccionado.visible = true;
-        avatarSeleccionado.visible = true;
-        sonidoBoton.play();
+        variablesSeleccionPersonaje.avatarSeleccionado.loadTexture('leon');
+        variablesSeleccionPersonaje.avatarSeleccionado.visible = true;
+        variablesSeleccionPersonaje.txtSeleccionado.visible = true;
+        variablesSeleccionPersonaje.avatarSeleccionado.visible = true;
+        variablesBoot.sonidoBoton.play();
     },
     clickCanario: function(){
         variablesCampoBatalla.idPJ="idPSeis";
-        avatarSeleccionado.loadTexture('canario');
-        avatarSeleccionado.visible = true;
-        txtSeleccionado.visible = true;
-        avatarSeleccionado.visible = true;
-        sonidoBoton.play();
+        variablesSeleccionPersonaje.avatarSeleccionado.loadTexture('canario');
+        variablesSeleccionPersonaje.avatarSeleccionado.visible = true;
+        variablesSeleccionPersonaje.txtSeleccionado.visible = true;
+        variablesSeleccionPersonaje.avatarSeleccionado.visible = true;
+        variablesBoot.sonidoBoton.play();
     },
     clickRuisenor: function(){
         variablesCampoBatalla.idPJ="idPSiete";
-        avatarSeleccionado.loadTexture('ruisenor');
-        avatarSeleccionado.visible = true;
-        txtSeleccionado.visible = true;
-        avatarSeleccionado.visible = true;
-        sonidoBoton.play();
+        variablesSeleccionPersonaje.avatarSeleccionado.loadTexture('ruisenor');
+        variablesSeleccionPersonaje.avatarSeleccionado.visible = true;
+        variablesSeleccionPersonaje.txtSeleccionado.visible = true;
+        variablesSeleccionPersonaje.avatarSeleccionado.visible = true;
+        variablesBoot.sonidoBoton.play();
     },
     clickRaton: function(){
         variablesCampoBatalla.idPJ="idPOcho";
-        avatarSeleccionado.loadTexture('raton');
-        avatarSeleccionado.visible = true;
-        txtSeleccionado.visible = true;
-        avatarSeleccionado.visible = true;
-        sonidoBoton.play();
+        variablesSeleccionPersonaje.avatarSeleccionado.loadTexture('raton');
+        variablesSeleccionPersonaje.avatarSeleccionado.visible = true;
+        variablesSeleccionPersonaje.txtSeleccionado.visible = true;
+        variablesSeleccionPersonaje.avatarSeleccionado.visible = true;
+        variablesBoot.sonidoBoton.play();
     },
     clickHormiga: function(){
         variablesCampoBatalla.idPJ="idPNueve";
-        avatarSeleccionado.loadTexture('hormiga');
-        avatarSeleccionado.visible = true;
-        txtSeleccionado.visible = true;
-        avatarSeleccionado.visible = true;
-        sonidoBoton.play();
+        variablesSeleccionPersonaje.avatarSeleccionado.loadTexture('hormiga');
+        variablesSeleccionPersonaje.avatarSeleccionado.visible = true;
+        variablesSeleccionPersonaje.txtSeleccionado.visible = true;
+        variablesSeleccionPersonaje.avatarSeleccionado.visible = true;
+        variablesBoot.sonidoBoton.play();
     },
     
     verbatalla: function () {
-        sonidoBoton.play();
+        variablesBoot.sonidoBoton.play();
         if(variablesCampoBatalla.idPJ == null){
             alert("Selecciona un personaje");
         }
