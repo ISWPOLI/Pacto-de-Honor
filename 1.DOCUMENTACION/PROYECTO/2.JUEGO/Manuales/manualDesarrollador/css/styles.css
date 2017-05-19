@@ -1,0 +1,100 @@
+* { /* para todo el documento*/
+	margin:0; 
+	padding:0;
+	box-sizing:border-box; /* asegura que el tamaño de todos los elementos siempre será modificado de la manera más intuitiva.*/
+	-webkit-box-sizing:border-box; /* asegura que el tamaño de todos los elementos siempre será modificado de la manera más intuitiva.*/
+	-moz-box-sizing:border-box; /* asegura que el tamaño de todos los elementos siempre será modificado de la manera más intuitiva.*/
+}
+
+body { /* para el body*/
+	font-family:"Roboto";
+	background:#f2f2f2;
+}
+
+.goUp{ /* botón de subir*/
+	display:none; /* cuando este al inicio del documento no mostrar el botón de subir*/
+	padding:20px;
+	background:#3669a3;
+	font-size:20px;
+	color:#fff;
+	cursor:pointer;
+	position:fixed; /* posicion fija*/
+	bottom:20px;
+	right:20px;
+}
+
+.goUp:hover{ /* hover del botón de subir*/
+	background: #264a73;
+}
+
+header, .main, footer { /*el header, el main y el footer tendran un ancho del 90% y como maximo 1000 px*/
+	width:90%;
+	max-width:1000px;
+	margin:20px auto;
+}
+
+header .portada { /* Imagen de portada de la librería*/
+	width: 100%;
+	height: 30%;
+}
+
+header nav { /* menú de navegación*/
+	background:#3669a3;
+	overflow:hidden;
+}
+
+header nav ul {
+	list-style:none;
+}
+
+header nav ul li { /* items del menpu de navegación*/
+	float:left;
+}
+
+header nav ul li a { /* links del menú de navegación*/
+	padding:10px 20px;
+	display:block;
+	color:#fff;
+	text-decoration:none;
+}
+
+header nav ul li a:hover { /* hover del los links del menú de navegación*/
+	background:#528FD5;
+}
+
+.main .articles {
+	width:100%;
+	margin-right:1.5%;
+	float:left;
+	background:#fff;
+	box-shadow:0px 0px 5px grey; /* sombra */
+}
+
+.main .articles div .imagenLeft {
+    float:left;
+    margin-right:10%;
+}
+.main .articles div .imagenRight {
+    float:right;
+    margin-left:5%;
+}
+
+.main .articles article { /* articulos del main */
+	padding:20px;
+	background:#fff;
+	margin-bottom:20px;
+	text-align: center;
+}
+
+.main .articles .links { /* links de phaser */
+	color: rgb(0,116,217);
+	text-decoration: none;
+}
+
+footer {
+	color:#000000;
+	clear:both;
+	padding:10px 0px;
+	font-size: 18px;
+	text-align:center;
+}

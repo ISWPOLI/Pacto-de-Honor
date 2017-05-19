@@ -9,7 +9,7 @@
   apodo:null,
   startButton:null,
   imgDesBox:null,
-  boxDescription:null 
+  boxDescription:null
 }
 
 
