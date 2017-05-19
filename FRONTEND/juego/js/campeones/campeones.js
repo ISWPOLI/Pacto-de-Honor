@@ -65,19 +65,16 @@ var campeones = function(game){};
             game.load.spritesheet('peresosoderrota',  '../img/personajes/avatares/CaraRuisenor.png', 400,400);
        
             
-            game.load.spritesheet('abeja', '../img/Componentes/jefes/abeja.png', 400,400);
-            game.load.spritesheet('mico', '../img/Componentes/jefes/mico.png', 400,400);
-            game.load.spritesheet('buitre', '../img/Componentes/jefes/buitre.png', 400,400);
-            game.load.spritesheet('burro', '../img/Componentes/jefes/burro.png', 400,400);
-            game.load.spritesheet('camaleon', '../img/Componentes/jefes/camaleon.png', 400,400);
-            game.load.spritesheet('hiena', '../img/Componentes/jefes/hiena.png', 400,400);
-            game.load.spritesheet('lagarto', '../img/Componentes/jefes/lagarto.png', 400,400);
-            game.load.spritesheet('oso', '../img/Componentes/jefes/oso.png', 400,400);
-            game.load.spritesheet('peresoso', '../img/Componentes/jefes/peresoso.png', 400,400);
-            game.load.spritesheet('rata', '../img/Componentes/jefes/rata.png', 400,400);
-            game.load.spritesheet('vibora', '../img/Componentes/jefes/serpiente.png', 400,400);
-            game.load.spritesheet('zorro', '../img/Componentes/jefes/zorro.png', 400,400);
-            
+            game.load.spritesheet('abeja', '../img/Componentes/heroes/caraCanariolock.png', 400,400);
+            game.load.spritesheet('mico', '../img/Componentes/heroes/caraCiervalock.png', 400,400);
+            game.load.spritesheet('buitre', '../img/Componentes/heroes/caraGallolock.png', 400,400);
+            game.load.spritesheet('burro', '../img/Componentes/heroes/caraHormigalock.png', 400,400);
+            game.load.spritesheet('camaleon', '../img/Componentes/heroes/caraJirafalock.png', 400,400);
+            game.load.spritesheet('hiena', '../img/Componentes/heroes/caraLeonlock.png', 400,400);
+            game.load.spritesheet('lagarto', '../img/Componentes/heroes/caraPanteralock.png', 400,400);
+            game.load.spritesheet('oso', '../img/Componentes/heroes/caraRatonlock.png', 400,400);
+            game.load.spritesheet('peresoso', '../img/Componentes/heroes/caraRuisenor.png', 400,400);
+  
             
             variablesCampeones.pj1 = heroes["idP1"];
             variablesCampeones.pj2 = heroes["idP2"];
@@ -153,44 +150,44 @@ var campeones = function(game){};
                   }
                   
                   if(variablesCampeones.pj2.estado==0){
-                   variablesCampeones.osolock  = game.add.sprite(450, 170, 'osoderrota');
+                   variablesCampeones.osolock  = game.add.sprite(450,170, 'osoderrota');
                    //variablesCampeones.osolock.visible = false;
                   }
                   else{
-                      variablesCampeones.osolock  = game.add.sprite(450, 170, 'oso');
+                      variablesCampeones.osolock  = game.add.sprite(450,170, 'oso');
                      // variablesCampeones.osolock.visible = false;
                   }
                    if(variablesCampeones.pj3.estado==0){
-                   variablesCampeones.burrolock  = game.add.sprite(450, 170, 'burroderrota');
+                   variablesCampeones.burrolock  = game.add.sprite(450,170, 'burroderrota');
                    //variablesCampeones.osolock.visible = false;
                   }
                   else{
-                      variablesCampeones.burrolock  = game.add.sprite(450, 170, 'burro');
+                      variablesCampeones.burrolock  = game.add.sprite(450,170, 'burro');
                      // variablesCampeones.osolock.visible = false;
                   }
                   if(variablesCampeones.pj4.estado==0){
-                   variablesCampeones.ratalock  = game.add.sprite(450, 170, 'rataderrota');
+                   variablesCampeones.ratalock  = game.add.sprite(450,170, 'rataderrota');
                    }
                   else{
-                      variablesCampeones.ratalock  = game.add.sprite(450, 170, 'rata');
+                      variablesCampeones.ratalock  = game.add.sprite(450,170, 'rata');
                   }
                   if(variablesCampeones.pj5.estado==0){
-                   variablesCampeones.camaleonlock  = game.add.sprite(450, 170, 'camaleonderrota');
+                   variablesCampeones.camaleonlock  = game.add.sprite(450,170, 'camaleonderrota');
                    }
                   else{
-                      variablesCampeones.camaleonlock  = game.add.sprite(450, 170, 'camaleon');
+                      variablesCampeones.camaleonlock  = game.add.sprite(450,170, 'camaleon');
                   }
                   if(variablesCampeones.pj6.estado==0){
-                   variablesCampeones.buitrelock  = game.add.sprite(450, 170, 'buitrederrota');
+                   variablesCampeones.buitrelock  = game.add.sprite(450,170, 'buitrederrota');
                    }
                   else{
-                      variablesCampeones.buitrelock  = game.add.sprite(450, 170, 'buitre');
+                      variablesCampeones.buitrelock  = game.add.sprite(450,170, 'buitre');
                   }
                   if(variablesCampeones.pj7.estado==0){
-                   variablesCampeones.peresosolock  = game.add.sprite(450, 170, 'peresosoderrota');
+                   variablesCampeones.peresosolock  = game.add.sprite(450,170, 'peresosoderrota');
                    }
                   else{
-                      variablesCampeones.peresosolock  = game.add.sprite(450, 170, 'peresoso');
+                      variablesCampeones.peresosolock  = game.add.sprite(450,170, 'peresoso');
                   }
                   if(variablesCampeones.pj8.estado==0){
                    variablesCampeones.abejalock  = game.add.sprite(450, 170, 'abejaderrota');
@@ -199,28 +196,28 @@ var campeones = function(game){};
                       variablesCampeones.abejalock  = game.add.sprite(450, 170, 'abeja');
                   }
                   if(variablesCampeones.pj9.estado==0){
-                   variablesCampeones.hienalock  = game.add.sprite(450, 170, 'hienaderrota');
+                   variablesCampeones.hienalock  = game.add.sprite(450,170, 'hienaderrota');
                    }
                   else{
-                      variablesCampeones.hienalock  = game.add.sprite(450, 170, 'hiena');
+                      variablesCampeones.hienalock  = game.add.sprite(450,170, 'hiena');
                   }
                   if(variablesCampeones.pj10.estado==0){
-                   variablesCampeones.lagartolock  = game.add.sprite(450, 170, 'lagartoderrota');
+                   variablesCampeones.lagartolock  = game.add.sprite(450, 'lagartoderrota');
                    }
                   else{
-                      variablesCampeones.lagartolock  = game.add.sprite(450, 170, 'lagarto');
+                      variablesCampeones.lagartolock  = game.add.sprite(450, 'lagarto');
                   }
                   if(variablesCampeones.pj11.estado==0){
-                   variablesCampeones.viboralock  = game.add.sprite(450, 170, 'viboraderrota');
+                   variablesCampeones.viboralock  = game.add.sprite(450, 'viboraderrota');
                    }
                   else{
-                      variablesCampeones.viboralock  = game.add.sprite(450, 170, 'vibora');
+                      variablesCampeones.viboralock  = game.add.sprite(450, 'vibora');
                   }
                   if(variablesCampeones.pj12.estado==0){
-                   variablesCampeones.micolock  = game.add.sprite(450, 170, 'micoderrota');
+                   variablesCampeones.micolock  = game.add.sprite(450, 'micoderrota');
                    }
                   else{
-                      variablesCampeones.micolock  = game.add.sprite(450, 170, 'mico');
+                      variablesCampeones.micolock  = game.add.sprite(450, 'mico');
                   }
                   
             }
