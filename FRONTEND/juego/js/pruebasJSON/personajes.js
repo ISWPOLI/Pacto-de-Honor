@@ -70,7 +70,7 @@ var personajesMalos={
     /*Enemigos ZORROS MUNDO 1 ***********************************************************************************************/
     
     "idPUno":{"nombre":"Arthur El Veloz","rutaSprite":"../img/personajes/miniPersonajes/Zorro/ZorroVeloz.png",
-			  "rutaAvatar":"../img/personajes/avatares/caraOso.png",
+			  "rutaAvatar":"../img/personajes/avatares/caraZorro.png",
 			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/miniPersonajes/ArthurVeloz.png",
 			  "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
@@ -78,7 +78,7 @@ var personajesMalos={
 			  "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
 
 	"idPDos":{"nombre":"Andy El Gris","rutaSprite":"../img/personajes/miniPersonajes/Zorro/ZorroGris.png",
-			  "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
+			  "rutaAvatar":"../img/personajes/avatares/caraZorro.png",
 			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/miniPersonajes/AndyGris.png",
 			  "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
@@ -86,7 +86,7 @@ var personajesMalos={
 			  "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPTres":{"nombre":"Ander El Ártico","rutaSprite":"../img/personajes/miniPersonajes/Zorro/ZorroArtico.png",
-               "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
+               "rutaAvatar":"../img/personajes/avatares/caraZorro.png",
 			   "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/miniPersonajes/AnderArtico.png",
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
@@ -94,7 +94,7 @@ var personajesMalos={
 			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPCuatro":{"nombre":"Arnold El Desierto","rutaSprite":"../img/personajes/miniPersonajes/Zorro/ZorroDesierto.png",
-                 "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
+                 "rutaAvatar":"../img/personajes/avatares/caraZorro.png",
 			     "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/miniPersonajes/ArnoldDesierto.png",
 			     "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			     "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
@@ -120,7 +120,7 @@ var personajesMalos={
 			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
 
 	"idPSiete":{"nombre":"Enrique Malayo","rutaSprite":"../img/personajes/miniPersonajes/Oso/OsoMalayo.png",
-                "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
+                "rutaAvatar":"../img/personajes/avatares/caraOso.png",
                 "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/miniPersonajes/EnriqueMalayo.png",
                 "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
                 "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
@@ -128,7 +128,7 @@ var personajesMalos={
                 "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPOcho":{"nombre":"Leonardo Polar","rutaSprite":"../img/personajes/miniPersonajes/Oso/OsoPolar.png",
-               "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
+               "rutaAvatar":"../img/personajes/avatares/caraOso.png",
 			   "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/miniPersonajes/LeonardoPolar.png",
 			   "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			   "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",
@@ -136,7 +136,7 @@ var personajesMalos={
 			   "dano":[6,10,15],"energia":[0.5,1],"defensa":10,"vida":200},
     
     "idPNueve":{"nombre":"Luke Grizzly","rutaSprite":"../img/personajes/miniPersonajes/Oso/OsoGrizzly.png",
-                "rutaAvatar":"../img/personajes/avatares/caraBabuino.png",
+                "rutaAvatar":"../img/personajes/avatares/caraOso.png",
 			    "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/miniPersonajes/LukeGrizzly.png",
 			    "rutaAtaquePlagio":"../img/personajes/poderes/poderesPlagioMalos/error404.png",
 			    "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoOso1.png",

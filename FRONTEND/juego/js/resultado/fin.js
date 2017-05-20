@@ -20,22 +20,15 @@ var fin = {
 			resultado = "GANASTE";
 			color = {fill:'#01DF01',font: '40px Arial'};
             coins=200;
-            exp=200;
+            exp=100;
 		}else{
 			resultado = "PERDISTE";
 			color = {fill:'#DF0101',font: '40px Arial'};
             coins=0;
-            exp=5
+            exp=5;
 		}
         
 		if(variablesBoot.dispositivoMovil){
-			
-			/*
-			*
-			*
-			*  Falta modificar la pantalla para dispositivos moviles 
-			*
-			*/
 			game.add.sprite(0, 0, 'poli');
         	personaje = game.add.sprite(game.world.width/2,game.world.height/1.3, 'personajeJugador');
         	personaje.scale.setTo(1.1);
