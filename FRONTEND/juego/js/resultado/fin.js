@@ -15,6 +15,15 @@ var fin = {
 		var color;
         var exp;
         var coins;
+        
+        /*console.log("Nombre: "+personajesBuenos[variablesCampoBatalla.idPJ].nombre);
+        console.log("Daño normal: "+personajesBuenos[variablesCampoBatalla.idPJ].dano[0]);
+        console.log("Daño especial: "+personajesBuenos[variablesCampoBatalla.idPJ].dano[1]);
+        console.log("Vida: "+personajesBuenos[variablesCampoBatalla.idPJ].vida);
+        console.log("Defensa: "+personajesBuenos[variablesCampoBatalla.idPJ].defensa);
+        console.log("Energia: "+personajesBuenos[variablesCampoBatalla.idPJ].energia);
+        console.log("Nivel: "+personajesBuenos[variablesCampoBatalla.idPJ].nivel);
+        console.log("Experiencia: "+personajesBuenos[variablesCampoBatalla.idPJ].exp);*/
        
 		if(variablesCampoBatalla.ganador){
 			resultado = "GANASTE";
@@ -23,15 +32,26 @@ var fin = {
             datosperfil["datos"].monedas += 200;
             exp = 100;
             datosperfil["datos"].experiencia += 100;
+            personajesBuenos[variablesCampoBatalla.idPJ].exp += 100;
 		}else{
 			resultado = "PERDISTE";
 			color = {fill:'#DF0101',font: '40px Arial'};
             coins = 0;
             exp = 10;
             datosperfil["datos"].experiencia += 10;
+            personajesBuenos[variablesCampoBatalla.idPJ].exp += 10;
 		}
         boot.verificarNivelJugador();
-        //boot.verificarNivelPersonajes(variablesCampoBatalla.idPJ);
+        boot.verificarNivelPersonajes();
+        
+        /*console.log("Nombre: "+personajesBuenos[variablesCampoBatalla.idPJ].nombre);
+        console.log("Daño normal: "+personajesBuenos[variablesCampoBatalla.idPJ].dano[0]);
+        console.log("Daño especial: "+personajesBuenos[variablesCampoBatalla.idPJ].dano[1]);
+        console.log("Vida: "+personajesBuenos[variablesCampoBatalla.idPJ].vida);
+        console.log("Defensa: "+personajesBuenos[variablesCampoBatalla.idPJ].defensa);
+        console.log("Energia: "+personajesBuenos[variablesCampoBatalla.idPJ].energia);
+        console.log("Nivel: "+personajesBuenos[variablesCampoBatalla.idPJ].nivel);
+        console.log("Experiencia: "+personajesBuenos[variablesCampoBatalla.idPJ].exp);*/
         
 		if(variablesBoot.dispositivoMovil){
 			game.add.sprite(0, 0, 'poli');
