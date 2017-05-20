@@ -61,7 +61,7 @@ public class JugadorFacadeREST extends AbstractFacade<Jugador> {
     }
 
     /**
-     * M√©todo que retorna la estructura solicitada en el issue #455
+     * MÈtodo que retorna la estructura solicitada en el issue #455
      * @param idJugador id del jugador que se desea buscar
      * @param idPersonaje id del Personaje que se desea traer el avatar
      * @param token token otorgado al momento del login
@@ -91,7 +91,7 @@ public class JugadorFacadeREST extends AbstractFacade<Jugador> {
                     List<Categoriaimagen> listCategoriaImagen = queryCategoriaImagen.getResultList();
                     
                     if(listCategoriaImagen.size() >= 2){
-                        resultado = "{'response':'KO', 'cause':'Existe m√°s de una categor√≠a llamada Avatar'";
+                        resultado = "{'response':'KO', 'cause':'Existe m·s de una categorÌa llamada Avatar'";
                     }else{
                         idCategoriaAvatar = listCategoriaImagen.get(0).getIdcategoriaImagen();
                         Query queryPersonajeImagen = em.createNamedQuery("PersonajeTieneImagen.findImagenForPersonaje")
@@ -101,7 +101,7 @@ public class JugadorFacadeREST extends AbstractFacade<Jugador> {
                         List<PersonajeTieneImagen> listPersonajeImagen = queryPersonajeImagen.getResultList();
                         
                         if(listPersonajeImagen.size() >= 2){
-                            resultado = "{'response':'KO', 'cause':'Existe m√°s de un avatar asignado al Personaje";
+                            resultado = "{'response':'KO', 'cause':'Existe m·s de un avatar asignado al Personaje";
                         }else{
                             Imagen imagenAvatar = em.find(Imagen.class, listPersonajeImagen.get(0).getIdImagen().getIdImagen());                            
                             resultado +=  "'idJugador':'"+jugador.getIdJugador()+"', 'nickname':'"+jugador.getNickname()+"', "
@@ -125,7 +125,7 @@ public class JugadorFacadeREST extends AbstractFacade<Jugador> {
     }
 
     /**
-     * M√©todo de compra que permite saber cu√°ntos personajes buenos tiene un jugador
+     * MÈtodo de compra que permite saber cu·ntos personajes buenos tiene un jugador
      * @param idJugador id del jugador que se desea consultar
      * @param token String correspondiente al token otorgado en el momento de hacer el login
      * @return 
@@ -146,7 +146,7 @@ public class JugadorFacadeREST extends AbstractFacade<Jugador> {
                Query queryJugadorTiene = em.createNamedQuery("JugadorTienePersonaje.findPlayerJugador");
                queryJugadorTiene.setParameter("idJugador", idJugador);
                List<JugadorTienePersonaje> j = queryJugadorTiene.getResultList();
-               //Valida si tiene m√°s de un personaje asociado
+               //Valida si tiene m·s de un personaje asociado
                if(!j.isEmpty()){
                     //Si solo tiene uno asociado en la tabla Jugador tiene Personaje
                     if(j.size() == 1){
@@ -162,7 +162,7 @@ public class JugadorFacadeREST extends AbstractFacade<Jugador> {
                        for (int i = 0; i < j.size(); i++) {
                            Personaje personaje = em.find(Personaje.class, j.get(i).getPersonaje().getIdPersonaje());
                            if(personaje.getIdCategoria() == 1){
-                               //Si es el √∫ltimo no pone una coma, de lo contrario la ingresa
+                               //Si es el ˙ltimo no pone una coma, de lo contrario la ingresa
                                if(i == j.size()-1){
                                 resultado += "{\"idPersonaje\":"+personaje.getIdPersonaje()+", \"nombrePersonaje\":\""+personaje.getNombrePersonaje()+"\"}";
                                 cont ++;
@@ -191,6 +191,106 @@ public class JugadorFacadeREST extends AbstractFacade<Jugador> {
         }
         return resultado;
     }
+	
+	
+	/**
+     * Busca los personajes que un jugador ha desbloqueado
+     * Se prueba con el TestCase "unlockedCharacter" del proyecto JugadorTienePersonaje-soapui-project
+     * @param token String con el token que se otorgo en el login
+     * @param idJugador
+     * @return list nombre, avatar, estado y descripcion del personaje
+	 * @author EdnaEspejo
+     */
+    @GET
+    @Path("unlockedCharacter")
+    @Produces({"application/json"})
+    public String unlockedCharacter(@QueryParam("idJugador") Integer idJugador, @QueryParam("token") String token){
+        String result = "";
+        try{
+            Query queryToken = em.createNamedQuery("Usuario.findToken");
+            queryToken.setParameter("token", token);
+            Usuario user = (Usuario) queryToken.getSingleResult();
+            if(user != null){
+                Query queryJugadorTienePersonaje = em.createNamedQuery("JugadorTienePersonaje.findByIdJugador");
+                queryJugadorTienePersonaje.setParameter("idJugador", idJugador);
+                List<JugadorTienePersonaje> jugadortienepersonaje = queryJugadorTienePersonaje.getResultList();
+                if(!jugadortienepersonaje.isEmpty()){
+                    if(jugadortienepersonaje.size() == 1){
+                        Personaje personaje = em.find(Personaje.class, jugadortienepersonaje.get(0).getIdJugador());
+                        int estado;
+                        //categoria 1 para personajes buenos
+                        if(personaje.getIdCategoria() == 1){
+                            estado = 1; //desbloqueado
+                            result = "{\"idP\":\""+personaje.getIdPersonaje()+"\",\"nombrePersonaje\":\""+personaje.getNombrePersonaje()+"\",\"estado\":\""+estado+"\",\"avatar\":\""+personaje.getIdImagen()+"\",\"descripcion\":\""+personaje.getDescripcionPersonaje()+"\"}";
+                        }else{
+                            estado = 0; //bloqueado
+                            result = "{\"idP\":\""+personaje.getIdPersonaje()+"\",\"nombrePersonaje\":\""+personaje.getNombrePersonaje()+"\",\"estado\":\""+estado+"\",\"avatar\":\""+personaje.getIdImagen()+"\",\"descripcion\":\""+personaje.getDescripcionPersonaje()+"\"}";
+                        }
+                    }else{
+                        result = "{\"response\":\"No unlocked character\"}";
+                    }
+                }else{
+                    result = "{\"response\":\"No unlocked character\"}";
+                }
+            }else{
+                result = "{\"response\":\"Invalid token\"}";
+            }
+        }catch(Exception e){
+            result = "{\"response\":\"Invalid token\"}";
+            e.printStackTrace();
+        }
+        return result;
+    }
+    
+    /**
+     * Busca los jefes que un jugador ha derrotado
+     * Se prueba con el TestCase "defeatedBoss" del proyecto JugadorTienePersonaje-soapui-project
+     * @param token String con el token que se otorgo en el login
+     * @param idJugador
+     * @return list nombre, avatar, estado y descripcion del jefe
+	 * @author EdnaEspejo
+     */
+    @GET
+    @Path("defeatedBoss")
+    @Produces({"application/json"})
+    public String defeatedBoss(@QueryParam("idJugador") Integer idJugador, @QueryParam("token") String token){
+        String result = "";
+        try{
+            Query queryToken = em.createNamedQuery("Usuario.findToken");
+            queryToken.setParameter("token", token);
+            Usuario user = (Usuario) queryToken.getSingleResult();
+            if(user != null){
+                Query queryJugadorTienePersonaje = em.createNamedQuery("JugadorTienePersonaje.findByIdJugador");
+                queryJugadorTienePersonaje.setParameter("idJugador", idJugador);
+                List<JugadorTienePersonaje> jugadortienepersonaje = queryJugadorTienePersonaje.getResultList();
+                if(!jugadortienepersonaje.isEmpty()){
+                    if(jugadortienepersonaje.size() == 1){
+                        Personaje personaje = em.find(Personaje.class, jugadortienepersonaje.get(0).getIdJugador());
+                        int estado;
+                        //categoria 1 para personajes buenos
+                        if(personaje.getIdCategoria() == 1){
+                            estado = 1; //desbloqueado
+                            result = "{\"idP\":\""+personaje.getIdPersonaje()+"\",\"nombrePersonaje\":\""+personaje.getNombrePersonaje()+"\",\"estado\":\""+estado+"\",\"avatar\":\""+personaje.getIdImagen()+"\",\"descripcion\":\""+personaje.getDescripcionPersonaje()+"\"}";
+                        }else{
+                            estado = 0; //bloqueado
+                            result = "{\"idP\":\""+personaje.getIdPersonaje()+"\",\"nombrePersonaje\":\""+personaje.getNombrePersonaje()+"\",\"estado\":\""+estado+"\",\"avatar\":\""+personaje.getIdImagen()+"\",\"descripcion\":\""+personaje.getDescripcionPersonaje()+"\"}";
+                        }
+                    }else{
+                        result = "{\"response\":\"No unlocked character\"}";
+                    }
+                }else{
+                    result = "{\"response\":\"No unlocked character\"}";
+                }
+            }else{
+                result = "{\"response\":\"Invalid token\"}";
+            }
+        }catch(Exception e){
+            result = "{\"response\":\"Invalid token\"}";
+            e.printStackTrace();
+        }
+        return result;
+    }
+	
     
     @GET
     @Override
