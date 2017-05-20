@@ -1,0 +1,1059 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="shortcut icon" type="image/x-icon" href="img/logosinfondo.ico">
+		<title>Navegación</title>
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="icons/icons.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<script src="js/jquery-latest.js"></script>
+		<script src="js/goUpButton.js"></script>
+	</head>
+	<body>
+		<nav class="goUp icon-chevron-up"></nav>
+		<header>
+			<div>
+				<img class="portada" src="img/portada.png">
+			</div>
+			<nav>
+				<ul>
+					<li><a href="inicio.html">Inicio</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section class="main">
+			<section class="articles">
+				<article>
+					<h2>navegacion.js</h2>
+					<br/>
+					<p>En esta clase se encuentran los botones de cajas sorpresa, ajustes, creditos, quitar sonido, cerrar sesión, invitar amigos, perfil jugador, rankings, compra de personajes y de los 12 mundos.</p>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla1">
+							<td colspan="2">Funciones</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Dato de retorno</b>
+							</td>
+							<td>
+								<b>Descripción breve</b>
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>preload</b> ( )
+								<br/>
+								Función de Phaser, que sirve para cargar componentes del juego.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>create</b> ( )
+								<br/>
+								Función de Phaser, que sirve para agregar componentes al juego.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>verAjustes</b> ( )
+								<br/>
+								Se accederá a la sección de ajustes.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>verCreditos</b> ( )
+								<br/>
+								Iniciará la sección llamada <b>creditos.js</b>.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>quitarSonido</b> ( )
+								<br/>
+								Silenciará la música del juego.
+							</td>
+						</tr>
+						<tr>
+							<td>String</td>
+							<td>
+								<b>cerrarSesión</b> ( )
+								<br/>
+								Cerrará sesión del jugador y mostrará un mensaje en la ventana avisandole al jugador que su sesión fue cerrada correctamente.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>verInvitarAmigos</b> ( )
+								<br/>
+								Iniciará la sección llamada <b>invitarAmigos.js</b>.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>verPerfil</b> ( )
+								<br/>
+								Iniciará la sección llamada <b>perfilJugador.js</b>.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>verCajaMisteriosa</b> ( )
+								<br/>
+								Iniciará la sección llamada <b>cajaMisteriosa.js</b>.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>verRankings</b> ( )
+								<br/>
+								Iniciará la sección llamada <b>cajaMisteriosa.js</b>.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>verCompraPersonajes</b> ( )
+								<br/>
+								Iniciará la sección llamada <b>compraPersonajes.js</b>.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>mundo1</b> ( )
+								<br/>
+								Iniciará la sección llamada <b>mundo1.js</b>.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>mundo2</b> ( )
+								<br/>
+								Iniciará la sección llamada <b>mundo2.js</b>.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>mundo3</b> ( )
+								<br/>
+								Iniciará la sección llamada <b>mundo3.js</b>.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>mundo4</b> ( )
+								<br/>
+								Iniciará la sección llamada <b>mundo4.js</b>.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>mundo5</b> ( )
+								<br/>
+								Iniciará la sección llamada <b>mundo5.js</b>.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>mundo6</b> ( )
+								<br/>
+								Iniciará la sección llamada <b>mundo6.js</b>.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>mundo7</b> ( )
+								<br/>
+								Iniciará la sección llamada <b>mundo7.js</b>.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>mundo8</b> ( )
+								<br/>
+								Iniciará la sección llamada <b>mundo8.js</b>.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>mundo9</b> ( )
+								<br/>
+								Iniciará la sección llamada <b>mundo9.js</b>.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>mundo10</b> ( )
+								<br/>
+								Iniciará la sección llamada <b>mundo10.js</b>.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>mundo11</b> ( )
+								<br/>
+								Iniciará la sección llamada <b>mundo11.js</b>.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>mundo12</b> ( )
+								<br/>
+								Iniciará la sección llamada <b>mundo12.js</b>.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">preload( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta es una función del framework Phaser en la que cargaremos todos los componentes a ser utilizados en el juego como imágenes, sonidos, fondos, sprites, etc. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">create( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta es una función del framework Phaser, aquí se añadirán los componentes al juego. En esta función asignamos la posición inicial, el tamaño, etc. De todos los componentes. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">verAjustes( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función permitirá acceder a la sección de ajustes.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">verCreditos( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función Iniciará la sección llamada <b>creditos.js</b>, después de que el botón de créditos sea presionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">quitarSonido( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función silenciará la música del juego.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">cerrarSesión( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función silenciará la música del juego.
+							</td>
+							<td>
+								Retorna una cadena, la cual será mostrada en la ventana del juego avisandole al jugador que su sesión fue cerrada correctamente.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">verInvitarAmigos( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Iniciará la sección llamada <b>invitarAmigos.js</b>, después de que el botón de invitar amigos sea presionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">verPerfil( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Iniciará la sección llamada <b>perfilJugador.js</b>, después de que el botón del perfil del jugador sea presionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">verCajaMisteriosa( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Iniciará la sección llamada <b>cajaMisteriosa.js</b>, después de que el botón de las cajas misteriosas sea presionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">verRankings( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Iniciará la sección llamada <b>rankings.js</b>, después de que el botón de rankings sea presionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">verCompraPersonajes( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Iniciará la sección llamada <b>compraPersonajes.js</b>, después de que el botón de comprar personajes sea presionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">mundo1( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función iniciará la sección llamada <b>mundo1.js</b>, después de que el botón del mundo 1 sea presionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">mundo2( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función iniciará la sección llamada <b>mundo2.js</b>, después de que el botón del mundo 2 sea presionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">mundo3( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función iniciará la sección llamada <b>mundo3.js</b>, después de que el botón del mundo 3 sea presionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">mundo4( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función iniciará la sección llamada <b>mundo4.js</b>, después de que el botón del mundo 4 sea presionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">mundo5( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función iniciará la sección llamada <b>mundo5.js</b>, después de que el botón del mundo 5 sea presionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">mundo6( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función iniciará la sección llamada <b>mundo6.js</b>, después de que el botón del mundo 6 sea presionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">mundo7( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función iniciará la sección llamada <b>mundo7.js</b>, después de que el botón del mundo 7 sea presionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">mundo8( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función iniciará la sección llamada <b>mundo8.js</b>, después de que el botón del mundo 8 sea presionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">mundo9( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función iniciará la sección llamada <b>mundo9.js</b>, después de que el botón del mundo 9 sea presionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">mundo10( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función iniciará la sección llamada <b>mundo10.js</b>, después de que el botón del mundo 10 sea presionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">mundo11( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función iniciará la sección llamada <b>mundo11.js</b>, después de que el botón del mundo 11 sea presionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">mundo12( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función iniciará la sección llamada <b>mundo12.js</b>, después de que el botón del mundo 12 sea presionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla3">
+							<td colspan="3">Variables</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Nombre</b>
+							</td>
+							<td>
+								<b>Tipo de dato</b>
+							</td>
+							<td>
+								<b>Explicación</b>
+							</td>
+						</tr>
+						<tr>
+							<td>btnMundo</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado abrirá los niveles del mundo 1.</td>
+						</tr>
+						<tr>
+							<td>btnMundo2</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado abrirá los niveles del mundo 2.</td>
+						</tr>
+						<tr>
+							<td>btnMundo3</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado abrirá los niveles del mundo 3.</td>
+						</tr>
+						<tr>
+							<td>btnMundo4</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado abrirá los niveles del mundo 4.</td>
+						</tr>
+						<tr>
+							<td>btnMundo5</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado abrirá los niveles del mundo 5.</td>
+						</tr>
+						<tr>
+							<td>btnMundo6</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado abrirá los niveles del mundo 6.</td>
+						</tr>
+						<tr>
+							<td>btnMundo7</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado abrirá los niveles del mundo 7.</td>
+						</tr>
+						<tr>
+							<td>btnMundo8</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado abrirá los niveles del mundo 8.</td>
+						</tr>
+						<tr>
+							<td>btnMundo9</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado abrirá los niveles del mundo 9.</td>
+						</tr>
+						<tr>
+							<td>btnMundo10</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado abrirá los niveles del mundo 10.</td>
+						</tr>
+						<tr>
+							<td>btnMundo11</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado abrirá los niveles del mundo 11.</td>
+						</tr>
+						<tr>
+							<td>btnMundo12</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado abrirá los niveles del mundo 12.</td>
+						</tr>
+						<tr>
+							<td>text</td>
+							<td>String</td>
+							<td>Cadena que representa el número del mundo 1.</td>
+						</tr>
+						<tr>
+							<td>text2</td>
+							<td>String</td>
+							<td>Cadena que representa el número del mundo 2.</td>
+						</tr>
+						<tr>
+							<td>text3</td>
+							<td>String</td>
+							<td>Cadena que representa el número del mundo 3.</td>
+						</tr>
+						<tr>
+							<td>text4</td>
+							<td>String</td>
+							<td>Cadena que representa el número del mundo 4.</td>
+						</tr>
+						<tr>
+							<td>text5</td>
+							<td>String</td>
+							<td>Cadena que representa el número del mundo 5.</td>
+						</tr>
+						<tr>
+							<td>text6</td>
+							<td>String</td>
+							<td>Cadena que representa el número del mundo 6.</td>
+						</tr>
+						<tr>
+							<td>text7</td>
+							<td>String</td>
+							<td>Cadena que representa el número del mundo 7.</td>
+						</tr>
+						<tr>
+							<td>text8</td>
+							<td>String</td>
+							<td>Cadena que representa el número del mundo 8.</td>
+						</tr>
+						<tr>
+							<td>text9</td>
+							<td>String</td>
+							<td>Cadena que representa el número del mundo 9.</td>
+						</tr>
+						<tr>
+							<td>text10</td>
+							<td>String</td>
+							<td>Cadena que representa el número del mundo 10.</td>
+						</tr>
+						<tr>
+							<td>text11</td>
+							<td>String</td>
+							<td>Cadena que representa el número del mundo 11.</td>
+						</tr>
+						<tr>
+							<td>text12</td>
+							<td>String</td>
+							<td>Cadena que representa el número del mundo 12.</td>
+						</tr>
+					</table>
+				</article>
+			</section>
+			<aside>
+				<h3>Clases</h3>
+				<p><a href="batalla.html">Batalla</a></p>
+				<p><a href="boot.html">Boot</a></p>
+				<p><a href="cajaMisteriosa.html">Caja Misteriosa</a></p>
+				<p><a href="codigoUsado.html">Codigo Usado</a></p>
+				<p><a href="compraPersonajes.html">Compra Personajes</a></p>
+				<p><a href="cookies.html">Cookies</a></p>
+				<p><a href="creditos.html">Creditos</a></p>
+				<p><a href="desbloqueoPersonaje.html">Desbloqueo Personaje</a></p>
+				<p><a href="fin.html">Fin</a></p>
+				<p><a href="funcionesBatalla.html">Funciones Batalla</a></p>
+				<p><a href="game.html">Game</a></p>
+				<p><a href="historieta.html">Historieta</a></p>
+				<p><a href="invitarAmigos.html">Invitar Amigos</a></p>
+				<p><a href="logros.html">Logros</a></p>
+				<p><a href="movil.html">Móvil</a></p>
+				<p><a href="mundo1.html">Mundo1</a></p>
+				<p><a href="mundo2.html">Mundo2</a></p>
+				<p><a href="mundo3.html">Mundo3</a></p>
+				<p><a href="mundo4.html">Mundo4</a></p>
+				<p><a href="mundo5.html">Mundo5</a></p>
+				<p><a href="mundo6.html">Mundo6</a></p>
+				<p><a href="mundo7.html">Mundo7</a></p>
+				<p><a href="mundo8.html">Mundo8</a></p>
+				<p><a href="mundo9.html">Mundo9</a></p>
+				<p><a href="mundo10.html">Mundo10</a></p>
+				<p><a href="mundo11.html">Mundo11</a></p>
+				<p><a href="mundo12.html">Mundo12</a></p>
+				<p><a href="navegacion.html">Navegación</a></p>
+				<p><a href="perfilJugador.html">Perfil Jugador</a></p>
+				<p><a href="pruebasPsicotecnicas.html">Pruebas Psicotécnicas</a></p>
+				<p><a href="rankings.html">Rankings</a></p>
+				<p><a href="seleccionAvatar.html">Selección Avatar</a></p>
+				<p><a href="seleccionPersonaje.html">Selección Personaje</a></p>
+				<p><a href="verificacionDeCodigo.html">Verificación de Código</a></p>
+			</aside>
+		</section>
+		<footer>
+			<p>
+				Poli Fighters - 2017
+			</p>
+		</footer>
+	</body>
+</html>

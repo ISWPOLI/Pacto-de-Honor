@@ -1,0 +1,297 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="shortcut icon" type="image/x-icon" href="img/logosinfondo.ico">
+		<title>Móvil</title>
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="icons/icons.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<script src="js/jquery-latest.js"></script>
+		<script src="js/goUpButton.js"></script>
+	</head>
+	<body>
+		<nav class="goUp icon-chevron-up"></nav>
+		<header>
+			<div>
+				<img class="portada" src="img/portada.png">
+			</div>
+			<nav>
+				<ul>
+					<li><a href="inicio.html">Inicio</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section class="main">
+			<section class="articles">
+				<article>
+					<h2>movil.js</h2>
+					<br/>
+					<p>
+						En esta clase se detecta si el jugador esta accediendo al juego desde <b>Android</b>, <b>BlackBerry</b>, <b>IOS</b>, <b>Opera</b> o <b>Windows</b>.
+					</p>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla1">
+							<td colspan="2">Funciones</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Dato de retorno</b>
+							</td>
+							<td>
+								<b>Descripción breve</b>
+							</td>
+						</tr>
+						<tr>
+							<td>String</td>
+							<td>
+								<b>Android</b> ( )
+								<br/>
+								Verifica si el jugador accede al juego desde un dispositivo android.
+							</td>
+						</tr>
+						<tr>
+							<td>String</td>
+							<td>
+								<b>BlackBerry</b> ( )
+								<br/>
+								Verifica si el jugador accede al juego desde un dispositivo BlackBerry.
+							</td>
+						</tr>
+						<tr>
+							<td>String</td>
+							<td>
+								<b>iOS</b> ( )
+								<br/>
+								Verifica si el jugador accede al juego desde un dispositivo IOS.
+							</td>
+						</tr>
+						<tr>
+							<td>String</td>
+							<td>
+								<b>Opera</b> ( )
+								<br/>
+								Verifica si el jugador accede al juego desde un dispositivo con Opera.
+							</td>
+						</tr>
+						<tr>
+							<td>String</td>
+							<td>
+								<b>Windows</b> ( )
+								<br/>
+								Verifica si el jugador accede al juego desde un dispositivo Windows.
+							</td>
+						</tr>
+						<tr>
+							<td>String</td>
+							<td>
+								<b>any</b> ( )
+								<br/>
+								Devuelve cualquiera dispositivo de acceso.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">Android( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función verifica si el jugador accede al juego desde un dispositivo Android.
+							</td>
+							<td>
+								Retorna una cadena especificando que el dispositivo del que se accede al juego es Android.
+							</td>
+						</tr>
+						<tr class="filauno tabla2">
+							<td colspan="3">BlackBerry( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función verifica si el jugador accede al juego desde un dispositivo BlackBerry. 
+							</td>
+							<td>
+								Retorna una cadena especificando que el dispositivo del que se accede al juego es BlackBerry.
+							</td>
+						</tr>
+						</tr>
+						<tr class="filauno tabla2">
+							<td colspan="3">iOS( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función verifica si el jugador accede al juego desde un dispositivo IOS. 
+							</td>
+							<td>
+								Retorna una cadena especificando que el dispositivo del que se accede al juego es IOS.
+							</td>
+						</tr>
+						<tr class="filauno tabla2">
+							<td colspan="3">Opera( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función verifica si el jugador accede al juego desde un dispositivo con Opera.
+							</td>
+							<td>
+								Retorna una cadena especificando que el navegador del que se accede al juego es Opera.
+							</td>
+						</tr>
+						<tr class="filauno tabla2">
+							<td colspan="3">Windows( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función verifica si el jugador accede al juego desde un dispositivo Windows.
+							</td>
+							<td>
+								Retorna una cadena especificando que el dispositivo del que se accede al juego es Windows.
+							</td>
+						</tr>
+						<tr class="filauno tabla2">
+							<td colspan="3">any( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función devuelve cualquier dispositivo de acceso.
+							</td>
+							<td>
+								Retorna una cadena con cualquier dispositivo de acceso.
+							</td>
+						</tr>
+					</table>
+				</article>
+			</section>
+			<aside>
+				<h3>Clases</h3>
+				<p><a href="batalla.html">Batalla</a></p>
+				<p><a href="boot.html">Boot</a></p>
+				<p><a href="cajaMisteriosa.html">Caja Misteriosa</a></p>
+				<p><a href="codigoUsado.html">Codigo Usado</a></p>
+				<p><a href="compraPersonajes.html">Compra Personajes</a></p>
+				<p><a href="cookies.html">Cookies</a></p>
+				<p><a href="creditos.html">Creditos</a></p>
+				<p><a href="desbloqueoPersonaje.html">Desbloqueo Personaje</a></p>
+				<p><a href="fin.html">Fin</a></p>
+				<p><a href="funcionesBatalla.html">Funciones Batalla</a></p>
+				<p><a href="game.html">Game</a></p>
+				<p><a href="historieta.html">Historieta</a></p>
+				<p><a href="invitarAmigos.html">Invitar Amigos</a></p>
+				<p><a href="logros.html">Logros</a></p>
+				<p><a href="movil.html">Móvil</a></p>
+				<p><a href="mundo1.html">Mundo1</a></p>
+				<p><a href="mundo2.html">Mundo2</a></p>
+				<p><a href="mundo3.html">Mundo3</a></p>
+				<p><a href="mundo4.html">Mundo4</a></p>
+				<p><a href="mundo5.html">Mundo5</a></p>
+				<p><a href="mundo6.html">Mundo6</a></p>
+				<p><a href="mundo7.html">Mundo7</a></p>
+				<p><a href="mundo8.html">Mundo8</a></p>
+				<p><a href="mundo9.html">Mundo9</a></p>
+				<p><a href="mundo10.html">Mundo10</a></p>
+				<p><a href="mundo11.html">Mundo11</a></p>
+				<p><a href="mundo12.html">Mundo12</a></p>
+				<p><a href="navegacion.html">Navegación</a></p>
+				<p><a href="perfilJugador.html">Perfil Jugador</a></p>
+				<p><a href="pruebasPsicotecnicas.html">Pruebas Psicotécnicas</a></p>
+				<p><a href="rankings.html">Rankings</a></p>
+				<p><a href="seleccionAvatar.html">Selección Avatar</a></p>
+				<p><a href="seleccionPersonaje.html">Selección Personaje</a></p>
+				<p><a href="verificacionDeCodigo.html">Verificación de Código</a></p>
+			</aside>
+		</section>
+		<footer>
+			<p>
+				Poli Fighters - 2017
+			</p>
+		</footer>
+	</body>
+</html>

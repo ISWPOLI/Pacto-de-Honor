@@ -32,7 +32,12 @@ variablesCampoBatalla = {
 	saltoJ:0,//tiempo de salto
 	ganador:null,//true si el jugador gana
 	animP:null,//guarda la animaicon de punos del personaje del jugador
-	animE:null//guarda la animaicon de escudo
+	animE:null,//guarda la animaicon de escudo
+	unClick:false,//guia para el boton de ataque en version movil 
+	botonAtaque:null,//guarda el boton de ataque en la version movil
+	botonEscudo:null,//guarda el bton del segundo escudo en la version movil 
+	unClickEscudo:false//guia para el boton de ataque en version movil 
+	
 };
 
 var boxGame = 1;
@@ -56,6 +61,9 @@ var batalla = {
 		variablesCampoBatalla.saltoJ=0; 
 		variablesCampoBatalla.cambioOrientacion = false;
 		variablesCampoBatalla.counter = 7200;
+         if(variablesCampoBatalla.idNivel=='1-1' && !variablesBoot.dispositivoMovil){
+            variablesCampoBatalla.counter=8500;
+         }
 		variablesCampoBatalla.ti = 0;
 		variablesCampoBatalla.danoH=personajesBuenos[variablesCampoBatalla.idPJ].dano;
 		variablesCampoBatalla.danoV=personajesMalos[variablesCampoBatalla.idPC].dano;
@@ -107,12 +115,19 @@ var batalla = {
 
 		if(variablesBoot.dispositivoMovil){
 			 //Add the VirtualGamepad plugin to the game
-        	 gamepad = game.plugins.add(Phaser.Plugin.VirtualGamepad);
+        	gamepad = game.plugins.add(Phaser.Plugin.VirtualGamepad);
         	// Add a joystick to the game (only one is allowed right now)
-        	 joystick = gamepad.addJoystick(100, 500, 1, 'gamepad');       
+        	joystick = gamepad.addJoystick(100, 500, 1, 'gamepad');       
         	// Add a button to the game (only one is allowed right now)
-        	 button = gamepad.addButton(730, 500, 0.8, 'gamepad');
-			
+        	variablesCampoBatalla.botonAtaque = gamepad.addButton(730, 500, 0.8, 'gamepad');
+			variablesCampoBatalla.botonEscudo = game.add.button(690, 250, 'botonEscudo',null,null,null,null,1,0);
+			variablesCampoBatalla.botonEscudo.scale.setTo(0.8);
+			variablesCampoBatalla.botonEscudo.onInputDown.add(function(){
+				variablesCampoBatalla.unClickEscudo=true;
+			});
+			variablesCampoBatalla.botonEscudo.onInputUp.add(function(){
+				variablesCampoBatalla.unClickEscudo=false;
+			});
 			// cursores = game.input.keyboard.createCursorKeys();
 			// esp = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 			
@@ -242,18 +257,23 @@ var batalla = {
 	//se crea esta funcion para disminuir la barra de energia
     
 	update : function() {
+         if(variablesCampoBatalla.counter<7200){
         indice=funcionesBatalla.numeroAleatorio(1,4);
+         }
 		funcionesBatalla.cargarEnergia(energiaVerdeJugador);
 		funcionesBatalla.cargarEnergia(energiaVerdeComputadora);
 		
 		if(variablesBoot.dispositivoMovil)
-			funcionesBatalla.joystick(joystick,button);
+			funcionesBatalla.joystick(joystick,variablesCampoBatalla.botonAtaque,variablesCampoBatalla.botonEscudo);
 		else
 			funcionesBatalla.movimientoJugador();
         
-        funcionesBatalla.guiaComputadora(variablesCampoBatalla.movimientoComputadora);
+          if(variablesCampoBatalla.counter<7200){ funcionesBatalla.guiaComputadora(variablesCampoBatalla.movimientoComputadora);
+       } 
 		if(!variablesCampoBatalla.secuencia)
-			funcionesBatalla.llamarSecuencia(indice);	
+			 if(variablesCampoBatalla.counter<7200){
+            funcionesBatalla.llamarSecuencia(indice);	
+             }
 
 		variablesCampoBatalla.counter--;
 		variablesCampoBatalla.ti = parseInt(variablesCampoBatalla.counter / 60);
@@ -263,6 +283,44 @@ var batalla = {
 		if (variablesCampoBatalla.ti >= 0) {
 			text.setText('time: ' + variablesCampoBatalla.ti);
 		}
+        if(variablesCampoBatalla.idNivel=='1-1' && !variablesBoot.dispositivoMovil){
+    
+        if(variablesCampoBatalla.counter==8460){
+            funcionesBatalla.tutorial();
+           } if(variablesCampoBatalla.counter==8300){
+             texto1.destroy();
+            derecha.destroy();
+            izquierda.destroy();
+        } if(variablesCampoBatalla.counter==8260){
+            funcionesBatalla.tutorial2();
+           }if(variablesCampoBatalla.counter==8100){
+             texto2.destroy();
+            arriba.destroy();
+        } if(variablesCampoBatalla.counter==8060){
+            funcionesBatalla.tutorial3();
+           }if(variablesCampoBatalla.counter==7900){
+             texto3.destroy();
+            abajo.destroy();
+        } if(variablesCampoBatalla.counter==7860 ){
+            funcionesBatalla.tutorial4();
+           }if(variablesCampoBatalla.counter==7700){
+             texto4.destroy();
+            m.destroy();
+        } if(variablesCampoBatalla.counter==7660 ){
+            funcionesBatalla.tutorial5();
+           } if(variablesCampoBatalla.counter==7500){
+             texto5.destroy();
+            espacio.destroy();
+        }if(variablesCampoBatalla.counter==7460){
+            funcionesBatalla.tutorial6();
+           }if(variablesCampoBatalla.counter==7250){
+             texto6.destroy();
+            n.destroy();
+            vida.destroy();
+               energia.destroy();
+               btnpoder.destroy();
+        }
+        }
 		if(variablesCampoBatalla.ti == timeShowBox){
 			funcionesBatalla.showBox();	
 		}

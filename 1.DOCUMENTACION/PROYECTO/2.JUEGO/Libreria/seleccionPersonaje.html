@@ -1,0 +1,600 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="shortcut icon" type="image/x-icon" href="img/logosinfondo.ico">
+		<title>Selección Personaje</title>
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="icons/icons.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<script src="js/jquery-latest.js"></script>
+		<script src="js/goUpButton.js"></script>
+	</head>
+	<body>
+		<nav class="goUp icon-chevron-up"></nav>
+		<header>
+			<div>
+				<img class="portada" src="img/portada.png">
+			</div>
+			<nav>
+				<ul>
+					<li><a href="inicio.html">Inicio</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section class="main">
+			<section class="articles">
+				<article>
+					<h2>seleccionPersonaje.js</h2>
+					<br/>
+					<p>En esta clase el jugador puede seleccionar algún personaje bueno para comenzar la batalla.</p>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla1">
+							<td colspan="2">Funciones</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Dato de retorno</b>
+							</td>
+							<td>
+								<b>Descripción breve</b>
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>preload</b> ( )
+								<br/>
+								Función de Phaser, que sirve para cargar componentes del juego.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>create</b> ( )
+								<br/>
+								Función de Phaser, que sirve para agregar componentes al juego.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>verNavegacion</b> ( )
+								<br/>
+								Se dirigirá a la seccion llamada <b>navegacion.js</b>.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>clickPantera</b> ( )
+								<br/>
+								Muestra al jugador que Ana Pantera fue seleccionada.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>clickGallo</b> ( )
+								<br/>
+								Muestra al jugador que Andrés Gallo fue seleccionado.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>clickCierva</b> ( )
+								<br/>
+								Muestra al jugador que Cata Cierva fue seleccionada.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>clickJirafa</b> ( )
+								<br/>
+								Muestra al jugador que Daniela Jirafa fue seleccionada.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>clickLeon</b> ( )
+								<br/>
+								Muestra al jugador que Daniel León fue seleccionado.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>clickCanario</b> ( )
+								<br/>
+								Muestra al jugador que Fabián Canario fue seleccionado.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>clickRuiseñor</b> ( )
+								<br/>
+								Muestra al jugador que Iván Ruiseñor fue seleccionado.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>clickRaton</b> ( )
+								<br/>
+								Muestra al jugador que Pedro Ratón fue seleccionado.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>clickHormiga</b> ( )
+								<br/>
+								Muestra al jugador que Tati Hormiga fue seleccionada.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>verBatalla</b> ( )
+								<br/>
+								Después de que se seleccione un personaje y se presione el botón seleccionar, iniciará la sección llamada <b>batalla.js</b>.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">preload( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta es una función del framework Phaser en la que cargaremos todos los componentes a ser utilizados en el juego como imágenes, sonidos, fondos, sprites, etc. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">create( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta es una función del framework Phaser, aquí se añadirán los componentes al juego. En esta función asignamos la posición inicial, el tamaño, etc. De todos los componentes. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">verNavegacion( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función se encargará de dirigir el juego a la sección <b>navegacion.js</b>.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">clickPantera( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función muestra al jugador que Ana Pantera fue seleccionada.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">clickGallo( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función muestra al jugador que Andrés Gallo fue seleccionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">clickCierva( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función muestra al jugador que Cata Cierva fue seleccionada.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">clickJirafa( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función muestra al jugador que Daniela Jirafa fue seleccionada.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">clickLeon( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función muestra al jugador que Daniel León fue seleccionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">clickCanario( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función muestra al jugador que Fabián Canario fue seleccionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">clickRuiseñor( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función muestra al jugador que Iván Ruiseñor fue seleccionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">clickRaton( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función muestra al jugador que Pedro Ratón fue seleccionado.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">clickHormiga( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función muestra al jugador que Tati Hormiga fue seleccionada.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">verBatalla( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función verifica que el jugador haya seleccionado algún personaje, en caso de no ser asi mostrará un texto en la ventana, el cual es "Selecciona un personaje". Después de seleccionarlo y presionar el botón seleccionar, iniciará la sección llamada <b>batalla.js</b>.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla3">
+							<td colspan="3">Variables</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Nombre</b>
+							</td>
+							<td>
+								<b>Tipo de dato</b>
+							</td>
+							<td>
+								<b>Explicación</b>
+							</td>
+						</tr>
+						<tr>
+							<td>startButton</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado iniciará la batalla.</td>
+						</tr>
+						<tr>
+							<td>seleccionado</td>
+							<td>boolean</td>
+							<td>Representa si un personaje esta seleccionado o no.</td>
+						</tr>
+						<tr>
+							<td>txtSeleccionado</td>
+							<td>String</td>
+							<td>Cadena que contiene el nombre del personaje seleccionado.</td>
+						</tr>
+						<tr>
+							<td>botones</td>
+							<td>PhaserButton [ ]</td>
+							<td>Arreglo de 9 posiciones que contiene los botones de los 9 personajes buenos.</td>
+						</tr>
+					</table>
+				</article>
+			</section>
+			<aside>
+				<h3>Clases</h3>
+				<p><a href="verificacionDeCodigo.html">VerificacionDeCodigo.js</a></p>
+				<p><a href="codigoUsado.html">CodigoUsado.js</a></p>
+				<p><a href="desbloqueoPersonaje.html">DesbloqueoPersonaje.js</a></p>
+				<p><a href="cajaMisteriosa.html">CajaMisteriosa.js</a></p>
+				<p><a href="batalla.html">Batalla.js</a></p>
+				<p><a href="funcionesBatalla.html">FuncionesBatalla.js</a></p>
+				<p><a href="compraPersonajes.html">CompraPersonajes.js</a></p>
+				<p><a href="cookies.html">Cookies.js</a></p>
+				<p><a href="creditos.html">Creditos.js</a></p>
+				<p><a href="historieta.html">Historieta.js</a></p>
+				<p><a href="invitarAmigos.html">InvitarAmigos.js</a></p>
+				<p><a href="logros.html">Logros.js</a></p>
+				<p><a href="mundo1.html">Mundo1.js</a></p>
+				<p><a href="mundo2.html">Mundo2.js</a></p>
+				<p><a href="mundo3.html">Mundo3.js</a></p>
+				<p><a href="mundo4.html">Mundo4.js</a></p>
+				<p><a href="mundo5.html">Mundo5.js</a></p>
+				<p><a href="mundo6.html">Mundo6.js</a></p>
+				<p><a href="mundo7.html">Mundo7.js</a></p>
+				<p><a href="mundo8.html">Mundo8.js</a></p>
+				<p><a href="mundo9.html">Mundo9.js</a></p>
+				<p><a href="mundo10.html">Mundo10.js</a></p>
+				<p><a href="mundo11.html">Mundo11.js</a></p>
+				<p><a href="mundo12.html">Mundo12.js</a></p>
+				<p><a href="navegacion.html">Navegacion.js</a></p>
+				<p><a href="perfilJugador.html">PerfilJugador.js</a></p>
+				<p><a href="boot.html">Boot.js</a></p>
+				<p><a href="game.html">Game.js</a></p>
+				<p><a href="movil.html">Movil.js</a></p>
+				<p><a href="pruebasPsicotecnicas.html">PruebasPsicotecnicas.js</a></p>
+				<p><a href="rankings.html">Rankings.js</a></p>
+				<p><a href="fin.html">Fin.js</a></p>
+				<p><a href="seleccionAvatar.html">SeleccionAvatar.js</a></p>
+				<p><a href="#">SeleccionPersonaje.js</a></p>
+				<p><a href="verificacionDeCodigo.html">Verificación de Código</a></p>
+			</aside>
+		</section>
+		<footer>
+			<p>
+				Poli Fighters - 2017
+			</p>
+		</footer>
+	</body>
+</html>

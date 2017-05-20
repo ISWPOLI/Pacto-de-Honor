@@ -18,12 +18,20 @@ var funcionesBatalla={
         game.load.spritesheet('impactoPersonalidadComputadora', personajesMalos[idPC].rutaImpactoPersonalidad, 161, 145);
         game.load.spritesheet('impactoPlagioComputadora', personajesMalos[idPC].rutaImpactoPlagio, 277, 277);
         game.load.spritesheet('gamepad','../img/Componentes/joystick/gamepad_spritesheet.png',100,100);
+        game.load.spritesheet('botonEscudo', '../img/Componentes/joystick/gamepad_spritesheet.png', 100, 100);
         game.load.image('caja', boxes[caa].root);
         game.load.audio('punoalaire', '../img/componentes/sonidos/EfectosDePelea/sonidogolpealaire.mp3');
         game.load.audio('punoalcuerpo', '../img/componentes/sonidos/EfectosDePelea/sonidogolpealcuerpo.mp3');
         game.load.image('escudo1', '../img/componentes/batalla/escudo1.png');
         game.load.image('escudo2', '../img/componentes/batalla/escudo2.png');
-         if (caa == 8) {
+         game.load.image('flechaIzquierda','../img/componentes/batalla/izquierdapc.png');
+        game.load.image('flechaDerecha','../img/componentes/batalla/derechapc.png');
+         game.load.image('flechaArriba','../img/componentes/batalla/arribapc.png');
+        game.load.image('flechaAbajo','../img/componentes/batalla/abajopc.png');
+         game.load.image('teclam','../img/componentes/batalla/teclaM.png');
+         game.load.image('teclan','../img/componentes/batalla/teclaN.png');
+        game.load.image('espacio','../img/componentes/batalla/space.png');
+        if (caa == 8) {
              game.load.image('cajaOpen', boxes[caa].fatalityBox);
          }else{
              game.load.image('cajaOpen', boxes[caa].rootOpen);
@@ -100,6 +108,75 @@ var funcionesBatalla={
                 else{variablesBoot.musicaOnOff = false; variablesBoot.musicaBatalla.pause();}
             }
         }
+    },
+    tutorial:function(){
+         texto1 = game.add.text(450,270,"Presione las teclas \n                y \n \npara moverse por el \n  campo de batalla ");
+        vida = game.add.text(310,20,"vida",{fill:"red"});
+        energia = game.add.text(210,100,"energia",{fill:"green"});
+         texto1.stroke = "white";
+            texto1.strokeThickness = 4;
+            texto1.stroke = "white";
+            texto1.anchor.setTo(0.5);
+            vida.strokeThickness = 4;
+            vida.stroke = "white";
+            energia.strokeThickness = 4;
+            energia.stroke = "white";
+            izquierda = game.add.sprite(330,210,'flechaIzquierda');
+            izquierda.scale.setTo(0.4);
+            derecha = game.add.sprite(470,210,'flechaDerecha');
+            derecha.scale.setTo(0.4);
+       
+    },
+    tutorial2:function(){
+         texto2 = game.add.text(450,270,"Utilice la tecla \n \n \n  para saltar ");
+         texto2.stroke = "white";
+            texto2.strokeThickness = 4;
+            texto2.stroke = "white";
+            texto2.strokeThickness = 4;
+            texto2.anchor.setTo(0.5);
+            arriba = game.add.sprite(400,230,'flechaArriba');
+            arriba.scale.setTo(0.4);
+    },
+      tutorial3:function(){
+         texto3 = game.add.text(450,270,"  Con la tecla \n \n \npodra usar uno\nde sus escudos ");
+         texto3.stroke = "white";
+            texto3.strokeThickness = 4;
+            texto3.stroke = "white";
+            texto3.strokeThickness = 4;
+            texto3.anchor.setTo(0.5);
+            abajo = game.add.sprite(400,210,'flechaAbajo');
+            abajo.scale.setTo(0.4);
+    },
+    tutorial4:function(){
+         texto4 = game.add.text(450,270,"Si presiona la tecla \n \nusted activará otro escudo");
+         texto4.stroke = "white";
+            texto4.strokeThickness = 4;
+            texto4.stroke = "white";
+            texto4.strokeThickness = 4;
+            texto4.anchor.setTo(0.5);
+            m = game.add.sprite(370,240,'teclam');
+            m.scale.setTo(1.8);
+    },
+       tutorial5:function(){
+         texto5 = game.add.text(450,270,"Si presiona la tecla \n \nusted podrá golpear a su rival");
+         texto5.stroke = "white";
+            texto5.strokeThickness = 4;
+            texto5.stroke = "white";
+            texto5.strokeThickness = 4;
+            texto5.anchor.setTo(0.5);
+            espacio = game.add.sprite(300,240,'espacio');
+            espacio.scale.setTo(0.1);
+    },   tutorial6:function(){
+         texto6 = game.add.text(450,270,"Finalmente si presiona la tecla \n \n  o pulsando el boton azul, \n  usted podra usar el poder especial");
+         texto6.stroke = "white";
+        btnpoder = game.add.text (150,150,"boton de poder",{fill:"blue"});
+            texto6.strokeThickness = 4;
+            texto6.stroke = "white";
+            btnpoder.strokeThickness = 4;
+            btnpoder.stroke = "white";
+            texto6.anchor.setTo(0.5);
+            n = game.add.sprite(370,230,'teclan');
+            n.scale.setTo(1.8);
     },
     //con esta funcion se refelja el daño causado
     actualizarVida: function(barra,dano){
@@ -555,9 +632,23 @@ var funcionesBatalla={
             this.tercerMovimientoComputadora();
     },
     joystick:function(joy,button){
-        
-            variablesCampoBatalla.movH[0]=false;
+        if(variablesCampoBatalla.personajeJugador.animations.currentAnim.name.localeCompare("punos")==0
+            &&variablesCampoBatalla.personajeJugador.animations.currentAnim.isPlaying){
+                variablesCampoBatalla.movH[1]=true;
+                 if(variablesCampoBatalla.cambioOrientacion)
+                    variablesCampoBatalla.personajeJugador.body.x-=1;
+                else
+                    variablesCampoBatalla.personajeJugador.body.x+=1;
+        }else{
             variablesCampoBatalla.movH[1]=false;
+        }
+        variablesCampoBatalla.movH[0]=false;        
+        variablesCampoBatalla.movH[3]=false;
+        variablesCampoBatalla.personajeJugador.body.velocity.x=0;
+        if(variablesCampoBatalla.escudo1!=null)
+            variablesCampoBatalla.escudo1.kill();
+        if(variablesCampoBatalla.escudo2!=null)
+            variablesCampoBatalla.escudo2.kill();
             if (joy.properties.right) {
                 variablesCampoBatalla.personajeJugador.body.x+=2;
                 variablesCampoBatalla.personajeJugador.animations.play('correr');
@@ -565,15 +656,32 @@ var funcionesBatalla={
                     variablesCampoBatalla.personajeJugador.body.x-=2;
                     variablesCampoBatalla.personajeJugador.animations.play('correr');
                 } else if (joy.properties.down) {
-                    variablesCampoBatalla.personajeJugador.animations.play('defensa');
+                    if(variablesCampoBatalla.cambioOrientacion)
+                        variablesCampoBatalla.escudo1 = game.add.sprite(variablesCampoBatalla.personajeJugador.body.x, variablesCampoBatalla.personajeJugador.body.y, 'escudo1');
+                    else
+                        variablesCampoBatalla.escudo1 = game.add.sprite(variablesCampoBatalla.personajeJugador.body.x+200, variablesCampoBatalla.personajeJugador.body.y, 'escudo1');
+                    variablesCampoBatalla.escudo1.anchor.setTo(0.5,0);
+                    variablesCampoBatalla.personajeJugador.animations.play('defensa')
                     variablesCampoBatalla.movH[0]=true;
+                }else if (joy.properties.up&&(variablesCampoBatalla.personajeJugador.body.y>355)&&(game.time.now > variablesCampoBatalla.saltoJ)){                
+                           variablesCampoBatalla.personajeJugador.body.velocity.y-=500;
                 }
-                else if (button.isDown){
+                else if (button.isDown&&!variablesCampoBatalla.unClick){
+                    variablesCampoBatalla.unClick=true;
+                }else if (variablesCampoBatalla.unClick){
+                    variablesCampoBatalla.unClick=false;
                     variablesCampoBatalla.personajeJugador.animations.play('punos');
                     variablesCampoBatalla.personajeJugador.body.x+=1;
                     variablesCampoBatalla.movH[1]=true;
+                }else if(variablesCampoBatalla.unClickEscudo){
+                    variablesCampoBatalla.escudo1 = game.add.sprite(variablesCampoBatalla.personajeJugador.body.x, variablesCampoBatalla.personajeJugador.body.y, 'escudo2');
+                    variablesCampoBatalla.personajeJugador.animations.play('defensa')
+                    variablesCampoBatalla.movH[3]=true;
                 }else{
-                    variablesCampoBatalla.personajeJugador.animations.play('quieto');
+                      if(variablesCampoBatalla.personajeJugador.animations.currentAnim.name.localeCompare("correr")==0||
+                        variablesCampoBatalla.personajeJugador.animations.currentAnim.name.localeCompare("defensa")==0){
+                        variablesCampoBatalla.personajeJugador.frame = 1;
+            }
                 }
     }
 }

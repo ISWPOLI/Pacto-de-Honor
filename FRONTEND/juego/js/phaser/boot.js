@@ -73,7 +73,8 @@ var boot ={
         variablesBoot.musicaBatalla.play();
         variablesBoot.musicaBatalla.pause();
         this.scale.refresh();
-    	game.state.start("seleccionavatar");
+        game.state.start("batalla");
+    	//game.state.start("seleccionavatar");
 	},
     
     verificarMusica: function(x){
