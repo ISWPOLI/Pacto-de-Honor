@@ -27,7 +27,7 @@ var jugadores={
                      facultad:"Ing. y Ciencias Básicas",
                      universidad:"Poligran",
                      keyAvatar:"avatarCuatro",
-                     rutaAvatar:"../img/personajes/avatares/caraRuiseñor.png",
+                     rutaAvatar:"../img/personajes/avatares/caraRuisenor.png",
                      nivel:17},
     
     "jugadorCinco":{nombre:"Cristian Garzón",

@@ -70,13 +70,28 @@ header nav ul li a:hover { /* hover del los links del menú de navegación*/
 	box-shadow:0px 0px 5px grey; /* sombra */
 }
 
+.main .articlesEst {
+	width:73.5%;
+	margin-right:1.5%;
+	float:left;
+	background:#fff;
+	box-shadow:0px 0px 5px grey; /* sombra */
+}
+
+.main .articlesEst .imagenRoot{
+	margin-left: 35%;
+	box-shadow:0px 0px 5px grey; /* sombra */
+}
+
 .main .articles div .imagenLeft {
     float:left;
-    margin-right:10%;
+    margin-right:5%;
+    margin-bottom:1.5%
 }
 .main .articles div .imagenRight {
     float:right;
     margin-left:5%;
+    margin-bottom:1.5%;
 }
 
 .main .articles article { /* articulos del main */
@@ -89,6 +104,49 @@ header nav ul li a:hover { /* hover del los links del menú de navegación*/
 .main .articles .links { /* links de phaser */
 	color: rgb(0,116,217);
 	text-decoration: none;
+}
+
+.main .articlesEst .links { /* links de phaser */
+	color: rgb(0,116,217);
+	text-decoration: none;
+}
+
+.main aside p { /* cada p del aside */
+	margin: 10px 0px;
+}
+
+.main aside p a { /* todos los link del aside */
+	text-decoration: none;
+}
+
+.main aside p a:link { /* cuando no se ha visitado el link */
+	color:#000000;
+}
+
+.main aside p a:visited{ /* cuando se ha visitado el link */
+	color:#000000;
+}
+
+.main aside p a:hover { /* cuando el click esta sobre el link */
+	background:rgba(0,116,217,0.5);
+	padding:5px 15px;
+	/*background:#0074d9;*/
+	border-radius:10px;
+}
+
+.main aside p a:active{ /* cuando se presiona el link */
+	color:#ffffff;
+}
+
+aside {
+	width:25%;
+	height: 60%;
+	overflow: scroll;
+	background: #fff;
+	float:left;
+	padding:20px;
+	text-align: center;
+	box-shadow:0px 0px 5px grey;
 }
 
 footer {

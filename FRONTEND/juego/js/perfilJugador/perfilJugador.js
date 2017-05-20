@@ -13,10 +13,10 @@ var perfilJugador = function(game){};
     perfilJugador.prototype = {
         preload : function(){
             game.load.image('avatar', datosperfil["datos"].avatar);
-		    game.load.spritesheet('boton-personaje', '../img/Componentes/botones/boton-personaje.png');
-            game.load.spritesheet('boton-jefes', '../img/Componentes/botones/boton-jefes.png');
-            game.load.spritesheet('boton-trofeo', '../img/Componentes/botones/boton-trofeo.png');
-            game.load.spritesheet('boton-alfanumerico', '../img/Componentes/botones/boton-alfanumerico.png');
+		    game.load.spritesheet('boton-personaje', '../img/Componentes/botones/botonPersonaje.png');
+            game.load.spritesheet('boton-jefes', '../img/Componentes/botones/botonJefes.png');
+            game.load.spritesheet('boton-trofeo', '../img/Componentes/botones/botonTrofeo.png');
+            game.load.spritesheet('boton-alfanumerico', '../img/Componentes/botones/botonAlfanumerico.png');
         },
 
         create : function (){
@@ -28,7 +28,7 @@ var perfilJugador = function(game){};
 		    game.add.sprite(80, 50,'avatar').scale.setTo(0.8);
 		
             game.add.button(5, 5,'botonVolver', this.verNavegacion, 1, 1, 0, 2);
-            game.add.button(90, 290,'boton-personaje', null, 0, 0, 0, 0);
+            game.add.button(90, 290,'boton-personaje', this.verCampeones, 0, 0, 0, 0);
             game.add.button(450, 290,'boton-jefes', this.verJefes, 0, 0, 0, 0);
             game.add.button(90, 450,'boton-trofeo', this.verLogros, 0, 0, 0, 0);
             game.add.button(450, 450,'boton-alfanumerico', this.verAlfanumercios, 0, 0, 0, 0);
@@ -49,6 +49,10 @@ var perfilJugador = function(game){};
         
         verLogros: function(){
             game.state.start("logros");
+            variablesBoot.sonidoBoton.play();
+        },
+        verCampeones: function(){
+            game.state.start("campeones");
             variablesBoot.sonidoBoton.play();
         },
          verJefes: function(){
