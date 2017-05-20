@@ -73,9 +73,36 @@ var boot ={
         variablesBoot.musicaBatalla.play();
         variablesBoot.musicaBatalla.pause();
         this.scale.refresh();
-        game.state.start("batalla");
-    	//game.state.start("seleccionavatar");
+        this.verificarNivelJugador();
+        game.state.start("seleccionavatar");
 	},
+    
+    verificarNivelJugador: function(){
+        var nuevoNivel = 0;
+        $.each(nivelJugador, function (key, data) {
+            if(datosperfil["datos"].experiencia >= nivelJugador[key].exp){
+                nuevoNivel++;
+                datosperfil["datos"].nivel = nuevoNivel;
+                }
+        });
+    },
+    
+    /*verificarNivelPersonajes: function(idPJ){
+        console.log(idPJ+" "+personajesBuenos[idPJ].nombre);
+        console.log("Nivel: "+personajesBuenos[idPJ].nivel);
+        console.log("Exp: "+personajesBuenos[idPJ].exp);
+        console.log("Daño normal: "+personajesBuenos[idPJ].dano[0]);
+        console.log("Daño especial: "+personajesBuenos[idPJ].dano[1]);
+        console.log("Vida: "+personajesBuenos[idPJ].vida);
+        console.log("Defensa: "+personajesBuenos[idPJ].defensa);
+        console.log("Energia: "+personajesBuenos[idPJ].energia);
+        $.each(personajesBuenos, function (key, data) {
+            $.each(nivelPersonaje, function (key, data) {
+                
+            });
+        });
+        
+    },*/
     
     verificarMusica: function(x){
         if(variablesBoot.musicaOnOff){
