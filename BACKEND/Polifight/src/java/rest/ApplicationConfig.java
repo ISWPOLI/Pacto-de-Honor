@@ -31,7 +31,10 @@ public class ApplicationConfig extends Application {
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(rest.CategoriaFacadeREST.class);
         resources.add(rest.CiudadFacadeREST.class);
+        resources.add(rest.CrossOriginResourceSharingFilter.class);
+        resources.add(rest.FraseFacadeREST.class);
         resources.add(rest.ImagenFacadeREST.class);
+        resources.add(rest.JugadorFacadeREST.class);
         resources.add(rest.MundoFacadeREST.class);
         resources.add(rest.PaisFacadeREST.class);
         resources.add(rest.PersonajeFacadeREST.class);
