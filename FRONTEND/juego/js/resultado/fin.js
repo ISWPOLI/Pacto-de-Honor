@@ -19,14 +19,19 @@ var fin = {
 		if(variablesCampoBatalla.ganador){
 			resultado = "GANASTE";
 			color = {fill:'#01DF01',font: '40px Arial'};
-            coins=200;
-            exp=100;
+            coins = 200;
+            datosperfil["datos"].monedas += 200;
+            exp = 100;
+            datosperfil["datos"].experiencia += 100;
 		}else{
 			resultado = "PERDISTE";
 			color = {fill:'#DF0101',font: '40px Arial'};
-            coins=0;
-            exp=5;
+            coins = 0;
+            exp = 10;
+            datosperfil["datos"].experiencia += 10;
 		}
+        boot.verificarNivelJugador();
+        //boot.verificarNivelPersonajes(variablesCampoBatalla.idPJ);
         
 		if(variablesBoot.dispositivoMovil){
 			game.add.sprite(0, 0, 'poli');
