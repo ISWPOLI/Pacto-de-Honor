@@ -6,6 +6,6 @@ var datosperfil = {
 		"escenario" : 51,
 		"monedas":100,
 		"nivel":1,
-        "experiencia":1205
+        "experiencia":0
 	}
 }

@@ -31,6 +31,7 @@ var navegacion = function(game){};
     preload: function() {
         game.load.spritesheet('btMundo2', '../img/Componentes/navegacionMapa/pause.png', 50,50);
         game.load.image('monedas', '../img/Componentes/navegacionMapa/monedas.png');
+        game.load.image('xp', '../img/Componentes/finBatalla/experiencia.png');
         game.load.image('fondo', '../img/Componentes/navegacionMapa/mapaNavegacion.png');
         game.load.image('close', '../img/Componentes/navegacionMapa/orb.png');
         game.load.spritesheet('nivel1', '../img/Componentes/navegacionMapa/nivel1.png', 192,71);
@@ -58,6 +59,7 @@ var navegacion = function(game){};
     create:function() {
         game.add.sprite(0, 0, 'fondo');
         game.add.sprite(80, 10, 'monedas');
+        game.add.sprite(220, 10, 'xp').scale.setTo(0.4);
 
         botonCreditos = game.add.button(735, 70, 'botonCreditos', this.verCreditos, 1, 1, 0, 2);
         botonSonido = game.add.button(735, 135, 'botonSonido', this.quitarSonido, 1, 1, 0, 2);
@@ -73,7 +75,7 @@ var navegacion = function(game){};
         vN.btnCaja = game.add.button(475, 5, 'botonCajaSorpresa', this.verCajaMisteriosa,1,1,0,2);//475
         botonCompraPersonajes = game.add.button(540, 5, 'botonCompraPersonajes', this.verCompraPersonajes, 1, 1, 0, 2);
         game.add.text(160, 20, datosperfil["datos"].monedas, {font: "16px Roboto", fill: "#ffffff"}); //Label monedas desde perfilJugador
-        game.add.text(220, 20, "EXP: "+datosperfil["datos"].experiencia, {font: "16px Roboto", fill: "#ffffff"}); //Label EXP desde perfilJugador
+        game.add.text(275, 20, datosperfil["datos"].experiencia, {font: "16px Roboto", fill: "#ffffff"}); //Label EXP desde perfilJugador
        
         vN.btMundo = game.add.button (80, 60, 'pause13', this.mundo1, 0, 0, 0, 1);
         vN.btMundo.scale.setTo(0.8, 0.8);

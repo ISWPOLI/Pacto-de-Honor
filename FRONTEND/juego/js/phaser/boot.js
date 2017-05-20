@@ -74,35 +74,38 @@ var boot ={
         variablesBoot.musicaBatalla.pause();
         this.scale.refresh();
         this.verificarNivelJugador();
+        this.verificarNivelPersonajes();
         game.state.start("seleccionavatar");
 	},
     
+    //Función que revisa el nivel del Jugador
     verificarNivelJugador: function(){
-        var nuevoNivel = 0;
-        $.each(nivelJugador, function (key, data) {
-            if(datosperfil["datos"].experiencia >= nivelJugador[key].exp){
-                nuevoNivel++;
-                datosperfil["datos"].nivel = nuevoNivel;
+        var nuevoNivel = 0; //variable de ayuda para el nivel
+        $.each(nivelJugador, function (key, data) { //Recorre todos los objetos dentro de NivelJugador (archivo nivelExperiencia.js)
+            if(datosperfil["datos"].experiencia >= nivelJugador[key].exp){ //Si la exp del Jugador es mayor o igual al campo exp en nivelJugador
+                nuevoNivel++; //Aumenta en 1 el nuevoNivel
+                datosperfil["datos"].nivel = nuevoNivel; //Asigna nuevoNivel al nivel del Jugador
                 }
         });
     },
     
-    /*verificarNivelPersonajes: function(idPJ){
-        console.log(idPJ+" "+personajesBuenos[idPJ].nombre);
-        console.log("Nivel: "+personajesBuenos[idPJ].nivel);
-        console.log("Exp: "+personajesBuenos[idPJ].exp);
-        console.log("Daño normal: "+personajesBuenos[idPJ].dano[0]);
-        console.log("Daño especial: "+personajesBuenos[idPJ].dano[1]);
-        console.log("Vida: "+personajesBuenos[idPJ].vida);
-        console.log("Defensa: "+personajesBuenos[idPJ].defensa);
-        console.log("Energia: "+personajesBuenos[idPJ].energia);
-        $.each(personajesBuenos, function (key, data) {
-            $.each(nivelPersonaje, function (key, data) {
-                
+    //Función para verificar el nivel de los Personajes
+    verificarNivelPersonajes: function(){
+        $.each(personajesBuenos, function (key, data) { //Recorre todos los objetos dentro de personajesBuenos (archivo personajes.js)
+            var nuevoNivelPJ = 0; //Variable de ayuda para el nivel de personaje
+            $.each(nivelPersonaje, function (key2, data2) { //Recorre todos los objetos dentro de NivelPersonaje (archivo nivelExperiencia.js)
+                if(personajesBuenos[key].exp >= nivelPersonaje[key2].exp){ //Si la exp del pj es mayor o igual al campo exp en nivelPersonaje
+                    nuevoNivelPJ++; //Aumenta en 1 el nuevoNivelPJ
+                    //Se asignan los valores de daño, energia, defensa, vida y nivel dependiendo de la experiencia de cada personaje
+                    personajesBuenos[key].dano = nivelPersonaje[key2].dano;
+                    personajesBuenos[key].energia = nivelPersonaje[key2].energia;
+                    personajesBuenos[key].defensa = nivelPersonaje[key2].defensa;
+                    personajesBuenos[key].vida = nivelPersonaje[key2].vida;
+                    personajesBuenos[key].nivel = nuevoNivelPJ;
+                    }
             });
         });
-        
-    },*/
+    },
     
     verificarMusica: function(x){
         if(variablesBoot.musicaOnOff){
