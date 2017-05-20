@@ -202,22 +202,22 @@ var campeones = function(game){};
                       variablesCampeones.hienalock  = game.add.sprite(450,170, 'hiena');
                   }
                   if(variablesCampeones.pj10.estado==0){
-                   variablesCampeones.lagartolock  = game.add.sprite(450, 'lagartoderrota');
+                   variablesCampeones.lagartolock  = game.add.sprite(450,170,'lagartoderrota');
                    }
                   else{
-                      variablesCampeones.lagartolock  = game.add.sprite(450, 'lagarto');
+                      variablesCampeones.lagartolock  = game.add.sprite(450,170, 'lagarto');
                   }
                   if(variablesCampeones.pj11.estado==0){
-                   variablesCampeones.viboralock  = game.add.sprite(450, 'viboraderrota');
+                   variablesCampeones.viboralock  = game.add.sprite(450,170, 'viboraderrota');
                    }
                   else{
-                      variablesCampeones.viboralock  = game.add.sprite(450, 'vibora');
+                      variablesCampeones.viboralock  = game.add.sprite(450,170, 'vibora');
                   }
                   if(variablesCampeones.pj12.estado==0){
-                   variablesCampeones.micolock  = game.add.sprite(450, 'micoderrota');
+                   variablesCampeones.micolock  = game.add.sprite(450,170, 'micoderrota');
                    }
                   else{
-                      variablesCampeones.micolock  = game.add.sprite(450, 'mico');
+                      variablesCampeones.micolock  = game.add.sprite(450,170, 'mico');
                   }
                   
             }
