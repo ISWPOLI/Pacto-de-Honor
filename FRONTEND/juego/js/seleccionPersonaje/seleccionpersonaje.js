@@ -14,9 +14,10 @@ seleccionpersonaje.prototype = {
      },
     
     create: function(){
+        variablesSeleccionPersonaje.niveles=[];
         game.stage.backgroundColor = "#2451A6"; //Fondo
         botonVolver = game.add.button(5, 5, 'botonVolver', this.verNavegacion, 1, 1, 0, 2);
-        this.pageText = game.add.text(game.width / 2, 45, "Selección de Personaje", {font: "32px Roboto", fill: "#ffffff"})
+        this.pageText = game.add.text(game.width / 2, 45, "Selección de Personaje", {font: "32px Roboto", fill: "#ffffff"});
         this.pageText.anchor.set(0.5); //Se crea el titulo
         variablesSeleccionPersonaje.txtSeleccionado = game.add.text(10, 540, "Personaje Seleccionado", {font: "20px Roboto", fill: "#ffffff"}); //Texto para pj seleccionado
         variablesSeleccionPersonaje.avatarSeleccionado = game.add.image (270, 550, null); //Se crea una imagen vacia para el pj seleccionado
@@ -35,23 +36,30 @@ seleccionpersonaje.prototype = {
         variablesSeleccionPersonaje.botones[6] = game.add.button(175, 375, 'botonRuisenor', this.clickRuisenor, 1, 1, 0, 2);
         variablesSeleccionPersonaje.botones[7] = game.add.button(325, 375, 'botonRaton', this.clickRaton, 1, 1, 0, 2);
         variablesSeleccionPersonaje.botones[8] = game.add.button(475, 375, 'botonHormiga', this.clickHormiga, 1, 1, 0, 2);
-                 
+        //Textos del nivel de cada personaje
+        // game.add.text(220, 200, "lv: "+personajesBuenos["idPUno"].nivel, {font: "20px Roboto", fill: "#ffffff"});
+        // game.add.text(370, 200, "lv: "+personajesBuenos["idPDos"].nivel, {font: "20px Roboto", fill: "#ffffff"});
+        // game.add.text(520, 200, "lv: "+personajesBuenos["idPTres"].nivel, {font: "20px Roboto", fill: "#ffffff"});
+        // game.add.text(220, 350, "lv: "+personajesBuenos["idPCuatro"].nivel, {font: "20px Roboto", fill: "#ffffff"});
+        // game.add.text(370, 350, "lv: "+personajesBuenos["idPCinco"].nivel, {font: "20px Roboto", fill: "#ffffff"});
+        // game.add.text(520, 350, "lv: "+personajesBuenos["idPSeis"].nivel, {font: "20px Roboto", fill: "#ffffff"});
+        // game.add.text(220, 500, "lv: "+personajesBuenos["idPSiete"].nivel, {font: "20px Roboto", fill: "#ffffff"});
+        // game.add.text(370, 500, "lv: "+personajesBuenos["idPOcho"].nivel, {font: "20px Roboto", fill: "#ffffff"});
+        // game.add.text(520, 500, "lv: "+personajesBuenos["idPNueve"].nivel, {font: "20px Roboto", fill: "#ffffff"});
         variablesSeleccionPersonaje.startButton = game.add.button(game.world.width / 2, 550, 'botonSeleccionar', this.verbatalla, this, 2, 1, 0); // over, out, down, up
         variablesSeleccionPersonaje.startButton.anchor.set(0.5);
 
         if(startButton==true){
             pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba1');
             pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba1('false');
-        }
-        
+        }     
         $.each(personajesBuenos, function (key, data) {
             variablesSeleccionPersonaje.niveles.push(personajesBuenos[key].nivel);
-            
         });
         var cont=0;
         for (var i = 75; i <= 375; i=i+150) {
             for (var j = 175; j <= 475; j=j+150) {
-                game.add.text(j+55, i+125, "lv:"+variablesSeleccionPersonaje.niveles[cont], {font: "20px Roboto", fill: "#ffffff"});
+                game.add.text(j+55, i+125, "lv: "+variablesSeleccionPersonaje.niveles[cont], {font: "20px Roboto", fill: "#ffffff"});
                 cont++;
             }
         }
