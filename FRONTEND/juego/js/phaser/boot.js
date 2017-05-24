@@ -73,8 +73,39 @@ var boot ={
         variablesBoot.musicaBatalla.play();
         variablesBoot.musicaBatalla.pause();
         this.scale.refresh();
-    	game.state.start("seleccionavatar");
+        this.verificarNivelJugador();
+        this.verificarNivelPersonajes();
+        game.state.start("seleccionavatar");
 	},
+    
+    //Función que revisa el nivel del Jugador
+    verificarNivelJugador: function(){
+        var nuevoNivel = 0; //variable de ayuda para el nivel
+        $.each(nivelJugador, function (key, data) { //Recorre todos los objetos dentro de NivelJugador (archivo nivelExperiencia.js)
+            if(datosperfil["datos"].experiencia >= nivelJugador[key].exp){ //Si la exp del Jugador es mayor o igual al campo exp en nivelJugador
+                nuevoNivel++; //Aumenta en 1 el nuevoNivel
+                datosperfil["datos"].nivel = nuevoNivel; //Asigna nuevoNivel al nivel del Jugador
+                }
+        });
+    },
+    
+    //Función para verificar el nivel de los Personajes
+    verificarNivelPersonajes: function(){
+        $.each(personajesBuenos, function (key, data) { //Recorre todos los objetos dentro de personajesBuenos (archivo personajes.js)
+            var nuevoNivelPJ = 0; //Variable de ayuda para el nivel de personaje
+            $.each(nivelPersonaje, function (key2, data2) { //Recorre todos los objetos dentro de NivelPersonaje (archivo nivelExperiencia.js)
+                if(personajesBuenos[key].exp >= nivelPersonaje[key2].exp){ //Si la exp del pj es mayor o igual al campo exp en nivelPersonaje
+                    nuevoNivelPJ++; //Aumenta en 1 el nuevoNivelPJ
+                    //Se asignan los valores de daño, energia, defensa, vida y nivel dependiendo de la experiencia de cada personaje
+                    personajesBuenos[key].dano = nivelPersonaje[key2].dano;
+                    personajesBuenos[key].energia = nivelPersonaje[key2].energia;
+                    personajesBuenos[key].defensa = nivelPersonaje[key2].defensa;
+                    personajesBuenos[key].vida = nivelPersonaje[key2].vida;
+                    personajesBuenos[key].nivel = nuevoNivelPJ;
+                    }
+            });
+        });
+    },
     
     verificarMusica: function(x){
         if(variablesBoot.musicaOnOff){
