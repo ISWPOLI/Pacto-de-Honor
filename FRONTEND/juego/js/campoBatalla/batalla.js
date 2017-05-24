@@ -30,7 +30,7 @@ variablesCampoBatalla = {
 	golpe_al_cuerpo:null,//sonido del juego
 	cambioOrientacion:false,//pregunta si hubo cambio de posciciones
 	saltoJ:0,//tiempo de salto
-	ganador:null,//true si el jugador gana
+	ganador:true,//true si el jugador gana
 	animP:null,//guarda la animaicon de punos del personaje del jugador
 	animE:null,//guarda la animaicon de escudo
 	unClick:false,//guia para el boton de ataque en version movil 
