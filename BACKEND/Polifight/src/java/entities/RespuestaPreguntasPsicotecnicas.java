@@ -34,6 +34,7 @@ public class RespuestaPreguntasPsicotecnicas implements Serializable {
     protected RespuestaPreguntasPsicotecnicasPK respuestaPreguntasPsicotecnicasPK;
     @Size(max = 255)
     @Column(name = "descripcion_prueba_psicotecnica")
+    private int idFactor;
     private String descripcionPruebaPsicotecnica;
 
     public RespuestaPreguntasPsicotecnicas() {
@@ -86,6 +87,12 @@ public class RespuestaPreguntasPsicotecnicas implements Serializable {
     @Override
     public String toString() {
         return "entities.RespuestaPreguntasPsicotecnicas[ respuestaPreguntasPsicotecnicasPK=" + respuestaPreguntasPsicotecnicasPK + " ]";
+    }
+    public void setIdFactor(int idFactor) {
+        this.idFactor = idFactor;
+    }
+    public int getIdFactor() {
+        return idFactor;
     }
     
 }
