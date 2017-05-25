@@ -49,7 +49,7 @@ var navegacion = function(game){};
         game.load.spritesheet('botonAjustes', '../img/componentes/navegacionMapa/botonAjustes.png', 62, 62);
         //game.load.spritesheet('botonCajaSorpresa', '../img/componentes/cajas/cajam.png', 132, 216);
         game.load.spritesheet('botonCajaSorpresa', '../img/componentes/navegacionMapa/cajanegra.png', 62, 62);
-        game.load.spritesheet('botoncompraPersonajes', '../img/componentes/navegacionMapa/botonCompraPersonajes.png', 62, 62);
+        game.load.spritesheet('botonCompraPersonajes', '../img/componentes/navegacionMapa/botonCompraPersonajes.png', 62, 62);
         game.load.spritesheet('pause12', '../img/componentes/navegacionMapa/pause12.png', 50,50);
         game.load.spritesheet('pause13', '../img/componentes/navegacionMapa/pause13.png', 50,50);
         game.load.spritesheet('pause14', '../img/componentes/navegacionMapa/pause14.png', 50,50);
