@@ -47,6 +47,9 @@ public class ApplicationConfig extends Application {
         resources.add(rest.RolUsuarioFacadeREST.class);
         resources.add(rest.TipoPruebaFacadeREST.class);
         resources.add(rest.UsuarioFacadeREST.class);
+	   resources.add(rest.LogFacadeREST.class);
+	   resources.add(rest.NivelFacadeREST.class);
+        resources.add(rest.JugadorTienePersonajeFacadeREST.class);  
     }
     
 }
