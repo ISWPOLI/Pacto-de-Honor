@@ -4,9 +4,9 @@ var fin = {
 		this.preloadBar=this.add.sprite(this.game.world.centerX,this.game.world.centerY,'barraCarga');
 		
         game.load.image('poli', '../img/componentes/finBatalla/poli.jpg');
-        game.load.image('monedas','../img/Componentes/finBatalla/moneda.png');  
-        game.load.image('experiencia','../img/Componentes/finBatalla/experiencia.png');
-        game.load.spritesheet('botonFinBatalla','../img/Componentes/finBatalla/botonVolver.png',598,140);
+        game.load.image('monedas','../img/componentes/finBatalla/moneda.png');  
+        game.load.image('experiencia','../img/componentes/finBatalla/experiencia.png');
+        game.load.spritesheet('botonFinBatalla','../img/componentes/finBatalla/botonVolver.png',598,140);
         
         
     },
