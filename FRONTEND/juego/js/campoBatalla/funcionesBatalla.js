@@ -17,19 +17,19 @@ var funcionesBatalla={
         game.load.spritesheet('impactoPersonalidadJugador', personajesBuenos[idPJ].rutaImpactoPersonalidad, 201, 160);
         game.load.spritesheet('impactoPersonalidadComputadora', personajesMalos[idPC].rutaImpactoPersonalidad, 161, 145);
         game.load.spritesheet('impactoPlagioComputadora', personajesMalos[idPC].rutaImpactoPlagio, 277, 277);
-        game.load.spritesheet('gamepad','../img/Componentes/joystick/gamepad_spritesheet.png',100,100);
-        game.load.spritesheet('botonEscudo', '../img/Componentes/joystick/gamepad_spritesheet.png', 100, 100);
+        game.load.spritesheet('gamepad','../img/componentes/joystick/gamepad_spritesheet.png',100,100);
+        game.load.spritesheet('botonEscudo', '../img/componentes/joystick/gamepad_spritesheet.png', 100, 100);
         game.load.image('caja', boxes[caa].root);
-        game.load.audio('punoalaire', '../img/componentes/sonidos/EfectosDePelea/sonidogolpealaire.mp3');
-        game.load.audio('punoalcuerpo', '../img/componentes/sonidos/EfectosDePelea/sonidogolpealcuerpo.mp3');
+        game.load.audio('punoalaire', '../img/componentes/sonidos/efectosDePelea/sonidogolpealaire.mp3');
+        game.load.audio('punoalcuerpo', '../img/componentes/sonidos/efectosDePelea/sonidogolpealcuerpo.mp3');
         game.load.image('escudo1', '../img/componentes/batalla/escudo1.png');
         game.load.image('escudo2', '../img/componentes/batalla/escudo2.png');
-         game.load.image('flechaIzquierda','../img/componentes/batalla/izquierdapc.png');
+        game.load.image('flechaIzquierda','../img/componentes/batalla/izquierdapc.png');
         game.load.image('flechaDerecha','../img/componentes/batalla/derechapc.png');
-         game.load.image('flechaArriba','../img/componentes/batalla/arribapc.png');
+        game.load.image('flechaArriba','../img/componentes/batalla/arribapc.png');
         game.load.image('flechaAbajo','../img/componentes/batalla/abajopc.png');
-         game.load.image('teclam','../img/componentes/batalla/teclaM.png');
-         game.load.image('teclan','../img/componentes/batalla/teclaN.png');
+        game.load.image('teclam','../img/componentes/batalla/teclam.png');
+        game.load.image('teclan','../img/componentes/batalla/teclan.png');
         game.load.image('espacio','../img/componentes/batalla/space.png');
         if (caa == 8) {
              game.load.image('cajaOpen', boxes[caa].fatalityBox);
@@ -52,7 +52,7 @@ var funcionesBatalla={
     	sprite.animations.play('quieto');
 		game.physics.arcade.enable(sprite);
 		sprite.body.collideWorldBounds = true; 
-        sprite.body.gravity.y=250;
+        sprite.body.gravity.y=300;
         variablesCampoBatalla.golpeAlAire = game.add.audio('punoalaire');
         variablesCampoBatalla.golpe_al_cuerpo = game.add.audio('punoalcuerpo');
 	},
@@ -207,7 +207,7 @@ var funcionesBatalla={
         if(variablesCampoBatalla.escudo2!=null)
             variablesCampoBatalla.escudo2.kill();
         game.input.keyboard.onUpCallback = function( key ){    
-                if(key.keyCode == Phaser.Keyboard.UP&&(variablesCampoBatalla.personajeJugador.body.y>355)&&(game.time.now > variablesCampoBatalla.saltoJ)){                
+                if(key.keyCode == Phaser.Keyboard.UP&&(variablesCampoBatalla.personajeJugador.body.y>355)&&(game.time.now > variablesCampoBatalla.saltoJ)){
                            variablesCampoBatalla.personajeJugador.body.velocity.y-=400;
                 }   
                 else if (key.keyCode == Phaser.Keyboard.SPACEBAR){            
@@ -405,12 +405,9 @@ var funcionesBatalla={
         if(variablesCampoBatalla.movV[1]||variablesCampoBatalla.movH[1]){
             
         }
-        console.log(variablesCampoBatalla.movV[1]);
-        console.log(variablesCampoBatalla.movH[0]);
-
+        
         //si se resta vida al jugador 
         if(variablesCampoBatalla.movV[1]==true&&!variablesCampoBatalla.movH[0]){
-            console.log("sdfasfasf");
             funcionesBatalla.actualizarVida(vidaRojoJugador,variablesCampoBatalla.danoV[0]);
             variablesCampoBatalla.movV[0]=false;
             funcionesBatalla.spriteImpactoComputadora();
@@ -429,7 +426,7 @@ var funcionesBatalla={
      */
      finJuego : function(){
         
-        game.add.text(game.width/4,game.height/2,'JUEGO TERMINADO', {font:'45px'});
+        game.add.text(game.width/4,game.height/2,'JUEGO TERMINADO', {font:'45px', fill:'#fff'});
 		 if(vidaRojoComputadora.width==0){
 				variablesCampoBatalla.ganador = true;
 			}else{

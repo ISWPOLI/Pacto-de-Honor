@@ -52,12 +52,12 @@ var creditos = function(game){};
     creditos.prototype = {
         preload: function(){
             //Carga de imagenes para el logo del pacto
-            game.load.image('logoPacto', '../img/Componentes/creditos/logoPacto.png');
+            game.load.image('logoPacto', '../img/componentes/creditos/logoPacto.png');
             //Carga de imagenes para los botones principales
-            game.load.spritesheet('botonPacto', '../img/Componentes/botones/botonPacto.png', 192, 71);
-            game.load.spritesheet('botonBuenos', '../img/Componentes/botones/botonBuenos.png', 192, 71);
-            game.load.spritesheet('botonMalos', '../img/Componentes/botones/botonMalos.png', 192, 71);
-            game.load.spritesheet('botonPlagios', '../img/Componentes/botones/botonPlagios.png', 192, 71);
+            game.load.spritesheet('botonPacto', '../img/componentes/botones/botonPacto.png', 192, 71);
+            game.load.spritesheet('botonBuenos', '../img/componentes/botones/botonBuenos.png', 192, 71);
+            game.load.spritesheet('botonMalos', '../img/componentes/botones/botonMalos.png', 192, 71);
+            game.load.spritesheet('botonPlagios', '../img/componentes/botones/botonPlagios.png', 192, 71);
             //Carga de imagenes para los botones de personajes malos
             game.load.spritesheet('anaSaraAbejas', '../img/personajes/avatares/botonAbejas.png', 75, 75);
             game.load.spritesheet('fabianBabuino', '../img/personajes/avatares/botonBabuino.png', 75, 75);
@@ -72,16 +72,16 @@ var creditos = function(game){};
             game.load.spritesheet('luisVibora', '../img/personajes/avatares/botonVibora.png', 75, 75);
             game.load.spritesheet('andresZorro', '../img/personajes/avatares/botonZorro.png', 75, 75);
             //Carga de imagenes para los botones de Tipos de plagio
-            game.load.image('botonClonacion', '../img/Componentes/creditos/botonClonacion.png');
-            game.load.image('botonCopiado', '../img/Componentes/creditos/botonCopiado.png');
-            game.load.image('botonBusquedaReemplazo', '../img/Componentes/creditos/botonBusquedaReemplazo.png');
-            game.load.image('botonRemix', '../img/Componentes/creditos/botonRemix.png');
-            game.load.image('botonReciclado', '../img/Componentes/creditos/botonReciclado.png');
-            game.load.image('botonHibrido', '../img/Componentes/creditos/botonHibrido.png');
-            game.load.image('botonMosaico', '../img/Componentes/creditos/botonMosaico.png');
-            game.load.image('botonError404', '../img/Componentes/creditos/botonError404.png');
-            game.load.image('botonRSS', '../img/Componentes/creditos/botonRSS.png');
-            game.load.image('botonReutilizacion', '../img/Componentes/creditos/botonReutilizacion.png');
+            game.load.image('botonClonacion', '../img/componentes/creditos/botonClonacion.png');
+            game.load.image('botonCopiado', '../img/componentes/creditos/botonCopiado.png');
+            game.load.image('botonBusquedaReemplazo', '../img/componentes/creditos/botonBusquedaReemplazo.png');
+            game.load.image('botonRemix', '../img/componentes/creditos/botonRemix.png');
+            game.load.image('botonReciclado', '../img/componentes/creditos/botonReciclado.png');
+            game.load.image('botonHibrido', '../img/componentes/creditos/botonHibrido.png');
+            game.load.image('botonMosaico', '../img/componentes/creditos/botonMosaico.png');
+            game.load.image('botonError404', '../img/componentes/creditos/botonError404.png');
+            game.load.image('botonRSS', '../img/componentes/creditos/botonRSS.png');
+            game.load.image('botonReutilizacion', '../img/componentes/creditos/botonReutilizacion.png');
         },
         
         create: function(){

@@ -43,29 +43,29 @@ var logros = function(game){};
               variableLogros.Logroslooked[i] = true;
             }
             // Se cargan las imagenes de los 10 logros
-            game.load.spritesheet(variableLogros.namesCharactersl[0], '../img/Componentes/logros/KuPlagio.png');
-            game.load.spritesheet(variableLogros.namesCharactersl[1], '../img/Componentes/logros/LifePlagio.png');
-            game.load.spritesheet(variableLogros.namesCharactersl[2], '../img/Componentes/logros/SkillPlagio.png');
-            game.load.spritesheet(variableLogros.namesCharactersl[3], '../img/Componentes/logros/OriginalPlagio.png');
-            game.load.spritesheet(variableLogros.namesCharactersl[4], '../img/Componentes/logros/HitBackground.png');
-            game.load.spritesheet(variableLogros.namesCharactersl[5], '../img/Componentes/logros/experiencia.png');
-            game.load.spritesheet(variableLogros.namesCharactersl[6], '../img/Componentes/logros/Richest.png');
-            game.load.spritesheet(variableLogros.namesCharactersl[7], '../img/Componentes/logros/Unlocker.png');
-            game.load.spritesheet(variableLogros.namesCharactersl[8], '../img/Componentes/logros/Alist.png');
-            game.load.spritesheet(variableLogros.namesCharactersl[9], '../img/Componentes/logros/FiveRow.png');
-            game.load.image(variableLogros.namesCharactersl[0]+'Loock', '../img/Componentes/logros/KuPlagioLoock.png');
-            game.load.image(variableLogros.namesCharactersl[1]+'Loock', '../img/Componentes/logros/LifePlagioLoock.png');
-            game.load.image(variableLogros.namesCharactersl[2]+'Loock', '../img/Componentes/logros/SkillPlagioLoock.png');
-            game.load.image(variableLogros.namesCharactersl[3]+'Loock', '../img/Componentes/logros/OriginalPlagioLoock.png');
-            game.load.image(variableLogros.namesCharactersl[4]+'Loock', '../img/Componentes/logros/HitBackgroundLoock.png');
-            game.load.image(variableLogros.namesCharactersl[5]+'Loock', '../img/Componentes/logros/experienciaLoock.png');
-            game.load.image(variableLogros.namesCharactersl[6]+'Loock', '../img/Componentes/logros/RichestLoock.png');
-            game.load.image(variableLogros.namesCharactersl[7]+'Loock', '../img/Componentes/logros/UnlockerLoock.png');
-            game.load.image(variableLogros.namesCharactersl[8]+'Loock', '../img/Componentes/logros/AlistLoock.png');
-            game.load.image(variableLogros.namesCharactersl[9]+'Loock', '../img/Componentes/logros/FiveRowLoock.png');
+            game.load.spritesheet(variableLogros.namesCharactersl[0], '../img/componentes/logros/KuPlagio.png');
+            game.load.spritesheet(variableLogros.namesCharactersl[1], '../img/componentes/logros/LifePlagio.png');
+            game.load.spritesheet(variableLogros.namesCharactersl[2], '../img/componentes/logros/SkillPlagio.png');
+            game.load.spritesheet(variableLogros.namesCharactersl[3], '../img/componentes/logros/OriginalPlagio.png');
+            game.load.spritesheet(variableLogros.namesCharactersl[4], '../img/componentes/logros/HitBackground.png');
+            game.load.spritesheet(variableLogros.namesCharactersl[5], '../img/componentes/logros/experiencia.png');
+            game.load.spritesheet(variableLogros.namesCharactersl[6], '../img/componentes/logros/Richest.png');
+            game.load.spritesheet(variableLogros.namesCharactersl[7], '../img/componentes/logros/Unlocker.png');
+            game.load.spritesheet(variableLogros.namesCharactersl[8], '../img/componentes/logros/Alist.png');
+            game.load.spritesheet(variableLogros.namesCharactersl[9], '../img/componentes/logros/FiveRow.png');
+            game.load.image(variableLogros.namesCharactersl[0]+'Loock', '../img/componentes/logros/KuPlagioLoock.png');
+            game.load.image(variableLogros.namesCharactersl[1]+'Loock', '../img/componentes/logros/LifePlagioLoock.png');
+            game.load.image(variableLogros.namesCharactersl[2]+'Loock', '../img/componentes/logros/SkillPlagioLoock.png');
+            game.load.image(variableLogros.namesCharactersl[3]+'Loock', '../img/componentes/logros/OriginalPlagioLoock.png');
+            game.load.image(variableLogros.namesCharactersl[4]+'Loock', '../img/componentes/logros/HitBackgroundLoock.png');
+            game.load.image(variableLogros.namesCharactersl[5]+'Loock', '../img/componentes/logros/experienciaLoock.png');
+            game.load.image(variableLogros.namesCharactersl[6]+'Loock', '../img/componentes/logros/RichestLoock.png');
+            game.load.image(variableLogros.namesCharactersl[7]+'Loock', '../img/componentes/logros/UnlockerLoock.png');
+            game.load.image(variableLogros.namesCharactersl[8]+'Loock', '../img/componentes/logros/AlistLoock.png');
+            game.load.image(variableLogros.namesCharactersl[9]+'Loock', '../img/componentes/logros/FiveRowLoock.png');
 
             // Se carga el sprite del boton seleccionar
-            game.load.spritesheet('button', '../img/Componentes/botones/Spritebloq.png', 150, 40);
+            game.load.spritesheet('button', '../img/componentes/botones/Spritebloq.png', 150, 40);
         },
 
         
