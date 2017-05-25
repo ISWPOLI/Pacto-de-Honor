@@ -2,14 +2,14 @@ var closeButton2;
 var popup2;
 var Mundo5 = {
     preload:function (){
-        game.load.image('mercadeo', '../img/Componentes/navegacionMapa/bloqueJCampus.png');
-        game.load.image('fondo', '../img/Componentes/navegacionMapa/mapaNavegacionb.png');
-        game.load.image('close', '../img/Componentes/navegacionMapa/orb.png');
-        game.load.spritesheet('nivel1', '../img/Componentes/navegacionMapa/nivel1.png', 192,71);
-        game.load.spritesheet('nivel2', '../img/Componentes/navegacionMapa/nivel2.png', 192,71);
-        game.load.spritesheet('nivel3', '../img/Componentes/navegacionMapa/nivel3.png', 192,71);
-        game.load.spritesheet('nivel4', '../img/Componentes/navegacionMapa/nivel4.png', 192,71);
-        game.load.spritesheet('nivel5', '../img/Componentes/navegacionMapa/nivel5.png', 192,71);
+        game.load.image('mercadeo', '../img/componentes/navegacionMapa/bloqueJCampus.png');
+        game.load.image('fondo', '../img/componentes/navegacionMapa/mapaNavegacionb.png');
+        game.load.image('close', '../img/componentes/navegacionMapa/orb.png');
+        game.load.spritesheet('nivel1', '../img/componentes/navegacionMapa/nivel1.png', 192,71);
+        game.load.spritesheet('nivel2', '../img/componentes/navegacionMapa/nivel2.png', 192,71);
+        game.load.spritesheet('nivel3', '../img/componentes/navegacionMapa/nivel3.png', 192,71);
+        game.load.spritesheet('nivel4', '../img/componentes/navegacionMapa/nivel4.png', 192,71);
+        game.load.spritesheet('nivel5', '../img/componentes/navegacionMapa/nivel5.png', 192,71);
     },
 
     create:function(){

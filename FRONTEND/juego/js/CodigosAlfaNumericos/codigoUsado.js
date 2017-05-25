@@ -15,10 +15,8 @@ var lineDelay = 300;
 var regalado = function(game){};
 regalado.prototype = {
     preload: function(){
-    	
         game.load.image('opa', 'codigosAlfa/imagesImp.png');
-            game.load.spritesheet('regresar', 'codigosAlfa/regresar.png', 193, 71);
-                
+        game.load.spritesheet('regresar', 'codigosAlfa/regresar.png', 193, 71);
     },
 
     create: function(){ 

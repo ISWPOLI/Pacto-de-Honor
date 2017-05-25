@@ -17,12 +17,12 @@ var rankings = function(game){};
     rankings.prototype = {
         preload: function(){
             //Carga de imagen para el top 5
-            game.load.image('top5', '../img/Componentes/Rankings/top5.png');
+            game.load.image('top5', '../img/componentes/rankings/top5.png');
             //Carga de imagenes para los botones principales
-            game.load.spritesheet('botonDiario', '../img/Componentes/botones/botonDiario.png', 192, 71);
-            game.load.spritesheet('botonSemanal', '../img/Componentes/botones/botonSemanal.png', 192, 71);
-            game.load.spritesheet('botonPoli', '../img/Componentes/botones/botonPoli.png', 192, 71);
-            game.load.spritesheet('botonGeneral', '../img/Componentes/botones/botonGeneral.png', 192, 71);            
+            game.load.spritesheet('botonDiario', '../img/componentes/botones/botonDiario.png', 192, 71);
+            game.load.spritesheet('botonSemanal', '../img/componentes/botones/botonSemanal.png', 192, 71);
+            game.load.spritesheet('botonPoli', '../img/componentes/botones/botonPoli.png', 192, 71);
+            game.load.spritesheet('botonGeneral', '../img/componentes/botones/botonGeneral.png', 192, 71);            
             //Carga de imagenes para los cinco avatares
             game.load.image('avatarUno', jugadores[j1].rutaAvatar);
             game.load.image('avatarDos', jugadores[j2].rutaAvatar);

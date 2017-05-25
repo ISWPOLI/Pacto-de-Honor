@@ -17,19 +17,19 @@ var funcionesBatalla={
         game.load.spritesheet('impactoPersonalidadJugador', personajesBuenos[idPJ].rutaImpactoPersonalidad, 201, 160);
         game.load.spritesheet('impactoPersonalidadComputadora', personajesMalos[idPC].rutaImpactoPersonalidad, 161, 145);
         game.load.spritesheet('impactoPlagioComputadora', personajesMalos[idPC].rutaImpactoPlagio, 277, 277);
-        game.load.spritesheet('gamepad','../img/Componentes/joystick/gamepad_spritesheet.png',100,100);
-        game.load.spritesheet('botonEscudo', '../img/Componentes/joystick/gamepad_spritesheet.png', 100, 100);
+        game.load.spritesheet('gamepad','../img/componentes/joystick/gamepad_spritesheet.png',100,100);
+        game.load.spritesheet('botonEscudo', '../img/componentes/joystick/gamepad_spritesheet.png', 100, 100);
         game.load.image('caja', boxes[caa].root);
-        game.load.audio('punoalaire', '../img/componentes/sonidos/EfectosDePelea/sonidogolpealaire.mp3');
-        game.load.audio('punoalcuerpo', '../img/componentes/sonidos/EfectosDePelea/sonidogolpealcuerpo.mp3');
+        game.load.audio('punoalaire', '../img/componentes/sonidos/efectosDePelea/sonidogolpealaire.mp3');
+        game.load.audio('punoalcuerpo', '../img/componentes/sonidos/efectosDePelea/sonidogolpealcuerpo.mp3');
         game.load.image('escudo1', '../img/componentes/batalla/escudo1.png');
         game.load.image('escudo2', '../img/componentes/batalla/escudo2.png');
-         game.load.image('flechaIzquierda','../img/componentes/batalla/izquierdapc.png');
+        game.load.image('flechaIzquierda','../img/componentes/batalla/izquierdapc.png');
         game.load.image('flechaDerecha','../img/componentes/batalla/derechapc.png');
-         game.load.image('flechaArriba','../img/componentes/batalla/arribapc.png');
+        game.load.image('flechaArriba','../img/componentes/batalla/arribapc.png');
         game.load.image('flechaAbajo','../img/componentes/batalla/abajopc.png');
-         game.load.image('teclam','../img/componentes/batalla/teclaM.png');
-         game.load.image('teclan','../img/componentes/batalla/teclaN.png');
+        game.load.image('teclam','../img/componentes/batalla/teclam.png');
+        game.load.image('teclan','../img/componentes/batalla/teclan.png');
         game.load.image('espacio','../img/componentes/batalla/space.png');
         if (caa == 8) {
              game.load.image('cajaOpen', boxes[caa].fatalityBox);

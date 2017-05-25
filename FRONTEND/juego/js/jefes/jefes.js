@@ -41,7 +41,7 @@ var jefes = function(game){};
     jefes.prototype = {
         preload: function(){
             //Carga de imagenes para el logo del pacto
-            game.load.image('logoPacto', '../img/Componentes/creditos/logoPacto.png');
+            game.load.image('logoPacto', '../img/componentes/creditos/logoPacto.png');
         
             game.load.spritesheet('anaSaraAbejas', '../img/personajes/avatares/botonAbejas.png', 75, 75);
             game.load.spritesheet('fabianBabuino', '../img/personajes/avatares/botonBabuino.png', 75, 75);
@@ -56,31 +56,31 @@ var jefes = function(game){};
             game.load.spritesheet('luisVibora', '../img/personajes/avatares/botonVibora.png', 75, 75);
             game.load.spritesheet('andresZorro', '../img/personajes/avatares/botonZorro.png', 75, 75);
             
-            game.load.spritesheet('abejaderrota', '../img/Componentes/jefes/abejaderrota.png', 400,400);
-            game.load.spritesheet('micoderrota', '../img/Componentes/jefes/micoderrota.png', 400,400);
-            game.load.spritesheet('buitrederrota', '../img/Componentes/jefes/buitrederrota.png', 400,400);
-            game.load.spritesheet('burroderrota', '../img/Componentes/jefes/burroderrota.png', 400,400);
-            game.load.spritesheet('camaleonderrota', '../img/Componentes/jefes/camaleonderrota.png', 400,400);
-            game.load.spritesheet('hienaderrota', '../img/Componentes/jefes/hienaderrota.png', 400,400);
-            game.load.spritesheet('lagartoderrota', '../img/Componentes/jefes/lagartoderrota.png', 400,400);
-            game.load.spritesheet('osoderrota', '../img/Componentes/jefes/osoderrota.png', 400,400);
-            game.load.spritesheet('peresosoderrota', '../img/Componentes/jefes/peresosoderrota.png', 400,400);
-            game.load.spritesheet('rataderrota', '../img/Componentes/jefes/rataderrota.png', 400,400);
-            game.load.spritesheet('viboraderrota', '../img/Componentes/jefes/serpientederrota.png', 400,400);
-            game.load.spritesheet('zorroderrota', '../img/Componentes/jefes/zorroderrota.png', 400,400);
+            game.load.spritesheet('abejaderrota', '../img/componentes/jefes/abejaderrota.png', 400,400);
+            game.load.spritesheet('micoderrota', '../img/componentes/jefes/micoderrota.png', 400,400);
+            game.load.spritesheet('buitrederrota', '../img/componentes/jefes/buitrederrota.png', 400,400);
+            game.load.spritesheet('burroderrota', '../img/componentes/jefes/burroderrota.png', 400,400);
+            game.load.spritesheet('camaleonderrota', '../img/componentes/jefes/camaleonderrota.png', 400,400);
+            game.load.spritesheet('hienaderrota', '../img/componentes/jefes/hienaderrota.png', 400,400);
+            game.load.spritesheet('lagartoderrota', '../img/componentes/jefes/lagartoderrota.png', 400,400);
+            game.load.spritesheet('osoderrota', '../img/componentes/jefes/osoderrota.png', 400,400);
+            game.load.spritesheet('peresosoderrota', '../img/componentes/jefes/peresosoderrota.png', 400,400);
+            game.load.spritesheet('rataderrota', '../img/componentes/jefes/rataderrota.png', 400,400);
+            game.load.spritesheet('viboraderrota', '../img/componentes/jefes/serpientederrota.png', 400,400);
+            game.load.spritesheet('zorroderrota', '../img/componentes/jefes/zorroderrota.png', 400,400);
             
-            game.load.spritesheet('abeja', '../img/Componentes/jefes/abeja.png', 400,400);
-            game.load.spritesheet('mico', '../img/Componentes/jefes/mico.png', 400,400);
-            game.load.spritesheet('buitre', '../img/Componentes/jefes/buitre.png', 400,400);
-            game.load.spritesheet('burro', '../img/Componentes/jefes/burro.png', 400,400);
-            game.load.spritesheet('camaleon', '../img/Componentes/jefes/camaleon.png', 400,400);
-            game.load.spritesheet('hiena', '../img/Componentes/jefes/hiena.png', 400,400);
-            game.load.spritesheet('lagarto', '../img/Componentes/jefes/lagarto.png', 400,400);
-            game.load.spritesheet('oso', '../img/Componentes/jefes/oso.png', 400,400);
-            game.load.spritesheet('peresoso', '../img/Componentes/jefes/peresoso.png', 400,400);
-            game.load.spritesheet('rata', '../img/Componentes/jefes/rata.png', 400,400);
-            game.load.spritesheet('vibora', '../img/Componentes/jefes/serpiente.png', 400,400);
-            game.load.spritesheet('zorro', '../img/Componentes/jefes/zorro.png', 400,400);
+            game.load.spritesheet('abeja', '../img/componentes/jefes/abeja.png', 400,400);
+            game.load.spritesheet('mico', '../img/componentes/jefes/mico.png', 400,400);
+            game.load.spritesheet('buitre', '../img/componentes/jefes/buitre.png', 400,400);
+            game.load.spritesheet('burro', '../img/componentes/jefes/burro.png', 400,400);
+            game.load.spritesheet('camaleon', '../img/componentes/jefes/camaleon.png', 400,400);
+            game.load.spritesheet('hiena', '../img/componentes/jefes/hiena.png', 400,400);
+            game.load.spritesheet('lagarto', '../img/componentes/jefes/lagarto.png', 400,400);
+            game.load.spritesheet('oso', '../img/componentes/jefes/oso.png', 400,400);
+            game.load.spritesheet('peresoso', '../img/componentes/jefes/peresoso.png', 400,400);
+            game.load.spritesheet('rata', '../img/componentes/jefes/rata.png', 400,400);
+            game.load.spritesheet('vibora', '../img/componentes/jefes/serpiente.png', 400,400);
+            game.load.spritesheet('zorro', '../img/componentes/jefes/zorro.png', 400,400);
             
             
             variablesJefes.pj1 = jefesderrotados["idP1"];

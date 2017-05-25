@@ -5,9 +5,8 @@ variablesHistorieta={
 var historieta = function(game){};
 historieta.prototype = {
      preload: function(){
-         game.load.spritesheet('historieta', '../img/Componentes/historieta/historieta.png', 800, 600);
-         game.load.spritesheet('button', '../img/Componentes/botones/botonSaltar.png', 150, 40);
-         game.load.audio('sonidos','../img/Componentes/sonidos/Historieta/historieta.mp3');
+         game.load.spritesheet('historieta', '../img/componentes/historieta/historieta.png', 800, 600);
+         game.load.spritesheet('button', '../img/componentes/botones/botonSaltar.png', 150, 40);
      },
     
      create: function(){
