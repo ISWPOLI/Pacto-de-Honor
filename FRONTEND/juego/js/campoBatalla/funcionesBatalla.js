@@ -52,7 +52,7 @@ var funcionesBatalla={
     	sprite.animations.play('quieto');
 		game.physics.arcade.enable(sprite);
 		sprite.body.collideWorldBounds = true; 
-        sprite.body.gravity.y=250;
+        sprite.body.gravity.y=300;
         variablesCampoBatalla.golpeAlAire = game.add.audio('punoalaire');
         variablesCampoBatalla.golpe_al_cuerpo = game.add.audio('punoalcuerpo');
 	},
@@ -207,7 +207,7 @@ var funcionesBatalla={
         if(variablesCampoBatalla.escudo2!=null)
             variablesCampoBatalla.escudo2.kill();
         game.input.keyboard.onUpCallback = function( key ){    
-                if(key.keyCode == Phaser.Keyboard.UP&&(variablesCampoBatalla.personajeJugador.body.y>355)&&(game.time.now > variablesCampoBatalla.saltoJ)){                
+                if(key.keyCode == Phaser.Keyboard.UP&&(variablesCampoBatalla.personajeJugador.body.y>355)&&(game.time.now > variablesCampoBatalla.saltoJ)){
                            variablesCampoBatalla.personajeJugador.body.velocity.y-=400;
                 }   
                 else if (key.keyCode == Phaser.Keyboard.SPACEBAR){            
@@ -405,12 +405,9 @@ var funcionesBatalla={
         if(variablesCampoBatalla.movV[1]||variablesCampoBatalla.movH[1]){
             
         }
-        console.log(variablesCampoBatalla.movV[1]);
-        console.log(variablesCampoBatalla.movH[0]);
-
+        
         //si se resta vida al jugador 
         if(variablesCampoBatalla.movV[1]==true&&!variablesCampoBatalla.movH[0]){
-            console.log("sdfasfasf");
             funcionesBatalla.actualizarVida(vidaRojoJugador,variablesCampoBatalla.danoV[0]);
             variablesCampoBatalla.movV[0]=false;
             funcionesBatalla.spriteImpactoComputadora();
@@ -429,7 +426,7 @@ var funcionesBatalla={
      */
      finJuego : function(){
         
-        game.add.text(game.width/4,game.height/2,'JUEGO TERMINADO', {font:'45px'});
+        game.add.text(game.width/4,game.height/2,'JUEGO TERMINADO', {font:'45px', fill:'#fff'});
 		 if(vidaRojoComputadora.width==0){
 				variablesCampoBatalla.ganador = true;
 			}else{
