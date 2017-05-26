@@ -61,7 +61,7 @@ var batalla = {
 		variablesCampoBatalla.saltoJ=0; 
 		variablesCampoBatalla.cambioOrientacion = false;
 		variablesCampoBatalla.counter = 7200;
-         if(variablesCampoBatalla.idNivel=='1-1' && !variablesBoot.dispositivoMovil){
+         if(variablesCampoBatalla.idNivel=='1-1'){
             variablesCampoBatalla.counter=8500;
          }
 		variablesCampoBatalla.ti = 0;
@@ -284,42 +284,41 @@ var batalla = {
 		if (variablesCampoBatalla.ti >= 0) {
 			text.setText('time: ' + variablesCampoBatalla.ti);
 		}
-        if(variablesCampoBatalla.idNivel=='1-1' && !variablesBoot.dispositivoMovil){
+        if(variablesCampoBatalla.idNivel=='1-1'){
     
         if(variablesCampoBatalla.counter==8460){
-            funcionesBatalla.tutorial();
+           if(variablesBoot.dispositivoMovil) {funcionesBatalla.tutorialM();} else {funcionesBatalla.tutorial();}
            } if(variablesCampoBatalla.counter==8300){
              texto1.destroy();
             derecha.destroy();
             izquierda.destroy();
         } if(variablesCampoBatalla.counter==8260){
-            funcionesBatalla.tutorial2();
+             if(variablesBoot.dispositivoMovil) {funcionesBatalla.tutorial2M();} else {funcionesBatalla.tutorial2();}
            }if(variablesCampoBatalla.counter==8100){
              texto2.destroy();
             arriba.destroy();
         } if(variablesCampoBatalla.counter==8060){
-            funcionesBatalla.tutorial3();
+             if(variablesBoot.dispositivoMovil) {funcionesBatalla.tutorial3M();} else {funcionesBatalla.tutorial3();}
            }if(variablesCampoBatalla.counter==7900){
              texto3.destroy();
             abajo.destroy();
         } if(variablesCampoBatalla.counter==7860 ){
-            funcionesBatalla.tutorial4();
+            if(variablesBoot.dispositivoMovil) {funcionesBatalla.tutorial4M();} else {funcionesBatalla.tutorial4();}
            }if(variablesCampoBatalla.counter==7700){
              texto4.destroy();
             m.destroy();
         } if(variablesCampoBatalla.counter==7660 ){
-            funcionesBatalla.tutorial5();
+            if(variablesBoot.dispositivoMovil) {funcionesBatalla.tutorial5M();} else {funcionesBatalla.tutorial5();}
            } if(variablesCampoBatalla.counter==7500){
              texto5.destroy();
             espacio.destroy();
         }if(variablesCampoBatalla.counter==7460){
-            funcionesBatalla.tutorial6();
+            if(variablesBoot.dispositivoMovil) {funcionesBatalla.tutorial6M();} else {funcionesBatalla.tutorial6();}
            }if(variablesCampoBatalla.counter==7250){
              texto6.destroy();
-            n.destroy();
-            vida.destroy();
+               n.destroy();
                energia.destroy();
-               btnpoder.destroy();
+               vida.destroy();
         }
         }
 		if(variablesCampoBatalla.ti == timeShowBox){
