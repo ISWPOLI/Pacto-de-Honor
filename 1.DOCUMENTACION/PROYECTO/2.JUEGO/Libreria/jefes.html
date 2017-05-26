@@ -1,0 +1,798 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="shortcut icon" type="image/x-icon" href="img/logosinfondo.ico">
+		<title>Jefes</title>
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="icons/icons.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<script src="js/jquery-latest.js"></script>
+		<script src="js/goUpButton.js"></script>
+	</head>
+	<body>
+		<nav class="goUp icon-chevron-up"></nav>
+		<header>
+			<div>
+				<img class="portada" src="img/portada.png">
+			</div>
+			<nav>
+				<ul>
+					<li><a href="inicio.html">Inicio</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section class="main">
+			<section class="articles">
+				<article>
+					<h2>jefes.js</h2>
+					<br/>
+					<p>En esta clase se muestra al jugador los jefes que ha derrotado hasta el momento.</p>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla1">
+							<td colspan="2">Funciones</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Dato de retorno</b>
+							</td>
+							<td>
+								<b>Descripción breve</b>
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>preload</b> ( )
+								<br/>
+								Función de Phaser, que sirve para cargar componentes del juego.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>create</b> ( )
+								<br/>
+								Función de Phaser, que sirve para agregar componentes al juego.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>win</b> ( )
+								<br/>
+								Verifica los personajes buenos que tiene desbloqeuados el jugador.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>hideBoss</b> ( )
+								<br/>
+								Oculta todas las imagenes de los personajes bloqueados.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>abejasClick</b> ( )
+								<br/>
+								Muestra la imagen de Ana y Sara abejas.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>babuinoClick</b> ( )
+								<br/>
+								Muestra la imagen de Fabián babuino.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>buitreClick</b> ( )
+								<br/>
+								Muestra la imagen de Carlos buitre.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>burroClick</b> ( )
+								<br/>
+								Muestra la imagen de Julián burro.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>camaleonClick</b> ( )
+								<br/>
+								Muestra la imagen de Juan camaleón.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>hienaClick</b> ( )
+								<br/>
+								Muestra la imagen de Victor hiena.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>rataClick</b> ( )
+								<br/>
+								Muestra la imagen de Juan rata.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>viboraClick</b> ( )
+								<br/>
+								Muestra la imagen de Luis vibora.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>viboraClick</b> ( )
+								<br/>
+								Muestra la imagen de Luis vibora.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>camiloClick</b> ( )
+								<br/>
+								Muestra la imagen de Camilo perezoso.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>zorroClick</b> ( )
+								<br/>
+								Muestra la imagen de Andrés zorro.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>lagartoClick</b> ( )
+								<br/>
+								Muestra la imagen de Nicolás lagarto.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>osoClick</b> ( )
+								<br/>
+								Muestra la imagen de Felipe oso.
+							</td>
+						</tr>
+						<tr>
+							<td>void</td>
+							<td>
+								<b>volver</b> ( )
+								<br/>
+								Permite devolverse al perfil del jugador.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">preload( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta es una función del framework Phaser en la que cargaremos todos los componentes a ser utilizados en el juego como imágenes, sonidos, fondos, sprites, etc. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">create( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta es una función del framework Phaser, aquí se añadirán los componentes al juego. En esta función asignamos la posición inicial, el tamaño, etc. De todos los componentes. Mas información <a class="phaser_link" target="_blank" href="https://phaser.io/docs/2.3.0/Phaser.State.html">aqui</a>.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">win( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Verifica los personajes buenos que tiene desbloqeuados el jugador.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">hideBoss( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Oculta todas las imagenes de los personajes bloqueados.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">abejasClick( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Muestra la imagen de Ana y Sara abejas.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">babuinoClick( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Muestra la imagen de Fabián babuino.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">buitreClick( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Muestra la imagen de Carlos buitre.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">burroClick( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Muestra la imagen de Julián burro.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">camaleónClick( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Muestra la imagen de Juan camaleón.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">hienaClick( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Muestra la imagen de Víctor hiena.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">rataClick( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Muestra la imagen de Juan rata.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">viboraClick( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Muestra la imagen de Luis víbora.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">perezosoClick( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Muestra la imagen de Camilo perezoso.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">zorroClick( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Muestra la imagen de Andrés zorro.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">lagartoClick( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Muestra la imagen de Nicolás lagarto.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">osoClick( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Muestra la imagen de Felipe oso.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<table>
+						<tr class="filauno tabla2">
+							<td colspan="3">volver( )</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Parámetros</b>
+							</td>
+							<td>
+								<b>Descripción</b>
+							</td>
+							<td>
+								<b>Retorno</b>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								No recibe parámetros.
+							</td>
+							<td>
+								Esta función permite regresar al perfil del jugador.
+							</td>
+							<td>
+								No tiene retorno.
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<br/>
+					<table>
+						<tr class="filauno tabla3">
+							<td colspan="3">Variables</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Nombre</b>
+							</td>
+							<td>
+								<b>Tipo de dato</b>
+							</td>
+							<td>
+								<b>Explicación</b>
+							</td>
+						</tr>
+						<tr>
+							<td>botonAbejas</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado mostrará a Ana y Sara Abejas.</td>
+						</tr>
+						<tr>
+							<td>botonBabuino</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado mostrará a Fabián Babuino.</td>
+						</tr>
+						<tr>
+							<td>botonBuitre</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado mostrará a Carlos Buitre.</td>
+						</tr>
+						<tr>
+							<td>botonBurro</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado mostrará a Julián Burro.</td>
+						</tr>
+						<tr>
+							<td>botonCamaleon</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado mostrará a Juan Camaleón.</td>
+						</tr>
+						<tr>
+							<td>botonHiena</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado mostrará a Victor Hiena.</td>
+						</tr>
+						<tr>
+							<td>botonLagarto</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado mostrará a Nicolás Lagarto.</td>
+						</tr>
+						<tr>
+							<td>botonOso</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado mostrará a Felipe Oso.</td>
+						</tr>
+						<tr>
+							<td>botonPerezoso</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado mostrará a Camilo Perezoso.</td>
+						</tr>
+						<tr>
+							<td>botonRata</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado mostrará a Juan Rata.</td>
+						</tr>
+						<tr>
+							<td>botonVibora</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado mostrará a Luis Víbora.</td>
+						</tr>
+						<tr>
+							<td>botonZorro</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado mostrará a Andrés Zorro.</td>
+						</tr>
+						<tr>
+							<td>botonVolver</td>
+							<td>PhaserButton</td>
+							<td>Botón que al ser presionado regresará el juego al perfil del jugador.</td>
+						</tr>
+					</table>
+				</article>
+			</section>
+			<aside>
+				<h3>Clases</h3>
+				<p><a href="batalla.html">Batalla</a></p>
+				<p><a href="boot.html">Boot</a></p>
+				<p><a href="cajaMisteriosa.html">Caja Misteriosa</a></p>
+				<p><a href="campeones.html">Campeones</a></p>
+				<p><a href="codigoUsado.html">Codigo Usado</a></p>
+				<p><a href="compraPersonajes.html">Compra Personajes</a></p>
+				<p><a href="cookies.html">Cookies</a></p>
+				<p><a href="creditos.html">Creditos</a></p>
+				<p><a href="desbloqueoPersonaje.html">Desbloqueo Personaje</a></p>
+				<p><a href="fin.html">Fin</a></p>
+				<p><a href="funcionesBatalla.html">Funciones Batalla</a></p>
+				<p><a href="game.html">Game</a></p>
+				<p><a href="historieta.html">Historieta</a></p>
+				<p><a href="invitarAmigos.html">Invitar Amigos</a></p>
+				<p><a href="jefes.html">Jefes</a></p>
+				<p><a href="logros.html">Logros</a></p>
+				<p><a href="movil.html">Móvil</a></p>
+				<p><a href="mundo1.html">Mundo1</a></p>
+				<p><a href="mundo2.html">Mundo2</a></p>
+				<p><a href="mundo3.html">Mundo3</a></p>
+				<p><a href="mundo4.html">Mundo4</a></p>
+				<p><a href="mundo5.html">Mundo5</a></p>
+				<p><a href="mundo6.html">Mundo6</a></p>
+				<p><a href="mundo7.html">Mundo7</a></p>
+				<p><a href="mundo8.html">Mundo8</a></p>
+				<p><a href="mundo9.html">Mundo9</a></p>
+				<p><a href="mundo10.html">Mundo10</a></p>
+				<p><a href="mundo11.html">Mundo11</a></p>
+				<p><a href="mundo12.html">Mundo12</a></p>
+				<p><a href="navegacion.html">Navegación</a></p>
+				<p><a href="perfilJugador.html">Perfil Jugador</a></p>
+				<p><a href="pruebasPsicotecnicas.html">Pruebas Psicotécnicas</a></p>
+				<p><a href="rankings.html">Rankings</a></p>
+				<p><a href="seleccionAvatar.html">Selección Avatar</a></p>
+				<p><a href="seleccionPersonaje.html">Selección Personaje</a></p>
+				<p><a href="verificacionDeCodigo.html">Verificación de Código</a></p>
+			</aside>
+		</section>
+		<footer>
+			<p>
+				Poli Fighters - 2017
+			</p>
+		</footer>
+	</body>
+</html>

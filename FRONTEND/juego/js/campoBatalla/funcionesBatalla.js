@@ -1,5 +1,4 @@
-
-
+          
 var funcionesBatalla={
     //funcion que se encarga de cargar todos los elementos del campo de batalla
     cargar:function(idPJ, idPC, caa, idNivel){
@@ -17,20 +16,25 @@ var funcionesBatalla={
         game.load.spritesheet('impactoPersonalidadJugador', personajesBuenos[idPJ].rutaImpactoPersonalidad, 201, 160);
         game.load.spritesheet('impactoPersonalidadComputadora', personajesMalos[idPC].rutaImpactoPersonalidad, 161, 145);
         game.load.spritesheet('impactoPlagioComputadora', personajesMalos[idPC].rutaImpactoPlagio, 277, 277);
-        game.load.spritesheet('gamepad','../img/Componentes/joystick/gamepad_spritesheet.png',100,100);
-        game.load.spritesheet('botonEscudo', '../img/Componentes/joystick/gamepad_spritesheet.png', 100, 100);
+        game.load.spritesheet('gamepad','../img/componentes/joystick/gamepad_spritesheet.png',100,100);
+        game.load.spritesheet('botonEscudo', '../img/componentes/joystick/gamepad_spritesheet.png', 100, 100);
         game.load.image('caja', boxes[caa].root);
-        game.load.audio('punoalaire', '../img/componentes/sonidos/EfectosDePelea/sonidogolpealaire.mp3');
-        game.load.audio('punoalcuerpo', '../img/componentes/sonidos/EfectosDePelea/sonidogolpealcuerpo.mp3');
+        game.load.audio('punoalaire', '../img/componentes/sonidos/efectosDePelea/sonidogolpealaire.mp3');
+        game.load.audio('punoalcuerpo', '../img/componentes/sonidos/efectosDePelea/sonidogolpealcuerpo.mp3');
         game.load.image('escudo1', '../img/componentes/batalla/escudo1.png');
         game.load.image('escudo2', '../img/componentes/batalla/escudo2.png');
-         game.load.image('flechaIzquierda','../img/componentes/batalla/izquierdapc.png');
+        game.load.image('flechaIzquierda','../img/componentes/batalla/izquierdapc.png');
         game.load.image('flechaDerecha','../img/componentes/batalla/derechapc.png');
-         game.load.image('flechaArriba','../img/componentes/batalla/arribapc.png');
+        game.load.image('flechaArriba','../img/componentes/batalla/arribapc.png');
         game.load.image('flechaAbajo','../img/componentes/batalla/abajopc.png');
-         game.load.image('teclam','../img/componentes/batalla/teclaM.png');
-         game.load.image('teclan','../img/componentes/batalla/teclaN.png');
+        game.load.image('teclam','../img/componentes/batalla/teclam.png');
+        game.load.image('teclan','../img/componentes/batalla/teclan.png');
         game.load.image('espacio','../img/componentes/batalla/space.png');
+        game.load.image('abajom','../img/componentes/batalla/abajo.png');
+        game.load.image('arribam','../img/componentes/batalla/arriba.png');
+        game.load.image('izquierdam','../img/componentes/batalla/izquierda.png');
+        game.load.image('derecham','../img/componentes/batalla/derecha.png');
+        game.load.image('pulsem','../img/componentes/batalla/pulse.png');
         if (caa == 8) {
              game.load.image('cajaOpen', boxes[caa].fatalityBox);
          }else{
@@ -52,9 +56,10 @@ var funcionesBatalla={
     	sprite.animations.play('quieto');
 		game.physics.arcade.enable(sprite);
 		sprite.body.collideWorldBounds = true; 
-        sprite.body.gravity.y=250;
+        sprite.body.gravity.y=300;
         variablesCampoBatalla.golpeAlAire = game.add.audio('punoalaire');
         variablesCampoBatalla.golpe_al_cuerpo = game.add.audio('punoalcuerpo');
+        
 	},
 
     finEspecial:function(sprite,animation){
@@ -111,7 +116,7 @@ var funcionesBatalla={
     },
     tutorial:function(){
          texto1 = game.add.text(450,270,"Presione las teclas \n                y \n \npara moverse por el \n  campo de batalla ");
-        vida = game.add.text(310,20,"vida",{fill:"red"});
+        vida = game.add.text(255,40,"vida",{fill:"red"});
         energia = game.add.text(210,100,"energia",{fill:"green"});
          texto1.stroke = "white";
             texto1.strokeThickness = 4;
@@ -178,6 +183,73 @@ var funcionesBatalla={
             n = game.add.sprite(370,230,'teclan');
             n.scale.setTo(1.8);
     },
+    tutorialM:function(){
+         texto1 = game.add.text(450,270,"Deslice su dedo hacia los lados\npara moverse en el campo",{font:"40px roboto"});
+        vida = game.add.text(260,30,"vida",{fill:"red",font:"40px roboto"});
+        energia = game.add.text(210,100,"energia",{fill:"green",font:"40px roboto"});
+         texto1.stroke = "white";
+            texto1.strokeThickness = 4;
+            texto1.stroke = "white";
+            texto1.anchor.setTo(0.5);
+            vida.strokeThickness = 4;
+            vida.stroke = "white";
+            energia.strokeThickness = 4;
+            energia.stroke = "white";
+            derecha = game.add.sprite(45,460,'derecham');
+            derecha.scale.setTo(0.3);
+            izquierda = game.add.sprite(22,460,'izquierdam');
+            izquierda.scale.setTo(0.3);
+       
+    },
+    tutorial2M:function(){
+         texto2 = game.add.text(450,270,"Deslice su dedo hacia arriba \n               para saltar",{font:"40px roboto"});
+         texto2.stroke = "white";
+            texto2.strokeThickness = 4;
+            texto2.stroke = "white";
+            texto2.strokeThickness = 4;
+            texto2.anchor.setTo(0.5);
+            arriba = game.add.sprite(10,430,'arribam');
+            arriba.scale.setTo(0.4);
+    },
+      tutorial3M:function(){
+         texto3 = game.add.text(450,270,"   Deslice su dedo hacia abajo \npara usar uno de sus escudos",{font:"40px roboto"});
+         texto3.stroke = "white";
+            texto3.strokeThickness = 4;
+            texto3.stroke = "white";
+            texto3.strokeThickness = 4;
+            texto3.anchor.setTo(0.5);
+            abajo = game.add.sprite(10,430,'abajom');
+            abajo.scale.setTo(0.4);
+    },
+    tutorial4M:function(){
+         texto4 = game.add.text(450,270,"      Si presiona acá \nusted activará otro escudo",{font:"40px roboto"});
+         texto4.stroke = "white";
+            texto4.strokeThickness = 4;
+            texto4.stroke = "white";
+            texto4.strokeThickness = 4;
+            texto4.anchor.setTo(0.5);
+            m = game.add.sprite(650,265,'pulsem');
+            m.scale.setTo(0.35);
+    },
+       tutorial5M:function(){
+         texto5 = game.add.text(450,270,"       Presionando acá\nusted podrá golpear a su rival",{font:"40px roboto"});
+         texto5.stroke = "white";
+            texto5.strokeThickness = 4;
+            texto5.stroke = "white";
+            texto5.strokeThickness = 4;
+            texto5.anchor.setTo(0.5);
+            espacio = game.add.sprite(650,475,'pulsem');
+            espacio.scale.setTo(0.35);
+    },   tutorial6M:function(){
+         texto6 = game.add.text(450,270,"    Finalmente si presiona acá\nusted podra usar el poder especial",{font:"40px roboto"});
+         texto6.stroke = "white";
+            texto6.strokeThickness = 4;
+            texto6.stroke = "white";
+            texto6.anchor.setTo(0.5);
+            n = game.add.sprite(650,365,'pulsem');
+            n.scale.setTo(0.35);
+    },
+    
     //con esta funcion se refelja el daño causado
     actualizarVida: function(barra,dano){
         if(barra.width-dano>0)
@@ -207,7 +279,7 @@ var funcionesBatalla={
         if(variablesCampoBatalla.escudo2!=null)
             variablesCampoBatalla.escudo2.kill();
         game.input.keyboard.onUpCallback = function( key ){    
-                if(key.keyCode == Phaser.Keyboard.UP&&(variablesCampoBatalla.personajeJugador.body.y>355)&&(game.time.now > variablesCampoBatalla.saltoJ)){                
+                if(key.keyCode == Phaser.Keyboard.UP&&(variablesCampoBatalla.personajeJugador.body.y>355)&&(game.time.now > variablesCampoBatalla.saltoJ)){
                            variablesCampoBatalla.personajeJugador.body.velocity.y-=400;
                 }   
                 else if (key.keyCode == Phaser.Keyboard.SPACEBAR){            
@@ -405,12 +477,9 @@ var funcionesBatalla={
         if(variablesCampoBatalla.movV[1]||variablesCampoBatalla.movH[1]){
             
         }
-        console.log(variablesCampoBatalla.movV[1]);
-        console.log(variablesCampoBatalla.movH[0]);
-
+        
         //si se resta vida al jugador 
         if(variablesCampoBatalla.movV[1]==true&&!variablesCampoBatalla.movH[0]){
-            console.log("sdfasfasf");
             funcionesBatalla.actualizarVida(vidaRojoJugador,variablesCampoBatalla.danoV[0]);
             variablesCampoBatalla.movV[0]=false;
             funcionesBatalla.spriteImpactoComputadora();
@@ -429,7 +498,7 @@ var funcionesBatalla={
      */
      finJuego : function(){
         
-        game.add.text(game.width/4,game.height/2,'JUEGO TERMINADO', {font:'45px'});
+        game.add.text(game.width/4,game.height/2,'JUEGO TERMINADO', {font:'45px', fill:'#fff'});
 		 if(vidaRojoComputadora.width==0){
 				variablesCampoBatalla.ganador = true;
 			}else{

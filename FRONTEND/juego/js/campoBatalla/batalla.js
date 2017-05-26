@@ -43,7 +43,7 @@ variablesCampoBatalla = {
 var boxGame = 1;
 var caja;
 var openBox;
-var timeShowBox = 3;
+var timeShowBox = Math.round(Math.random(118)*100);
 var sendGift = true;
 var rect;
 var rect1;
@@ -61,7 +61,7 @@ var batalla = {
 		variablesCampoBatalla.saltoJ=0; 
 		variablesCampoBatalla.cambioOrientacion = false;
 		variablesCampoBatalla.counter = 7200;
-         if(variablesCampoBatalla.idNivel=='1-1' && !variablesBoot.dispositivoMovil){
+         if(variablesCampoBatalla.idNivel=='1-1'){
             variablesCampoBatalla.counter=8500;
          }
 		variablesCampoBatalla.ti = 0;
@@ -202,9 +202,9 @@ var batalla = {
 			energiaNegroJugador = new Phaser.Rectangle(143, 78, 202, 22);//primer borde negro de energia
 			energiaVerdeJugador = new Phaser.Rectangle(144, 79, 200, 20);//primer barra verde de energia
 
-			vidaBlancoComputadora = new Phaser.Rectangle(460, 53, 200, 20);//segunda barra blanca de vida
-			vidaNegroComputadora = new Phaser.Rectangle(459, 52, 200, 22);//segunda borde negro de vida 
-			vidaRojoComputadora = new Phaser.Rectangle(460, 53, 200, 20);//segunda barra roja		
+			vidaBlancoComputadora = new Phaser.Rectangle(460, 53, personajesMalos[variablesCampoBatalla.idPC].vida, 20);//segunda barra blanca de vida
+			vidaNegroComputadora = new Phaser.Rectangle(459, 52, personajesMalos[variablesCampoBatalla.idPC].vida+2, 22);//segunda borde negro de vida 
+			vidaRojoComputadora = new Phaser.Rectangle(460, 53, personajesMalos[variablesCampoBatalla.idPC].vida, 20);//segunda barra roja		
 
 			energiaBlancaComputadora = new Phaser.Rectangle(460, 79, 200, 20);
 			energiaNegroComputadora = new Phaser.Rectangle(459, 78, 200, 22);
@@ -257,12 +257,13 @@ var batalla = {
 	//se crea esta funcion para disminuir la barra de energia
     
 	update : function() {
-         if(variablesCampoBatalla.counter<7200){
-        indice=funcionesBatalla.numeroAleatorio(1,4);
-         }
+        if(variablesCampoBatalla.counter<7200){
+            indice=funcionesBatalla.numeroAleatorio(1,4);
+        }
+        
 		funcionesBatalla.cargarEnergia(energiaVerdeJugador);
-		funcionesBatalla.cargarEnergia(energiaVerdeComputadora);
-		
+        funcionesBatalla.cargarEnergia(energiaVerdeComputadora);        
+				
 		if(variablesBoot.dispositivoMovil)
 			funcionesBatalla.joystick(joystick,variablesCampoBatalla.botonAtaque,variablesCampoBatalla.botonEscudo);
 		else
@@ -272,7 +273,7 @@ var batalla = {
        } 
 		if(!variablesCampoBatalla.secuencia)
 			 if(variablesCampoBatalla.counter<7200){
-            funcionesBatalla.llamarSecuencia(indice);	
+            funcionesBatalla.llamarSecuencia(indice);
              }
 
 		variablesCampoBatalla.counter--;
@@ -283,42 +284,41 @@ var batalla = {
 		if (variablesCampoBatalla.ti >= 0) {
 			text.setText('time: ' + variablesCampoBatalla.ti);
 		}
-        if(variablesCampoBatalla.idNivel=='1-1' && !variablesBoot.dispositivoMovil){
+        if(variablesCampoBatalla.idNivel=='1-1'){
     
         if(variablesCampoBatalla.counter==8460){
-            funcionesBatalla.tutorial();
+           if(variablesBoot.dispositivoMovil) {funcionesBatalla.tutorialM();} else {funcionesBatalla.tutorial();}
            } if(variablesCampoBatalla.counter==8300){
              texto1.destroy();
             derecha.destroy();
             izquierda.destroy();
         } if(variablesCampoBatalla.counter==8260){
-            funcionesBatalla.tutorial2();
+             if(variablesBoot.dispositivoMovil) {funcionesBatalla.tutorial2M();} else {funcionesBatalla.tutorial2();}
            }if(variablesCampoBatalla.counter==8100){
              texto2.destroy();
             arriba.destroy();
         } if(variablesCampoBatalla.counter==8060){
-            funcionesBatalla.tutorial3();
+             if(variablesBoot.dispositivoMovil) {funcionesBatalla.tutorial3M();} else {funcionesBatalla.tutorial3();}
            }if(variablesCampoBatalla.counter==7900){
              texto3.destroy();
             abajo.destroy();
         } if(variablesCampoBatalla.counter==7860 ){
-            funcionesBatalla.tutorial4();
+            if(variablesBoot.dispositivoMovil) {funcionesBatalla.tutorial4M();} else {funcionesBatalla.tutorial4();}
            }if(variablesCampoBatalla.counter==7700){
              texto4.destroy();
             m.destroy();
         } if(variablesCampoBatalla.counter==7660 ){
-            funcionesBatalla.tutorial5();
+            if(variablesBoot.dispositivoMovil) {funcionesBatalla.tutorial5M();} else {funcionesBatalla.tutorial5();}
            } if(variablesCampoBatalla.counter==7500){
              texto5.destroy();
             espacio.destroy();
         }if(variablesCampoBatalla.counter==7460){
-            funcionesBatalla.tutorial6();
+            if(variablesBoot.dispositivoMovil) {funcionesBatalla.tutorial6M();} else {funcionesBatalla.tutorial6();}
            }if(variablesCampoBatalla.counter==7250){
              texto6.destroy();
-            n.destroy();
-            vida.destroy();
+               n.destroy();
                energia.destroy();
-               btnpoder.destroy();
+               vida.destroy();
         }
         }
 		if(variablesCampoBatalla.ti == timeShowBox){

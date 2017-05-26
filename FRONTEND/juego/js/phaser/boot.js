@@ -15,25 +15,25 @@ variablesBoot={
 var boot ={
 	preload: function () {
         //Sonido al oprimir botones y musica
-        game.load.audio('sonidoBoton', '../img/Componentes/sonidos/sonidoBoton.mp3');
-        game.load.audio('musicaMenus','../img/Componentes/sonidos/musicaMenus.mp3');
-        game.load.audio('musicaMapa','../img/Componentes/sonidos/musicaMapa.mp3');
-        game.load.audio('musicaBatalla','../img/Componentes/sonidos/musicaBatalla.mp3');
+        game.load.audio('sonidoBoton', '../img/componentes/sonidos/sonidoBoton.mp3');
+        game.load.audio('musicaMenus','../img/componentes/sonidos/musicaMenus.mp3');
+        game.load.audio('musicaMapa','../img/componentes/sonidos/musicaMapa.mp3');
+        game.load.audio('musicaBatalla','../img/componentes/sonidos/musicaBatalla.mp3');
         //Barra de carga, boton de volver de todos los estados y boton seleccionar de Seleccion de avatar y personaje
 		game.load.image('barraCarga','../img/componentes/carga/barraCarga.png');
-        game.load.spritesheet('botonVolver', '../img/Componentes/navegacionMapa/botonVolver.png', 62, 62);
-        game.load.spritesheet('botonSeleccionar', '../img/Componentes/botones/botonSeleccionar.png', 150, 40);
-        //Imágenes de los ScrollingMaps de Selección avatar, rankings y Compra personajes
+        game.load.spritesheet('botonVolver', '../img/componentes/navegacionMapa/botonVolver.png', 62, 62);
+        game.load.spritesheet('botonSeleccionar', '../img/componentes/botones/botonSeleccionar.png', 150, 40);
+        //Imágenes de los ScrollingMaps de Selección avatar, rankings y compra personajes
         game.load.image("transp", "../img/personajes/avatares/transp.png");
-        game.load.image('pantera', '../img/personajes/avatares/CaraPantera80.png');
-        game.load.image('gallo', '../img/personajes/avatares/CaraGallo80.png');
-        game.load.image('cierva', '../img/personajes/avatares/CaraCierva80.png');
-        game.load.image('jirafa', '../img/personajes/avatares/CaraJirafa80.png');
-        game.load.image('leon', '../img/personajes/avatares/CaraLeon80.png');
-        game.load.image('canario', '../img/personajes/avatares/CaraCanario80.png');
-        game.load.image('ruisenor', '../img/personajes/avatares/CaraRuisenor80.png');
-        game.load.image('raton', '../img/personajes/avatares/CaraRaton80.png');
-        game.load.image('hormiga', '../img/personajes/avatares/CaraHormiga80.png');
+        game.load.image('pantera', '../img/personajes/avatares/caraPantera80.png');
+        game.load.image('gallo', '../img/personajes/avatares/caraGallo80.png');
+        game.load.image('cierva', '../img/personajes/avatares/caraCierva80.png');
+        game.load.image('jirafa', '../img/personajes/avatares/caraJirafa80.png');
+        game.load.image('leon', '../img/personajes/avatares/caraLeon80.png');
+        game.load.image('canario', '../img/personajes/avatares/caraCanario80.png');
+        game.load.image('ruisenor', '../img/personajes/avatares/caraRuisenor80.png');
+        game.load.image('raton', '../img/personajes/avatares/caraRaton80.png');
+        game.load.image('hormiga', '../img/personajes/avatares/caraHormiga80.png');
         //Botones de personajes de Selección de personaje, Códigos alfanuméricos y Créditos
         game.load.spritesheet('botonPantera', '../img/personajes/avatares/botonPantera.png', 125, 125);
         game.load.spritesheet('botonGallo', '../img/personajes/avatares/botonGallo.png', 125, 125);
