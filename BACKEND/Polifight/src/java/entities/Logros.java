@@ -37,47 +37,54 @@ import javax.xml.bind.annotation.XmlTransient;
 public class Logros implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    
     @Id
     @Basic(optional = false)
     @NotNull
     @Column(name = "id_logro")
     private Integer idLogro;
+    
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 50)
     @Column(name = "nombre")
     private String nombre;
+    
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 200)
     @Column(name = "descripcion")
     private String descripcion;
+    
     @Basic(optional = false)
     @NotNull
     @Column(name = "esModenas")
     private boolean esModenas;
+    
     @Basic(optional = false)
     @NotNull
     @Column(name = "esRanking")
     private boolean esRanking;
+    
     @Basic(optional = false)
     @NotNull
     @Column(name = "esTiempo")
     private boolean esTiempo;
+    
     @Basic(optional = false)
     @NotNull
     @Column(name = "monedas")
     private int monedas;
+    
     @Basic(optional = false)
     @NotNull
     @Column(name = "ranking")
     private int ranking;
+    
     @Basic(optional = false)
     @NotNull
     @Column(name = "tiempoJugado")
     private int tiempoJugado;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idLogros")
-    private Collection<JugadorTieneLogros> jugadorTieneLogrosCollection;
 
     public Logros() {
     }
@@ -168,15 +175,6 @@ public class Logros implements Serializable {
 
     public void setTiempoJugado(int tiempoJugado) {
         this.tiempoJugado = tiempoJugado;
-    }
-
-    @XmlTransient
-    public Collection<JugadorTieneLogros> getJugadorTieneLogrosCollection() {
-        return jugadorTieneLogrosCollection;
-    }
-
-    public void setJugadorTieneLogrosCollection(Collection<JugadorTieneLogros> jugadorTieneLogrosCollection) {
-        this.jugadorTieneLogrosCollection = jugadorTieneLogrosCollection;
     }
 
     @Override

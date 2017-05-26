@@ -39,7 +39,7 @@ public class PersonajeTieneImagen implements Serializable {
     
     @JoinColumn(name = "id_categoriaImagen", referencedColumnName = "id_categoriaImagen")
     @ManyToOne(optional = false)
-    private Categoriaimagen idCategoriaImagen;
+    private CategoriaImagen idCategoriaImagen;
     
     @JoinColumn(name = "id_Imgen", referencedColumnName = "id_imagen")
     @ManyToOne(optional = false)
@@ -64,11 +64,11 @@ public class PersonajeTieneImagen implements Serializable {
         this.idPersonajeTieneImagen = idPersonajeTieneImagen;
     }
 
-    public Categoriaimagen getIdcategoriaImagen() {
+    public CategoriaImagen getIdcategoriaImagen() {
         return idCategoriaImagen;
     }
 
-    public void setIdcategoriaImagen(Categoriaimagen idCategoriaImagen) {
+    public void setIdcategoriaImagen(CategoriaImagen idCategoriaImagen) {
         this.idCategoriaImagen = idCategoriaImagen;
     }
 

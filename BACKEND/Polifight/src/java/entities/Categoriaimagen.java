@@ -22,10 +22,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name = "categoriaimagen")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Categoriaimagen.findAll", query = "SELECT c FROM Categoriaimagen c"),
-    @NamedQuery(name = "Categoriaimagen.findByIdcategoriaImagen", query = "SELECT c FROM Categoriaimagen c WHERE c.idcategoriaImagen = :idcategoriaImagen"),
-    @NamedQuery(name = "Categoriaimagen.findByDescCategoriaImagen", query = "SELECT c FROM Categoriaimagen c WHERE c.descCategoriaImagen = :descCategoriaImagen")})
-public class Categoriaimagen implements Serializable {
+    @NamedQuery(name = "Categoriaimagen.findAll", query = "SELECT c FROM CategoriaImagen c"),
+    @NamedQuery(name = "Categoriaimagen.findByIdcategoriaImagen", query = "SELECT c FROM CategoriaImagen c WHERE c.idcategoriaImagen = :idcategoriaImagen"),
+    @NamedQuery(name = "Categoriaimagen.findByDescCategoriaImagen", query = "SELECT c FROM CategoriaImagen c WHERE c.descCategoriaImagen = :descCategoriaImagen")})
+public class CategoriaImagen implements Serializable {
     
     private static final long serialVersionUID = 1L;
     
@@ -39,16 +39,16 @@ public class Categoriaimagen implements Serializable {
     @NotNull
     @Size(min = 1, max = 50)
     @Column(name = "descCategoriaImagen")
-    private String descCategoriaImagen;
+    private String descCategoriaImagen;    
     
-    public Categoriaimagen() {
+    public CategoriaImagen() {
     }
 
-    public Categoriaimagen(Integer idcategoriaImagen) {
+    public CategoriaImagen(Integer idcategoriaImagen) {
         this.idcategoriaImagen = idcategoriaImagen;
     }
 
-    public Categoriaimagen(Integer idcategoriaImagen, String descCategoriaImagen) {
+    public CategoriaImagen(Integer idcategoriaImagen, String descCategoriaImagen) {
         this.idcategoriaImagen = idcategoriaImagen;
         this.descCategoriaImagen = descCategoriaImagen;
     }
@@ -79,10 +79,10 @@ public class Categoriaimagen implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Categoriaimagen)) {
+        if (!(object instanceof CategoriaImagen)) {
             return false;
         }
-        Categoriaimagen other = (Categoriaimagen) object;
+        CategoriaImagen other = (CategoriaImagen) object;
         if ((this.idcategoriaImagen == null && other.idcategoriaImagen != null) || (this.idcategoriaImagen != null && !this.idcategoriaImagen.equals(other.idcategoriaImagen))) {
             return false;
         }

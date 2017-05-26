@@ -17,7 +17,7 @@ import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- *
+ * Entidad para la tabla nivel
  * @author jrubiaob
  */
 @Entity
@@ -47,6 +47,10 @@ public class Nivel implements Serializable {
     @Size(min = 1, max = 20)
     @Column(name = "nombre_nivel")
     private String nombreNivel;
+    
+    @JoinColumn(name = "id_personaje", referencedColumnName = "id_personaje", insertable = false, updatable = false)
+    @ManyToOne(optional = false)
+    private Personaje idPersonaje;
 
     public Nivel() {
     }  
@@ -82,6 +86,14 @@ public class Nivel implements Serializable {
 
     public void setIdMundo(Mundo idMundo) {
         this.idMundo = idMundo;
+    }
+
+    public Personaje getIdPersonaje() {
+        return idPersonaje;
+    }
+
+    public void setIdPersonaje(Personaje idPersonaje) {
+        this.idPersonaje = idPersonaje;
     }
 
   

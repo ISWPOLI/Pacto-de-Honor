@@ -1,6 +1,6 @@
 package rest;
 
-import entities.Categoriaimagen;
+import entities.CategoriaImagen;
 import entities.Imagen;
 import entities.Jugador;
 import entities.JugadorTienePersonaje;
@@ -359,7 +359,7 @@ public class PersonajeFacadeREST extends AbstractFacade<Personaje> {
                         resultado += "\"nombrePersonaje\":\""+personaje.getNombrePersonaje()+"\",";
                         for (int i = 0; i < listPersImag.size(); i++) {
                             Imagen imagen = em.find(Imagen.class, listPersImag.get(i).getIdImagen().getIdImagen());
-                            Categoriaimagen catImagen = em.find(Categoriaimagen.class, listPersImag.get(i).getIdcategoriaImagen().getIdcategoriaImagen());
+                            CategoriaImagen catImagen = em.find(CategoriaImagen.class, listPersImag.get(i).getIdcategoriaImagen().getIdcategoriaImagen());
                             resultado += "\""+catImagen.getDescCategoriaImagen().toLowerCase()+"\":\""+imagen.getFoto()+"\",";                    
                         }
                         resultado += "\"dano\":\""+personaje.getNivelDano()+"\",";              

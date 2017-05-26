@@ -48,14 +48,20 @@ public class LogFacadeREST extends AbstractFacade<Log> {
             queryToken.setParameter("token", token);
             Usuario user = (Usuario) queryToken.getSingleResult();
             if(user != null){
+                
+                //Revisar esta consulta ya que no está en la entidad
+                
                 Query query = em.createNamedQuery("Log.findAll");
                 List<Log> datos = query.getResultList();            
                 for (int i = 0; i < datos.size(); i++) {
                     resultado += "{";
+                    /**
+                     * Revisar esta implementación ya que no concuerda con la entidad
+                     */
                     if(i == datos.size()-1){
-                        resultado += "\"idLog\":"+datos.get(i).getIdLog();
+                        resultado += "\"idLog\":";
                     }else{
-                        resultado += "\"idLog\":"+datos.get(i).getIdLog();
+                        resultado += "\"idLog\":";
                     }
                 }
                 resultado += "]}";
@@ -112,7 +118,10 @@ public class LogFacadeREST extends AbstractFacade<Log> {
                if (log == null){
                    return "{'response':'Error','cause':'Log not found'}";
                }else{
-                   return "{'idLog':'"+log.getIdLog()+"', 'idJugador':'"+log.getIdJugador()+"' 'tiempoLog':'"+log.getTiempoLog()+"'}"+"' 'fechaInicio':'"+log.getFechaInicio()+"'}"+"' 'fechaFinal':'"+log.getFechaFinal()+"'}"+"' 'idNivel':'"+log.getIdNivel()+"'}"+"' 'idMundo':'"+log.getIdMundo()+"'}"+"' 'idPersonaje':'"+log.getIdPersonaje();
+                   /**
+                    * No concuerda con la entidad
+                    */
+                   //return "{'idLog':'"+log.getIdLog()+"', 'idJugador':'"+log.getIdJugador()+"' 'tiempoLog':'"+log.getTiempoLog()+"'}"+"' 'fechaInicio':'"+log.getFechaInicio()+"'}"+"' 'fechaFinal':'"+log.getFechaFinal()+"'}"+"' 'idNivel':'"+log.getIdNivel()+"'}"+"' 'idMundo':'"+log.getIdMundo()+"'}"+"' 'idPersonaje':'"+log.getIdPersonaje();
                }
            }else{
                return "{'response':'Error','cause':'Log not found'}";
@@ -121,6 +130,10 @@ public class LogFacadeREST extends AbstractFacade<Log> {
              e.printStackTrace();
              return "{'response':'Error', 'cause':'Invalid token'}";
         }
+        /**
+         * Revisar que retorna 
+         */
+        return null;
     }
     
     /**
@@ -139,10 +152,15 @@ public class LogFacadeREST extends AbstractFacade<Log> {
         List<Log> datos = query.getResultList();
         for (int i = 0; i < datos.size(); i++) {
             resultado += "{";
+            
+            /**
+             * No concuerda con la entidad
+             */
+            
             if(i == datos.size()-1){
-                resultado += "'idLog':'"+datos.get(i).getIdNivel()+"', 'idJugador':'"+datos.get(i).getIdJugador()+"', 'tiempoLog':'"+datos.get(i).getTiempoLog()+"', 'fechaInicio':'"+datos.get(i).getFechaInicio()+"', 'fechaFinal':'"+datos.get(i).getFechaFinal()+"', 'idNivel':'"+datos.get(i).getIdNivel()+"', 'idMundo':'"+datos.get(i).getIdMundo()+"', 'idPersonaje':'"+datos.get(i).getIdPersonaje();
+            //    resultado += "'idLog':'"+datos.get(i).getIdNivel()+"', 'idJugador':'"+datos.get(i).getIdJugador()+"', 'tiempoLog':'"+datos.get(i).getTiempoLog()+"', 'fechaInicio':'"+datos.get(i).getFechaInicio()+"', 'fechaFinal':'"+datos.get(i).getFechaFinal()+"', 'idNivel':'"+datos.get(i).getIdNivel()+"', 'idMundo':'"+datos.get(i).getIdMundo()+"', 'idPersonaje':'"+datos.get(i).getIdPersonaje();
             }else{
-                resultado += "'idLog':'"+datos.get(i).getIdNivel()+"', 'idJugador':'"+datos.get(i).getIdJugador()+"', 'tiempoLog':'"+datos.get(i).getTiempoLog()+"', 'fechaInicio':'"+datos.get(i).getFechaInicio()+"', 'fechaFinal':'"+datos.get(i).getFechaFinal()+"', 'idNivel':'"+datos.get(i).getIdNivel()+"', 'idMundo':'"+datos.get(i).getIdMundo()+"', 'idPersonaje':'"+datos.get(i).getIdPersonaje();;
+              //  resultado += "'idLog':'"+datos.get(i).getIdNivel()+"', 'idJugador':'"+datos.get(i).getIdJugador()+"', 'tiempoLog':'"+datos.get(i).getTiempoLog()+"', 'fechaInicio':'"+datos.get(i).getFechaInicio()+"', 'fechaFinal':'"+datos.get(i).getFechaFinal()+"', 'idNivel':'"+datos.get(i).getIdNivel()+"', 'idMundo':'"+datos.get(i).getIdMundo()+"', 'idPersonaje':'"+datos.get(i).getIdPersonaje();;
             }
         }
         return resultado += "]";
@@ -163,11 +181,16 @@ public class LogFacadeREST extends AbstractFacade<Log> {
         Query query = em.createQuery("SELECT l FROM Log l WHERE l.idJugador="+idJ);
         List<Log> datos = query.getResultList();
         for (int i = 0; i < datos.size(); i++) {
+            
+            /**
+             * No concuerda con la entidad
+             */
+            
             resultado += "{";
             if(i == datos.size()-1){
-                resultado += "'idLog':'"+datos.get(i).getIdNivel()+"', 'idJugador':'"+datos.get(i).getIdJugador()+"', 'tiempoLog':'"+datos.get(i).getTiempoLog()+"', 'fechaInicio':'"+datos.get(i).getFechaInicio()+"', 'fechaFinal':'"+datos.get(i).getFechaFinal()+"', 'idNivel':'"+datos.get(i).getIdNivel()+"', 'idMundo':'"+datos.get(i).getIdMundo()+"', 'idPersonaje':'"+datos.get(i).getIdPersonaje();
+//                resultado += "'idLog':'"+datos.get(i).getIdNivel()+"', 'idJugador':'"+datos.get(i).getIdJugador()+"', 'tiempoLog':'"+datos.get(i).getTiempoLog()+"', 'fechaInicio':'"+datos.get(i).getFechaInicio()+"', 'fechaFinal':'"+datos.get(i).getFechaFinal()+"', 'idNivel':'"+datos.get(i).getIdNivel()+"', 'idMundo':'"+datos.get(i).getIdMundo()+"', 'idPersonaje':'"+datos.get(i).getIdPersonaje();
             }else{
-                resultado += "'idLog':'"+datos.get(i).getIdNivel()+"', 'idJugador':'"+datos.get(i).getIdJugador()+"', 'tiempoLog':'"+datos.get(i).getTiempoLog()+"', 'fechaInicio':'"+datos.get(i).getFechaInicio()+"', 'fechaFinal':'"+datos.get(i).getFechaFinal()+"', 'idNivel':'"+datos.get(i).getIdNivel()+"', 'idMundo':'"+datos.get(i).getIdMundo()+"', 'idPersonaje':'"+datos.get(i).getIdPersonaje();;
+  //              resultado += "'idLog':'"+datos.get(i).getIdNivel()+"', 'idJugador':'"+datos.get(i).getIdJugador()+"', 'tiempoLog':'"+datos.get(i).getTiempoLog()+"', 'fechaInicio':'"+datos.get(i).getFechaInicio()+"', 'fechaFinal':'"+datos.get(i).getFechaFinal()+"', 'idNivel':'"+datos.get(i).getIdNivel()+"', 'idMundo':'"+datos.get(i).getIdMundo()+"', 'idPersonaje':'"+datos.get(i).getIdPersonaje();;
             }
         }
         return resultado += "]";
@@ -189,10 +212,14 @@ public class LogFacadeREST extends AbstractFacade<Log> {
         List<Log> datos = query.getResultList();
         for (int i = 0; i < datos.size(); i++) {
             resultado += "{";
+            
+            /**
+             * No concuerda con la entidad
+             */
             if(i == datos.size()-1){
-                resultado += "'idLog':'"+datos.get(i).getIdNivel()+"', 'idJugador':'"+datos.get(i).getIdJugador()+"', 'tiempoLog':'"+datos.get(i).getTiempoLog()+"', 'fechaInicio':'"+datos.get(i).getFechaInicio()+"', 'fechaFinal':'"+datos.get(i).getFechaFinal()+"', 'idNivel':'"+datos.get(i).getIdNivel()+"', 'idMundo':'"+datos.get(i).getIdMundo()+"', 'idPersonaje':'"+datos.get(i).getIdPersonaje();
+              //  resultado += "'idLog':'"+datos.get(i).getIdNivel()+"', 'idJugador':'"+datos.get(i).getIdJugador()+"', 'tiempoLog':'"+datos.get(i).getTiempoLog()+"', 'fechaInicio':'"+datos.get(i).getFechaInicio()+"', 'fechaFinal':'"+datos.get(i).getFechaFinal()+"', 'idNivel':'"+datos.get(i).getIdNivel()+"', 'idMundo':'"+datos.get(i).getIdMundo()+"', 'idPersonaje':'"+datos.get(i).getIdPersonaje();
             }else{
-                resultado += "'idLog':'"+datos.get(i).getIdNivel()+"', 'idJugador':'"+datos.get(i).getIdJugador()+"', 'tiempoLog':'"+datos.get(i).getTiempoLog()+"', 'fechaInicio':'"+datos.get(i).getFechaInicio()+"', 'fechaFinal':'"+datos.get(i).getFechaFinal()+"', 'idNivel':'"+datos.get(i).getIdNivel()+"', 'idMundo':'"+datos.get(i).getIdMundo()+"', 'idPersonaje':'"+datos.get(i).getIdPersonaje();
+                //resultado += "'idLog':'"+datos.get(i).getIdNivel()+"', 'idJugador':'"+datos.get(i).getIdJugador()+"', 'tiempoLog':'"+datos.get(i).getTiempoLog()+"', 'fechaInicio':'"+datos.get(i).getFechaInicio()+"', 'fechaFinal':'"+datos.get(i).getFechaFinal()+"', 'idNivel':'"+datos.get(i).getIdNivel()+"', 'idMundo':'"+datos.get(i).getIdMundo()+"', 'idPersonaje':'"+datos.get(i).getIdPersonaje();
             }
         }
         return resultado += "]";

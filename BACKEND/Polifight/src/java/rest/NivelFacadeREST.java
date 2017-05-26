@@ -1,11 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package rest;
 
+import entities.Imagen;
+import entities.MundoTieneImagen;
 import entities.Nivel;
+import entities.Personaje;
+import entities.Usuario;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.ArrayList;
@@ -153,11 +152,46 @@ public class NivelFacadeREST extends AbstractFacade<Nivel> {
     public String countREST() {
         return String.valueOf(super.count());
     }
-
+    
+    @GET
+    @Path("nivelPersonaje")
+    @Produces({"application/json"})
+    public String nivelPersonaje(@QueryParam("token") String token){
+        
+        String resultado = "{\"datos\":[";      
+        try {
+            Query queryToken = em.createNamedQuery("Usuario.findToken");
+            queryToken.setParameter("token", token);
+            Usuario user = (Usuario) queryToken.getSingleResult();
+            if(user != null){
+                Query query = em.createNamedQuery("Nivel.findAll");
+                List<Nivel> listNivel = query.getResultList();
+                for (int i = 0; i < listNivel.size(); i++) {
+                    resultado += "{";
+                    MundoTieneImagen mundoTieneImagen = em.find(MundoTieneImagen.class, listNivel.get(i).getIdMundo().getIdMundo());
+                    System.err.println("MundoTieneImagen ---> "+mundoTieneImagen.getIdImagen().getIdImagen());
+                    Imagen imagen = em.find(Imagen.class, mundoTieneImagen.getIdImagen().getIdImagen());
+                    Personaje personaje = em.find(Personaje.class, listNivel.get(i).getIdPersonaje().getIdPersonaje());
+                     if(i == listNivel.size()-1){
+                        resultado += "\"Nivel\":\""+listNivel.get(i).getNombreNivel()+"\",\"idPersonaje\":"+personaje.getIdPersonaje()+", \"imagenFondo\":\""+imagen.getFoto()+"\"}";
+                    }else{
+                        resultado += "\"Nivel\":\""+listNivel.get(i).getNombreNivel()+"\",\"idPersonaje\":"+personaje.getIdPersonaje()+", \"imagenFondo\":\""+imagen.getFoto()+"\"},";
+                    }
+                }
+                resultado += "]}";
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+            resultado = "{'response':'KO', 'cause':'Invalid token'}";
+        }
+        return resultado;
+    }
     @Override
     protected EntityManager getEntityManager() {
-        return em;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+   
 
     public NivelFacadeREST() {
         super(Nivel.class);

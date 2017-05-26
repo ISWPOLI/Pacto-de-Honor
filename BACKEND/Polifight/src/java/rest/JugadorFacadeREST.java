@@ -1,6 +1,6 @@
 package rest;
 
-import entities.Categoriaimagen;
+import entities.CategoriaImagen;
 import entities.Imagen;
 import entities.Jugador;
 import entities.JugadorTienePersonaje;
@@ -60,7 +60,7 @@ public class JugadorFacadeREST extends AbstractFacade<Jugador> {
         super.remove(super.find(id));
     }
 
-    /**
+     /**
      * Método que retorna la estructura solicitada en el issue #455
      * @param idJugador id del jugador que se desea buscar
      * @param idPersonaje id del Personaje que se desea traer el avatar
@@ -88,7 +88,7 @@ public class JugadorFacadeREST extends AbstractFacade<Jugador> {
                     Query queryCategoriaImagen = em.createNamedQuery("Categoriaimagen.findByDescCategoriaImagen")
                             .setParameter("descCategoriaImagen", avatar);
                     
-                    List<Categoriaimagen> listCategoriaImagen = queryCategoriaImagen.getResultList();
+                    List<CategoriaImagen> listCategoriaImagen = queryCategoriaImagen.getResultList();
                     
                     if(listCategoriaImagen.size() >= 2){
                         resultado = "{'response':'KO', 'cause':'Existe más de una categoría llamada Avatar'";

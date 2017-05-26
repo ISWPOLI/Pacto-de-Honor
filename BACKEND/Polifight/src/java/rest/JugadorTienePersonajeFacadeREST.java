@@ -55,9 +55,9 @@ public class JugadorTienePersonajeFacadeREST extends AbstractFacade<JugadorTiene
                 for (int i = 0; i < datos.size(); i++) {
                     result += "{";
                     if(i == datos.size()-1){
-                        result += "\"idJugadortienepersonaje\":"+datos.get(i).getIdPersonaje();
+                        result += "\"idJugadortienepersonaje\":"+datos.get(i).getIdJugadortienepersonaje();
                     }else{
-                        result += "\"idJugadortienepersonaje\":"+datos.get(i).getIdPersonaje();
+                        result += "\"idJugadortienepersonaje\":"+datos.get(i).getIdJugadortienepersonaje();
                     }
                 }
                 result += "]}";
@@ -125,7 +125,7 @@ public class JugadorTienePersonajeFacadeREST extends AbstractFacade<JugadorTiene
                if(jugadortienepersonaje == null){
                    result = "{'response':'KO','cause':'Id not found'}";
                }else{
-                   result =  "{'idJugadortienepersonaje':'"+jugadortienepersonaje.getIdJugadortienepersonaje()+"', 'idJugador':'"+jugadortienepersonaje.getIdJugador()+"', 'idPersonaje':'"+jugadortienepersonaje.getIdPersonaje()+"'}";
+                   result =  "{'idJugadortienepersonaje':'"+jugadortienepersonaje.getIdJugadortienepersonaje()+"', 'idJugador':'"+jugadortienepersonaje.getJugador().getIdJugador()+"', 'idPersonaje':'"+jugadortienepersonaje.getPersonaje().getIdPersonaje()+"'}";
                }  
            }else{
               result = "{'response':'KO', 'cause':'Invalid token'}";

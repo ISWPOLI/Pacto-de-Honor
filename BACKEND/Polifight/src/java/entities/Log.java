@@ -1,5 +1,6 @@
 package entities;
 
+import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,13 +16,13 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="log")
-public class Log {
+public class Log implements Serializable {
     
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    @Basic(optional = false)
    @Column(name = "id_log")
-   protected int idUsuario;
+   protected int idLog;
      
    @Column(name="id_jugador")
    private int idJugador;
@@ -36,11 +37,11 @@ public class Log {
    private String fechaFinal;
 
     public int getIdUsuario() {
-        return idUsuario;
+        return idLog;
     }
 
-    public void setIdUsuario(int idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setIdUsuario(int idLog) {
+        this.idLog = idLog;
     }
 
     public int getIdJugador() {

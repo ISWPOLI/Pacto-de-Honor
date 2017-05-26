@@ -37,19 +37,19 @@ public class ApplicationConfig extends Application {
         resources.add(rest.ImagenFacadeREST.class);
         resources.add(rest.JugadorFacadeREST.class);
         resources.add(rest.JugadorTieneLogrosFacadeREST.class);
+        resources.add(rest.JugadorTienePersonajeFacadeREST.class);
+        resources.add(rest.LogFacadeREST.class);
         resources.add(rest.LogrosFacadeREST.class);
         resources.add(rest.MundoFacadeREST.class);
+        resources.add(rest.NivelFacadeREST.class);
         resources.add(rest.PaisFacadeREST.class);
         resources.add(rest.PersonajeFacadeREST.class);
         resources.add(rest.PoderFacadeREST.class);
         resources.add(rest.PruebaPsicotecnicaFacadeREST.class);
         resources.add(rest.RespuestaPreguntasPsicotecnicasFacadeREST.class);
-        resources.add(rest.RolUsuarioFacadeREST.class);
-        resources.add(rest.TipoPruebaFacadeREST.class);
-        resources.add(rest.UsuarioFacadeREST.class);
-	   resources.add(rest.LogFacadeREST.class);
-	   resources.add(rest.NivelFacadeREST.class);
-        resources.add(rest.JugadorTienePersonajeFacadeREST.class);  
+	   resources.add(rest.RolUsuarioFacadeREST.class);
+	   resources.add(rest.TipoPruebaFacadeREST.class);
+        resources.add(rest.UsuarioFacadeREST.class);  
     }
     
 }

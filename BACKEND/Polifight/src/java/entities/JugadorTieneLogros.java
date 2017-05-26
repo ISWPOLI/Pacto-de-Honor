@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "JugadorTieneLogros.findAll", query = "SELECT j FROM JugadorTieneLogros j")
-    , @NamedQuery(name = "JugadorTieneLogros.findByJugador", query = "SELECT j FROM JugadorTieneLogros j where j.idJugador =: idJugador")
+    , @NamedQuery(name = "JugadorTieneLogros.findByJugador", query = "SELECT j FROM JugadorTieneLogros j WHERE j.idJugador = :idJugador")
     , @NamedQuery(name = "JugadorTieneLogros.findByIdJugadorTieneLogros", query = "SELECT j FROM JugadorTieneLogros j WHERE j.idJugadorTieneLogros = :idJugadorTieneLogros")})
 public class JugadorTieneLogros implements Serializable {
 
