@@ -14,7 +14,7 @@ variableDesbloqueoPersonaje ={
 var desbloqueoPersonaje = function(game){};
 desbloqueoPersonaje.prototype = {
     preload: function(){
-        game.load.spritesheet('ingresar', '../img/Componentes/botones/ingresar.png', 193,71);
+        game.load.spritesheet('ingresar', '../img/componentes/botones/ingresar.png', 193,71);
     },
     
     create: function(){ 

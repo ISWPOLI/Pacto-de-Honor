@@ -29,30 +29,30 @@ vN = {
 var navegacion = function(game){};
     navegacion.prototype = {
     preload: function() {
-        game.load.spritesheet('btMundo2', '../img/Componentes/navegacionMapa/pause.png', 50,50);
-        game.load.image('monedas', '../img/Componentes/navegacionMapa/monedas.png');
-        game.load.image('xp', '../img/Componentes/finBatalla/experiencia.png');
-        game.load.image('fondo', '../img/Componentes/navegacionMapa/mapaNavegacion.png');
-        game.load.image('close', '../img/Componentes/navegacionMapa/orb.png');
-        game.load.spritesheet('nivel1', '../img/Componentes/navegacionMapa/nivel1.png', 192,71);
-        game.load.spritesheet('nivel2', '../img/Componentes/navegacionMapa/nivel2.png', 192,71);
-        game.load.spritesheet('nivel3', '../img/Componentes/navegacionMapa/nivel3.png', 192,71);
-        game.load.spritesheet('nivel4', '../img/Componentes/navegacionMapa/nivel4.png', 192,71);
-        game.load.spritesheet('nivel5', '../img/Componentes/navegacionMapa/nivel5.png', 192,71);
-        game.load.spritesheet('nivel6', '../img/Componentes/navegacionMapa/nivel6.png', 192,71);
-        game.load.spritesheet('botonCreditos', '../img/Componentes/navegacionMapa/botonCreditos.png', 62, 62);
-        game.load.spritesheet('botonAmigos', '../img/Componentes/navegacionMapa/botonAmigos.png', 62, 62);
-        game.load.spritesheet('botonPerfil', '../img/Componentes/navegacionMapa/botonPerfil.png', 62, 62);
-        game.load.spritesheet('botonRanking', '../img/Componentes/navegacionMapa/botonRanking.png', 62, 62);
-        game.load.spritesheet('botonSonido', '../img/Componentes/navegacionMapa/botonSonido.png', 62, 62);
-        game.load.spritesheet('botonCerrarSesion', '../img/Componentes/navegacionMapa/botonCerrarSesion.png', 62, 62);
-        game.load.spritesheet('botonAjustes', '../img/Componentes/navegacionMapa/botonAjustes.png', 62, 62);
-        //game.load.spritesheet('botonCajaSorpresa', '../img/Componentes/cajas/cajam.png', 132, 216);
-        game.load.spritesheet('botonCajaSorpresa', '../img/Componentes/navegacionMapa/cajanegra.png', 62, 62);
-        game.load.spritesheet('botonCompraPersonajes', '../img/Componentes/navegacionMapa/botonCompraPersonajes.png', 62, 62);
-        game.load.spritesheet('pause12', '../img/Componentes/navegacionMapa/pause12.png', 50,50);
-        game.load.spritesheet('pause13', '../img/Componentes/navegacionMapa/pause13.png', 50,50);
-        game.load.spritesheet('pause14', '../img/Componentes/navegacionMapa/pause14.png', 50,50);
+        game.load.spritesheet('btMundo2', '../img/componentes/navegacionMapa/pause.png', 50,50);
+        game.load.image('monedas', '../img/componentes/navegacionMapa/monedas.png');
+        game.load.image('xp', '../img/componentes/finBatalla/experiencia.png');
+        game.load.image('fondo', '../img/componentes/navegacionMapa/mapaNavegacion.png');
+        game.load.image('close', '../img/componentes/navegacionMapa/orb.png');
+        game.load.spritesheet('nivel1', '../img/componentes/navegacionMapa/nivel1.png', 192,71);
+        game.load.spritesheet('nivel2', '../img/componentes/navegacionMapa/nivel2.png', 192,71);
+        game.load.spritesheet('nivel3', '../img/componentes/navegacionMapa/nivel3.png', 192,71);
+        game.load.spritesheet('nivel4', '../img/componentes/navegacionMapa/nivel4.png', 192,71);
+        game.load.spritesheet('nivel5', '../img/componentes/navegacionMapa/nivel5.png', 192,71);
+        game.load.spritesheet('nivel6', '../img/componentes/navegacionMapa/nivel6.png', 192,71);
+        game.load.spritesheet('botonCreditos', '../img/componentes/navegacionMapa/botonCreditos.png', 62, 62);
+        game.load.spritesheet('botonAmigos', '../img/componentes/navegacionMapa/botonAmigos.png', 62, 62);
+        game.load.spritesheet('botonPerfil', '../img/componentes/navegacionMapa/botonPerfil.png', 62, 62);
+        game.load.spritesheet('botonRanking', '../img/componentes/navegacionMapa/botonRanking.png', 62, 62);
+        game.load.spritesheet('botonSonido', '../img/componentes/navegacionMapa/botonSonido.png', 62, 62);
+        game.load.spritesheet('botonCerrarSesion', '../img/componentes/navegacionMapa/botonCerrarSesion.png', 62, 62);
+        game.load.spritesheet('botonAjustes', '../img/componentes/navegacionMapa/botonAjustes.png', 62, 62);
+        //game.load.spritesheet('botonCajaSorpresa', '../img/componentes/cajas/cajam.png', 132, 216);
+        game.load.spritesheet('botonCajaSorpresa', '../img/componentes/navegacionMapa/cajanegra.png', 62, 62);
+        game.load.spritesheet('botonCompraPersonajes', '../img/componentes/navegacionMapa/botonCompraPersonajes.png', 62, 62);
+        game.load.spritesheet('pause12', '../img/componentes/navegacionMapa/pause12.png', 50,50);
+        game.load.spritesheet('pause13', '../img/componentes/navegacionMapa/pause13.png', 50,50);
+        game.load.spritesheet('pause14', '../img/componentes/navegacionMapa/pause14.png', 50,50);
     },
 
     //se agrega el fondo y se crean los botones de los mundos en donde tenemos button(medida en x, medida en y, nombre de la imagen, la funcion, sprites)

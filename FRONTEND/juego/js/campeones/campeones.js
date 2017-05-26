@@ -41,7 +41,7 @@ var campeones = function(game){};
     campeones.prototype = {
         preload: function(){
             //Carga de imagenes para el logo del pacto
-            game.load.image('logoPacto', '../img/Componentes/creditos/logoPacto.png');
+            game.load.image('logoPacto', '../img/componentes/creditos/logoPacto.png');
         
             game.load.spritesheet('anaSaraAbejas', '../img/personajes/avatares/botonCanario.png', 125, 125);
             game.load.spritesheet('fabianBabuino', '../img/personajes/avatares/botonCierva.png', 125, 125);
@@ -54,26 +54,26 @@ var campeones = function(game){};
             game.load.spritesheet('camiloPerezoso', '../img/personajes/avatares/botonRuisenor.png', 125, 125);
 
             
-            game.load.spritesheet('abejaderrota', '../img/personajes/avatares/CaraCanario.png', 400,400);
-            game.load.spritesheet('micoderrota','../img/personajes/avatares/CaraCierva.png', 400,400);
-            game.load.spritesheet('buitrederrota', '../img/personajes/avatares/CaraGallo.png', 400,400);
-            game.load.spritesheet('burroderrota', '../img/personajes/avatares/CaraHormiga.png', 400,400);
-            game.load.spritesheet('camaleonderrota','../img/personajes/avatares/CaraJirafa.png', 400,400);
-            game.load.spritesheet('hienaderrota', '../img/personajes/avatares/CaraLeon.png', 400,400);
-            game.load.spritesheet('lagartoderrota', '../img/personajes/avatares/CaraPantera.png', 400,400);
-            game.load.spritesheet('osoderrota', '../img/personajes/avatares/CaraRaton.png',400,400);
-            game.load.spritesheet('peresosoderrota',  '../img/personajes/avatares/CaraRuisenor.png', 400,400);
+            game.load.spritesheet('abejaderrota', '../img/personajes/avatares/caraCanario.png', 400,400);
+            game.load.spritesheet('micoderrota','../img/personajes/avatares/caraCierva.png', 400,400);
+            game.load.spritesheet('buitrederrota', '../img/personajes/avatares/caraGallo.png', 400,400);
+            game.load.spritesheet('burroderrota', '../img/personajes/avatares/caraHormiga.png', 400,400);
+            game.load.spritesheet('camaleonderrota','../img/personajes/avatares/caraJirafa.png', 400,400);
+            game.load.spritesheet('hienaderrota', '../img/personajes/avatares/caraLeon.png', 400,400);
+            game.load.spritesheet('lagartoderrota', '../img/personajes/avatares/caraPantera.png', 400,400);
+            game.load.spritesheet('osoderrota', '../img/personajes/avatares/caraRaton.png',400,400);
+            game.load.spritesheet('peresosoderrota',  '../img/personajes/avatares/caraRuisenor.png', 400,400);
        
             
-            game.load.spritesheet('abeja', '../img/Componentes/heroes/caraCanariolock.png', 400,400);
-            game.load.spritesheet('mico', '../img/Componentes/heroes/caraCiervalock.png', 400,400);
-            game.load.spritesheet('buitre', '../img/Componentes/heroes/caraGallolock.png', 400,400);
-            game.load.spritesheet('burro', '../img/Componentes/heroes/caraHormigalock.png', 400,400);
-            game.load.spritesheet('camaleon', '../img/Componentes/heroes/caraJirafalock.png', 400,400);
-            game.load.spritesheet('hiena', '../img/Componentes/heroes/caraLeonlock.png', 400,400);
-            game.load.spritesheet('lagarto', '../img/Componentes/heroes/caraPanteralock.png', 400,400);
-            game.load.spritesheet('oso', '../img/Componentes/heroes/caraRatonlock.png', 400,400);
-            game.load.spritesheet('peresoso', '../img/Componentes/heroes/caraRuisenor.png', 400,400);
+            game.load.spritesheet('abeja', '../img/componentes/heroes/caraCanariolock.png', 400,400);
+            game.load.spritesheet('mico', '../img/componentes/heroes/caraCiervalock.png', 400,400);
+            game.load.spritesheet('buitre', '../img/componentes/heroes/caraGallolock.png', 400,400);
+            game.load.spritesheet('burro', '../img/componentes/heroes/caraHormigalock.png', 400,400);
+            game.load.spritesheet('camaleon', '../img/componentes/heroes/caraJirafalock.png', 400,400);
+            game.load.spritesheet('hiena', '../img/componentes/heroes/caraLeonlock.png', 400,400);
+            game.load.spritesheet('lagarto', '../img/componentes/heroes/caraPanteralock.png', 400,400);
+            game.load.spritesheet('oso', '../img/componentes/heroes/caraRatonlock.png', 400,400);
+            game.load.spritesheet('peresoso', '../img/componentes/heroes/caraRuisenor.png', 400,400);
   
             
             variablesCampeones.pj1 = heroes["idP1"];

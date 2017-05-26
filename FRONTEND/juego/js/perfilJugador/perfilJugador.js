@@ -13,10 +13,10 @@ var perfilJugador = function(game){};
     perfilJugador.prototype = {
         preload : function(){
             game.load.image('avatar', datosperfil["datos"].avatar);
-		    game.load.spritesheet('boton-personaje', '../img/Componentes/botones/botonPersonaje.png');
-            game.load.spritesheet('boton-jefes', '../img/Componentes/botones/botonJefes.png');
-            game.load.spritesheet('boton-trofeo', '../img/Componentes/botones/botonTrofeo.png');
-            game.load.spritesheet('boton-alfanumerico', '../img/Componentes/botones/botonAlfanumerico.png');
+		    game.load.spritesheet('boton-personaje', '../img/componentes/botones/botonPersonaje.png');
+            game.load.spritesheet('boton-jefes', '../img/componentes/botones/botonJefes.png');
+            game.load.spritesheet('boton-trofeo', '../img/componentes/botones/botonTrofeo.png');
+            game.load.spritesheet('boton-alfanumerico', '../img/componentes/botones/botonAlfanumerico.png');
         },
 
         create : function (){
