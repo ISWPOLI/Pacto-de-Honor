@@ -1,5 +1,4 @@
-
-
+          
 var funcionesBatalla={
     //funcion que se encarga de cargar todos los elementos del campo de batalla
     cargar:function(idPJ, idPC, caa, idNivel){
@@ -31,6 +30,11 @@ var funcionesBatalla={
         game.load.image('teclam','../img/componentes/batalla/teclam.png');
         game.load.image('teclan','../img/componentes/batalla/teclan.png');
         game.load.image('espacio','../img/componentes/batalla/space.png');
+        game.load.image('abajom','../img/componentes/batalla/abajo.png');
+        game.load.image('arribam','../img/componentes/batalla/arriba.png');
+        game.load.image('izquierdam','../img/componentes/batalla/izquierda.png');
+        game.load.image('derecham','../img/componentes/batalla/derecha.png');
+        game.load.image('pulsem','../img/componentes/batalla/pulse.png');
         if (caa == 8) {
              game.load.image('cajaOpen', boxes[caa].fatalityBox);
          }else{
@@ -55,6 +59,7 @@ var funcionesBatalla={
         sprite.body.gravity.y=300;
         variablesCampoBatalla.golpeAlAire = game.add.audio('punoalaire');
         variablesCampoBatalla.golpe_al_cuerpo = game.add.audio('punoalcuerpo');
+        
 	},
 
     finEspecial:function(sprite,animation){
@@ -111,7 +116,7 @@ var funcionesBatalla={
     },
     tutorial:function(){
          texto1 = game.add.text(450,270,"Presione las teclas \n                y \n \npara moverse por el \n  campo de batalla ");
-        vida = game.add.text(310,20,"vida",{fill:"red"});
+        vida = game.add.text(255,40,"vida",{fill:"red"});
         energia = game.add.text(210,100,"energia",{fill:"green"});
          texto1.stroke = "white";
             texto1.strokeThickness = 4;
@@ -178,6 +183,73 @@ var funcionesBatalla={
             n = game.add.sprite(370,230,'teclan');
             n.scale.setTo(1.8);
     },
+    tutorialM:function(){
+         texto1 = game.add.text(450,270,"Deslice su dedo hacia los lados\npara moverse en el campo",{font:"40px roboto"});
+        vida = game.add.text(260,30,"vida",{fill:"red",font:"40px roboto"});
+        energia = game.add.text(210,100,"energia",{fill:"green",font:"40px roboto"});
+         texto1.stroke = "white";
+            texto1.strokeThickness = 4;
+            texto1.stroke = "white";
+            texto1.anchor.setTo(0.5);
+            vida.strokeThickness = 4;
+            vida.stroke = "white";
+            energia.strokeThickness = 4;
+            energia.stroke = "white";
+            derecha = game.add.sprite(45,460,'derecham');
+            derecha.scale.setTo(0.3);
+            izquierda = game.add.sprite(22,460,'izquierdam');
+            izquierda.scale.setTo(0.3);
+       
+    },
+    tutorial2M:function(){
+         texto2 = game.add.text(450,270,"Deslice su dedo hacia arriba \n               para saltar",{font:"40px roboto"});
+         texto2.stroke = "white";
+            texto2.strokeThickness = 4;
+            texto2.stroke = "white";
+            texto2.strokeThickness = 4;
+            texto2.anchor.setTo(0.5);
+            arriba = game.add.sprite(10,430,'arribam');
+            arriba.scale.setTo(0.4);
+    },
+      tutorial3M:function(){
+         texto3 = game.add.text(450,270,"   Deslice su dedo hacia abajo \npara usar uno de sus escudos",{font:"40px roboto"});
+         texto3.stroke = "white";
+            texto3.strokeThickness = 4;
+            texto3.stroke = "white";
+            texto3.strokeThickness = 4;
+            texto3.anchor.setTo(0.5);
+            abajo = game.add.sprite(10,430,'abajom');
+            abajo.scale.setTo(0.4);
+    },
+    tutorial4M:function(){
+         texto4 = game.add.text(450,270,"      Si presiona acá \nusted activará otro escudo",{font:"40px roboto"});
+         texto4.stroke = "white";
+            texto4.strokeThickness = 4;
+            texto4.stroke = "white";
+            texto4.strokeThickness = 4;
+            texto4.anchor.setTo(0.5);
+            m = game.add.sprite(650,265,'pulsem');
+            m.scale.setTo(0.35);
+    },
+       tutorial5M:function(){
+         texto5 = game.add.text(450,270,"       Presionando acá\nusted podrá golpear a su rival",{font:"40px roboto"});
+         texto5.stroke = "white";
+            texto5.strokeThickness = 4;
+            texto5.stroke = "white";
+            texto5.strokeThickness = 4;
+            texto5.anchor.setTo(0.5);
+            espacio = game.add.sprite(650,475,'pulsem');
+            espacio.scale.setTo(0.35);
+    },   tutorial6M:function(){
+         texto6 = game.add.text(450,270,"    Finalmente si presiona acá\nusted podra usar el poder especial",{font:"40px roboto"});
+         texto6.stroke = "white";
+            texto6.strokeThickness = 4;
+            texto6.stroke = "white";
+            texto6.anchor.setTo(0.5);
+            n = game.add.sprite(650,365,'pulsem');
+            n.scale.setTo(0.35);
+    },
+    
     //con esta funcion se refelja el daño causado
     actualizarVida: function(barra,dano){
         if(barra.width-dano>0)
