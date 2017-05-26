@@ -43,7 +43,7 @@ variablesCampoBatalla = {
 var boxGame = 1;
 var caja;
 var openBox;
-var timeShowBox = 3;
+var timeShowBox = Math.round(Math.random(118)*100);
 var sendGift = true;
 var rect;
 var rect1;
@@ -202,9 +202,9 @@ var batalla = {
 			energiaNegroJugador = new Phaser.Rectangle(143, 78, 202, 22);//primer borde negro de energia
 			energiaVerdeJugador = new Phaser.Rectangle(144, 79, 200, 20);//primer barra verde de energia
 
-			vidaBlancoComputadora = new Phaser.Rectangle(460, 53, 200, 20);//segunda barra blanca de vida
-			vidaNegroComputadora = new Phaser.Rectangle(459, 52, 200, 22);//segunda borde negro de vida 
-			vidaRojoComputadora = new Phaser.Rectangle(460, 53, 200, 20);//segunda barra roja		
+			vidaBlancoComputadora = new Phaser.Rectangle(460, 53, personajesMalos[variablesCampoBatalla.idPC].vida, 20);//segunda barra blanca de vida
+			vidaNegroComputadora = new Phaser.Rectangle(459, 52, personajesMalos[variablesCampoBatalla.idPC].vida+2, 22);//segunda borde negro de vida 
+			vidaRojoComputadora = new Phaser.Rectangle(460, 53, personajesMalos[variablesCampoBatalla.idPC].vida, 20);//segunda barra roja		
 
 			energiaBlancaComputadora = new Phaser.Rectangle(460, 79, 200, 20);
 			energiaNegroComputadora = new Phaser.Rectangle(459, 78, 200, 22);
@@ -257,12 +257,13 @@ var batalla = {
 	//se crea esta funcion para disminuir la barra de energia
     
 	update : function() {
-         if(variablesCampoBatalla.counter<7200){
-        indice=funcionesBatalla.numeroAleatorio(1,4);
-         }
+        if(variablesCampoBatalla.counter<7200){
+            indice=funcionesBatalla.numeroAleatorio(1,4);
+        }
+        
 		funcionesBatalla.cargarEnergia(energiaVerdeJugador);
-		funcionesBatalla.cargarEnergia(energiaVerdeComputadora);
-		
+        funcionesBatalla.cargarEnergia(energiaVerdeComputadora);        
+				
 		if(variablesBoot.dispositivoMovil)
 			funcionesBatalla.joystick(joystick,variablesCampoBatalla.botonAtaque,variablesCampoBatalla.botonEscudo);
 		else
@@ -272,7 +273,7 @@ var batalla = {
        } 
 		if(!variablesCampoBatalla.secuencia)
 			 if(variablesCampoBatalla.counter<7200){
-            funcionesBatalla.llamarSecuencia(indice);	
+            funcionesBatalla.llamarSecuencia(indice);
              }
 
 		variablesCampoBatalla.counter--;
