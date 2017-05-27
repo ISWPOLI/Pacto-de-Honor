@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/gsalvarez/Desktop/poliFighters/platforms/android/CordovaLib/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/Users/gsalvarez/Desktop/poliFighters/platforms/android/CordovaLib/src/debug/jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/gsalvarez/Desktop/Practica aplicada/Pacto-de-Honor/FRONTEND/poliFightersAndroid/platforms/android/CordovaLib/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/Users/gsalvarez/Desktop/Practica aplicada/Pacto-de-Honor/FRONTEND/poliFightersAndroid/platforms/android/CordovaLib/src/debug/jniLibs"/></dataSet></merger>
