@@ -1,31 +1,31 @@
---creacion de la tabla factores prueba psicotecnicas
+-- creacion de la tabla factores prueba psicotecnicas
 
 CREATE TABLE `pactohonor`.`prueba_psicotecnica_Factores` 
 ( `id_factor` INT NOT NULL AUTO_INCREMENT , `sigla` VARCHAR(5) NOT NULL , `nombre_factor` TEXT NOT NULL ,
  `puntos_totales` INT NOT NULL , PRIMARY KEY (`id_factor`)) ENGINE = InnoDB;
  
- --insercion de factores
+ -- insercion de factores
 
 INSERT INTO `prueba_psicotecnica_Factores`(`sigla`, `nombre_factor`, `puntos_totales`) VALUES ('PAS','Prácticas Antisociales',13);
 INSERT INTO `prueba_psicotecnica_Factores`(`sigla`, `nombre_factor`, `puntos_totales`) VALUES ('RS','Responsabilidad Social',14);
 
---modificaciones de preguntas
+-- modificaciones de preguntas
 
 ALTER TABLE `pregunta_prueba_psicotecnica` CHANGE `id_tipo_pregunta_psicotecnica` `id_tipo_pregunta_psicotecnica` INT(11) NULL;
 ALTER TABLE `pregunta_prueba_psicotecnica` ADD `numero_pregunta_prueba` INT NOT NULL ;
 
---inserciones de los tipo de pruebas
+-- inserciones de los tipo de pruebas
 
 INSERT INTO `tipo_prueba` (`id_tipo_prueba`, `tipo_prueba`, `descripcion_tipo_prueba`) VALUES ('1', 'TEST', 'tipo de prueba desarrollada para completar los datos');
 
--- insercion de prueba
+--  insercion de prueba
 
 INSERT INTO `prueba_psicotecnica` (`id_prueba_psicotecnica`, `nombre`, `fecha_creacion`, `id_tipo_prueba`) VALUES ('1', 'MMPIA', '2017-04-01 00:00:00', '1');
 
--- insercion tipo de pregunta
+--  insercion tipo de pregunta
 
 INSERT INTO `tipo_pregunta_psicotecnica` (`id_tipo_pregunta_psicotecnica`, `clase_pregunta`) VALUES ('1', '1');
--- insercion de las preguntas
+--  insercion de las preguntas
 
 INSERT INTO `pregunta_prueba_psicotecnica`(`id_pregunta_psicotecnica`, `id_prueba_psicotecnica`, `pregunta`, `id_tipo_pregunta_psicotecnica`, `numero_pregunta_prueba`) VALUES (1,1,'Me gustan leer los artículos sobre crímenes en los periodicos.',1,7);
 INSERT INTO `pregunta_prueba_psicotecnica`(`id_pregunta_psicotecnica`, `id_prueba_psicotecnica`, `pregunta`, `id_tipo_pregunta_psicotecnica`, `numero_pregunta_prueba`) VALUES (2,1,'Por principio, cuando alguien me hace algún mal siento que, de ser posible, deberia pagarle con la misma moneda.',1,27);
@@ -50,10 +50,10 @@ INSERT INTO `pregunta_prueba_psicotecnica`(`id_pregunta_psicotecnica`, `id_prueb
 INSERT INTO `pregunta_prueba_psicotecnica`(`id_pregunta_psicotecnica`, `id_prueba_psicotecnica`, `pregunta`, `id_tipo_pregunta_psicotecnica`, `numero_pregunta_prueba`) VALUES (21,1,'Hay ciertas personas que me desagradan tanto, que me alegro interiormente cuando están pagando las consecuencias por algo que han hecho.',1,419);
 INSERT INTO `pregunta_prueba_psicotecnica`(`id_pregunta_psicotecnica`, `id_prueba_psicotecnica`, `pregunta`, `id_tipo_pregunta_psicotecnica`, `numero_pregunta_prueba`) VALUES (22,1,'En la escuela mis calificaciones en conducta general eran malas.',1,431);
 
---modificaciones tabla respuesta
+-- modificaciones tabla respuesta
 ALTER TABLE `respuesta_preguntas_psicotecnicas` ADD `id_factor` INT NOT NULL ;
 
---insercion respuestas
+-- insercion respuestas
 
 INSERT INTO `respuesta_preguntas_psicotecnicas` (`id_pregunta_prueba_psicotecnica`, `id_respuesta_psicotecnica`, `descripcion_prueba_psicotecnica`, `id_factor`) VALUES (1,2,'FALSO',2);
 INSERT INTO `respuesta_preguntas_psicotecnicas` (`id_pregunta_prueba_psicotecnica`, `id_respuesta_psicotecnica`, `descripcion_prueba_psicotecnica`, `id_factor`) VALUES (1,3,'NULL',1);
@@ -99,7 +99,7 @@ INSERT INTO `respuesta_preguntas_psicotecnicas` (`id_pregunta_prueba_psicotecnic
 INSERT INTO `respuesta_preguntas_psicotecnicas` (`id_pregunta_prueba_psicotecnica`, `id_respuesta_psicotecnica`, `descripcion_prueba_psicotecnica`, `id_factor`) VALUES (21,43,'NULL',1);
 INSERT INTO `respuesta_preguntas_psicotecnicas` (`id_pregunta_prueba_psicotecnica`, `id_respuesta_psicotecnica`, `descripcion_prueba_psicotecnica`, `id_factor`) VALUES (22,44,'FALSO',2);
 
--- Creacion tabla de respuesta x jugador
+--  Creacion tabla de respuesta x jugador
 
 CREATE TABLE `pactohonor`.`respuesta_prueba_jugador` ( `id_respuesta_prueba_jugador` INT NOT NULL AUTO_INCREMENT , 
 `id_respuesta` INT NOT NULL , `id_jugador` INT NOT NULL , PRIMARY KEY (`id_respuesta_prueba_jugador`)) ENGINE = InnoDB;

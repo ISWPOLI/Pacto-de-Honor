@@ -180,7 +180,7 @@ public class UsuarioFacadeREST extends AbstractFacade<Usuario> {
         System.out.println(usuario);
         System.out.println(contrasena);
         if(usuario != null&& contrasena != null){
-            Query query = em.createQuery("SELECT u FROM Usuario u WHERE u.nombreUsuario=:user AND u.contrasenaUsuario=:password");
+            Query query = em.createNamedQuery("Usuario.login");
             query.setParameter("user", usuario);
             query.setParameter("password", contrasena);
             try{

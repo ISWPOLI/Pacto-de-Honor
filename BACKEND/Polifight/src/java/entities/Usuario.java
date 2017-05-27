@@ -34,7 +34,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Usuario.findByApellidoUsuario", query = "SELECT u FROM Usuario u WHERE u.apellidoUsuario = :apellidoUsuario"),
     @NamedQuery(name = "Usuario.findByEmailUsuario", query = "SELECT u FROM Usuario u WHERE u.emailUsuario = :emailUsuario"),
     @NamedQuery(name = "Usuario.findByContrasenaUsuario", query = "SELECT u FROM Usuario u WHERE u.contrasenaUsuario = :contrasenaUsuario"),
-    @NamedQuery(name = "Usuario.findByFechaRegistro", query = "SELECT u FROM Usuario u WHERE u.fechaRegistro = :fechaRegistro")})
+    @NamedQuery(name = "Usuario.findByFechaRegistro", query = "SELECT u FROM Usuario u WHERE u.fechaRegistro = :fechaRegistro"),
+    @NamedQuery(name = "Usuario.login", query="SELECT u FROM Usuario u WHERE u.usuario = :user AND u.contrasenaUsuario = :password")})
 public class Usuario implements Serializable {
     
     private static final long serialVersionUID = 1L;
@@ -87,6 +88,9 @@ public class Usuario implements Serializable {
     
     @Column(name = "fecha_token")
     private String fechaToken;
+    
+    @Column(name = "usuario")
+    private String usuario;
     
 
     public Usuario() {
@@ -180,6 +184,14 @@ public class Usuario implements Serializable {
 
     public void setFechaToken(String fechaToken) {
         this.fechaToken = fechaToken;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
     }
     
     
