@@ -19,43 +19,43 @@ var niveles = {
            "idEnemigo":"idPCinco"
           },
     
-    "2-1":{"fondo":"../img/escenarios/Postgrados.jpg",
+    "2-1":{"fondo":"../img/escenarios/Postgrados.png",
            "idEnemigo":"idPSeis"
           },
     
-    "2-2":{"fondo":"../img/escenarios/Postgrados.jpg",
+    "2-2":{"fondo":"../img/escenarios/Postgrados.png",
            "idEnemigo":"idPSiete"
           },
     
-    "2-3":{"fondo":"../img/escenarios/Postgrados.jpg",
+    "2-3":{"fondo":"../img/escenarios/Postgrados.png",
            "idEnemigo":"idPOcho"                   
           },
     
-    "2-4":{"fondo":"../img/escenarios/Postgrados.jpg",
+    "2-4":{"fondo":"../img/escenarios/Postgrados.png",
            "idEnemigo":"idPNueve"                   
           },
     
-    "2-5":{"fondo":"../img/escenarios/Postgrados.jpg",
+    "2-5":{"fondo":"../img/escenarios/Postgrados.png",
            "idEnemigo":"idPDiez"
           },
     
-    "3-1":{"fondo":"../img/escenarios/Excelencia.jpg",
+    "3-1":{"fondo":"../img/escenarios/Excelencia.png",
            "idEnemigo":"idPOnce"
           },
     
-    "3-2":{"fondo":"../img/escenarios/Excelencia.jpg",
+    "3-2":{"fondo":"../img/escenarios/Excelencia.png",
            "idEnemigo":"idPDoce"
           },
     
-    "3-3":{"fondo":"../img/escenarios/Excelencia.jpg",
+    "3-3":{"fondo":"../img/escenarios/Excelencia.png",
            "idEnemigo":"idPTrece"                   
           },
     
-    "3-4":{"fondo":"../img/escenarios/Excelencia.jpg",
+    "3-4":{"fondo":"../img/escenarios/Excelencia.png",
            "idEnemigo":"idPCatorce"                   
           },
     
-    "3-5":{"fondo":"../img/escenarios/Excelencia.jpg",
+    "3-5":{"fondo":"../img/escenarios/Excelencia.png",
            "idEnemigo":"idPQuince"
           },
     

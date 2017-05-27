@@ -90,48 +90,48 @@ var creditos = function(game){};
             game.add.text(game.width / 2, 50, "Créditos", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5); //Título de Créditos
             
             //Se agregan los botones principales
-            variablesCreditos.botonVolver = game.add.button(5, 5, 'botonVolver', this.volver, 1, 1, 0, 2);
-            variablesCreditos.botonPacto = game.add.button(5, 100, 'botonPacto', this.verPacto, 1, 1, 0, 2);
-            variablesCreditos.botonBuenos = game.add.button(205, 100, 'botonBuenos', this.verPersonajesBuenos, 1, 1, 0, 2);
-            variablesCreditos.botonMalos = game.add.button(400, 100, 'botonMalos', this.verPersonajesMalos, 1, 1, 0, 2);
-            variablesCreditos.botonPlagios = game.add.button(600, 100, 'botonPlagios', this.verPlagios, 1, 1, 0, 2);
+            variablesCreditos.botonVolver = game.add.button(5, 5, 'botonVolver', this.volver, 0, 0, 0, 1);
+            variablesCreditos.botonPacto = game.add.button(5, 100, 'botonPacto', this.verPacto, 0, 0, 0, 1);
+            variablesCreditos.botonBuenos = game.add.button(205, 100, 'botonBuenos', this.verPersonajesBuenos, 0, 0, 0, 1);
+            variablesCreditos.botonMalos = game.add.button(400, 100, 'botonMalos', this.verPersonajesMalos, 0, 0, 0, 1);
+            variablesCreditos.botonPlagios = game.add.button(600, 100, 'botonPlagios', this.verPlagios, 0, 0, 0, 1);
             
             //Se crean los botones de los personajes buenos        
-            botonPantera = game.add.button (10, 200, 'botonPantera', this.panteraClick, 1, 1, 0, 2);
-            botonGallo = game.add.button (140, 200, 'botonGallo', this.galloClick, 1, 1, 0, 2);
-            botonCierva = game.add.button (270, 200, 'botonCierva', this.ciervaClick, 1, 1, 0, 2);
-            botonJirafa = game.add.button (10, 330, 'botonJirafa', this.jirafaClick, 1, 1, 0, 2);
-            botonLeon = game.add.button (140, 330, 'botonLeon', this.leonClick, 1, 1, 0, 2);
-            botonCanario = game.add.button (270, 330, 'botonCanario', this.canarioClick, 1, 1, 0, 2);
-            botonRuisenor = game.add.button (10, 460, 'botonRuisenor', this.ruisenorClick, 1, 1, 0, 2);
-            botonRaton = game.add.button (140, 460, 'botonRaton', this.ratonClick, 1, 1, 0, 2);
-            botonHormiga = game.add.button (270, 460, 'botonHormiga', this.hormigaClick, 1, 1, 0, 2);
+            botonPantera = game.add.button (10, 200, 'botonPantera', this.panteraClick, 0, 0, 0, 1);
+            botonGallo = game.add.button (140, 200, 'botonGallo', this.galloClick, 0, 0, 0, 1);
+            botonCierva = game.add.button (270, 200, 'botonCierva', this.ciervaClick, 0, 0, 0, 1);
+            botonJirafa = game.add.button (10, 330, 'botonJirafa', this.jirafaClick, 0, 0, 0, 1);
+            botonLeon = game.add.button (140, 330, 'botonLeon', this.leonClick, 0, 0, 0, 1);
+            botonCanario = game.add.button (270, 330, 'botonCanario', this.canarioClick, 0, 0, 0, 1);
+            botonRuisenor = game.add.button (10, 460, 'botonRuisenor', this.ruisenorClick, 0, 0, 0, 1);
+            botonRaton = game.add.button (140, 460, 'botonRaton', this.ratonClick, 0, 0, 0, 1);
+            botonHormiga = game.add.button (270, 460, 'botonHormiga', this.hormigaClick, 0, 0, 0, 1);
             
             //Se crean los botones de los personajes malos
-            botonAbejas = game.add.button (20, 200, 'anaSaraAbejas', this.abejasClick, 1, 1, 0, 2);
-            botonBabuino = game.add.button (120, 200, 'fabianBabuino', this.babuinoClick, 1, 1, 0, 2);
-            botonBuitre = game.add.button (220, 200, 'carlosBuitre', this.buitreClick, 1, 1, 0, 2);
-            botonBurro = game.add.button (20, 300, 'julianBurro', this.burroClick, 1, 1, 0, 2);
-            botonCamaleon = game.add.button (120, 300, 'juanCamaleon', this.camaleonClick, 1, 1, 0, 2);
-            botonHiena = game.add.button (220, 300, 'victorHiena', this.hienaClick, 1, 1, 0, 2);
-            botonLagarto = game.add.button (20, 400, 'nicolasLagarto', this.lagartoClick, 1, 1, 0, 2);
-            botonOso = game.add.button (120, 400, 'felipeOso', this.osoClick, 1, 1, 0, 2);
-            botonPerezoso = game.add.button (220, 400, 'camiloPerezoso', this.perezosoClick, 1, 1, 0, 2);
-            botonRata = game.add.button (20, 500, 'juanRata', this.rataClick, 1, 1, 0, 2);
-            botonVibora = game.add.button (120, 500, 'luisVibora', this.viboraClick, 1, 1, 0, 2);
-            botonZorro = game.add.button (220, 500, 'andresZorro', this.zorroClick, 1, 1, 0, 2);
+            botonAbejas = game.add.button (20, 200, 'anaSaraAbejas', this.abejasClick, 0, 0, 0, 1);
+            botonBabuino = game.add.button (120, 200, 'fabianBabuino', this.babuinoClick, 0, 0, 0, 1);
+            botonBuitre = game.add.button (220, 200, 'carlosBuitre', this.buitreClick, 0, 0, 0, 1);
+            botonBurro = game.add.button (20, 300, 'julianBurro', this.burroClick, 0, 0, 0, 1);
+            botonCamaleon = game.add.button (120, 300, 'juanCamaleon', this.camaleonClick, 0, 0, 0, 1);
+            botonHiena = game.add.button (220, 300, 'victorHiena', this.hienaClick, 0, 0, 0, 1);
+            botonLagarto = game.add.button (20, 400, 'nicolasLagarto', this.lagartoClick, 0, 0, 0, 1);
+            botonOso = game.add.button (120, 400, 'felipeOso', this.osoClick, 0, 0, 0, 1);
+            botonPerezoso = game.add.button (220, 400, 'camiloPerezoso', this.perezosoClick, 0, 0, 0, 1);
+            botonRata = game.add.button (20, 500, 'juanRata', this.rataClick, 0, 0, 0, 1);
+            botonVibora = game.add.button (120, 500, 'luisVibora', this.viboraClick, 0, 0, 0, 1);
+            botonZorro = game.add.button (220, 500, 'andresZorro', this.zorroClick, 0, 0, 0, 1);
             
             //Se crean los botones de los tipos de plagio
-            botonClonacion = game.add.button (10, 200, 'botonClonacion', this.clonacionClick, 1, 1, 0, 2);
-            botonCopiado = game.add.button (170, 200, 'botonCopiado', this.copiadoClick, 1, 1, 0, 2);
-            botonBusquedaReemplazo = game.add.button (10, 290, 'botonBusquedaReemplazo', this.busquedaReemplazoClick, 1, 1, 0, 2);
-            botonRemix = game.add.button (330, 200, 'botonRemix', this.remixClick, 1, 1, 0, 2);
-            botonReciclado = game.add.button (490, 200, 'botonReciclado', this.recicladoClick, 1, 1, 0, 2);
-            botonHibrido = game.add.button (650, 200, 'botonHibrido', this.hibridoClick, 1, 1, 0, 2);
-            botonMosaico = game.add.button (330, 290, 'botonMosaico', this.mosaicoClick, 1, 1, 0, 2);
-            botonError404 = game.add.button (650, 290, 'botonError404', this.error404Click, 1, 1, 0, 2);
-            botonRSS = game.add.button (490, 290, 'botonRSS', this.RSSClick, 1, 1, 0, 2);
-            botonReutilizacion = game.add.button (170, 290, 'botonReutilizacion', this.reutilizacionClick, 1, 1, 0, 2);
+            botonClonacion = game.add.button (10, 200, 'botonClonacion', this.clonacionClick, 0, 0, 0, 1);
+            botonCopiado = game.add.button (170, 200, 'botonCopiado', this.copiadoClick, 0, 0, 0, 1);
+            botonBusquedaReemplazo = game.add.button (10, 290, 'botonBusquedaReemplazo', this.busquedaReemplazoClick, 0, 0, 0, 1);
+            botonRemix = game.add.button (330, 200, 'botonRemix', this.remixClick, 0, 0, 0, 1);
+            botonReciclado = game.add.button (490, 200, 'botonReciclado', this.recicladoClick, 0, 0, 0, 1);
+            botonHibrido = game.add.button (650, 200, 'botonHibrido', this.hibridoClick, 0, 0, 0, 1);
+            botonMosaico = game.add.button (330, 290, 'botonMosaico', this.mosaicoClick, 0, 0, 0, 1);
+            botonError404 = game.add.button (650, 290, 'botonError404', this.error404Click, 0, 0, 0, 1);
+            botonRSS = game.add.button (490, 290, 'botonRSS', this.RSSClick, 0, 0, 0, 1);
+            botonReutilizacion = game.add.button (170, 290, 'botonReutilizacion', this.reutilizacionClick, 0, 0, 0, 1);
             
             //Se ocultan los botones de los personajes buenos
             botonPantera.visible = false;
