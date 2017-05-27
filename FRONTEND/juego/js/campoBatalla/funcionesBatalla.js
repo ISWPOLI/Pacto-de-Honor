@@ -7,8 +7,8 @@ var funcionesBatalla={
 		game.load.image('avatarPersonajeJugador', personajesBuenos[idPJ].rutaAvatar);
 		game.load.spritesheet('personajeComputadora', personajesMalos[idPC].rutaSprite, 200, 200);
 		game.load.image('avatarPersonajeComputadora', personajesMalos[idPC].rutaAvatar);
-		game.load.image('pausa', '../img/componentes/botones/pausa.png');
-		game.load.image('menup', '../img/componentes/botones/menup.png');
+		game.load.image('pausa', '../img/Componentes/botones/pausa.png');
+		game.load.image('menup', '../img/Componentes/botones/menup.png');
 		game.load.image('ataquePersonalidadV', personajesMalos[idPC].rutaAtaque);
 		game.load.spritesheet('ataquePlagio', personajesMalos[idPC].rutaAtaquePlagio, 500, 500);
 		game.load.image('ataquePersonalidadB', personajesBuenos[idPJ].rutaAtaque);

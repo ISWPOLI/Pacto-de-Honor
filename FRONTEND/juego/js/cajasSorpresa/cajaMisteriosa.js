@@ -47,7 +47,7 @@ var cajaMisteriosa = function(game){};
 
   
             // Se carga el sprite del boton seleccionar
-            game.load.spritesheet('button', '../img/componentes/botones/Spritebloq.png', 150, 40);   
+            game.load.spritesheet('button', '../img/Componentes/botones/Spritebloq.png', 150, 40);   
         },
 
         create: function(){

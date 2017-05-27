@@ -61,7 +61,7 @@ var personajesBuenos={
     "idPNueve":{"nombre":"Tati Hormiga","rutaSprite":"../img/personajes/personajesBuenos/hormiga.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraHormiga.png",
               "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderHormiga.png",
-			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/TatiHormiga.png",
+			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/tatiHormiga.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoGallo.png",
 			  "dano":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":1,"exp":0},
 }
@@ -227,7 +227,7 @@ var personajesMalos={
 			    "rutaImpactoPlagio":"../img/personajes/poderes/PoderesImpactos/impactoOso2.png",
 			    "dano":[10,15,20],"energia":[1,1],"defensa":20,"vida":125},
     
-    "idPVeinte":{"nombre":"Julián Burro","rutaSprite":"../img/personajes/personajesMalos/burro.png",
+    "idPVeinte":{"nombre":"Julián Burro","rutaSprite":"../img/personajes/personajesMalos/Burro.png",
                "rutaAvatar":"../img/personajes/avatares/caraBurro.png",
 			   "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadMalos/JulianPERSONALIDAD.png",
 			   "rutaAtaquePlagio":"../img/personajes/poderes/PoderesPlagioMalos/error404.png",
