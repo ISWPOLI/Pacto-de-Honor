@@ -50,8 +50,8 @@ seleccionpersonaje.prototype = {
         variablesSeleccionPersonaje.startButton.anchor.set(0.5);
 
         if(startButton==true){
-            pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getpregunta7');
-            pruebasPsicotecnicas.pruebasPsicotecnicas.setpregunta7('false');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba1');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba1('false');
         }     
         $.each(personajesBuenos, function (key, data) {
             variablesSeleccionPersonaje.niveles.push(personajesBuenos[key].nivel);
