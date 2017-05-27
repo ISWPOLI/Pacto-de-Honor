@@ -73,7 +73,7 @@ var campeones = function(game){};
             game.load.spritesheet('leonbloq', '../img/componentes/heroes/caraLeonlock.png', 400,400);
             game.load.spritesheet('panterabloq', '../img/componentes/heroes/caraPanteralock.png', 400,400);
             game.load.spritesheet('ratonbloq', '../img/componentes/heroes/caraRatonlock.png', 400,400);
-            game.load.spritesheet('ruisenorlock', '../img/componentes/heroes/caraRuisenor.png', 400,400);
+            game.load.spritesheet('ruisenorlock', '../img/componentes/heroes/caraRuisenorlock.png', 400,400);
   
             
             variablesCampeones.pj1 = heroes["idP1"];
@@ -106,31 +106,31 @@ var campeones = function(game){};
             
     
             //Se crean los botones de los personajes malos
-            botoncanariobloqs = game.add.button (20, 100, 'canarioboton', this.canariobloqsClick, 1, 1, 0, 2);
+            botoncanariobloqs = game.add.button (20, 100, 'canarioboton', this.canariobloqsClick, 0, 0, 0, 1);
             botoncanariobloqs.angle = 10;
             
-            botonBabuino = game.add.button (120, 100, 'ciervaboton', this.babuinoClick, 1, 1, 0, 2);
+            botonBabuino = game.add.button (120, 100, 'ciervaboton', this.babuinoClick, 0, 0, 0, 1);
             botonBabuino.angle =-10;
           
-            botongallobloq = game.add.button (220, 100, 'galloboton', this.gallobloqClick, 1, 1, 0, 2);
+            botongallobloq = game.add.button (220, 100, 'galloboton', this.gallobloqClick, 0, 0, 0, 1);
             botongallobloq.angle =10;
             
-            botonhormigabloq = game.add.button (20, 200, 'hormigaboton', this.hormigabloqClick, 1, 1, 0, 2);
+            botonhormigabloq = game.add.button (20, 200, 'hormigaboton', this.hormigabloqClick, 0, 0, 0, 1);
             botonhormigabloq.angle =10;
             
-            botonjirafabloq = game.add.button (120, 200, 'jirafaboton', this.jirafabloqClick, 1, 1, 0, 2);
+            botonjirafabloq = game.add.button (120, 200, 'jirafaboton', this.jirafabloqClick, 0, 0, 0, 1);
             botonjirafabloq.angle =-10;
             
-            botonleonbloq = game.add.button (220, 200, 'leonboton', this.leonbloqClick, 1, 1, 0, 2);
+            botonleonbloq = game.add.button (220, 200, 'leonboton', this.leonbloqClick, 0, 0, 0, 1);
             botonleonbloq.angle = 10;
             
-            botonpanterabloq = game.add.button (20, 300, 'panteraboton', this.panterabloqClick, 1, 1, 0, 2);
+            botonpanterabloq = game.add.button (20, 300, 'panteraboton', this.panterabloqClick, 0, 0, 0, 1);
             botonpanterabloq.angle = -10;
             
-            botonratonbloq = game.add.button (120, 300, 'ratonboton', this.ratonbloqClick, 1, 1, 0, 2);
+            botonratonbloq = game.add.button (120, 300, 'ratonboton', this.ratonbloqClick, 0, 0, 0, 1);
             botonratonbloq.angle = 10;
             
-            botonPerezratonbloq = game.add.button (220, 300, 'ruisenorboton', this.ruisenorlockClick, 1, 1, 0, 2);
+            botonPerezratonbloq = game.add.button (220, 300, 'ruisenorboton', this.ruisenorlockClick, 0, 0, 0, 1);
             botonPerezratonbloq.angle = -10;
             
        
@@ -222,7 +222,7 @@ var campeones = function(game){};
                   
             }
             
-            variablesCampeones.botonVolver = game.add.button(5, 5, 'botonVolver', this.volver, 1, 1, 0, 2);
+            variablesCampeones.botonVolver = game.add.button(5, 5, 'botonVolver', this.volver, 0, 0, 0, 1);
             boot.verificarMusica("menu");
             
             hideBoss();
