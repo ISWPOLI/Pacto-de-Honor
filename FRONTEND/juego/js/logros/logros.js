@@ -160,8 +160,9 @@ var logros = function(game){};
               recompensa(20,2500);
 
               variableLogros.Logroslooked[i]= false;
-        pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getpregunta100');
-        pruebasPsicotecnicas.pruebasPsicotecnicas.setpregunta100(true);
+              pruebasPsicotecnicas.setPrueba6(true);
+              //pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba6');
+              pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba6(true);
           };
         }
         //funcion que Identifica si el jugador esta entre el top 5
@@ -172,8 +173,7 @@ var logros = function(game){};
             variableLogros.Logroslooked[i]= false;
             pruebasPsicotecnicas.setPrueba7(true);
             //pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba7');
-        pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getpregunta103');
-        pruebasPsicotecnicas.pruebasPsicotecnicas.setpregunta103(false);
+            pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba7(false);
 
           };
         }
@@ -189,24 +189,23 @@ var logros = function(game){};
             recompensa(15,800);
 
             variableLogros.Logroslooked[i] =false;
-
-    pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getpregunta104');
-    pruebasPsicotecnicas.pruebasPsicotecnicas.setpregunta104(true);
+           // pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba8');
+            pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba8(true);
 
           };
         }
         //por implementar
         function isTheOriginalPlagio(i){
           recompensa(5,1000);
-    pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getpregunta105');
-    pruebasPsicotecnicas.pruebasPsicotecnicas.setpregunta105(true);
+            //pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba9');
+            pruebasPsicotecnicas.setPrueba9(false);
           //por implentar no es de servicios Rest
         }
         //por implementar
         function isMiHitckGround(i){
           recompensa(20,1000);
-    pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getpregunta123');
-    pruebasPsicotecnicas.pruebasPsicotecnicas.setpregunta123(true);
+          //pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba10');
+          pruebasPsicotecnicas.setPrueba10(true);
           //por implentar no es de Rest
         }
         //funcion que comprueba que si el jugaro tienen o no todos los heroes
@@ -215,8 +214,8 @@ var logros = function(game){};
             recompensa(10,200);
 
             variableLogros.Logroslooked[i] = false;
-    pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getpregunta199');
-    pruebasPsicotecnicas.pruebasPsicotecnicas.setpregunta199(true);
+            //pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba11');
+            pruebasPsicotecnicas.setPrueba11(false);
 
           };
         }
@@ -226,9 +225,8 @@ var logros = function(game){};
             recompensa(30,300);
 
             variableLogros.Logroslooked[i] = false;
-        
-        pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getpregunta202');
-        pruebasPsicotecnicas.pruebasPsicotecnicas.setpregunta202(false);
+              //pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba12');
+              pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba12(true);
 
           };
         }
@@ -241,8 +239,8 @@ var logros = function(game){};
         //por Implementar
         function is5InaRow(i){
           recompensa(50,4000);
-                      pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getpregunta235');
-              pruebasPsicotecnicas.pruebasPsicotecnicas.setpregunta235(false);
+            pruebasPsicotecnicas.setPrueba14(true);
+          //por implentar falta que todo un mundo este implentado
         }
         //funcion que comprueba que el jugador tenga porlomenos 1000 de experiencia
         function isMyMater(i){
