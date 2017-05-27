@@ -180,9 +180,11 @@ var jefes = function(game){};
                   }
                   if(variablesJefes.pj4.estado==0){
                    variablesJefes.ratalock  = game.add.sprite(400, 150, 'rataderrota');
+                      
                    }
                   else{
                       variablesJefes.ratalock  = game.add.sprite(400, 150, 'rata');
+                      
                   }
                   if(variablesJefes.pj5.estado==0){
                    variablesJefes.camaleonlock  = game.add.sprite(400, 150, 'camaleonderrota');
@@ -372,6 +374,8 @@ var jefes = function(game){};
             variablesJefes.zorrolock.visible = false;
             variablesJefes.osolock.visible = false;
             variablesJefes.lagartolock.visible = false;
+            
+        
        },
         
         viboraClick:function(){
@@ -389,6 +393,8 @@ var jefes = function(game){};
             variablesJefes.zorrolock.visible = false;
             variablesJefes.osolock.visible = false;
             variablesJefes.lagartolock.visible = false;
+            
+           
        },
         peresosoClick:function(){
            variablesBoot.sonidoBoton.play();
@@ -405,6 +411,7 @@ var jefes = function(game){};
             variablesJefes.zorrolock.visible = false;
             variablesJefes.osolock.visible = false;
             variablesJefes.lagartolock.visible = false;
+            
        },
         
         zorroClick:function(){

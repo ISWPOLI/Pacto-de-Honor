@@ -50,7 +50,7 @@ var compraPersonajes = function(game){};
 compraPersonajes.prototype = {
     preload: function(){
         // Se carga el sprite del botón de compra
-        game.load.spritesheet('button', '../img/componentes/botones/spriteButtonC.png', 140, 52);
+        game.load.spritesheet('button', '../img/componentes/botones/SpriteButtonC.png', 140, 52);
     },
     
     create: function(){  
