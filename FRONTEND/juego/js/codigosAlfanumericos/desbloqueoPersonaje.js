@@ -90,7 +90,7 @@ function validarString () {
         return alert("Tu codigo de regalo tiene mas o menos de 11 digitos por favor verificalo");
     }
     variableDesbloqueoPersonaje.mapnumeros1 = new Array();
-    for(var i = 1; i <= 8 ; i++){
+    for(var i = 1; i <= 9 ; i++){
         variableDesbloqueoPersonaje.mapnumeros1[i]=true;
     }
     //variableDesbloqueoPersonaje.string ="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -111,8 +111,37 @@ function validarString () {
 
         }else if(i==10 && (variableDesbloqueoPersonaje.CadenaAnalizar.substr(i,1)=="P")){
             return alert("Has desbloqueado a tu personaje con exito, este codigo ha sido regalado por un profesor");
+				$ajax({
+        		type:"POST",
+        		dataType: 'json',
+        		data:JsonAlfa,
+        		url:'poliFight/webresources/codigos/alfaNumericos/unlockCharacter',//Falta la direccion del servidor en la url.
+        		succes:function(data){
 
-        }else if(i==10 && (variableDesbloqueoPersonaje.CadenaAnalizar.substr(i,1)=="E")){
+        			return alert("Has desbloqueado a tu personaje con exito, este codigo ha sido regalado por un profesor");
+
+        		}
+
+
+        	});
+        }else if(i==10 && (variableDesbloqueoPersonaje.CadenaAnalizar.substr(i,1)=="E")){//al entrar en este bloque de codigo se enviara el
+        																					//al servidor.
+            
+                    	return alert("Has desbloqueado a tu personaje con exito, este codigo ha sido regalado por un amigo");
+
+        	$ajax({
+        		type:"POST",
+        		dataType: 'json',
+        		data:JsonAlfa,
+        		url:'poliFight/webresources/codigos/alfaNumericos/unlockCharacter',//Falta la direccion del servidor en la url.
+        		succes:function(data){
+
+        			return alert("Has desbloqueado a tu personaje con exito, este codigo ha sido regalado por un estudiante");
+
+        		}
+
+
+        	});
         	return alert("Has desbloqueado a tu personaje con exito, este codigo ha sido regalado por un amigo");
         }
     }

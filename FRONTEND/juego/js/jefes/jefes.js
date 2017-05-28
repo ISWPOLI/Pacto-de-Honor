@@ -111,40 +111,40 @@ var jefes = function(game){};
             
     
             //Se crean los botones de los personajes malos
-            botonAbejas = game.add.button (20, 100, 'anaSaraAbejas', this.abejasClick, 1, 1, 0, 2);
+            botonAbejas = game.add.button (20, 100, 'anaSaraAbejas', this.abejasClick, 0, 0, 0, 1);
             botonAbejas.angle = 10;
             
-            botonBabuino = game.add.button (120, 100, 'fabianBabuino', this.babuinoClick, 1, 1, 0, 2);
+            botonBabuino = game.add.button (120, 100, 'fabianBabuino', this.babuinoClick, 0, 0, 0, 1);
             botonBabuino.angle =-10;
           
-            botonBuitre = game.add.button (220, 100, 'carlosBuitre', this.buitreClick, 1, 1, 0, 2);
+            botonBuitre = game.add.button (220, 100, 'carlosBuitre', this.buitreClick, 0, 0, 0, 1);
             botonBuitre.angle =10;
             
-            botonBurro = game.add.button (20, 200, 'julianBurro', this.burroClick, 1, 1, 0, 2);
+            botonBurro = game.add.button (20, 200, 'julianBurro', this.burroClick, 0, 0, 0, 1);
             botonBurro.angle =10;
             
-            botonCamaleon = game.add.button (120, 200, 'juanCamaleon', this.camaleonClick, 1, 1, 0, 2);
+            botonCamaleon = game.add.button (120, 200, 'juanCamaleon', this.camaleonClick, 0, 0, 0, 1);
             botonCamaleon.angle =-10;
             
-            botonHiena = game.add.button (220, 200, 'victorHiena', this.hienaClick, 1, 1, 0, 2);
+            botonHiena = game.add.button (220, 200, 'victorHiena', this.hienaClick, 0, 0, 0, 1);
             botonHiena.angle = 10;
             
-            botonLagarto = game.add.button (20, 300, 'nicolasLagarto', this.lagartoClick, 1, 1, 0, 2);
+            botonLagarto = game.add.button (20, 300, 'nicolasLagarto', this.lagartoClick, 0, 0, 0, 1);
             botonLagarto.angle = -10;
             
-            botonOso = game.add.button (120, 300, 'felipeOso', this.osoClick, 1, 1, 0, 2);
+            botonOso = game.add.button (120, 300, 'felipeOso', this.osoClick, 0, 0, 0, 1);
             botonOso.angle = 10;
             
-            botonPerezoso = game.add.button (220, 300, 'camiloPerezoso', this.peresosoClick, 1, 1, 0, 2);
+            botonPerezoso = game.add.button (220, 300, 'camiloPerezoso', this.peresosoClick, 0, 0, 0, 1);
             botonPerezoso.angle = -10;
             
-            botonRata = game.add.button (20, 400, 'juanRata', this.rataClick, 1, 1, 0, 2);
+            botonRata = game.add.button (20, 400, 'juanRata', this.rataClick, 0, 0, 0, 1);
             botonRata.angle = 10;
             
-            botonVibora = game.add.button (120, 400, 'luisVibora', this.viboraClick, 1, 1, 0, 2);
+            botonVibora = game.add.button (120, 400, 'luisVibora', this.viboraClick, 0, 0, 0, 1);
             botonVibora.angle =-10;
             
-            botonZorro = game.add.button (220, 400, 'andresZorro', this.zorroClick, 1, 1, 0, 2);
+            botonZorro = game.add.button (220, 400, 'andresZorro', this.zorroClick, 0, 0, 0, 1);
             botonZorro.angle = 10;
             
             
@@ -235,7 +235,7 @@ var jefes = function(game){};
                   
             }
             
-            variablesJefes.botonVolver = game.add.button(5, 5, 'botonVolver', this.volver, 1, 1, 0, 2);
+            variablesJefes.botonVolver = game.add.button(5, 5, 'botonVolver', this.volver, 0, 0, 0, 1);
             boot.verificarMusica("menu");
             
             hideBoss();
