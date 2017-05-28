@@ -1,4 +1,4 @@
-variableDesbloqueoPersonaje ={
+variableDesbloqueoPersonaje ={ //Variables encapsuladas.
 	input:null,
 	codigo:null,
 	mapnumeros1:0,
@@ -20,6 +20,7 @@ desbloqueoPersonaje.prototype = {
     create: function(){ 
 		game.stage.backgroundColor = "#2451A6";
 		game.add.plugin(PhaserInput.Plugin);
+		//TEXTFIELD DE CODIGO ALFANUMERICO ENTRADA.
 	    variableDesbloqueoPersonaje.input = game.add.inputField(100, 493,{
 			font: '18px Arial',
 			fill: '#212121',
@@ -30,10 +31,11 @@ desbloqueoPersonaje.prototype = {
 			borderColor: '#000',
 			borderRadius: 6,
 			placeHolder: 'Tu codigo aqui'});
-        
+        //BOTONES DE LOS PERSONAJES
         btFlechar = game.add.button (5, 5, 'botonVolver', this.verPerfilJugador, 0, 0, 0, 1);
 		
 		btPantera = game.add.button (240, 60, 'botonPantera', this.code1, 0, 0, 0, 1);
+		//ESCALA, TAMAÑAO DEL BOTON.
 		btPantera.scale.setTo(0.8,0.8);
 		//btPantera.scale.setTo(0.5, 0.5);
 
@@ -66,7 +68,7 @@ desbloqueoPersonaje.prototype = {
 		//btCanario.scale.setTo(0.5,0.5);
 		btRata= game.add.button(240,170,'botonRaton',this.code9,0,0,0,1);
 		btRata.scale.setTo(0.8,0.8);
-
+//TEXT FIELD INGRESO DE CODIGO ALFANUMERICO.
 		btIngresar  = game.add.button(570,480,'ingresar',validarString,this,2,1,0);
 		btIngresar.scale.setTo(0.9,0.9);
 		variableDesbloqueoPersonaje.codigo = game.add.inputField(100,400, {
@@ -83,32 +85,34 @@ desbloqueoPersonaje.prototype = {
 		    max:11,
 		    min:11,
 		    placeHolder: '¡Haz clic en algun personaje para regalar el codigo de el a un amigo!'});
-
+//FUNCION DONDE SE VALIDA EL STRING DE CODIGOSALFANUMERICOS Y SE ACEPTA O NO.
 function validarString () {
 	variableDesbloqueoPersonaje.CadenaAnalizar = variableDesbloqueoPersonaje.input.value;
     if(variableDesbloqueoPersonaje.CadenaAnalizar.length!=11){
         return alert("Tu codigo de regalo tiene mas o menos de 11 digitos por favor verificalo");
     }
+    //LEER REQUERIMIENTOS DE LOS CODIGOSALFANUMERICOS, PARA ASI ENTENDER COMO ESTAN ESTRUCTURADOS.
     variableDesbloqueoPersonaje.mapnumeros1 = new Array();
-    for(var i = 1; i <= 9 ; i++){
+    for(var i = 1; i <= 9 ; i++){//SE LEEN LOS 9 PERSONAJES, DONDE CADA PERSONAJE TIENE SU PROPIO NUMERO.
         variableDesbloqueoPersonaje.mapnumeros1[i]=true;
     }
     //variableDesbloqueoPersonaje.string ="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     variableDesbloqueoPersonaje.mapletras1 = new Array();
     for(var i = 0 ; i <= variableDesbloqueoPersonaje.string.length; i++){
-        variableDesbloqueoPersonaje.mapletras1[variableDesbloqueoPersonaje.string.substr(i,1)]=true;
+        variableDesbloqueoPersonaje.mapletras1[variableDesbloqueoPersonaje.string.substr(i,1)]=true;// .SUBSTR: LEÉ UNA CADENA EN DONDE
+        //.substr(empieza a leér string tomandolo como enteros de 0 a n, valores siguientes desde los parametros dados);
     }
-    
+    	// SE LEÉ EL CODIGO DESDE LA POSICION 0 Y SE VERIFICA QUEDANA UNO DE LOS VALORES ESTE EN EL MAPA.
     for(var i = 0; i < variableDesbloqueoPersonaje.CadenaAnalizar.length ; i++){
         if(i==0 && variableDesbloqueoPersonaje.mapnumeros1[variableDesbloqueoPersonaje.CadenaAnalizar.substr(i,1)]==undefined){
             return alert("Tu codigo esta mal escrito o no existe");;
-
+            		//SECCION DE EN DONDE SE VERIFICA LOS PRIMEROS 4 CARACTERES SIN CONTAR EL PRIMERO Y LA SEUNDA SECCION SIN CONTAR EL ULTIMO DIGITO.
         }else if(((i>=1 && i<=4)||(i>=6 && i<=9)) && variableDesbloqueoPersonaje.mapletras1[variableDesbloqueoPersonaje.CadenaAnalizar.substr(i,1)]==undefined){
             return alert("Tu codigo esta mal escrito o no existe");;
-
+            	// SE LEÉ QUE ESTE EL GUION EN EL CODIGOALFANUMERICO.
         }else if(i==5 && variableDesbloqueoPersonaje.CadenaAnalizar.substr(i,1)!="-"){
             return alert("Tu codigo esta mal escrito o no existe");;
-
+            	//SE LEÉ EL ULTIMO CARACTRER.
         }else if(i==10 && (variableDesbloqueoPersonaje.CadenaAnalizar.substr(i,1)=="P")){
             return alert("Has desbloqueado a tu personaje con exito, este codigo ha sido regalado por un profesor");
 				$ajax({
@@ -124,8 +128,10 @@ function validarString () {
 
 
         	});
-        }else if(i==10 && (variableDesbloqueoPersonaje.CadenaAnalizar.substr(i,1)=="E")){//al entrar en este bloque de codigo se enviara el
-        																					//al servidor.
+				//SE LEÉ EL ULTIMO CARACTER
+        }else if(i==10 && (variableDesbloqueoPersonaje.CadenaAnalizar.substr(i,1)=="E")){//al entrar en este AJAX el codigo se enviara el
+        																					//al servidor y se veridica si existe o no, fue regalado 
+        																					//por un estudiante o no.
             
                     	return alert("Has desbloqueado a tu personaje con exito, este codigo ha sido regalado por un amigo");
 
@@ -144,7 +150,7 @@ function validarString () {
         	});
         	return alert("Has desbloqueado a tu personaje con exito, este codigo ha sido regalado por un amigo");
         }
-    }
+    }//SE SALE ENTONCES ESTA MAL ESCRITO O NO CUMPLE CON UNPARAMETRO.
     return alert("Tu codigo esta mal escrito o no existe");
 }  
 		//var letra = input.value;
@@ -162,16 +168,21 @@ function validarString () {
 */
 
 	},
+
+
 	verPerfilJugador:function(){
         game.state.start("perfilJugador");
         variablesBoot.sonidoBoton.play();
     },
-    
+    	//SE GENERAN TODOS LOS CODIGOS ALFANUMERICOS DE CADA PERSONAJE DEPENDIENDO DE SU NUMERO.
+    	//FUNCION DE CADA UNO ED LOS BOTONES.
 	code1:function(){
 	     	variableDesbloqueoPersonaje.text = "";
 	     	variableDesbloqueoPersonaje.text2 = "";
 			//var possible = "ABCDEFGHIJKLMNIOPQRSTUVWXYZ1234567890";
-			for(var i = 0; i < 4; i++){
+			// GENERACION DE LOS PRIMEROS 4 DIGITOS DEL CODIGOALFANUMERICO SIN CONTAR EL PRIMER CARACTER Y TAMBIEN DEL SEGUNDO SIN CONTAR EL ULTIMO,
+			//NUMEROS AL AZAR.
+			for(var i = 0; i < 4; i++){ 
 				variableDesbloqueoPersonaje.text = variableDesbloqueoPersonaje.text + variableDesbloqueoPersonaje.possible.charAt(Math.floor(Math.random() * variableDesbloqueoPersonaje.possible.length));
 				variableDesbloqueoPersonaje.text2 = variableDesbloqueoPersonaje.text2 + variableDesbloqueoPersonaje.possible.charAt(Math.floor(Math.random() * variableDesbloqueoPersonaje.possible.length));
 			}

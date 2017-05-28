@@ -2,6 +2,7 @@ var closeButton2;
 var popup2;
 var Mundo1 = {
     preload:function (){
+    	//SE AGREGAN IMAGENES.
         game.load.image('medellin', '../img/componentes/navegacionMapa/sedeMedellin.png');
         game.load.image('fondo', '../img/componentes/navegacionMapa/mapaNavegacionb.png');
         game.load.image('close', '../img/componentes/navegacionMapa/orb.png');
@@ -13,6 +14,7 @@ var Mundo1 = {
     },
 
     create:function(){
+    	
         game.add.sprite(0, 0, 'fondo');
         //se agrega ventana emergente popup (medidas en x, medidas en y, nombre imagen)
         popup2 = game.add.sprite(game.world.centerX, game.world.centerY, 'medellin');

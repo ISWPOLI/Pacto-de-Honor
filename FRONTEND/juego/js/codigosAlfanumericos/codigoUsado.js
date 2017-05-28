@@ -1,4 +1,8 @@
+//LEER DOCUMENTACION DE CODIGOSALFANUMERICOS.
 
+
+//AL YA HABER USADO SU UNICO CODIGO ALFANUMERICO ESTA ES LA CLASE A LA QUE SE DEVE DIRIJIR, 
+//EN DONDE SE LE MUESTRA AL USUARIO MEDIANTE UNA ANIMACION DE TEXTO QUE Y HA USADO SU CODIGO ALFANUMERICO.
 var contenido = [
 		"Solo puedes usar un codgo de regalo y... ",  
 "                 este ya lo has usado", 
@@ -27,7 +31,7 @@ regalado.prototype = {
 
   this.nextLine();
 		
-
+//se leé la siguiente linea del texto.
 	},nextLine: function(){
 
 
@@ -39,7 +43,7 @@ regalado.prototype = {
     wordIndex = 0;
     game.time.events.repeat(wordDelay, line.length, this.nextWord,this);
     lineIndex++;
-
+//se leé la siguiente palabra del texto.
 	}, nextWord:function(){
 
    text.text = text.text.concat(line[wordIndex] + " ");
@@ -47,7 +51,7 @@ regalado.prototype = {
 
    if (wordIndex === line.length)
    {
-     
+     //al leer la palabra y llegar al final se hace salto de carril y empieza con el nuevo indice y palabra.
        text.text = text.text.concat("\n");
        game.time.events.add(lineDelay, this.nextLine,this);
 

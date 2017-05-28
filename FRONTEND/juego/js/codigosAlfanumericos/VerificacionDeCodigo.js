@@ -1,3 +1,6 @@
+
+//Validacon de String, ya implementada en "desbloqueo de personajes"
+
 document.write(validarString("3AC40-RF34P"));
 
 function validarString (cadenaAnalizar) {
