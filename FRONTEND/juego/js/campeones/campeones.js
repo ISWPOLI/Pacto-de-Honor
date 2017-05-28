@@ -1,10 +1,6 @@
 variablesCampeones={
 //Variables de botones
     botonVolver:null, 
-    botonPacto:null, 
-    botonBuenos:null, 
-    botonMalos:null, 
-    botonPlagios:null,
     canariobloqlock:null,
     ciervabloqlock:null,
     gallobloqlock:null,
@@ -23,9 +19,6 @@ variablesCampeones={
     pj7:null,
     pj8:null,
     pj9:null,
-    pj10:null,
-    pj11:null,
-    pj12:null,
     pjsname: null,
     pjslock: null,
     
