@@ -14,9 +14,6 @@ variablesCampeones={
     panterabloqlock: null,
     ratonbloqlock: null,
     ruisenorlock : null,
-    ratalock: null,
-    vibora: null,
-    zorro: null,
     pj1:null,
     pj2:null,
     pj3:null,
@@ -207,13 +204,8 @@ var campeones = function(game){};
                   else{
                       variablesCampeones.panterabloqlock  = game.add.sprite(450,170, 'panterabloq');
                   }
-                  if(variablesCampeones.pj11.estado==0){
-                   variablesCampeones.viboralock  = game.add.sprite(450,170, 'viboraderrota');
-                   }
-                  else{
-                      variablesCampeones.viboralock  = game.add.sprite(450,170, 'vibora');
-                  }
-                  if(variablesCampeones.pj12.estado==0){
+               
+                  if(variablesCampeones.pj1.estado==0){
                    variablesCampeones.ciervabloqlock  = game.add.sprite(450,170, 'caracierva');
                    }
                   else{
@@ -258,27 +250,11 @@ var campeones = function(game){};
             variablesCampeones.ratalock.visible = false;
             variablesCampeones.viboralock.visible = false;
             variablesCampeones.ruisenorlocklock.visible = false;
-            variablesCampeones.zorrolock.visible = false;
             variablesCampeones.ratonbloqlock.visible = false;
             variablesCampeones.panterabloqlock.visible = false;
             
         },
-        babuinoClick:function(){
-           variablesBoot.sonidoBoton.play();
-            variablesCampeones.canariobloqlock.visible = false;
-            variablesCampeones.ciervabloqlock.visible =true;
-            variablesCampeones.gallobloqlock.visible = false;
-            variablesCampeones.hormigabloqlock.visible = false;
-            variablesCampeones.jirafabloqlock.visible = false;
-            variablesCampeones.leonbloqlock.visible = false;
-            variablesCampeones.ratalock.visible = false;
-            variablesCampeones.viboralock.visible = false;
-            variablesCampeones.ruisenorlocklock.visible = false;
-            variablesCampeones.zorrolock.visible = false;
-            variablesCampeones.ratonbloqlock.visible = false;
-            variablesCampeones.panterabloqlock.visible = false;
-           
-       },
+
         gallobloqClick:function(){
            variablesBoot.sonidoBoton.play();
           variablesCampeones.canariobloqlock.visible = false;
@@ -287,10 +263,7 @@ var campeones = function(game){};
             variablesCampeones.hormigabloqlock.visible = false;
             variablesCampeones.jirafabloqlock.visible = false;
             variablesCampeones.leonbloqlock.visible = false;
-            variablesCampeones.ratalock.visible = false;
-            variablesCampeones.viboralock.visible = false;
             variablesCampeones.ruisenorlocklock.visible = false;
-            variablesCampeones.zorrolock.visible = false;
             variablesCampeones.ratonbloqlock.visible = false;
             variablesCampeones.panterabloqlock.visible = false;
        },
@@ -303,10 +276,7 @@ var campeones = function(game){};
             variablesCampeones.hormigabloqlock.visible = true;
             variablesCampeones.jirafabloqlock.visible = false;
             variablesCampeones.leonbloqlock.visible = false;
-            variablesCampeones.ratalock.visible = false;
-            variablesCampeones.viboralock.visible = false;
             variablesCampeones.ruisenorlocklock.visible = false;
-            variablesCampeones.zorrolock.visible = false;
             variablesCampeones.ratonbloqlock.visible = false;
             variablesCampeones.panterabloqlock.visible = false;
     
@@ -319,10 +289,7 @@ var campeones = function(game){};
             variablesCampeones.hormigabloqlock.visible = false;
             variablesCampeones.jirafabloqlock.visible = true;
             variablesCampeones.leonbloqlock.visible = false;
-            variablesCampeones.ratalock.visible = false;
-            variablesCampeones.viboralock.visible = false;
             variablesCampeones.ruisenorlocklock.visible = false;
-            variablesCampeones.zorrolock.visible = false;
             variablesCampeones.ratonbloqlock.visible = false;
             variablesCampeones.panterabloqlock.visible = false;
          
@@ -336,47 +303,11 @@ var campeones = function(game){};
             variablesCampeones.hormigabloqlock.visible = false;
             variablesCampeones.jirafabloqlock.visible = false;
             variablesCampeones.leonbloqlock.visible = true;
-            variablesCampeones.ratalock.visible = false;
-            variablesCampeones.viboralock.visible = false;
             variablesCampeones.ruisenorlocklock.visible = false;
-            variablesCampeones.zorrolock.visible = false;
             variablesCampeones.ratonbloqlock.visible = false;
             variablesCampeones.panterabloqlock.visible = false;
        },
-        
-        rataClick:function(){
-           variablesBoot.sonidoBoton.play();
-            
-           variablesCampeones.canariobloqlock.visible = false;
-            variablesCampeones.ciervabloqlock.visible =false;
-            variablesCampeones.gallobloqlock.visible = false;
-            variablesCampeones.hormigabloqlock.visible = false;
-            variablesCampeones.jirafabloqlock.visible = false;
-            variablesCampeones.leonbloqlock.visible = false;
-            variablesCampeones.ratalock.visible = true;
-            variablesCampeones.viboralock.visible = false;
-            variablesCampeones.ruisenorlocklock.visible = false;
-            variablesCampeones.zorrolock.visible = false;
-            variablesCampeones.ratonbloqlock.visible = false;
-            variablesCampeones.panterabloqlock.visible = false;
-       },
-        
-        viboraClick:function(){
-           variablesBoot.sonidoBoton.play();
-            
-           variablesCampeones.canariobloqlock.visible = false;
-            variablesCampeones.ciervabloqlock.visible =false;
-            variablesCampeones.gallobloqlock.visible = false;
-            variablesCampeones.hormigabloqlock.visible = false;
-            variablesCampeones.jirafabloqlock.visible = false;
-            variablesCampeones.leonbloqlock.visible = false;
-            variablesCampeones.ratalock.visible = false;
-            variablesCampeones.viboralock.visible = true;
-            variablesCampeones.ruisenorlocklock.visible = false;
-            variablesCampeones.zorrolock.visible = false;
-            variablesCampeones.ratonbloqlock.visible = false;
-            variablesCampeones.panterabloqlock.visible = false;
-       },
+ 
         ruisenorlockClick:function(){
            variablesBoot.sonidoBoton.play();
             
@@ -386,30 +317,12 @@ var campeones = function(game){};
             variablesCampeones.hormigabloqlock.visible = false;
             variablesCampeones.jirafabloqlock.visible = false;
             variablesCampeones.leonbloqlock.visible = false;
-            variablesCampeones.ratalock.visible = false;
-            variablesCampeones.viboralock.visible = false;
             variablesCampeones.ruisenorlocklock.visible = true;
-            variablesCampeones.zorrolock.visible = false;
             variablesCampeones.ratonbloqlock.visible = false;
             variablesCampeones.panterabloqlock.visible = false;
        },
         
-        zorroClick:function(){
-           variablesBoot.sonidoBoton.play();
-            
-           variablesCampeones.canariobloqlock.visible = false;
-            variablesCampeones.ciervabloqlock.visible =false;
-            variablesCampeones.gallobloqlock.visible = false;
-            variablesCampeones.hormigabloqlock.visible = false;
-            variablesCampeones.jirafabloqlock.visible = false;
-            variablesCampeones.leonbloqlock.visible = false;
-            variablesCampeones.ratalock.visible = false;
-            variablesCampeones.viboralock.visible = false;
-            variablesCampeones.ruisenorlocklock.visible = false;
-            variablesCampeones.zorrolock.visible = true;
-            variablesCampeones.ratonbloqlock.visible = false;
-            variablesCampeones.panterabloqlock.visible = false;
-       },
+
         panterabloqClick:function(){
            variablesBoot.sonidoBoton.play();
             
@@ -419,10 +332,7 @@ var campeones = function(game){};
             variablesCampeones.hormigabloqlock.visible = false;
             variablesCampeones.jirafabloqlock.visible = false;
             variablesCampeones.leonbloqlock.visible = false;
-            variablesCampeones.ratalock.visible = false;
-            variablesCampeones.viboralock.visible = false;
             variablesCampeones.ruisenorlocklock.visible = false;
-            variablesCampeones.zorrolock.visible = false;
             variablesCampeones.ratonbloqlock.visible = false;
             variablesCampeones.panterabloqlock.visible = true;
        },
@@ -434,10 +344,7 @@ var campeones = function(game){};
             variablesCampeones.hormigabloqlock.visible = false;
             variablesCampeones.jirafabloqlock.visible = false;
             variablesCampeones.leonbloqlock.visible = false;
-            variablesCampeones.ratalock.visible = false;
-            variablesCampeones.viboralock.visible = false;
             variablesCampeones.ruisenorlocklock.visible = false;
-            variablesCampeones.zorrolock.visible = false;
             variablesCampeones.ratonbloqlock.visible = true;
             variablesCampeones.panterabloqlock.visible = false;
        },
