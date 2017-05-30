@@ -40,6 +40,18 @@
         <servlet-name>CapturaModuloUsuario</servlet-name>
         <servlet-class>CapturaModuloUsuario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>InicioSesionServlet</servlet-name>
+        <servlet-class>Sevlets.InicioSesionServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegistroUsuario</servlet-name>
+        <servlet-class>Sevlets.RegistroUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RecuperarClave</servlet-name>
+        <servlet-class>Sevlets.RecuperarClave</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CapturaModuloCategoria</servlet-name>
         <url-pattern>/CapturaCategoria</url-pattern>
@@ -79,6 +91,18 @@
     <servlet-mapping>
         <servlet-name>CapturaModuloUsuario</servlet-name>
         <url-pattern>/CapturaModuloUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InicioSesionServlet</servlet-name>
+        <url-pattern>/Iniciar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistroUsuario</servlet-name>
+        <url-pattern>/Registrar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RecuperarClave</servlet-name>
+        <url-pattern>/RecuperarClave</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
