@@ -1,0 +1,24 @@
+/* 
+    Created on : 18-may-2017, 22:43:41
+    Author     : david
+*/
+.StyleText{
+    width:100%;
+    text-align: center; 
+}
+.StyleMenu{
+    width:100%;
+    text-align: center; 
+}
+.StyleImage{
+    width:100%;
+    text-align: center; 
+    padding-top:10%
+}
+.StyleImageRegis{
+    width:100%;
+}
+.StyleDown{
+    width:100%;
+    text-align: center; 
+}
