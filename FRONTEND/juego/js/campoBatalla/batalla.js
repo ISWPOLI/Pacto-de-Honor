@@ -319,6 +319,7 @@ var batalla = {
                n.destroy();
                energia.destroy();
                vida.destroy();
+               btnpoder.destroy();
         }
         }
 		if(variablesCampoBatalla.ti == timeShowBox){
