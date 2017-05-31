@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Login Pacto de Honor</title>
+        <script src="js/main.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <img src="Logo.png" class="image" >
+        <form action="iniciar" method="POST" id="forminicio">
+            <table>
+                <br>
+                <tr><td><input type="text" name="rusuario" placeholder="Usuario" id="txtusuario"/></td></tr>
+                <tr><td><input type="password" name="rcontraseña" placeholder="Password" id="txtpassword"/></td></tr>
+                <tr><td><a href="Forgot.html" id="txtfpassword">Forgot Password</a></td></tr>
+                <tr><td><a href="Registro.html"id="txtregistrarse" >Registrarse</a></td></tr>
+                <tr><td><input type="submit" value="Login" id="btnlogin"/></td></tr>
+            </table> 
+            <br><!--boton con id login y classs de bootstrp-->
+            <div class="btnredes">
+                <input  id="facebook" class=" fa fa-facebook" type="submit" value="Facebook"/>
+                <input  id="google" class="fa fa-google-plus" type="submit" value="Google"/>
+                <input  id="Microsoft" class="fa fa-microsoft" type="submit" value="Microsoft"/>
+                <!--btn btn-block btn-social btn-Microsoft-->
+            </div>
+        </form>
+        <br>
+
+        <div id="footer">Derechos Reservados &copy; Copyright HackDemons 2010-2017 
+        </div>
+        <!--/**<script>
+            // Load the SDK asynchronously
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>*/-->
+    </body>
+</html>
