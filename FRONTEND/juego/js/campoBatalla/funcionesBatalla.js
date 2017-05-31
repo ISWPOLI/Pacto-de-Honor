@@ -27,8 +27,8 @@ var funcionesBatalla={
         game.load.image('flechaDerecha','../img/componentes/batalla/derechapc.png');
         game.load.image('flechaArriba','../img/componentes/batalla/arribapc.png');
         game.load.image('flechaAbajo','../img/componentes/batalla/abajopc.png');
-        game.load.image('teclam','../img/componentes/batalla/teclam.png');
-        game.load.image('teclan','../img/componentes/batalla/teclan.png');
+        game.load.image('teclam','../img/componentes/batalla/teclaM.png');
+        game.load.image('teclan','../img/componentes/batalla/teclaN.png');
         game.load.image('espacio','../img/componentes/batalla/space.png');
         game.load.image('abajom','../img/componentes/batalla/abajo.png');
         game.load.image('arribam','../img/componentes/batalla/arriba.png');
