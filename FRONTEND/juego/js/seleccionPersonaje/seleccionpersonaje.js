@@ -16,7 +16,7 @@ seleccionpersonaje.prototype = {
     create: function(){
         variablesSeleccionPersonaje.niveles=[];
         game.stage.backgroundColor = "#2451A6"; //Fondo
-        botonVolver = game.add.button(5, 5, 'botonVolver', this.verNavegacion, 1, 1, 0, 2);
+        botonVolver = game.add.button(5, 5, 'botonVolver', this.verNavegacion, 0, 0, 0, 1);
         this.pageText = game.add.text(game.width / 2, 45, "Selección de Personaje", {font: "32px Roboto", fill: "#ffffff"});
         this.pageText.anchor.set(0.5); //Se crea el titulo
         variablesSeleccionPersonaje.txtSeleccionado = game.add.text(10, 540, "Personaje Seleccionado", {font: "20px Roboto", fill: "#ffffff"}); //Texto para pj seleccionado
@@ -27,15 +27,15 @@ seleccionpersonaje.prototype = {
         variablesSeleccionPersonaje.avatarSeleccionado.visible = false; //Se ocultan el texto y la imagen del pj seleccionado
         
         //Se crean los botones de los personajes
-        variablesSeleccionPersonaje.botones[0] = game.add.button(175, 75, 'botonPantera', this.clickPantera, 1, 1, 0, 2);
-        variablesSeleccionPersonaje.botones[1] = game.add.button(325, 75, 'botonGallo', this.clickGallo, 1, 1, 0, 2);
-        variablesSeleccionPersonaje.botones[2] = game.add.button(475, 75, 'botonCierva', this.clickCierva, 1, 1, 0, 2);
-        variablesSeleccionPersonaje.botones[3] = game.add.button(175, 225, 'botonJirafa', this.clickJirafa, 1, 1, 0, 2);
-        variablesSeleccionPersonaje.botones[4] = game.add.button(325, 225, 'botonLeon', this.clickLeon, 1, 1, 0, 2);
-        variablesSeleccionPersonaje.botones[5] = game.add.button(475, 225, 'botonCanario', this.clickCanario, 1, 1, 0, 2);
-        variablesSeleccionPersonaje.botones[6] = game.add.button(175, 375, 'botonRuisenor', this.clickRuisenor, 1, 1, 0, 2);
-        variablesSeleccionPersonaje.botones[7] = game.add.button(325, 375, 'botonRaton', this.clickRaton, 1, 1, 0, 2);
-        variablesSeleccionPersonaje.botones[8] = game.add.button(475, 375, 'botonHormiga', this.clickHormiga, 1, 1, 0, 2);
+        variablesSeleccionPersonaje.botones[0] = game.add.button(175, 75, 'botonPantera', this.clickPantera, 0, 0, 0, 1);
+        variablesSeleccionPersonaje.botones[1] = game.add.button(325, 75, 'botonGallo', this.clickGallo, 0, 0, 0, 1);
+        variablesSeleccionPersonaje.botones[2] = game.add.button(475, 75, 'botonCierva', this.clickCierva, 0, 0, 0, 1);
+        variablesSeleccionPersonaje.botones[3] = game.add.button(175, 225, 'botonJirafa', this.clickJirafa, 0, 0, 0, 1);
+        variablesSeleccionPersonaje.botones[4] = game.add.button(325, 225, 'botonLeon', this.clickLeon, 0, 0, 0, 1);
+        variablesSeleccionPersonaje.botones[5] = game.add.button(475, 225, 'botonCanario', this.clickCanario, 0, 0, 0, 1);
+        variablesSeleccionPersonaje.botones[6] = game.add.button(175, 375, 'botonRuisenor', this.clickRuisenor, 0, 0, 0, 1);
+        variablesSeleccionPersonaje.botones[7] = game.add.button(325, 375, 'botonRaton', this.clickRaton, 0, 0, 0, 1);
+        variablesSeleccionPersonaje.botones[8] = game.add.button(475, 375, 'botonHormiga', this.clickHormiga, 0, 0, 0, 1);
         //Textos del nivel de cada personaje
         // game.add.text(220, 200, "lv: "+personajesBuenos["idPUno"].nivel, {font: "20px Roboto", fill: "#ffffff"});
         // game.add.text(370, 200, "lv: "+personajesBuenos["idPDos"].nivel, {font: "20px Roboto", fill: "#ffffff"});

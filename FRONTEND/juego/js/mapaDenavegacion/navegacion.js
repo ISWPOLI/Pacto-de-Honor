@@ -1,4 +1,4 @@
-vN = {
+vN = {// Variables encapsuladas del los botones y textos de los botones.
     btMundo:null, 
     btMundo2:null, 
     btMundo3:null, 
@@ -29,6 +29,7 @@ vN = {
 var navegacion = function(game){};
     navegacion.prototype = {
     preload: function() {
+    	//Se agregan las imagenes y los sptritesheets.
         game.load.spritesheet('btMundo2', '../img/componentes/navegacionMapa/pause.png', 50,50);
         game.load.image('monedas', '../img/componentes/navegacionMapa/monedas.png');
         game.load.image('xp', '../img/componentes/finBatalla/experiencia.png');
@@ -57,23 +58,23 @@ var navegacion = function(game){};
 
     //se agrega el fondo y se crean los botones de los mundos en donde tenemos button(medida en x, medida en y, nombre de la imagen, la funcion, sprites)
     create:function() {
-        game.add.sprite(0, 0, 'fondo');
-        game.add.sprite(80, 10, 'monedas');
-        game.add.sprite(220, 10, 'xp').scale.setTo(0.4);
-
-        botonCreditos = game.add.button(735, 70, 'botonCreditos', this.verCreditos, 1, 1, 0, 2);
-        botonSonido = game.add.button(735, 135, 'botonSonido', this.quitarSonido, 1, 1, 0, 2);
-        botonCerrarSesion = game.add.button(735, 200, 'botonCerrarSesion', this.cerrarSesion, 1, 1, 0, 2);
+        game.add.sprite(0, 0, 'fondo');//Se agrega un fondo.
+        game.add.sprite(80, 10, 'monedas');//imagen monedas
+        game.add.sprite(220, 10, 'xp').scale.setTo(0.4);//Imagen experiencia.
+       //BOTONES DE LOS NIVELES Y MENUS-
+        botonCreditos = game.add.button(735, 70, 'botonCreditos', this.verCreditos, 0, 0, 0, 1);
+        botonSonido = game.add.button(735, 135, 'botonSonido', this.quitarSonido, 0, 0, 0, 1);
+        botonCerrarSesion = game.add.button(735, 200, 'botonCerrarSesion', this.cerrarSesion, 0, 0, 0, 1);
         botonCreditos.visible = false;
         botonSonido.visible = false;
         botonCerrarSesion.visible = false;
-        botonAjustes = game.add.button(735, 5, 'botonAjustes', this.verAjustes, 1, 1, 0, 2);
-        botonAmigos = game.add.button(670, 5, 'botonAmigos', this.verInvitarAmigos, 1, 1, 0, 2);
-        botonPerfil = game.add.button(5, 5, 'botonPerfil', this.verPerfil, 1, 1, 0, 2);
-        botonRanking = game.add.button(605, 5, 'botonRanking', this.verRankings, 1, 1, 0, 2);
+        botonAjustes = game.add.button(735, 5, 'botonAjustes', this.verAjustes, 0, 0, 0, 1);
+        botonAmigos = game.add.button(670, 5, 'botonAmigos', this.verInvitarAmigos, 0, 0, 0, 1);
+        botonPerfil = game.add.button(5, 5, 'botonPerfil', this.verPerfil, 0, 0, 0, 1);
+        botonRanking = game.add.button(605, 5, 'botonRanking', this.verRankings, 0, 0, 0, 1);
        //btnCaja = game.add.button(415, 5, 'botonCajaSorpresa', this.verCajaMisteriosa);//475
         vN.btnCaja = game.add.button(475, 5, 'botonCajaSorpresa', this.verCajaMisteriosa,1,1,0,2);//475
-        botonCompraPersonajes = game.add.button(540, 5, 'botonCompraPersonajes', this.verCompraPersonajes, 1, 1, 0, 2);
+        botonCompraPersonajes = game.add.button(540, 5, 'botonCompraPersonajes', this.verCompraPersonajes, 0, 0, 0, 1);
         game.add.text(160, 20, datosperfil["datos"].monedas, {font: "16px Roboto", fill: "#ffffff"}); //Label monedas desde perfilJugador
         game.add.text(275, 20, datosperfil["datos"].experiencia, {font: "16px Roboto", fill: "#ffffff"}); //Label EXP desde perfilJugador
        
@@ -186,7 +187,7 @@ var navegacion = function(game){};
         game.state.start("compraPersonajes");
         variablesBoot.sonidoBoton.play();
     },
-
+//SE INICIA UN NUEVO ESTA DONDE ENRTARA A EL MUNDO ELEJIDO.
         mundo1: function(){            
             pruebasPsicotecnicas.setPrueba19(true);
             variablesBoot.sonidoBoton.play();
@@ -247,7 +248,7 @@ var navegacion = function(game){};
             variablesBoot.sonidoBoton.play();
             game.state.start("Mundo12");
         },
-    
+    // SE INICIA EL ESTADO DEL NIVEL.
     iniciarNivel: function(lvl) {
         pruebasPsicotecnicas.setPrueba20(true);
         variablesCampoBatalla.idNivel = lvl;

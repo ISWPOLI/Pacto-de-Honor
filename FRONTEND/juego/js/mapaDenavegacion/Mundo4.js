@@ -2,7 +2,7 @@ var closeButton2;
 var popup2;
 var Mundo4 = {
     preload:function (){
-        game.load.image('paradero','../img/componentes/navegacionMapa//paraderoBogota.png');//dy
+        game.load.image('paradero','../img/componentes/navegacionMapa/paraderoBogota.png');//dy
         game.load.image('fondo', '../img/componentes/navegacionMapa/mapaNavegacionb.png');
         game.load.image('close', '../img/componentes/navegacionMapa/orb.png');
         game.load.spritesheet('nivel1', '../img/componentes/navegacionMapa/nivel1.png', 192,71);
