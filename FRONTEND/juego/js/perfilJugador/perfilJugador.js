@@ -26,7 +26,7 @@ var perfilJugador = function(game){};
             variablesPerfilJugador.MonedasPerfil = datosperfil["datos"].monedas;
             game.stage.backgroundColor = "#2451A6";
 		    game.add.sprite(80, 50,'avatar').scale.setTo(0.8);
-		
+
             game.add.button(5, 5,'botonVolver', this.verNavegacion, 1, 1, 0, 2);
             game.add.button(90, 290,'boton-personaje', this.verCampeones, 0, 0, 0, 0);
             game.add.button(450, 290,'boton-jefes', this.verJefes, 0, 0, 0, 0);
@@ -38,15 +38,15 @@ var perfilJugador = function(game){};
             game.add.text(590, 130, "Mundo: " +variablesPerfilJugador.MundoPerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
             game.add.text(360, 200, "Nivel: " +variablesPerfilJugador.NivelPerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
             game.add.text(590, 200, "Monedas: " +variablesPerfilJugador.MonedasPerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
-            
+            this.prueba();
             boot.verificarMusica("menu");
         },
-        
+
         verNavegacion: function(){
             game.state.start("navegacion");
             variablesBoot.sonidoBoton.play();
         },
-        
+
         verLogros: function(){
             game.state.start("logros");
             variablesBoot.sonidoBoton.play();
@@ -62,6 +62,21 @@ var perfilJugador = function(game){};
         verAlfanumercios:function(){
             game.state.start("desbloqueoPersonaje");
             variablesBoot.sonidoBoton.play();
+        },
+        prueba: function(){
+
+
+        var nom = document.getElementById("nombretxt").value;
+        var apel = document.getElementById("apellidotxt").value;
+        var apel = document.getElementById("apellidotxt").value;
+        
+        /*Guardando los datos en el LocalStorage*/
+        localStorage.setItem("Nombre", nom);
+        localStorage.setItem("Apellido", apel);
+        localStorage.setItem("Nombre", nom);
+        localStorage.setItem("Apellido", apel);
+
+
         },
 
         update : function(){
