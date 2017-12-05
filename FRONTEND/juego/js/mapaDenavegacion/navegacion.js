@@ -1,15 +1,15 @@
 vN = {// Variables encapsuladas del los botones y textos de los botones.
-    btMundo:null, 
-    btMundo2:null, 
-    btMundo3:null, 
-    btMundo4:null, 
+    btMundo:null,
+    btMundo2:null,
+    btMundo3:null,
+    btMundo4:null,
     btMundo5:null,
     btMundo6:null,
     btMundo7:null,
     btMundo8:null,
     btMundo9:null,
-    btMundo10:null, 
-    btMundo11:null, 
+    btMundo10:null,
+    btMundo11:null,
     btMundo12:null,
     btnCaja:null,
     text:0,
@@ -77,82 +77,83 @@ var navegacion = function(game){};
         botonCompraPersonajes = game.add.button(540, 5, 'botonCompraPersonajes', this.verCompraPersonajes, 0, 0, 0, 1);
         game.add.text(160, 20, datosperfil["datos"].monedas, {font: "16px Roboto", fill: "#ffffff"}); //Label monedas desde perfilJugador
         game.add.text(275, 20, datosperfil["datos"].experiencia, {font: "16px Roboto", fill: "#ffffff"}); //Label EXP desde perfilJugador
-       
+
         vN.btMundo = game.add.button (80, 60, 'pause13', this.mundo1, 0, 0, 0, 1);
         vN.btMundo.scale.setTo(0.8, 0.8);
         vN.btMundo.input.useHandCursor = true;
         vN.text = game.add.text(13,1, "1", { font: "40px Arial", fill: "#030300"});
         vN.btMundo.addChild(vN.text);
-    
+
         vN.btMundo2 = game.add.button (90, 500, 'pause13',this.mundo2, 0, 0, 0, 1);
         vN.btMundo2.scale.setTo(0.8, 0.8);
         vN.btMundo.input.useHandCursor = true;
         vN.text2 = game.add.text(13,1, "2", {font: "40px Arial", fill: "#030300"});
         vN.btMundo2.addChild(vN.text2);
-        
+
         vN.btMundo3 = game.add.button (250, 450, 'pause13', this.mundo3, 0, 0, 0, 1);
         vN.btMundo3.scale.setTo(0.8, 0.8);
         vN.text3 = game.add.text(13,1, "3", { font: "40px Arial", fill: "#030300"});
-        vN.btMundo3.addChild(vN.text3);    
+        vN.btMundo3.addChild(vN.text3);
 
         vN.btMundo4 = game.add.button (280, 220, 'pause13', this.mundo4, 0, 0, 0, 1);
         vN.btMundo4.scale.setTo(0.8, 0.8);
         vN.text4 = game.add.text(13,1, "4", { font: "40px Arial", fill: "#030300"});
         vN.btMundo4.addChild(vN.text4);
-        
+
         vN.btMundo5 = game.add.button (330, 80, 'pause13', this.mundo5, 0, 0, 0, 1);
         vN.btMundo5.scale.setTo(0.8, 0.8);
         vN.text5 = game.add.text(13,1, "5", { font: "40px Arial", fill: "#030300"});
-        vN.btMundo5.addChild(vN.text5);    
+        vN.btMundo5.addChild(vN.text5);
 
         vN.btMundo6 = game.add.button (430, 500, 'pause13', this.mundo6, 0, 0, 0, 1);
         vN.btMundo6.scale.setTo(0.8, 0.8);
         vN.text6 = game.add.text(13,1, "6", { font: "40px Arial", fill: "#030300"});
-        vN.btMundo6.addChild(vN.text6);    
+        vN.btMundo6.addChild(vN.text6);
 
         vN.btMundo7 = game.add.button (520, 220, 'pause13',this.mundo7, 0, 0, 0, 1);
         vN.btMundo7.scale.setTo(0.8, 0.8);
         vN.text7 = game.add.text(15,1, "7", { font: "40px Arial", fill: "#030300"});
         vN.btMundo7.addChild(vN.text7);
-        
+
         vN.btMundo8 = game.add.button (580, 200, 'pause13', this.mundo8, 0, 0, 0, 1);
         vN.btMundo8.scale.setTo(0.8, 0.8);
         vN.text8 = game.add.text(13,1, "8", { font: "40px Arial", fill: "#030300"});
-        vN.btMundo8.addChild(vN.text8);    
+        vN.btMundo8.addChild(vN.text8);
 
         vN.btMundo9 = game.add.button (550, 80, 'pause13', this.mundo9, 0, 0, 0, 1);
         vN.btMundo9.scale.setTo(0.8, 0.8);
         vN.text9 = game.add.text(13,1, "9", { font: "40px Arial", fill: "#030300"});
         vN.btMundo9.addChild(vN.text9);
-    
+
         vN.btMundo10 = game.add.button (680, 140, 'pause13', this.mundo10, 0, 0, 0, 1);
         vN.btMundo10.scale.setTo(0.8, 0.8);
         vN.text10 = game.add.text(6,3, "10", { font: "35px Arial", fill: "#030300"});
-        vN.btMundo10.addChild(vN.text10);    
-   
+        vN.btMundo10.addChild(vN.text10);
+
         vN.btMundo11 = game.add.button (700, 240, 'pause13', this.mundo11, 0, 0, 0, 1);
         vN.btMundo11.scale.setTo(0.8, 0.8);
         vN.text11 = game.add.text(9,3, "11", { font: "35px Arial", fill: "#030300"});
-        vN.btMundo11.addChild(vN.text11);    
+        vN.btMundo11.addChild(vN.text11);
 
         vN.btMundo12 = game.add.button (750, 480, 'pause14',this.mundo12, 0, 0, 0, 1);
         vN.btMundo12.scale.setTo(0.8, 0.8);
         vN.text12 = game.add.text(5,1, "12", { font: "35px Arial", fill: "#030300"});
         vN.btMundo12.addChild(vN.text12);
-        
+
         boot.verificarMusica("mapa");
     },
-  
+
     verAjustes: function(){
         variablesBoot.sonidoBoton.play();
         botonCreditos.visible =! botonCreditos.visible;
         botonSonido.visible =! botonSonido.visible;
         botonCerrarSesion.visible =! botonCerrarSesion.visible;
-    },        
+    },
     verCreditos: function(){
         game.state.start("creditos");
         variablesBoot.sonidoBoton.play();
     },
+    // No olvidar cambiar el icono de sonido , Santiago
     quitarSonido: function(){
             if(!variablesBoot.musicaOnOff){
                 variablesBoot.musicaOnOff = true;
@@ -170,7 +171,7 @@ var navegacion = function(game){};
     verInvitarAmigos: function(){
         game.state.start("invitarAmigos");
         variablesBoot.sonidoBoton.play();
-    },    
+    },
     verPerfil: function(){
         game.state.start("perfilJugador");
         variablesBoot.sonidoBoton.play();
@@ -178,17 +179,17 @@ var navegacion = function(game){};
     verCajaMisteriosa: function(){
         game.state.start("cajaMisteriosa");
         variablesBoot.sonidoBoton.play();
-    },     
+    },
     verRankings: function(){
         game.state.start("rankings");
         variablesBoot.sonidoBoton.play();
-    },    
+    },
     verCompraPersonajes: function(){
         game.state.start("compraPersonajes");
         variablesBoot.sonidoBoton.play();
     },
 //SE INICIA UN NUEVO ESTA DONDE ENRTARA A EL MUNDO ELEJIDO.
-        mundo1: function(){            
+        mundo1: function(){
             pruebasPsicotecnicas.setPrueba19(true);
             variablesBoot.sonidoBoton.play();
             game.state.start("Mundo1");
