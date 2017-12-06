@@ -1,11 +1,13 @@
 //Carga y validacion inicial de datos de perfil
+var mundoMayor=1;
+var nivelMundoMayor=1;
 function cargaInicial(){
 
 if(localStorage.length!=0){
 
+mundoMayor=parseInt(obtenerLocalStorage("Mundo"));
+nivelMundoMayor=parseInt(obtenerLocalStorage("NivelMundo"));
 
-
-  console.log("No esta vacio");
 
 
 }
@@ -19,10 +21,10 @@ else {
   añadirLocalStorage("Nickname",variablesPerfilJugador.NicknamePerfil);
   añadirLocalStorage("Xp",variablesPerfilJugador.ExperienciaPerfil);
   añadirLocalStorage("Oro",variablesPerfilJugador.MonedasPerfil);
-  añadirLocalStorage("NivelMundo",variablesPerfilJugador.NivelMundoPerfil);
+  añadirLocalStorage("NivelMundo",1);
   añadirLocalStorage("NivelPersonaje",variablesPerfilJugador.NivelPerfil);
-  añadirLocalStorage("Mundo",variablesPerfilJugador.MundoPerfil);
-console.log("Esta vacio");
+  añadirLocalStorage("Mundo",1);
+
 
 }
 
@@ -38,6 +40,8 @@ function nivelMundoLocalStorage(nivelo,validacion){
   if(validacion==0){
     var orotemp=parseInt(localStorage.getItem("Oro"));
     var xptemp=parseInt(localStorage.getItem("Xp"));
+    orotemp+=200;
+    xptemp+=100;
     var mundo;
     var nivel;
     for (var i = 0; i < nivelo.length; i++) {
@@ -55,24 +59,35 @@ function nivelMundoLocalStorage(nivelo,validacion){
         mundo=+nivelo.charAt(i);
         }
   }
-  console.log(nivelo);
-  console.log("NIVEL MUNDO " +nivel);
-  console.log("MUNDO " +mundo);
-    orotemp+=200;
-    xptemp+=100;
-
-
     añadirLocalStorage("Oro",orotemp);
     añadirLocalStorage("Xp",xptemp);
-    añadirLocalStorage("NivelMundo",nivel);
-    añadirLocalStorage("Mundo",mundo);
+    validarMundoyNivelMayor(nivel,mundo);
   }
   else {
     xptemp+=10;
     añadirLocalStorage("Xp",xptemp);
   }
 }
+function validarMundoyNivelMayor(nivelactual,mundoactual){
+  console.log("validando metodo");
+//caso base que permite avanzar de nivel 5 de x mundo al siguiente restableciendo nivel mayor a 1 del siguiente mundo
+if(nivelactual==5 && mundoMayor==mundoactual){
+this.nivelMundoMayor=1;
+this.mundoMayor=mundoMayor+1;
+console.log("nivel"+nivelMundoMayor);
+console.log("mundo"+mundoMayor);
+  añadirLocalStorage("NivelMundo",nivelMundoMayor);
+  añadirLocalStorage("Mundo",mundoMayor);
+}
+else if(nivelactual!=5 && mundoMayor==mundoactual){
+  this.nivelMundoMayor=nivelMundoMayor+1;
+  añadirLocalStorage("NivelMundo",nivelMundoMayor);
 
+}
+
+
+}
+//devuelve valor de la lla
 function obtenerLocalStorage (key){
 var valor;
 valor=localStorage.getItem(key);
