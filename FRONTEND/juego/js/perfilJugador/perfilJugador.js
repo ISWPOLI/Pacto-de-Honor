@@ -23,12 +23,7 @@ var perfilJugador = function(game){};
 
         create : function (){
 
-            variablesPerfilJugador.NicknamePerfil = datosperfil["datos"].nickname;
-            variablesPerfilJugador.MundoPerfil = datosperfil["datos"].mundo;
-            variablesPerfilJugador.NivelPerfil = datosperfil["datos"].nivel;
-            variablesPerfilJugador.MonedasPerfil = datosperfil["datos"].monedas;
-            variablesPerfilJugador.ExperienciaPerfil= datosperfil["datos"].experiencia;
-            variablesPerfilJugador.NivelMundoPerfil= datosperfil["datos"].escenario;
+
             game.stage.backgroundColor = "#2451A6";
 		    game.add.sprite(80, 50,'avatar').scale.setTo(0.8);
 
@@ -39,18 +34,13 @@ var perfilJugador = function(game){};
             game.add.button(450, 450,'boton-alfanumerico', this.verAlfanumercios, 0, 0, 0, 0);
 
             game.add.text(400, 50, "Perfil del usuario", {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
-            game.add.text(400, 100, "Nickname: " + variablesPerfilJugador.NicknamePerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
-            game.add.text(590, 100, "Mundo: " +variablesPerfilJugador.MundoPerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
-            game.add.text(360, 150, "Nivel: " +variablesPerfilJugador.NivelPerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
-            game.add.text(590, 150, "Monedas: " +variablesPerfilJugador.MonedasPerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
-            game.add.text(360, 200, "Experiencia: " +variablesPerfilJugador.ExperienciaPerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
-            game.add.text(590, 200, "Nivel Mundo: " +variablesPerfilJugador.NivelMundoPerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
-            añadirLocalStorage("Nickname",variablesPerfilJugador.NicknamePerfil);
-            añadirLocalStorage("Xp",variablesPerfilJugador.ExperienciaPerfil);
-            añadirLocalStorage("Oro",variablesPerfilJugador.MonedasPerfil);
-            añadirLocalStorage("NivelMundo",variablesPerfilJugador.NivelMundoPerfil);
-            añadirLocalStorage("NivelPersonaje",variablesPerfilJugador.NivelPerfil);
-            añadirLocalStorage("Mundo",variablesPerfilJugador.MundoPerfil);
+            game.add.text(400, 100, "Nickname: " + obtenerLocalStorage("Nickname"), {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
+            game.add.text(590, 100, "Mundo: " +obtenerLocalStorage("Mundo"), {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
+            game.add.text(360, 150, "Nivel: " +obtenerLocalStorage("NivelPersonaje"), {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
+            game.add.text(590, 150, "Monedas: " +obtenerLocalStorage("Oro"), {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
+            game.add.text(360, 200, "Experiencia: " +obtenerLocalStorage("Xp"), {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
+            game.add.text(590, 200, "Nivel Mundo: " +obtenerLocalStorage("NivelMundo"), {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
+
 
             boot.verificarMusica("menu");
         },
