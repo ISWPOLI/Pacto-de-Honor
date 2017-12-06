@@ -51,6 +51,7 @@ var navegacion = function(game){};
         game.load.spritesheet('botonPerfil', '../img/componentes/navegacionMapa/botonPerfil.png', 62, 62);
         game.load.spritesheet('botonRanking', '../img/componentes/navegacionMapa/botonRanking.png', 62, 62);
         game.load.spritesheet('botonSonido', '../img/componentes/navegacionMapa/botonSonido.png', 62, 62);
+
         game.load.spritesheet('botonCerrarSesion', '../img/componentes/navegacionMapa/botonCerrarSesion.png', 62, 62);
         game.load.spritesheet('botonAjustes', '../img/componentes/navegacionMapa/botonAjustes.png', 62, 62);
         //game.load.spritesheet('botonCajaSorpresa', '../img/componentes/cajas/cajam.png', 132, 216);
@@ -59,7 +60,7 @@ var navegacion = function(game){};
         game.load.spritesheet('pause12', '../img/componentes/navegacionMapa/pause12.png', 50,50);
         game.load.spritesheet('pause13', '../img/componentes/navegacionMapa/pause13.png', 50,50);
         game.load.spritesheet('pause14', '../img/componentes/navegacionMapa/pause14.png', 50,50);
-        
+
     },
 
     //se agrega el fondo y se crean los botones de los mundos en donde tenemos button(medida en x, medida en y, nombre de la imagen, la funcion, sprites)
@@ -164,10 +165,12 @@ var navegacion = function(game){};
             if(!variablesBoot.musicaOnOff){
                 variablesBoot.musicaOnOff = true;
                 variablesBoot.musicaMapa.resume();
+                botonSonido = game.add.button(735, 135, 'botonSonido', this.quitarSonido, 0, 0, 0, 1);
             }
         else{
             variablesBoot.musicaOnOff = false;
             variablesBoot.musicaMapa.pause();
+
         }
     },
     cerrarSesion: function(){
