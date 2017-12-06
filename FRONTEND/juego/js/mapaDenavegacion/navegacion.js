@@ -81,8 +81,8 @@ var navegacion = function(game){};
        //btnCaja = game.add.button(415, 5, 'botonCajaSorpresa', this.verCajaMisteriosa);//475
         vN.btnCaja = game.add.button(475, 5, 'botonCajaSorpresa', this.verCajaMisteriosa,1,1,0,2);//475
         botonCompraPersonajes = game.add.button(540, 5, 'botonCompraPersonajes', this.verCompraPersonajes, 0, 0, 0, 1);
-        game.add.text(160, 20, datosperfil["datos"].monedas, {font: "16px Roboto", fill: "#ffffff"}); //Label monedas desde perfilJugador
-        game.add.text(275, 20, datosperfil["datos"].experiencia, {font: "16px Roboto", fill: "#ffffff"}); //Label EXP desde perfilJugador
+        game.add.text(160, 20,obtenerLocalStorage("Oro") , {font: "16px Roboto", fill: "#ffffff"}); //Label monedas desde perfilJugador
+        game.add.text(275, 20, obtenerLocalStorage("Xp"), {font: "16px Roboto", fill: "#ffffff"}); //Label EXP desde perfilJugador
 
         vN.btMundo = game.add.button (80, 60, 'pause13', this.mundo1, 0, 0, 0, 1);
         vN.btMundo.scale.setTo(0.8, 0.8);
