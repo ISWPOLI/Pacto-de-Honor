@@ -1,5 +1,32 @@
+//Carga y validacion inicial de datos de perfil
+function cargaInicial(){
+
+if(localStorage.length!=0){
 
 
+
+  console.log("No esta vacio");
+
+
+}
+else {
+  variablesPerfilJugador.NicknamePerfil = datosperfil["datos"].nickname;
+  variablesPerfilJugador.MundoPerfil = datosperfil["datos"].mundo;
+  variablesPerfilJugador.NivelPerfil = datosperfil["datos"].nivel;
+  variablesPerfilJugador.MonedasPerfil = datosperfil["datos"].monedas;
+  variablesPerfilJugador.ExperienciaPerfil= datosperfil["datos"].experiencia;
+  variablesPerfilJugador.NivelMundoPerfil= datosperfil["datos"].escenario;
+  añadirLocalStorage("Nickname",variablesPerfilJugador.NicknamePerfil);
+  añadirLocalStorage("Xp",variablesPerfilJugador.ExperienciaPerfil);
+  añadirLocalStorage("Oro",variablesPerfilJugador.MonedasPerfil);
+  añadirLocalStorage("NivelMundo",variablesPerfilJugador.NivelMundoPerfil);
+  añadirLocalStorage("NivelPersonaje",variablesPerfilJugador.NivelPerfil);
+  añadirLocalStorage("Mundo",variablesPerfilJugador.MundoPerfil);
+console.log("Esta vacio");
+
+}
+
+}
 //Funcion que permite almacenar cualquier valor en el localstorage recibiendo la llave y su valor
 function añadirLocalStorage(key, valor) {
 
@@ -44,4 +71,10 @@ function nivelMundoLocalStorage(nivelo,validacion){
     xptemp+=10;
     añadirLocalStorage("Xp",xptemp);
   }
+}
+
+function obtenerLocalStorage (key){
+var valor;
+valor=localStorage.getItem(key);
+return valor;
 }

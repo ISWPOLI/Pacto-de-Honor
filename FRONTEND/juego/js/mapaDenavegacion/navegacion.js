@@ -59,7 +59,7 @@ var navegacion = function(game){};
         game.load.spritesheet('pause12', '../img/componentes/navegacionMapa/pause12.png', 50,50);
         game.load.spritesheet('pause13', '../img/componentes/navegacionMapa/pause13.png', 50,50);
         game.load.spritesheet('pause14', '../img/componentes/navegacionMapa/pause14.png', 50,50);
-        
+
     },
 
     //se agrega el fondo y se crean los botones de los mundos en donde tenemos button(medida en x, medida en y, nombre de la imagen, la funcion, sprites)
@@ -147,6 +147,7 @@ var navegacion = function(game){};
         vN.btMundo12.addChild(vN.text12);
 
         boot.verificarMusica("mapa");
+        cargaInicial();
     },
 
     verAjustes: function(){
@@ -196,6 +197,7 @@ var navegacion = function(game){};
         game.state.start("compraPersonajes");
         variablesBoot.sonidoBoton.play();
     },
+
 //SE INICIA UN NUEVO ESTA DONDE ENRTARA A EL MUNDO ELEJIDO.
         mundo1: function(){
             pruebasPsicotecnicas.setPrueba19(true);
