@@ -69,12 +69,10 @@ var navegacion = function(game){};
         game.add.sprite(220, 10, 'xp').scale.setTo(0.4);//Imagen experiencia.
        //BOTONES DE LOS NIVELES Y MENUS-
         botonCreditos = game.add.button(735, 70, 'botonCreditos', this.verCreditos, 0, 0, 0, 1);
-        botonSonidooff = game.add.button(735, 135, 'botonSonidooff', this.quitarSonido, 0, 0, 0, 1);
         botonSonido = game.add.button(735, 135, 'botonSonido', this.quitarSonido, 0, 0, 0, 1);
         botonCerrarSesion = game.add.button(735, 200, 'botonCerrarSesion', this.cerrarSesion, 0, 0, 0, 1);
         botonCreditos.visible = false;
         botonSonido.visible = false;
-        botonSonidooff.visible = false;
         botonCerrarSesion.visible = false;
         botonAjustes = game.add.button(735, 5, 'botonAjustes', this.verAjustes, 0, 0, 0, 1);
         botonAmigos = game.add.button(670, 5, 'botonAmigos', this.verInvitarAmigos, 0, 0, 0, 1);
@@ -243,12 +241,15 @@ var navegacion = function(game){};
         cargaInicial();
     },
 
+
+
     verAjustes: function(){
-        variablesBoot.sonidoBoton.play();
-        botonCreditos.visible =! botonCreditos.visible;
-        botonSonido.visible =! botonSonido.visible;
-        botonSonidooff.visible =! botonSonidooff.visible;
-        botonCerrarSesion.visible =! botonCerrarSesion.visible;
+
+  variablesBoot.sonidoBoton.play();
+  botonCreditos.visible =! botonCreditos.visible;
+  botonSonido.visible =! botonSonido.visible;
+  botonCerrarSesion.visible =! botonCerrarSesion.visible;
+
     },
     verCreditos: function(){
         game.state.start("creditos");
@@ -260,15 +261,11 @@ var navegacion = function(game){};
             if(!variablesBoot.musicaOnOff){
                 variablesBoot.musicaOnOff = true;
                 variablesBoot.musicaMapa.resume();
-                botonSonido.visible =true;
-                botonSonidooff.visible =false;
 
             }
         else{
             variablesBoot.musicaOnOff = false;
             variablesBoot.musicaMapa.pause();
-            botonSonidooff.visible =false;
-            botonSonidoo.visible =true;
 
         }
     },
