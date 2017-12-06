@@ -148,6 +148,7 @@ var navegacion = function(game){};
         vN.btMundo12.addChild(vN.text12);
 
         boot.verificarMusica("mapa");
+        cargaInicial();
     },
 
     verAjustes: function(){
@@ -199,6 +200,7 @@ var navegacion = function(game){};
         game.state.start("compraPersonajes");
         variablesBoot.sonidoBoton.play();
     },
+
 //SE INICIA UN NUEVO ESTA DONDE ENRTARA A EL MUNDO ELEJIDO.
         mundo1: function(){
             pruebasPsicotecnicas.setPrueba19(true);
