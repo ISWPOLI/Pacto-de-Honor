@@ -19,28 +19,28 @@ var Mundo2 = {
         // se agrega la posicion
         popup2.anchor.set(0.7);
         popup2.inputEnabled = true;
- 
+
         //se crean dos variables las cuales daran la ubicacion del boton de cerrar el popup
- 
+
         //se crea el botton cerrar del popup(medidas en x, medidas en y, nombre de la imgagen, nombre de la funcion, sprites)
         closeButton2 = game.add.button(95,-200, 'close', closeWindow, 0, 0, 0, 1);
         //se le da un tamaño
         closeButton2.scale.setTo(2, 2);
         //se agrega al popup
         popup2.addChild(closeButton2);
-        
+
         //se crean los 5 botones que son los que sirven para elegir nivel
         var nivelButton = game.add.button (180, -250, 'nivel1', iniciarNivel1, null, 2, 1, 0);
         function iniciarNivel1(){
             navegacion.prototype.iniciarNivel("2-1");
         }
-        
+
         nivelButton.inputEnabled = true;
         nivelButton.input.priorityID = 1;
         nivelButton.input.useHandCursor = true;
         //se agregan al popup
         popup2.addChild(nivelButton);
-    
+
 
         var nivelButton1 = game.add.button (180, -170, 'nivel2', iniciarNivel2, null, 2, 1, 0);
         function iniciarNivel2(){

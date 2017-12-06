@@ -159,6 +159,7 @@ var navegacion = function(game){};
         game.state.start("creditos");
         variablesBoot.sonidoBoton.play();
     },
+    // No olvidar cambiar el icono de sonido , Santiago
     quitarSonido: function(){
             if(!variablesBoot.musicaOnOff){
                 variablesBoot.musicaOnOff = true;

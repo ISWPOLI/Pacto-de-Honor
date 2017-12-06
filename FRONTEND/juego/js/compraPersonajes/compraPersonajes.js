@@ -3,22 +3,30 @@ variablesCompraPersonajes={
   friction :0.99,
   animals : ["pantera","gallo","cierva","jirafa","leon","canario","ruisenor","raton","hormiga"],
   // Nombres personajes Pacto de honor
-  names : ["Ana Pantera", 
+  names : ["Ana Pantera",
                      "Andrés Gallo",
-                     "Cata Cierva", 
-                     "Daniela Jirafa", 
-                     "Daniel León", 
-                     "Fabián Canario", 
-                     "Iván Ruiseñor", 
-                     "Pedro Ratón", 
+                     "Cata Cierva",
+                     "Daniela Jirafa",
+                     "Daniel León",
+                     "Fabián Canario",
+                     "Iván Ruiseñor",
+                     "Pedro Ratón",
                      "Tati Hormiga"],
   scrollText:null,
-  comprado : [false,true,false,false,false,false,false,false,true],
+  comprado : [true,false,false,false,false,false,false,false,false],
+//aca va la verificacion de local storage vs perfil
+
+
   animal:null,
-  monedas : 4000,
-  xp : 8000,
+  //igualamos a la cantidad de monedas que se tiene en el perfil del jugador
+  monedas : datosperfil["datos"].monedas,
+  //tener en cuenta que la experiencia se debe corregir
+  xp : 0,
+
+
+  //end de la validacion
   nickname:null,
-  startButton:null, 
+  startButton:null,
   botonVolver:null,
   compradoL:null,
   pos:null,
@@ -43,7 +51,7 @@ variablesCompraPersonajes={
   rMonedas : [1000, 500, 550, 600, 650, 800, 700, 650, 900],
 
   //Especificaciones de recompensas - puntos de experiencia
-  rExperiencia : [50, 10, 15, 20, 30, 35, 30, 30, 40]      
+  rExperiencia : [50, 10, 15, 20, 30, 35, 30, 30, 40]
 
 }
 var compraPersonajes = function(game){};
@@ -52,11 +60,11 @@ compraPersonajes.prototype = {
         // Se carga el sprite del botón de compra
         game.load.spritesheet('button', '../img/componentes/botones/SpriteButtonC.png', 140, 52);
     },
-    
-    create: function(){  
+
+    create: function(){
         // Se coloca como fondo de la ventana el color #2451A6
         game.stage.backgroundColor = "#2451A6";
-          
+
           // Se agrega un título para la ventana de tamaño 30 px
           // Se coloca en una posición especifica, con la instrucción ".anchor.set(0.5)" se centra en la posición dada
           game.add.text(game.width / 2, 50, "Compra de personajes", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5);
@@ -68,13 +76,13 @@ compraPersonajes.prototype = {
 
           // Se guarda la posición
           this.scrollingMap.savedPosition = new Phaser.Point(this.scrollingMap.x, this.scrollingMap.y);
-          this.scrollingMap.isBeingDragged = false; 
+          this.scrollingMap.isBeingDragged = false;
           this.scrollingMap.movingSpeed = 0;
 
           // Se especifica que el ScrollingMap será sólo horizontal
           this.scrollingMap.input.allowVerticalDrag = false;
           this.scrollingMap.input.boundsRect = new Phaser.Rectangle(game.width - this.scrollingMap.width, game.height - this.scrollingMap.height, this.scrollingMap.width * 2 - game.width, this.scrollingMap.height * 2 - game.height);
-          
+
           for(var i = 0; i < variablesCompraPersonajes.animals.length; i++){
                // See agregan las 9 imágenes cargadas previamente de los 9 personajes buenos
                variablesCompraPersonajes.animal = game.add.image(game.width / 2 + i * 90, 170, variablesCompraPersonajes.animals[i]);
@@ -116,20 +124,20 @@ compraPersonajes.prototype = {
             pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba5');
             pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba5('false');
          }
-         
+
           variablesCompraPersonajes.botonVolver = game.add.button(5, 5, 'botonVolver', this.verMapa, 1, 1, 0, 2);
 
           //compradoL = game.add.text(game.world.centerX, 510, "", { font: "20px Roboto", fill: "#ffffff", align: "center", backgroundColor: "#2451A6"});
           //compradoL.anchor.set(0.5);
-        
+
         pages = game.add.text(game.world.width/2, 235, null, { font: "14px Roboto", fill: "#ffffff"});
         pages.anchor.setTo(0.5);
         pages.alpha = 0.5;
-        
+
         boot.verificarMusica("menu");
 
      },
-     compra: function(){  
+     compra: function(){
      	if(variablesCompraPersonajes.comprado[variablesCompraPersonajes.pos]){
          variablesBoot.sonidoBoton.play();
      		alert("¡Ya posees este personaje!");
@@ -142,14 +150,18 @@ compraPersonajes.prototype = {
 	          	variablesCompraPersonajes.comprado[variablesCompraPersonajes.pos] = true;
 	          	alert("Personaje comprado exitosamente");
      		}
+        //mensaje en caso de que no se tenga el oro suficiente
+        else {
+          alert("Oro insuficiente");
+        }
      	}
      },
-    
+
     verMapa: function(){
         game.state.start("navegacion");
         variablesBoot.sonidoBoton.play();
     },
-    
+
     update:function(){
           // Se declara una variable llamada "zoomed" de tipo booleana, que representara cuando un elemento del scrolling map este seleccionada
           var zoomed = false;
@@ -176,7 +188,7 @@ compraPersonajes.prototype = {
                }
                else{
                     // Se vuelve al tamaño normal el resto de imágenes del scrollingMap
-                    this.scrollingMap.getChildAt(i).scale.setTo(1);   
+                    this.scrollingMap.getChildAt(i).scale.setTo(1);
                }
           }
           if(this.scrollingMap.isBeingDragged){
@@ -191,7 +203,7 @@ compraPersonajes.prototype = {
                          this.scrollingMap.x = game.width - this.scrollingMap.width;
                          this.scrollingMap.movingSpeed *= 0.5;
                          this.scrollingMap.movingangle += Math.PI;
-                         
+
                     }
                     // Cuando la posición en x dentro del scrollingMap este sobre el limite, no se debe mover más
                     if(this.scrollingMap.x > 0){
