@@ -14,11 +14,17 @@ variablesCompraPersonajes={
                      "Tati Hormiga"],
   scrollText:null,
   comprado : [true,false,false,false,false,false,false,false,false],
+//aca va la verificacion de local storage vs perfil
+
+
   animal:null,
   //igualamos a la cantidad de monedas que se tiene en el perfil del jugador
   monedas : datosperfil["datos"].monedas,
   //tener en cuenta que la experiencia se debe corregir
   xp : 0,
+
+
+  //end de la validacion
   nickname:null,
   startButton:null,
   botonVolver:null,
