@@ -22,6 +22,7 @@ var perfilJugador = function(game){};
         },
 
         create : function (){
+
             variablesPerfilJugador.NicknamePerfil = datosperfil["datos"].nickname;
             variablesPerfilJugador.MundoPerfil = datosperfil["datos"].mundo;
             variablesPerfilJugador.NivelPerfil = datosperfil["datos"].nivel;
@@ -44,12 +45,12 @@ var perfilJugador = function(game){};
             game.add.text(590, 150, "Monedas: " +variablesPerfilJugador.MonedasPerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
             game.add.text(360, 200, "Experiencia: " +variablesPerfilJugador.ExperienciaPerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
             game.add.text(590, 200, "Nivel Mundo: " +variablesPerfilJugador.NivelMundoPerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
-            Persona("Nickname",variablesPerfilJugador.NicknamePerfil);
-            Persona("Xp",variablesPerfilJugador.ExperienciaPerfil);
-            Persona("Oro",variablesPerfilJugador.MonedasPerfil);
-            Persona("NivelMundo",variablesPerfilJugador.NivelMundoPerfil);
-            Persona("NivelPersonaje",variablesPerfilJugador.NivelPerfil);
-            Persona("Mundo",variablesPerfilJugador.MundoPerfil);
+            añadirLocalStorage("Nickname",variablesPerfilJugador.NicknamePerfil);
+            añadirLocalStorage("Xp",variablesPerfilJugador.ExperienciaPerfil);
+            añadirLocalStorage("Oro",variablesPerfilJugador.MonedasPerfil);
+            añadirLocalStorage("NivelMundo",variablesPerfilJugador.NivelMundoPerfil);
+            añadirLocalStorage("NivelPersonaje",variablesPerfilJugador.NivelPerfil);
+            añadirLocalStorage("Mundo",variablesPerfilJugador.MundoPerfil);
 
             boot.verificarMusica("menu");
         },
