@@ -24,7 +24,12 @@ vN = {// Variables encapsuladas del los botones y textos de los botones.
     text10:0,
     text11:0,
     text12:0,
+
 };
+
+
+
+
 
 var navegacion = function(game){};
     navegacion.prototype = {
@@ -54,6 +59,7 @@ var navegacion = function(game){};
         game.load.spritesheet('pause12', '../img/componentes/navegacionMapa/pause12.png', 50,50);
         game.load.spritesheet('pause13', '../img/componentes/navegacionMapa/pause13.png', 50,50);
         game.load.spritesheet('pause14', '../img/componentes/navegacionMapa/pause14.png', 50,50);
+        
     },
 
     //se agrega el fondo y se crean los botones de los mundos en donde tenemos button(medida en x, medida en y, nombre de la imagen, la funcion, sprites)
@@ -174,6 +180,8 @@ var navegacion = function(game){};
     },
     verPerfil: function(){
         game.state.start("perfilJugador");
+
+
         variablesBoot.sonidoBoton.play();
     },
     verCajaMisteriosa: function(){
