@@ -48,7 +48,7 @@ var navegacion = function(game){};
         game.load.spritesheet('botonPerfil', '../img/componentes/navegacionMapa/botonPerfil.png', 62, 62);
         game.load.spritesheet('botonRanking', '../img/componentes/navegacionMapa/botonRanking.png', 62, 62);
         game.load.spritesheet('botonSonido', '../img/componentes/navegacionMapa/botonSonido.png', 62, 62);
-        game.load.spritesheet('botonSonido', '../img/componentes/navegacionMapa/botonSonidooff.png', 62, 62);
+        game.load.spritesheet('botonSonidooff', '../img/componentes/navegacionMapa/botonSonidooff.png', 62, 62);
         game.load.spritesheet('botonCerrarSesion', '../img/componentes/navegacionMapa/botonCerrarSesion.png', 62, 62);
         game.load.spritesheet('botonAjustes', '../img/componentes/navegacionMapa/botonAjustes.png', 62, 62);
         //game.load.spritesheet('botonCajaSorpresa', '../img/componentes/cajas/cajam.png', 132, 216);
@@ -146,6 +146,8 @@ var navegacion = function(game){};
 
         boot.verificarMusica("mapa");
     },
+
+
 
     verAjustes: function(){
 
