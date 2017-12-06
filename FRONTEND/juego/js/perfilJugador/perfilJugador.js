@@ -2,7 +2,9 @@ variablesPerfilJugador={
      NicknamePerfil:null,
      MonedasPerfil:null,
      NivelPerfil:null,
-     MundoPerfil:null
+     MundoPerfil:null,
+     ExperienciaPerfil:null,
+     NivelMundoPerfil:null
 }
 
 //var MundoPerfil;
@@ -20,13 +22,16 @@ var perfilJugador = function(game){};
         },
 
         create : function (){
+
             variablesPerfilJugador.NicknamePerfil = datosperfil["datos"].nickname;
             variablesPerfilJugador.MundoPerfil = datosperfil["datos"].mundo;
             variablesPerfilJugador.NivelPerfil = datosperfil["datos"].nivel;
             variablesPerfilJugador.MonedasPerfil = datosperfil["datos"].monedas;
+            variablesPerfilJugador.ExperienciaPerfil= datosperfil["datos"].experiencia;
+            variablesPerfilJugador.NivelMundoPerfil= datosperfil["datos"].escenario;
             game.stage.backgroundColor = "#2451A6";
 		    game.add.sprite(80, 50,'avatar').scale.setTo(0.8);
-		
+
             game.add.button(5, 5,'botonVolver', this.verNavegacion, 1, 1, 0, 2);
             game.add.button(90, 290,'boton-personaje', this.verCampeones, 0, 0, 0, 0);
             game.add.button(450, 290,'boton-jefes', this.verJefes, 0, 0, 0, 0);
@@ -34,19 +39,27 @@ var perfilJugador = function(game){};
             game.add.button(450, 450,'boton-alfanumerico', this.verAlfanumercios, 0, 0, 0, 0);
 
             game.add.text(400, 50, "Perfil del usuario", {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
-            game.add.text(400, 130, "Nickname: " + variablesPerfilJugador.NicknamePerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
-            game.add.text(590, 130, "Mundo: " +variablesPerfilJugador.MundoPerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
-            game.add.text(360, 200, "Nivel: " +variablesPerfilJugador.NivelPerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
-            game.add.text(590, 200, "Monedas: " +variablesPerfilJugador.MonedasPerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
-            
+            game.add.text(400, 100, "Nickname: " + variablesPerfilJugador.NicknamePerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
+            game.add.text(590, 100, "Mundo: " +variablesPerfilJugador.MundoPerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
+            game.add.text(360, 150, "Nivel: " +variablesPerfilJugador.NivelPerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
+            game.add.text(590, 150, "Monedas: " +variablesPerfilJugador.MonedasPerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
+            game.add.text(360, 200, "Experiencia: " +variablesPerfilJugador.ExperienciaPerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
+            game.add.text(590, 200, "Nivel Mundo: " +variablesPerfilJugador.NivelMundoPerfil, {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
+            añadirLocalStorage("Nickname",variablesPerfilJugador.NicknamePerfil);
+            añadirLocalStorage("Xp",variablesPerfilJugador.ExperienciaPerfil);
+            añadirLocalStorage("Oro",variablesPerfilJugador.MonedasPerfil);
+            añadirLocalStorage("NivelMundo",variablesPerfilJugador.NivelMundoPerfil);
+            añadirLocalStorage("NivelPersonaje",variablesPerfilJugador.NivelPerfil);
+            añadirLocalStorage("Mundo",variablesPerfilJugador.MundoPerfil);
+
             boot.verificarMusica("menu");
         },
-        
+
         verNavegacion: function(){
             game.state.start("navegacion");
             variablesBoot.sonidoBoton.play();
         },
-        
+
         verLogros: function(){
             game.state.start("logros");
             variablesBoot.sonidoBoton.play();
@@ -63,6 +76,7 @@ var perfilJugador = function(game){};
             game.state.start("desbloqueoPersonaje");
             variablesBoot.sonidoBoton.play();
         },
+
 
         update : function(){
 
