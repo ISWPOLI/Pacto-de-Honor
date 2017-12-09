@@ -154,7 +154,9 @@ var navegacion = function(game){};
 
 
     verAjustes: function(){
-
+//se valida si el menu esta abierto o cerrado, de la misma manera
+//se valida si el sonido esta activado o desactivado para ocultar
+//o mostrar los botones
   if (abierto==false) {
 
     variablesBoot.sonidoBoton.play();
@@ -192,17 +194,14 @@ else {
   }
 }
 
-
-
-
-
-
     },
     verCreditos: function(){
         game.state.start("creditos");
         variablesBoot.sonidoBoton.play();
     },
 
+//se corrige el codigo anterior y se agregan validaciones de
+//los botones de sonido
     quitarSonido: function(){
 
             if(variablesBoot.musicaOnOff==false){
@@ -215,10 +214,6 @@ else {
                 botonSonidooff.visible=false;
                 botonSonido.visible=true;
                 sonido=true;
-
-
-
-
             }
         else{
             variablesBoot.sonidoBoton.play();
@@ -229,7 +224,6 @@ else {
             botonSonido.visible=false;
             botonSonidooff.visible=true;
             sonido=false;
-
 
 
         }
