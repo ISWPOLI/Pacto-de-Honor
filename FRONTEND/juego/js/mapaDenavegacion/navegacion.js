@@ -26,10 +26,9 @@ vN = {// Variables encapsuladas del los botones y textos de los botones.
     text12:0,
 
 };
-
+var mundoctual;
 var abierto = false;
 var sonido = true;
-
 var navegacion = function(game){};
     navegacion.prototype = {
     preload: function() {
