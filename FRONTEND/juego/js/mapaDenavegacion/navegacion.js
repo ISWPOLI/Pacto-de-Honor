@@ -70,9 +70,11 @@ var navegacion = function(game){};
        //BOTONES DE LOS NIVELES Y MENUS-
         botonCreditos = game.add.button(735, 70, 'botonCreditos', this.verCreditos, 0, 0, 0, 1);
         botonSonido = game.add.button(735, 135, 'botonSonido', this.quitarSonido, 0, 0, 0, 1);
+        botonSonidooff = game.add.button(735, 135, 'botonSonidooff', this.quitarSonido, 0, 0, 0, 1);
         botonCerrarSesion = game.add.button(735, 200, 'botonCerrarSesion', this.cerrarSesion, 0, 0, 0, 1);
         botonCreditos.visible = false;
         botonSonido.visible = false;
+        botonSonidooff.visible = false;
         botonCerrarSesion.visible = false;
         botonAjustes = game.add.button(735, 5, 'botonAjustes', this.verAjustes, 0, 0, 0, 1);
         botonAmigos = game.add.button(670, 5, 'botonAmigos', this.verInvitarAmigos, 0, 0, 0, 1);
@@ -244,28 +246,77 @@ var navegacion = function(game){};
 
 
     verAjustes: function(){
+//se valida si el menu esta abierto o cerrado, de la misma manera
+//se valida si el sonido esta activado o desactivado para ocultar
+//o mostrar los botones
+  if (abierto==false) {
 
+    variablesBoot.sonidoBoton.play();
+    botonCreditos.visible =! botonCreditos.visible;
+    botonCerrarSesion.visible =! botonCerrarSesion.visible;
+
+    if (sonido==true) {
+
+      botonSonido.visible =true;
+      botonSonidooff.visible=false;
+      abierto=true;
+    }
+    else{
+
+      botonSonido.visible =false;
+      botonSonidooff.visible=true;
+      abierto=true;
+    }
+}
+else {
   variablesBoot.sonidoBoton.play();
   botonCreditos.visible =! botonCreditos.visible;
-  botonSonido.visible =! botonSonido.visible;
   botonCerrarSesion.visible =! botonCerrarSesion.visible;
+  if (sonido==true) {
+
+    botonSonido.visible =false;
+    botonSonidooff.visible=false;
+    abierto=false;
+  }
+  else{
+
+    botonSonido.visible =false;
+    botonSonidooff.visible=false;
+    abierto=false;
+  }
+}
 
     },
     verCreditos: function(){
         game.state.start("creditos");
         variablesBoot.sonidoBoton.play();
     },
-    // se valida para quitar el sonido y cambier el boton que se va a mostrar
-    //desactivar sonido:azul o activar sonido:gris
+
+//se corrige el codigo anterior y se agregan validaciones de
+//los botones de sonido
     quitarSonido: function(){
-            if(!variablesBoot.musicaOnOff){
+
+            if(variablesBoot.musicaOnOff==false){
+                variablesBoot.sonidoBoton.play();
                 variablesBoot.musicaOnOff = true;
                 variablesBoot.musicaMapa.resume();
 
+
+                botonSonidooff.visible=false;
+                botonSonidooff.visible=false;
+                botonSonido.visible=true;
+                sonido=true;
             }
         else{
+            variablesBoot.sonidoBoton.play();
             variablesBoot.musicaOnOff = false;
             variablesBoot.musicaMapa.pause();
+
+            botonSonido.visible=false;
+            botonSonido.visible=false;
+            botonSonidooff.visible=true;
+            sonido=false;
+
 
         }
     },
