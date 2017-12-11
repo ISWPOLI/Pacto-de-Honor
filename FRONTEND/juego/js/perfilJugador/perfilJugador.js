@@ -7,9 +7,6 @@ variablesPerfilJugador={
      NivelMundoPerfil:null
 }
 
-//var MundoPerfil;
-//var NivelPerfil;
-//var MonedasPerfil;
 
 var perfilJugador = function(game){};
     perfilJugador.prototype = {
