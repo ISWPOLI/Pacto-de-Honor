@@ -2,7 +2,7 @@
 var mundoMayor=1;
 var nivelMundoMayor=1;
 function cargaInicial(){
-//Verificacion de local storage si es o no vacio
+//Verificacion de local storage si esta vacio
 if(localStorage.length!=0){
 
 mundoMayor=parseInt(obtenerLocalStorage("Mundo"));
