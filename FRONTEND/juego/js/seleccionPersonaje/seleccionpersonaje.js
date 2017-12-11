@@ -10,9 +10,8 @@ variablesSeleccionPersonaje={
 var seleccionpersonaje = function(game){};
 seleccionpersonaje.prototype = {
     preload: function(){
-        
      },
-    
+
     create: function(){
         variablesSeleccionPersonaje.niveles=[];
         game.stage.backgroundColor = "#2451A6"; //Fondo
@@ -23,9 +22,9 @@ seleccionpersonaje.prototype = {
         variablesSeleccionPersonaje.avatarSeleccionado = game.add.image (270, 550, null); //Se crea una imagen vacia para el pj seleccionado
         variablesSeleccionPersonaje.avatarSeleccionado.anchor.setTo(0.5);
         variablesSeleccionPersonaje.avatarSeleccionado.scale.setTo(0.5);
-        variablesSeleccionPersonaje.txtSeleccionado.visible = false; 
+        variablesSeleccionPersonaje.txtSeleccionado.visible = false;
         variablesSeleccionPersonaje.avatarSeleccionado.visible = false; //Se ocultan el texto y la imagen del pj seleccionado
-        
+
         //Se crean los botones de los personajes
         variablesSeleccionPersonaje.botones[0] = game.add.button(175, 75, 'botonPantera', this.clickPantera, 0, 0, 0, 1);
         variablesSeleccionPersonaje.botones[1] = game.add.button(325, 75, 'botonGallo', this.clickGallo, 0, 0, 0, 1);
@@ -52,7 +51,7 @@ seleccionpersonaje.prototype = {
         if(startButton==true){
             pruebasPsicotecnicas.pruebasPsicotecnicas.getElementsByTagName('getPrueba1');
             pruebasPsicotecnicas.pruebasPsicotecnicas.setPrueba1('false');
-        }     
+        }
         $.each(personajesBuenos, function (key, data) {
             variablesSeleccionPersonaje.niveles.push(personajesBuenos[key].nivel);
         });
@@ -65,12 +64,12 @@ seleccionpersonaje.prototype = {
         }
         boot.verificarMusica("menu");
     },
-    
+
     verNavegacion: function(){
         variablesBoot.sonidoBoton.play();
         game.state.start("navegacion");
     },
-                         
+
     //Cada una de las siguientes funciones modifica la variable del campo de batalla idPJ y hace visible el texto y la imagen del pj seleccionado
     clickPantera: function(){
         variablesCampoBatalla.idPJ="idPUno";
@@ -142,7 +141,7 @@ seleccionpersonaje.prototype = {
         variablesSeleccionPersonaje.avatarSeleccionado.visible = true;
         variablesBoot.sonidoBoton.play();
     },
-    
+
     verbatalla: function () {
         variablesBoot.sonidoBoton.play();
         if(variablesCampoBatalla.idPJ == null){
