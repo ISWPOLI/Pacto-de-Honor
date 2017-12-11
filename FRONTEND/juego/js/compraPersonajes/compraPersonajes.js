@@ -13,14 +13,13 @@ variablesCompraPersonajes={
                      "Pedro Ratón",
                      "Tati Hormiga"],
   scrollText:null,
+  //local storage
+  //se llama el arreglo desde local storage
   comprado : [true,false,false,false,false,false,false,false,false],
-//aca va la verificacion de local storage vs perfil
-
 
   animal:null,
-  //igualamos a la cantidad de monedas que se tiene en el perfil del jugador
   monedas : datosperfil["datos"].monedas,
-  //tener en cuenta que la experiencia se debe corregir
+  //se llama la experiencia desde local storage
   xp : 0,
 
 
