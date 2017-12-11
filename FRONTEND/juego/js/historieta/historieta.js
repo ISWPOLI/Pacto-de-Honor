@@ -8,7 +8,7 @@ historieta.prototype = {
          game.load.spritesheet('historieta', '../img/componentes/historieta/historieta.png', 800, 600);
          game.load.spritesheet('button', '../img/componentes/botones/botonSaltar.png', 150, 40);
      },
-    
+
      create: function(){
 
         variablesBoot.musicaMapa.play();
@@ -18,9 +18,11 @@ historieta.prototype = {
         variablesHistorieta.button = game.add.button (game.world.width - 100, game.world.height - 100, 'button', this.verMapa, this, 2 ,1, 0);
         variablesHistorieta.button.anchor.setTo (0.5, 0.5);
      },
-    
+
     verMapa: function(){
         this.state.start("navegacion");
         variablesBoot.sonidoBoton.play();
+
+
     }
-} 
+}
