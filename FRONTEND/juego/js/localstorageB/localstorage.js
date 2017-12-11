@@ -1,6 +1,12 @@
 //Carga y validacion inicial de datos de perfil
 var mundoMayor=1;
 var nivelMundoMayor=1;
+//arreglo niveles de campeones
+var Npersonaje = [1,1,1,1,1,1,1,1,1];
+//arreglo campoenes comprados
+var CampeonesComprados = [true, false,false ,false , false,false ,false ,false,false ];
+
+
 function cargaInicial(){
 //Verificacion de local storage si esta vacio
 if(localStorage.length!=0){
@@ -24,6 +30,9 @@ else {
   añadirLocalStorage("NivelMundo",1);
   añadirLocalStorage("NivelPersonaje",variablesPerfilJugador.NivelPerfil);
   añadirLocalStorage("Mundo",1);
+añadirLocalStorage("NivelPersonaje",Npersonaje);
+añadirLocalStorage("CampeonesComprados",CampeonesComprados);
+
 
 
 }
@@ -32,7 +41,7 @@ else {
 //Funcion que permite almacenar cualquier valor en el localstorage recibiendo la llave y su valor
 function añadirLocalStorage(key, valor) {
 
-  localStorage.setItem(key, valor);
+  localStorage.setItem(key, JSON.stringify(valor));
 
 }
 //funcion encargada de dar al localStorage el mundo y nivel actual si gana
@@ -85,11 +94,24 @@ else if(nivelactual!=5 && mundoMayor==mundoactual){
 
 }
 
+//metodo para añadir al arreglo NIVELES
+function SumarNivelHeroe (key, indice , valor){
+
+this.Npersonaje[indice]=valor;
+añañadirLocalStorage(key,valor);
+
+}
+function HeroeComprado(){
+
+
+
+}
 
 }
 //devuelve valor de la lla
 function obtenerLocalStorage (key){
 var valor;
-valor=localStorage.getItem(key);
+
+valor=JSON.parse(localStorage.getItem(key));;
 return valor;
 }
