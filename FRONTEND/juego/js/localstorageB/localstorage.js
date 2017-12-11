@@ -30,7 +30,7 @@ else {
   añadirLocalStorage("NivelMundo",1);
   añadirLocalStorage("NivelPersonaje",variablesPerfilJugador.NivelPerfil);
   añadirLocalStorage("Mundo",1);
-añadirLocalStorage("NivelPersonaje",Npersonaje);
+añadirLocalStorage("NivelPersonajes",Npersonaje);
 añadirLocalStorage("CampeonesComprados",CampeonesComprados);
 
 
