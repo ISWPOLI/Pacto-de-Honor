@@ -1,6 +1,6 @@
 var datosperfil = {
 	"datos" : {
-		"nickname" : "user123",
+		"nickname" : "Yamideus",
 		"avatar" : "Ruta de la imagen",
 		"mundo" : 0,
 		"escenario" : 0,
