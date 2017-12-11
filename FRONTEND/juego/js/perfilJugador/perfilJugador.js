@@ -7,10 +7,6 @@ variablesPerfilJugador={
      NivelMundoPerfil:null
 }
 
-//var MundoPerfil;
-//var NivelPerfil;
-//var MonedasPerfil;
-
 var perfilJugador = function(game){};
     perfilJugador.prototype = {
         preload : function(){
@@ -25,7 +21,7 @@ var perfilJugador = function(game){};
 
 
             game.stage.backgroundColor = "#2451A6";
-		    game.add.sprite(80, 50,'avatar').scale.setTo(0.8);
+    		    game.add.sprite(80, 50,'avatar').scale.setTo(0.8);
 
             game.add.button(5, 5,'botonVolver', this.verNavegacion, 1, 1, 0, 2);
             game.add.button(90, 290,'boton-personaje', this.verCampeones, 0, 0, 0, 0);
@@ -66,7 +62,6 @@ var perfilJugador = function(game){};
             game.state.start("desbloqueoPersonaje");
             variablesBoot.sonidoBoton.play();
         },
-
 
         update : function(){
 
