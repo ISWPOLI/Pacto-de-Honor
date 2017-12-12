@@ -101,9 +101,10 @@ this.Npersonaje[indice]=valor;
 añañadirLocalStorage(key,valor);
 
 }
-function HeroeComprado(){
-
-
+//metodo para añadir al  arreglo de heroes comrpados
+function HeroeComprado(key,indice,valor){
+this.CampeonesComprados[indice]=valor;
+añañadirLocalStorage(key,valor);
 
 }
 
