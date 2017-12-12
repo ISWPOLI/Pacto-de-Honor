@@ -2,7 +2,7 @@
 var mundoMayor=1;
 var nivelMundoMayor=1;
 //arreglo niveles de campeones
-var Npersonaje = [1,1,1,1,1,1,1,1,1];
+var Npersonaje = [0,0,0,0,0,0,0,0,0];
 //arreglo campoenes comprados
 var CampeonesComprados = [true, false,false ,false , false,false ,false ,false,false ];
 
@@ -98,12 +98,13 @@ else if(nivelactual!=5 && mundoMayor==mundoactual){
 function SumarNivelHeroe (key, indice , valor){
 
 this.Npersonaje[indice]=valor;
-añañadirLocalStorage(key,valor);
+añañadirLocalStorage(key,Npersonaje);
 
 }
-function HeroeComprado(){
-
-
+//metodo para añadir al  arreglo de heroes comrpados
+function HeroeComprado(key,indice,valor){
+this.CampeonesComprados[indice]=valor;
+añañadirLocalStorage(key,CampeonesComprados);
 
 }
 
