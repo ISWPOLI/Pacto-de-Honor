@@ -292,6 +292,7 @@ var navegacion = function(game){};
     verCreditos: function(){
         game.state.start("creditos");
         variablesBoot.sonidoBoton.play();
+        abierto=false;
     },
 
       //se corrige el codigo anterior y se agregan validaciones de
@@ -327,24 +328,29 @@ quitarSonido: function(){
     verInvitarAmigos: function(){
         game.state.start("invitarAmigos");
         variablesBoot.sonidoBoton.play();
+        abierto=false;
     },
     verPerfil: function(){
         game.state.start("perfilJugador");
 
 
         variablesBoot.sonidoBoton.play();
+        abierto=false;
     },
     verCajaMisteriosa: function(){
         game.state.start("cajaMisteriosa");
         variablesBoot.sonidoBoton.play();
+        abierto=false;
     },
     verRankings: function(){
         game.state.start("rankings");
         variablesBoot.sonidoBoton.play();
+        abierto=false;
     },
     verCompraPersonajes: function(){
         game.state.start("compraPersonajes");
         variablesBoot.sonidoBoton.play();
+        abierto=false;
     },
 //SE INICIA UN NUEVO ESTA DONDE ENRTARA A EL MUNDO ELEJIDO.
         mundo1: function(){
