@@ -33,7 +33,7 @@ var navegacion = function(game){};
     navegacion.prototype = {
     preload: function() {
     	//Se agregan las imagenes y los sptritesheets.
-      cargaInicial();
+    
         game.load.spritesheet('btMundo2', '../img/componentes/navegacionMapa/pause.png', 50,50);
         game.load.image('monedas', '../img/componentes/navegacionMapa/monedas.png');
         game.load.image('xp', '../img/componentes/finBatalla/experiencia.png');
