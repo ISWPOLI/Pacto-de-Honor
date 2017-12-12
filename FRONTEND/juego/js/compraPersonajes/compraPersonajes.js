@@ -13,15 +13,15 @@ variablesCompraPersonajes={
                      "Pedro Ratón",
                      "Tati Hormiga"],
   scrollText:null,
-  comprado : obtenerLocalStorage("CampeonesComprados"),
+  comprado : [true,false,false,false,false,false,false,false,false],
 //aca va la verificacion de local storage vs perfil
 
 
   animal:null,
   //igualamos a la cantidad de monedas que se tiene en el perfil del jugador
-  monedas : obtenerLocalStorage("Oro"),
+  monedas : datosperfil["datos"].monedas,
   //tener en cuenta que la experiencia se debe corregir
-  xp : obtenerLocalStorage("Xp"),
+  xp : 0,
 
 
   //end de la validacion
@@ -62,6 +62,7 @@ compraPersonajes.prototype = {
     },
 
     create: function(){
+  
         // Se coloca como fondo de la ventana el color #2451A6
         game.stage.backgroundColor = "#2451A6";
 
@@ -138,6 +139,8 @@ compraPersonajes.prototype = {
 
      },
      compra: function(){
+       console.log(variablesCompraPersonajes.monedas);
+       console.log(variablesCompraPersonajes.xp);
      	if(variablesCompraPersonajes.comprado[variablesCompraPersonajes.pos]){
          variablesBoot.sonidoBoton.play();
      		alert("¡Ya posees este personaje!");
