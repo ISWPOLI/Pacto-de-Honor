@@ -33,6 +33,7 @@ var navegacion = function(game){};
     navegacion.prototype = {
     preload: function() {
     	//Se agregan las imagenes y los sptritesheets.
+    
         game.load.spritesheet('btMundo2', '../img/componentes/navegacionMapa/pause.png', 50,50);
         game.load.image('monedas', '../img/componentes/navegacionMapa/monedas.png');
         game.load.image('xp', '../img/componentes/finBatalla/experiencia.png');
@@ -64,6 +65,7 @@ var navegacion = function(game){};
 
     //se agrega el fondo y se crean los botones de los mundos en donde tenemos button(medida en x, medida en y, nombre de la imagen, la funcion, sprites)
     create:function() {
+
         mundoctual = parseInt(obtenerLocalStorage('Mundo'));
         game.add.sprite(0, 0, 'fondo');//Se agrega un fondo.
         game.add.sprite(80, 10, 'monedas');//imagen monedas
@@ -242,6 +244,7 @@ var navegacion = function(game){};
         }
         boot.verificarMusica("mapa");
         cargaInicial();
+
     },
 
 

@@ -2,7 +2,7 @@
 var mundoMayor=1;
 var nivelMundoMayor=1;
 //arreglo niveles de campeones
-var Npersonaje = [1,1,1,1,1,1,1,1,1];
+var Npersonaje = [0,0,0,0,0,0,0,0,0];
 //arreglo campoenes comprados
 var CampeonesComprados = [true, false,false ,false , false,false ,false ,false,false ];
 
@@ -13,17 +13,23 @@ if(localStorage.length!=0){
 
 mundoMayor=parseInt(obtenerLocalStorage("Mundo"));
 nivelMundoMayor=parseInt(obtenerLocalStorage("NivelMundo"));
-
+variablesCompraPersonajes.monedas = obtenerLocalStorage("Oro");
+variablesCompraPersonajes.xp = obtenerLocalStorage("Xp");
+variablesCompraPersonajes.comprado = obtenerLocalStorage("CampeonesComprados");
 
 
 }
 else {
+
   variablesPerfilJugador.NicknamePerfil = datosperfil["datos"].nickname;
   variablesPerfilJugador.MundoPerfil = datosperfil["datos"].mundo;
   variablesPerfilJugador.NivelPerfil = datosperfil["datos"].nivel;
   variablesPerfilJugador.MonedasPerfil = datosperfil["datos"].monedas;
   variablesPerfilJugador.ExperienciaPerfil= datosperfil["datos"].experiencia;
   variablesPerfilJugador.NivelMundoPerfil= datosperfil["datos"].escenario;
+  variablesCompraPersonajes.monedas = datosperfil["datos"].monedas;
+  variablesCompraPersonajes.xp = datosperfil["datos"].experiencia;
+  variablesCompraPersonajes.comprado = CampeonesComprados;
   añadirLocalStorage("Nickname",variablesPerfilJugador.NicknamePerfil);
   añadirLocalStorage("Xp",variablesPerfilJugador.ExperienciaPerfil);
   añadirLocalStorage("Oro",variablesPerfilJugador.MonedasPerfil);
@@ -98,20 +104,22 @@ else if(nivelactual!=5 && mundoMayor==mundoactual){
 function SumarNivelHeroe (key, indice , valor){
 
 this.Npersonaje[indice]=valor;
-añañadirLocalStorage(key,valor);
+añañadirLocalStorage(key,Npersonaje);
 
 }
-function HeroeComprado(){
-
-
+//metodo para añadir al  arreglo de heroes comrpados
+function HeroeComprado(key,indice,valor){
+this.CampeonesComprados[indice]=valor;
+añañadirLocalStorage(key,CampeonesComprados);
 
 }
 
 }
+
 //devuelve valor de la lla
 function obtenerLocalStorage (key){
 var valor;
 
-valor=JSON.parse(localStorage.getItem(key));;
+valor=JSON.parse(localStorage.getItem(key));
 return valor;
 }
