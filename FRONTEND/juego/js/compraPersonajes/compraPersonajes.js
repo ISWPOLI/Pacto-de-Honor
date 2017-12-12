@@ -13,15 +13,15 @@ variablesCompraPersonajes={
                      "Pedro Ratón",
                      "Tati Hormiga"],
   scrollText:null,
-  comprado : [true,false,false,false,false,false,false,false,false],
+  comprado : obtenerLocalStorage("CampeonesComprados"),
 //aca va la verificacion de local storage vs perfil
 
 
   animal:null,
   //igualamos a la cantidad de monedas que se tiene en el perfil del jugador
-  monedas : datosperfil["datos"].monedas,
+  monedas : obtenerLocalStorage("Oro"),
   //tener en cuenta que la experiencia se debe corregir
-  xp : 0,
+  xp : obtenerLocalStorage("Xp"),
 
 
   //end de la validacion
