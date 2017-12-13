@@ -19,7 +19,7 @@ variablesCompraPersonajes={
 
   animal:null,
   //igualamos a la cantidad de monedas que se tiene en el perfil del jugador
-  monedas : datosperfil["datos"].moneda,
+  monedas : datosperfil["datos"].monedas,
   //tener en cuenta que la experiencia se debe corregir
   xp : datosperfil["datos"].experiencia,
 
@@ -139,6 +139,8 @@ compraPersonajes.prototype = {
 
      },
      compra: function(){
+       variablesCompraPersonajes.monedas=obtenerLocalStorage('Oro');
+       variablesCompraPersonajes.experiencia=obtenerLocalStorage('Xp');
        console.log(variablesCompraPersonajes.monedas);
        console.log(variablesCompraPersonajes.xp);
      	if(variablesCompraPersonajes.comprado[variablesCompraPersonajes.pos]){
