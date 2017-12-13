@@ -21,7 +21,7 @@ variablesCompraPersonajes={
   //igualamos a la cantidad de monedas que se tiene en el perfil del jugador
   monedas : datosperfil["datos"].monedas,
   //tener en cuenta que la experiencia se debe corregir
-  xp : 0,
+  xp : datosperfil["datos"].experiencia,
 
 
   //end de la validacion
@@ -62,7 +62,7 @@ compraPersonajes.prototype = {
     },
 
     create: function(){
-  
+
         // Se coloca como fondo de la ventana el color #2451A6
         game.stage.backgroundColor = "#2451A6";
 
@@ -139,6 +139,8 @@ compraPersonajes.prototype = {
 
      },
      compra: function(){
+       variablesCompraPersonajes.monedas=obtenerLocalStorage('Oro');
+       variablesCompraPersonajes.experiencia=obtenerLocalStorage('Xp');
        console.log(variablesCompraPersonajes.monedas);
        console.log(variablesCompraPersonajes.xp);
      	if(variablesCompraPersonajes.comprado[variablesCompraPersonajes.pos]){
@@ -148,10 +150,14 @@ compraPersonajes.prototype = {
      		//Si no ha comprado el personaje, realiza el proceso necesario para su compra y recibir las recompensas
      		if(variablesCompraPersonajes.monedas >= variablesCompraPersonajes.cMonedas[variablesCompraPersonajes.pos]){
      			//Si tiene suficientes monedas
+
 	          	variablesCompraPersonajes.monedas = variablesCompraPersonajes.monedas - variablesCompraPersonajes.cMonedas[variablesCompraPersonajes.pos] + variablesCompraPersonajes.rMonedas[variablesCompraPersonajes.pos];
 	          	variablesCompraPersonajes.xp = variablesCompraPersonajes.xp + variablesCompraPersonajes.rExperiencia[variablesCompraPersonajes.pos];
 	          	variablesCompraPersonajes.comprado[variablesCompraPersonajes.pos] = true;
 	          	alert("Personaje comprado exitosamente");
+              añadirLocalStorage('Oro',variablesCompraPersonajes.monedas);
+              añadirLocalStorage('Xp',variablesCompraPersonajes.xp);
+              añadirLocalStorage('CampeonesComprados',variablesCompraPersonajes.comprado);
      		}
         //mensaje en caso de que no se tenga el oro suficiente
         else {

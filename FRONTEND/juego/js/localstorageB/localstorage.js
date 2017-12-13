@@ -13,8 +13,8 @@ if(localStorage.length!=0){
 
 mundoMayor=parseInt(obtenerLocalStorage("Mundo"));
 nivelMundoMayor=parseInt(obtenerLocalStorage("NivelMundo"));
-variablesCompraPersonajes.monedas = obtenerLocalStorage("Oro");
-variablesCompraPersonajes.xp = obtenerLocalStorage("Xp");
+datosperfil.monedas = obtenerLocalStorage('Oro');
+datosperfil.experiencia = obtenerLocalStorage("Xp");
 variablesCompraPersonajes.comprado = obtenerLocalStorage("CampeonesComprados");
 
 
