@@ -13,17 +13,23 @@ if(localStorage.length!=0){
 
 mundoMayor=parseInt(obtenerLocalStorage("Mundo"));
 nivelMundoMayor=parseInt(obtenerLocalStorage("NivelMundo"));
-
+datosperfil.monedas = obtenerLocalStorage('Oro');
+datosperfil.experiencia = obtenerLocalStorage("Xp");
+variablesCompraPersonajes.comprado = obtenerLocalStorage("CampeonesComprados");
 
 
 }
 else {
+
   variablesPerfilJugador.NicknamePerfil = datosperfil["datos"].nickname;
   variablesPerfilJugador.MundoPerfil = datosperfil["datos"].mundo;
   variablesPerfilJugador.NivelPerfil = datosperfil["datos"].nivel;
   variablesPerfilJugador.MonedasPerfil = datosperfil["datos"].monedas;
   variablesPerfilJugador.ExperienciaPerfil= datosperfil["datos"].experiencia;
   variablesPerfilJugador.NivelMundoPerfil= datosperfil["datos"].escenario;
+  variablesCompraPersonajes.monedas = datosperfil["datos"].monedas;
+  variablesCompraPersonajes.xp = datosperfil["datos"].experiencia;
+  variablesCompraPersonajes.comprado = CampeonesComprados;
   añadirLocalStorage("Nickname",variablesPerfilJugador.NicknamePerfil);
   añadirLocalStorage("Xp",variablesPerfilJugador.ExperienciaPerfil);
   añadirLocalStorage("Oro",variablesPerfilJugador.MonedasPerfil);
@@ -109,10 +115,11 @@ añañadirLocalStorage(key,CampeonesComprados);
 }
 
 }
+
 //devuelve valor de la lla
 function obtenerLocalStorage (key){
 var valor;
 
-valor=JSON.parse(localStorage.getItem(key));;
+valor=JSON.parse(localStorage.getItem(key));
 return valor;
 }
