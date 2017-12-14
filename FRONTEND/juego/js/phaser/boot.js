@@ -91,11 +91,11 @@ var boot ={
 
     //Función para verificar el nivel de los Personajes
     verificarNivelPersonajes: function(){
-       var i=0;
-       var expp=[0,0,0,0,0,0,0,0,0,0];
+      // var i=0;
+      // var expp=[0,0,0,0,0,0,0,0,0];
        $.each(personajesBuenos, function (key, data) { //Recorre todos los objetos dentro de personajesBuenos (archivo personajes.js)
-          expp[i]=personajesBuenos[key].exp;
-          i=i+1;
+          //expp[i]=personajesBuenos[key].exp;
+          //i=i+1;
             var nuevoNivelPJ = 0; //Variable de ayuda para el nivel de personaje
             $.each(nivelPersonaje, function (key2, data2) { //Recorre todos los objetos dentro de NivelPersonaje (archivo nivelExperiencia.js)
 
@@ -112,7 +112,7 @@ var boot ={
                     }
             });
         });
-    añadirLocalStorage("ExpPersonajes",expp);
+    //añadirLocalStorage("ExpPersonajes",expp);
     },
 
     verificarMusica: function(x){
