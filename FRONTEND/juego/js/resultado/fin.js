@@ -35,6 +35,13 @@ var fin = {
             datosperfil["datos"].experiencia += 100;
             personajesBuenos[variablesCampoBatalla.idPJ].exp += 100;
             nivelMundoLocalStorage(prueba,0);
+            var niv = parseInt(obtenerLocalStorage('NivelMundo'));
+            var mun = parseInt(obtenerLocalStorage('Mundo'));
+            if (niv == 5 && mun ==12) {
+
+              game.state.start("creditos");
+              
+            }
 
 		}else{
 			resultado = "PERDISTE";

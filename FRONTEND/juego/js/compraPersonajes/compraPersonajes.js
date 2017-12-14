@@ -150,7 +150,8 @@ compraPersonajes.prototype = {
      		//Si no ha comprado el personaje, realiza el proceso necesario para su compra y recibir las recompensas
      		if(variablesCompraPersonajes.monedas >= variablesCompraPersonajes.cMonedas[variablesCompraPersonajes.pos]){
      			//Si tiene suficientes monedas
-
+          //Se envian los datos al local storage para su actualizacion
+          //ademas de actualizar datos perfil que es el "puente" utilizado
 	          	variablesCompraPersonajes.monedas = variablesCompraPersonajes.monedas - variablesCompraPersonajes.cMonedas[variablesCompraPersonajes.pos] + variablesCompraPersonajes.rMonedas[variablesCompraPersonajes.pos];
 	          	variablesCompraPersonajes.xp = variablesCompraPersonajes.xp + variablesCompraPersonajes.rExperiencia[variablesCompraPersonajes.pos];
 	          	variablesCompraPersonajes.comprado[variablesCompraPersonajes.pos] = true;
