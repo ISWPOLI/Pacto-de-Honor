@@ -1,4 +1,4 @@
-vN = {// Variables encapsuladas del los botones y textos de los botones.
+vN = {// Variables encapsuladas del los botones y textos de los botones. 
     btMundo:null,
     btMundo2:null,
     btMundo3:null,
