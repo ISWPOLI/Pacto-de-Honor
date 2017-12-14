@@ -2,7 +2,7 @@
 var mundoMayor=1;
 var nivelMundoMayor=1;
 //arreglo niveles de campeones
-var Npersonaje = [0,0,0,0,0,0,0,0,0];
+var ExpPersonaje = [1600,0,0,0,0,0,0,0,0];
 //arreglo campoenes comprados
 var CampeonesComprados = [true, false,false ,false , false,false ,false ,false,false ];
 
@@ -16,6 +16,15 @@ nivelMundoMayor=parseInt(obtenerLocalStorage("NivelMundo"));
 datosperfil.monedas = obtenerLocalStorage('Oro');
 datosperfil.experiencia = obtenerLocalStorage("Xp");
 variablesCompraPersonajes.comprado = obtenerLocalStorage("CampeonesComprados");
+var data = {'A': 9};
+
+localStorage['screenshots'] = JSON.stringify(data);
+
+// Later/elsewhere:
+
+var data = JSON.parse(localStorage['screenshots']);
+
+// 9
 
 
 }
@@ -36,10 +45,19 @@ else {
   añadirLocalStorage("NivelMundo",1);
   añadirLocalStorage("NivelPersonaje",variablesPerfilJugador.NivelPerfil);
   añadirLocalStorage("Mundo",1);
-añadirLocalStorage("NivelPersonajes",Npersonaje);
+añadirLocalStorage("ExpPersonajes",ExpPersonaje);
 añadirLocalStorage("CampeonesComprados",CampeonesComprados);
 
+var data = {'A': 9};
 
+localStorage['screenshots'] = JSON.stringify(data);
+
+// Later/elsewhere:
+
+var data = JSON.parse(localStorage['screenshots']);
+
+// 9
+console.log(data.A);
 
 }
 

@@ -7,11 +7,11 @@ variablesBoot={
     dispositivoMovil:null,
     musicaMapa:null,
     musicaMenus:null,
-    musicaBatalla:null, 
+    musicaBatalla:null,
     sonidoBoton:null,
     musicaOnOff :null
 }
-
+var ExpPersonajes;
 var boot ={
 	preload: function () {
         //Sonido al oprimir botones y musica
@@ -20,7 +20,7 @@ var boot ={
         game.load.audio('musicaMapa','../img/componentes/sonidos/musicaMapa.mp3');
         game.load.audio('musicaBatalla','../img/componentes/sonidos/musicaBatalla.mp3');
         //Barra de carga, boton de volver de todos los estados y boton seleccionar de Seleccion de avatar y personaje
-		game.load.image('barraCarga','../img/componentes/carga/barraCarga.png');
+		    game.load.image('barraCarga','../img/componentes/carga/barraCarga.png');
         game.load.spritesheet('botonVolver', '../img/componentes/navegacionMapa/botonVolver.png', 62, 62);
         game.load.spritesheet('botonSeleccionar', '../img/componentes/botones/botonSeleccionar.png', 150, 40);
         //Imágenes de los ScrollingMaps de Selección avatar, rankings y compra personajes
@@ -45,12 +45,12 @@ var boot ={
         game.load.spritesheet('botonRaton', '../img/personajes/avatares/botonRaton.png', 125, 125);
         game.load.spritesheet('botonHormiga', '../img/personajes/avatares/botonHormiga.png', 125, 125);
 	},
-    
+
 	create: function () {
 		this.game.stage.backgroundColor = '#B22222';
 		game.physics.startSystem(Phaser.Physics.ARCADE);
         cookies.setCookie("token", rtaLogin.token);
-        
+
         //pregunta dsi se visualiza desde un movil desde el archio movil.js
     	if(isMobile. any()!=null){
    			game.scale.forceOrientation(false, true);
@@ -62,7 +62,7 @@ var boot ={
    			variablesBoot.dispositivoMovil=false;
    			this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
    		}
-        
+
         variablesBoot.musicaMapa = game.add.audio("musicaMapa");
         variablesBoot.musicaMenus = game.add.audio("musicaMenus");
         variablesBoot.musicaBatalla = game.add.audio("musicaBatalla");
@@ -77,7 +77,7 @@ var boot ={
         this.verificarNivelPersonajes();
         game.state.start("seleccionavatar");
 	},
-    
+
     //Función que revisa el nivel del Jugador
     verificarNivelJugador: function(){
         var nuevoNivel = 0; //variable de ayuda para el nivel
@@ -88,25 +88,37 @@ var boot ={
                 }
         });
     },
-    
+
     //Función para verificar el nivel de los Personajes
     verificarNivelPersonajes: function(){
-        $.each(personajesBuenos, function (key, data) { //Recorre todos los objetos dentro de personajesBuenos (archivo personajes.js)
+      cargaInicial();
+      var cont=-1;
+      ExpPersonajes=obtenerLocalStorage('ExpPersonajes');
+
+       $.each(personajesBuenos, function (key, data) { //Recorre todos los objetos dentro de personajesBuenos (archivo personajes.js)
+cont++;
             var nuevoNivelPJ = 0; //Variable de ayuda para el nivel de personaje
             $.each(nivelPersonaje, function (key2, data2) { //Recorre todos los objetos dentro de NivelPersonaje (archivo nivelExperiencia.js)
-                if(personajesBuenos[key].exp >= nivelPersonaje[key2].exp){ //Si la exp del pj es mayor o igual al campo exp en nivelPersonaje
+
+                if(ExpPersonajes[cont] >= nivelPersonaje[key2].exp){ //Si la exp del pj es mayor o igual al campo exp en nivelPersonaje
+
                     nuevoNivelPJ++; //Aumenta en 1 el nuevoNivelPJ
+
                     //Se asignan los valores de daño, energia, defensa, vida y nivel dependiendo de la experiencia de cada personaje
-                    personajesBuenos[key].dano = nivelPersonaje[key2].dano;
-                    personajesBuenos[key].energia = nivelPersonaje[key2].energia;
-                    personajesBuenos[key].defensa = nivelPersonaje[key2].defensa;
-                    personajesBuenos[key].vida = nivelPersonaje[key2].vida;
                     personajesBuenos[key].nivel = nuevoNivelPJ;
+                    personajesBuenos[key].defensa = nivelPersonaje[key2].defensa;
+                    personajesBuenos[key].energia = nivelPersonaje[key2].energia;
+                    personajesBuenos[key].vida = nivelPersonaje[key2].vida;
+                    personajesBuenos[key].dano = nivelPersonaje[key2].dano;
+
                     }
+
             });
+
         });
+
     },
-    
+
     verificarMusica: function(x){
         if(variablesBoot.musicaOnOff){
             switch(x){
