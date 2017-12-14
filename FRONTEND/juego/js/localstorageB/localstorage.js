@@ -16,7 +16,16 @@ nivelMundoMayor=parseInt(obtenerLocalStorage("NivelMundo"));
 datosperfil.monedas = obtenerLocalStorage('Oro');
 datosperfil.experiencia = obtenerLocalStorage("Xp");
 variablesCompraPersonajes.comprado = obtenerLocalStorage("CampeonesComprados");
+var data = {'A': 9};
 
+localStorage['screenshots'] = JSON.stringify(data);
+
+// Later/elsewhere:
+
+var data = JSON.parse(localStorage['screenshots']);
+
+// 9
+console.log(data.A);
 
 }
 else {
@@ -39,7 +48,16 @@ else {
 añadirLocalStorage("NivelPersonajes",Npersonaje);
 añadirLocalStorage("CampeonesComprados",CampeonesComprados);
 
+var data = {'A': 9};
 
+localStorage['screenshots'] = JSON.stringify(data);
+
+// Later/elsewhere:
+
+var data = JSON.parse(localStorage['screenshots']);
+
+// 9
+console.log(data.A);
 
 }
 
