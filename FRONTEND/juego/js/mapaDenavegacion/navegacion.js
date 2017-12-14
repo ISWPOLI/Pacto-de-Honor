@@ -33,7 +33,7 @@ var navegacion = function(game){};
     navegacion.prototype = {
     preload: function() {
     	//Se agregan las imagenes y los sptritesheets.
-    
+
         game.load.spritesheet('btMundo2', '../img/componentes/navegacionMapa/pause.png', 50,50);
         game.load.image('monedas', '../img/componentes/navegacionMapa/monedas.png');
         game.load.image('xp', '../img/componentes/finBatalla/experiencia.png');
@@ -54,12 +54,12 @@ var navegacion = function(game){};
         game.load.spritesheet('botonCerrarSesion', '../img/componentes/navegacionMapa/botonCerrarSesion.png', 62, 62);
         game.load.spritesheet('botonAjustes', '../img/componentes/navegacionMapa/botonAjustes.png', 62, 62);
         //game.load.spritesheet('botonCajaSorpresa', '../img/componentes/cajas/cajam.png', 132, 216);
-         game.load.spritesheet('botonCajaSorpresa', '../img/componentes/navegacionMapa/cajanegra.png', 62, 62);
-         game.load.spritesheet('botonCompraPersonajes', '../img/componentes/navegacionMapa/botonCompraPersonajes.png', 62, 62);
-         game.load.spritesheet('pause12', '../img/componentes/navegacionMapa/pause12.png', 50,50);
-         game.load.spritesheet('pause13', '../img/componentes/navegacionMapa/pause13.png', 50,50);
-         game.load.spritesheet('pause13b', '../img/componentes/navegacionMapa/pause13b.png', 50,50);
-         game.load.spritesheet('pause14', '../img/componentes/navegacionMapa/pause14.png', 50,50);
+        game.load.spritesheet('botonCajaSorpresa', '../img/componentes/navegacionMapa/cajanegra.png', 62, 62);
+        game.load.spritesheet('botonCompraPersonajes', '../img/componentes/navegacionMapa/botonCompraPersonajes.png', 62, 62);
+        game.load.spritesheet('pause12', '../img/componentes/navegacionMapa/pause12.png', 50,50);
+        game.load.spritesheet('pause13', '../img/componentes/navegacionMapa/pause13.png', 50,50);
+        game.load.spritesheet('pause13b', '../img/componentes/navegacionMapa/pause13b.png', 50,50);
+        game.load.spritesheet('pause14', '../img/componentes/navegacionMapa/pause14.png', 50,50);
 
     },
 
@@ -96,6 +96,7 @@ var navegacion = function(game){};
         vN.text = game.add.text(13,1, "1", { font: "40px Arial", fill: "#030300"});
         vN.btMundo.addChild(vN.text);
 
+        //Validaciones del mundo actual 
          if(mundoctual<2){
           vN.btMundo2 = game.add.button (90, 500, 'pause13b',this.mundo2, 0, 0, 0, 1);
           vN.btMundo2.scale.setTo(0.8, 0.8);
@@ -246,8 +247,6 @@ var navegacion = function(game){};
         cargaInicial();
 
     },
-
-
 
     verAjustes: function(){
 

@@ -1,69 +1,73 @@
 /*Este archivo se crea para declarar los personajes como se va a hecer en la base de datos
 *Con esto nos aseguramos que vaya a funcionar cuando de consuman los servicios
 */
+var exp=[0,0,0,0,0,0,0,0,0,0];
+
+//Personajes a escoger
 var personajesBuenos={
+
 	"idPUno":{"nombre":"Ana Pantera","rutaSprite":"../img/personajes/personajesBuenos/pantera.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraPantera.png",
-              "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderPantera.png",
+        "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderPantera.png",
 			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/AnaPantera.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoGallo.png",
-			  "dano":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":1,"exp":0},
+			  "dano":[5,10],"energia":1,"defensa":10,"vida":100,"nivel":1,"exp":exp[0]},
 
 	"idPDos":{"nombre":"Andrés Gallo","rutaSprite":"../img/personajes/personajesBuenos/gallo.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraGallo.png",
-              "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderGallo.png",
+        "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderGallo.png",
 			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/AndresGallo.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoLeon.png",
-			  "dano":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":1,"exp":0},
+			  "dano":[5,10],"energia":1,"defensa":10,"vida":100,"nivel":1,"exp":exp[1]},
 
     "idPTres":{"nombre":"Cata Cierva","rutaSprite":"../img/personajes/personajesBuenos/cierva.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraCierva.png",
-              "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderCierva.png",
+        "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderCierva.png",
 			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/CataCierva.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoGallo.png",
-			  "dano":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":1,"exp":0},
+			  "dano":[5,10],"energia":1,"defensa":10,"vida":100,"nivel":1,"exp":exp[2]},
 
 	"idPCuatro":{"nombre":"Daniela Jirafa","rutaSprite":"../img/personajes/personajesBuenos/jirafa.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraJirafa.png",
-              "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderJirafa.png",
+        "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderJirafa.png",
 			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/DanielaJirafa.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoLeon.png",
-			  "dano":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":1,"exp":0},
+			  "dano":[5,10],"energia":1,"defensa":10,"vida":100,"nivel":1,"exp":exp[3]},
 
     "idPCinco":{"nombre":"Daniel León","rutaSprite":"../img/personajes/personajesBuenos/leon.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraLeon.png",
-              "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderLeon.png",
+        "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderLeon.png",
 			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/DanielLeon.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoGallo.png",
-			  "dano":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":1,"exp":0},
+			  "dano":[5,10],"energia":1,"defensa":10,"vida":100,"nivel":1,"exp":exp[4]},
 
 	"idPSeis":{"nombre":"Fabián Canario","rutaSprite":"../img/personajes/personajesBuenos/canario.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraCanario.png",
-              "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderCanario.png",
+        "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderCanario.png",
 			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/FabianCanario.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoLeon.png",
-			  "dano":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":1,"exp":0},
+			  "dano":[5,10],"energia":1,"defensa":10,"vida":100,"nivel":1,"exp":exp[5]},
 
     "idPSiete":{"nombre":"Iván Ruisenor","rutaSprite":"../img/personajes/personajesBuenos/ruisenor.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraRuisenor.png",
-              "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderRuisenor.png",
+        "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderRuisenor.png",
 			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/IvanRuisenor.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoGallo.png",
-			  "dano":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":1,"exp":0},
+			  "dano":[5,10],"energia":1,"defensa":10,"vida":100,"nivel":1,"exp":exp[6]},
 
 	"idPOcho":{"nombre":"Pedro Ratón","rutaSprite":"../img/personajes/personajesBuenos/raton.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraRaton.png",
-              "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderRaton.png",
+        "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderRaton.png",
 			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/PedroRaton.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoLeon.png",
-              "dano":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":1,"exp":0},
+        "dano":[5,10],"energia":1,"defensa":10,"vida":100,"nivel":1,"exp":exp[7]},
 
     "idPNueve":{"nombre":"Tati Hormiga","rutaSprite":"../img/personajes/personajesBuenos/hormiga.png",
 			  "rutaAvatar":"../img/personajes/avatares/caraHormiga.png",
-              "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderHormiga.png",
+        "rutaBotonPoder":"../img/personajes/poderes/PoderesBotones/botonPoderHormiga.png",
 			  "rutaAtaque":"../img/personajes/poderes/PoderesPersonalidadBuenos/TatiHormiga.png",
 			  "rutaImpactoPersonalidad":"../img/personajes/poderes/PoderesImpactos/impactoGallo.png",
-			  "dano":[6,10],"energia":1,"defensa":10,"vida":200,"nivel":1,"exp":0},
+			  "dano":[5,10],"energia":1,"defensa":10,"vida":100,"nivel":1,"exp":exp[8]},
 }
 
 var personajesMalos={
