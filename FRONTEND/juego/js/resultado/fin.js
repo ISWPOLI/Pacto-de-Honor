@@ -24,7 +24,7 @@ var fin = {
         console.log("Energia: "+personajesBuenos[variablesCampoBatalla.idPJ].energia);
         console.log("Nivel: "+personajesBuenos[variablesCampoBatalla.idPJ].nivel);
         console.log("Experiencia: "+personajesBuenos[variablesCampoBatalla.idPJ].exp);*/
-        ExpPersonajes=(obtenerLocalStorage('ExpPersonajes'));
+        ExpPersonajes=(obtenerLocalStorage('NivelPersonajes'));
         var cont=0;
         var pj=variablesCampoBatalla.idPJ;
 
@@ -69,7 +69,7 @@ var fin = {
             nivelMundoLocalStorage(prueba,0);
 
             ExpPersonajes[cont]+=100;
-            añadirLocalStorage('ExpPersonajes',ExpPersonajes);
+            añadirLocalStorage('NivelPersonajes',ExpPersonajes);
 
             var niv = parseInt(obtenerLocalStorage('NivelMundo'));
             var mun = parseInt(obtenerLocalStorage('Mundo'));

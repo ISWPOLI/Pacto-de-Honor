@@ -2,13 +2,14 @@
 var mundoMayor=1;
 var nivelMundoMayor=1;
 //arreglo niveles de campeones
-var ExpPersonaje = [1600,0,0,0,0,0,0,0,0];
+var Npersonaje = [0,0,0,0,0,0,0,0,0];
 //arreglo campoenes comprados
 var CampeonesComprados = [true, false,false ,false , false,false ,false ,false,false ];
 
 
 function cargaInicial(){
 //Verificacion de local storage si esta vacio
+
 if(localStorage.length!=0){
 
 mundoMayor=parseInt(obtenerLocalStorage("Mundo"));
@@ -16,15 +17,6 @@ nivelMundoMayor=parseInt(obtenerLocalStorage("NivelMundo"));
 datosperfil.monedas = obtenerLocalStorage('Oro');
 datosperfil.experiencia = obtenerLocalStorage("Xp");
 variablesCompraPersonajes.comprado = obtenerLocalStorage("CampeonesComprados");
-var data = {'A': 9};
-
-localStorage['screenshots'] = JSON.stringify(data);
-
-// Later/elsewhere:
-
-var data = JSON.parse(localStorage['screenshots']);
-
-// 9
 
 
 }
@@ -45,19 +37,10 @@ else {
   añadirLocalStorage("NivelMundo",1);
   añadirLocalStorage("NivelPersonaje",variablesPerfilJugador.NivelPerfil);
   añadirLocalStorage("Mundo",1);
-añadirLocalStorage("ExpPersonajes",ExpPersonaje);
+añadirLocalStorage("NivelPersonajes",Npersonaje);
 añadirLocalStorage("CampeonesComprados",CampeonesComprados);
 
-var data = {'A': 9};
 
-localStorage['screenshots'] = JSON.stringify(data);
-
-// Later/elsewhere:
-
-var data = JSON.parse(localStorage['screenshots']);
-
-// 9
-console.log(data.A);
 
 }
 
@@ -65,14 +48,42 @@ console.log(data.A);
 //Funcion que permite almacenar cualquier valor en el localstorage recibiendo la llave y su valor
 function añadirLocalStorage(key, valor) {
 
-  localStorage.setItem(key, JSON.stringify(valor));
+
+  if(key=='NivelPersonajes' || key=='CampeonesComprados'){
+
+    var llave =utf8_to_b64(key);
+
+  localStorage.setItem(llave, JSON.stringify(valor));
+
+
+  }
+  else {
+    var llave =utf8_to_b64(key);
+    var Valor =utf8_to_b64(valor);
+    localStorage.setItem(llave, JSON.stringify(Valor));
+
+  }
+
+
+
 
 }
+
+function utf8_to_b64( str ) {
+  var a = window.btoa(unescape(encodeURIComponent( str )));
+  return a;
+}
+
+function b64_to_utf8( str ) {
+  var a =decodeURIComponent(escape(window.atob( str )));
+return a;
+}
+
 //funcion encargada de dar al localStorage el mundo y nivel actual si gana
 function nivelMundoLocalStorage(nivelo,validacion){
   if(validacion==0){
-    var orotemp=parseInt(localStorage.getItem("Oro"));
-    var xptemp=parseInt(localStorage.getItem("Xp"));
+    var orotemp=parseInt(obtenerLocalStorage("Oro"));
+    var xptemp=parseInt(obtenerLocalStorage("Xp"));
     orotemp+=200;
     xptemp+=100;
     var mundo;
@@ -111,10 +122,12 @@ console.log("nivel"+nivelMundoMayor);
 console.log("mundo"+mundoMayor);
   añadirLocalStorage("NivelMundo",nivelMundoMayor);
   añadirLocalStorage("Mundo",mundoMayor);
+
 }
 else if(nivelactual!=5 && mundoMayor==mundoactual){
   this.nivelMundoMayor=nivelMundoMayor+1;
   añadirLocalStorage("NivelMundo",nivelMundoMayor);
+
 
 }
 
@@ -137,7 +150,27 @@ añañadirLocalStorage(key,CampeonesComprados);
 //devuelve valor de la lla
 function obtenerLocalStorage (key){
 var valor;
+var llave =utf8_to_b64(key);
+var valorf;
+var retorno=0;
+var valor =localStorage.getItem(llave);
+valorf=JSON.parse(localStorage.getItem(llave));
+if(valorf==null){
+  console.log("vacio");
 
-valor=JSON.parse(localStorage.getItem(key));
-return valor;
+}else{
+  if(key=='NivelPersonajes' || key=='CampeonesComprados'){
+  retorno=valorf;
+
+  }
+  else{
+  retorno =b64_to_utf8(valorf);
+    console.log(retorno);
+  }
+
+
+}
+return retorno;
+
+
 }

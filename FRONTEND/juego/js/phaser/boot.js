@@ -93,7 +93,7 @@ var boot ={
     verificarNivelPersonajes: function(){
       cargaInicial();
       var cont=-1;
-      ExpPersonajes=obtenerLocalStorage('ExpPersonajes');
+      ExpPersonajes=obtenerLocalStorage('NivelPersonajes');
 
        $.each(personajesBuenos, function (key, data) { //Recorre todos los objetos dentro de personajesBuenos (archivo personajes.js)
 cont++;
