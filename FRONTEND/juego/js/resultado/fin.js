@@ -1,4 +1,4 @@
-
+var exp;
 var fin = {
     preload: function(){
 		this.preloadBar=this.add.sprite(this.game.world.centerX,this.game.world.centerY,'barraCarga');
@@ -24,8 +24,39 @@ var fin = {
         console.log("Energia: "+personajesBuenos[variablesCampoBatalla.idPJ].energia);
         console.log("Nivel: "+personajesBuenos[variablesCampoBatalla.idPJ].nivel);
         console.log("Experiencia: "+personajesBuenos[variablesCampoBatalla.idPJ].exp);*/
+        ExpPersonajes=(obtenerLocalStorage('ExpPersonajes'));
+        var cont=0;
+        var pj=variablesCampoBatalla.idPJ;
 
-		if(variablesCampoBatalla.ganador){
+        if(pj.localeCompare("idPUno")==0){
+          cont=0;
+        }
+        if(pj.localeCompare("idPDos")==0){
+          cont=1;
+        }
+        if(pj.localeCompare("idPTres")==0){
+          cont=2;
+        }
+        if(pj.localeCompare("idPCuatro")==0){
+          cont=3;
+        }
+        if(pj.localeCompare("idPCinco")==0){
+          cont=4;
+        }
+        if(pj.localeCompare("idPSeis")==0){
+          cont=5;
+        }
+        if(pj.localeCompare("idPSiete")==0){
+          cont=6;
+        }
+        if(pj.localeCompare("idPOcho")==0){
+          cont=7;
+        }
+        if(pj.localeCompare("idPNueve")==0){
+          cont=8;
+        }
+
+		  if(variablesCampoBatalla.ganador){
       var prueba =  variablesCampoBatalla.idNivel;
 			resultado = "GANASTE";
 			color = {fill:'#01DF01',font: '40px Arial'};
@@ -33,14 +64,19 @@ var fin = {
             datosperfil["datos"].monedas += 200;
             exp = 100;
             datosperfil["datos"].experiencia += 100;
-            personajesBuenos[variablesCampoBatalla.idPJ].exp += 100;
+            //personajesBuenos[variablesCampoBatalla.idPJ].exp += 100;
+            personajesBuenos[variablesCampoBatalla.idPJ].exp= ExpPersonajes[cont]+100;
             nivelMundoLocalStorage(prueba,0);
+
+            ExpPersonajes[cont]+=100;
+            añadirLocalStorage('ExpPersonajes',ExpPersonajes);
+
             var niv = parseInt(obtenerLocalStorage('NivelMundo'));
             var mun = parseInt(obtenerLocalStorage('Mundo'));
             if (niv == 5 && mun ==12) {
 
               game.state.start("creditos");
-              
+
             }
 
 		}else{

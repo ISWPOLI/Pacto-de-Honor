@@ -11,7 +11,7 @@ variablesBoot={
     sonidoBoton:null,
     musicaOnOff :null
 }
-
+var ExpPersonajes;
 var boot ={
 	preload: function () {
         //Sonido al oprimir botones y musica
@@ -91,17 +91,19 @@ var boot ={
 
     //Función para verificar el nivel de los Personajes
     verificarNivelPersonajes: function(){
-      // var i=0;
-      // var expp=[0,0,0,0,0,0,0,0,0];
+      cargaInicial();
+      var cont=-1;
+      ExpPersonajes=obtenerLocalStorage('ExpPersonajes');
+
        $.each(personajesBuenos, function (key, data) { //Recorre todos los objetos dentro de personajesBuenos (archivo personajes.js)
-          //expp[i]=personajesBuenos[key].exp;
-          //i=i+1;
+cont++;
             var nuevoNivelPJ = 0; //Variable de ayuda para el nivel de personaje
             $.each(nivelPersonaje, function (key2, data2) { //Recorre todos los objetos dentro de NivelPersonaje (archivo nivelExperiencia.js)
 
-                if(personajesBuenos[key].exp >= nivelPersonaje[key2].exp){ //Si la exp del pj es mayor o igual al campo exp en nivelPersonaje
+                if(ExpPersonajes[cont] >= nivelPersonaje[key2].exp){ //Si la exp del pj es mayor o igual al campo exp en nivelPersonaje
 
                     nuevoNivelPJ++; //Aumenta en 1 el nuevoNivelPJ
+
                     //Se asignan los valores de daño, energia, defensa, vida y nivel dependiendo de la experiencia de cada personaje
                     personajesBuenos[key].nivel = nuevoNivelPJ;
                     personajesBuenos[key].defensa = nivelPersonaje[key2].defensa;
@@ -110,9 +112,11 @@ var boot ={
                     personajesBuenos[key].dano = nivelPersonaje[key2].dano;
 
                     }
+
             });
+
         });
-    //añadirLocalStorage("ExpPersonajes",expp);
+
     },
 
     verificarMusica: function(x){
