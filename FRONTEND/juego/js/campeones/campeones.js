@@ -212,9 +212,8 @@ var campeones = function(game){};
             variablesCampeones.botonVolver = game.add.button(5, 5, 'botonVolver', this.volver, 0, 0, 0, 1);
             boot.verificarMusica("menu");
             hideBoss();
-
+        //No se muestra ninguna imagen de personajes
         function hideBoss(){
-
             variablesCampeones.canariobloqlock.visible = false;
             variablesCampeones.ciervabloqlock.visible =false;
             variablesCampeones.gallobloqlock.visible = false;
@@ -225,9 +224,8 @@ var campeones = function(game){};
             variablesCampeones.ratonbloqlock.visible = false;
             variablesCampeones.panterabloqlock.visible = false;
           }
-
         },
-
+        //Se habilita la imagen del canario
         canariobloqsClick: function(){
             variablesBoot.sonidoBoton.play();
             variablesCampeones.canariobloqlock.visible = true;
@@ -240,7 +238,7 @@ var campeones = function(game){};
             variablesCampeones.ratonbloqlock.visible = false;
             variablesCampeones.panterabloqlock.visible = false;
         },
-
+        //Se habilita la imagen del gallo
         gallobloqClick:function(){
             variablesBoot.sonidoBoton.play();
             variablesCampeones.canariobloqlock.visible = false;
@@ -253,8 +251,8 @@ var campeones = function(game){};
             variablesCampeones.ratonbloqlock.visible = false;
             variablesCampeones.panterabloqlock.visible = false;
        },
-
-        hormigabloqClick: function(){
+       //Se habilita la imagen de la hormiga
+       hormigabloqClick: function(){
             variablesBoot.sonidoBoton.play();
             variablesCampeones.canariobloqlock.visible = false;
             variablesCampeones.ciervabloqlock.visible =false;
@@ -266,7 +264,7 @@ var campeones = function(game){};
             variablesCampeones.ratonbloqlock.visible = false;
             variablesCampeones.panterabloqlock.visible = false;
         },
-
+        //Se habilita la imagen de la girafa
         jirafabloqClick:function(){
             variablesBoot.sonidoBoton.play();
             variablesCampeones.canariobloqlock.visible = false;
@@ -279,8 +277,8 @@ var campeones = function(game){};
             variablesCampeones.ratonbloqlock.visible = false;
             variablesCampeones.panterabloqlock.visible = false;
        },
-
-        leonbloqClick:function(){
+       //Se habilita la imagen del leon
+       leonbloqClick:function(){
             variablesBoot.sonidoBoton.play();
             variablesCampeones.canariobloqlock.visible = false;
             variablesCampeones.ciervabloqlock.visible =false;
@@ -292,8 +290,8 @@ var campeones = function(game){};
             variablesCampeones.ratonbloqlock.visible = false;
             variablesCampeones.panterabloqlock.visible = false;
        },
-
-        ruisenorlockClick:function(){
+       //Se habilita la imagen del ruiserñor
+       ruisenorlockClick:function(){
             variablesBoot.sonidoBoton.play();
             variablesCampeones.canariobloqlock.visible = false;
             variablesCampeones.ciervabloqlock.visible =false;
@@ -305,8 +303,8 @@ var campeones = function(game){};
             variablesCampeones.ratonbloqlock.visible = false;
             variablesCampeones.panterabloqlock.visible = false;
        },
-
-        panterabloqClick:function(){
+       //Se habilita la imagen de la pantera
+       panterabloqClick:function(){
             variablesBoot.sonidoBoton.play();
             variablesCampeones.canariobloqlock.visible = false;
             variablesCampeones.ciervabloqlock.visible =false;
@@ -318,8 +316,8 @@ var campeones = function(game){};
             variablesCampeones.ratonbloqlock.visible = false;
             variablesCampeones.panterabloqlock.visible = true;
        },
-
-        ratonbloqClick:function(){
+       //Se habilita la imagen del raton
+       ratonbloqClick:function(){
             variablesBoot.sonidoBoton.play();
             variablesCampeones.canariobloqlock.visible = false;
             variablesCampeones.ciervabloqlock.visible =false;
@@ -331,7 +329,7 @@ var campeones = function(game){};
             variablesCampeones.ratonbloqlock.visible = true;
             variablesCampeones.panterabloqlock.visible = false;
        },
-
+       //Se habilita la imagen de la cierva
        ciervabloqClick:function(){
             variablesBoot.sonidoBoton.play();
            variablesCampeones.canariobloqlock.visible = false;
