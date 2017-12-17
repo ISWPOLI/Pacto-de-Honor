@@ -21,11 +21,10 @@ variablesCampeones={
     pj9:null,
     pjsname: null,
     pjslock: null,
-
     rata:null
 }
-var comprados;
 
+var comprados;
 var campeones = function(game){};
     campeones.prototype = {
         preload: function(){
@@ -34,7 +33,6 @@ var campeones = function(game){};
             comprados = obtenerLocalStorage('CampeonesComprados');
             //Carga de imagenes para el logo del pacto
             game.load.image('logoPacto', '../img/componentes/creditos/logoPacto.png');
-
             game.load.spritesheet('canarioboton', '../img/personajes/avatares/botonCanario.png', 125, 125);
             game.load.spritesheet('ciervaboton', '../img/personajes/avatares/botonCierva.png', 125, 125);
             game.load.spritesheet('galloboton', '../img/personajes/avatares/botonGallo.png', 125, 125);
@@ -83,144 +81,136 @@ var campeones = function(game){};
             game.add.text(game.width / 2, 50, "Heroes", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5); //Título de Créditos
 
             //Se crean los botones de los personajes buenos si estan comprados
-            if(comprados[6]){
-              botoncanariobloqs = game.add.button (20, 100, 'canarioboton', this.canariobloqsClick, 0, 0, 0, 1);
+            if(comprados[5]){
+            var  botoncanariobloqs = game.add.button (20, 100, 'canarioboton', this.canariobloqsClick, 0, 0, 0, 1);
               botoncanariobloqs.angle = 10;
             }
               else{
-            botoncanariobloqs = game.add.button (20, 100, 'canarioboton',0, 0, 0, 1);
-            botoncanariobloqs.angle = 10;
+            var  block = game.add.button (20, 100, 'blockoboton',0, 0, 0, 1);
+                block.angle = 10;
               }
-            if(comprados[3]){
+            if(comprados[2]){
             botonCiervabloq = game.add.button (120, 100, 'ciervaboton', this.ciervabloqClick, 0, 0, 0, 1);
             botonCiervabloq.angle =-10;
             }
             else{
-              botonCiervabloq = game.add.button (120, 100, 'blockoboton', 0, 0, 0, 1);
-              botonCiervabloq.angle =-10;
+              block = game.add.button (120, 100, 'blockoboton', 0, 0, 0, 1);
+              block.angle =-10;
              }
-            if(comprados[2]){
+            if(comprados[1]){
             botongallobloq = game.add.button (220, 100, 'galloboton', this.gallobloqClick, 0, 0, 0, 1);
             botongallobloq.angle =10;
             }
             else{
-            botongallobloq = game.add.button (220, 100, 'blockoboton', 0, 0, 0, 1);
-            botongallobloq.angle =10;
+              botongallobloq = game.add.button (220, 100, 'blockoboton', 0, 0, 0, 1);
+              botongallobloq.angle =10;
               }
-            if(comprados[9]){
+            if(comprados[8]){
             botonhormigabloq = game.add.button (20, 200, 'hormigaboton', this.hormigabloqClick, 0, 0, 0, 1);
             botonhormigabloq.angle =10;
             }
             else{
-            botonhormigabloq = game.add.button (20, 200, 'blockoboton', 0, 0, 0, 1);
-            botonhormigabloq.angle =10;
+              botonhormigabloq = game.add.button (20, 200, 'blockoboton', 0, 0, 0, 1);
+              botonhormigabloq.angle =10;
               }
-            if(comprados[4]){
+            if(comprados[3]){
             botonjirafabloq = game.add.button (120, 200, 'jirafaboton', this.jirafabloqClick, 0, 0, 0, 1);
             botonjirafabloq.angle =-10;
             }
             else{
-            botonjirafabloq = game.add.button (120, 200, 'blockoboton', 0, 0, 0, 1);
-            botonjirafabloq.angle =-10;
+              botonjirafabloq = game.add.button (120, 200, 'blockoboton', 0, 0, 0, 1);
+              botonjirafabloq.angle =-10;
               }
-            if(comprados[5]){
+            if(comprados[4]){
             botonleonbloq = game.add.button (220, 200, 'leonboton', this.leonbloqClick, 0, 0, 0, 1);
             botonleonbloq.angle = 10;
             }
             else{
-            botonleonbloq = game.add.button (220, 200, 'blockoboton', 0, 0, 0, 1);
-            botonleonbloq.angle = 10;
+              botonleonbloq = game.add.button (220, 200, 'blockoboton', 0, 0, 0, 1);
+              botonleonbloq.angle = 10;
               }
 
             botonpanterabloq = game.add.button (20, 300, 'panteraboton', this.panterabloqClick, 0, 0, 0, 1);
             botonpanterabloq.angle = -10;
 
-            if(comprados[8]){
+            if(comprados[7]){
             botonratonbloq = game.add.button (120, 300, 'ratonboton', this.ratonbloqClick, 0, 0, 0, 1);
             botonratonbloq.angle = 10;
             }
             else{
-            botonratonbloq = game.add.button (120, 300, 'blockoboton', 0, 0, 0, 1);
-            botonratonbloq.angle = 10;
+              botonratonbloq = game.add.button (120, 300, 'blockoboton', 0, 0, 0, 1);
+              botonratonbloq.angle = 10;
               }
-            if(comprados[8]){
+            if(comprados[6]){
             botonPerezratonbloq = game.add.button (220, 300, 'ruisenorboton', this.ruisenorlockClick, 0, 0, 0, 1);
             botonPerezratonbloq.angle = -10;
             }
             else{
-            botonPerezratonbloq = game.add.button (220, 300, 'blockoboton', 0, 0, 0, 1);
-            botonPerezratonbloq.angle = -10;
+              botonPerezratonbloq = game.add.button (220, 300, 'blockoboton', 0, 0, 0, 1);
+              botonPerezratonbloq.angle = -10;
               }
             win();
 
-            //Agrega la imagen del personaje actual si se gano la partida
+            //Agrega la imagen del personaje actual
             function win (){
-
-                   if(variablesCampeones.pj7.estado==0){
-                   variablesCampeones.ratonbloqlock  = game.add.sprite(450,170, 'cararaton');
-                   //variablesCampeones.ratonbloqlock.visible = false;
+                  if(variablesCampeones.pj7.estado==0){
+                  variablesCampeones.ratonbloqlock  = game.add.sprite(450,170, 'cararaton');
                   }
                   else{
                       variablesCampeones.ratonbloqlock  = game.add.sprite(450,170, 'ratonbloq');
-                     // variablesCampeones.ratonbloqlock.visible = false;
-                  }
-                   if(variablesCampeones.pj1.estado==0){
-                   variablesCampeones.hormigabloqlock  = game.add.sprite(450,170, 'carahormiga');
-                   //variablesCampeones.ratonbloqlock.visible = false;
+                    }
+                  if(variablesCampeones.pj1.estado==0){
+                  variablesCampeones.hormigabloqlock  = game.add.sprite(450,170, 'carahormiga');
                   }
                   else{
                       variablesCampeones.hormigabloqlock  = game.add.sprite(450,170, 'hormigabloq');
-                     // variablesCampeones.ratonbloqlock.visible = false;
-                  }
+                    }
                   if(variablesCampeones.pj4.estado==0){
-                   variablesCampeones.jirafabloqlock  = game.add.sprite(450,170, 'carajirafa');
-                   }
-                  else{
-                      variablesCampeones.jirafabloqlock  = game.add.sprite(450,170, 'jirafabloq');
+                  variablesCampeones.jirafabloqlock  = game.add.sprite(450,170, 'carajirafa');
                   }
+                  else{
+                      variablesCampeones.jirafabloqlock  = game.add.sprite(450,170, 'carajirafa');
+                    }
                   if(variablesCampeones.pj2.estado==0){
-                   variablesCampeones.gallobloqlock  = game.add.sprite(450,170, 'caragallo');
-                   }
-                  else{
-                      variablesCampeones.gallobloqlock  = game.add.sprite(450,170, 'gallobloq');
+                  variablesCampeones.gallobloqlock  = game.add.sprite(450,170, 'caragallo');
                   }
+                  else{
+                      variablesCampeones.gallobloqlock  = game.add.sprite(450,170, 'caragallo');
+                    }
                   if(variablesCampeones.pj9.estado==0){
-                   variablesCampeones.ruisenorlocklock  = game.add.sprite(450,170, 'cararuisenor');
-                   }
-                  else{
-                      variablesCampeones.ruisenorlocklock  = game.add.sprite(450,170, 'ruisenorlock');
+                  variablesCampeones.ruisenorlocklock  = game.add.sprite(450,170, 'cararuisenor');
                   }
+                  else{
+                      variablesCampeones.ruisenorlocklock  = game.add.sprite(450,170, 'cararuisenor');
+                    }
                   if(variablesCampeones.pj8.estado==0){
-                   variablesCampeones.canariobloqlock  = game.add.sprite(450, 170, 'caracanario');
-                   }
-                  else{
-                      variablesCampeones.canariobloqlock  = game.add.sprite(450, 170, 'canariobloq');
+                  variablesCampeones.canariobloqlock  = game.add.sprite(450, 170, 'caracanario');
                   }
+                  else{
+                      variablesCampeones.canariobloqlock  = game.add.sprite(450, 170, 'caracanario');
+                    }
                   if(variablesCampeones.pj6.estado==0){
-                   variablesCampeones.leonbloqlock  = game.add.sprite(450,170, 'caraleon');
-                   }
-                  else{
-                      variablesCampeones.leonbloqlock  = game.add.sprite(450,170, 'leonbloq');
+                  variablesCampeones.leonbloqlock  = game.add.sprite(450,170, 'caraleon');
                   }
+                  else{
+                      variablesCampeones.leonbloqlock  = game.add.sprite(450,170, 'caraleon');
+                    }
                   if(variablesCampeones.pj3.estado==0){
-                   variablesCampeones.panterabloqlock  = game.add.sprite(450,170,'carapantera');
-                   }
-                  else{
-                      variablesCampeones.panterabloqlock  = game.add.sprite(450,170, 'panterabloq');
+                  variablesCampeones.panterabloqlock  = game.add.sprite(450,170,'carapantera');
                   }
-
+                  else{
+                      variablesCampeones.panterabloqlock  = game.add.sprite(450,170, 'carapantera');
+                    }
                   if(variablesCampeones.pj5.estado==0){
-                   variablesCampeones.ciervabloqlock  = game.add.sprite(450,170, 'caracierva');
-                   }
-                  else{
-                      variablesCampeones.ciervabloqlock  = game.add.sprite(450,170, 'ciervabloq');
+                  variablesCampeones.ciervabloqlock  = game.add.sprite(450,170, 'caracierva');
                   }
-
+                  else{
+                      variablesCampeones.ciervabloqlock  = game.add.sprite(450,170, 'caracierva');
+                    }
             }
 
             variablesCampeones.botonVolver = game.add.button(5, 5, 'botonVolver', this.volver, 0, 0, 0, 1);
             boot.verificarMusica("menu");
-
             hideBoss();
 
         function hideBoss(){
@@ -234,7 +224,7 @@ var campeones = function(game){};
             variablesCampeones.ruisenorlocklock.visible = false;
             variablesCampeones.ratonbloqlock.visible = false;
             variablesCampeones.panterabloqlock.visible = false;
-        }
+          }
 
         },
 
@@ -249,12 +239,11 @@ var campeones = function(game){};
             variablesCampeones.ruisenorlocklock.visible = false;
             variablesCampeones.ratonbloqlock.visible = false;
             variablesCampeones.panterabloqlock.visible = false;
-
         },
 
         gallobloqClick:function(){
-           variablesBoot.sonidoBoton.play();
-          variablesCampeones.canariobloqlock.visible = false;
+            variablesBoot.sonidoBoton.play();
+            variablesCampeones.canariobloqlock.visible = false;
             variablesCampeones.ciervabloqlock.visible =false;
             variablesCampeones.gallobloqlock.visible = true;
             variablesCampeones.hormigabloqlock.visible = false;
@@ -264,6 +253,7 @@ var campeones = function(game){};
             variablesCampeones.ratonbloqlock.visible = false;
             variablesCampeones.panterabloqlock.visible = false;
        },
+
         hormigabloqClick: function(){
             variablesBoot.sonidoBoton.play();
             variablesCampeones.canariobloqlock.visible = false;
@@ -275,10 +265,10 @@ var campeones = function(game){};
             variablesCampeones.ruisenorlocklock.visible = false;
             variablesCampeones.ratonbloqlock.visible = false;
             variablesCampeones.panterabloqlock.visible = false;
-
         },
+
         jirafabloqClick:function(){
-           variablesBoot.sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
             variablesCampeones.canariobloqlock.visible = false;
             variablesCampeones.ciervabloqlock.visible =false;
             variablesCampeones.gallobloqlock.visible = false;
@@ -288,11 +278,11 @@ var campeones = function(game){};
             variablesCampeones.ruisenorlocklock.visible = false;
             variablesCampeones.ratonbloqlock.visible = false;
             variablesCampeones.panterabloqlock.visible = false;
-
        },
+
         leonbloqClick:function(){
-           variablesBoot.sonidoBoton.play();
-           variablesCampeones.canariobloqlock.visible = false;
+            variablesBoot.sonidoBoton.play();
+            variablesCampeones.canariobloqlock.visible = false;
             variablesCampeones.ciervabloqlock.visible =false;
             variablesCampeones.gallobloqlock.visible = false;
             variablesCampeones.hormigabloqlock.visible = false;
@@ -304,8 +294,8 @@ var campeones = function(game){};
        },
 
         ruisenorlockClick:function(){
-           variablesBoot.sonidoBoton.play();
-           variablesCampeones.canariobloqlock.visible = false;
+            variablesBoot.sonidoBoton.play();
+            variablesCampeones.canariobloqlock.visible = false;
             variablesCampeones.ciervabloqlock.visible =false;
             variablesCampeones.gallobloqlock.visible = false;
             variablesCampeones.hormigabloqlock.visible = false;
@@ -317,8 +307,8 @@ var campeones = function(game){};
        },
 
         panterabloqClick:function(){
-           variablesBoot.sonidoBoton.play();
-           variablesCampeones.canariobloqlock.visible = false;
+            variablesBoot.sonidoBoton.play();
+            variablesCampeones.canariobloqlock.visible = false;
             variablesCampeones.ciervabloqlock.visible =false;
             variablesCampeones.gallobloqlock.visible = false;
             variablesCampeones.hormigabloqlock.visible = false;
@@ -330,7 +320,7 @@ var campeones = function(game){};
        },
 
         ratonbloqClick:function(){
-           variablesBoot.sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
             variablesCampeones.canariobloqlock.visible = false;
             variablesCampeones.ciervabloqlock.visible =false;
             variablesCampeones.gallobloqlock.visible = false;
@@ -343,7 +333,7 @@ var campeones = function(game){};
        },
 
        ciervabloqClick:function(){
-          variablesBoot.sonidoBoton.play();
+            variablesBoot.sonidoBoton.play();
            variablesCampeones.canariobloqlock.visible = false;
            variablesCampeones.ciervabloqlock.visible =true;
            variablesCampeones.gallobloqlock.visible = false;
@@ -355,12 +345,12 @@ var campeones = function(game){};
            variablesCampeones.panterabloqlock.visible = false;
       },
 
-
         //Funcion que se llama al oprimir el botón de regreso
         volver: function(){
             variablesBoot.sonidoBoton.play();
             game.state.start("perfilJugador");
         },
+
         update:function(){
         }
     }
