@@ -1,22 +1,22 @@
 variablesCreditos={
 //Variables de botones
-  botonVolver:null, 
-  botonPacto:null, 
-  botonBuenos:null, 
-  botonMalos:null, 
+  botonVolver:null,
+  botonPacto:null,
+  botonBuenos:null,
+  botonMalos:null,
   botonPlagios:null,
 //Descripcion del Pacto de Honor
   descripcionPacto : "Es aquel compromiso que haces contigo mismo, un pacto que firmas de corazón y con el cual aportas a nuestro objetivo de celebrar los buenos comportamientos de los miembros de la familia grancolombiana.\n\nQueremos que sepas que desde el primer día en que llegas a la Institución, nosotros asumimos el compromiso de guiarte en tu proyecto profesional y de vida y por ello, incentivamos las buenas actitudes, porque te facilitarán la toma de decisiones responsable y autónoma por el resto de tu vida.\n\nEn ese sentido, es a través de este pacto de honor que expresamos nuestro rechazo hacia las conductas anti éticas y que se alejan de los valores grancolombianos, como el respeto, la tolerancia y principalmente la HONESTIDAD. Por eso, como estudiante del Politécnico Grancolombiano me comprometo con mi proceso de aprendizaje, adopto una conducta honesta e integra en todas mis actuaciones y te invito a que hagas parte de esta gran familia y el futuro que nos espera.",
 //Descripciones de los personajes buenos
   descripcionesBuenos : ["Ana Pantera\n\nAna tiene buenos amigos y un gran grupo social, los sigue a todos lados y los apoya sin dudar. Pero si algo no le parece o ve que la puede afectar, no se toma ni un segundo para pensar, sus buenos principios los defiende y no los va a negociar",
                            "Andrés Gallo\n\nQue siempre Madruga, que nunca llega tarde, son algunas teorias sobre el puntual Andrés. Debo decirles que están en lo correcto, desde el primer dia que sus estudios iniciaron, se puso a él mismo un gran reto: la puntualidad y asistencia lo caracterizarían en todo momento",
-                     "Cata Cierva\n\nSiempre una cara tierna y una sonrisa despierta, para Cata la amabilidad es su mejor receta, por eso saludar y dar las gracias, son pasos básicos, que para ella, ayudan a tratar bien a la gente",
-                     "Daniela Jirafa\n\nSu estatura no es lo único que vamos a observar, lo verdaderamente importante es lo alto que quiere llegar. Sus metas y sus sueños muy lejos la van a llevar, pues lo que busca cada día es mirar siempre más allá",
-                     "Daniel León\n\nMejor amigo de Pedro Ratón, parece que no tienen nada que ver, ni en tamaño ni en color hay alguna comparación, pero existe algo que los hace tener conexión: una amistad incondicional que desde primer semestre se creó y nos demuestra que para ser amigos no hay ninguna limitación",
-                     "Fabián Canario\n\nFabián es un pequeñín sin igual, sus buenos modales no son cuestión del azar. Una excelente educación en la universidad y el hogar, crearon reglas básicas que lo hacen resaltar: un saludo, un por favor y dar las gracias nunca están de más",
-                     "Iván Ruiseñor\n\nIván tiene buena presencia y bastante galantería, pero tiene claro que eso no le da derecho a la grosería, por eso, como le enseñó su mamá, trata a sus amigas con respeto y caballerosidad, logrando que de su melodiosa voz, jamás salgan sandeces ni palabras soeces",
-                     "Pedro Ratón\n\nMejor amigo de Daniel León, parece que no tienen nada que ver, ni en tamaño ni en color hay alguna comparación, pero existe algo que los hace tener conexión: una amistad incondicional que desde primer semestre se creó y nos demuestra que para ser amigos no hay ninguna limitación",
-                     "Tati Hormiga\n\nQue su tamaño no los confunda, Tati es una gran líder sin lugar a duda. A grandes y pequeños ella trata por igual, formando grupos en sus asignaturas es organizada y muy social, distribuye el trabajo y dirige de forma muy natural"],
+                           "Cata Cierva\n\nSiempre una cara tierna y una sonrisa despierta, para Cata la amabilidad es su mejor receta, por eso saludar y dar las gracias, son pasos básicos, que para ella, ayudan a tratar bien a la gente",
+                           "Daniela Jirafa\n\nSu estatura no es lo único que vamos a observar, lo verdaderamente importante es lo alto que quiere llegar. Sus metas y sus sueños muy lejos la van a llevar, pues lo que busca cada día es mirar siempre más allá",
+                           "Daniel León\n\nMejor amigo de Pedro Ratón, parece que no tienen nada que ver, ni en tamaño ni en color hay alguna comparación, pero existe algo que los hace tener conexión: una amistad incondicional que desde primer semestre se creó y nos demuestra que para ser amigos no hay ninguna limitación",
+                           "Fabián Canario\n\nFabián es un pequeñín sin igual, sus buenos modales no son cuestión del azar. Una excelente educación en la universidad y el hogar, crearon reglas básicas que lo hacen resaltar: un saludo, un por favor y dar las gracias nunca están de más",
+                           "Iván Ruiseñor\n\nIván tiene buena presencia y bastante galantería, pero tiene claro que eso no le da derecho a la grosería, por eso, como le enseñó su mamá, trata a sus amigas con respeto y caballerosidad, logrando que de su melodiosa voz, jamás salgan sandeces ni palabras soeces",
+                           "Pedro Ratón\n\nMejor amigo de Daniel León, parece que no tienen nada que ver, ni en tamaño ni en color hay alguna comparación, pero existe algo que los hace tener conexión: una amistad incondicional que desde primer semestre se creó y nos demuestra que para ser amigos no hay ninguna limitación",
+                           "Tati Hormiga\n\nQue su tamaño no los confunda, Tati es una gran líder sin lugar a duda. A grandes y pequeños ella trata por igual, formando grupos en sus asignaturas es organizada y muy social, distribuye el trabajo y dirige de forma muy natural"],
 //Descripciones de los personajes malos
   descripcionesMalos : ["Ana y Sara Abejas\n\nSon realmente hermosas, les encanta salir a reunirse con sus amigos a compartir, participan poco en clase y sus prioridades siempre son las fiestas y sus amigos que el estudio. Son bastante reconocidas por ser descubiertas realizando fraude en un examen",
                           "Fabián Babuino\n\n Es una persona temperamental, de malgenio, sociable únicamente con su grupo de amigos, conflictiva para ganar territorio y reconocimiento. Su habilidad se caracteriza por su gran fuerza al momento de atacar y excelente defensa.",
@@ -43,10 +43,10 @@ variablesCreditos={
                "Reutilización\n\nCitar correctamente las fuentes haciendo demasiado uso de la estructura y/o los términos originales del texto.\n\nFrecuencia: 2.8"],
 //Variables de los textos y el logo
   logoPacto:null,
-  textoPacto:null, 
+  textoPacto:null,
   textoBuenos:null,
-  textoMalos:null, 
-  textoPlagios:null  
+  textoMalos:null,
+  textoPlagios:null
 }
 var creditos = function(game){};
     creditos.prototype = {
@@ -83,20 +83,17 @@ var creditos = function(game){};
             game.load.image('botonRSS', '../img/componentes/creditos/botonRSS.png');
             game.load.image('botonReutilizacion', '../img/componentes/creditos/botonReutilizacion.png');
         },
-        
-        create: function(){
 
+        create: function(){
             game.stage.backgroundColor = "#2451A6"; //Color de fondo
             game.add.text(game.width / 2, 50, "Créditos", {font: "30px Roboto", fill: "#ffffff"}).anchor.set(0.5); //Título de Créditos
-            
             //Se agregan los botones principales
             variablesCreditos.botonVolver = game.add.button(5, 5, 'botonVolver', this.volver, 0, 0, 0, 1);
             variablesCreditos.botonPacto = game.add.button(5, 100, 'botonPacto', this.verPacto, 0, 0, 0, 1);
             variablesCreditos.botonBuenos = game.add.button(205, 100, 'botonBuenos', this.verPersonajesBuenos, 0, 0, 0, 1);
             variablesCreditos.botonMalos = game.add.button(400, 100, 'botonMalos', this.verPersonajesMalos, 0, 0, 0, 1);
             variablesCreditos.botonPlagios = game.add.button(600, 100, 'botonPlagios', this.verPlagios, 0, 0, 0, 1);
-            
-            //Se crean los botones de los personajes buenos        
+            //Se crean los botones de los personajes buenos
             botonPantera = game.add.button (10, 200, 'botonPantera', this.panteraClick, 0, 0, 0, 1);
             botonGallo = game.add.button (140, 200, 'botonGallo', this.galloClick, 0, 0, 0, 1);
             botonCierva = game.add.button (270, 200, 'botonCierva', this.ciervaClick, 0, 0, 0, 1);
@@ -106,7 +103,6 @@ var creditos = function(game){};
             botonRuisenor = game.add.button (10, 460, 'botonRuisenor', this.ruisenorClick, 0, 0, 0, 1);
             botonRaton = game.add.button (140, 460, 'botonRaton', this.ratonClick, 0, 0, 0, 1);
             botonHormiga = game.add.button (270, 460, 'botonHormiga', this.hormigaClick, 0, 0, 0, 1);
-            
             //Se crean los botones de los personajes malos
             botonAbejas = game.add.button (20, 200, 'anaSaraAbejas', this.abejasClick, 0, 0, 0, 1);
             botonBabuino = game.add.button (120, 200, 'fabianBabuino', this.babuinoClick, 0, 0, 0, 1);
@@ -120,7 +116,6 @@ var creditos = function(game){};
             botonRata = game.add.button (20, 500, 'juanRata', this.rataClick, 0, 0, 0, 1);
             botonVibora = game.add.button (120, 500, 'luisVibora', this.viboraClick, 0, 0, 0, 1);
             botonZorro = game.add.button (220, 500, 'andresZorro', this.zorroClick, 0, 0, 0, 1);
-            
             //Se crean los botones de los tipos de plagio
             botonClonacion = game.add.button (10, 200, 'botonClonacion', this.clonacionClick, 0, 0, 0, 1);
             botonCopiado = game.add.button (170, 200, 'botonCopiado', this.copiadoClick, 0, 0, 0, 1);
@@ -132,7 +127,6 @@ var creditos = function(game){};
             botonError404 = game.add.button (650, 290, 'botonError404', this.error404Click, 0, 0, 0, 1);
             botonRSS = game.add.button (490, 290, 'botonRSS', this.RSSClick, 0, 0, 0, 1);
             botonReutilizacion = game.add.button (170, 290, 'botonReutilizacion', this.reutilizacionClick, 0, 0, 0, 1);
-            
             //Se ocultan los botones de los personajes buenos
             botonPantera.visible = false;
             botonGallo.visible = false;
@@ -143,8 +137,7 @@ var creditos = function(game){};
             botonRuisenor.visible = false;
             botonRaton.visible = false;
             botonHormiga.visible = false;
-            
-            //Se ocultan los botones de los personajes malos
+              //Se ocultan los botones de los personajes malos
             botonAbejas.visible = false;
             botonBabuino.visible = false;
             botonBuitre.visible = false;
@@ -157,7 +150,6 @@ var creditos = function(game){};
             botonRata.visible = false;
             botonVibora.visible = false;
             botonZorro.visible = false;
-            
             //Se ocultan los botones de los tipos de plagio
             botonClonacion.visible = false;
             botonCopiado.visible = false;
@@ -169,31 +161,22 @@ var creditos = function(game){};
             botonError404.visible = false;
             botonRSS.visible = false;
             botonReutilizacion.visible = false;
-            
-            //Se crea el texto de la descripción del Pacto y se oculta    
-            variablesCreditos.textoPacto = game.add.text(50, 190, variablesCreditos.descripcionPacto, {font: "12px Roboto", fill: "#ffffff", align: "left", boundsAlignH: "left", boundsAlignV: "top", wordWrap: true, wordWrapWidth: 350});                    
+            //Se crea el texto de la descripción del Pacto y se oculta
+            variablesCreditos.textoPacto = game.add.text(50, 190, variablesCreditos.descripcionPacto, {font: "12px Roboto", fill: "#ffffff", align: "left", boundsAlignH: "left", boundsAlignV: "top", wordWrap: true, wordWrapWidth: 350});
             variablesCreditos.textoPacto.visible = false;
-            
             //Se crean tres textos vacíos para las descripciones de los personajes buenos y malos, y para el texto de los plagios
             variablesCreditos.textoBuenos = game.add.text(450, 230, "", {font: "18px Roboto", fill: "#ffffff", align: "left", boundsAlignH: "left", boundsAlignV:       "top", wordWrap: true, wordWrapWidth: 300});
-            variablesCreditos.textoMalos = game.add.text(450, 230, "", {font: "18px Roboto", fill: "#ffffff", align: "left", boundsAlignH: "left", boundsAlignV:       "top", wordWrap: true, wordWrapWidth: 300});            
+            variablesCreditos.textoMalos = game.add.text(450, 230, "", {font: "18px Roboto", fill: "#ffffff", align: "left", boundsAlignH: "left", boundsAlignV:       "top", wordWrap: true, wordWrapWidth: 300});
             variablesCreditos.textoPlagios = game.add.text(200, 400, "", {font: "18px Roboto", fill: "#ffffff", align: "left", boundsAlignH: "left", boundsAlignV: "top", wordWrap: true, wordWrapWidth: 400});
-            
             //Se crea el logo del Pacto y se oculta
-
             variablesCreditos.logoPacto = game.add.image(500, 300, 'logoPacto');
             variablesCreditos.logoPacto.visible = false;
-
-         
-            
             boot.verificarMusica("menu");
-
         },
-            
+
         /*Funciones que se llaman al oprimir el boton de cada personaje
         Dentro de estas funciones se sobreescribe la variable de texto de las descripciones de los personajes o tipos de plagio segun corresponde*/
-
-        panteraClick: function(){variablesBoot.sonidoBoton.play(); variablesCreditos.textoBuenos.setText(variablesCreditos.descripcionesBuenos[0]);},        
+        panteraClick: function(){variablesBoot.sonidoBoton.play(); variablesCreditos.textoBuenos.setText(variablesCreditos.descripcionesBuenos[0]);},
         galloClick: function(){variablesBoot.sonidoBoton.play(); variablesCreditos.textoBuenos.setText(variablesCreditos.descripcionesBuenos[1]);},
         ciervaClick: function(){variablesBoot.sonidoBoton.play(); variablesCreditos.textoBuenos.setText(variablesCreditos.descripcionesBuenos[2]);},
         jirafaClick: function(){variablesBoot.sonidoBoton.play(); variablesCreditos.textoBuenos.setText(variablesCreditos.descripcionesBuenos[3]);},
@@ -213,7 +196,7 @@ var creditos = function(game){};
         perezosoClick: function(){variablesBoot.sonidoBoton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[8]);},
         rataClick: function(){variablesBoot.sonidoBoton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[9]);},
         viboraClick: function(){variablesBoot.sonidoBoton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[10]);},
-        zorroClick: function(){variablesBoot.sonidoBoton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[11]);},        
+        zorroClick: function(){variablesBoot.sonidoBoton.play(); variablesCreditos.textoMalos.setText(variablesCreditos.descripcionesMalos[11]);},
         clonacionClick: function(){variablesBoot.sonidoBoton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[0]);},
         copiadoClick: function(){variablesBoot.sonidoBoton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[1]);},
         busquedaReemplazoClick: function(){variablesBoot.sonidoBoton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[2]);},
@@ -225,9 +208,7 @@ var creditos = function(game){};
         RSSClick: function(){variablesBoot.sonidoBoton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[8]);},
         reutilizacionClick: function(){variablesBoot.sonidoBoton.play(); variablesCreditos.textoPlagios.setText(variablesCreditos.plagios[9]);},
 
-        
         //Dentro de las siguientes funciones se ponen visibles o no visibles los elementos de la pantalla según corresponda
-        
         //Funcion que se llama al oprimir el boton '¿Qué es el Pacto de Honor?'
         verPacto: function(){
             variablesBoot.sonidoBoton.play();
@@ -264,17 +245,15 @@ var creditos = function(game){};
             botonMosaico.visible = false;
             botonError404.visible = false;
             botonRSS.visible = false;
-            botonReutilizacion.visible = false;            
-            
+            botonReutilizacion.visible = false;
             variablesCreditos.textoPacto.visible = true;
-            variablesCreditos.logoPacto.visible = true;          
+            variablesCreditos.logoPacto.visible = true;
         },
-        
+
         //Funcion que se llama al oprimir el boton 'Personajes Buenos'
         verPersonajesBuenos: function(){
             variablesCreditos.textoBuenos.setText("");
-            variablesBoot.sonidoBoton.play();            
-
+            variablesBoot.sonidoBoton.play();
             botonAbejas.visible = false;
             botonBabuino.visible = false;
             botonBuitre.visible = false;
@@ -301,7 +280,6 @@ var creditos = function(game){};
             botonError404.visible = false;
             botonRSS.visible = false;
             botonReutilizacion.visible = false;
-                        
             botonPantera.visible = true;
             botonGallo.visible = true;
             botonCierva.visible = true;
@@ -313,16 +291,11 @@ var creditos = function(game){};
             botonHormiga.visible = true;
             variablesCreditos.textoBuenos.visible = true;
         },
-        
+
         //Funcion que se llama al oprimir el boton 'Personajes Malos'
         verPersonajesMalos: function(){
-
-           
             variablesCreditos.textoMalos.setText("");
-
             variablesBoot.sonidoBoton.play();
-           
-
             botonPantera.visible = false;
             botonGallo.visible = false;
             botonCierva.visible = false;
@@ -346,7 +319,6 @@ var creditos = function(game){};
             botonError404.visible = false;
             botonRSS.visible = false;
             botonReutilizacion.visible = false;
-                        
             variablesCreditos.textoMalos.visible = true;
             botonAbejas.visible = true;
             botonBabuino.visible = true;
@@ -361,16 +333,11 @@ var creditos = function(game){};
             botonVibora.visible = true;
             botonZorro.visible = true;
         },
-        
+
         //Funcion que se llama al oprimir el boton 'Tipos de plagio'
         verPlagios: function(){
-
-            
             variablesCreditos.textoPlagios.setText("");
-
             variablesBoot.sonidoBoton.play();
-            
-
             botonAbejas.visible = false;
             botonBabuino.visible = false;
             botonBuitre.visible = false;
@@ -395,8 +362,7 @@ var creditos = function(game){};
             variablesCreditos.textoPacto.visible = false;
             variablesCreditos.logoPacto.visible = false;
             variablesCreditos.textoBuenos.visible = false;
-            variablesCreditos.textoMalos.visible = false;
-            
+            variablesCreditos.textoMalos.visible = false;            
             variablesCreditos.textoPlagios.visible = true;
             botonClonacion.visible = true;
             botonCopiado.visible = true;
@@ -409,12 +375,12 @@ var creditos = function(game){};
             botonRSS.visible = true;
             botonReutilizacion.visible = true;
         },
-        
+
         //Funcion que se llama al oprimir el botón de regreso
         volver: function(){
             variablesBoot.sonidoBoton.play();
             game.state.start("navegacion");
-        },        
+        },
         update:function(){
         }
     }
