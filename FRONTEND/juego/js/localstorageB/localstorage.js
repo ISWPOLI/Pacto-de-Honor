@@ -61,7 +61,11 @@ return a;
 
 //funcion encargada de dar al localStorage el mundo y nivel actual si gana
 function nivelMundoLocalStorage(nivelo,validacion){
+
   if(validacion==0){
+
+
+    console.log("NIVELO: "+nivelo);
     var orotemp=parseInt(obtenerLocalStorage("Oro"));
     var xptemp=parseInt(obtenerLocalStorage("Xp"));
     orotemp+=200;
@@ -80,13 +84,29 @@ function nivelMundoLocalStorage(nivelo,validacion){
       else{
       //obtenemoselmundo
         mundo=+nivelo.charAt(i);
+        console.log("mundo prueba: "+mundo);
+
         }
   }
+  if(nivelo.length>3){
+    var temp="1"+mundo;
+    mundo=temp;
+    console.log("mundo final "+mundo);
     añadirLocalStorage("Oro",orotemp);
     añadirLocalStorage("Xp",xptemp);
+
     validarMundoyNivelMayor(nivel,mundo);
   }
+  else{
+    añadirLocalStorage("Oro",orotemp);
+    añadirLocalStorage("Xp",xptemp);
+
+    validarMundoyNivelMayor(nivel,mundo);
+  }
+
+  }
   else {
+      var xptemp=parseInt(obtenerLocalStorage("Xp"));
     xptemp+=10;
     añadirLocalStorage("Xp",xptemp);
   }
@@ -95,12 +115,14 @@ function nivelMundoLocalStorage(nivelo,validacion){
 function validarMundoyNivelMayor(nivelactual,mundoactual){
   //caso base que permite avanzar de nivel 5 de x mundo al siguiente restableciendo nivel mayor a 1 del siguiente mundo
   if(nivelactual==5 && mundoMayor==mundoactual){
+
     this.nivelMundoMayor=1;
     this.mundoMayor=mundoMayor+1;
     añadirLocalStorage("NivelMundo",nivelMundoMayor);
     añadirLocalStorage("Mundo",mundoMayor);
   }
   else if(nivelactual!=5 && mundoMayor==mundoactual){
+
     this.nivelMundoMayor=nivelMundoMayor+1;
     añadirLocalStorage("NivelMundo",nivelMundoMayor);
   }
