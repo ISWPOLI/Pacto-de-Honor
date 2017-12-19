@@ -1,4 +1,5 @@
 var exp;
+var cc=0;
 var fin = {
     preload: function(){
 		this.preloadBar=this.add.sprite(this.game.world.centerX,this.game.world.centerY,'barraCarga');
@@ -73,8 +74,9 @@ var fin = {
 
             var niv = parseInt(obtenerLocalStorage('NivelMundo'));
             var mun = parseInt(obtenerLocalStorage('Mundo'));
-            if (niv == 5 && mun ==12) {
+            if (niv == 1&& mun ==13 && cc==0) {
 
+              cc++;
               game.state.start("creditos");
 
             }
