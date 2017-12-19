@@ -74,7 +74,7 @@ var fin = {
 
             var niv = parseInt(obtenerLocalStorage('NivelMundo'));
             var mun = parseInt(obtenerLocalStorage('Mundo'));
-            if (niv == 5 && mun ==12 && cc==0) {
+            if (niv == 1&& mun ==13 && cc==0) {
 
               cc++;
               game.state.start("creditos");
