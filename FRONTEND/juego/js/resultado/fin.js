@@ -70,8 +70,8 @@ var fin = {
             nivelMundoLocalStorage(prueba,0);
 
             ExpPersonajes[cont]+=100;
-            añadirLocalStorage('NivelPersonajes',ExpPersonajes);
-
+            //añadirLocalStorage('NivelPersonajes',ExpPersonajes);
+            SumarNivelHeroe('NivelPersonajes',cont,ExpPersonajes[cont]);
             var niv = parseInt(obtenerLocalStorage('NivelMundo'));
             var mun = parseInt(obtenerLocalStorage('Mundo'));
             if (niv == 1&& mun ==13 && cc==0) {
