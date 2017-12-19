@@ -68,10 +68,8 @@ var fin = {
             //personajesBuenos[variablesCampoBatalla.idPJ].exp += 100;
             personajesBuenos[variablesCampoBatalla.idPJ].exp= ExpPersonajes[cont]+100;
             nivelMundoLocalStorage(prueba,0);
-
             ExpPersonajes[cont]+=100;
-            //añadirLocalStorage('NivelPersonajes',ExpPersonajes);
-            SumarNivelHeroe('NivelPersonajes',cont,ExpPersonajes[cont]);
+            añadirLocalStorage('NivelPersonajes',ExpPersonajes);
             var niv = parseInt(obtenerLocalStorage('NivelMundo'));
             var mun = parseInt(obtenerLocalStorage('Mundo'));
             if (niv == 1&& mun ==13 && cc==0) {
