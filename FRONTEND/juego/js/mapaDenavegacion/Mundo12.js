@@ -64,7 +64,7 @@ var Mundo12 = {
         //si el nivel actual no es inferior al que desea jugar habilita el boton
           else{  var nivelButton1 = game.add.button (180, -170, 'nivel2', iniciarNivel2, null, 2, 1, 0);
             function iniciarNivel2(){
-                navegacion.prototype.iniciarNivel("1-2");
+                navegacion.prototype.iniciarNivel("12-2");
             }
           nivelButton1.inputEnabled = true;
           nivelButton1.input.priorityID = 1;
@@ -75,7 +75,7 @@ var Mundo12 = {
         if(nivelactual<3&&mundoctual<13){
           var nivelButton2 = game.add.button (180, -90, 'nivel3b', iniciarNivel3, null,2, 1, 0);
             function iniciarNivel3(){
-              navegacion.prototype.iniciarNivel("1-3");
+              navegacion.prototype.iniciarNivel("12-3");
             }
             nivelButton2.inputEnabled = false;
             nivelButton2.input.priorityID = 1;
@@ -87,7 +87,7 @@ var Mundo12 = {
           else{
             var nivelButton2 = game.add.button (180, -90, 'nivel3', iniciarNivel3, null,2, 1, 0);
               function iniciarNivel3(){
-                navegacion.prototype.iniciarNivel("1-3");
+                navegacion.prototype.iniciarNivel("12-3");
       }
         nivelButton2.inputEnabled = true;
         nivelButton2.input.priorityID = 1;
@@ -99,7 +99,7 @@ var Mundo12 = {
       if(nivelactual<4&&mundoctual<13){
         var nivelButton3 = game.add.button (180, -10, 'nivel4b', iniciarNivel4, null,2, 1, 0);
           function iniciarNivel4(){
-            navegacion.prototype.iniciarNivel("1-4");
+            navegacion.prototype.iniciarNivel("12-4");
         }
         nivelButton3.inputEnabled = false;
         nivelButton3.input.priorityID = 1;
@@ -109,7 +109,7 @@ var Mundo12 = {
         else{
           var nivelButton3 = game.add.button (180, -10, 'nivel4', iniciarNivel4, null,2, 1, 0);
             function iniciarNivel4(){
-              navegacion.prototype.iniciarNivel("1-4");
+              navegacion.prototype.iniciarNivel("12-4");
           }
           nivelButton3.inputEnabled = true;
           nivelButton3.input.priorityID = 1;
@@ -120,7 +120,7 @@ var Mundo12 = {
       if(nivelactual<5&&mundoctual<13){
         var nivelButton4 = game.add.button (180, 70, 'nivel5b', iniciarNivel5, null,2, 1, 0);
         function iniciarNivel5(){
-            navegacion.prototype.iniciarNivel("1-5");
+            navegacion.prototype.iniciarNivel("12-5");
         }
         nivelButton4.inputEnabled = false;
         nivelButton4.input.priorityID = 1;
@@ -130,7 +130,7 @@ var Mundo12 = {
         else{
           var nivelButton4 = game.add.button (180, 70, 'nivel5', iniciarNivel5, null,2, 1, 0);
             function iniciarNivel5(){
-              navegacion.prototype.iniciarNivel("1-5");
+              navegacion.prototype.iniciarNivel("12-5");
           }
           nivelButton4.inputEnabled = true;
           nivelButton4.input.priorityID = 1;
