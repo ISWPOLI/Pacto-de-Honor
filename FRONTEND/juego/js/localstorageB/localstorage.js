@@ -268,21 +268,29 @@ function obtenerLocalStorage (key){
   var retorno=0;
   var valor =localStorage.getItem(llave);
   valorf=JSON.parse(localStorage.getItem(llave));
-  if(valorf==null){
-  //
-  }
-  else{
-    if(key=='NivelPersonajes'){
-      console.log("XP PERSONAJE "+Npersonaje[0])
-        retorno=this.Npersonaje;
-    }
-    else if (key=='CampeonesComprados'){
-      console.log("COMPRA PERSONAJE "+CampeonesComprados[0])
-        retorno=this.CampeonesComprados;
+
+  try {
+    if(valorf==null){
+    //
     }
     else{
-    retorno =b64_to_utf8(valorf);
+      if(key=='NivelPersonajes'){
+        console.log("XP PERSONAJE "+Npersonaje[0])
+          retorno=this.Npersonaje;
       }
-  }
+      else if (key=='CampeonesComprados'){
+        console.log("COMPRA PERSONAJE "+CampeonesComprados[0])
+          retorno=this.CampeonesComprados;
+      }
+      else{
+      retorno =b64_to_utf8(valorf);
+        }
+    }
+    }
+    catch(err) {
+
+        alert("EN DONDE ESTA TU HONOR?");
+    }
+
 return retorno;
 }
