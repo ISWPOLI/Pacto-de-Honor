@@ -23,7 +23,7 @@ function cargaInicial(){
     variablesCompraPersonajes.comprado = CampeonesComprados=verificarArregloBoleaano(tempc,CampeonesComprados);
   }
     else {
-      
+
        variablesPerfilJugador.NicknamePerfil = datosperfil["datos"].nickname;
        variablesPerfilJugador.MundoPerfil = datosperfil["datos"].mundo;
        variablesPerfilJugador.NivelPerfil = datosperfil["datos"].nivel;
@@ -267,20 +267,19 @@ function obtenerLocalStorage (key){
     }
     else{
       if(key=='NivelPersonajes'){
-
           retorno=this.Npersonaje;
       }
       else if (key=='CampeonesComprados'){
-
           retorno=this.CampeonesComprados;
       }
       else{
       retorno =b64_to_utf8(valorf);
         }
     }
+
     }
     catch(err) {
-
+      
         alert("EN DONDE ESTA TU HONOR?");
     }
 
