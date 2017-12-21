@@ -23,7 +23,7 @@ function cargaInicial(){
     variablesCompraPersonajes.comprado = CampeonesComprados=verificarArregloBoleaano(tempc,CampeonesComprados);
   }
     else {
-      
+
        variablesPerfilJugador.NicknamePerfil = datosperfil["datos"].nickname;
        variablesPerfilJugador.MundoPerfil = datosperfil["datos"].mundo;
        variablesPerfilJugador.NivelPerfil = datosperfil["datos"].nivel;
@@ -278,6 +278,7 @@ function obtenerLocalStorage (key){
       retorno =b64_to_utf8(valorf);
         }
     }
+    
     }
     catch(err) {
 
