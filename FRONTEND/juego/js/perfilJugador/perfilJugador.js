@@ -6,20 +6,20 @@ variablesPerfilJugador={
      ExperienciaPerfil:null,
      NivelMundoPerfil:null
 }
-
+var verNavegacion;
 var perfilJugador = function(game){};
     perfilJugador.prototype = {
         preload : function(){
             game.load.image('avatar', datosperfil["datos"].avatar);
-		    game.load.spritesheet('boton-personaje', '../img/componentes/botones/botonPersonaje.png');
+		        game.load.spritesheet('boton-personaje', '../img/componentes/botones/botonPersonaje.png');
             game.load.spritesheet('boton-jefes', '../img/componentes/botones/botonJefes.png');
             game.load.spritesheet('boton-trofeo', '../img/componentes/botones/botonTrofeo.png');
             game.load.spritesheet('boton-alfanumerico', '../img/componentes/botones/botonAlfanumerico.png');
+            game.load.spritesheet('boton-editar', '../img/componentes/navegacionMapa/botonEditar.png');
+
         },
 
         create : function (){
-
-
             game.stage.backgroundColor = "#2451A6";
     		    game.add.sprite(80, 50,'avatar').scale.setTo(0.8);
 
@@ -28,7 +28,7 @@ var perfilJugador = function(game){};
             game.add.button(450, 290,'boton-jefes', this.verJefes, 0, 0, 0, 0);
             game.add.button(90, 450,'boton-trofeo', this.verLogros, 0, 0, 0, 0);
             game.add.button(450, 450,'boton-alfanumerico', this.verAlfanumercios, 0, 0, 0, 0);
-
+            game.add.button(250,85, 'boton-editar', this.editar,0,0,0,1);
             game.add.text(400, 50, "Perfil del usuario", {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
             game.add.text(400, 100, "Nickname: " + obtenerLocalStorage("Nickname"), {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
             game.add.text(590, 100, "Mundo: " +obtenerLocalStorage("Mundo"), {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
@@ -40,6 +40,11 @@ var perfilJugador = function(game){};
 
             boot.verificarMusica("menu");
         },
+
+        /*editar: function(){
+          game.state.start("nickname");
+          variablesBoot.sonidoBoton.play();
+        },*/
 
         verNavegacion: function(){
             game.state.start("navegacion");
