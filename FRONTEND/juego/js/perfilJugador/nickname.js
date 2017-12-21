@@ -1,14 +1,7 @@
-variablesPerfilJugador={
-     NicknamePerfil:null,
-     MonedasPerfil:null,
-     NivelPerfil:null,
-     MundoPerfil:null,
-     ExperienciaPerfil:null,
-     NivelMundoPerfil:null
-}
+
 var verNavegacion;
-var perfilJugador = function(game){};
-    perfilJugador.prototype = {
+var nickname = function(game){};
+    nickname.prototype = {
         preload : function(){
             game.load.image('avatar', datosperfil["datos"].avatar);
 		        game.load.spritesheet('boton-personaje', '../img/componentes/botones/botonPersonaje.png');
@@ -30,7 +23,7 @@ var perfilJugador = function(game){};
             game.add.button(450, 450,'boton-alfanumerico', this.verAlfanumercios, 0, 0, 0, 0);
             game.add.button(250,85, 'boton-editar', this.editar,0,0,0,1);
             game.add.text(400, 50, "Perfil del usuario", {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
-            game.add.text(400, 100, "Nickname: " + obtenerLocalStorage("Nickname"), {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
+            game.add.text(400, 100, "Nickname: " , {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
             game.add.text(590, 100, "Mundo: " +obtenerLocalStorage("Mundo"), {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
             game.add.text(360, 150, "Nivel: " +obtenerLocalStorage("NivelPersonaje"), {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
             game.add.text(590, 150, "Monedas: " +obtenerLocalStorage("Oro"), {font: "25px Roboto", fill: "#ffffff"}).anchor.set(0.5);
@@ -41,10 +34,10 @@ var perfilJugador = function(game){};
             boot.verificarMusica("menu");
         },
 
-        /*editar: function(){
+        editar: function(){
           game.state.start("nickname");
           variablesBoot.sonidoBoton.play();
-        },*/
+        },
 
         verNavegacion: function(){
             game.state.start("navegacion");
