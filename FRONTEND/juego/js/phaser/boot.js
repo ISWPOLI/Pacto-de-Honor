@@ -94,7 +94,7 @@ var boot ={
       cargaInicial();
       var cont=-1;
       ExpPersonajes=obtenerLocalStorage('NivelPersonajes');
-      console.log("XP PERSONAJE "+ExpPersonajes[0]);
+      
        $.each(personajesBuenos, function (key, data) { //Recorre todos los objetos dentro de personajesBuenos (archivo personajes.js)
 cont++;
             var nuevoNivelPJ = 0; //Variable de ayuda para el nivel de personaje
