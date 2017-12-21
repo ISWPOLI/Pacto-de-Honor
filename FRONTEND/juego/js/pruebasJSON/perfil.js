@@ -1,11 +1,12 @@
 var datosperfil = {
 	"datos" : {
-		"nickname" : "user123",
+		"nickname" : "Yamideus",
 		"avatar" : "Ruta de la imagen",
-		"mundo" : 10,
-		"escenario" : 51,
+		"mundo" : 0,
+		"escenario" : 0,
 		"monedas":100,
 		"nivel":1,
-        "experiencia":0
+    "experiencia":0,
+		"exp":[0,0,0,0,0,0,0,0,0]
 	}
 }
