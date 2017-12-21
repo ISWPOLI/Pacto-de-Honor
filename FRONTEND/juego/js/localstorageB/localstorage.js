@@ -23,7 +23,7 @@ function cargaInicial(){
     variablesCompraPersonajes.comprado = CampeonesComprados=verificarArregloBoleaano(tempc,CampeonesComprados);
   }
     else {
-      console.log("Metodo inicial");
+      
        variablesPerfilJugador.NicknamePerfil = datosperfil["datos"].nickname;
        variablesPerfilJugador.MundoPerfil = datosperfil["datos"].mundo;
        variablesPerfilJugador.NivelPerfil = datosperfil["datos"].nivel;
@@ -40,8 +40,7 @@ function cargaInicial(){
        añadirLocalStorage("NivelPersonaje",variablesPerfilJugador.NivelPerfil);
        añadirLocalStorage("Mundo",1);
        for (var i = 0; i < Npersonaje.length; i++) {
-         console.log(Npersonaje[i]);
-         console.log(CampeonesComprados[i]);
+
          var tempNp= Npersonaje[i];
          var tempCC= CampeonesComprados[i];
 
@@ -58,8 +57,6 @@ function cargaInicial(){
 function verificarArreglo(arregloCodificado,arreglo) {
 var tempalfabeto="";
 var posarreglo=0;
-console.log(arregloCodificado.length);
-console.log(arregloCodificado);
 
 for (var i = 0; i <= arregloCodificado.length; i++) {
   var caracter = arregloCodificado.charAt(i);
@@ -88,7 +85,7 @@ for (var i = 0; i <= arregloCodificado.length; i++) {
     var temp2=b64_to_utf8(temp);
     arreglo[i]=parseInt(temp2);
   }
-  console.log(arreglo);
+
   return arreglo;
 }
 //Metodo encargado de decodificar el arreglo de campeones y copiarlo al arreglo de clase
@@ -96,8 +93,7 @@ function verificarArregloBoleaano(arregloCodificado,arreglo) {
   var tempalfabeto="";
   var posarreglo=0;
   var arregloCopia= [0,0,0,0,0,0,0,0,0];
-  console.log(arregloCodificado.length);
-  console.log(arregloCodificado);
+
   for (var i = 0; i <= arregloCodificado.length; i++) {
   var caracter = arregloCodificado.charAt(i);
     if(caracter=='['){
@@ -133,8 +129,7 @@ function verificarArregloBoleaano(arregloCodificado,arreglo) {
         }
     }
 
-    console.log(arregloCopia);
-    console.log(CampeonesComprados);
+
     return CampeonesComprados;
 }
 //Funcion que permite almacenar cualquier valor en el localstorage recibiendo la llave y su valor
@@ -184,8 +179,6 @@ function nivelMundoLocalStorage(nivelo,validacion){
 
   if(validacion==0){
 
-
-    console.log("NIVELO: "+nivelo);
     var orotemp=parseInt(obtenerLocalStorage("Oro"));
     var xptemp=parseInt(obtenerLocalStorage("Xp"));
     orotemp+=200;
@@ -204,14 +197,13 @@ function nivelMundoLocalStorage(nivelo,validacion){
       else{
       //obtenemoselmundo
         mundo=+nivelo.charAt(i);
-        console.log("mundo prueba: "+mundo);
 
         }
   }
   if(nivelo.length>3){
     var temp="1"+mundo;
     mundo=temp;
-    console.log("mundo final "+mundo);
+
     añadirLocalStorage("Oro",orotemp);
     añadirLocalStorage("Xp",xptemp);
 
@@ -275,11 +267,11 @@ function obtenerLocalStorage (key){
     }
     else{
       if(key=='NivelPersonajes'){
-        console.log("XP PERSONAJE "+Npersonaje[0])
+
           retorno=this.Npersonaje;
       }
       else if (key=='CampeonesComprados'){
-        console.log("COMPRA PERSONAJE "+CampeonesComprados[0])
+
           retorno=this.CampeonesComprados;
       }
       else{
