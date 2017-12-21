@@ -4,8 +4,10 @@ var nivelMundoMayor=1;
 //arreglo niveles de campeones
 var Npersonaje = [0,0,0,0,0,0,0,0,0];
 //arreglo campeones comprados
-var CampeonesComprados = [true, false,false ,false , false,false ,false ,false,false ];
-
+var CampeonesComprados = [true, false,false ,false , false,false ,false ,false,false ];//arreglo que copia al localStorage
+var NpersonajeLocalS = [0,0,0,0,0,0,0,0,0];//arreglo que copia al localStorage
+//arreglo campeones comprados
+var CampeonesCompradosLocalS = [true, false,false ,false , false,false ,false ,false,false ];
 function cargaInicial(){
 //Verificacion de local storage si esta vacio
   if(localStorage.length!=0){
@@ -13,34 +15,152 @@ function cargaInicial(){
     nivelMundoMayor=parseInt(obtenerLocalStorage("NivelMundo"));
     datosperfil.monedas = obtenerLocalStorage('Oro');
     datosperfil.experiencia = obtenerLocalStorage("Xp");
-    variablesCompraPersonajes.comprado = obtenerLocalStorage("CampeonesComprados");
+    var llave =utf8_to_b64("NivelPersonajes");
+    var temp=localStorage.getItem(llave);
+    Npersonaje=verificarArreglo(temp,Npersonaje);
+    var llavec =utf8_to_b64("CampeonesComprados");
+    var tempc=localStorage.getItem(llavec);
+    variablesCompraPersonajes.comprado = CampeonesComprados=verificarArregloBoleaano(tempc,CampeonesComprados);
   }
     else {
-      variablesPerfilJugador.NicknamePerfil = datosperfil["datos"].nickname;
-      variablesPerfilJugador.MundoPerfil = datosperfil["datos"].mundo;
-      variablesPerfilJugador.NivelPerfil = datosperfil["datos"].nivel;
-      variablesPerfilJugador.MonedasPerfil = datosperfil["datos"].monedas;
-      variablesPerfilJugador.ExperienciaPerfil= datosperfil["datos"].experiencia;
-      variablesPerfilJugador.NivelMundoPerfil= datosperfil["datos"].escenario;
-      variablesCompraPersonajes.monedas = datosperfil["datos"].monedas;
-      variablesCompraPersonajes.xp = datosperfil["datos"].experiencia;
-      variablesCompraPersonajes.comprado = CampeonesComprados;
-      añadirLocalStorage("Nickname",variablesPerfilJugador.NicknamePerfil);
-      añadirLocalStorage("Xp",variablesPerfilJugador.ExperienciaPerfil);
-      añadirLocalStorage("Oro",variablesPerfilJugador.MonedasPerfil);
-      añadirLocalStorage("NivelMundo",1);
-      añadirLocalStorage("NivelPersonaje",variablesPerfilJugador.NivelPerfil);
-      añadirLocalStorage("Mundo",1);
-      añadirLocalStorage("NivelPersonajes",Npersonaje);
-      añadirLocalStorage("CampeonesComprados",CampeonesComprados);
-    }
-}
+      console.log("Metodo inicial");
+       variablesPerfilJugador.NicknamePerfil = datosperfil["datos"].nickname;
+       variablesPerfilJugador.MundoPerfil = datosperfil["datos"].mundo;
+       variablesPerfilJugador.NivelPerfil = datosperfil["datos"].nivel;
+       variablesPerfilJugador.MonedasPerfil = datosperfil["datos"].monedas;
+       variablesPerfilJugador.ExperienciaPerfil= datosperfil["datos"].experiencia;
+       variablesPerfilJugador.NivelMundoPerfil= datosperfil["datos"].escenario;
+       variablesCompraPersonajes.monedas = datosperfil["datos"].monedas;
+       variablesCompraPersonajes.xp = datosperfil["datos"].experiencia;
+       variablesCompraPersonajes.comprado = CampeonesComprados;
+       añadirLocalStorage("Nickname",variablesPerfilJugador.NicknamePerfil);
+       añadirLocalStorage("Xp",variablesPerfilJugador.ExperienciaPerfil);
+       añadirLocalStorage("Oro",variablesPerfilJugador.MonedasPerfil);
+       añadirLocalStorage("NivelMundo",1);
+       añadirLocalStorage("NivelPersonaje",variablesPerfilJugador.NivelPerfil);
+       añadirLocalStorage("Mundo",1);
+       for (var i = 0; i < Npersonaje.length; i++) {
+         console.log(Npersonaje[i]);
+         console.log(CampeonesComprados[i]);
+         var tempNp= Npersonaje[i];
+         var tempCC= CampeonesComprados[i];
 
+         NpersonajeLocalS[i]=utf8_to_b64(tempNp);
+         CampeonesCompradosLocalS[i]=utf8_to_b64(tempCC);
+       }
+
+       localStorage.setItem(utf8_to_b64("NivelPersonajes"), JSON.stringify(NpersonajeLocalS));
+       localStorage.setItem(utf8_to_b64("CampeonesComprados"), JSON.stringify(CampeonesCompradosLocalS));
+
+     }
+    }
+//Metodo encargado de decodificar el arreglo de nivelesExp y copiarlo al arreglo de clase
+function verificarArreglo(arregloCodificado,arreglo) {
+var tempalfabeto="";
+var posarreglo=0;
+console.log(arregloCodificado.length);
+console.log(arregloCodificado);
+
+for (var i = 0; i <= arregloCodificado.length; i++) {
+  var caracter = arregloCodificado.charAt(i);
+    if(caracter=='['){
+      continue;
+      }
+      else{
+        if(arregloCodificado.charAt(i)==',' || caracter==']'){
+          if(caracter==']'){
+              arreglo[posarreglo]=tempalfabeto;
+              break;
+            }
+            else{
+              arreglo[posarreglo]=tempalfabeto;
+              tempalfabeto="";
+              posarreglo=posarreglo+1;
+            }
+          }
+    else{
+      tempalfabeto=tempalfabeto+caracter;
+        }
+      }
+    }
+  for (var i = 0; i < arreglo.length; i++) {
+    var temp=JSON.parse(arreglo[i]);
+    var temp2=b64_to_utf8(temp);
+    arreglo[i]=parseInt(temp2);
+  }
+  console.log(arreglo);
+  return arreglo;
+}
+//Metodo encargado de decodificar el arreglo de campeones y copiarlo al arreglo de clase
+function verificarArregloBoleaano(arregloCodificado,arreglo) {
+  var tempalfabeto="";
+  var posarreglo=0;
+  var arregloCopia= [0,0,0,0,0,0,0,0,0];
+  console.log(arregloCodificado.length);
+  console.log(arregloCodificado);
+  for (var i = 0; i <= arregloCodificado.length; i++) {
+  var caracter = arregloCodificado.charAt(i);
+    if(caracter=='['){
+    continue;
+    }
+    else{
+      if(arregloCodificado.charAt(i)==',' || caracter==']'){
+        if(caracter==']'){
+          arregloCopia[posarreglo]=tempalfabeto;
+          break;
+        }
+        else{
+          arregloCopia[posarreglo]=tempalfabeto;
+          tempalfabeto="";
+          posarreglo=posarreglo+1;
+        }
+    }
+    else{
+        tempalfabeto=tempalfabeto+caracter;
+        }
+      }
+    }
+    for (var i = 0; i < arregloCopia.length; i++) {
+      var temp=JSON.parse(arregloCopia[i]);
+      var temp2=b64_to_utf8(temp);
+      arregloCopia[i]=temp2;
+        if(arregloCopia[i]=="true"){
+          CampeonesComprados[i]=true;
+
+        }
+        else{
+          CampeonesComprados[i]=false;
+        }
+    }
+
+    console.log(arregloCopia);
+    console.log(CampeonesComprados);
+    return CampeonesComprados;
+}
 //Funcion que permite almacenar cualquier valor en el localstorage recibiendo la llave y su valor
 function añadirLocalStorage(key, valor) {
   if(key=='NivelPersonajes' || key=='CampeonesComprados'){
+  if(key=='NivelPersonajes' ){
+    Npersonaje=valor;
+    for (var i = 0; i < Npersonaje.length; i++) {
+      var tempd=Npersonaje[i];
+       NpersonajeLocalS[i]=utf8_to_b64(Npersonaje[i]);
+      Npersonaje[i]=tempd;
+    }
     var llave =utf8_to_b64(key);
-    localStorage.setItem(llave, JSON.stringify(valor));
+    localStorage.setItem(llave, JSON.stringify(NpersonajeLocalS));
+  }
+  else{
+    compraPersonajes=valor;
+    for (var i = 0; i < compraPersonajes.length; i++) {
+      var tempd=compraPersonajes[i];
+       CampeonesCompradosLocalS[i]=utf8_to_b64(compraPersonajes[i]);
+      compraPersonajes[i]=tempd;
+    }
+    var llave =utf8_to_b64(key);
+    localStorage.setItem(llave, JSON.stringify(CampeonesCompradosLocalS));
+  }
+
   }
     else {
       var llave =utf8_to_b64(key);
@@ -148,16 +268,29 @@ function obtenerLocalStorage (key){
   var retorno=0;
   var valor =localStorage.getItem(llave);
   valorf=JSON.parse(localStorage.getItem(llave));
-  if(valorf==null){
-  //
-  }
-  else{
-    if(key=='NivelPersonajes' || key=='CampeonesComprados'){
-        retorno=valorf;
+
+  try {
+    if(valorf==null){
+    //
     }
     else{
-    retorno =b64_to_utf8(valorf);
+      if(key=='NivelPersonajes'){
+        console.log("XP PERSONAJE "+Npersonaje[0])
+          retorno=this.Npersonaje;
       }
-  }
+      else if (key=='CampeonesComprados'){
+        console.log("COMPRA PERSONAJE "+CampeonesComprados[0])
+          retorno=this.CampeonesComprados;
+      }
+      else{
+      retorno =b64_to_utf8(valorf);
+        }
+    }
+    }
+    catch(err) {
+
+        alert("EN DONDE ESTA TU HONOR?");
+    }
+
 return retorno;
 }
