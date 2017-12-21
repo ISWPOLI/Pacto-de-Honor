@@ -71,8 +71,6 @@ var fin = {
 
             ExpPersonajes[cont]+=100;
             añadirLocalStorage('NivelPersonajes',ExpPersonajes);
-//se hace la validacion del mundo y nivel para que solo muestre los
-//creditos eal superar el nivel 5 del mundo 12. 
             var niv = parseInt(obtenerLocalStorage('NivelMundo'));
             var mun = parseInt(obtenerLocalStorage('Mundo'));
             if (niv == 1&& mun ==13 && cc==0) {
